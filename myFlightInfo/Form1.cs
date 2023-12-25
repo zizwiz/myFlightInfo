@@ -34,13 +34,25 @@ namespace myFlightInfo
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private async void Form1_Load(object sender, EventArgs e)
         {
             //Get the data file from resources and write to file in same dir as the app.
             File.WriteAllText("airport_data.xml", Properties.Resources.airport_data);
 
             Text += " : v" + Assembly.GetExecutingAssembly().GetName().Version; // put in the version number
 
+            await webView_notams.EnsureCoreWebView2Async();
+            await webView_browser.EnsureCoreWebView2Async();
+
+            webView_notams.CoreWebView2.Navigate("   https://www.notaminfo.com/ukmap?destination=node%2F39");
+            webView_egmj.CoreWebView2.Navigate("https://metar-taf.com/EGMJ");
+            webView_egss.CoreWebView2.Navigate("https://metar-taf.com/EGSS");
+            webView_eggw.CoreWebView2.Navigate("https://metar-taf.com/EGGW");
+        }
+
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
