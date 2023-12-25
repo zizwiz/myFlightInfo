@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Altimeter\Altimeter.cs" />
     <Compile Include="common_data\airport_data.cs" />
+    <Compile Include="crosswind\Crosswind.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

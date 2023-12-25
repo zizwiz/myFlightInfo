@@ -1,6 +1,6 @@
 ﻿using System.Xml;
 
-namespace Metar_Taf_Viewer.common_data
+namespace myFlightInfo.common_data
 {
     class airport_data
     {

@@ -2,7 +2,7 @@
 using CenteredMessagebox;
 using Microsoft.Web.WebView2.WinForms;
 
-namespace Metar_Taf_Viewer.navigation
+namespace myFlightInfo.navigation
 {
     class Navigation
     {

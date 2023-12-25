@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using CenteredMessagebox;
 
-namespace Metar_Taf_Viewer.Altimeter
+namespace myFlightInfo.Altimeter
 {
     class altimeter
     {
