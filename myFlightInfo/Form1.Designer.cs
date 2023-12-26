@@ -54,8 +54,8 @@ namespace myFlightInfo
             this.tab_m_ltgransden = new System.Windows.Forms.TabPage();
             this.tab_m_luton = new System.Windows.Forms.TabPage();
             this.tabCnt_rochester = new System.Windows.Forms.TabControl();
-            this.Rochester = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tab_m_rochester = new System.Windows.Forms.TabPage();
+            this.tab_m_lon_city = new System.Windows.Forms.TabPage();
             this.btn_close = new System.Windows.Forms.Button();
             this.btn_gransden_lodge_photo_update = new System.Windows.Forms.Button();
             this.btn_reset = new System.Windows.Forms.Button();
@@ -155,10 +155,35 @@ namespace myFlightInfo
             this.lbl_crosswind_2 = new System.Windows.Forms.Label();
             this.btn_calc_wind = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
+            this.tab_m_wittering = new System.Windows.Forms.TabPage();
+            this.tab_m_mildenhall = new System.Windows.Forms.TabPage();
+            this.webView_egxt = new Microsoft.Web.WebView2.WinForms.WebView2();
+            this.webView_egun = new Microsoft.Web.WebView2.WinForms.WebView2();
+            this.tab_m_lydd = new System.Windows.Forms.TabPage();
+            this.tab_m_gatwick = new System.Windows.Forms.TabPage();
+            this.tab_m_stansted = new System.Windows.Forms.TabPage();
+            this.webView_egto = new Microsoft.Web.WebView2.WinForms.WebView2();
+            this.webView_egcc = new Microsoft.Web.WebView2.WinForms.WebView2();
+            this.webView_egmd = new Microsoft.Web.WebView2.WinForms.WebView2();
+            this.webView_egkk = new Microsoft.Web.WebView2.WinForms.WebView2();
+            this.webView_egss2 = new Microsoft.Web.WebView2.WinForms.WebView2();
+            this.btn_school = new System.Windows.Forms.Button();
+            this.tabcnt_weather = new System.Windows.Forms.TabControl();
+            this.tab_met_office = new System.Windows.Forms.TabPage();
+            this.tab_bbc = new System.Windows.Forms.TabPage();
+            this.tab_windy = new System.Windows.Forms.TabPage();
+            this.tab_synoptic = new System.Windows.Forms.TabPage();
+            this.tab_gransden_lodge = new System.Windows.Forms.TabPage();
+            this.webView_gransden_lodge_weather = new Microsoft.Web.WebView2.WinForms.WebView2();
+            this.webView_synoptic = new Microsoft.Web.WebView2.WinForms.WebView2();
+            this.webView_weather_bbc = new Microsoft.Web.WebView2.WinForms.WebView2();
+            this.webView_weather_met = new Microsoft.Web.WebView2.WinForms.WebView2();
+            this.webView_weather_windy = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.tabcnt_toplevel.SuspendLayout();
             this.tab_metar.SuspendLayout();
@@ -177,10 +202,13 @@ namespace myFlightInfo
             this.tab_m_ltgransden.SuspendLayout();
             this.tab_m_luton.SuspendLayout();
             this.tabCnt_rochester.SuspendLayout();
+            this.tab_m_rochester.SuspendLayout();
+            this.tab_m_lon_city.SuspendLayout();
             this.tab_m_stanstead.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.webView_egmj)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.webView_eggw)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.webView_egss)).BeginInit();
+            this.tab_weather.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -214,6 +242,29 @@ namespace myFlightInfo
             this.tableLayoutPanel8.SuspendLayout();
             this.panel35.SuspendLayout();
             this.panel36.SuspendLayout();
+            this.tab_m_wittering.SuspendLayout();
+            this.tab_m_mildenhall.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.webView_egxt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.webView_egun)).BeginInit();
+            this.tab_m_lydd.SuspendLayout();
+            this.tab_m_gatwick.SuspendLayout();
+            this.tab_m_stansted.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.webView_egto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.webView_egcc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.webView_egmd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.webView_egkk)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.webView_egss2)).BeginInit();
+            this.tabcnt_weather.SuspendLayout();
+            this.tab_met_office.SuspendLayout();
+            this.tab_bbc.SuspendLayout();
+            this.tab_windy.SuspendLayout();
+            this.tab_synoptic.SuspendLayout();
+            this.tab_gransden_lodge.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.webView_gransden_lodge_weather)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.webView_synoptic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.webView_weather_bbc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.webView_weather_met)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.webView_weather_windy)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -278,6 +329,7 @@ namespace myFlightInfo
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.btn_school);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(571, 3);
             this.panel3.Name = "panel3";
@@ -473,6 +525,8 @@ namespace myFlightInfo
             this.tabcnt_lt_gransden.Controls.Add(this.tab_m_ltgransden);
             this.tabcnt_lt_gransden.Controls.Add(this.tab_m_luton);
             this.tabcnt_lt_gransden.Controls.Add(this.tab_m_stanstead);
+            this.tabcnt_lt_gransden.Controls.Add(this.tab_m_wittering);
+            this.tabcnt_lt_gransden.Controls.Add(this.tab_m_mildenhall);
             this.tabcnt_lt_gransden.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabcnt_lt_gransden.Location = new System.Drawing.Point(3, 3);
             this.tabcnt_lt_gransden.Name = "tabcnt_lt_gransden";
@@ -504,33 +558,39 @@ namespace myFlightInfo
             // 
             // tabCnt_rochester
             // 
-            this.tabCnt_rochester.Controls.Add(this.Rochester);
-            this.tabCnt_rochester.Controls.Add(this.tabPage4);
-            this.tabCnt_rochester.Location = new System.Drawing.Point(186, 66);
+            this.tabCnt_rochester.Controls.Add(this.tab_m_rochester);
+            this.tabCnt_rochester.Controls.Add(this.tab_m_lon_city);
+            this.tabCnt_rochester.Controls.Add(this.tab_m_lydd);
+            this.tabCnt_rochester.Controls.Add(this.tab_m_gatwick);
+            this.tabCnt_rochester.Controls.Add(this.tab_m_stansted);
+            this.tabCnt_rochester.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabCnt_rochester.Location = new System.Drawing.Point(3, 3);
             this.tabCnt_rochester.Name = "tabCnt_rochester";
             this.tabCnt_rochester.SelectedIndex = 0;
-            this.tabCnt_rochester.Size = new System.Drawing.Size(699, 313);
+            this.tabCnt_rochester.Size = new System.Drawing.Size(1307, 566);
             this.tabCnt_rochester.TabIndex = 1;
             // 
-            // Rochester
+            // tab_m_rochester
             // 
-            this.Rochester.Location = new System.Drawing.Point(4, 29);
-            this.Rochester.Name = "Rochester";
-            this.Rochester.Padding = new System.Windows.Forms.Padding(3);
-            this.Rochester.Size = new System.Drawing.Size(691, 280);
-            this.Rochester.TabIndex = 0;
-            this.Rochester.Text = "tab_m_rochester";
-            this.Rochester.UseVisualStyleBackColor = true;
+            this.tab_m_rochester.Controls.Add(this.webView_egto);
+            this.tab_m_rochester.Location = new System.Drawing.Point(4, 29);
+            this.tab_m_rochester.Name = "tab_m_rochester";
+            this.tab_m_rochester.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_m_rochester.Size = new System.Drawing.Size(1299, 533);
+            this.tab_m_rochester.TabIndex = 0;
+            this.tab_m_rochester.Text = "Rochester (EGTO)";
+            this.tab_m_rochester.UseVisualStyleBackColor = true;
             // 
-            // tabPage4
+            // tab_m_lon_city
             // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 29);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(691, 280);
-            this.tabPage4.TabIndex = 1;
-            this.tabPage4.Text = "tabPage4";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.tab_m_lon_city.Controls.Add(this.webView_egcc);
+            this.tab_m_lon_city.Location = new System.Drawing.Point(4, 29);
+            this.tab_m_lon_city.Name = "tab_m_lon_city";
+            this.tab_m_lon_city.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_m_lon_city.Size = new System.Drawing.Size(1299, 533);
+            this.tab_m_lon_city.TabIndex = 1;
+            this.tab_m_lon_city.Text = "London City (EGCC)";
+            this.tab_m_lon_city.UseVisualStyleBackColor = true;
             // 
             // btn_close
             // 
@@ -612,6 +672,7 @@ namespace myFlightInfo
             // 
             // tab_weather
             // 
+            this.tab_weather.Controls.Add(this.tabcnt_weather);
             this.tab_weather.Location = new System.Drawing.Point(4, 29);
             this.tab_weather.Name = "tab_weather";
             this.tab_weather.Size = new System.Drawing.Size(1351, 586);
@@ -1272,9 +1333,9 @@ namespace myFlightInfo
             this.rdobtn_Gt_Gransden.AutoSize = true;
             this.rdobtn_Gt_Gransden.Location = new System.Drawing.Point(15, 52);
             this.rdobtn_Gt_Gransden.Name = "rdobtn_Gt_Gransden";
-            this.rdobtn_Gt_Gransden.Size = new System.Drawing.Size(127, 24);
+            this.rdobtn_Gt_Gransden.Size = new System.Drawing.Size(123, 24);
             this.rdobtn_Gt_Gransden.TabIndex = 3;
-            this.rdobtn_Gt_Gransden.Text = "Gt Gransden";
+            this.rdobtn_Gt_Gransden.Text = "Lt Gransden";
             this.rdobtn_Gt_Gransden.UseVisualStyleBackColor = true;
             // 
             // rdobtn_cambridge
@@ -1288,6 +1349,7 @@ namespace myFlightInfo
             this.rdobtn_cambridge.TabStop = true;
             this.rdobtn_cambridge.Text = "Cambridge";
             this.rdobtn_cambridge.UseVisualStyleBackColor = true;
+            this.rdobtn_cambridge.CheckedChanged += new System.EventHandler(this.rdobtn_cambridge_CheckedChanged);
             // 
             // panel32
             // 
@@ -1695,16 +1757,16 @@ namespace myFlightInfo
             // 
             // txtbx_magnitude
             // 
-            this.txtbx_magnitude.Location = new System.Drawing.Point(221, 32);
+            this.txtbx_magnitude.Location = new System.Drawing.Point(255, 32);
             this.txtbx_magnitude.Name = "txtbx_magnitude";
-            this.txtbx_magnitude.Size = new System.Drawing.Size(169, 26);
+            this.txtbx_magnitude.Size = new System.Drawing.Size(135, 26);
             this.txtbx_magnitude.TabIndex = 0;
             // 
             // txtbx_direction
             // 
-            this.txtbx_direction.Location = new System.Drawing.Point(221, 64);
+            this.txtbx_direction.Location = new System.Drawing.Point(255, 64);
             this.txtbx_direction.Name = "txtbx_direction";
-            this.txtbx_direction.Size = new System.Drawing.Size(169, 26);
+            this.txtbx_direction.Size = new System.Drawing.Size(135, 26);
             this.txtbx_direction.TabIndex = 1;
             // 
             // label7
@@ -1754,9 +1816,9 @@ namespace myFlightInfo
             // 
             // txtbx_runway_heading
             // 
-            this.txtbx_runway_heading.Location = new System.Drawing.Point(221, 96);
+            this.txtbx_runway_heading.Location = new System.Drawing.Point(255, 96);
             this.txtbx_runway_heading.Name = "txtbx_runway_heading";
-            this.txtbx_runway_heading.Size = new System.Drawing.Size(169, 26);
+            this.txtbx_runway_heading.Size = new System.Drawing.Size(135, 26);
             this.txtbx_runway_heading.TabIndex = 6;
             // 
             // lbl_crosswind_1
@@ -1789,7 +1851,7 @@ namespace myFlightInfo
             // lbl_runway_heading2
             // 
             this.lbl_runway_heading2.AutoSize = true;
-            this.lbl_runway_heading2.Location = new System.Drawing.Point(302, 204);
+            this.lbl_runway_heading2.Location = new System.Drawing.Point(406, 204);
             this.lbl_runway_heading2.Name = "lbl_runway_heading2";
             this.lbl_runway_heading2.Size = new System.Drawing.Size(60, 20);
             this.lbl_runway_heading2.TabIndex = 13;
@@ -1798,7 +1860,7 @@ namespace myFlightInfo
             // lbl_headwind_2
             // 
             this.lbl_headwind_2.AutoSize = true;
-            this.lbl_headwind_2.Location = new System.Drawing.Point(304, 263);
+            this.lbl_headwind_2.Location = new System.Drawing.Point(408, 263);
             this.lbl_headwind_2.Name = "lbl_headwind_2";
             this.lbl_headwind_2.Size = new System.Drawing.Size(60, 20);
             this.lbl_headwind_2.TabIndex = 12;
@@ -1807,7 +1869,7 @@ namespace myFlightInfo
             // lbl_crosswind_2
             // 
             this.lbl_crosswind_2.AutoSize = true;
-            this.lbl_crosswind_2.Location = new System.Drawing.Point(304, 234);
+            this.lbl_crosswind_2.Location = new System.Drawing.Point(408, 234);
             this.lbl_crosswind_2.Name = "lbl_crosswind_2";
             this.lbl_crosswind_2.Size = new System.Drawing.Size(60, 20);
             this.lbl_crosswind_2.TabIndex = 11;
@@ -1815,7 +1877,7 @@ namespace myFlightInfo
             // 
             // btn_calc_wind
             // 
-            this.btn_calc_wind.Location = new System.Drawing.Point(490, 204);
+            this.btn_calc_wind.Location = new System.Drawing.Point(234, 341);
             this.btn_calc_wind.Name = "btn_calc_wind";
             this.btn_calc_wind.Size = new System.Drawing.Size(166, 68);
             this.btn_calc_wind.TabIndex = 14;
@@ -1832,6 +1894,279 @@ namespace myFlightInfo
             this.label12.TabIndex = 15;
             this.label12.Text = "°";
             // 
+            // tab_m_wittering
+            // 
+            this.tab_m_wittering.Controls.Add(this.webView_egxt);
+            this.tab_m_wittering.Location = new System.Drawing.Point(4, 29);
+            this.tab_m_wittering.Name = "tab_m_wittering";
+            this.tab_m_wittering.Size = new System.Drawing.Size(1299, 533);
+            this.tab_m_wittering.TabIndex = 3;
+            this.tab_m_wittering.Text = "RAF Wittering (EGXT)";
+            this.tab_m_wittering.UseVisualStyleBackColor = true;
+            // 
+            // tab_m_mildenhall
+            // 
+            this.tab_m_mildenhall.Controls.Add(this.webView_egun);
+            this.tab_m_mildenhall.Location = new System.Drawing.Point(4, 29);
+            this.tab_m_mildenhall.Name = "tab_m_mildenhall";
+            this.tab_m_mildenhall.Size = new System.Drawing.Size(1299, 533);
+            this.tab_m_mildenhall.TabIndex = 4;
+            this.tab_m_mildenhall.Text = "RAF Mildenhall (EGUN)";
+            this.tab_m_mildenhall.UseVisualStyleBackColor = true;
+            // 
+            // webView_egxt
+            // 
+            this.webView_egxt.AllowExternalDrop = true;
+            this.webView_egxt.CreationProperties = null;
+            this.webView_egxt.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.webView_egxt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webView_egxt.Location = new System.Drawing.Point(0, 0);
+            this.webView_egxt.Name = "webView_egxt";
+            this.webView_egxt.Size = new System.Drawing.Size(1299, 533);
+            this.webView_egxt.TabIndex = 2;
+            this.webView_egxt.ZoomFactor = 1D;
+            // 
+            // webView_egun
+            // 
+            this.webView_egun.AllowExternalDrop = true;
+            this.webView_egun.CreationProperties = null;
+            this.webView_egun.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.webView_egun.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webView_egun.Location = new System.Drawing.Point(0, 0);
+            this.webView_egun.Name = "webView_egun";
+            this.webView_egun.Size = new System.Drawing.Size(1299, 533);
+            this.webView_egun.TabIndex = 2;
+            this.webView_egun.ZoomFactor = 1D;
+            // 
+            // tab_m_lydd
+            // 
+            this.tab_m_lydd.Controls.Add(this.webView_egmd);
+            this.tab_m_lydd.Location = new System.Drawing.Point(4, 29);
+            this.tab_m_lydd.Name = "tab_m_lydd";
+            this.tab_m_lydd.Size = new System.Drawing.Size(1299, 533);
+            this.tab_m_lydd.TabIndex = 2;
+            this.tab_m_lydd.Text = "Lydd (EGMD)";
+            this.tab_m_lydd.UseVisualStyleBackColor = true;
+            // 
+            // tab_m_gatwick
+            // 
+            this.tab_m_gatwick.Controls.Add(this.webView_egkk);
+            this.tab_m_gatwick.Location = new System.Drawing.Point(4, 29);
+            this.tab_m_gatwick.Name = "tab_m_gatwick";
+            this.tab_m_gatwick.Size = new System.Drawing.Size(1299, 533);
+            this.tab_m_gatwick.TabIndex = 3;
+            this.tab_m_gatwick.Text = "London Gatwick (EGKK)";
+            this.tab_m_gatwick.UseVisualStyleBackColor = true;
+            // 
+            // tab_m_stansted
+            // 
+            this.tab_m_stansted.Controls.Add(this.webView_egss2);
+            this.tab_m_stansted.Location = new System.Drawing.Point(4, 29);
+            this.tab_m_stansted.Name = "tab_m_stansted";
+            this.tab_m_stansted.Size = new System.Drawing.Size(1299, 533);
+            this.tab_m_stansted.TabIndex = 4;
+            this.tab_m_stansted.Text = "London Stansted (EGSS)";
+            this.tab_m_stansted.UseVisualStyleBackColor = true;
+            // 
+            // webView_egto
+            // 
+            this.webView_egto.AllowExternalDrop = true;
+            this.webView_egto.CreationProperties = null;
+            this.webView_egto.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.webView_egto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webView_egto.Location = new System.Drawing.Point(3, 3);
+            this.webView_egto.Name = "webView_egto";
+            this.webView_egto.Size = new System.Drawing.Size(1293, 527);
+            this.webView_egto.TabIndex = 3;
+            this.webView_egto.ZoomFactor = 1D;
+            // 
+            // webView_egcc
+            // 
+            this.webView_egcc.AllowExternalDrop = true;
+            this.webView_egcc.CreationProperties = null;
+            this.webView_egcc.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.webView_egcc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webView_egcc.Location = new System.Drawing.Point(3, 3);
+            this.webView_egcc.Name = "webView_egcc";
+            this.webView_egcc.Size = new System.Drawing.Size(1293, 527);
+            this.webView_egcc.TabIndex = 3;
+            this.webView_egcc.ZoomFactor = 1D;
+            // 
+            // webView_egmd
+            // 
+            this.webView_egmd.AllowExternalDrop = true;
+            this.webView_egmd.CreationProperties = null;
+            this.webView_egmd.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.webView_egmd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webView_egmd.Location = new System.Drawing.Point(0, 0);
+            this.webView_egmd.Name = "webView_egmd";
+            this.webView_egmd.Size = new System.Drawing.Size(1299, 533);
+            this.webView_egmd.TabIndex = 3;
+            this.webView_egmd.ZoomFactor = 1D;
+            // 
+            // webView_egkk
+            // 
+            this.webView_egkk.AllowExternalDrop = true;
+            this.webView_egkk.CreationProperties = null;
+            this.webView_egkk.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.webView_egkk.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webView_egkk.Location = new System.Drawing.Point(0, 0);
+            this.webView_egkk.Name = "webView_egkk";
+            this.webView_egkk.Size = new System.Drawing.Size(1299, 533);
+            this.webView_egkk.TabIndex = 3;
+            this.webView_egkk.ZoomFactor = 1D;
+            // 
+            // webView_egss2
+            // 
+            this.webView_egss2.AllowExternalDrop = true;
+            this.webView_egss2.CreationProperties = null;
+            this.webView_egss2.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.webView_egss2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webView_egss2.Location = new System.Drawing.Point(0, 0);
+            this.webView_egss2.Name = "webView_egss2";
+            this.webView_egss2.Size = new System.Drawing.Size(1299, 533);
+            this.webView_egss2.TabIndex = 3;
+            this.webView_egss2.ZoomFactor = 1D;
+            // 
+            // btn_school
+            // 
+            this.btn_school.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_school.Location = new System.Drawing.Point(0, 0);
+            this.btn_school.Name = "btn_school";
+            this.btn_school.Size = new System.Drawing.Size(211, 68);
+            this.btn_school.TabIndex = 2;
+            this.btn_school.Text = "Change School to ";
+            this.btn_school.UseVisualStyleBackColor = true;
+            this.btn_school.Click += new System.EventHandler(this.btn_school_Click);
+            // 
+            // tabcnt_weather
+            // 
+            this.tabcnt_weather.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.tabcnt_weather.Controls.Add(this.tab_met_office);
+            this.tabcnt_weather.Controls.Add(this.tab_bbc);
+            this.tabcnt_weather.Controls.Add(this.tab_windy);
+            this.tabcnt_weather.Controls.Add(this.tab_synoptic);
+            this.tabcnt_weather.Controls.Add(this.tab_gransden_lodge);
+            this.tabcnt_weather.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabcnt_weather.Location = new System.Drawing.Point(0, 0);
+            this.tabcnt_weather.Multiline = true;
+            this.tabcnt_weather.Name = "tabcnt_weather";
+            this.tabcnt_weather.SelectedIndex = 0;
+            this.tabcnt_weather.Size = new System.Drawing.Size(1351, 586);
+            this.tabcnt_weather.TabIndex = 0;
+            // 
+            // tab_met_office
+            // 
+            this.tab_met_office.Controls.Add(this.webView_weather_met);
+            this.tab_met_office.Location = new System.Drawing.Point(28, 4);
+            this.tab_met_office.Name = "tab_met_office";
+            this.tab_met_office.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_met_office.Size = new System.Drawing.Size(1319, 578);
+            this.tab_met_office.TabIndex = 0;
+            this.tab_met_office.Text = "Met Office";
+            this.tab_met_office.UseVisualStyleBackColor = true;
+            // 
+            // tab_bbc
+            // 
+            this.tab_bbc.Controls.Add(this.webView_weather_bbc);
+            this.tab_bbc.Location = new System.Drawing.Point(28, 4);
+            this.tab_bbc.Name = "tab_bbc";
+            this.tab_bbc.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_bbc.Size = new System.Drawing.Size(1319, 578);
+            this.tab_bbc.TabIndex = 1;
+            this.tab_bbc.Text = "BBC";
+            this.tab_bbc.UseVisualStyleBackColor = true;
+            // 
+            // tab_windy
+            // 
+            this.tab_windy.Controls.Add(this.webView_weather_windy);
+            this.tab_windy.Location = new System.Drawing.Point(28, 4);
+            this.tab_windy.Name = "tab_windy";
+            this.tab_windy.Size = new System.Drawing.Size(1319, 578);
+            this.tab_windy.TabIndex = 2;
+            this.tab_windy.Text = "Windy";
+            this.tab_windy.UseVisualStyleBackColor = true;
+            // 
+            // tab_synoptic
+            // 
+            this.tab_synoptic.Controls.Add(this.webView_synoptic);
+            this.tab_synoptic.Location = new System.Drawing.Point(28, 4);
+            this.tab_synoptic.Name = "tab_synoptic";
+            this.tab_synoptic.Size = new System.Drawing.Size(1319, 578);
+            this.tab_synoptic.TabIndex = 3;
+            this.tab_synoptic.Text = "Synoptic Charts";
+            this.tab_synoptic.UseVisualStyleBackColor = true;
+            // 
+            // tab_gransden_lodge
+            // 
+            this.tab_gransden_lodge.Controls.Add(this.webView_gransden_lodge_weather);
+            this.tab_gransden_lodge.Location = new System.Drawing.Point(28, 4);
+            this.tab_gransden_lodge.Name = "tab_gransden_lodge";
+            this.tab_gransden_lodge.Size = new System.Drawing.Size(1319, 578);
+            this.tab_gransden_lodge.TabIndex = 4;
+            this.tab_gransden_lodge.Text = "Gransden Lodge";
+            this.tab_gransden_lodge.UseVisualStyleBackColor = true;
+            // 
+            // webView_gransden_lodge_weather
+            // 
+            this.webView_gransden_lodge_weather.AllowExternalDrop = true;
+            this.webView_gransden_lodge_weather.CreationProperties = null;
+            this.webView_gransden_lodge_weather.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.webView_gransden_lodge_weather.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webView_gransden_lodge_weather.Location = new System.Drawing.Point(0, 0);
+            this.webView_gransden_lodge_weather.Name = "webView_gransden_lodge_weather";
+            this.webView_gransden_lodge_weather.Size = new System.Drawing.Size(1319, 578);
+            this.webView_gransden_lodge_weather.TabIndex = 2;
+            this.webView_gransden_lodge_weather.ZoomFactor = 1D;
+            // 
+            // webView_synoptic
+            // 
+            this.webView_synoptic.AllowExternalDrop = true;
+            this.webView_synoptic.CreationProperties = null;
+            this.webView_synoptic.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.webView_synoptic.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webView_synoptic.Location = new System.Drawing.Point(0, 0);
+            this.webView_synoptic.Name = "webView_synoptic";
+            this.webView_synoptic.Size = new System.Drawing.Size(1319, 578);
+            this.webView_synoptic.TabIndex = 1;
+            this.webView_synoptic.ZoomFactor = 1D;
+            // 
+            // webView_weather_bbc
+            // 
+            this.webView_weather_bbc.AllowExternalDrop = true;
+            this.webView_weather_bbc.CreationProperties = null;
+            this.webView_weather_bbc.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.webView_weather_bbc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webView_weather_bbc.Location = new System.Drawing.Point(3, 3);
+            this.webView_weather_bbc.Name = "webView_weather_bbc";
+            this.webView_weather_bbc.Size = new System.Drawing.Size(1313, 572);
+            this.webView_weather_bbc.TabIndex = 1;
+            this.webView_weather_bbc.ZoomFactor = 1D;
+            // 
+            // webView_weather_met
+            // 
+            this.webView_weather_met.AllowExternalDrop = true;
+            this.webView_weather_met.CreationProperties = null;
+            this.webView_weather_met.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.webView_weather_met.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webView_weather_met.Location = new System.Drawing.Point(3, 3);
+            this.webView_weather_met.Name = "webView_weather_met";
+            this.webView_weather_met.Size = new System.Drawing.Size(1313, 572);
+            this.webView_weather_met.TabIndex = 1;
+            this.webView_weather_met.ZoomFactor = 1D;
+            // 
+            // webView_weather_windy
+            // 
+            this.webView_weather_windy.AllowExternalDrop = true;
+            this.webView_weather_windy.CreationProperties = null;
+            this.webView_weather_windy.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.webView_weather_windy.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webView_weather_windy.Location = new System.Drawing.Point(0, 0);
+            this.webView_weather_windy.Name = "webView_weather_windy";
+            this.webView_weather_windy.Size = new System.Drawing.Size(1319, 578);
+            this.webView_weather_windy.TabIndex = 3;
+            this.webView_weather_windy.ZoomFactor = 1D;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1847,6 +2182,7 @@ namespace myFlightInfo
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.tabcnt_toplevel.ResumeLayout(false);
             this.tab_metar.ResumeLayout(false);
@@ -1866,10 +2202,13 @@ namespace myFlightInfo
             this.tab_m_ltgransden.ResumeLayout(false);
             this.tab_m_luton.ResumeLayout(false);
             this.tabCnt_rochester.ResumeLayout(false);
+            this.tab_m_rochester.ResumeLayout(false);
+            this.tab_m_lon_city.ResumeLayout(false);
             this.tab_m_stanstead.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.webView_egmj)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.webView_eggw)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.webView_egss)).EndInit();
+            this.tab_weather.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
@@ -1911,6 +2250,29 @@ namespace myFlightInfo
             this.panel35.ResumeLayout(false);
             this.panel35.PerformLayout();
             this.panel36.ResumeLayout(false);
+            this.tab_m_wittering.ResumeLayout(false);
+            this.tab_m_mildenhall.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.webView_egxt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.webView_egun)).EndInit();
+            this.tab_m_lydd.ResumeLayout(false);
+            this.tab_m_gatwick.ResumeLayout(false);
+            this.tab_m_stansted.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.webView_egto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.webView_egcc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.webView_egmd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.webView_egkk)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.webView_egss2)).EndInit();
+            this.tabcnt_weather.ResumeLayout(false);
+            this.tab_met_office.ResumeLayout(false);
+            this.tab_bbc.ResumeLayout(false);
+            this.tab_windy.ResumeLayout(false);
+            this.tab_synoptic.ResumeLayout(false);
+            this.tab_gransden_lodge.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.webView_gransden_lodge_weather)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.webView_synoptic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.webView_weather_bbc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.webView_weather_met)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.webView_weather_windy)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1941,8 +2303,8 @@ namespace myFlightInfo
         private System.Windows.Forms.TabPage tab_m_luton;
         private System.Windows.Forms.TabPage tab_rochester;
         private System.Windows.Forms.TabControl tabCnt_rochester;
-        private System.Windows.Forms.TabPage Rochester;
-        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage tab_m_rochester;
+        private System.Windows.Forms.TabPage tab_m_lon_city;
         private System.Windows.Forms.Button btn_reset;
         private System.Windows.Forms.Button btn_gransden_lodge_photo_update;
         private System.Windows.Forms.Button btn_close;
@@ -2042,6 +2404,30 @@ namespace myFlightInfo
         private System.Windows.Forms.TextBox txtbx_direction;
         private System.Windows.Forms.TextBox txtbx_magnitude;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TabPage tab_m_wittering;
+        private Microsoft.Web.WebView2.WinForms.WebView2 webView_egxt;
+        private System.Windows.Forms.TabPage tab_m_mildenhall;
+        private Microsoft.Web.WebView2.WinForms.WebView2 webView_egun;
+        private System.Windows.Forms.TabPage tab_m_lydd;
+        private System.Windows.Forms.TabPage tab_m_gatwick;
+        private System.Windows.Forms.TabPage tab_m_stansted;
+        private Microsoft.Web.WebView2.WinForms.WebView2 webView_egto;
+        private Microsoft.Web.WebView2.WinForms.WebView2 webView_egcc;
+        private Microsoft.Web.WebView2.WinForms.WebView2 webView_egmd;
+        private Microsoft.Web.WebView2.WinForms.WebView2 webView_egkk;
+        private Microsoft.Web.WebView2.WinForms.WebView2 webView_egss2;
+        private System.Windows.Forms.Button btn_school;
+        private System.Windows.Forms.TabControl tabcnt_weather;
+        private System.Windows.Forms.TabPage tab_met_office;
+        private Microsoft.Web.WebView2.WinForms.WebView2 webView_weather_met;
+        private System.Windows.Forms.TabPage tab_bbc;
+        private Microsoft.Web.WebView2.WinForms.WebView2 webView_weather_bbc;
+        private System.Windows.Forms.TabPage tab_windy;
+        private System.Windows.Forms.TabPage tab_synoptic;
+        private Microsoft.Web.WebView2.WinForms.WebView2 webView_synoptic;
+        private System.Windows.Forms.TabPage tab_gransden_lodge;
+        public Microsoft.Web.WebView2.WinForms.WebView2 webView_gransden_lodge_weather;
+        public Microsoft.Web.WebView2.WinForms.WebView2 webView_weather_windy;
     }
 }
 
