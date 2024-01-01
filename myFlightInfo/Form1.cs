@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
@@ -7,6 +8,7 @@ using myFlightInfo.Altimeter;
 using myFlightInfo.common_data;
 using myFlightInfo.crosswind;
 using myFlightInfo.navigation;
+using myFlightInfo.CentreOfGravity;
 using myFlightInfo.Properties;
 
 
@@ -340,7 +342,7 @@ namespace myFlightInfo
             }
             else
             {
-                tabcnt_weather.TabPages.Insert(0, tab_gransden_lodge);
+                tabcnt_weather.TabPages.Insert(4, tab_gransden_lodge);
                 webView_weather_bbc.CoreWebView2.Navigate("https://www.bbc.co.uk/weather/2653941"); //Gamlinggay = 2648899 Gt Gransden = 2648095
                 webView_weather_met.CoreWebView2.Navigate("https://metoffice.gov.uk/weather/forecast/u1214b469"); //waresley = gcrbu1fn7
                 webView_synoptic.CoreWebView2.Navigate("https://metoffice.gov.uk/weather/maps-and-charts/surface-pressure");
@@ -375,6 +377,28 @@ namespace myFlightInfo
                     webView_weather_met.CoreWebView2.Navigate("https://metoffice.gov.uk/weather/forecast/u1214b469");  //Cambridge
                 }
             }
+        }
+
+        private void btn_calc_cog_Click(object sender, EventArgs e)
+        {
+            var results = WorkOutCofG.CalculateCofG(
+                txtbx_cog_pilot_weight.Text, txtbx_cog_pilot_arm.Text,
+                txtbx_cog_passenger_weight.Text, txtbx_cog_passenger_arm.Text,
+                txtbx_cog_cabin_bag_weight.Text, txtbx_cog_cabbin_bag_arm.Text,
+                txtbx_cog_hold_bag_weight.Text, txtbx_cog_hold_bag_arm.Text,
+                txtbx_cog_fuel_volume.Text, txtbx_cog_fuel_arm.Text
+                );
+
+
+            lbl_cog_pilot.Text = results.Item1;
+            lbl_cog_passenger.Text = results.Item2;
+            lbl_cog_cabin_baggage.Text = results.Item3;
+            lbl_cog_hold_baggage.Text = results.Item4;
+            lbl_cog_fuel.Text = results.Item5;
+            lbl_cog_total_weight.Text = results.Item6;
+            lbl_cog_total_moment.Text = results.Item7;
+            lbl_cog_take_off.ForeColor = Color.FromName(results.Item8);
+            lbl_cog_landing.ForeColor = Color.FromName(results.Item9);
         }
     }
 }
