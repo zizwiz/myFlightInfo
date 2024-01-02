@@ -3,6 +3,7 @@ using System.Drawing;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using CenteredMessagebox;
 using myFlightInfo.Altimeter;
 using myFlightInfo.common_data;
@@ -95,7 +96,7 @@ namespace myFlightInfo
 
             SetMatarPages();
             SetWeatherPages();
-            
+
             cmbobx_airport_info.SelectedIndex = 0;
             cmbobx_gransden_lodge.SelectedIndex = 0;
         }
@@ -251,7 +252,7 @@ namespace myFlightInfo
                 grpbx_altimeter.Visible = false;
                 grpbx_browser_navigation.Visible = true;
             }
-            
+
             SetMatarPages();
             SetWeatherPages();
         }
@@ -334,8 +335,8 @@ namespace myFlightInfo
             if (settings.school == "Rochester")
             {
                 tabcnt_weather.TabPages.Remove(tab_gransden_lodge);
-                webView_weather_bbc.CoreWebView2.Navigate("https://www.bbc.co.uk/weather/2639268"); 
-                webView_weather_met.CoreWebView2.Navigate("https://metoffice.gov.uk/weather/forecast/u10k7df1y"); 
+                webView_weather_bbc.CoreWebView2.Navigate("https://www.bbc.co.uk/weather/2639268");
+                webView_weather_met.CoreWebView2.Navigate("https://metoffice.gov.uk/weather/forecast/u10k7df1y");
                 webView_synoptic.CoreWebView2.Navigate("https://metoffice.gov.uk/weather/maps-and-charts/surface-pressure");
                 webView_weather_windy.CoreWebView2.Navigate(
                     "https://www.windy.com/51.352/0.505/airgram?iconD2,temp,51.344,0.508,13");
@@ -386,9 +387,17 @@ namespace myFlightInfo
                 txtbx_cog_passenger_weight.Text, txtbx_cog_passenger_arm.Text,
                 txtbx_cog_cabin_bag_weight.Text, txtbx_cog_cabbin_bag_arm.Text,
                 txtbx_cog_hold_bag_weight.Text, txtbx_cog_hold_bag_arm.Text,
-                txtbx_cog_fuel_volume.Text, txtbx_cog_fuel_arm.Text
+                txtbx_cog_takeoff_fuel.Text, txtbx_cog_fuel_arm.Text,
+                txtbx_cog_landing_fuel.Text, txtbx_cog_zero_fuel.Text,
+                txtbx_specific_gravity.Text
                 );
 
+
+            lbl_cog_take_off.Text = lbl_cog_landing.Text = "";
+
+
+
+            lbl_fuel_weight.Text = results.Item12;
 
             lbl_cog_pilot.Text = results.Item1;
             lbl_cog_passenger.Text = results.Item2;
@@ -397,8 +406,35 @@ namespace myFlightInfo
             lbl_cog_fuel.Text = results.Item5;
             lbl_cog_total_weight.Text = results.Item6;
             lbl_cog_total_moment.Text = results.Item7;
+            
+            lbl_cog_take_off.Text = "Take-off = " + results.Item10;
             lbl_cog_take_off.ForeColor = Color.FromName(results.Item8);
+            
+            lbl_cog_landing.Text = "Landing = " + results.Item11;
             lbl_cog_landing.ForeColor = Color.FromName(results.Item9);
+
+            lbl_cog_zero.Text = "Zero = " + results.Item14;
+            lbl_cog_zero.ForeColor = Color.FromName(results.Item13);
+
+
+            chrt_cog.Series.Add("takeoff");
+            chrt_cog.Series["takeoff"].ChartType = SeriesChartType.Point;
+            chrt_cog.Series["takeoff"].Color = Color.Chartreuse;
+            chrt_cog.Series["takeoff"].Points.AddXY(1,0);
+
+
+            chrt_cog.Series["cog"].Points.AddXY(4, 0);
+            chrt_cog.Series["cog"].Points.AddXY(6, 0);
+            chrt_cog.Series["cog"].Points.AddXY(2, 0);
+            chrt_cog.Series["cog"].Points.AddXY(3, 0);
+
+
+            chrt_cog.Series["default"].Color=Color.Black;
+            
+            chrt_cog.Series["default"].Points.AddXY(4, 0);
+            chrt_cog.Series["default"].Points.AddXY(6, 0);
+
+
         }
     }
 }
