@@ -406,10 +406,10 @@ namespace myFlightInfo
             lbl_cog_fuel.Text = results.Item5;
             lbl_cog_total_weight.Text = results.Item6;
             lbl_cog_total_moment.Text = results.Item7;
-            
+
             lbl_cog_take_off.Text = "Take-off = " + results.Item10;
             lbl_cog_take_off.ForeColor = Color.FromName(results.Item8);
-            
+
             lbl_cog_landing.Text = "Landing = " + results.Item11;
             lbl_cog_landing.ForeColor = Color.FromName(results.Item9);
 
@@ -417,24 +417,50 @@ namespace myFlightInfo
             lbl_cog_zero.ForeColor = Color.FromName(results.Item13);
 
 
-            chrt_cog.Series.Add("takeoff");
-            chrt_cog.Series["takeoff"].ChartType = SeriesChartType.Point;
-            chrt_cog.Series["takeoff"].Color = Color.Chartreuse;
-            chrt_cog.Series["takeoff"].Points.AddXY(1,0);
+
+            //aircraftOverweight, CabinOverweight, pilotOverweight, passengerOverweight,  
+            // FuelOvervolume, HoldbagOverweight, pilotUnderweight
 
 
-            chrt_cog.Series["cog"].Points.AddXY(4, 0);
-            chrt_cog.Series["cog"].Points.AddXY(6, 0);
-            chrt_cog.Series["cog"].Points.AddXY(2, 0);
-            chrt_cog.Series["cog"].Points.AddXY(3, 0);
+
+            //chrt_cog.Series.Add("takeoff");
+            //chrt_cog.Series["takeoff"].ChartType = SeriesChartType.Point;
+            //chrt_cog.Series["takeoff"].Color = Color.Chartreuse;
+            //chrt_cog.Series["takeoff"].Points.AddXY(1,0);
 
 
-            chrt_cog.Series["default"].Color=Color.Black;
+            //chrt_cog.Series["cog"].Points.AddXY(4, 0);
+            //chrt_cog.Series["cog"].Points.AddXY(6, 0);
+            //chrt_cog.Series["cog"].Points.AddXY(2, 0);
+            //chrt_cog.Series["cog"].Points.AddXY(3, 0);
+
+
+            //chrt_cog.Series["default"].Color=Color.Black;
+
+            //chrt_cog.Series["default"].Points.AddXY(4, 0);
+            //chrt_cog.Series["default"].Points.AddXY(6, 0);
+
+
+        }
+
+        private void btn_cog_reset_Click(object sender, EventArgs e)
+        {
+            txtbx_cog_pilot_weight.Text = txtbx_cog_passenger_weight.Text = txtbx_cog_cabin_bag_weight.Text =
+                txtbx_cog_hold_bag_weight.Text = txtbx_cog_takeoff_fuel.Text = txtbx_cog_zero_fuel.Text = "0";
+
+            txtbx_cog_pilot_arm.Text = txtbx_cog_passenger_arm.Text = txtbx_cog_cabbin_bag_arm.Text = "400";
+
+            txtbx_cog_hold_bag_arm.Text = txtbx_cog_fuel_arm.Text = "950";
+
+            txtbx_cog_landing_fuel.Text = "10";
+            txtbx_specific_gravity.Text = "0.72";
             
-            chrt_cog.Series["default"].Points.AddXY(4, 0);
-            chrt_cog.Series["default"].Points.AddXY(6, 0);
+            lbl_cog_pilot.Text = lbl_cog_passenger.Text = lbl_cog_cabin_baggage.Text =
+                lbl_cog_hold_baggage.Text = lbl_cog_fuel.Text = lbl_cog_total_weight.Text =
+                    lbl_cog_take_off.Text = lbl_cog_landing.Text = lbl_cog_zero.Text =
+                        lbl_fuel_weight.Text = "";
 
-
+            lbl_cog_take_off.ForeColor = lbl_cog_landing.ForeColor = lbl_cog_zero.ForeColor = Color.Black;
         }
     }
 }

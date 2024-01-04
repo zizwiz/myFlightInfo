@@ -231,6 +231,9 @@ namespace myFlightInfo
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.rchtxtbx_cog_results = new System.Windows.Forms.RichTextBox();
+            this.btn_cog_reset = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.panel31.SuspendLayout();
@@ -321,6 +324,7 @@ namespace myFlightInfo
             ((System.ComponentModel.ISupportInitialize)(this.chrt_cog)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -2226,38 +2230,13 @@ namespace myFlightInfo
             // 
             // tab_CofG
             // 
+            this.tab_CofG.Controls.Add(this.btn_cog_reset);
+            this.tab_CofG.Controls.Add(this.rchtxtbx_cog_results);
+            this.tab_CofG.Controls.Add(this.groupBox4);
             this.tab_CofG.Controls.Add(this.chrt_cog);
             this.tab_CofG.Controls.Add(this.groupBox3);
             this.tab_CofG.Controls.Add(this.groupBox2);
-            this.tab_CofG.Controls.Add(this.lbl_fuel_weight);
             this.tab_CofG.Controls.Add(this.btn_calc_cog);
-            this.tab_CofG.Controls.Add(this.lbl_cog_total_moment);
-            this.tab_CofG.Controls.Add(this.lbl_cog_total_weight);
-            this.tab_CofG.Controls.Add(this.label27);
-            this.tab_CofG.Controls.Add(this.groupBox1);
-            this.tab_CofG.Controls.Add(this.txtbx_cog_hold_bag_weight);
-            this.tab_CofG.Controls.Add(this.txtbx_cog_cabin_bag_weight);
-            this.tab_CofG.Controls.Add(this.txtbx_cog_passenger_weight);
-            this.tab_CofG.Controls.Add(this.txtbx_cog_pilot_weight);
-            this.tab_CofG.Controls.Add(this.lbl_cog_fuel);
-            this.tab_CofG.Controls.Add(this.lbl_cog_hold_baggage);
-            this.tab_CofG.Controls.Add(this.lbl_cog_cabin_baggage);
-            this.tab_CofG.Controls.Add(this.lbl_cog_passenger);
-            this.tab_CofG.Controls.Add(this.lbl_cog_pilot);
-            this.tab_CofG.Controls.Add(this.txtbx_cog_fuel_arm);
-            this.tab_CofG.Controls.Add(this.txtbx_cog_hold_bag_arm);
-            this.tab_CofG.Controls.Add(this.txtbx_cog_cabbin_bag_arm);
-            this.tab_CofG.Controls.Add(this.txtbx_cog_passenger_arm);
-            this.tab_CofG.Controls.Add(this.txtbx_cog_pilot_arm);
-            this.tab_CofG.Controls.Add(this.label21);
-            this.tab_CofG.Controls.Add(this.label20);
-            this.tab_CofG.Controls.Add(this.label19);
-            this.tab_CofG.Controls.Add(this.label18);
-            this.tab_CofG.Controls.Add(this.label17);
-            this.tab_CofG.Controls.Add(this.label16);
-            this.tab_CofG.Controls.Add(this.label15);
-            this.tab_CofG.Controls.Add(this.label14);
-            this.tab_CofG.Controls.Add(this.label13);
             this.tab_CofG.Location = new System.Drawing.Point(28, 4);
             this.tab_CofG.Name = "tab_CofG";
             this.tab_CofG.Padding = new System.Windows.Forms.Padding(3);
@@ -2291,7 +2270,7 @@ namespace myFlightInfo
             chartArea1.Name = "ChartArea1";
             this.chrt_cog.ChartAreas.Add(chartArea1);
             this.chrt_cog.IsSoftShadows = false;
-            this.chrt_cog.Location = new System.Drawing.Point(52, 436);
+            this.chrt_cog.Location = new System.Drawing.Point(29, 436);
             this.chrt_cog.Name = "chrt_cog";
             series1.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
             series1.ChartArea = "ChartArea1";
@@ -2305,7 +2284,7 @@ namespace myFlightInfo
             series2.Name = "default";
             this.chrt_cog.Series.Add(series1);
             this.chrt_cog.Series.Add(series2);
-            this.chrt_cog.Size = new System.Drawing.Size(809, 117);
+            this.chrt_cog.Size = new System.Drawing.Size(1257, 117);
             this.chrt_cog.TabIndex = 43;
             this.chrt_cog.Text = "chart1";
             // 
@@ -2314,7 +2293,7 @@ namespace myFlightInfo
             this.groupBox3.Controls.Add(this.lbl_cog_zero);
             this.groupBox3.Controls.Add(this.lbl_cog_landing);
             this.groupBox3.Controls.Add(this.lbl_cog_take_off);
-            this.groupBox3.Location = new System.Drawing.Point(940, 60);
+            this.groupBox3.Location = new System.Drawing.Point(743, 21);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(266, 185);
             this.groupBox3.TabIndex = 42;
@@ -2362,7 +2341,7 @@ namespace myFlightInfo
             this.groupBox2.Controls.Add(this.txtbx_cog_landing_fuel);
             this.groupBox2.Controls.Add(this.label24);
             this.groupBox2.Controls.Add(this.txtbx_cog_takeoff_fuel);
-            this.groupBox2.Location = new System.Drawing.Point(941, 271);
+            this.groupBox2.Location = new System.Drawing.Point(1030, 25);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(266, 181);
             this.groupBox2.TabIndex = 40;
@@ -2484,7 +2463,7 @@ namespace myFlightInfo
             // lbl_fuel_weight
             // 
             this.lbl_fuel_weight.AutoSize = true;
-            this.lbl_fuel_weight.Location = new System.Drawing.Point(302, 330);
+            this.lbl_fuel_weight.Location = new System.Drawing.Point(179, 264);
             this.lbl_fuel_weight.Name = "lbl_fuel_weight";
             this.lbl_fuel_weight.Size = new System.Drawing.Size(18, 20);
             this.lbl_fuel_weight.TabIndex = 35;
@@ -2492,7 +2471,7 @@ namespace myFlightInfo
             // 
             // btn_calc_cog
             // 
-            this.btn_calc_cog.Location = new System.Drawing.Point(941, 471);
+            this.btn_calc_cog.Location = new System.Drawing.Point(1165, 358);
             this.btn_calc_cog.Name = "btn_calc_cog";
             this.btn_calc_cog.Size = new System.Drawing.Size(121, 45);
             this.btn_calc_cog.TabIndex = 32;
@@ -2504,7 +2483,7 @@ namespace myFlightInfo
             // 
             this.lbl_cog_total_moment.AutoSize = true;
             this.lbl_cog_total_moment.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cog_total_moment.Location = new System.Drawing.Point(615, 403);
+            this.lbl_cog_total_moment.Location = new System.Drawing.Point(492, 337);
             this.lbl_cog_total_moment.Name = "lbl_cog_total_moment";
             this.lbl_cog_total_moment.Size = new System.Drawing.Size(19, 20);
             this.lbl_cog_total_moment.TabIndex = 27;
@@ -2514,7 +2493,7 @@ namespace myFlightInfo
             // 
             this.lbl_cog_total_weight.AutoSize = true;
             this.lbl_cog_total_weight.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cog_total_weight.Location = new System.Drawing.Point(302, 403);
+            this.lbl_cog_total_weight.Location = new System.Drawing.Point(179, 337);
             this.lbl_cog_total_weight.Name = "lbl_cog_total_weight";
             this.lbl_cog_total_weight.Size = new System.Drawing.Size(19, 20);
             this.lbl_cog_total_weight.TabIndex = 26;
@@ -2524,7 +2503,7 @@ namespace myFlightInfo
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(143, 403);
+            this.label27.Location = new System.Drawing.Point(20, 337);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(49, 20);
             this.label27.TabIndex = 25;
@@ -2532,7 +2511,7 @@ namespace myFlightInfo
             // 
             // groupBox1
             // 
-            this.groupBox1.Location = new System.Drawing.Point(148, 369);
+            this.groupBox1.Location = new System.Drawing.Point(25, 303);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(613, 8);
             this.groupBox1.TabIndex = 24;
@@ -2540,7 +2519,7 @@ namespace myFlightInfo
             // 
             // txtbx_cog_hold_bag_weight
             // 
-            this.txtbx_cog_hold_bag_weight.Location = new System.Drawing.Point(300, 271);
+            this.txtbx_cog_hold_bag_weight.Location = new System.Drawing.Point(177, 205);
             this.txtbx_cog_hold_bag_weight.Name = "txtbx_cog_hold_bag_weight";
             this.txtbx_cog_hold_bag_weight.Size = new System.Drawing.Size(100, 26);
             this.txtbx_cog_hold_bag_weight.TabIndex = 22;
@@ -2548,7 +2527,7 @@ namespace myFlightInfo
             // 
             // txtbx_cog_cabin_bag_weight
             // 
-            this.txtbx_cog_cabin_bag_weight.Location = new System.Drawing.Point(300, 220);
+            this.txtbx_cog_cabin_bag_weight.Location = new System.Drawing.Point(177, 154);
             this.txtbx_cog_cabin_bag_weight.Name = "txtbx_cog_cabin_bag_weight";
             this.txtbx_cog_cabin_bag_weight.Size = new System.Drawing.Size(100, 26);
             this.txtbx_cog_cabin_bag_weight.TabIndex = 21;
@@ -2556,7 +2535,7 @@ namespace myFlightInfo
             // 
             // txtbx_cog_passenger_weight
             // 
-            this.txtbx_cog_passenger_weight.Location = new System.Drawing.Point(300, 175);
+            this.txtbx_cog_passenger_weight.Location = new System.Drawing.Point(177, 109);
             this.txtbx_cog_passenger_weight.Name = "txtbx_cog_passenger_weight";
             this.txtbx_cog_passenger_weight.Size = new System.Drawing.Size(100, 26);
             this.txtbx_cog_passenger_weight.TabIndex = 20;
@@ -2564,7 +2543,7 @@ namespace myFlightInfo
             // 
             // txtbx_cog_pilot_weight
             // 
-            this.txtbx_cog_pilot_weight.Location = new System.Drawing.Point(300, 126);
+            this.txtbx_cog_pilot_weight.Location = new System.Drawing.Point(177, 60);
             this.txtbx_cog_pilot_weight.Name = "txtbx_cog_pilot_weight";
             this.txtbx_cog_pilot_weight.Size = new System.Drawing.Size(100, 26);
             this.txtbx_cog_pilot_weight.TabIndex = 19;
@@ -2573,7 +2552,7 @@ namespace myFlightInfo
             // lbl_cog_fuel
             // 
             this.lbl_cog_fuel.AutoSize = true;
-            this.lbl_cog_fuel.Location = new System.Drawing.Point(615, 327);
+            this.lbl_cog_fuel.Location = new System.Drawing.Point(492, 261);
             this.lbl_cog_fuel.Name = "lbl_cog_fuel";
             this.lbl_cog_fuel.Size = new System.Drawing.Size(18, 20);
             this.lbl_cog_fuel.TabIndex = 18;
@@ -2582,7 +2561,7 @@ namespace myFlightInfo
             // lbl_cog_hold_baggage
             // 
             this.lbl_cog_hold_baggage.AutoSize = true;
-            this.lbl_cog_hold_baggage.Location = new System.Drawing.Point(614, 274);
+            this.lbl_cog_hold_baggage.Location = new System.Drawing.Point(491, 208);
             this.lbl_cog_hold_baggage.Name = "lbl_cog_hold_baggage";
             this.lbl_cog_hold_baggage.Size = new System.Drawing.Size(18, 20);
             this.lbl_cog_hold_baggage.TabIndex = 17;
@@ -2591,7 +2570,7 @@ namespace myFlightInfo
             // lbl_cog_cabin_baggage
             // 
             this.lbl_cog_cabin_baggage.AutoSize = true;
-            this.lbl_cog_cabin_baggage.Location = new System.Drawing.Point(614, 223);
+            this.lbl_cog_cabin_baggage.Location = new System.Drawing.Point(491, 157);
             this.lbl_cog_cabin_baggage.Name = "lbl_cog_cabin_baggage";
             this.lbl_cog_cabin_baggage.Size = new System.Drawing.Size(18, 20);
             this.lbl_cog_cabin_baggage.TabIndex = 16;
@@ -2600,7 +2579,7 @@ namespace myFlightInfo
             // lbl_cog_passenger
             // 
             this.lbl_cog_passenger.AutoSize = true;
-            this.lbl_cog_passenger.Location = new System.Drawing.Point(615, 178);
+            this.lbl_cog_passenger.Location = new System.Drawing.Point(492, 112);
             this.lbl_cog_passenger.Name = "lbl_cog_passenger";
             this.lbl_cog_passenger.Size = new System.Drawing.Size(18, 20);
             this.lbl_cog_passenger.TabIndex = 15;
@@ -2609,7 +2588,7 @@ namespace myFlightInfo
             // lbl_cog_pilot
             // 
             this.lbl_cog_pilot.AutoSize = true;
-            this.lbl_cog_pilot.Location = new System.Drawing.Point(614, 129);
+            this.lbl_cog_pilot.Location = new System.Drawing.Point(491, 63);
             this.lbl_cog_pilot.Name = "lbl_cog_pilot";
             this.lbl_cog_pilot.Size = new System.Drawing.Size(18, 20);
             this.lbl_cog_pilot.TabIndex = 14;
@@ -2617,7 +2596,7 @@ namespace myFlightInfo
             // 
             // txtbx_cog_fuel_arm
             // 
-            this.txtbx_cog_fuel_arm.Location = new System.Drawing.Point(458, 324);
+            this.txtbx_cog_fuel_arm.Location = new System.Drawing.Point(335, 258);
             this.txtbx_cog_fuel_arm.Name = "txtbx_cog_fuel_arm";
             this.txtbx_cog_fuel_arm.Size = new System.Drawing.Size(100, 26);
             this.txtbx_cog_fuel_arm.TabIndex = 13;
@@ -2625,7 +2604,7 @@ namespace myFlightInfo
             // 
             // txtbx_cog_hold_bag_arm
             // 
-            this.txtbx_cog_hold_bag_arm.Location = new System.Drawing.Point(458, 271);
+            this.txtbx_cog_hold_bag_arm.Location = new System.Drawing.Point(335, 205);
             this.txtbx_cog_hold_bag_arm.Name = "txtbx_cog_hold_bag_arm";
             this.txtbx_cog_hold_bag_arm.Size = new System.Drawing.Size(100, 26);
             this.txtbx_cog_hold_bag_arm.TabIndex = 12;
@@ -2633,7 +2612,7 @@ namespace myFlightInfo
             // 
             // txtbx_cog_cabbin_bag_arm
             // 
-            this.txtbx_cog_cabbin_bag_arm.Location = new System.Drawing.Point(458, 220);
+            this.txtbx_cog_cabbin_bag_arm.Location = new System.Drawing.Point(335, 154);
             this.txtbx_cog_cabbin_bag_arm.Name = "txtbx_cog_cabbin_bag_arm";
             this.txtbx_cog_cabbin_bag_arm.Size = new System.Drawing.Size(100, 26);
             this.txtbx_cog_cabbin_bag_arm.TabIndex = 11;
@@ -2641,7 +2620,7 @@ namespace myFlightInfo
             // 
             // txtbx_cog_passenger_arm
             // 
-            this.txtbx_cog_passenger_arm.Location = new System.Drawing.Point(458, 175);
+            this.txtbx_cog_passenger_arm.Location = new System.Drawing.Point(335, 109);
             this.txtbx_cog_passenger_arm.Name = "txtbx_cog_passenger_arm";
             this.txtbx_cog_passenger_arm.Size = new System.Drawing.Size(100, 26);
             this.txtbx_cog_passenger_arm.TabIndex = 10;
@@ -2649,7 +2628,7 @@ namespace myFlightInfo
             // 
             // txtbx_cog_pilot_arm
             // 
-            this.txtbx_cog_pilot_arm.Location = new System.Drawing.Point(458, 126);
+            this.txtbx_cog_pilot_arm.Location = new System.Drawing.Point(335, 60);
             this.txtbx_cog_pilot_arm.Name = "txtbx_cog_pilot_arm";
             this.txtbx_cog_pilot_arm.Size = new System.Drawing.Size(100, 26);
             this.txtbx_cog_pilot_arm.TabIndex = 9;
@@ -2658,7 +2637,7 @@ namespace myFlightInfo
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(143, 327);
+            this.label21.Location = new System.Drawing.Point(20, 261);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(40, 20);
             this.label21.TabIndex = 8;
@@ -2667,7 +2646,7 @@ namespace myFlightInfo
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(142, 274);
+            this.label20.Location = new System.Drawing.Point(19, 208);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(111, 20);
             this.label20.TabIndex = 7;
@@ -2676,7 +2655,7 @@ namespace myFlightInfo
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(142, 223);
+            this.label19.Location = new System.Drawing.Point(19, 157);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(119, 20);
             this.label19.TabIndex = 6;
@@ -2685,7 +2664,7 @@ namespace myFlightInfo
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(143, 178);
+            this.label18.Location = new System.Drawing.Point(20, 112);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(85, 20);
             this.label18.TabIndex = 5;
@@ -2694,7 +2673,7 @@ namespace myFlightInfo
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(142, 129);
+            this.label17.Location = new System.Drawing.Point(19, 63);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(39, 20);
             this.label17.TabIndex = 4;
@@ -2704,7 +2683,7 @@ namespace myFlightInfo
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(614, 83);
+            this.label16.Location = new System.Drawing.Point(491, 17);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(137, 20);
             this.label16.TabIndex = 3;
@@ -2714,7 +2693,7 @@ namespace myFlightInfo
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(454, 83);
+            this.label15.Location = new System.Drawing.Point(331, 17);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(86, 20);
             this.label15.TabIndex = 2;
@@ -2724,7 +2703,7 @@ namespace myFlightInfo
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(296, 83);
+            this.label14.Location = new System.Drawing.Point(173, 17);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(101, 20);
             this.label14.TabIndex = 1;
@@ -2734,11 +2713,65 @@ namespace myFlightInfo
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(142, 83);
+            this.label13.Location = new System.Drawing.Point(19, 17);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(54, 20);
             this.label13.TabIndex = 0;
             this.label13.Text = "Items";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.lbl_fuel_weight);
+            this.groupBox4.Controls.Add(this.lbl_cog_total_moment);
+            this.groupBox4.Controls.Add(this.lbl_cog_total_weight);
+            this.groupBox4.Controls.Add(this.label27);
+            this.groupBox4.Controls.Add(this.groupBox1);
+            this.groupBox4.Controls.Add(this.txtbx_cog_hold_bag_weight);
+            this.groupBox4.Controls.Add(this.txtbx_cog_cabin_bag_weight);
+            this.groupBox4.Controls.Add(this.txtbx_cog_passenger_weight);
+            this.groupBox4.Controls.Add(this.txtbx_cog_pilot_weight);
+            this.groupBox4.Controls.Add(this.lbl_cog_fuel);
+            this.groupBox4.Controls.Add(this.lbl_cog_hold_baggage);
+            this.groupBox4.Controls.Add(this.lbl_cog_cabin_baggage);
+            this.groupBox4.Controls.Add(this.lbl_cog_passenger);
+            this.groupBox4.Controls.Add(this.lbl_cog_pilot);
+            this.groupBox4.Controls.Add(this.txtbx_cog_fuel_arm);
+            this.groupBox4.Controls.Add(this.txtbx_cog_hold_bag_arm);
+            this.groupBox4.Controls.Add(this.txtbx_cog_cabbin_bag_arm);
+            this.groupBox4.Controls.Add(this.txtbx_cog_passenger_arm);
+            this.groupBox4.Controls.Add(this.txtbx_cog_pilot_arm);
+            this.groupBox4.Controls.Add(this.label21);
+            this.groupBox4.Controls.Add(this.label20);
+            this.groupBox4.Controls.Add(this.label19);
+            this.groupBox4.Controls.Add(this.label18);
+            this.groupBox4.Controls.Add(this.label17);
+            this.groupBox4.Controls.Add(this.label16);
+            this.groupBox4.Controls.Add(this.label15);
+            this.groupBox4.Controls.Add(this.label14);
+            this.groupBox4.Controls.Add(this.label13);
+            this.groupBox4.Location = new System.Drawing.Point(29, 21);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(678, 392);
+            this.groupBox4.TabIndex = 44;
+            this.groupBox4.TabStop = false;
+            // 
+            // rchtxtbx_cog_results
+            // 
+            this.rchtxtbx_cog_results.Location = new System.Drawing.Point(749, 227);
+            this.rchtxtbx_cog_results.Name = "rchtxtbx_cog_results";
+            this.rchtxtbx_cog_results.Size = new System.Drawing.Size(405, 185);
+            this.rchtxtbx_cog_results.TabIndex = 45;
+            this.rchtxtbx_cog_results.Text = "";
+            // 
+            // btn_cog_reset
+            // 
+            this.btn_cog_reset.Location = new System.Drawing.Point(1165, 229);
+            this.btn_cog_reset.Name = "btn_cog_reset";
+            this.btn_cog_reset.Size = new System.Drawing.Size(121, 45);
+            this.btn_cog_reset.TabIndex = 46;
+            this.btn_cog_reset.Text = "Reset";
+            this.btn_cog_reset.UseVisualStyleBackColor = true;
+            this.btn_cog_reset.Click += new System.EventHandler(this.btn_cog_reset_Click);
             // 
             // Form1
             // 
@@ -2847,12 +2880,13 @@ namespace myFlightInfo
             this.tab_crosswind.ResumeLayout(false);
             this.tab_crosswind.PerformLayout();
             this.tab_CofG.ResumeLayout(false);
-            this.tab_CofG.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chrt_cog)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3056,6 +3090,9 @@ namespace myFlightInfo
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label lbl_cog_zero;
         private System.Windows.Forms.DataVisualization.Charting.Chart chrt_cog;
+        private System.Windows.Forms.Button btn_cog_reset;
+        private System.Windows.Forms.RichTextBox rchtxtbx_cog_results;
+        private System.Windows.Forms.GroupBox groupBox4;
     }
 }
 
