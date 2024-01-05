@@ -34,5 +34,209 @@ namespace myFlightInfo.Properties {
                 this["school"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("450")]
+        public double MaxTakeOffWeight {
+            get {
+                return ((double)(this["MaxTakeOffWeight"]));
+            }
+            set {
+                this["MaxTakeOffWeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("268")]
+        public double EmptyWeight {
+            get {
+                return ((double)(this["EmptyWeight"]));
+            }
+            set {
+                this["EmptyWeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("55")]
+        public double MinPilotWeight {
+            get {
+                return ((double)(this["MinPilotWeight"]));
+            }
+            set {
+                this["MinPilotWeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("120")]
+        public double MaxWeightPerCrewMember {
+            get {
+                return ((double)(this["MaxWeightPerCrewMember"]));
+            }
+            set {
+                this["MaxWeightPerCrewMember"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("172")]
+        public double MaxCockpitWeight {
+            get {
+                return ((double)(this["MaxCockpitWeight"]));
+            }
+            set {
+                this["MaxCockpitWeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("55")]
+        public double MinCockpitWeight {
+            get {
+                return ((double)(this["MinCockpitWeight"]));
+            }
+            set {
+                this["MinCockpitWeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("120")]
+        public double MaxWeightPerSeat {
+            get {
+                return ((double)(this["MaxWeightPerSeat"]));
+            }
+            set {
+                this["MaxWeightPerSeat"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
+        public double MaxHoldBaggageWeight {
+            get {
+                return ((double)(this["MaxHoldBaggageWeight"]));
+            }
+            set {
+                this["MaxHoldBaggageWeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("121")]
+        public double Vne {
+            get {
+                return ((double)(this["Vne"]));
+            }
+            set {
+                this["Vne"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("82")]
+        public double Va {
+            get {
+                return ((double)(this["Va"]));
+            }
+            set {
+                this["Va"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("32")]
+        public double Vs0 {
+            get {
+                return ((double)(this["Vs0"]));
+            }
+            set {
+                this["Vs0"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("41")]
+        public double Vs1 {
+            get {
+                return ((double)(this["Vs1"]));
+            }
+            set {
+                this["Vs1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("63")]
+        public double Vfe {
+            get {
+                return ((double)(this["Vfe"]));
+            }
+            set {
+                this["Vfe"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("950")]
+        public double AftMomentArm {
+            get {
+                return ((double)(this["AftMomentArm"]));
+            }
+            set {
+                this["AftMomentArm"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("400")]
+        public double FwdMomentArm {
+            get {
+                return ((double)(this["FwdMomentArm"]));
+            }
+            set {
+                this["FwdMomentArm"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("560")]
+        public double AftCGLimit {
+            get {
+                return ((double)(this["AftCGLimit"]));
+            }
+            set {
+                this["AftCGLimit"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("350")]
+        public double FwdCGLimit {
+            get {
+                return ((double)(this["FwdCGLimit"]));
+            }
+            set {
+                this["FwdCGLimit"] = value;
+            }
+        }
     }
 }

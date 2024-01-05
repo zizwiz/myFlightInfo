@@ -48,6 +48,8 @@ namespace myFlightInfo
 
         private async void Form1_Load(object sender, EventArgs e)
         {
+            GetSettings();
+
             //if there is no school then ask which one
             //school gets set inside the Schools dialog
             if (settings.school == "")
@@ -402,5 +404,7 @@ namespace myFlightInfo
             // clear report
             rchtxtbx_cog_report.Text = "";
         }
+
+       
     }
 }

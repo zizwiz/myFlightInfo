@@ -10,6 +10,29 @@ namespace myFlightInfo
         private void btn_calc_cog_Click(object sender, EventArgs e)
         {
             /////////////////////////////////////////////////////////////////////////////////
+            //Declare any variables
+            /////////////////////////////////////////////////////////////////////////////////
+
+            Double MaxTakeOffWeight = settings.MaxTakeOffWeight;
+            Double EmptyAircraftWeight = settings.EmptyWeight;
+            Double MinPilotWeight = settings.MinPilotWeight;
+            Double MaxWeightPerCrewMember = settings.MaxWeightPerCrewMember;
+            Double MaxCockpitWeight = settings.MaxCockpitWeight;
+            Double MinCockpitWeight = settings.MinCockpitWeight;
+            Double MaxWeightPerSeat = settings.MaxWeightPerSeat;
+            Double MaxHoldBaggageWeight = settings.MaxHoldBaggageWeight;
+            Double VneValue = settings.Vne;
+            Double VaValue= settings.Va;
+            Double Vs0Value= settings.Vs0;
+            Double Vs1Value= settings.Vs1;
+            Double VfeValue = settings.Vfe;
+            Double AftMomentArm = settings.AftMomentArm;
+            Double FwdMomentArm = settings.FwdMomentArm;
+            Double AftCGLimit = settings.AftCGLimit;
+            Double FwdCGLimit = settings.FwdCGLimit;
+
+
+            /////////////////////////////////////////////////////////////////////////////////
             // clear report
             /////////////////////////////////////////////////////////////////////////////////
             rchtxtbx_cog_report.Text = "";
@@ -35,13 +58,6 @@ namespace myFlightInfo
             if (txtbx_cog_cabin_bag_arm.Text == "") txtbx_cog_cabin_bag_arm.Text = "400";
             if (txtbx_cog_hold_bag_arm.Text == "") txtbx_cog_hold_bag_arm.Text = "950";
             if (txtbx_cog_fuel_arm.Text == "") txtbx_cog_fuel_arm.Text = "950";
-
-
-            /////////////////////////////////////////////////////////////////////////////////
-            //Declare any variables
-            /////////////////////////////////////////////////////////////////////////////////
-
-            Double EmptyAircraftWeight = 258;
 
 
             /////////////////////////////////////////////////////////////////////////////////
@@ -99,7 +115,7 @@ namespace myFlightInfo
             // workout total moment and weight and also write to UI
             /////////////////////////////////////////////////////////////////////////////////////////
 
-            double TakeOffTotalWeight = PilotsWeight + PassengersWeight + CabinBagWeight + HoldBagWeight + 
+            double TakeOffTotalWeight = PilotsWeight + PassengersWeight + CabinBagWeight + HoldBagWeight +
                                         TakeOffFuelWeight + AccessoriesWeight;
             double TakeOffTotalMoment = pilot_moment + passenger_moment + cabin_bag_moment + hold_bag_moment +
                                  takeoff_fuel_moment + Accessories_moment;
@@ -107,7 +123,7 @@ namespace myFlightInfo
             lbl_cog_total_weight.Text = TakeOffTotalWeight.ToString();
             lbl_cog_total_moment.Text = TakeOffTotalMoment.ToString();
 
-            double LandingTotalWeight = PilotsWeight + PassengersWeight + CabinBagWeight + HoldBagWeight + 
+            double LandingTotalWeight = PilotsWeight + PassengersWeight + CabinBagWeight + HoldBagWeight +
                                         LandingFuelWeight + AccessoriesWeight;
             double LandingTotalMoment = pilot_moment + passenger_moment + cabin_bag_moment + hold_bag_moment +
                                  landing_fuel_moment + Accessories_moment;
@@ -124,6 +140,8 @@ namespace myFlightInfo
             double TakeOffWeight = TakeOffTotalWeight + EmptyAircraftWeight;
             double LandingWeight = LandingTotalWeight + EmptyAircraftWeight;
             double ZeroWeight = ZeroTotalWeight + EmptyAircraftWeight;
+
+            double CabinWeight = PilotsWeight + PassengersWeight + CabinBagWeight;
 
 
             /////////////////////////////////////////////////////////////////////////////////////////
@@ -154,7 +172,7 @@ namespace myFlightInfo
             if ((TakeOffCoG > 560) || (TakeOffCoG < 350)) TakeOffColour = "red";
             if ((LandingCofG > 560) || (LandingCofG < 350)) LandingColour = "red";
             if ((ZeroCofG > 560) || (ZeroCofG < 350)) ZeroColour = "red";
-            
+
             lbl_cog_take_off.Text = "Take-off = " + TakeOffCoG + "mm";
             lbl_cog_take_off.ForeColor = Color.FromName(TakeOffColour);
 
@@ -166,171 +184,143 @@ namespace myFlightInfo
 
 
 
-
-            /*
-
-             double CabinWeight = PilotsWeight + PassengersWeight + CabinBagWeight;
-
-
-             // workout total moment and total weight minus the fuel
-             double cog_moment = Double.Parse(pilot_moment) + Double.Parse(passenger_moment)
-                                                            + Double.Parse(cabin_bag_moment) +
-                                                            Double.Parse(hold_bag_moment);
+            /////////////////////////////////////////////////////////////////////////////////////////
+            // Here we create the report
+            /////////////////////////////////////////////////////////////////////////////////////////
 
 
-             double cog_weight = PilotWeight + PassengerWeight + CabinBagWeight + HoldBagWeight;
+            //Aircraft Weight
+            rchtxtbx_cog_report.AppendText("\rMTOW needs to be < 450kg");
+            if (TakeOffWeight > 450)
+            {
+                rchtxtbx_cog_report.AppendText("\rTotal aircraft weight = " + TakeOffWeight + "kg = Overweight\r");
+            }
+            else
+            {
+                if (TakeOffWeight < 258)
+                {
+                    rchtxtbx_cog_report.AppendText("\rTotal aircraft weight = " + TakeOffWeight + "kg = Underweight\r");
+                }
+                else
+                {
+                    rchtxtbx_cog_report.AppendText("\rTotal aircraft weight = " + TakeOffWeight + "kg = OK\r");
+                }
+            }
 
-             //double TakeOffWeight = double.Parse(results.Item6) - 258;
+            // Cabin Weight
+            rchtxtbx_cog_report.AppendText("\rTotal cabin weight needs to be between 55kg and 172kg");
+            if ((CabinWeight < 172) && (CabinWeight > 55))
+            {
+                rchtxtbx_cog_report.AppendText("\rTotal cabin weight = " + CabinWeight + "kg = OK\r");
+            }
+            else if (CabinWeight < 55)
+            {
+                rchtxtbx_cog_report.AppendText("\rTotal cabin weight = " + CabinWeight + "kg = Underweight\r");
+            }
+            else
+            {
+                rchtxtbx_cog_report.AppendText("\rTotal cabin weight = " + CabinWeight + "kg = Overweight\r");
+            }
 
+            //Pilot Weight
+            if (PilotsWeight < 120)
+            {
+                if ((PilotsWeight < 55) && (PassengersWeight == 0))
+                {
+                    rchtxtbx_cog_report.AppendText("\rSolo pilot weight needs to be between 55kg and 120kg");
+                    rchtxtbx_cog_report.AppendText("\rSolo pilots weight = " + PilotsWeight + "kg = Underweight\r");
+                }
+                else
+                {
+                    rchtxtbx_cog_report.AppendText("\rPilot weight needs to be < 120kg");
+                    rchtxtbx_cog_report.AppendText("\rPilots weight = " + PilotsWeight + "kg = OK\r");
+                }
+            }
+            else
+            {
+                rchtxtbx_cog_report.AppendText("\rPilot weight needs to be < 120kg");
+                rchtxtbx_cog_report.AppendText("\rPilots weight = " + PilotsWeight + "kg = Overweight\r");
+            }
 
+            //Passenger Weight
+            if (PassengersWeight == 0)
+            {
+                rchtxtbx_cog_report.AppendText("\rNo passenger on flight\r");
+            }
+            else
+            {
+                rchtxtbx_cog_report.AppendText("\rPassenger weight needs to be < 120kg");
+                if (PassengersWeight < 120)
+                {
+                    rchtxtbx_cog_report.AppendText("\rPassenger weight = " + PassengersWeight + "kg = OK\r");
+                }
+                else
+                {
+                    rchtxtbx_cog_report.AppendText("\rPassenger weight = " + PassengersWeight + "kg = Overweight\r");
+                }
+            }
 
+            //Fuel Volume
+            if (TakeoffFuelVolume < 10)
+            {
+                rchtxtbx_cog_report.AppendText("\rFuel volume = " + TakeoffFuelVolume + "ℓ = too low for safe outing\r");
+            }
+            else
+            {
+                rchtxtbx_cog_report.AppendText("\rFuel volume needs to be < 65ℓ");
+                if (TakeoffFuelVolume < 65)
+                {
+                    rchtxtbx_cog_report.AppendText("\rFuel volume = " + TakeoffFuelVolume + "ℓ = OK\r");
+                }
+                else
+                {
+                    rchtxtbx_cog_report.AppendText("\rFuel volume = " + TakeoffFuelVolume + "ℓ = Overfull\r");
+                }
+            }
 
-
-             //var results = WorkOutCofG.CalculateCofG(
-             //    txtbx_cog_pilot_weight.Text, txtbx_cog_pilot_arm.Text,
-             //    txtbx_cog_passenger_weight.Text, txtbx_cog_passenger_arm.Text,
-             //    txtbx_cog_cabin_bag_weight.Text, txtbx_cog_cabin_bag_arm.Text,
-             //    txtbx_cog_hold_bag_weight.Text, txtbx_cog_hold_bag_arm.Text,
-             //    txtbx_cog_takeoff_fuel.Text, txtbx_cog_fuel_arm.Text,
-             //    txtbx_cog_landing_fuel.Text, txtbx_cog_zero_fuel.Text,
-             //    txtbx_specific_gravity.Text
-             //);
-
-
-
-
-             //Weights
-
-
-
-             //Aircraft Weight
-             rchtxtbx_cog_report.AppendText("\rMTOW needs to be < 450kg");
-             if (!results.Item15)
-             {
-                 rchtxtbx_cog_report.AppendText("\rTotal aircraft weight = " + results.Item6 + "kg = OK\r");
-             }
-             else
-             {
-                 if (TakeOffWeight < 258)
-                 {
-                     rchtxtbx_cog_report.AppendText("\rTotal aircraft weight = " + results.Item6 + "kg = Underweight\r");
-                 }
-                 else
-                 {
-                     rchtxtbx_cog_report.AppendText("\rTotal aircraft weight = " + results.Item6 + "kg = Overweight\r");
-                 }
-             }
-
-             // Cabin Weight
-             rchtxtbx_cog_report.AppendText("\rTotal cabin weight needs to be < 220kg");
-             if (!results.Item16)
-             {
-                 rchtxtbx_cog_report.AppendText("\rTotal cabin weight = " + CabinWeight + "kg = OK\r");
-             }
-             else
-             {
-                 rchtxtbx_cog_report.AppendText("\rTotal cabin weight = " + CabinWeight + "kg = Overweight\r");
-             }
-
-             //Pilot Weight
-             if (!results.Item17)
-             {
-                 if (results.Item21)
-                 {
-                     rchtxtbx_cog_report.AppendText("\rSolo pilot weight needs to be between 55kg and 120kg");
-                     rchtxtbx_cog_report.AppendText("\rSolo pilots weight = " + PilotsWeight + "kg = Underweight\r");
-                 }
-                 else
-                 {
-                     rchtxtbx_cog_report.AppendText("\rPilot weight needs to be < 120kg");
-                     rchtxtbx_cog_report.AppendText("\rPilots weight = " + PilotsWeight + "kg = OK\r");
-                 }
-             }
-             else
-             {
-                 rchtxtbx_cog_report.AppendText("\rPilot weight needs to be < 120kg");
-                 rchtxtbx_cog_report.AppendText("\rPilots weight = " + PilotsWeight + "kg = Overweight\r");
-             }
-
-             //Passenger Weight
-             if (PassengersWeight == 0)
-             {
-                 rchtxtbx_cog_report.AppendText("\rNo passenger on flight\r");
-             }
-             else
-             {
-                 rchtxtbx_cog_report.AppendText("\rPassenger weight needs to be < 120kg");
-                 if (!results.Item18)
-                 {
-                     rchtxtbx_cog_report.AppendText("\rPassenger weight = " + PassengersWeight + "kg = OK\r");
-                 }
-                 else
-                 {
-                     rchtxtbx_cog_report.AppendText("\rPassenger weight = " + PassengersWeight + "kg = Overweight\r");
-                 }
-             }
-
-             //Fuel Volume
-             if (TakeoffFuelVolume < 10)
-             {
-                 rchtxtbx_cog_report.AppendText("\rFuel volume = " + TakeoffFuelVolume + "ℓ = too low for safe outing\r");
-             }
-             else
-             {
-                 rchtxtbx_cog_report.AppendText("\rFuel volume needs to be < 65ℓ");
-                 if (!results.Item19)
-                 {
-                     rchtxtbx_cog_report.AppendText("\rTotal hold baggage weight = " + TakeoffFuelVolume + "ℓ = OK\r");
-                 }
-                 else
-                 {
-                     rchtxtbx_cog_report.AppendText("\rTotal hold baggage weight = " + TakeoffFuelVolume + "ℓ = Overfull\r");
-                 }
-             }
-
-             //Hold baggage Weight
-             if (HoldBagWeight == 0)
-             {
-                 rchtxtbx_cog_report.AppendText("\rNo hold baggage on flight\r");
-             }
-             else
-             {
-                 rchtxtbx_cog_report.AppendText("\rTotal hold baggage weight needs to be < 120kg");
-                 if (!results.Item20)
-                 {
-                     rchtxtbx_cog_report.AppendText("\rTotal hold baggage weight = " + HoldBagWeight + "kg = OK\r");
-                 }
-                 else
-                 {
-                     rchtxtbx_cog_report.AppendText("\rTotal hold baggage weight = " + HoldBagWeight + "kg = Overweight\r");
-                 }
-             }
+            //Hold baggage Weight
+            if (HoldBagWeight == 0)
+            {
+                rchtxtbx_cog_report.AppendText("\rNo hold baggage on flight\r");
+            }
+            else
+            {
+                rchtxtbx_cog_report.AppendText("\rTotal hold baggage weight needs to be < 10kg");
+                if (HoldBagWeight < 10)
+                {
+                    rchtxtbx_cog_report.AppendText("\rTotal hold baggage weight = " + HoldBagWeight + "kg = OK\r");
+                }
+                else
+                {
+                    rchtxtbx_cog_report.AppendText("\rTotal hold baggage weight = " + HoldBagWeight + "kg = Overweight\r");
+                }
+            }
 
 
 
 
 
-             //chrt_cog.Series.Add("takeoff");
-             //chrt_cog.Series["takeoff"].ChartType = SeriesChartType.Point;
-             //chrt_cog.Series["takeoff"].Color = Color.Chartreuse;
-             //chrt_cog.Series["takeoff"].Points.AddXY(1,0);
+            //chrt_cog.Series.Add("takeoff");
+            //chrt_cog.Series["takeoff"].ChartType = SeriesChartType.Point;
+            //chrt_cog.Series["takeoff"].Color = Color.Chartreuse;
+            //chrt_cog.Series["takeoff"].Points.AddXY(1,0);
 
 
-             //chrt_cog.Series["cog"].Points.AddXY(4, 0);
-             //chrt_cog.Series["cog"].Points.AddXY(6, 0);
-             //chrt_cog.Series["cog"].Points.AddXY(2, 0);
-             //chrt_cog.Series["cog"].Points.AddXY(3, 0);
+            //chrt_cog.Series["cog"].Points.AddXY(4, 0);
+            //chrt_cog.Series["cog"].Points.AddXY(6, 0);
+            //chrt_cog.Series["cog"].Points.AddXY(2, 0);
+            //chrt_cog.Series["cog"].Points.AddXY(3, 0);
 
 
-             //chrt_cog.Series["default"].Color=Color.Black;
+            //chrt_cog.Series["default"].Color=Color.Black;
 
-             //chrt_cog.Series["default"].Points.AddXY(4, 0);
-             //chrt_cog.Series["default"].Points.AddXY(6, 0);
+            //chrt_cog.Series["default"].Points.AddXY(4, 0);
+            //chrt_cog.Series["default"].Points.AddXY(6, 0);
 
 
-         }
-            
+        }
 
+        /*
            
             private void btn_cog_reset_Click(object sender, EventArgs e)
         {
@@ -354,6 +344,5 @@ namespace myFlightInfo
             // clear report
             rchtxtbx_cog_report.Text = "";
            */
-        }
     }
 }

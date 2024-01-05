@@ -5,5 +5,56 @@
     <Setting Name="school" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="MaxTakeOffWeight" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">450</Value>
+    </Setting>
+    <Setting Name="EmptyWeight" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">268</Value>
+    </Setting>
+    <Setting Name="MinPilotWeight" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">55</Value>
+    </Setting>
+    <Setting Name="MaxWeightPerCrewMember" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">120</Value>
+    </Setting>
+    <Setting Name="MaxCockpitWeight" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">172</Value>
+    </Setting>
+    <Setting Name="MinCockpitWeight" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">55</Value>
+    </Setting>
+    <Setting Name="MaxWeightPerSeat" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">120</Value>
+    </Setting>
+    <Setting Name="MaxHoldBaggageWeight" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="Vne" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">121</Value>
+    </Setting>
+    <Setting Name="Va" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">82</Value>
+    </Setting>
+    <Setting Name="Vs0" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">32</Value>
+    </Setting>
+    <Setting Name="Vs1" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">41</Value>
+    </Setting>
+    <Setting Name="Vfe" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">63</Value>
+    </Setting>
+    <Setting Name="AftMomentArm" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">950</Value>
+    </Setting>
+    <Setting Name="FwdMomentArm" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">400</Value>
+    </Setting>
+    <Setting Name="AftCGLimit" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">560</Value>
+    </Setting>
+    <Setting Name="FwdCGLimit" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">350</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
