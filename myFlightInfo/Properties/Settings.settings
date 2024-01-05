@@ -56,5 +56,11 @@
     <Setting Name="FwdCGLimit" Type="System.Double" Scope="User">
       <Value Profile="(Default)">350</Value>
     </Setting>
+    <Setting Name="MaxFuelVol" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">65</Value>
+    </Setting>
+    <Setting Name="MinFuelVol" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

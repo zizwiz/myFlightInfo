@@ -29,10 +29,6 @@ namespace myFlightInfo
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.CustomLabel customLabel1 = new System.Windows.Forms.DataVisualization.Charting.CustomLabel();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
@@ -220,11 +216,6 @@ namespace myFlightInfo
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.chrt_cog = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.lbl_cog_zero = new System.Windows.Forms.Label();
-            this.lbl_cog_landing = new System.Windows.Forms.Label();
-            this.lbl_cog_take_off = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label30 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
@@ -267,7 +258,9 @@ namespace myFlightInfo
             this.label39 = new System.Windows.Forms.Label();
             this.panel40 = new System.Windows.Forms.Panel();
             this.panel42 = new System.Windows.Forms.Panel();
+            this.label49 = new System.Windows.Forms.Label();
             this.panel44 = new System.Windows.Forms.Panel();
+            this.label50 = new System.Windows.Forms.Label();
             this.panel49 = new System.Windows.Forms.Panel();
             this.panel50 = new System.Windows.Forms.Panel();
             this.panel51 = new System.Windows.Forms.Panel();
@@ -286,7 +279,9 @@ namespace myFlightInfo
             this.txtbx_settings_max_hold_bag_weight = new System.Windows.Forms.TextBox();
             this.panel58 = new System.Windows.Forms.Panel();
             this.panel59 = new System.Windows.Forms.Panel();
+            this.txtbx_settings_max_fuel_vol = new System.Windows.Forms.TextBox();
             this.panel60 = new System.Windows.Forms.Panel();
+            this.txtbx_settings_min_fuel_vol = new System.Windows.Forms.TextBox();
             this.panel61 = new System.Windows.Forms.Panel();
             this.panel62 = new System.Windows.Forms.Panel();
             this.panel63 = new System.Windows.Forms.Panel();
@@ -421,8 +416,6 @@ namespace myFlightInfo
             this.tab_crosswind.SuspendLayout();
             this.tab_weight_balance.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chrt_cog)).BeginInit();
-            this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tab_compliance_data.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
@@ -438,6 +431,8 @@ namespace myFlightInfo
             this.panel28.SuspendLayout();
             this.panel29.SuspendLayout();
             this.panel39.SuspendLayout();
+            this.panel42.SuspendLayout();
+            this.panel44.SuspendLayout();
             this.panel51.SuspendLayout();
             this.panel52.SuspendLayout();
             this.panel53.SuspendLayout();
@@ -445,6 +440,8 @@ namespace myFlightInfo
             this.panel55.SuspendLayout();
             this.panel56.SuspendLayout();
             this.panel57.SuspendLayout();
+            this.panel59.SuspendLayout();
+            this.panel60.SuspendLayout();
             this.panel64.SuspendLayout();
             this.panel65.SuspendLayout();
             this.panel66.SuspendLayout();
@@ -2372,8 +2369,6 @@ namespace myFlightInfo
             this.tab_weight_balance.Controls.Add(this.btn_cog_reset);
             this.tab_weight_balance.Controls.Add(this.rchtxtbx_cog_report);
             this.tab_weight_balance.Controls.Add(this.groupBox4);
-            this.tab_weight_balance.Controls.Add(this.chrt_cog);
-            this.tab_weight_balance.Controls.Add(this.groupBox3);
             this.tab_weight_balance.Controls.Add(this.groupBox2);
             this.tab_weight_balance.Controls.Add(this.btn_calc_cog);
             this.tab_weight_balance.Location = new System.Drawing.Point(28, 4);
@@ -2386,7 +2381,7 @@ namespace myFlightInfo
             // 
             // btn_cog_print_report
             // 
-            this.btn_cog_print_report.Location = new System.Drawing.Point(1165, 299);
+            this.btn_cog_print_report.Location = new System.Drawing.Point(1053, 527);
             this.btn_cog_print_report.Name = "btn_cog_print_report";
             this.btn_cog_print_report.Size = new System.Drawing.Size(121, 45);
             this.btn_cog_print_report.TabIndex = 47;
@@ -2395,7 +2390,7 @@ namespace myFlightInfo
             // 
             // btn_cog_reset
             // 
-            this.btn_cog_reset.Location = new System.Drawing.Point(1165, 229);
+            this.btn_cog_reset.Location = new System.Drawing.Point(913, 527);
             this.btn_cog_reset.Name = "btn_cog_reset";
             this.btn_cog_reset.Size = new System.Drawing.Size(121, 45);
             this.btn_cog_reset.TabIndex = 46;
@@ -2405,9 +2400,9 @@ namespace myFlightInfo
             // 
             // rchtxtbx_cog_report
             // 
-            this.rchtxtbx_cog_report.Location = new System.Drawing.Point(734, 212);
+            this.rchtxtbx_cog_report.Location = new System.Drawing.Point(656, 6);
             this.rchtxtbx_cog_report.Name = "rchtxtbx_cog_report";
-            this.rchtxtbx_cog_report.Size = new System.Drawing.Size(420, 218);
+            this.rchtxtbx_cog_report.Size = new System.Drawing.Size(657, 515);
             this.rchtxtbx_cog_report.TabIndex = 45;
             this.rchtxtbx_cog_report.Text = "";
             // 
@@ -2445,9 +2440,9 @@ namespace myFlightInfo
             this.groupBox4.Controls.Add(this.label15);
             this.groupBox4.Controls.Add(this.label14);
             this.groupBox4.Controls.Add(this.label13);
-            this.groupBox4.Location = new System.Drawing.Point(29, 21);
+            this.groupBox4.Location = new System.Drawing.Point(6, 6);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(678, 409);
+            this.groupBox4.Size = new System.Drawing.Size(638, 409);
             this.groupBox4.TabIndex = 44;
             this.groupBox4.TabStop = false;
             // 
@@ -2528,7 +2523,7 @@ namespace myFlightInfo
             // 
             this.groupBox1.Location = new System.Drawing.Point(25, 345);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(613, 8);
+            this.groupBox1.Size = new System.Drawing.Size(590, 10);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             // 
@@ -2734,88 +2729,6 @@ namespace myFlightInfo
             this.label13.TabIndex = 0;
             this.label13.Text = "Items";
             // 
-            // chrt_cog
-            // 
-            chartArea1.AxisX.IsMarksNextToAxis = false;
-            chartArea1.AxisX.LabelStyle.Enabled = false;
-            chartArea1.AxisX.LineColor = System.Drawing.Color.Transparent;
-            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.DimGray;
-            chartArea1.AxisX.MajorGrid.LineWidth = 2;
-            chartArea1.AxisX.MajorTickMark.Enabled = false;
-            chartArea1.AxisX.MajorTickMark.LineColor = System.Drawing.Color.Maroon;
-            chartArea1.AxisX.MinorGrid.LineColor = System.Drawing.Color.OrangeRed;
-            chartArea1.AxisX.MinorTickMark.LineColor = System.Drawing.Color.MediumBlue;
-            chartArea1.AxisX2.IsMarksNextToAxis = false;
-            chartArea1.AxisX2.LineColor = System.Drawing.Color.Transparent;
-            chartArea1.AxisY.CustomLabels.Add(customLabel1);
-            chartArea1.AxisY.IsMarksNextToAxis = false;
-            chartArea1.AxisY.LineColor = System.Drawing.Color.Transparent;
-            chartArea1.AxisY.MajorGrid.Enabled = false;
-            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.Transparent;
-            chartArea1.AxisY.MajorTickMark.Enabled = false;
-            chartArea1.AxisY2.IsMarksNextToAxis = false;
-            chartArea1.AxisY2.LineColor = System.Drawing.Color.Transparent;
-            chartArea1.BorderColor = System.Drawing.Color.Transparent;
-            chartArea1.Name = "ChartArea1";
-            this.chrt_cog.ChartAreas.Add(chartArea1);
-            this.chrt_cog.IsSoftShadows = false;
-            this.chrt_cog.Location = new System.Drawing.Point(29, 436);
-            this.chrt_cog.Name = "chrt_cog";
-            series1.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series1.IsVisibleInLegend = false;
-            series1.LabelForeColor = System.Drawing.Color.Transparent;
-            series1.Name = "cog";
-            series1.ShadowColor = System.Drawing.Color.LightGray;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series2.Name = "default";
-            this.chrt_cog.Series.Add(series1);
-            this.chrt_cog.Series.Add(series2);
-            this.chrt_cog.Size = new System.Drawing.Size(1257, 117);
-            this.chrt_cog.TabIndex = 43;
-            this.chrt_cog.Text = "chart1";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.lbl_cog_zero);
-            this.groupBox3.Controls.Add(this.lbl_cog_landing);
-            this.groupBox3.Controls.Add(this.lbl_cog_take_off);
-            this.groupBox3.Location = new System.Drawing.Point(743, 21);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(266, 185);
-            this.groupBox3.TabIndex = 42;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Centre of Gravity";
-            // 
-            // lbl_cog_zero
-            // 
-            this.lbl_cog_zero.AutoSize = true;
-            this.lbl_cog_zero.Location = new System.Drawing.Point(27, 135);
-            this.lbl_cog_zero.Name = "lbl_cog_zero";
-            this.lbl_cog_zero.Size = new System.Drawing.Size(84, 20);
-            this.lbl_cog_zero.TabIndex = 41;
-            this.lbl_cog_zero.Text = "Zero CofG";
-            // 
-            // lbl_cog_landing
-            // 
-            this.lbl_cog_landing.AutoSize = true;
-            this.lbl_cog_landing.Location = new System.Drawing.Point(27, 88);
-            this.lbl_cog_landing.Name = "lbl_cog_landing";
-            this.lbl_cog_landing.Size = new System.Drawing.Size(108, 20);
-            this.lbl_cog_landing.TabIndex = 34;
-            this.lbl_cog_landing.Text = "Landing CofG";
-            // 
-            // lbl_cog_take_off
-            // 
-            this.lbl_cog_take_off.AutoSize = true;
-            this.lbl_cog_take_off.Location = new System.Drawing.Point(27, 45);
-            this.lbl_cog_take_off.Name = "lbl_cog_take_off";
-            this.lbl_cog_take_off.Size = new System.Drawing.Size(113, 20);
-            this.lbl_cog_take_off.TabIndex = 33;
-            this.lbl_cog_take_off.Text = "Take-Off CofG";
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label30);
@@ -2830,9 +2743,9 @@ namespace myFlightInfo
             this.groupBox2.Controls.Add(this.txtbx_cog_landing_fuel);
             this.groupBox2.Controls.Add(this.label24);
             this.groupBox2.Controls.Add(this.txtbx_cog_takeoff_fuel);
-            this.groupBox2.Location = new System.Drawing.Point(1030, 25);
+            this.groupBox2.Location = new System.Drawing.Point(6, 421);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(266, 181);
+            this.groupBox2.Size = new System.Drawing.Size(678, 181);
             this.groupBox2.TabIndex = 40;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Fuel Volume";
@@ -2841,7 +2754,7 @@ namespace myFlightInfo
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(221, 145);
+            this.label30.Location = new System.Drawing.Point(553, 97);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(14, 20);
             this.label30.TabIndex = 45;
@@ -2851,7 +2764,7 @@ namespace myFlightInfo
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(221, 113);
+            this.label29.Location = new System.Drawing.Point(553, 65);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(14, 20);
             this.label29.TabIndex = 44;
@@ -2861,7 +2774,7 @@ namespace myFlightInfo
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(221, 81);
+            this.label28.Location = new System.Drawing.Point(553, 33);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(14, 20);
             this.label28.TabIndex = 43;
@@ -2899,7 +2812,7 @@ namespace myFlightInfo
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(26, 145);
+            this.label23.Location = new System.Drawing.Point(358, 97);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(42, 20);
             this.label23.TabIndex = 39;
@@ -2907,7 +2820,7 @@ namespace myFlightInfo
             // 
             // txtbx_cog_zero_fuel
             // 
-            this.txtbx_cog_zero_fuel.Location = new System.Drawing.Point(150, 142);
+            this.txtbx_cog_zero_fuel.Location = new System.Drawing.Point(482, 94);
             this.txtbx_cog_zero_fuel.Name = "txtbx_cog_zero_fuel";
             this.txtbx_cog_zero_fuel.Size = new System.Drawing.Size(65, 26);
             this.txtbx_cog_zero_fuel.TabIndex = 38;
@@ -2917,7 +2830,7 @@ namespace myFlightInfo
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(26, 113);
+            this.label22.Location = new System.Drawing.Point(358, 65);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(66, 20);
             this.label22.TabIndex = 37;
@@ -2925,7 +2838,7 @@ namespace myFlightInfo
             // 
             // txtbx_cog_landing_fuel
             // 
-            this.txtbx_cog_landing_fuel.Location = new System.Drawing.Point(150, 110);
+            this.txtbx_cog_landing_fuel.Location = new System.Drawing.Point(482, 62);
             this.txtbx_cog_landing_fuel.Name = "txtbx_cog_landing_fuel";
             this.txtbx_cog_landing_fuel.Size = new System.Drawing.Size(65, 26);
             this.txtbx_cog_landing_fuel.TabIndex = 36;
@@ -2935,7 +2848,7 @@ namespace myFlightInfo
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(26, 81);
+            this.label24.Location = new System.Drawing.Point(358, 33);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(68, 20);
             this.label24.TabIndex = 29;
@@ -2943,7 +2856,7 @@ namespace myFlightInfo
             // 
             // txtbx_cog_takeoff_fuel
             // 
-            this.txtbx_cog_takeoff_fuel.Location = new System.Drawing.Point(150, 78);
+            this.txtbx_cog_takeoff_fuel.Location = new System.Drawing.Point(482, 30);
             this.txtbx_cog_takeoff_fuel.Name = "txtbx_cog_takeoff_fuel";
             this.txtbx_cog_takeoff_fuel.Size = new System.Drawing.Size(65, 26);
             this.txtbx_cog_takeoff_fuel.TabIndex = 23;
@@ -2951,7 +2864,7 @@ namespace myFlightInfo
             // 
             // btn_calc_cog
             // 
-            this.btn_calc_cog.Location = new System.Drawing.Point(1165, 358);
+            this.btn_calc_cog.Location = new System.Drawing.Point(1192, 527);
             this.btn_calc_cog.Name = "btn_calc_cog";
             this.btn_calc_cog.Size = new System.Drawing.Size(121, 45);
             this.btn_calc_cog.TabIndex = 32;
@@ -3279,19 +3192,39 @@ namespace myFlightInfo
             // 
             // panel42
             // 
+            this.panel42.Controls.Add(this.label49);
             this.panel42.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel42.Location = new System.Drawing.Point(29, 363);
             this.panel42.Name = "panel42";
             this.panel42.Size = new System.Drawing.Size(297, 34);
             this.panel42.TabIndex = 18;
             // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(5, 7);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(150, 20);
+            this.label49.TabIndex = 0;
+            this.label49.Text = "Max Fuel Volume (ℓ)";
+            // 
             // panel44
             // 
+            this.panel44.Controls.Add(this.label50);
             this.panel44.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel44.Location = new System.Drawing.Point(29, 403);
             this.panel44.Name = "panel44";
             this.panel44.Size = new System.Drawing.Size(297, 34);
             this.panel44.TabIndex = 19;
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(3, 7);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(146, 20);
+            this.label50.TabIndex = 1;
+            this.label50.Text = "Min Fuel Volume (ℓ)";
             // 
             // panel49
             // 
@@ -3435,19 +3368,35 @@ namespace myFlightInfo
             // 
             // panel59
             // 
+            this.panel59.Controls.Add(this.txtbx_settings_max_fuel_vol);
             this.panel59.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel59.Location = new System.Drawing.Point(342, 363);
             this.panel59.Name = "panel59";
             this.panel59.Size = new System.Drawing.Size(297, 34);
             this.panel59.TabIndex = 30;
             // 
+            // txtbx_settings_max_fuel_vol
+            // 
+            this.txtbx_settings_max_fuel_vol.Location = new System.Drawing.Point(3, 4);
+            this.txtbx_settings_max_fuel_vol.Name = "txtbx_settings_max_fuel_vol";
+            this.txtbx_settings_max_fuel_vol.Size = new System.Drawing.Size(100, 26);
+            this.txtbx_settings_max_fuel_vol.TabIndex = 2;
+            // 
             // panel60
             // 
+            this.panel60.Controls.Add(this.txtbx_settings_min_fuel_vol);
             this.panel60.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel60.Location = new System.Drawing.Point(342, 403);
             this.panel60.Name = "panel60";
             this.panel60.Size = new System.Drawing.Size(297, 34);
             this.panel60.TabIndex = 31;
+            // 
+            // txtbx_settings_min_fuel_vol
+            // 
+            this.txtbx_settings_min_fuel_vol.Location = new System.Drawing.Point(3, 4);
+            this.txtbx_settings_min_fuel_vol.Name = "txtbx_settings_min_fuel_vol";
+            this.txtbx_settings_min_fuel_vol.Size = new System.Drawing.Size(100, 26);
+            this.txtbx_settings_min_fuel_vol.TabIndex = 3;
             // 
             // panel61
             // 
@@ -3946,9 +3895,6 @@ namespace myFlightInfo
             this.tab_weight_balance.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chrt_cog)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.tab_compliance_data.ResumeLayout(false);
@@ -3977,6 +3923,10 @@ namespace myFlightInfo
             this.panel29.PerformLayout();
             this.panel39.ResumeLayout(false);
             this.panel39.PerformLayout();
+            this.panel42.ResumeLayout(false);
+            this.panel42.PerformLayout();
+            this.panel44.ResumeLayout(false);
+            this.panel44.PerformLayout();
             this.panel51.ResumeLayout(false);
             this.panel52.ResumeLayout(false);
             this.panel52.PerformLayout();
@@ -3990,6 +3940,10 @@ namespace myFlightInfo
             this.panel56.PerformLayout();
             this.panel57.ResumeLayout(false);
             this.panel57.PerformLayout();
+            this.panel59.ResumeLayout(false);
+            this.panel59.PerformLayout();
+            this.panel60.ResumeLayout(false);
+            this.panel60.PerformLayout();
             this.panel64.ResumeLayout(false);
             this.panel64.PerformLayout();
             this.panel65.ResumeLayout(false);
@@ -4209,8 +4163,6 @@ namespace myFlightInfo
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btn_calc_cog;
-        private System.Windows.Forms.Label lbl_cog_take_off;
-        private System.Windows.Forms.Label lbl_cog_landing;
         private System.Windows.Forms.Label lbl_fuel_weight;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label23;
@@ -4223,9 +4175,6 @@ namespace myFlightInfo
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TextBox txtbx_specific_gravity;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label lbl_cog_zero;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chrt_cog;
         private System.Windows.Forms.Button btn_cog_reset;
         private System.Windows.Forms.RichTextBox rchtxtbx_cog_report;
         private System.Windows.Forms.GroupBox groupBox4;
@@ -4328,6 +4277,10 @@ namespace myFlightInfo
         private System.Windows.Forms.TextBox txtbx_settings_aft_cg_limit;
         private System.Windows.Forms.TextBox txtbx_settings_fwd_cg_limit;
         private System.Windows.Forms.Button btn_settings_defaults;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.TextBox txtbx_settings_max_fuel_vol;
+        private System.Windows.Forms.TextBox txtbx_settings_min_fuel_vol;
     }
 }
 

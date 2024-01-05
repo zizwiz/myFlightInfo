@@ -238,5 +238,29 @@ namespace myFlightInfo.Properties {
                 this["FwdCGLimit"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("65")]
+        public double MaxFuelVol {
+            get {
+                return ((double)(this["MaxFuelVol"]));
+            }
+            set {
+                this["MaxFuelVol"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
+        public double MinFuelVol {
+            get {
+                return ((double)(this["MinFuelVol"]));
+            }
+            set {
+                this["MinFuelVol"] = value;
+            }
+        }
     }
 }

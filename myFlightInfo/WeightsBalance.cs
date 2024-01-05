@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Drawing;
+using System.Globalization;
+using System.Windows.Forms;
 
 
 namespace myFlightInfo
@@ -21,24 +23,24 @@ namespace myFlightInfo
             Double MinCockpitWeight = settings.MinCockpitWeight;
             Double MaxWeightPerSeat = settings.MaxWeightPerSeat;
             Double MaxHoldBaggageWeight = settings.MaxHoldBaggageWeight;
+            Double MaxFuelVol = settings.MaxFuelVol;
+            Double MinFuelVol = settings.MinFuelVol;
             Double VneValue = settings.Vne;
-            Double VaValue= settings.Va;
-            Double Vs0Value= settings.Vs0;
-            Double Vs1Value= settings.Vs1;
+            Double VaValue = settings.Va;
+            Double Vs0Value = settings.Vs0;
+            Double Vs1Value = settings.Vs1;
             Double VfeValue = settings.Vfe;
             Double AftMomentArm = settings.AftMomentArm;
             Double FwdMomentArm = settings.FwdMomentArm;
             Double AftCGLimit = settings.AftCGLimit;
             Double FwdCGLimit = settings.FwdCGLimit;
 
-
+            
             /////////////////////////////////////////////////////////////////////////////////
             // clear report
             /////////////////////////////////////////////////////////////////////////////////
             rchtxtbx_cog_report.Text = "";
-            string TakeOffColour = "green";
-            string LandingColour = "green";
-            string ZeroColour = "green";
+
 
             /////////////////////////////////////////////////////////////////////////////////
             //if any item is empty then we put in min defaults
@@ -145,13 +147,6 @@ namespace myFlightInfo
 
 
             /////////////////////////////////////////////////////////////////////////////////////////
-            // Are we within limits to takeoff and land. what about zero fuel? 
-            /////////////////////////////////////////////////////////////////////////////////////////
-
-            lbl_cog_take_off.Text = lbl_cog_landing.Text = "";
-
-
-            /////////////////////////////////////////////////////////////////////////////////////////
             // total landing moment and weight includes all fuel 
             /////////////////////////////////////////////////////////////////////////////////////////
             double TakeOffCoG = Math.Round((TakeOffTotalMoment / TakeOffTotalWeight), 2);
@@ -167,79 +162,115 @@ namespace myFlightInfo
             double ZeroCofG = Math.Round((ZeroTotalMoment / ZeroTotalWeight), 2);
 
             /////////////////////////////////////////////////////////////////////////////////////////
-            // Are we within limits if not then label will be red
-            /////////////////////////////////////////////////////////////////////////////////////////
-            if ((TakeOffCoG > 560) || (TakeOffCoG < 350)) TakeOffColour = "red";
-            if ((LandingCofG > 560) || (LandingCofG < 350)) LandingColour = "red";
-            if ((ZeroCofG > 560) || (ZeroCofG < 350)) ZeroColour = "red";
-
-            lbl_cog_take_off.Text = "Take-off = " + TakeOffCoG + "mm";
-            lbl_cog_take_off.ForeColor = Color.FromName(TakeOffColour);
-
-            lbl_cog_landing.Text = "Landing = " + LandingCofG + "mm";
-            lbl_cog_landing.ForeColor = Color.FromName(LandingColour);
-
-            lbl_cog_zero.Text = "Zero = " + ZeroCofG + "mm";
-            lbl_cog_zero.ForeColor = Color.FromName(ZeroColour);
-
-
-
-            /////////////////////////////////////////////////////////////////////////////////////////
             // Here we create the report
             /////////////////////////////////////////////////////////////////////////////////////////
 
+            rchtxtbx_cog_report.SelectionFont = new Font("Ariel", 12, FontStyle.Underline);
+            rchtxtbx_cog_report.SelectionAlignment = HorizontalAlignment.Center;
+            rchtxtbx_cog_report.AppendText("Weights and Balances Report from - \r" + DateTime.Now.ToString("f",
+                CultureInfo.CreateSpecificCulture("en-GB")) + "\r");
+            rchtxtbx_cog_report.SelectionAlignment = HorizontalAlignment.Left;
 
-            //Aircraft Weight
-            rchtxtbx_cog_report.AppendText("\rMTOW needs to be < 450kg");
-            if (TakeOffWeight > 450)
+            //Centre of Gravity
+            rchtxtbx_cog_report.AppendText("\rThe Centre of Gravity needs to be between " + FwdCGLimit +
+                                           "mm and " + AftCGLimit + "mm for both take-off and landing");
+
+            if ((TakeOffCoG > AftCGLimit) || (TakeOffCoG < FwdCGLimit))
             {
-                rchtxtbx_cog_report.AppendText("\rTotal aircraft weight = " + TakeOffWeight + "kg = Overweight\r");
+                rchtxtbx_cog_report.SelectionColor = Color.Red;
+                rchtxtbx_cog_report.AppendText("\r\tTake-off CoG = " + TakeOffCoG + "mm = Outside aircraft limits");
             }
             else
             {
-                if (TakeOffWeight < 258)
+                rchtxtbx_cog_report.SelectionColor = Color.Green;
+                rchtxtbx_cog_report.AppendText("\r\tTake-off CoG = " + TakeOffCoG + "mm = OK");
+            }
+            
+            if ((LandingCofG > AftCGLimit) || (LandingCofG < FwdCGLimit))
+            {
+                rchtxtbx_cog_report.SelectionColor =Color.Red;
+                rchtxtbx_cog_report.AppendText("\r\tLanding CoG = " + LandingCofG + "mm = Outside aircraft limits");
+            }
+            else
+            {
+                rchtxtbx_cog_report.SelectionColor = Color.Green;
+                rchtxtbx_cog_report.AppendText("\r\tLanding CoG = " + LandingCofG + "mm = OK");
+            }
+
+            if ((ZeroCofG > AftCGLimit) || (ZeroCofG < FwdCGLimit))
+            {
+                rchtxtbx_cog_report.SelectionColor = Color.Red;
+                rchtxtbx_cog_report.AppendText("\r\tZero CoG = " + ZeroCofG + "mm = Outside aircraft limits\r");
+            }
+            else
+            {
+                rchtxtbx_cog_report.SelectionColor = Color.Green;
+                rchtxtbx_cog_report.AppendText("\r\tZero CoG = " + ZeroCofG + "mm = OK\r");
+            }
+
+
+
+            //Aircraft Weight
+            rchtxtbx_cog_report.AppendText("\rMTOW needs to be between " + EmptyAircraftWeight + "kg and " + MaxTakeOffWeight + "kg");
+            if (TakeOffWeight >= MaxTakeOffWeight)
+            {
+                rchtxtbx_cog_report.SelectionColor = Color.Red;
+                rchtxtbx_cog_report.AppendText("\r\tTotal aircraft weight = " + TakeOffWeight + "kg = Overweight\r");
+            }
+            else
+            {
+                if (TakeOffWeight <= EmptyAircraftWeight)
                 {
-                    rchtxtbx_cog_report.AppendText("\rTotal aircraft weight = " + TakeOffWeight + "kg = Underweight\r");
+                    rchtxtbx_cog_report.SelectionColor = Color.Red;
+                    rchtxtbx_cog_report.AppendText("\r\tTotal aircraft weight = " + TakeOffWeight + "kg = Underweight\r");
                 }
                 else
                 {
-                    rchtxtbx_cog_report.AppendText("\rTotal aircraft weight = " + TakeOffWeight + "kg = OK\r");
+                    rchtxtbx_cog_report.SelectionColor = Color.Green;
+                    rchtxtbx_cog_report.AppendText("\r\tTotal aircraft weight = " + TakeOffWeight + "kg = OK\r");
                 }
             }
 
             // Cabin Weight
-            rchtxtbx_cog_report.AppendText("\rTotal cabin weight needs to be between 55kg and 172kg");
-            if ((CabinWeight < 172) && (CabinWeight > 55))
+            rchtxtbx_cog_report.AppendText("\rTotal cabin weight needs to be between "+ MinCockpitWeight + "kg and "+ MaxCockpitWeight + "kg");
+            if ((CabinWeight <= MaxCockpitWeight) && (CabinWeight > MinCockpitWeight))
             {
-                rchtxtbx_cog_report.AppendText("\rTotal cabin weight = " + CabinWeight + "kg = OK\r");
+                rchtxtbx_cog_report.SelectionColor = Color.Green;
+                rchtxtbx_cog_report.AppendText("\r\tTotal cabin weight = " + CabinWeight + "kg = OK\r");
             }
-            else if (CabinWeight < 55)
+            else if (CabinWeight <= MinCockpitWeight)
             {
-                rchtxtbx_cog_report.AppendText("\rTotal cabin weight = " + CabinWeight + "kg = Underweight\r");
+                rchtxtbx_cog_report.SelectionColor = Color.Red;
+                rchtxtbx_cog_report.AppendText("\r\tTotal cabin weight = " + CabinWeight + "kg = Underweight\r");
             }
             else
             {
-                rchtxtbx_cog_report.AppendText("\rTotal cabin weight = " + CabinWeight + "kg = Overweight\r");
+                rchtxtbx_cog_report.SelectionColor = Color.Red;
+                rchtxtbx_cog_report.AppendText("\r\tTotal cabin weight = " + CabinWeight + "kg = Overweight\r");
             }
 
             //Pilot Weight
-            if (PilotsWeight < 120)
+            if (PilotsWeight < MaxWeightPerSeat)
             {
-                if ((PilotsWeight < 55) && (PassengersWeight == 0))
+                if ((PilotsWeight <= MinPilotWeight) && (PassengersWeight == 0))
                 {
-                    rchtxtbx_cog_report.AppendText("\rSolo pilot weight needs to be between 55kg and 120kg");
-                    rchtxtbx_cog_report.AppendText("\rSolo pilots weight = " + PilotsWeight + "kg = Underweight\r");
+                    
+                    rchtxtbx_cog_report.AppendText("\rSolo pilot weight needs to be between " + MinPilotWeight + "kg and " + MaxWeightPerSeat + "kg");
+                    rchtxtbx_cog_report.SelectionColor = Color.Red;
+                    rchtxtbx_cog_report.AppendText("\r\tSolo pilots weight = " + PilotsWeight + "kg = Underweight\r");
                 }
                 else
                 {
-                    rchtxtbx_cog_report.AppendText("\rPilot weight needs to be < 120kg");
-                    rchtxtbx_cog_report.AppendText("\rPilots weight = " + PilotsWeight + "kg = OK\r");
+                    rchtxtbx_cog_report.AppendText("\rPilot weight needs to be <= " + MaxWeightPerSeat + "kg");
+                    rchtxtbx_cog_report.SelectionColor = Color.Green; 
+                    rchtxtbx_cog_report.AppendText("\r\tPilots weight = " + PilotsWeight + "kg = OK\r");
                 }
             }
             else
             {
-                rchtxtbx_cog_report.AppendText("\rPilot weight needs to be < 120kg");
-                rchtxtbx_cog_report.AppendText("\rPilots weight = " + PilotsWeight + "kg = Overweight\r");
+                rchtxtbx_cog_report.AppendText("\rPilot weight needs to be <= " + MaxWeightPerSeat + "kg");
+                rchtxtbx_cog_report.SelectionColor = Color.Red;
+                rchtxtbx_cog_report.AppendText("\r\tPilots weight = " + PilotsWeight + "kg = Overweight\r");
             }
 
             //Passenger Weight
@@ -249,32 +280,37 @@ namespace myFlightInfo
             }
             else
             {
-                rchtxtbx_cog_report.AppendText("\rPassenger weight needs to be < 120kg");
-                if (PassengersWeight < 120)
+                rchtxtbx_cog_report.AppendText("\rPassenger weight needs to be <= " + MaxWeightPerSeat + "kg");
+                if (PassengersWeight <= MaxWeightPerSeat)
                 {
-                    rchtxtbx_cog_report.AppendText("\rPassenger weight = " + PassengersWeight + "kg = OK\r");
+                    rchtxtbx_cog_report.SelectionColor = Color.Green;
+                    rchtxtbx_cog_report.AppendText("\r\tPassenger weight = " + PassengersWeight + "kg = OK\r");
                 }
                 else
                 {
-                    rchtxtbx_cog_report.AppendText("\rPassenger weight = " + PassengersWeight + "kg = Overweight\r");
+                    rchtxtbx_cog_report.SelectionColor = Color.Red;
+                    rchtxtbx_cog_report.AppendText("\r\tPassenger weight = " + PassengersWeight + "kg = Overweight\r");
                 }
             }
 
             //Fuel Volume
-            if (TakeoffFuelVolume < 10)
+            if (TakeoffFuelVolume <= MinFuelVol)
             {
-                rchtxtbx_cog_report.AppendText("\rFuel volume = " + TakeoffFuelVolume + "ℓ = too low for safe outing\r");
+                rchtxtbx_cog_report.SelectionColor = Color.Red;
+                rchtxtbx_cog_report.AppendText("\r\tFuel volume = " + TakeoffFuelVolume + "ℓ = too low for safe outing\r");
             }
             else
             {
-                rchtxtbx_cog_report.AppendText("\rFuel volume needs to be < 65ℓ");
-                if (TakeoffFuelVolume < 65)
+                rchtxtbx_cog_report.AppendText("\rFuel volume needs to be between " + MinFuelVol+ "ℓ and " + MaxFuelVol +"ℓ");
+                if (TakeoffFuelVolume <= MaxFuelVol)
                 {
-                    rchtxtbx_cog_report.AppendText("\rFuel volume = " + TakeoffFuelVolume + "ℓ = OK\r");
+                    rchtxtbx_cog_report.SelectionColor = Color.Green;
+                    rchtxtbx_cog_report.AppendText("\r\tFuel volume = " + TakeoffFuelVolume + "ℓ = OK\r");
                 }
                 else
                 {
-                    rchtxtbx_cog_report.AppendText("\rFuel volume = " + TakeoffFuelVolume + "ℓ = Overfull\r");
+                    rchtxtbx_cog_report.SelectionColor = Color.Red;
+                    rchtxtbx_cog_report.AppendText("\r\tFuel volume = " + TakeoffFuelVolume + "ℓ = Overfull\r");
                 }
             }
 
@@ -285,64 +321,40 @@ namespace myFlightInfo
             }
             else
             {
-                rchtxtbx_cog_report.AppendText("\rTotal hold baggage weight needs to be < 10kg");
-                if (HoldBagWeight < 10)
+                rchtxtbx_cog_report.AppendText("\rTotal hold baggage weight needs to be <= " + MaxHoldBaggageWeight + "kg");
+                if (HoldBagWeight <= MaxHoldBaggageWeight)
                 {
-                    rchtxtbx_cog_report.AppendText("\rTotal hold baggage weight = " + HoldBagWeight + "kg = OK\r");
+                    rchtxtbx_cog_report.SelectionColor = Color.Green;
+                    rchtxtbx_cog_report.AppendText("\r\tTotal hold baggage weight = " + HoldBagWeight + "kg = OK\r");
                 }
                 else
                 {
-                    rchtxtbx_cog_report.AppendText("\rTotal hold baggage weight = " + HoldBagWeight + "kg = Overweight\r");
+                    rchtxtbx_cog_report.SelectionColor = Color.Red;
+                    rchtxtbx_cog_report.AppendText("\r\tTotal hold baggage weight = " + HoldBagWeight + "kg = Overweight\r");
                 }
             }
-
-
-
-
-
-            //chrt_cog.Series.Add("takeoff");
-            //chrt_cog.Series["takeoff"].ChartType = SeriesChartType.Point;
-            //chrt_cog.Series["takeoff"].Color = Color.Chartreuse;
-            //chrt_cog.Series["takeoff"].Points.AddXY(1,0);
-
-
-            //chrt_cog.Series["cog"].Points.AddXY(4, 0);
-            //chrt_cog.Series["cog"].Points.AddXY(6, 0);
-            //chrt_cog.Series["cog"].Points.AddXY(2, 0);
-            //chrt_cog.Series["cog"].Points.AddXY(3, 0);
-
-
-            //chrt_cog.Series["default"].Color=Color.Black;
-
-            //chrt_cog.Series["default"].Points.AddXY(4, 0);
-            //chrt_cog.Series["default"].Points.AddXY(6, 0);
-
-
         }
 
-        /*
-           
-            private void btn_cog_reset_Click(object sender, EventArgs e)
+
+
+        private void btn_cog_reset_Click(object sender, EventArgs e)
         {
             txtbx_cog_pilot_weight.Text = txtbx_cog_passenger_weight.Text = txtbx_cog_cabin_bag_weight.Text =
                 txtbx_cog_hold_bag_weight.Text = txtbx_cog_takeoff_fuel.Text = txtbx_cog_zero_fuel.Text = "0";
 
-            txtbx_cog_pilot_arm.Text = txtbx_cog_passenger_arm.Text = txtbx_cog_cabin_bag_arm.Text = "400";
+            txtbx_cog_pilot_arm.Text = txtbx_cog_passenger_arm.Text = txtbx_cog_cabin_bag_arm.Text = settings.FwdMomentArm.ToString();
 
-            txtbx_cog_hold_bag_arm.Text = txtbx_cog_fuel_arm.Text = "950";
+            txtbx_cog_hold_bag_arm.Text = txtbx_cog_fuel_arm.Text = settings.AftMomentArm.ToString();
 
-            txtbx_cog_landing_fuel.Text = "10";
+            txtbx_cog_landing_fuel.Text = settings.MinFuelVol.ToString();
             txtbx_specific_gravity.Text = "0.72";
 
             lbl_cog_pilot.Text = lbl_cog_passenger.Text = lbl_cog_cabin_baggage.Text =
                 lbl_cog_hold_baggage.Text = lbl_cog_fuel.Text = lbl_cog_total_weight.Text =
-                    lbl_cog_take_off.Text = lbl_cog_landing.Text = lbl_cog_zero.Text =
-                        lbl_fuel_weight.Text = "";
-
-            lbl_cog_take_off.ForeColor = lbl_cog_landing.ForeColor = lbl_cog_zero.ForeColor = Color.Black;
+                    lbl_fuel_weight.Text = "";
 
             // clear report
             rchtxtbx_cog_report.Text = "";
-           */
+        }
     }
 }

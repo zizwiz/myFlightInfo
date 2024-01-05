@@ -189,13 +189,32 @@ namespace myFlightInfo
                 ShowError("Fwd CG Limit");
                 return;
             }
-            
+
+            if (CheckDouble(txtbx_settings_max_fuel_vol))
+            {
+                settings.FwdCGLimit = double.Parse(txtbx_settings_max_fuel_vol.Text);
+            }
+            else
+            {
+                ShowError("Max Fuel Volume");
+                return;
+            }
+
+            if (CheckDouble(txtbx_settings_min_fuel_vol))
+            {
+                settings.FwdCGLimit = double.Parse(txtbx_settings_min_fuel_vol.Text);
+            }
+            else
+            {
+                ShowError("Min Fuel Volume");
+                return;
+            }
             settings.Save();
         }
 
         private void ShowError(string myError)
         {
-            MsgBox.Show("Check as value in " + myError + "is not correct", "Error", MessageBoxButtons.OK,
+            MsgBox.Show("Check as value in " + myError + " is not correct", "Error", MessageBoxButtons.OK,
                 MessageBoxIcon.Error);
         }
 
@@ -218,6 +237,8 @@ namespace myFlightInfo
             txtbx_settings_cabin_arm.Text = "400";
             txtbx_settings_aft_cg_limit.Text = "560";
             txtbx_settings_fwd_cg_limit.Text = "350";
+            txtbx_settings_max_fuel_vol.Text = "65";
+            txtbx_settings_min_fuel_vol.Text = "10";
 
             SaveSettings();
         }
@@ -232,6 +253,10 @@ namespace myFlightInfo
             txtbx_settings_min_cockpit_weight.Text = settings.MinCockpitWeight.ToString();
             txtbx_settings_max_weight_per_seat.Text = settings.MaxWeightPerSeat.ToString();
             txtbx_settings_max_hold_bag_weight.Text = settings.MaxHoldBaggageWeight.ToString();
+
+            txtbx_settings_max_fuel_vol.Text = settings.MaxFuelVol.ToString();
+            txtbx_settings_min_fuel_vol.Text = settings.MinFuelVol.ToString();
+
             txtbx_settings_vne.Text = settings.Vne.ToString();
             txtbx_settings_va.Text = settings.Va.ToString();
             txtbx_settings_vs0.Text = settings.Vs0.ToString();
