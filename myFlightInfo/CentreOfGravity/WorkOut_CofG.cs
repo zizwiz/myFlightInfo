@@ -103,9 +103,7 @@ namespace myFlightInfo.CentreOfGravity
             //FuelVolume
             bool pilotUnderweight = false;
 
-
-            bool aircraftOverweight =
-                (PilotWeight + PassengerWeight + CabinBagWeight + HoldBagWeight + takeoff_fuel_weight) > 450;
+            bool aircraftOverweight = (PilotWeight + PassengerWeight + CabinBagWeight + HoldBagWeight + takeoff_fuel_weight + 258) > 450;
             bool CabinOverweight = (PilotWeight + PassengerWeight + CabinBagWeight) > 220;
             bool pilotOverweight = PilotWeight > 120;
             bool passengerOverweight = PassengerWeight > 120;
@@ -113,7 +111,7 @@ namespace myFlightInfo.CentreOfGravity
             bool HoldbagOverweight = CabinBagWeight > 10;
 
 
-            if (PassengerWeight > 0) {pilotUnderweight = PilotWeight < 55; }
+            if (PassengerWeight == 0) {pilotUnderweight = PilotWeight < 55; }
 
             
         /////////////////////////////////////////////////////////////////////////////////////////

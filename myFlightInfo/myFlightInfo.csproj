@@ -75,6 +75,9 @@
     <Compile Include="navigation\Navigation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WeightsBalance.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="school\school.cs">
       <SubType>Form</SubType>
     </Compile>
