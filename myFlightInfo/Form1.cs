@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Drawing;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
-using System.Windows.Forms.DataVisualization.Charting;
 using CenteredMessagebox;
 using myFlightInfo.Altimeter;
 using myFlightInfo.common_data;
 using myFlightInfo.crosswind;
 using myFlightInfo.navigation;
-using myFlightInfo.CentreOfGravity;
 using myFlightInfo.Properties;
 
 
@@ -381,30 +378,5 @@ namespace myFlightInfo
                 }
             }
         }
-
-        //private void btn_cog_reset_Click(object sender, EventArgs e)
-        //{
-        //    txtbx_cog_pilot_weight.Text = txtbx_cog_passenger_weight.Text = txtbx_cog_cabin_bag_weight.Text =
-        //        txtbx_cog_hold_bag_weight.Text = txtbx_cog_takeoff_fuel.Text = txtbx_cog_zero_fuel.Text = "0";
-
-        //    txtbx_cog_pilot_arm.Text = txtbx_cog_passenger_arm.Text = txtbx_cog_cabin_bag_arm.Text = "400";
-
-        //    txtbx_cog_hold_bag_arm.Text = txtbx_cog_fuel_arm.Text = "950";
-
-        //    txtbx_cog_landing_fuel.Text = "10";
-        //    txtbx_specific_gravity.Text = "0.72";
-
-        //    lbl_cog_pilot.Text = lbl_cog_passenger.Text = lbl_cog_cabin_baggage.Text =
-        //        lbl_cog_hold_baggage.Text = lbl_cog_fuel.Text = lbl_cog_total_weight.Text =
-        //            lbl_cog_take_off.Text = lbl_cog_landing.Text = lbl_cog_zero.Text =
-        //                lbl_fuel_weight.Text = "";
-
-        //    lbl_cog_take_off.ForeColor = lbl_cog_landing.ForeColor = lbl_cog_zero.ForeColor = Color.Black;
-
-        //    // clear report
-        //    rchtxtbx_cog_report.Text = "";
-        //}
-
-       
     }
 }

@@ -62,7 +62,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Altimeter\Altimeter.cs" />
-    <Compile Include="CentreOfGravity\WorkOut_CofG.cs" />
     <Compile Include="common_data\airport_data.cs" />
     <Compile Include="crosswind\Crosswind.cs" />
     <Compile Include="Form1.cs">
@@ -128,7 +127,9 @@
     <Content Include="common_data\Microsoft.Web.WebView2.WinForms.dll" />
     <Content Include="CrystalBall.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="CentreOfGravity\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Web.WebView2.1.0.2210.55\build\Microsoft.Web.WebView2.targets" Condition="Exists('..\packages\Microsoft.Web.WebView2.1.0.2210.55\build\Microsoft.Web.WebView2.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

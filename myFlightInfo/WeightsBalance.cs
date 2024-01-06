@@ -335,9 +335,7 @@ namespace myFlightInfo
             }
         }
 
-
-
-        private void btn_cog_reset_Click(object sender, EventArgs e)
+        private void btn_cog_clear_report_Click(object sender, EventArgs e)
         {
             txtbx_cog_pilot_weight.Text = txtbx_cog_passenger_weight.Text = txtbx_cog_cabin_bag_weight.Text =
                 txtbx_cog_hold_bag_weight.Text = txtbx_cog_takeoff_fuel.Text = txtbx_cog_zero_fuel.Text = "0";
