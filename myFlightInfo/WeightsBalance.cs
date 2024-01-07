@@ -104,14 +104,14 @@ namespace myFlightInfo
             // write all moments to UI
             /////////////////////////////////////////////////////////////////////////////////////////
 
-            lbl_fuel_weight.Text = TakeOffFuelWeight.ToString();
+            txtbx_fuel_weight.Text = TakeOffFuelWeight.ToString();
 
-            lbl_cog_pilot.Text = pilot_moment.ToString();
-            lbl_cog_passenger.Text = passenger_moment.ToString();
-            lbl_cog_cabin_baggage.Text = cabin_bag_moment.ToString();
-            lbl_cog_hold_baggage.Text = hold_bag_moment.ToString();
-            lbl_cog_accessories.Text = Accessories_moment.ToString();
-            lbl_cog_fuel.Text = takeoff_fuel_moment.ToString();
+            txtbx_cog_pilot.Text = pilot_moment.ToString();
+            txtbx_cog_passenger.Text = passenger_moment.ToString();
+            txtbx_cog_cabin_baggage.Text = cabin_bag_moment.ToString();
+            txtbx_cog_hold_baggage.Text = hold_bag_moment.ToString();
+            txtbx_cog_accessories.Text = Accessories_moment.ToString();
+            txtbx_cog_fuel.Text = takeoff_fuel_moment.ToString();
 
             /////////////////////////////////////////////////////////////////////////////////////////
             // workout total moment and weight and also write to UI
@@ -122,8 +122,8 @@ namespace myFlightInfo
             double TakeOffTotalMoment = pilot_moment + passenger_moment + cabin_bag_moment + hold_bag_moment +
                                  takeoff_fuel_moment + Accessories_moment;
 
-            lbl_cog_total_weight.Text = TakeOffTotalWeight.ToString();
-            lbl_cog_total_moment.Text = TakeOffTotalMoment.ToString();
+            txtbx_cog_total_weight.Text = TakeOffTotalWeight.ToString();
+            txtbx_cog_total_moment.Text = TakeOffTotalMoment.ToString();
 
             double LandingTotalWeight = PilotsWeight + PassengersWeight + CabinBagWeight + HoldBagWeight +
                                         LandingFuelWeight + AccessoriesWeight;
@@ -347,9 +347,9 @@ namespace myFlightInfo
             txtbx_cog_landing_fuel.Text = settings.MinFuelVol.ToString();
             txtbx_specific_gravity.Text = "0.72";
 
-            lbl_cog_pilot.Text = lbl_cog_passenger.Text = lbl_cog_cabin_baggage.Text =
-                lbl_cog_hold_baggage.Text = lbl_cog_fuel.Text = lbl_cog_total_weight.Text =
-                    lbl_fuel_weight.Text = "";
+            txtbx_cog_pilot.Text = txtbx_cog_passenger.Text = txtbx_cog_cabin_baggage.Text =
+                txtbx_cog_hold_baggage.Text = txtbx_cog_fuel.Text = txtbx_cog_total_weight.Text =
+                    txtbx_fuel_weight.Text = "";
 
             // clear report
             rchtxtbx_cog_report.Text = "";
