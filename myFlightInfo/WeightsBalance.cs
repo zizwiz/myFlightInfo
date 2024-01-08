@@ -8,9 +8,48 @@ namespace myFlightInfo
 {
     public partial class Form1
     {
+        private void Form1_SizeChanged(object sender, EventArgs e)
+        {
+            if (tabcnt_utils.SelectedTab == tab_weight_balance)
+            {
+                Calculate();
+            }
+        }
+
 
         private void btn_calc_cog_Click(object sender, EventArgs e)
         {
+            Calculate();
+        }
+
+        void Calculate()
+        {
+            /////////////////////////////////////////////////////////////////////////////////
+            //Check if data is sensible doubles
+            // We do not check if within range
+            /////////////////////////////////////////////////////////////////////////////////
+
+            if (!CheckDouble(txtbx_cog_pilot_weight)) { ShowError("Pilots Weight"); return; }
+            if (!CheckDouble(txtbx_cog_passenger_weight)) { ShowError("Passengers Weight "); return; }
+            if (!CheckDouble(txtbx_cog_cabin_bag_weight)) { ShowError("Cabin Bag Weight "); return; }
+            if (!CheckDouble(txtbx_cog_hold_bag_weight)) { ShowError("Hold Bag Weight "); return; }
+            if (!CheckDouble(txtbx_cog_accessories_weight)) { ShowError("Accessories Weight "); return; }
+            if (!CheckDouble(txtbx_cog_pilot_arm)) { ShowError("Pilots Arm "); return; }
+            if (!CheckDouble(txtbx_cog_passenger_arm)) { ShowError("Passengers Arm "); return; }
+            if (!CheckDouble(txtbx_cog_cabin_bag_arm)) { ShowError("Cabin Bag Arm "); return; }
+            if (!CheckDouble(txtbx_cog_hold_bag_arm)) { ShowError("Hold Bag Arm "); return; }
+            if (!CheckDouble(txtbx_cog_accessories_arm)) { ShowError("Accessories Arm "); return; }
+            if (!CheckDouble(txtbx_cog_takeoff_fuel)) { ShowError("Takeoff Fuel Volume "); return; }
+            if (!CheckDouble(txtbx_cog_landing_fuel)) { ShowError("Landing Fuel Volume "); return; }
+            if (!CheckDouble(txtbx_cog_zero_fuel)) { ShowError("Zero Fuel Volume "); return; }
+            if (!CheckDouble(txtbx_specific_gravity)) { ShowError("Fuel Specific Gravity "); return; }
+            if (!CheckDouble(txtbx_cog_fuel_arm)) { ShowError("Fuel Arm "); return; }
+
+            /////////////////////////////////////////////////////////////////////////////////
+            //Clear the CoG graphices
+            ///////////////////////////////////////////////////////////////////////////////////
+            ResetGraphics();
+
             /////////////////////////////////////////////////////////////////////////////////
             //Declare any variables
             /////////////////////////////////////////////////////////////////////////////////
@@ -35,7 +74,7 @@ namespace myFlightInfo
             Double AftCGLimit = settings.AftCGLimit;
             Double FwdCGLimit = settings.FwdCGLimit;
 
-            
+
             /////////////////////////////////////////////////////////////////////////////////
             // clear report
             /////////////////////////////////////////////////////////////////////////////////
@@ -144,22 +183,25 @@ namespace myFlightInfo
             double ZeroWeight = ZeroTotalWeight + EmptyAircraftWeight;
 
             double CabinWeight = PilotsWeight + PassengersWeight + CabinBagWeight;
-
-
+            
             /////////////////////////////////////////////////////////////////////////////////////////
             // total landing moment and weight includes all fuel 
             /////////////////////////////////////////////////////////////////////////////////////////
-            double TakeOffCoG = Math.Round((TakeOffTotalMoment / TakeOffTotalWeight), 2);
+
+            double TakeOffCoG = 0;
+            if (TakeOffTotalWeight > 0) TakeOffCoG = Math.Round((TakeOffTotalMoment / TakeOffTotalWeight), 2);
 
             /////////////////////////////////////////////////////////////////////////////////////////
             // total landing moment and weight includes only landing fuel
             /////////////////////////////////////////////////////////////////////////////////////////
-            double LandingCofG = Math.Round((LandingTotalMoment / LandingTotalWeight), 2);
+            double LandingCofG = 0;
+            if (LandingTotalWeight > 0) LandingCofG = Math.Round((LandingTotalMoment / LandingTotalWeight), 2);
 
             /////////////////////////////////////////////////////////////////////////////////////////
             // total landing moment and weight includes zero fuel litres
             /////////////////////////////////////////////////////////////////////////////////////////
-            double ZeroCofG = Math.Round((ZeroTotalMoment / ZeroTotalWeight), 2);
+            double ZeroCofG = 0;
+            if (ZeroTotalWeight > 0) ZeroCofG = Math.Round((ZeroTotalMoment / ZeroTotalWeight), 2);
 
             /////////////////////////////////////////////////////////////////////////////////////////
             // Here we create the report
@@ -167,9 +209,14 @@ namespace myFlightInfo
 
             rchtxtbx_cog_report.SelectionFont = new Font("Ariel", 12, FontStyle.Underline);
             rchtxtbx_cog_report.SelectionAlignment = HorizontalAlignment.Center;
-            rchtxtbx_cog_report.AppendText("Weights and Balances Report from - \r" + DateTime.Now.ToString("f",
+            rchtxtbx_cog_report.AppendText("Weights and Balances Report\r" + DateTime.Now.ToString("f",
                 CultureInfo.CreateSpecificCulture("en-GB")) + "\r");
             rchtxtbx_cog_report.SelectionAlignment = HorizontalAlignment.Left;
+
+            //Draw Centre of Gravity lines to picture
+
+            DrawLimitLines(FwdCGLimit, 0, 60, "FWD Limit", "Purple", false);
+            DrawLimitLines(AftCGLimit, 0, AftCGLimit + 12, "AFT Limit", "Purple", false);
 
             //Centre of Gravity
             rchtxtbx_cog_report.AppendText("\rThe Centre of Gravity needs to be between " + FwdCGLimit +
@@ -179,22 +226,26 @@ namespace myFlightInfo
             {
                 rchtxtbx_cog_report.SelectionColor = Color.Red;
                 rchtxtbx_cog_report.AppendText("\r\tTake-off CoG = " + TakeOffCoG + "mm = Outside aircraft limits");
+                DrawLimitLines(TakeOffCoG, 70, TakeOffCoG + 12, "Takeoff CoG", "Red", true);
             }
             else
             {
                 rchtxtbx_cog_report.SelectionColor = Color.Green;
                 rchtxtbx_cog_report.AppendText("\r\tTake-off CoG = " + TakeOffCoG + "mm = OK");
+                DrawLimitLines(TakeOffCoG, 70, TakeOffCoG + 12, "Takeoff CoG", "Green", true);
             }
-            
+
             if ((LandingCofG > AftCGLimit) || (LandingCofG < FwdCGLimit))
             {
-                rchtxtbx_cog_report.SelectionColor =Color.Red;
+                rchtxtbx_cog_report.SelectionColor = Color.Red;
                 rchtxtbx_cog_report.AppendText("\r\tLanding CoG = " + LandingCofG + "mm = Outside aircraft limits");
+                DrawLimitLines(LandingCofG, 70, 60, "Landing CoG", "Red", true);
             }
             else
             {
                 rchtxtbx_cog_report.SelectionColor = Color.Green;
                 rchtxtbx_cog_report.AppendText("\r\tLanding CoG = " + LandingCofG + "mm = OK");
+                DrawLimitLines(LandingCofG, 70, 60, "Landing CoG", "Green", true);
             }
 
             if ((ZeroCofG > AftCGLimit) || (ZeroCofG < FwdCGLimit))
@@ -232,8 +283,8 @@ namespace myFlightInfo
             }
 
             // Cabin Weight
-            rchtxtbx_cog_report.AppendText("\rTotal cabin weight needs to be between "+ MinCockpitWeight + "kg and "+ MaxCockpitWeight + "kg");
-            if ((CabinWeight <= MaxCockpitWeight) && (CabinWeight > MinCockpitWeight))
+            rchtxtbx_cog_report.AppendText("\rTotal cabin weight needs to be between " + MinCockpitWeight + "kg and " + MaxCockpitWeight + "kg");
+            if ((CabinWeight <= MaxCockpitWeight) && (CabinWeight >= MinCockpitWeight))
             {
                 rchtxtbx_cog_report.SelectionColor = Color.Green;
                 rchtxtbx_cog_report.AppendText("\r\tTotal cabin weight = " + CabinWeight + "kg = OK\r");
@@ -250,11 +301,11 @@ namespace myFlightInfo
             }
 
             //Pilot Weight
-            if (PilotsWeight < MaxWeightPerSeat)
+            if (PilotsWeight <= MaxWeightPerSeat)
             {
-                if ((PilotsWeight <= MinPilotWeight) && (PassengersWeight == 0))
+                if ((PilotsWeight < MinPilotWeight) && (PassengersWeight == 0))
                 {
-                    
+
                     rchtxtbx_cog_report.AppendText("\rSolo pilot weight needs to be between " + MinPilotWeight + "kg and " + MaxWeightPerSeat + "kg");
                     rchtxtbx_cog_report.SelectionColor = Color.Red;
                     rchtxtbx_cog_report.AppendText("\r\tSolo pilots weight = " + PilotsWeight + "kg = Underweight\r");
@@ -262,7 +313,7 @@ namespace myFlightInfo
                 else
                 {
                     rchtxtbx_cog_report.AppendText("\rPilot weight needs to be <= " + MaxWeightPerSeat + "kg");
-                    rchtxtbx_cog_report.SelectionColor = Color.Green; 
+                    rchtxtbx_cog_report.SelectionColor = Color.Green;
                     rchtxtbx_cog_report.AppendText("\r\tPilots weight = " + PilotsWeight + "kg = OK\r");
                 }
             }
@@ -301,7 +352,7 @@ namespace myFlightInfo
             }
             else
             {
-                rchtxtbx_cog_report.AppendText("\rFuel volume needs to be between " + MinFuelVol+ "ℓ and " + MaxFuelVol +"ℓ");
+                rchtxtbx_cog_report.AppendText("\rFuel volume needs to be between " + MinFuelVol + "ℓ and " + MaxFuelVol + "ℓ");
                 if (TakeoffFuelVolume <= MaxFuelVol)
                 {
                     rchtxtbx_cog_report.SelectionColor = Color.Green;
@@ -353,6 +404,40 @@ namespace myFlightInfo
 
             // clear report
             rchtxtbx_cog_report.Text = "";
+
+            ResetGraphics();
+        }
+
+        private void ResetGraphics()
+        {
+            //clear picture of lines but replace the aircraft
+            picbx_cog_limits.Image = null;
+            picbx_cog_limits.Invalidate();
+            picbx_cog_limits.Image = Properties.Resources.c42_sideview;
+        }
+
+        private void DrawLimitLines(double xStart, double yStart, double textStart, string text, string colour, bool bottom)
+        {
+            //Set text startpoint
+            double byStart = yStart;
+            if (bottom) byStart += 33;
+            
+            Application.DoEvents();
+            Graphics g = picbx_cog_limits.CreateGraphics();
+
+            //We now choose to draw a line, you can draw many other things like square circle etc.
+            //All the parameters come from the UI
+
+            g.DrawLine(new Pen(Color.FromName(colour)),
+                        (float)xStart / 3, (float)yStart,
+                        (float)xStart / 3, (float)yStart + 50);
+
+            using (Font myFont = new Font("Arial", 14))
+            {
+                g.DrawString(text, myFont, new SolidBrush((Color)new ColorConverter().ConvertFrom(colour)), new Point((int)textStart / 3, (int)byStart));
+            }
+            
+            // g.DrawString(text, myFont, Brushes.Green, new Point((int)textStart / 3, (int)byStart));
         }
     }
 }

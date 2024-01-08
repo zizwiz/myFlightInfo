@@ -28,7 +28,7 @@ namespace myFlightInfo
                 ShowError("Max Take Off Weight");
                 return;
             }
-            
+
             if (CheckDouble(txtbx_settings_empty_weight))
             {
                 settings.EmptyWeight = double.Parse(txtbx_settings_empty_weight.Text);
@@ -209,14 +209,15 @@ namespace myFlightInfo
                 ShowError("Min Fuel Volume");
                 return;
             }
+
             settings.Save();
         }
 
-        private void ShowError(string myError)
-        {
-            MsgBox.Show("Check as value in " + myError + " is not correct", "Error", MessageBoxButtons.OK,
-                MessageBoxIcon.Error);
-        }
+        //private void ShowError(string myError)
+        //{
+        //    MsgBox.Show("Check as value in " + myError + " is not correct", "Error", MessageBoxButtons.OK,
+        //        MessageBoxIcon.Error);
+        //}
 
         private void DefaultSettings()
         {
@@ -263,21 +264,22 @@ namespace myFlightInfo
             txtbx_settings_vs1.Text = settings.Vs1.ToString();
             txtbx_settings_vfe.Text = settings.Vfe.ToString();
 
-            txtbx_cog_fuel_arm.Text = txtbx_cog_hold_bag_arm.Text = 
+            txtbx_cog_fuel_arm.Text = txtbx_cog_hold_bag_arm.Text =
                 txtbx_settings_hold_arm.Text = settings.AftMomentArm.ToString();
-            
-            txtbx_cog_pilot_arm.Text = txtbx_cog_passenger_arm.Text = txtbx_cog_cabin_bag_arm.Text = 
+
+            txtbx_cog_pilot_arm.Text = txtbx_cog_passenger_arm.Text = txtbx_cog_cabin_bag_arm.Text =
                 txtbx_settings_cabin_arm.Text = settings.FwdMomentArm.ToString();
-           
-            
+
+
             txtbx_settings_aft_cg_limit.Text = settings.AftCGLimit.ToString();
             txtbx_settings_fwd_cg_limit.Text = settings.FwdCGLimit.ToString();
 
         }
 
-        private bool CheckDouble(TextBox myTextBox)
-        {
-            return double.TryParse(myTextBox.Text, out var myValue);
-        }
+        //    private bool CheckDouble(TextBox myTextBox)
+        //    {
+        //        return double.TryParse(myTextBox.Text, out var myValue);
+        //    }
+        //}
     }
 }

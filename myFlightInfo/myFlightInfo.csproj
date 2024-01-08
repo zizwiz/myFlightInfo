@@ -126,10 +126,9 @@
     <Content Include="common_data\Microsoft.Web.WebView2.Core.dll" />
     <Content Include="common_data\Microsoft.Web.WebView2.WinForms.dll" />
     <Content Include="CrystalBall.ico" />
+    <Content Include="graphics\c42_sideview.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="CentreOfGravity\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Web.WebView2.1.0.2210.55\build\Microsoft.Web.WebView2.targets" Condition="Exists('..\packages\Microsoft.Web.WebView2.1.0.2210.55\build\Microsoft.Web.WebView2.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -180,44 +180,118 @@ namespace myFlightInfo
             this.txtbx_direction = new System.Windows.Forms.TextBox();
             this.txtbx_magnitude = new System.Windows.Forms.TextBox();
             this.tab_weight_balance = new System.Windows.Forms.TabPage();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.txtbx_specific_gravity = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.txtbx_cog_zero_fuel = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.txtbx_cog_landing_fuel = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel90 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel95 = new System.Windows.Forms.Panel();
+            this.label51 = new System.Windows.Forms.Label();
+            this.panel96 = new System.Windows.Forms.Panel();
             this.label24 = new System.Windows.Forms.Label();
+            this.panel97 = new System.Windows.Forms.Panel();
             this.txtbx_cog_takeoff_fuel = new System.Windows.Forms.TextBox();
+            this.panel98 = new System.Windows.Forms.Panel();
+            this.label28 = new System.Windows.Forms.Label();
+            this.panel99 = new System.Windows.Forms.Panel();
+            this.label22 = new System.Windows.Forms.Label();
+            this.panel100 = new System.Windows.Forms.Panel();
+            this.txtbx_cog_landing_fuel = new System.Windows.Forms.TextBox();
+            this.panel101 = new System.Windows.Forms.Panel();
+            this.label23 = new System.Windows.Forms.Label();
+            this.panel102 = new System.Windows.Forms.Panel();
+            this.txtbx_cog_zero_fuel = new System.Windows.Forms.TextBox();
+            this.panel103 = new System.Windows.Forms.Panel();
+            this.label25 = new System.Windows.Forms.Label();
+            this.panel104 = new System.Windows.Forms.Panel();
+            this.txtbx_specific_gravity = new System.Windows.Forms.TextBox();
+            this.panel105 = new System.Windows.Forms.Panel();
+            this.label26 = new System.Windows.Forms.Label();
+            this.panel106 = new System.Windows.Forms.Panel();
+            this.label30 = new System.Windows.Forms.Label();
+            this.panel107 = new System.Windows.Forms.Panel();
+            this.label29 = new System.Windows.Forms.Label();
+            this.panel91 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel108 = new System.Windows.Forms.Panel();
+            this.label52 = new System.Windows.Forms.Label();
+            this.panel109 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.panel110 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.panel111 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.panel112 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.panel113 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.panel114 = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
+            this.panel115 = new System.Windows.Forms.Panel();
+            this.label19 = new System.Windows.Forms.Label();
+            this.panel116 = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.panel117 = new System.Windows.Forms.Panel();
+            this.label32 = new System.Windows.Forms.Label();
+            this.panel118 = new System.Windows.Forms.Panel();
+            this.label21 = new System.Windows.Forms.Label();
+            this.panel119 = new System.Windows.Forms.Panel();
+            this.panel120 = new System.Windows.Forms.Panel();
+            this.label27 = new System.Windows.Forms.Label();
+            this.panel121 = new System.Windows.Forms.Panel();
+            this.txtbx_cog_pilot_weight = new System.Windows.Forms.TextBox();
+            this.panel122 = new System.Windows.Forms.Panel();
+            this.txtbx_cog_pilot_arm = new System.Windows.Forms.TextBox();
+            this.panel123 = new System.Windows.Forms.Panel();
+            this.txtbx_cog_pilot = new System.Windows.Forms.TextBox();
+            this.panel124 = new System.Windows.Forms.Panel();
+            this.txtbx_cog_passenger_weight = new System.Windows.Forms.TextBox();
+            this.panel125 = new System.Windows.Forms.Panel();
+            this.txtbx_cog_passenger_arm = new System.Windows.Forms.TextBox();
+            this.panel126 = new System.Windows.Forms.Panel();
+            this.txtbx_cog_passenger = new System.Windows.Forms.TextBox();
+            this.panel127 = new System.Windows.Forms.Panel();
+            this.txtbx_cog_cabin_bag_weight = new System.Windows.Forms.TextBox();
+            this.panel128 = new System.Windows.Forms.Panel();
+            this.txtbx_cog_cabin_bag_arm = new System.Windows.Forms.TextBox();
+            this.panel129 = new System.Windows.Forms.Panel();
+            this.txtbx_cog_cabin_baggage = new System.Windows.Forms.TextBox();
+            this.panel130 = new System.Windows.Forms.Panel();
+            this.txtbx_cog_hold_bag_weight = new System.Windows.Forms.TextBox();
+            this.panel131 = new System.Windows.Forms.Panel();
+            this.txtbx_cog_hold_bag_arm = new System.Windows.Forms.TextBox();
+            this.panel132 = new System.Windows.Forms.Panel();
+            this.txtbx_cog_hold_baggage = new System.Windows.Forms.TextBox();
+            this.panel133 = new System.Windows.Forms.Panel();
+            this.txtbx_cog_accessories_weight = new System.Windows.Forms.TextBox();
+            this.panel134 = new System.Windows.Forms.Panel();
+            this.txtbx_fuel_weight = new System.Windows.Forms.TextBox();
+            this.panel135 = new System.Windows.Forms.Panel();
+            this.panel136 = new System.Windows.Forms.Panel();
+            this.txtbx_cog_total_weight = new System.Windows.Forms.TextBox();
+            this.panel137 = new System.Windows.Forms.Panel();
+            this.txtbx_cog_accessories_arm = new System.Windows.Forms.TextBox();
+            this.panel138 = new System.Windows.Forms.Panel();
+            this.txtbx_cog_accessories = new System.Windows.Forms.TextBox();
+            this.panel139 = new System.Windows.Forms.Panel();
+            this.txtbx_cog_fuel_arm = new System.Windows.Forms.TextBox();
+            this.panel140 = new System.Windows.Forms.Panel();
+            this.txtbx_cog_fuel = new System.Windows.Forms.TextBox();
+            this.panel141 = new System.Windows.Forms.Panel();
+            this.panel142 = new System.Windows.Forms.Panel();
+            this.panel143 = new System.Windows.Forms.Panel();
+            this.panel144 = new System.Windows.Forms.Panel();
+            this.txtbx_cog_total_moment = new System.Windows.Forms.TextBox();
+            this.panel92 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
+            this.picbx_cog_limits = new System.Windows.Forms.PictureBox();
+            this.panel145 = new System.Windows.Forms.Panel();
+            this.label53 = new System.Windows.Forms.Label();
+            this.panel93 = new System.Windows.Forms.Panel();
+            this.rchtxtbx_cog_report = new System.Windows.Forms.RichTextBox();
+            this.panel94 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_calc_cog = new System.Windows.Forms.Button();
             this.btn_cog_print_report = new System.Windows.Forms.Button();
             this.btn_cog_clear_report = new System.Windows.Forms.Button();
-            this.rchtxtbx_cog_report = new System.Windows.Forms.RichTextBox();
-            this.txtbx_cog_accessories_weight = new System.Windows.Forms.TextBox();
-            this.txtbx_cog_accessories_arm = new System.Windows.Forms.TextBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.txtbx_cog_hold_bag_weight = new System.Windows.Forms.TextBox();
-            this.txtbx_cog_cabin_bag_weight = new System.Windows.Forms.TextBox();
-            this.txtbx_cog_passenger_weight = new System.Windows.Forms.TextBox();
-            this.txtbx_cog_pilot_weight = new System.Windows.Forms.TextBox();
-            this.txtbx_cog_fuel_arm = new System.Windows.Forms.TextBox();
-            this.txtbx_cog_hold_bag_arm = new System.Windows.Forms.TextBox();
-            this.txtbx_cog_cabin_bag_arm = new System.Windows.Forms.TextBox();
-            this.txtbx_cog_passenger_arm = new System.Windows.Forms.TextBox();
-            this.txtbx_cog_pilot_arm = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.btn_calc_cog = new System.Windows.Forms.Button();
             this.tab_compliance_data = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.panel43 = new System.Windows.Forms.Panel();
@@ -316,77 +390,6 @@ namespace myFlightInfo
             this.panel88 = new System.Windows.Forms.Panel();
             this.panel89 = new System.Windows.Forms.Panel();
             this.btn_save_settings = new System.Windows.Forms.Button();
-            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel90 = new System.Windows.Forms.Panel();
-            this.panel91 = new System.Windows.Forms.Panel();
-            this.panel92 = new System.Windows.Forms.Panel();
-            this.panel93 = new System.Windows.Forms.Panel();
-            this.panel94 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel95 = new System.Windows.Forms.Panel();
-            this.label51 = new System.Windows.Forms.Label();
-            this.panel96 = new System.Windows.Forms.Panel();
-            this.panel97 = new System.Windows.Forms.Panel();
-            this.panel98 = new System.Windows.Forms.Panel();
-            this.panel99 = new System.Windows.Forms.Panel();
-            this.panel100 = new System.Windows.Forms.Panel();
-            this.panel101 = new System.Windows.Forms.Panel();
-            this.panel102 = new System.Windows.Forms.Panel();
-            this.panel103 = new System.Windows.Forms.Panel();
-            this.panel104 = new System.Windows.Forms.Panel();
-            this.panel105 = new System.Windows.Forms.Panel();
-            this.panel106 = new System.Windows.Forms.Panel();
-            this.panel107 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel108 = new System.Windows.Forms.Panel();
-            this.label52 = new System.Windows.Forms.Label();
-            this.panel109 = new System.Windows.Forms.Panel();
-            this.panel110 = new System.Windows.Forms.Panel();
-            this.panel111 = new System.Windows.Forms.Panel();
-            this.panel112 = new System.Windows.Forms.Panel();
-            this.panel113 = new System.Windows.Forms.Panel();
-            this.panel114 = new System.Windows.Forms.Panel();
-            this.panel115 = new System.Windows.Forms.Panel();
-            this.panel116 = new System.Windows.Forms.Panel();
-            this.panel117 = new System.Windows.Forms.Panel();
-            this.panel118 = new System.Windows.Forms.Panel();
-            this.panel119 = new System.Windows.Forms.Panel();
-            this.panel120 = new System.Windows.Forms.Panel();
-            this.panel121 = new System.Windows.Forms.Panel();
-            this.panel122 = new System.Windows.Forms.Panel();
-            this.panel123 = new System.Windows.Forms.Panel();
-            this.panel124 = new System.Windows.Forms.Panel();
-            this.panel125 = new System.Windows.Forms.Panel();
-            this.panel126 = new System.Windows.Forms.Panel();
-            this.panel127 = new System.Windows.Forms.Panel();
-            this.panel128 = new System.Windows.Forms.Panel();
-            this.panel129 = new System.Windows.Forms.Panel();
-            this.panel130 = new System.Windows.Forms.Panel();
-            this.panel131 = new System.Windows.Forms.Panel();
-            this.panel132 = new System.Windows.Forms.Panel();
-            this.panel133 = new System.Windows.Forms.Panel();
-            this.panel134 = new System.Windows.Forms.Panel();
-            this.panel135 = new System.Windows.Forms.Panel();
-            this.panel136 = new System.Windows.Forms.Panel();
-            this.panel137 = new System.Windows.Forms.Panel();
-            this.panel138 = new System.Windows.Forms.Panel();
-            this.panel139 = new System.Windows.Forms.Panel();
-            this.panel140 = new System.Windows.Forms.Panel();
-            this.panel141 = new System.Windows.Forms.Panel();
-            this.panel142 = new System.Windows.Forms.Panel();
-            this.panel143 = new System.Windows.Forms.Panel();
-            this.panel144 = new System.Windows.Forms.Panel();
-            this.txtbx_cog_total_weight = new System.Windows.Forms.TextBox();
-            this.txtbx_cog_total_moment = new System.Windows.Forms.TextBox();
-            this.txtbx_cog_pilot = new System.Windows.Forms.TextBox();
-            this.txtbx_cog_passenger = new System.Windows.Forms.TextBox();
-            this.txtbx_cog_cabin_baggage = new System.Windows.Forms.TextBox();
-            this.txtbx_cog_hold_baggage = new System.Windows.Forms.TextBox();
-            this.txtbx_cog_accessories = new System.Windows.Forms.TextBox();
-            this.txtbx_cog_fuel = new System.Windows.Forms.TextBox();
-            this.txtbx_fuel_weight = new System.Windows.Forms.TextBox();
-            this.picbx_cog = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.panel31.SuspendLayout();
@@ -474,6 +477,63 @@ namespace myFlightInfo
             this.panel14.SuspendLayout();
             this.tab_crosswind.SuspendLayout();
             this.tab_weight_balance.SuspendLayout();
+            this.tableLayoutPanel10.SuspendLayout();
+            this.panel90.SuspendLayout();
+            this.tableLayoutPanel12.SuspendLayout();
+            this.panel95.SuspendLayout();
+            this.panel96.SuspendLayout();
+            this.panel97.SuspendLayout();
+            this.panel98.SuspendLayout();
+            this.panel99.SuspendLayout();
+            this.panel100.SuspendLayout();
+            this.panel101.SuspendLayout();
+            this.panel102.SuspendLayout();
+            this.panel103.SuspendLayout();
+            this.panel104.SuspendLayout();
+            this.panel105.SuspendLayout();
+            this.panel106.SuspendLayout();
+            this.panel107.SuspendLayout();
+            this.panel91.SuspendLayout();
+            this.tableLayoutPanel13.SuspendLayout();
+            this.panel108.SuspendLayout();
+            this.panel109.SuspendLayout();
+            this.panel110.SuspendLayout();
+            this.panel111.SuspendLayout();
+            this.panel112.SuspendLayout();
+            this.panel113.SuspendLayout();
+            this.panel114.SuspendLayout();
+            this.panel115.SuspendLayout();
+            this.panel116.SuspendLayout();
+            this.panel117.SuspendLayout();
+            this.panel118.SuspendLayout();
+            this.panel120.SuspendLayout();
+            this.panel121.SuspendLayout();
+            this.panel122.SuspendLayout();
+            this.panel123.SuspendLayout();
+            this.panel124.SuspendLayout();
+            this.panel125.SuspendLayout();
+            this.panel126.SuspendLayout();
+            this.panel127.SuspendLayout();
+            this.panel128.SuspendLayout();
+            this.panel129.SuspendLayout();
+            this.panel130.SuspendLayout();
+            this.panel131.SuspendLayout();
+            this.panel132.SuspendLayout();
+            this.panel133.SuspendLayout();
+            this.panel134.SuspendLayout();
+            this.panel136.SuspendLayout();
+            this.panel137.SuspendLayout();
+            this.panel138.SuspendLayout();
+            this.panel139.SuspendLayout();
+            this.panel140.SuspendLayout();
+            this.panel144.SuspendLayout();
+            this.panel92.SuspendLayout();
+            this.tableLayoutPanel14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picbx_cog_limits)).BeginInit();
+            this.panel145.SuspendLayout();
+            this.panel93.SuspendLayout();
+            this.panel94.SuspendLayout();
+            this.tableLayoutPanel11.SuspendLayout();
             this.tab_compliance_data.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
             this.panel43.SuspendLayout();
@@ -516,61 +576,6 @@ namespace myFlightInfo
             this.panel85.SuspendLayout();
             this.panel86.SuspendLayout();
             this.panel89.SuspendLayout();
-            this.tableLayoutPanel10.SuspendLayout();
-            this.panel90.SuspendLayout();
-            this.panel91.SuspendLayout();
-            this.panel92.SuspendLayout();
-            this.panel93.SuspendLayout();
-            this.panel94.SuspendLayout();
-            this.tableLayoutPanel11.SuspendLayout();
-            this.tableLayoutPanel12.SuspendLayout();
-            this.panel95.SuspendLayout();
-            this.panel96.SuspendLayout();
-            this.panel97.SuspendLayout();
-            this.panel98.SuspendLayout();
-            this.panel99.SuspendLayout();
-            this.panel100.SuspendLayout();
-            this.panel101.SuspendLayout();
-            this.panel102.SuspendLayout();
-            this.panel103.SuspendLayout();
-            this.panel104.SuspendLayout();
-            this.panel105.SuspendLayout();
-            this.panel106.SuspendLayout();
-            this.panel107.SuspendLayout();
-            this.tableLayoutPanel13.SuspendLayout();
-            this.panel108.SuspendLayout();
-            this.panel109.SuspendLayout();
-            this.panel110.SuspendLayout();
-            this.panel111.SuspendLayout();
-            this.panel112.SuspendLayout();
-            this.panel113.SuspendLayout();
-            this.panel114.SuspendLayout();
-            this.panel115.SuspendLayout();
-            this.panel116.SuspendLayout();
-            this.panel117.SuspendLayout();
-            this.panel118.SuspendLayout();
-            this.panel120.SuspendLayout();
-            this.panel121.SuspendLayout();
-            this.panel122.SuspendLayout();
-            this.panel123.SuspendLayout();
-            this.panel124.SuspendLayout();
-            this.panel125.SuspendLayout();
-            this.panel126.SuspendLayout();
-            this.panel127.SuspendLayout();
-            this.panel128.SuspendLayout();
-            this.panel129.SuspendLayout();
-            this.panel130.SuspendLayout();
-            this.panel131.SuspendLayout();
-            this.panel132.SuspendLayout();
-            this.panel133.SuspendLayout();
-            this.panel134.SuspendLayout();
-            this.panel136.SuspendLayout();
-            this.panel137.SuspendLayout();
-            this.panel138.SuspendLayout();
-            this.panel139.SuspendLayout();
-            this.panel140.SuspendLayout();
-            this.panel144.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picbx_cog)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -2486,27 +2491,147 @@ namespace myFlightInfo
             this.tab_weight_balance.Text = "Weights and Balance";
             this.tab_weight_balance.UseVisualStyleBackColor = true;
             // 
-            // label30
+            // tableLayoutPanel10
             // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(-4, 3);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(14, 20);
-            this.label30.TabIndex = 45;
-            this.label30.Text = "ℓ";
-            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tableLayoutPanel10.ColumnCount = 5;
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.98399F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 9F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.99591F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 9F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.02009F));
+            this.tableLayoutPanel10.Controls.Add(this.panel90, 2, 0);
+            this.tableLayoutPanel10.Controls.Add(this.panel91, 0, 0);
+            this.tableLayoutPanel10.Controls.Add(this.panel92, 0, 1);
+            this.tableLayoutPanel10.Controls.Add(this.panel93, 4, 0);
+            this.tableLayoutPanel10.Controls.Add(this.panel94, 4, 2);
+            this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
+            this.tableLayoutPanel10.RowCount = 3;
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(1385, 686);
+            this.tableLayoutPanel10.TabIndex = 48;
             // 
-            // label29
+            // panel90
             // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(-3, 3);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(14, 20);
-            this.label29.TabIndex = 44;
-            this.label29.Text = "ℓ";
-            this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.panel90.Controls.Add(this.tableLayoutPanel12);
+            this.panel90.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel90.Location = new System.Drawing.Point(654, 3);
+            this.panel90.Name = "panel90";
+            this.panel90.Size = new System.Drawing.Size(157, 448);
+            this.panel90.TabIndex = 0;
+            // 
+            // tableLayoutPanel12
+            // 
+            this.tableLayoutPanel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.tableLayoutPanel12.ColumnCount = 2;
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel12.Controls.Add(this.panel95, 0, 0);
+            this.tableLayoutPanel12.Controls.Add(this.panel96, 0, 2);
+            this.tableLayoutPanel12.Controls.Add(this.panel97, 0, 3);
+            this.tableLayoutPanel12.Controls.Add(this.panel98, 1, 3);
+            this.tableLayoutPanel12.Controls.Add(this.panel99, 0, 5);
+            this.tableLayoutPanel12.Controls.Add(this.panel100, 0, 6);
+            this.tableLayoutPanel12.Controls.Add(this.panel101, 0, 8);
+            this.tableLayoutPanel12.Controls.Add(this.panel102, 0, 9);
+            this.tableLayoutPanel12.Controls.Add(this.panel103, 0, 11);
+            this.tableLayoutPanel12.Controls.Add(this.panel104, 0, 12);
+            this.tableLayoutPanel12.Controls.Add(this.panel105, 1, 12);
+            this.tableLayoutPanel12.Controls.Add(this.panel106, 1, 9);
+            this.tableLayoutPanel12.Controls.Add(this.panel107, 1, 6);
+            this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
+            this.tableLayoutPanel12.RowCount = 13;
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 2F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 2F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 2F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 2F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(157, 448);
+            this.tableLayoutPanel12.TabIndex = 0;
+            // 
+            // panel95
+            // 
+            this.tableLayoutPanel12.SetColumnSpan(this.panel95, 2);
+            this.panel95.Controls.Add(this.label51);
+            this.panel95.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel95.Location = new System.Drawing.Point(3, 3);
+            this.panel95.Name = "panel95";
+            this.panel95.Size = new System.Drawing.Size(151, 42);
+            this.panel95.TabIndex = 0;
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.Location = new System.Drawing.Point(22, 11);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(109, 20);
+            this.label51.TabIndex = 40;
+            this.label51.Text = "Fuel Volume";
+            // 
+            // panel96
+            // 
+            this.tableLayoutPanel12.SetColumnSpan(this.panel96, 2);
+            this.panel96.Controls.Add(this.label24);
+            this.panel96.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel96.Location = new System.Drawing.Point(3, 53);
+            this.panel96.Name = "panel96";
+            this.panel96.Size = new System.Drawing.Size(151, 42);
+            this.panel96.TabIndex = 1;
+            // 
+            // label24
+            // 
+            this.label24.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(40, 22);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(68, 20);
+            this.label24.TabIndex = 29;
+            this.label24.Text = "Take-off";
+            // 
+            // panel97
+            // 
+            this.panel97.Controls.Add(this.txtbx_cog_takeoff_fuel);
+            this.panel97.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel97.Location = new System.Drawing.Point(3, 101);
+            this.panel97.Name = "panel97";
+            this.panel97.Size = new System.Drawing.Size(91, 42);
+            this.panel97.TabIndex = 2;
+            // 
+            // txtbx_cog_takeoff_fuel
+            // 
+            this.txtbx_cog_takeoff_fuel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtbx_cog_takeoff_fuel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtbx_cog_takeoff_fuel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtbx_cog_takeoff_fuel.Location = new System.Drawing.Point(0, 0);
+            this.txtbx_cog_takeoff_fuel.Name = "txtbx_cog_takeoff_fuel";
+            this.txtbx_cog_takeoff_fuel.Size = new System.Drawing.Size(91, 26);
+            this.txtbx_cog_takeoff_fuel.TabIndex = 23;
+            this.txtbx_cog_takeoff_fuel.Text = "0";
+            this.txtbx_cog_takeoff_fuel.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // panel98
+            // 
+            this.panel98.Controls.Add(this.label28);
+            this.panel98.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel98.Location = new System.Drawing.Point(100, 101);
+            this.panel98.Name = "panel98";
+            this.panel98.Size = new System.Drawing.Size(54, 42);
+            this.panel98.TabIndex = 3;
             // 
             // label28
             // 
@@ -2519,60 +2644,15 @@ namespace myFlightInfo
             this.label28.Text = "ℓ";
             this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label26
+            // panel99
             // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(0, 3);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(35, 20);
-            this.label26.TabIndex = 42;
-            this.label26.Text = "kg/ℓ";
-            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(16, 22);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(118, 20);
-            this.label25.TabIndex = 41;
-            this.label25.Text = "Specific Gravity";
-            // 
-            // txtbx_specific_gravity
-            // 
-            this.txtbx_specific_gravity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtbx_specific_gravity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbx_specific_gravity.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtbx_specific_gravity.Location = new System.Drawing.Point(0, 0);
-            this.txtbx_specific_gravity.Name = "txtbx_specific_gravity";
-            this.txtbx_specific_gravity.Size = new System.Drawing.Size(91, 26);
-            this.txtbx_specific_gravity.TabIndex = 40;
-            this.txtbx_specific_gravity.Text = "0.72";
-            this.txtbx_specific_gravity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(51, 22);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(42, 20);
-            this.label23.TabIndex = 39;
-            this.label23.Text = "Zero";
-            // 
-            // txtbx_cog_zero_fuel
-            // 
-            this.txtbx_cog_zero_fuel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtbx_cog_zero_fuel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbx_cog_zero_fuel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtbx_cog_zero_fuel.Location = new System.Drawing.Point(0, 0);
-            this.txtbx_cog_zero_fuel.Name = "txtbx_cog_zero_fuel";
-            this.txtbx_cog_zero_fuel.Size = new System.Drawing.Size(91, 26);
-            this.txtbx_cog_zero_fuel.TabIndex = 38;
-            this.txtbx_cog_zero_fuel.Text = "0";
-            this.txtbx_cog_zero_fuel.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tableLayoutPanel12.SetColumnSpan(this.panel99, 2);
+            this.panel99.Controls.Add(this.label22);
+            this.panel99.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel99.Location = new System.Drawing.Point(3, 151);
+            this.panel99.Name = "panel99";
+            this.panel99.Size = new System.Drawing.Size(151, 42);
+            this.panel99.TabIndex = 4;
             // 
             // label22
             // 
@@ -2583,6 +2663,15 @@ namespace myFlightInfo
             this.label22.Size = new System.Drawing.Size(66, 20);
             this.label22.TabIndex = 37;
             this.label22.Text = "Landing";
+            // 
+            // panel100
+            // 
+            this.panel100.Controls.Add(this.txtbx_cog_landing_fuel);
+            this.panel100.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel100.Location = new System.Drawing.Point(3, 199);
+            this.panel100.Name = "panel100";
+            this.panel100.Size = new System.Drawing.Size(91, 42);
+            this.panel100.TabIndex = 5;
             // 
             // txtbx_cog_landing_fuel
             // 
@@ -2596,28 +2685,1038 @@ namespace myFlightInfo
             this.txtbx_cog_landing_fuel.Text = "10";
             this.txtbx_cog_landing_fuel.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // label24
+            // panel101
             // 
-            this.label24.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(40, 22);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(68, 20);
-            this.label24.TabIndex = 29;
-            this.label24.Text = "Take-off";
+            this.tableLayoutPanel12.SetColumnSpan(this.panel101, 2);
+            this.panel101.Controls.Add(this.label23);
+            this.panel101.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel101.Location = new System.Drawing.Point(3, 249);
+            this.panel101.Name = "panel101";
+            this.panel101.Size = new System.Drawing.Size(151, 42);
+            this.panel101.TabIndex = 6;
             // 
-            // txtbx_cog_takeoff_fuel
+            // label23
             // 
-            this.txtbx_cog_takeoff_fuel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtbx_cog_takeoff_fuel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbx_cog_takeoff_fuel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtbx_cog_takeoff_fuel.Location = new System.Drawing.Point(0, 0);
-            this.txtbx_cog_takeoff_fuel.Name = "txtbx_cog_takeoff_fuel";
-            this.txtbx_cog_takeoff_fuel.Size = new System.Drawing.Size(91, 26);
-            this.txtbx_cog_takeoff_fuel.TabIndex = 23;
-            this.txtbx_cog_takeoff_fuel.Text = "0";
-            this.txtbx_cog_takeoff_fuel.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(51, 22);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(42, 20);
+            this.label23.TabIndex = 39;
+            this.label23.Text = "Zero";
+            // 
+            // panel102
+            // 
+            this.panel102.Controls.Add(this.txtbx_cog_zero_fuel);
+            this.panel102.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel102.Location = new System.Drawing.Point(3, 297);
+            this.panel102.Name = "panel102";
+            this.panel102.Size = new System.Drawing.Size(91, 42);
+            this.panel102.TabIndex = 7;
+            // 
+            // txtbx_cog_zero_fuel
+            // 
+            this.txtbx_cog_zero_fuel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtbx_cog_zero_fuel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtbx_cog_zero_fuel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtbx_cog_zero_fuel.Location = new System.Drawing.Point(0, 0);
+            this.txtbx_cog_zero_fuel.Name = "txtbx_cog_zero_fuel";
+            this.txtbx_cog_zero_fuel.Size = new System.Drawing.Size(91, 26);
+            this.txtbx_cog_zero_fuel.TabIndex = 38;
+            this.txtbx_cog_zero_fuel.Text = "0";
+            this.txtbx_cog_zero_fuel.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // panel103
+            // 
+            this.tableLayoutPanel12.SetColumnSpan(this.panel103, 2);
+            this.panel103.Controls.Add(this.label25);
+            this.panel103.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel103.Location = new System.Drawing.Point(3, 347);
+            this.panel103.Name = "panel103";
+            this.panel103.Size = new System.Drawing.Size(151, 42);
+            this.panel103.TabIndex = 8;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(16, 22);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(118, 20);
+            this.label25.TabIndex = 41;
+            this.label25.Text = "Specific Gravity";
+            // 
+            // panel104
+            // 
+            this.panel104.Controls.Add(this.txtbx_specific_gravity);
+            this.panel104.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel104.Location = new System.Drawing.Point(3, 395);
+            this.panel104.Name = "panel104";
+            this.panel104.Size = new System.Drawing.Size(91, 50);
+            this.panel104.TabIndex = 9;
+            // 
+            // txtbx_specific_gravity
+            // 
+            this.txtbx_specific_gravity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtbx_specific_gravity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtbx_specific_gravity.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtbx_specific_gravity.Location = new System.Drawing.Point(0, 0);
+            this.txtbx_specific_gravity.Name = "txtbx_specific_gravity";
+            this.txtbx_specific_gravity.Size = new System.Drawing.Size(91, 26);
+            this.txtbx_specific_gravity.TabIndex = 40;
+            this.txtbx_specific_gravity.Text = "0.72";
+            this.txtbx_specific_gravity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // panel105
+            // 
+            this.panel105.Controls.Add(this.label26);
+            this.panel105.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel105.Location = new System.Drawing.Point(100, 395);
+            this.panel105.Name = "panel105";
+            this.panel105.Size = new System.Drawing.Size(54, 50);
+            this.panel105.TabIndex = 10;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(0, 3);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(35, 20);
+            this.label26.TabIndex = 42;
+            this.label26.Text = "kg/ℓ";
+            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel106
+            // 
+            this.panel106.Controls.Add(this.label30);
+            this.panel106.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel106.Location = new System.Drawing.Point(100, 297);
+            this.panel106.Name = "panel106";
+            this.panel106.Size = new System.Drawing.Size(54, 42);
+            this.panel106.TabIndex = 11;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(-4, 3);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(14, 20);
+            this.label30.TabIndex = 45;
+            this.label30.Text = "ℓ";
+            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel107
+            // 
+            this.panel107.Controls.Add(this.label29);
+            this.panel107.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel107.Location = new System.Drawing.Point(100, 199);
+            this.panel107.Name = "panel107";
+            this.panel107.Size = new System.Drawing.Size(54, 42);
+            this.panel107.TabIndex = 12;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(-3, 3);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(14, 20);
+            this.label29.TabIndex = 44;
+            this.label29.Text = "ℓ";
+            this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel91
+            // 
+            this.panel91.Controls.Add(this.tableLayoutPanel13);
+            this.panel91.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel91.Location = new System.Drawing.Point(3, 3);
+            this.panel91.Name = "panel91";
+            this.panel91.Size = new System.Drawing.Size(636, 448);
+            this.panel91.TabIndex = 1;
+            // 
+            // tableLayoutPanel13
+            // 
+            this.tableLayoutPanel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.tableLayoutPanel13.ColumnCount = 7;
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 2F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 2F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 2F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel13.Controls.Add(this.panel108, 0, 0);
+            this.tableLayoutPanel13.Controls.Add(this.panel109, 0, 2);
+            this.tableLayoutPanel13.Controls.Add(this.panel110, 2, 2);
+            this.tableLayoutPanel13.Controls.Add(this.panel111, 4, 2);
+            this.tableLayoutPanel13.Controls.Add(this.panel112, 6, 2);
+            this.tableLayoutPanel13.Controls.Add(this.panel113, 0, 4);
+            this.tableLayoutPanel13.Controls.Add(this.panel114, 0, 6);
+            this.tableLayoutPanel13.Controls.Add(this.panel115, 0, 8);
+            this.tableLayoutPanel13.Controls.Add(this.panel116, 0, 10);
+            this.tableLayoutPanel13.Controls.Add(this.panel117, 0, 12);
+            this.tableLayoutPanel13.Controls.Add(this.panel118, 0, 14);
+            this.tableLayoutPanel13.Controls.Add(this.panel119, 0, 16);
+            this.tableLayoutPanel13.Controls.Add(this.panel120, 0, 18);
+            this.tableLayoutPanel13.Controls.Add(this.panel121, 2, 4);
+            this.tableLayoutPanel13.Controls.Add(this.panel122, 4, 4);
+            this.tableLayoutPanel13.Controls.Add(this.panel123, 6, 4);
+            this.tableLayoutPanel13.Controls.Add(this.panel124, 2, 6);
+            this.tableLayoutPanel13.Controls.Add(this.panel125, 4, 6);
+            this.tableLayoutPanel13.Controls.Add(this.panel126, 6, 6);
+            this.tableLayoutPanel13.Controls.Add(this.panel127, 2, 8);
+            this.tableLayoutPanel13.Controls.Add(this.panel128, 4, 8);
+            this.tableLayoutPanel13.Controls.Add(this.panel129, 6, 8);
+            this.tableLayoutPanel13.Controls.Add(this.panel130, 2, 10);
+            this.tableLayoutPanel13.Controls.Add(this.panel131, 4, 10);
+            this.tableLayoutPanel13.Controls.Add(this.panel132, 6, 10);
+            this.tableLayoutPanel13.Controls.Add(this.panel133, 2, 12);
+            this.tableLayoutPanel13.Controls.Add(this.panel134, 2, 14);
+            this.tableLayoutPanel13.Controls.Add(this.panel135, 2, 16);
+            this.tableLayoutPanel13.Controls.Add(this.panel136, 2, 18);
+            this.tableLayoutPanel13.Controls.Add(this.panel137, 4, 12);
+            this.tableLayoutPanel13.Controls.Add(this.panel138, 6, 12);
+            this.tableLayoutPanel13.Controls.Add(this.panel139, 4, 14);
+            this.tableLayoutPanel13.Controls.Add(this.panel140, 6, 14);
+            this.tableLayoutPanel13.Controls.Add(this.panel141, 4, 16);
+            this.tableLayoutPanel13.Controls.Add(this.panel142, 6, 16);
+            this.tableLayoutPanel13.Controls.Add(this.panel143, 4, 18);
+            this.tableLayoutPanel13.Controls.Add(this.panel144, 6, 18);
+            this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel13.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel13.Name = "tableLayoutPanel13";
+            this.tableLayoutPanel13.RowCount = 19;
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 2F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 2F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 2F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 2F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 2F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 2F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 2F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 2F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 2F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(636, 448);
+            this.tableLayoutPanel13.TabIndex = 0;
+            // 
+            // panel108
+            // 
+            this.tableLayoutPanel13.SetColumnSpan(this.panel108, 7);
+            this.panel108.Controls.Add(this.label52);
+            this.panel108.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel108.Location = new System.Drawing.Point(3, 3);
+            this.panel108.Name = "panel108";
+            this.panel108.Size = new System.Drawing.Size(630, 37);
+            this.panel108.TabIndex = 0;
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.Location = new System.Drawing.Point(263, 14);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(74, 20);
+            this.label52.TabIndex = 41;
+            this.label52.Text = "Weights";
+            // 
+            // panel109
+            // 
+            this.panel109.Controls.Add(this.label13);
+            this.panel109.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel109.Location = new System.Drawing.Point(3, 48);
+            this.panel109.Name = "panel109";
+            this.panel109.Size = new System.Drawing.Size(151, 37);
+            this.panel109.TabIndex = 1;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(34, 5);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(54, 20);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Items";
+            // 
+            // panel110
+            // 
+            this.panel110.Controls.Add(this.label14);
+            this.panel110.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel110.Location = new System.Drawing.Point(162, 48);
+            this.panel110.Name = "panel110";
+            this.panel110.Size = new System.Drawing.Size(151, 37);
+            this.panel110.TabIndex = 2;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(19, 5);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(101, 20);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Weight (kg)";
+            // 
+            // panel111
+            // 
+            this.panel111.Controls.Add(this.label15);
+            this.panel111.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel111.Location = new System.Drawing.Point(321, 48);
+            this.panel111.Name = "panel111";
+            this.panel111.Size = new System.Drawing.Size(151, 37);
+            this.panel111.TabIndex = 3;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(36, 5);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(86, 20);
+            this.label15.TabIndex = 2;
+            this.label15.Text = "Arm (mm)";
+            // 
+            // panel112
+            // 
+            this.panel112.Controls.Add(this.label16);
+            this.panel112.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel112.Location = new System.Drawing.Point(480, 48);
+            this.panel112.Name = "panel112";
+            this.panel112.Size = new System.Drawing.Size(153, 37);
+            this.panel112.TabIndex = 4;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(3, 5);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(137, 20);
+            this.label16.TabIndex = 3;
+            this.label16.Text = "Moment (kgmm)";
+            // 
+            // panel113
+            // 
+            this.panel113.Controls.Add(this.label17);
+            this.panel113.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel113.Location = new System.Drawing.Point(3, 93);
+            this.panel113.Name = "panel113";
+            this.panel113.Size = new System.Drawing.Size(151, 37);
+            this.panel113.TabIndex = 5;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(57, 8);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(39, 20);
+            this.label17.TabIndex = 4;
+            this.label17.Text = "Pilot";
+            // 
+            // panel114
+            // 
+            this.panel114.Controls.Add(this.label18);
+            this.panel114.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel114.Location = new System.Drawing.Point(3, 138);
+            this.panel114.Name = "panel114";
+            this.panel114.Size = new System.Drawing.Size(151, 37);
+            this.panel114.TabIndex = 6;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(34, 8);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(85, 20);
+            this.label18.TabIndex = 5;
+            this.label18.Text = "Passenger";
+            // 
+            // panel115
+            // 
+            this.panel115.Controls.Add(this.label19);
+            this.panel115.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel115.Location = new System.Drawing.Point(3, 183);
+            this.panel115.Name = "panel115";
+            this.panel115.Size = new System.Drawing.Size(151, 37);
+            this.panel115.TabIndex = 7;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(17, 8);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(119, 20);
+            this.label19.TabIndex = 6;
+            this.label19.Text = "Cabin Baggage";
+            // 
+            // panel116
+            // 
+            this.panel116.Controls.Add(this.label20);
+            this.panel116.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel116.Location = new System.Drawing.Point(3, 228);
+            this.panel116.Name = "panel116";
+            this.panel116.Size = new System.Drawing.Size(151, 37);
+            this.panel116.TabIndex = 8;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(21, 8);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(111, 20);
+            this.label20.TabIndex = 7;
+            this.label20.Text = "Hold Baggage";
+            // 
+            // panel117
+            // 
+            this.panel117.Controls.Add(this.label32);
+            this.panel117.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel117.Location = new System.Drawing.Point(3, 273);
+            this.panel117.Name = "panel117";
+            this.panel117.Size = new System.Drawing.Size(151, 37);
+            this.panel117.TabIndex = 9;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(29, 8);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(95, 20);
+            this.label32.TabIndex = 36;
+            this.label32.Text = "Accessories";
+            // 
+            // panel118
+            // 
+            this.panel118.Controls.Add(this.label21);
+            this.panel118.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel118.Location = new System.Drawing.Point(3, 318);
+            this.panel118.Name = "panel118";
+            this.panel118.Size = new System.Drawing.Size(151, 37);
+            this.panel118.TabIndex = 10;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(56, 8);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(40, 20);
+            this.label21.TabIndex = 8;
+            this.label21.Text = "Fuel";
+            // 
+            // panel119
+            // 
+            this.panel119.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel119.Location = new System.Drawing.Point(3, 363);
+            this.panel119.Name = "panel119";
+            this.panel119.Size = new System.Drawing.Size(151, 37);
+            this.panel119.TabIndex = 11;
+            // 
+            // panel120
+            // 
+            this.panel120.Controls.Add(this.label27);
+            this.panel120.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel120.Location = new System.Drawing.Point(3, 408);
+            this.panel120.Name = "panel120";
+            this.panel120.Size = new System.Drawing.Size(151, 37);
+            this.panel120.TabIndex = 12;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(52, 8);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(49, 20);
+            this.label27.TabIndex = 25;
+            this.label27.Text = "Total";
+            // 
+            // panel121
+            // 
+            this.panel121.Controls.Add(this.txtbx_cog_pilot_weight);
+            this.panel121.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel121.Location = new System.Drawing.Point(162, 93);
+            this.panel121.Name = "panel121";
+            this.panel121.Size = new System.Drawing.Size(151, 37);
+            this.panel121.TabIndex = 13;
+            // 
+            // txtbx_cog_pilot_weight
+            // 
+            this.txtbx_cog_pilot_weight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtbx_cog_pilot_weight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtbx_cog_pilot_weight.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtbx_cog_pilot_weight.Location = new System.Drawing.Point(0, 0);
+            this.txtbx_cog_pilot_weight.Name = "txtbx_cog_pilot_weight";
+            this.txtbx_cog_pilot_weight.Size = new System.Drawing.Size(151, 26);
+            this.txtbx_cog_pilot_weight.TabIndex = 19;
+            this.txtbx_cog_pilot_weight.Text = "0";
+            this.txtbx_cog_pilot_weight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // panel122
+            // 
+            this.panel122.Controls.Add(this.txtbx_cog_pilot_arm);
+            this.panel122.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel122.Location = new System.Drawing.Point(321, 93);
+            this.panel122.Name = "panel122";
+            this.panel122.Size = new System.Drawing.Size(151, 37);
+            this.panel122.TabIndex = 14;
+            // 
+            // txtbx_cog_pilot_arm
+            // 
+            this.txtbx_cog_pilot_arm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtbx_cog_pilot_arm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtbx_cog_pilot_arm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtbx_cog_pilot_arm.Location = new System.Drawing.Point(0, 0);
+            this.txtbx_cog_pilot_arm.Name = "txtbx_cog_pilot_arm";
+            this.txtbx_cog_pilot_arm.Size = new System.Drawing.Size(151, 26);
+            this.txtbx_cog_pilot_arm.TabIndex = 9;
+            this.txtbx_cog_pilot_arm.Text = "400";
+            this.txtbx_cog_pilot_arm.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // panel123
+            // 
+            this.panel123.Controls.Add(this.txtbx_cog_pilot);
+            this.panel123.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel123.Location = new System.Drawing.Point(480, 93);
+            this.panel123.Name = "panel123";
+            this.panel123.Size = new System.Drawing.Size(153, 37);
+            this.panel123.TabIndex = 15;
+            // 
+            // txtbx_cog_pilot
+            // 
+            this.txtbx_cog_pilot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtbx_cog_pilot.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtbx_cog_pilot.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtbx_cog_pilot.Location = new System.Drawing.Point(0, 0);
+            this.txtbx_cog_pilot.Name = "txtbx_cog_pilot";
+            this.txtbx_cog_pilot.ReadOnly = true;
+            this.txtbx_cog_pilot.Size = new System.Drawing.Size(153, 19);
+            this.txtbx_cog_pilot.TabIndex = 2;
+            this.txtbx_cog_pilot.Text = "0";
+            this.txtbx_cog_pilot.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // panel124
+            // 
+            this.panel124.Controls.Add(this.txtbx_cog_passenger_weight);
+            this.panel124.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel124.Location = new System.Drawing.Point(162, 138);
+            this.panel124.Name = "panel124";
+            this.panel124.Size = new System.Drawing.Size(151, 37);
+            this.panel124.TabIndex = 16;
+            // 
+            // txtbx_cog_passenger_weight
+            // 
+            this.txtbx_cog_passenger_weight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtbx_cog_passenger_weight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtbx_cog_passenger_weight.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtbx_cog_passenger_weight.Location = new System.Drawing.Point(0, 0);
+            this.txtbx_cog_passenger_weight.Name = "txtbx_cog_passenger_weight";
+            this.txtbx_cog_passenger_weight.Size = new System.Drawing.Size(151, 26);
+            this.txtbx_cog_passenger_weight.TabIndex = 20;
+            this.txtbx_cog_passenger_weight.Text = "0";
+            this.txtbx_cog_passenger_weight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // panel125
+            // 
+            this.panel125.Controls.Add(this.txtbx_cog_passenger_arm);
+            this.panel125.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel125.Location = new System.Drawing.Point(321, 138);
+            this.panel125.Name = "panel125";
+            this.panel125.Size = new System.Drawing.Size(151, 37);
+            this.panel125.TabIndex = 17;
+            // 
+            // txtbx_cog_passenger_arm
+            // 
+            this.txtbx_cog_passenger_arm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtbx_cog_passenger_arm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtbx_cog_passenger_arm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtbx_cog_passenger_arm.Location = new System.Drawing.Point(0, 0);
+            this.txtbx_cog_passenger_arm.Name = "txtbx_cog_passenger_arm";
+            this.txtbx_cog_passenger_arm.Size = new System.Drawing.Size(151, 26);
+            this.txtbx_cog_passenger_arm.TabIndex = 10;
+            this.txtbx_cog_passenger_arm.Text = "400";
+            this.txtbx_cog_passenger_arm.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // panel126
+            // 
+            this.panel126.Controls.Add(this.txtbx_cog_passenger);
+            this.panel126.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel126.Location = new System.Drawing.Point(480, 138);
+            this.panel126.Name = "panel126";
+            this.panel126.Size = new System.Drawing.Size(153, 37);
+            this.panel126.TabIndex = 18;
+            // 
+            // txtbx_cog_passenger
+            // 
+            this.txtbx_cog_passenger.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtbx_cog_passenger.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtbx_cog_passenger.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtbx_cog_passenger.Location = new System.Drawing.Point(0, 0);
+            this.txtbx_cog_passenger.Name = "txtbx_cog_passenger";
+            this.txtbx_cog_passenger.ReadOnly = true;
+            this.txtbx_cog_passenger.Size = new System.Drawing.Size(153, 19);
+            this.txtbx_cog_passenger.TabIndex = 3;
+            this.txtbx_cog_passenger.Text = "0";
+            this.txtbx_cog_passenger.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // panel127
+            // 
+            this.panel127.Controls.Add(this.txtbx_cog_cabin_bag_weight);
+            this.panel127.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel127.Location = new System.Drawing.Point(162, 183);
+            this.panel127.Name = "panel127";
+            this.panel127.Size = new System.Drawing.Size(151, 37);
+            this.panel127.TabIndex = 19;
+            // 
+            // txtbx_cog_cabin_bag_weight
+            // 
+            this.txtbx_cog_cabin_bag_weight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtbx_cog_cabin_bag_weight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtbx_cog_cabin_bag_weight.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtbx_cog_cabin_bag_weight.Location = new System.Drawing.Point(0, 0);
+            this.txtbx_cog_cabin_bag_weight.Name = "txtbx_cog_cabin_bag_weight";
+            this.txtbx_cog_cabin_bag_weight.Size = new System.Drawing.Size(151, 26);
+            this.txtbx_cog_cabin_bag_weight.TabIndex = 21;
+            this.txtbx_cog_cabin_bag_weight.Text = "0";
+            this.txtbx_cog_cabin_bag_weight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // panel128
+            // 
+            this.panel128.Controls.Add(this.txtbx_cog_cabin_bag_arm);
+            this.panel128.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel128.Location = new System.Drawing.Point(321, 183);
+            this.panel128.Name = "panel128";
+            this.panel128.Size = new System.Drawing.Size(151, 37);
+            this.panel128.TabIndex = 20;
+            // 
+            // txtbx_cog_cabin_bag_arm
+            // 
+            this.txtbx_cog_cabin_bag_arm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtbx_cog_cabin_bag_arm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtbx_cog_cabin_bag_arm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtbx_cog_cabin_bag_arm.Location = new System.Drawing.Point(0, 0);
+            this.txtbx_cog_cabin_bag_arm.Name = "txtbx_cog_cabin_bag_arm";
+            this.txtbx_cog_cabin_bag_arm.Size = new System.Drawing.Size(151, 26);
+            this.txtbx_cog_cabin_bag_arm.TabIndex = 11;
+            this.txtbx_cog_cabin_bag_arm.Text = "400";
+            this.txtbx_cog_cabin_bag_arm.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // panel129
+            // 
+            this.panel129.Controls.Add(this.txtbx_cog_cabin_baggage);
+            this.panel129.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel129.Location = new System.Drawing.Point(480, 183);
+            this.panel129.Name = "panel129";
+            this.panel129.Size = new System.Drawing.Size(153, 37);
+            this.panel129.TabIndex = 21;
+            // 
+            // txtbx_cog_cabin_baggage
+            // 
+            this.txtbx_cog_cabin_baggage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtbx_cog_cabin_baggage.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtbx_cog_cabin_baggage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtbx_cog_cabin_baggage.Location = new System.Drawing.Point(0, 0);
+            this.txtbx_cog_cabin_baggage.Name = "txtbx_cog_cabin_baggage";
+            this.txtbx_cog_cabin_baggage.ReadOnly = true;
+            this.txtbx_cog_cabin_baggage.Size = new System.Drawing.Size(153, 19);
+            this.txtbx_cog_cabin_baggage.TabIndex = 4;
+            this.txtbx_cog_cabin_baggage.Text = "0";
+            this.txtbx_cog_cabin_baggage.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // panel130
+            // 
+            this.panel130.Controls.Add(this.txtbx_cog_hold_bag_weight);
+            this.panel130.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel130.Location = new System.Drawing.Point(162, 228);
+            this.panel130.Name = "panel130";
+            this.panel130.Size = new System.Drawing.Size(151, 37);
+            this.panel130.TabIndex = 22;
+            // 
+            // txtbx_cog_hold_bag_weight
+            // 
+            this.txtbx_cog_hold_bag_weight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtbx_cog_hold_bag_weight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtbx_cog_hold_bag_weight.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtbx_cog_hold_bag_weight.Location = new System.Drawing.Point(0, 0);
+            this.txtbx_cog_hold_bag_weight.Name = "txtbx_cog_hold_bag_weight";
+            this.txtbx_cog_hold_bag_weight.Size = new System.Drawing.Size(151, 26);
+            this.txtbx_cog_hold_bag_weight.TabIndex = 22;
+            this.txtbx_cog_hold_bag_weight.Text = "0";
+            this.txtbx_cog_hold_bag_weight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // panel131
+            // 
+            this.panel131.Controls.Add(this.txtbx_cog_hold_bag_arm);
+            this.panel131.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel131.Location = new System.Drawing.Point(321, 228);
+            this.panel131.Name = "panel131";
+            this.panel131.Size = new System.Drawing.Size(151, 37);
+            this.panel131.TabIndex = 23;
+            // 
+            // txtbx_cog_hold_bag_arm
+            // 
+            this.txtbx_cog_hold_bag_arm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtbx_cog_hold_bag_arm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtbx_cog_hold_bag_arm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtbx_cog_hold_bag_arm.Location = new System.Drawing.Point(0, 0);
+            this.txtbx_cog_hold_bag_arm.Name = "txtbx_cog_hold_bag_arm";
+            this.txtbx_cog_hold_bag_arm.Size = new System.Drawing.Size(151, 26);
+            this.txtbx_cog_hold_bag_arm.TabIndex = 12;
+            this.txtbx_cog_hold_bag_arm.Text = "950";
+            this.txtbx_cog_hold_bag_arm.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // panel132
+            // 
+            this.panel132.Controls.Add(this.txtbx_cog_hold_baggage);
+            this.panel132.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel132.Location = new System.Drawing.Point(480, 228);
+            this.panel132.Name = "panel132";
+            this.panel132.Size = new System.Drawing.Size(153, 37);
+            this.panel132.TabIndex = 24;
+            // 
+            // txtbx_cog_hold_baggage
+            // 
+            this.txtbx_cog_hold_baggage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtbx_cog_hold_baggage.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtbx_cog_hold_baggage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtbx_cog_hold_baggage.Location = new System.Drawing.Point(0, 0);
+            this.txtbx_cog_hold_baggage.Name = "txtbx_cog_hold_baggage";
+            this.txtbx_cog_hold_baggage.ReadOnly = true;
+            this.txtbx_cog_hold_baggage.Size = new System.Drawing.Size(153, 19);
+            this.txtbx_cog_hold_baggage.TabIndex = 5;
+            this.txtbx_cog_hold_baggage.Text = "0";
+            this.txtbx_cog_hold_baggage.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // panel133
+            // 
+            this.panel133.Controls.Add(this.txtbx_cog_accessories_weight);
+            this.panel133.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel133.Location = new System.Drawing.Point(162, 273);
+            this.panel133.Name = "panel133";
+            this.panel133.Size = new System.Drawing.Size(151, 37);
+            this.panel133.TabIndex = 25;
+            // 
+            // txtbx_cog_accessories_weight
+            // 
+            this.txtbx_cog_accessories_weight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtbx_cog_accessories_weight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtbx_cog_accessories_weight.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtbx_cog_accessories_weight.Location = new System.Drawing.Point(0, 0);
+            this.txtbx_cog_accessories_weight.Name = "txtbx_cog_accessories_weight";
+            this.txtbx_cog_accessories_weight.Size = new System.Drawing.Size(151, 26);
+            this.txtbx_cog_accessories_weight.TabIndex = 39;
+            this.txtbx_cog_accessories_weight.Text = "0";
+            this.txtbx_cog_accessories_weight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // panel134
+            // 
+            this.panel134.Controls.Add(this.txtbx_fuel_weight);
+            this.panel134.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel134.Location = new System.Drawing.Point(162, 318);
+            this.panel134.Name = "panel134";
+            this.panel134.Size = new System.Drawing.Size(151, 37);
+            this.panel134.TabIndex = 26;
+            // 
+            // txtbx_fuel_weight
+            // 
+            this.txtbx_fuel_weight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtbx_fuel_weight.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtbx_fuel_weight.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtbx_fuel_weight.Location = new System.Drawing.Point(0, 0);
+            this.txtbx_fuel_weight.Name = "txtbx_fuel_weight";
+            this.txtbx_fuel_weight.ReadOnly = true;
+            this.txtbx_fuel_weight.Size = new System.Drawing.Size(151, 19);
+            this.txtbx_fuel_weight.TabIndex = 1;
+            this.txtbx_fuel_weight.Text = "0";
+            this.txtbx_fuel_weight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // panel135
+            // 
+            this.panel135.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel135.Location = new System.Drawing.Point(162, 363);
+            this.panel135.Name = "panel135";
+            this.panel135.Size = new System.Drawing.Size(151, 37);
+            this.panel135.TabIndex = 27;
+            // 
+            // panel136
+            // 
+            this.panel136.Controls.Add(this.txtbx_cog_total_weight);
+            this.panel136.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel136.Location = new System.Drawing.Point(162, 408);
+            this.panel136.Name = "panel136";
+            this.panel136.Size = new System.Drawing.Size(151, 37);
+            this.panel136.TabIndex = 28;
+            // 
+            // txtbx_cog_total_weight
+            // 
+            this.txtbx_cog_total_weight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtbx_cog_total_weight.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtbx_cog_total_weight.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtbx_cog_total_weight.Location = new System.Drawing.Point(0, 0);
+            this.txtbx_cog_total_weight.Name = "txtbx_cog_total_weight";
+            this.txtbx_cog_total_weight.ReadOnly = true;
+            this.txtbx_cog_total_weight.Size = new System.Drawing.Size(151, 19);
+            this.txtbx_cog_total_weight.TabIndex = 0;
+            this.txtbx_cog_total_weight.Text = "0";
+            this.txtbx_cog_total_weight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // panel137
+            // 
+            this.panel137.Controls.Add(this.txtbx_cog_accessories_arm);
+            this.panel137.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel137.Location = new System.Drawing.Point(321, 273);
+            this.panel137.Name = "panel137";
+            this.panel137.Size = new System.Drawing.Size(151, 37);
+            this.panel137.TabIndex = 29;
+            // 
+            // txtbx_cog_accessories_arm
+            // 
+            this.txtbx_cog_accessories_arm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtbx_cog_accessories_arm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtbx_cog_accessories_arm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtbx_cog_accessories_arm.Location = new System.Drawing.Point(0, 0);
+            this.txtbx_cog_accessories_arm.Name = "txtbx_cog_accessories_arm";
+            this.txtbx_cog_accessories_arm.Size = new System.Drawing.Size(151, 26);
+            this.txtbx_cog_accessories_arm.TabIndex = 37;
+            this.txtbx_cog_accessories_arm.Text = "0";
+            this.txtbx_cog_accessories_arm.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // panel138
+            // 
+            this.panel138.Controls.Add(this.txtbx_cog_accessories);
+            this.panel138.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel138.Location = new System.Drawing.Point(480, 273);
+            this.panel138.Name = "panel138";
+            this.panel138.Size = new System.Drawing.Size(153, 37);
+            this.panel138.TabIndex = 30;
+            // 
+            // txtbx_cog_accessories
+            // 
+            this.txtbx_cog_accessories.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtbx_cog_accessories.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtbx_cog_accessories.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtbx_cog_accessories.Location = new System.Drawing.Point(0, 0);
+            this.txtbx_cog_accessories.Name = "txtbx_cog_accessories";
+            this.txtbx_cog_accessories.ReadOnly = true;
+            this.txtbx_cog_accessories.Size = new System.Drawing.Size(153, 19);
+            this.txtbx_cog_accessories.TabIndex = 6;
+            this.txtbx_cog_accessories.Text = "0";
+            this.txtbx_cog_accessories.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // panel139
+            // 
+            this.panel139.Controls.Add(this.txtbx_cog_fuel_arm);
+            this.panel139.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel139.Location = new System.Drawing.Point(321, 318);
+            this.panel139.Name = "panel139";
+            this.panel139.Size = new System.Drawing.Size(151, 37);
+            this.panel139.TabIndex = 31;
+            // 
+            // txtbx_cog_fuel_arm
+            // 
+            this.txtbx_cog_fuel_arm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtbx_cog_fuel_arm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtbx_cog_fuel_arm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtbx_cog_fuel_arm.Location = new System.Drawing.Point(0, 0);
+            this.txtbx_cog_fuel_arm.Name = "txtbx_cog_fuel_arm";
+            this.txtbx_cog_fuel_arm.Size = new System.Drawing.Size(151, 26);
+            this.txtbx_cog_fuel_arm.TabIndex = 13;
+            this.txtbx_cog_fuel_arm.Text = "950";
+            this.txtbx_cog_fuel_arm.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // panel140
+            // 
+            this.panel140.Controls.Add(this.txtbx_cog_fuel);
+            this.panel140.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel140.Location = new System.Drawing.Point(480, 318);
+            this.panel140.Name = "panel140";
+            this.panel140.Size = new System.Drawing.Size(153, 37);
+            this.panel140.TabIndex = 32;
+            // 
+            // txtbx_cog_fuel
+            // 
+            this.txtbx_cog_fuel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtbx_cog_fuel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtbx_cog_fuel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtbx_cog_fuel.Location = new System.Drawing.Point(0, 0);
+            this.txtbx_cog_fuel.Name = "txtbx_cog_fuel";
+            this.txtbx_cog_fuel.ReadOnly = true;
+            this.txtbx_cog_fuel.Size = new System.Drawing.Size(153, 19);
+            this.txtbx_cog_fuel.TabIndex = 7;
+            this.txtbx_cog_fuel.Text = "0";
+            this.txtbx_cog_fuel.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // panel141
+            // 
+            this.panel141.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel141.Location = new System.Drawing.Point(321, 363);
+            this.panel141.Name = "panel141";
+            this.panel141.Size = new System.Drawing.Size(151, 37);
+            this.panel141.TabIndex = 33;
+            // 
+            // panel142
+            // 
+            this.panel142.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel142.Location = new System.Drawing.Point(480, 363);
+            this.panel142.Name = "panel142";
+            this.panel142.Size = new System.Drawing.Size(153, 37);
+            this.panel142.TabIndex = 34;
+            // 
+            // panel143
+            // 
+            this.panel143.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel143.Location = new System.Drawing.Point(321, 408);
+            this.panel143.Name = "panel143";
+            this.panel143.Size = new System.Drawing.Size(151, 37);
+            this.panel143.TabIndex = 35;
+            // 
+            // panel144
+            // 
+            this.panel144.Controls.Add(this.txtbx_cog_total_moment);
+            this.panel144.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel144.Location = new System.Drawing.Point(480, 408);
+            this.panel144.Name = "panel144";
+            this.panel144.Size = new System.Drawing.Size(153, 37);
+            this.panel144.TabIndex = 36;
+            // 
+            // txtbx_cog_total_moment
+            // 
+            this.txtbx_cog_total_moment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtbx_cog_total_moment.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtbx_cog_total_moment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtbx_cog_total_moment.Location = new System.Drawing.Point(0, 0);
+            this.txtbx_cog_total_moment.Name = "txtbx_cog_total_moment";
+            this.txtbx_cog_total_moment.ReadOnly = true;
+            this.txtbx_cog_total_moment.Size = new System.Drawing.Size(153, 19);
+            this.txtbx_cog_total_moment.TabIndex = 1;
+            this.txtbx_cog_total_moment.Text = "0";
+            this.txtbx_cog_total_moment.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // panel92
+            // 
+            this.tableLayoutPanel10.SetColumnSpan(this.panel92, 3);
+            this.panel92.Controls.Add(this.tableLayoutPanel14);
+            this.panel92.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel92.Location = new System.Drawing.Point(3, 457);
+            this.panel92.Name = "panel92";
+            this.tableLayoutPanel10.SetRowSpan(this.panel92, 2);
+            this.panel92.Size = new System.Drawing.Size(808, 226);
+            this.panel92.TabIndex = 2;
+            // 
+            // tableLayoutPanel14
+            // 
+            this.tableLayoutPanel14.ColumnCount = 3;
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 529F));
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel14.Controls.Add(this.picbx_cog_limits, 1, 1);
+            this.tableLayoutPanel14.Controls.Add(this.panel145, 1, 0);
+            this.tableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel14.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel14.Name = "tableLayoutPanel14";
+            this.tableLayoutPanel14.RowCount = 3;
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(808, 226);
+            this.tableLayoutPanel14.TabIndex = 0;
+            // 
+            // picbx_cog_limits
+            // 
+            this.picbx_cog_limits.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picbx_cog_limits.Image = global::myFlightInfo.Properties.Resources.c42_sideview;
+            this.picbx_cog_limits.Location = new System.Drawing.Point(142, 33);
+            this.picbx_cog_limits.Name = "picbx_cog_limits";
+            this.picbx_cog_limits.Size = new System.Drawing.Size(523, 194);
+            this.picbx_cog_limits.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picbx_cog_limits.TabIndex = 0;
+            this.picbx_cog_limits.TabStop = false;
+            // 
+            // panel145
+            // 
+            this.panel145.Controls.Add(this.label53);
+            this.panel145.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel145.Location = new System.Drawing.Point(142, 3);
+            this.panel145.Name = "panel145";
+            this.panel145.Size = new System.Drawing.Size(523, 24);
+            this.panel145.TabIndex = 1;
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(197, 2);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(128, 20);
+            this.label53.TabIndex = 0;
+            this.label53.Text = "Centre of Gravity";
+            // 
+            // panel93
+            // 
+            this.panel93.Controls.Add(this.rchtxtbx_cog_report);
+            this.panel93.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel93.Location = new System.Drawing.Point(826, 3);
+            this.panel93.Name = "panel93";
+            this.tableLayoutPanel10.SetRowSpan(this.panel93, 2);
+            this.panel93.Size = new System.Drawing.Size(556, 599);
+            this.panel93.TabIndex = 3;
+            // 
+            // rchtxtbx_cog_report
+            // 
+            this.rchtxtbx_cog_report.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rchtxtbx_cog_report.Location = new System.Drawing.Point(0, 0);
+            this.rchtxtbx_cog_report.Name = "rchtxtbx_cog_report";
+            this.rchtxtbx_cog_report.Size = new System.Drawing.Size(556, 599);
+            this.rchtxtbx_cog_report.TabIndex = 45;
+            this.rchtxtbx_cog_report.Text = "";
+            // 
+            // panel94
+            // 
+            this.panel94.Controls.Add(this.tableLayoutPanel11);
+            this.panel94.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel94.Location = new System.Drawing.Point(826, 608);
+            this.panel94.Name = "panel94";
+            this.panel94.Size = new System.Drawing.Size(556, 75);
+            this.panel94.TabIndex = 4;
+            // 
+            // tableLayoutPanel11
+            // 
+            this.tableLayoutPanel11.ColumnCount = 4;
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel11.Controls.Add(this.btn_calc_cog, 3, 0);
+            this.tableLayoutPanel11.Controls.Add(this.btn_cog_print_report, 2, 0);
+            this.tableLayoutPanel11.Controls.Add(this.btn_cog_clear_report, 1, 0);
+            this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
+            this.tableLayoutPanel11.RowCount = 1;
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(556, 75);
+            this.tableLayoutPanel11.TabIndex = 0;
+            // 
+            // btn_calc_cog
+            // 
+            this.btn_calc_cog.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_calc_cog.Location = new System.Drawing.Point(420, 3);
+            this.btn_calc_cog.Name = "btn_calc_cog";
+            this.btn_calc_cog.Size = new System.Drawing.Size(133, 69);
+            this.btn_calc_cog.TabIndex = 32;
+            this.btn_calc_cog.Text = "Calculate";
+            this.btn_calc_cog.UseVisualStyleBackColor = true;
+            this.btn_calc_cog.Click += new System.EventHandler(this.btn_calc_cog_Click);
             // 
             // btn_cog_print_report
             // 
@@ -2639,262 +3738,6 @@ namespace myFlightInfo
             this.btn_cog_clear_report.Text = "Reset";
             this.btn_cog_clear_report.UseVisualStyleBackColor = true;
             this.btn_cog_clear_report.Click += new System.EventHandler(this.btn_cog_clear_report_Click);
-            // 
-            // rchtxtbx_cog_report
-            // 
-            this.rchtxtbx_cog_report.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rchtxtbx_cog_report.Location = new System.Drawing.Point(0, 0);
-            this.rchtxtbx_cog_report.Name = "rchtxtbx_cog_report";
-            this.rchtxtbx_cog_report.Size = new System.Drawing.Size(556, 599);
-            this.rchtxtbx_cog_report.TabIndex = 45;
-            this.rchtxtbx_cog_report.Text = "";
-            // 
-            // txtbx_cog_accessories_weight
-            // 
-            this.txtbx_cog_accessories_weight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtbx_cog_accessories_weight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbx_cog_accessories_weight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtbx_cog_accessories_weight.Location = new System.Drawing.Point(0, 0);
-            this.txtbx_cog_accessories_weight.Name = "txtbx_cog_accessories_weight";
-            this.txtbx_cog_accessories_weight.Size = new System.Drawing.Size(151, 26);
-            this.txtbx_cog_accessories_weight.TabIndex = 39;
-            this.txtbx_cog_accessories_weight.Text = "0";
-            this.txtbx_cog_accessories_weight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtbx_cog_accessories_arm
-            // 
-            this.txtbx_cog_accessories_arm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtbx_cog_accessories_arm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbx_cog_accessories_arm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtbx_cog_accessories_arm.Location = new System.Drawing.Point(0, 0);
-            this.txtbx_cog_accessories_arm.Name = "txtbx_cog_accessories_arm";
-            this.txtbx_cog_accessories_arm.Size = new System.Drawing.Size(151, 26);
-            this.txtbx_cog_accessories_arm.TabIndex = 37;
-            this.txtbx_cog_accessories_arm.Text = "0";
-            this.txtbx_cog_accessories_arm.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(29, 8);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(95, 20);
-            this.label32.TabIndex = 36;
-            this.label32.Text = "Accessories";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(52, 8);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(49, 20);
-            this.label27.TabIndex = 25;
-            this.label27.Text = "Total";
-            // 
-            // txtbx_cog_hold_bag_weight
-            // 
-            this.txtbx_cog_hold_bag_weight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtbx_cog_hold_bag_weight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbx_cog_hold_bag_weight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtbx_cog_hold_bag_weight.Location = new System.Drawing.Point(0, 0);
-            this.txtbx_cog_hold_bag_weight.Name = "txtbx_cog_hold_bag_weight";
-            this.txtbx_cog_hold_bag_weight.Size = new System.Drawing.Size(151, 26);
-            this.txtbx_cog_hold_bag_weight.TabIndex = 22;
-            this.txtbx_cog_hold_bag_weight.Text = "0";
-            this.txtbx_cog_hold_bag_weight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtbx_cog_cabin_bag_weight
-            // 
-            this.txtbx_cog_cabin_bag_weight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtbx_cog_cabin_bag_weight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbx_cog_cabin_bag_weight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtbx_cog_cabin_bag_weight.Location = new System.Drawing.Point(0, 0);
-            this.txtbx_cog_cabin_bag_weight.Name = "txtbx_cog_cabin_bag_weight";
-            this.txtbx_cog_cabin_bag_weight.Size = new System.Drawing.Size(151, 26);
-            this.txtbx_cog_cabin_bag_weight.TabIndex = 21;
-            this.txtbx_cog_cabin_bag_weight.Text = "0";
-            this.txtbx_cog_cabin_bag_weight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtbx_cog_passenger_weight
-            // 
-            this.txtbx_cog_passenger_weight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtbx_cog_passenger_weight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbx_cog_passenger_weight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtbx_cog_passenger_weight.Location = new System.Drawing.Point(0, 0);
-            this.txtbx_cog_passenger_weight.Name = "txtbx_cog_passenger_weight";
-            this.txtbx_cog_passenger_weight.Size = new System.Drawing.Size(151, 26);
-            this.txtbx_cog_passenger_weight.TabIndex = 20;
-            this.txtbx_cog_passenger_weight.Text = "0";
-            this.txtbx_cog_passenger_weight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtbx_cog_pilot_weight
-            // 
-            this.txtbx_cog_pilot_weight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtbx_cog_pilot_weight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbx_cog_pilot_weight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtbx_cog_pilot_weight.Location = new System.Drawing.Point(0, 0);
-            this.txtbx_cog_pilot_weight.Name = "txtbx_cog_pilot_weight";
-            this.txtbx_cog_pilot_weight.Size = new System.Drawing.Size(151, 26);
-            this.txtbx_cog_pilot_weight.TabIndex = 19;
-            this.txtbx_cog_pilot_weight.Text = "0";
-            this.txtbx_cog_pilot_weight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtbx_cog_fuel_arm
-            // 
-            this.txtbx_cog_fuel_arm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtbx_cog_fuel_arm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbx_cog_fuel_arm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtbx_cog_fuel_arm.Location = new System.Drawing.Point(0, 0);
-            this.txtbx_cog_fuel_arm.Name = "txtbx_cog_fuel_arm";
-            this.txtbx_cog_fuel_arm.Size = new System.Drawing.Size(151, 26);
-            this.txtbx_cog_fuel_arm.TabIndex = 13;
-            this.txtbx_cog_fuel_arm.Text = "950";
-            this.txtbx_cog_fuel_arm.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtbx_cog_hold_bag_arm
-            // 
-            this.txtbx_cog_hold_bag_arm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtbx_cog_hold_bag_arm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbx_cog_hold_bag_arm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtbx_cog_hold_bag_arm.Location = new System.Drawing.Point(0, 0);
-            this.txtbx_cog_hold_bag_arm.Name = "txtbx_cog_hold_bag_arm";
-            this.txtbx_cog_hold_bag_arm.Size = new System.Drawing.Size(151, 26);
-            this.txtbx_cog_hold_bag_arm.TabIndex = 12;
-            this.txtbx_cog_hold_bag_arm.Text = "950";
-            this.txtbx_cog_hold_bag_arm.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtbx_cog_cabin_bag_arm
-            // 
-            this.txtbx_cog_cabin_bag_arm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtbx_cog_cabin_bag_arm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbx_cog_cabin_bag_arm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtbx_cog_cabin_bag_arm.Location = new System.Drawing.Point(0, 0);
-            this.txtbx_cog_cabin_bag_arm.Name = "txtbx_cog_cabin_bag_arm";
-            this.txtbx_cog_cabin_bag_arm.Size = new System.Drawing.Size(151, 26);
-            this.txtbx_cog_cabin_bag_arm.TabIndex = 11;
-            this.txtbx_cog_cabin_bag_arm.Text = "400";
-            this.txtbx_cog_cabin_bag_arm.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtbx_cog_passenger_arm
-            // 
-            this.txtbx_cog_passenger_arm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtbx_cog_passenger_arm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbx_cog_passenger_arm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtbx_cog_passenger_arm.Location = new System.Drawing.Point(0, 0);
-            this.txtbx_cog_passenger_arm.Name = "txtbx_cog_passenger_arm";
-            this.txtbx_cog_passenger_arm.Size = new System.Drawing.Size(151, 26);
-            this.txtbx_cog_passenger_arm.TabIndex = 10;
-            this.txtbx_cog_passenger_arm.Text = "400";
-            this.txtbx_cog_passenger_arm.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtbx_cog_pilot_arm
-            // 
-            this.txtbx_cog_pilot_arm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtbx_cog_pilot_arm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbx_cog_pilot_arm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtbx_cog_pilot_arm.Location = new System.Drawing.Point(0, 0);
-            this.txtbx_cog_pilot_arm.Name = "txtbx_cog_pilot_arm";
-            this.txtbx_cog_pilot_arm.Size = new System.Drawing.Size(151, 26);
-            this.txtbx_cog_pilot_arm.TabIndex = 9;
-            this.txtbx_cog_pilot_arm.Text = "400";
-            this.txtbx_cog_pilot_arm.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(56, 8);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(40, 20);
-            this.label21.TabIndex = 8;
-            this.label21.Text = "Fuel";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(21, 8);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(111, 20);
-            this.label20.TabIndex = 7;
-            this.label20.Text = "Hold Baggage";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(17, 8);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(119, 20);
-            this.label19.TabIndex = 6;
-            this.label19.Text = "Cabin Baggage";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(34, 8);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(85, 20);
-            this.label18.TabIndex = 5;
-            this.label18.Text = "Passenger";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(57, 8);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(39, 20);
-            this.label17.TabIndex = 4;
-            this.label17.Text = "Pilot";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(3, 5);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(137, 20);
-            this.label16.TabIndex = 3;
-            this.label16.Text = "Moment (kgmm)";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(36, 5);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(86, 20);
-            this.label15.TabIndex = 2;
-            this.label15.Text = "Arm (mm)";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(19, 5);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(101, 20);
-            this.label14.TabIndex = 1;
-            this.label14.Text = "Weight (kg)";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(34, 5);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(54, 20);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Items";
-            // 
-            // btn_calc_cog
-            // 
-            this.btn_calc_cog.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_calc_cog.Location = new System.Drawing.Point(420, 3);
-            this.btn_calc_cog.Name = "btn_calc_cog";
-            this.btn_calc_cog.Size = new System.Drawing.Size(133, 69);
-            this.btn_calc_cog.TabIndex = 32;
-            this.btn_calc_cog.Text = "Calculate";
-            this.btn_calc_cog.UseVisualStyleBackColor = true;
-            this.btn_calc_cog.Click += new System.EventHandler(this.btn_calc_cog_Click);
             // 
             // tab_compliance_data
             // 
@@ -3810,806 +4653,6 @@ namespace myFlightInfo
             this.btn_save_settings.UseVisualStyleBackColor = true;
             this.btn_save_settings.Click += new System.EventHandler(this.btn_save_settings_Click);
             // 
-            // tableLayoutPanel10
-            // 
-            this.tableLayoutPanel10.ColumnCount = 5;
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.98399F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 9F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.99591F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 9F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.02009F));
-            this.tableLayoutPanel10.Controls.Add(this.panel90, 2, 0);
-            this.tableLayoutPanel10.Controls.Add(this.panel91, 0, 0);
-            this.tableLayoutPanel10.Controls.Add(this.panel92, 0, 1);
-            this.tableLayoutPanel10.Controls.Add(this.panel93, 4, 0);
-            this.tableLayoutPanel10.Controls.Add(this.panel94, 4, 2);
-            this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
-            this.tableLayoutPanel10.RowCount = 3;
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(1385, 686);
-            this.tableLayoutPanel10.TabIndex = 48;
-            // 
-            // panel90
-            // 
-            this.panel90.Controls.Add(this.tableLayoutPanel12);
-            this.panel90.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel90.Location = new System.Drawing.Point(654, 3);
-            this.panel90.Name = "panel90";
-            this.panel90.Size = new System.Drawing.Size(157, 448);
-            this.panel90.TabIndex = 0;
-            // 
-            // panel91
-            // 
-            this.panel91.Controls.Add(this.tableLayoutPanel13);
-            this.panel91.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel91.Location = new System.Drawing.Point(3, 3);
-            this.panel91.Name = "panel91";
-            this.panel91.Size = new System.Drawing.Size(636, 448);
-            this.panel91.TabIndex = 1;
-            // 
-            // panel92
-            // 
-            this.tableLayoutPanel10.SetColumnSpan(this.panel92, 3);
-            this.panel92.Controls.Add(this.picbx_cog);
-            this.panel92.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel92.Location = new System.Drawing.Point(3, 457);
-            this.panel92.Name = "panel92";
-            this.tableLayoutPanel10.SetRowSpan(this.panel92, 2);
-            this.panel92.Size = new System.Drawing.Size(808, 226);
-            this.panel92.TabIndex = 2;
-            // 
-            // panel93
-            // 
-            this.panel93.Controls.Add(this.rchtxtbx_cog_report);
-            this.panel93.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel93.Location = new System.Drawing.Point(826, 3);
-            this.panel93.Name = "panel93";
-            this.tableLayoutPanel10.SetRowSpan(this.panel93, 2);
-            this.panel93.Size = new System.Drawing.Size(556, 599);
-            this.panel93.TabIndex = 3;
-            // 
-            // panel94
-            // 
-            this.panel94.Controls.Add(this.tableLayoutPanel11);
-            this.panel94.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel94.Location = new System.Drawing.Point(826, 608);
-            this.panel94.Name = "panel94";
-            this.panel94.Size = new System.Drawing.Size(556, 75);
-            this.panel94.TabIndex = 4;
-            // 
-            // tableLayoutPanel11
-            // 
-            this.tableLayoutPanel11.ColumnCount = 4;
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel11.Controls.Add(this.btn_calc_cog, 3, 0);
-            this.tableLayoutPanel11.Controls.Add(this.btn_cog_print_report, 2, 0);
-            this.tableLayoutPanel11.Controls.Add(this.btn_cog_clear_report, 1, 0);
-            this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel11.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
-            this.tableLayoutPanel11.RowCount = 1;
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(556, 75);
-            this.tableLayoutPanel11.TabIndex = 0;
-            // 
-            // tableLayoutPanel12
-            // 
-            this.tableLayoutPanel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.tableLayoutPanel12.ColumnCount = 2;
-            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel12.Controls.Add(this.panel95, 0, 0);
-            this.tableLayoutPanel12.Controls.Add(this.panel96, 0, 2);
-            this.tableLayoutPanel12.Controls.Add(this.panel97, 0, 3);
-            this.tableLayoutPanel12.Controls.Add(this.panel98, 1, 3);
-            this.tableLayoutPanel12.Controls.Add(this.panel99, 0, 5);
-            this.tableLayoutPanel12.Controls.Add(this.panel100, 0, 6);
-            this.tableLayoutPanel12.Controls.Add(this.panel101, 0, 8);
-            this.tableLayoutPanel12.Controls.Add(this.panel102, 0, 9);
-            this.tableLayoutPanel12.Controls.Add(this.panel103, 0, 11);
-            this.tableLayoutPanel12.Controls.Add(this.panel104, 0, 12);
-            this.tableLayoutPanel12.Controls.Add(this.panel105, 1, 12);
-            this.tableLayoutPanel12.Controls.Add(this.panel106, 1, 9);
-            this.tableLayoutPanel12.Controls.Add(this.panel107, 1, 6);
-            this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel12.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
-            this.tableLayoutPanel12.RowCount = 13;
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 2F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 2F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 2F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 2F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel12.Size = new System.Drawing.Size(157, 448);
-            this.tableLayoutPanel12.TabIndex = 0;
-            // 
-            // panel95
-            // 
-            this.tableLayoutPanel12.SetColumnSpan(this.panel95, 2);
-            this.panel95.Controls.Add(this.label51);
-            this.panel95.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel95.Location = new System.Drawing.Point(3, 3);
-            this.panel95.Name = "panel95";
-            this.panel95.Size = new System.Drawing.Size(151, 42);
-            this.panel95.TabIndex = 0;
-            // 
-            // label51
-            // 
-            this.label51.AutoSize = true;
-            this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label51.Location = new System.Drawing.Point(22, 11);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(109, 20);
-            this.label51.TabIndex = 40;
-            this.label51.Text = "Fuel Volume";
-            // 
-            // panel96
-            // 
-            this.tableLayoutPanel12.SetColumnSpan(this.panel96, 2);
-            this.panel96.Controls.Add(this.label24);
-            this.panel96.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel96.Location = new System.Drawing.Point(3, 53);
-            this.panel96.Name = "panel96";
-            this.panel96.Size = new System.Drawing.Size(151, 42);
-            this.panel96.TabIndex = 1;
-            // 
-            // panel97
-            // 
-            this.panel97.Controls.Add(this.txtbx_cog_takeoff_fuel);
-            this.panel97.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel97.Location = new System.Drawing.Point(3, 101);
-            this.panel97.Name = "panel97";
-            this.panel97.Size = new System.Drawing.Size(91, 42);
-            this.panel97.TabIndex = 2;
-            // 
-            // panel98
-            // 
-            this.panel98.Controls.Add(this.label28);
-            this.panel98.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel98.Location = new System.Drawing.Point(100, 101);
-            this.panel98.Name = "panel98";
-            this.panel98.Size = new System.Drawing.Size(54, 42);
-            this.panel98.TabIndex = 3;
-            // 
-            // panel99
-            // 
-            this.tableLayoutPanel12.SetColumnSpan(this.panel99, 2);
-            this.panel99.Controls.Add(this.label22);
-            this.panel99.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel99.Location = new System.Drawing.Point(3, 151);
-            this.panel99.Name = "panel99";
-            this.panel99.Size = new System.Drawing.Size(151, 42);
-            this.panel99.TabIndex = 4;
-            // 
-            // panel100
-            // 
-            this.panel100.Controls.Add(this.txtbx_cog_landing_fuel);
-            this.panel100.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel100.Location = new System.Drawing.Point(3, 199);
-            this.panel100.Name = "panel100";
-            this.panel100.Size = new System.Drawing.Size(91, 42);
-            this.panel100.TabIndex = 5;
-            // 
-            // panel101
-            // 
-            this.tableLayoutPanel12.SetColumnSpan(this.panel101, 2);
-            this.panel101.Controls.Add(this.label23);
-            this.panel101.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel101.Location = new System.Drawing.Point(3, 249);
-            this.panel101.Name = "panel101";
-            this.panel101.Size = new System.Drawing.Size(151, 42);
-            this.panel101.TabIndex = 6;
-            // 
-            // panel102
-            // 
-            this.panel102.Controls.Add(this.txtbx_cog_zero_fuel);
-            this.panel102.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel102.Location = new System.Drawing.Point(3, 297);
-            this.panel102.Name = "panel102";
-            this.panel102.Size = new System.Drawing.Size(91, 42);
-            this.panel102.TabIndex = 7;
-            // 
-            // panel103
-            // 
-            this.tableLayoutPanel12.SetColumnSpan(this.panel103, 2);
-            this.panel103.Controls.Add(this.label25);
-            this.panel103.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel103.Location = new System.Drawing.Point(3, 347);
-            this.panel103.Name = "panel103";
-            this.panel103.Size = new System.Drawing.Size(151, 42);
-            this.panel103.TabIndex = 8;
-            // 
-            // panel104
-            // 
-            this.panel104.Controls.Add(this.txtbx_specific_gravity);
-            this.panel104.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel104.Location = new System.Drawing.Point(3, 395);
-            this.panel104.Name = "panel104";
-            this.panel104.Size = new System.Drawing.Size(91, 50);
-            this.panel104.TabIndex = 9;
-            // 
-            // panel105
-            // 
-            this.panel105.Controls.Add(this.label26);
-            this.panel105.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel105.Location = new System.Drawing.Point(100, 395);
-            this.panel105.Name = "panel105";
-            this.panel105.Size = new System.Drawing.Size(54, 50);
-            this.panel105.TabIndex = 10;
-            // 
-            // panel106
-            // 
-            this.panel106.Controls.Add(this.label30);
-            this.panel106.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel106.Location = new System.Drawing.Point(100, 297);
-            this.panel106.Name = "panel106";
-            this.panel106.Size = new System.Drawing.Size(54, 42);
-            this.panel106.TabIndex = 11;
-            // 
-            // panel107
-            // 
-            this.panel107.Controls.Add(this.label29);
-            this.panel107.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel107.Location = new System.Drawing.Point(100, 199);
-            this.panel107.Name = "panel107";
-            this.panel107.Size = new System.Drawing.Size(54, 42);
-            this.panel107.TabIndex = 12;
-            // 
-            // tableLayoutPanel13
-            // 
-            this.tableLayoutPanel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.tableLayoutPanel13.ColumnCount = 7;
-            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 2F));
-            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 2F));
-            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 2F));
-            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel13.Controls.Add(this.panel108, 0, 0);
-            this.tableLayoutPanel13.Controls.Add(this.panel109, 0, 2);
-            this.tableLayoutPanel13.Controls.Add(this.panel110, 2, 2);
-            this.tableLayoutPanel13.Controls.Add(this.panel111, 4, 2);
-            this.tableLayoutPanel13.Controls.Add(this.panel112, 6, 2);
-            this.tableLayoutPanel13.Controls.Add(this.panel113, 0, 4);
-            this.tableLayoutPanel13.Controls.Add(this.panel114, 0, 6);
-            this.tableLayoutPanel13.Controls.Add(this.panel115, 0, 8);
-            this.tableLayoutPanel13.Controls.Add(this.panel116, 0, 10);
-            this.tableLayoutPanel13.Controls.Add(this.panel117, 0, 12);
-            this.tableLayoutPanel13.Controls.Add(this.panel118, 0, 14);
-            this.tableLayoutPanel13.Controls.Add(this.panel119, 0, 16);
-            this.tableLayoutPanel13.Controls.Add(this.panel120, 0, 18);
-            this.tableLayoutPanel13.Controls.Add(this.panel121, 2, 4);
-            this.tableLayoutPanel13.Controls.Add(this.panel122, 4, 4);
-            this.tableLayoutPanel13.Controls.Add(this.panel123, 6, 4);
-            this.tableLayoutPanel13.Controls.Add(this.panel124, 2, 6);
-            this.tableLayoutPanel13.Controls.Add(this.panel125, 4, 6);
-            this.tableLayoutPanel13.Controls.Add(this.panel126, 6, 6);
-            this.tableLayoutPanel13.Controls.Add(this.panel127, 2, 8);
-            this.tableLayoutPanel13.Controls.Add(this.panel128, 4, 8);
-            this.tableLayoutPanel13.Controls.Add(this.panel129, 6, 8);
-            this.tableLayoutPanel13.Controls.Add(this.panel130, 2, 10);
-            this.tableLayoutPanel13.Controls.Add(this.panel131, 4, 10);
-            this.tableLayoutPanel13.Controls.Add(this.panel132, 6, 10);
-            this.tableLayoutPanel13.Controls.Add(this.panel133, 2, 12);
-            this.tableLayoutPanel13.Controls.Add(this.panel134, 2, 14);
-            this.tableLayoutPanel13.Controls.Add(this.panel135, 2, 16);
-            this.tableLayoutPanel13.Controls.Add(this.panel136, 2, 18);
-            this.tableLayoutPanel13.Controls.Add(this.panel137, 4, 12);
-            this.tableLayoutPanel13.Controls.Add(this.panel138, 6, 12);
-            this.tableLayoutPanel13.Controls.Add(this.panel139, 4, 14);
-            this.tableLayoutPanel13.Controls.Add(this.panel140, 6, 14);
-            this.tableLayoutPanel13.Controls.Add(this.panel141, 4, 16);
-            this.tableLayoutPanel13.Controls.Add(this.panel142, 6, 16);
-            this.tableLayoutPanel13.Controls.Add(this.panel143, 4, 18);
-            this.tableLayoutPanel13.Controls.Add(this.panel144, 6, 18);
-            this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel13.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel13.Name = "tableLayoutPanel13";
-            this.tableLayoutPanel13.RowCount = 19;
-            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 2F));
-            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 2F));
-            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 2F));
-            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 2F));
-            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 2F));
-            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 2F));
-            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 2F));
-            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 2F));
-            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 2F));
-            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel13.Size = new System.Drawing.Size(636, 448);
-            this.tableLayoutPanel13.TabIndex = 0;
-            // 
-            // panel108
-            // 
-            this.tableLayoutPanel13.SetColumnSpan(this.panel108, 7);
-            this.panel108.Controls.Add(this.label52);
-            this.panel108.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel108.Location = new System.Drawing.Point(3, 3);
-            this.panel108.Name = "panel108";
-            this.panel108.Size = new System.Drawing.Size(630, 37);
-            this.panel108.TabIndex = 0;
-            // 
-            // label52
-            // 
-            this.label52.AutoSize = true;
-            this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label52.Location = new System.Drawing.Point(263, 14);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(74, 20);
-            this.label52.TabIndex = 41;
-            this.label52.Text = "Weights";
-            // 
-            // panel109
-            // 
-            this.panel109.Controls.Add(this.label13);
-            this.panel109.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel109.Location = new System.Drawing.Point(3, 48);
-            this.panel109.Name = "panel109";
-            this.panel109.Size = new System.Drawing.Size(151, 37);
-            this.panel109.TabIndex = 1;
-            // 
-            // panel110
-            // 
-            this.panel110.Controls.Add(this.label14);
-            this.panel110.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel110.Location = new System.Drawing.Point(162, 48);
-            this.panel110.Name = "panel110";
-            this.panel110.Size = new System.Drawing.Size(151, 37);
-            this.panel110.TabIndex = 2;
-            // 
-            // panel111
-            // 
-            this.panel111.Controls.Add(this.label15);
-            this.panel111.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel111.Location = new System.Drawing.Point(321, 48);
-            this.panel111.Name = "panel111";
-            this.panel111.Size = new System.Drawing.Size(151, 37);
-            this.panel111.TabIndex = 3;
-            // 
-            // panel112
-            // 
-            this.panel112.Controls.Add(this.label16);
-            this.panel112.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel112.Location = new System.Drawing.Point(480, 48);
-            this.panel112.Name = "panel112";
-            this.panel112.Size = new System.Drawing.Size(153, 37);
-            this.panel112.TabIndex = 4;
-            // 
-            // panel113
-            // 
-            this.panel113.Controls.Add(this.label17);
-            this.panel113.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel113.Location = new System.Drawing.Point(3, 93);
-            this.panel113.Name = "panel113";
-            this.panel113.Size = new System.Drawing.Size(151, 37);
-            this.panel113.TabIndex = 5;
-            // 
-            // panel114
-            // 
-            this.panel114.Controls.Add(this.label18);
-            this.panel114.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel114.Location = new System.Drawing.Point(3, 138);
-            this.panel114.Name = "panel114";
-            this.panel114.Size = new System.Drawing.Size(151, 37);
-            this.panel114.TabIndex = 6;
-            // 
-            // panel115
-            // 
-            this.panel115.Controls.Add(this.label19);
-            this.panel115.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel115.Location = new System.Drawing.Point(3, 183);
-            this.panel115.Name = "panel115";
-            this.panel115.Size = new System.Drawing.Size(151, 37);
-            this.panel115.TabIndex = 7;
-            // 
-            // panel116
-            // 
-            this.panel116.Controls.Add(this.label20);
-            this.panel116.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel116.Location = new System.Drawing.Point(3, 228);
-            this.panel116.Name = "panel116";
-            this.panel116.Size = new System.Drawing.Size(151, 37);
-            this.panel116.TabIndex = 8;
-            // 
-            // panel117
-            // 
-            this.panel117.Controls.Add(this.label32);
-            this.panel117.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel117.Location = new System.Drawing.Point(3, 273);
-            this.panel117.Name = "panel117";
-            this.panel117.Size = new System.Drawing.Size(151, 37);
-            this.panel117.TabIndex = 9;
-            // 
-            // panel118
-            // 
-            this.panel118.Controls.Add(this.label21);
-            this.panel118.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel118.Location = new System.Drawing.Point(3, 318);
-            this.panel118.Name = "panel118";
-            this.panel118.Size = new System.Drawing.Size(151, 37);
-            this.panel118.TabIndex = 10;
-            // 
-            // panel119
-            // 
-            this.panel119.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel119.Location = new System.Drawing.Point(3, 363);
-            this.panel119.Name = "panel119";
-            this.panel119.Size = new System.Drawing.Size(151, 37);
-            this.panel119.TabIndex = 11;
-            // 
-            // panel120
-            // 
-            this.panel120.Controls.Add(this.label27);
-            this.panel120.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel120.Location = new System.Drawing.Point(3, 408);
-            this.panel120.Name = "panel120";
-            this.panel120.Size = new System.Drawing.Size(151, 37);
-            this.panel120.TabIndex = 12;
-            // 
-            // panel121
-            // 
-            this.panel121.Controls.Add(this.txtbx_cog_pilot_weight);
-            this.panel121.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel121.Location = new System.Drawing.Point(162, 93);
-            this.panel121.Name = "panel121";
-            this.panel121.Size = new System.Drawing.Size(151, 37);
-            this.panel121.TabIndex = 13;
-            // 
-            // panel122
-            // 
-            this.panel122.Controls.Add(this.txtbx_cog_pilot_arm);
-            this.panel122.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel122.Location = new System.Drawing.Point(321, 93);
-            this.panel122.Name = "panel122";
-            this.panel122.Size = new System.Drawing.Size(151, 37);
-            this.panel122.TabIndex = 14;
-            // 
-            // panel123
-            // 
-            this.panel123.Controls.Add(this.txtbx_cog_pilot);
-            this.panel123.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel123.Location = new System.Drawing.Point(480, 93);
-            this.panel123.Name = "panel123";
-            this.panel123.Size = new System.Drawing.Size(153, 37);
-            this.panel123.TabIndex = 15;
-            // 
-            // panel124
-            // 
-            this.panel124.Controls.Add(this.txtbx_cog_passenger_weight);
-            this.panel124.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel124.Location = new System.Drawing.Point(162, 138);
-            this.panel124.Name = "panel124";
-            this.panel124.Size = new System.Drawing.Size(151, 37);
-            this.panel124.TabIndex = 16;
-            // 
-            // panel125
-            // 
-            this.panel125.Controls.Add(this.txtbx_cog_passenger_arm);
-            this.panel125.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel125.Location = new System.Drawing.Point(321, 138);
-            this.panel125.Name = "panel125";
-            this.panel125.Size = new System.Drawing.Size(151, 37);
-            this.panel125.TabIndex = 17;
-            // 
-            // panel126
-            // 
-            this.panel126.Controls.Add(this.txtbx_cog_passenger);
-            this.panel126.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel126.Location = new System.Drawing.Point(480, 138);
-            this.panel126.Name = "panel126";
-            this.panel126.Size = new System.Drawing.Size(153, 37);
-            this.panel126.TabIndex = 18;
-            // 
-            // panel127
-            // 
-            this.panel127.Controls.Add(this.txtbx_cog_cabin_bag_weight);
-            this.panel127.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel127.Location = new System.Drawing.Point(162, 183);
-            this.panel127.Name = "panel127";
-            this.panel127.Size = new System.Drawing.Size(151, 37);
-            this.panel127.TabIndex = 19;
-            // 
-            // panel128
-            // 
-            this.panel128.Controls.Add(this.txtbx_cog_cabin_bag_arm);
-            this.panel128.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel128.Location = new System.Drawing.Point(321, 183);
-            this.panel128.Name = "panel128";
-            this.panel128.Size = new System.Drawing.Size(151, 37);
-            this.panel128.TabIndex = 20;
-            // 
-            // panel129
-            // 
-            this.panel129.Controls.Add(this.txtbx_cog_cabin_baggage);
-            this.panel129.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel129.Location = new System.Drawing.Point(480, 183);
-            this.panel129.Name = "panel129";
-            this.panel129.Size = new System.Drawing.Size(153, 37);
-            this.panel129.TabIndex = 21;
-            // 
-            // panel130
-            // 
-            this.panel130.Controls.Add(this.txtbx_cog_hold_bag_weight);
-            this.panel130.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel130.Location = new System.Drawing.Point(162, 228);
-            this.panel130.Name = "panel130";
-            this.panel130.Size = new System.Drawing.Size(151, 37);
-            this.panel130.TabIndex = 22;
-            // 
-            // panel131
-            // 
-            this.panel131.Controls.Add(this.txtbx_cog_hold_bag_arm);
-            this.panel131.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel131.Location = new System.Drawing.Point(321, 228);
-            this.panel131.Name = "panel131";
-            this.panel131.Size = new System.Drawing.Size(151, 37);
-            this.panel131.TabIndex = 23;
-            // 
-            // panel132
-            // 
-            this.panel132.Controls.Add(this.txtbx_cog_hold_baggage);
-            this.panel132.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel132.Location = new System.Drawing.Point(480, 228);
-            this.panel132.Name = "panel132";
-            this.panel132.Size = new System.Drawing.Size(153, 37);
-            this.panel132.TabIndex = 24;
-            // 
-            // panel133
-            // 
-            this.panel133.Controls.Add(this.txtbx_cog_accessories_weight);
-            this.panel133.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel133.Location = new System.Drawing.Point(162, 273);
-            this.panel133.Name = "panel133";
-            this.panel133.Size = new System.Drawing.Size(151, 37);
-            this.panel133.TabIndex = 25;
-            // 
-            // panel134
-            // 
-            this.panel134.Controls.Add(this.txtbx_fuel_weight);
-            this.panel134.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel134.Location = new System.Drawing.Point(162, 318);
-            this.panel134.Name = "panel134";
-            this.panel134.Size = new System.Drawing.Size(151, 37);
-            this.panel134.TabIndex = 26;
-            // 
-            // panel135
-            // 
-            this.panel135.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel135.Location = new System.Drawing.Point(162, 363);
-            this.panel135.Name = "panel135";
-            this.panel135.Size = new System.Drawing.Size(151, 37);
-            this.panel135.TabIndex = 27;
-            // 
-            // panel136
-            // 
-            this.panel136.Controls.Add(this.txtbx_cog_total_weight);
-            this.panel136.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel136.Location = new System.Drawing.Point(162, 408);
-            this.panel136.Name = "panel136";
-            this.panel136.Size = new System.Drawing.Size(151, 37);
-            this.panel136.TabIndex = 28;
-            // 
-            // panel137
-            // 
-            this.panel137.Controls.Add(this.txtbx_cog_accessories_arm);
-            this.panel137.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel137.Location = new System.Drawing.Point(321, 273);
-            this.panel137.Name = "panel137";
-            this.panel137.Size = new System.Drawing.Size(151, 37);
-            this.panel137.TabIndex = 29;
-            // 
-            // panel138
-            // 
-            this.panel138.Controls.Add(this.txtbx_cog_accessories);
-            this.panel138.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel138.Location = new System.Drawing.Point(480, 273);
-            this.panel138.Name = "panel138";
-            this.panel138.Size = new System.Drawing.Size(153, 37);
-            this.panel138.TabIndex = 30;
-            // 
-            // panel139
-            // 
-            this.panel139.Controls.Add(this.txtbx_cog_fuel_arm);
-            this.panel139.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel139.Location = new System.Drawing.Point(321, 318);
-            this.panel139.Name = "panel139";
-            this.panel139.Size = new System.Drawing.Size(151, 37);
-            this.panel139.TabIndex = 31;
-            // 
-            // panel140
-            // 
-            this.panel140.Controls.Add(this.txtbx_cog_fuel);
-            this.panel140.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel140.Location = new System.Drawing.Point(480, 318);
-            this.panel140.Name = "panel140";
-            this.panel140.Size = new System.Drawing.Size(153, 37);
-            this.panel140.TabIndex = 32;
-            // 
-            // panel141
-            // 
-            this.panel141.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel141.Location = new System.Drawing.Point(321, 363);
-            this.panel141.Name = "panel141";
-            this.panel141.Size = new System.Drawing.Size(151, 37);
-            this.panel141.TabIndex = 33;
-            // 
-            // panel142
-            // 
-            this.panel142.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel142.Location = new System.Drawing.Point(480, 363);
-            this.panel142.Name = "panel142";
-            this.panel142.Size = new System.Drawing.Size(153, 37);
-            this.panel142.TabIndex = 34;
-            // 
-            // panel143
-            // 
-            this.panel143.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel143.Location = new System.Drawing.Point(321, 408);
-            this.panel143.Name = "panel143";
-            this.panel143.Size = new System.Drawing.Size(151, 37);
-            this.panel143.TabIndex = 35;
-            // 
-            // panel144
-            // 
-            this.panel144.Controls.Add(this.txtbx_cog_total_moment);
-            this.panel144.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel144.Location = new System.Drawing.Point(480, 408);
-            this.panel144.Name = "panel144";
-            this.panel144.Size = new System.Drawing.Size(153, 37);
-            this.panel144.TabIndex = 36;
-            // 
-            // txtbx_cog_total_weight
-            // 
-            this.txtbx_cog_total_weight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtbx_cog_total_weight.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtbx_cog_total_weight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtbx_cog_total_weight.Location = new System.Drawing.Point(0, 0);
-            this.txtbx_cog_total_weight.Name = "txtbx_cog_total_weight";
-            this.txtbx_cog_total_weight.ReadOnly = true;
-            this.txtbx_cog_total_weight.Size = new System.Drawing.Size(151, 19);
-            this.txtbx_cog_total_weight.TabIndex = 0;
-            this.txtbx_cog_total_weight.Text = "0";
-            this.txtbx_cog_total_weight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtbx_cog_total_moment
-            // 
-            this.txtbx_cog_total_moment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtbx_cog_total_moment.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtbx_cog_total_moment.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtbx_cog_total_moment.Location = new System.Drawing.Point(0, 0);
-            this.txtbx_cog_total_moment.Name = "txtbx_cog_total_moment";
-            this.txtbx_cog_total_moment.ReadOnly = true;
-            this.txtbx_cog_total_moment.Size = new System.Drawing.Size(153, 19);
-            this.txtbx_cog_total_moment.TabIndex = 1;
-            this.txtbx_cog_total_moment.Text = "0";
-            this.txtbx_cog_total_moment.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtbx_cog_pilot
-            // 
-            this.txtbx_cog_pilot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtbx_cog_pilot.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtbx_cog_pilot.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtbx_cog_pilot.Location = new System.Drawing.Point(0, 0);
-            this.txtbx_cog_pilot.Name = "txtbx_cog_pilot";
-            this.txtbx_cog_pilot.ReadOnly = true;
-            this.txtbx_cog_pilot.Size = new System.Drawing.Size(153, 19);
-            this.txtbx_cog_pilot.TabIndex = 2;
-            this.txtbx_cog_pilot.Text = "0";
-            this.txtbx_cog_pilot.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtbx_cog_passenger
-            // 
-            this.txtbx_cog_passenger.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtbx_cog_passenger.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtbx_cog_passenger.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtbx_cog_passenger.Location = new System.Drawing.Point(0, 0);
-            this.txtbx_cog_passenger.Name = "txtbx_cog_passenger";
-            this.txtbx_cog_passenger.ReadOnly = true;
-            this.txtbx_cog_passenger.Size = new System.Drawing.Size(153, 19);
-            this.txtbx_cog_passenger.TabIndex = 3;
-            this.txtbx_cog_passenger.Text = "0";
-            this.txtbx_cog_passenger.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtbx_cog_cabin_baggage
-            // 
-            this.txtbx_cog_cabin_baggage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtbx_cog_cabin_baggage.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtbx_cog_cabin_baggage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtbx_cog_cabin_baggage.Location = new System.Drawing.Point(0, 0);
-            this.txtbx_cog_cabin_baggage.Name = "txtbx_cog_cabin_baggage";
-            this.txtbx_cog_cabin_baggage.ReadOnly = true;
-            this.txtbx_cog_cabin_baggage.Size = new System.Drawing.Size(153, 19);
-            this.txtbx_cog_cabin_baggage.TabIndex = 4;
-            this.txtbx_cog_cabin_baggage.Text = "0";
-            this.txtbx_cog_cabin_baggage.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtbx_cog_hold_baggage
-            // 
-            this.txtbx_cog_hold_baggage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtbx_cog_hold_baggage.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtbx_cog_hold_baggage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtbx_cog_hold_baggage.Location = new System.Drawing.Point(0, 0);
-            this.txtbx_cog_hold_baggage.Name = "txtbx_cog_hold_baggage";
-            this.txtbx_cog_hold_baggage.ReadOnly = true;
-            this.txtbx_cog_hold_baggage.Size = new System.Drawing.Size(153, 19);
-            this.txtbx_cog_hold_baggage.TabIndex = 5;
-            this.txtbx_cog_hold_baggage.Text = "0";
-            this.txtbx_cog_hold_baggage.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtbx_cog_accessories
-            // 
-            this.txtbx_cog_accessories.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtbx_cog_accessories.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtbx_cog_accessories.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtbx_cog_accessories.Location = new System.Drawing.Point(0, 0);
-            this.txtbx_cog_accessories.Name = "txtbx_cog_accessories";
-            this.txtbx_cog_accessories.ReadOnly = true;
-            this.txtbx_cog_accessories.Size = new System.Drawing.Size(153, 19);
-            this.txtbx_cog_accessories.TabIndex = 6;
-            this.txtbx_cog_accessories.Text = "0";
-            this.txtbx_cog_accessories.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtbx_cog_fuel
-            // 
-            this.txtbx_cog_fuel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtbx_cog_fuel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtbx_cog_fuel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtbx_cog_fuel.Location = new System.Drawing.Point(0, 0);
-            this.txtbx_cog_fuel.Name = "txtbx_cog_fuel";
-            this.txtbx_cog_fuel.ReadOnly = true;
-            this.txtbx_cog_fuel.Size = new System.Drawing.Size(153, 19);
-            this.txtbx_cog_fuel.TabIndex = 7;
-            this.txtbx_cog_fuel.Text = "0";
-            this.txtbx_cog_fuel.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtbx_fuel_weight
-            // 
-            this.txtbx_fuel_weight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtbx_fuel_weight.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtbx_fuel_weight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtbx_fuel_weight.Location = new System.Drawing.Point(0, 0);
-            this.txtbx_fuel_weight.Name = "txtbx_fuel_weight";
-            this.txtbx_fuel_weight.ReadOnly = true;
-            this.txtbx_fuel_weight.Size = new System.Drawing.Size(151, 19);
-            this.txtbx_fuel_weight.TabIndex = 1;
-            this.txtbx_fuel_weight.Text = "0";
-            this.txtbx_fuel_weight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // picbx_cog
-            // 
-            this.picbx_cog.BackColor = System.Drawing.Color.White;
-            this.picbx_cog.Location = new System.Drawing.Point(90, 28);
-            this.picbx_cog.Name = "picbx_cog";
-            this.picbx_cog.Size = new System.Drawing.Size(636, 170);
-            this.picbx_cog.TabIndex = 0;
-            this.picbx_cog.TabStop = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -4621,6 +4664,7 @@ namespace myFlightInfo
             this.Text = "myFlightInfo";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.SizeChanged += new System.EventHandler(this.Form1_SizeChanged);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.panel31.ResumeLayout(false);
@@ -4717,6 +4761,109 @@ namespace myFlightInfo
             this.tab_crosswind.ResumeLayout(false);
             this.tab_crosswind.PerformLayout();
             this.tab_weight_balance.ResumeLayout(false);
+            this.tableLayoutPanel10.ResumeLayout(false);
+            this.panel90.ResumeLayout(false);
+            this.tableLayoutPanel12.ResumeLayout(false);
+            this.panel95.ResumeLayout(false);
+            this.panel95.PerformLayout();
+            this.panel96.ResumeLayout(false);
+            this.panel96.PerformLayout();
+            this.panel97.ResumeLayout(false);
+            this.panel97.PerformLayout();
+            this.panel98.ResumeLayout(false);
+            this.panel98.PerformLayout();
+            this.panel99.ResumeLayout(false);
+            this.panel99.PerformLayout();
+            this.panel100.ResumeLayout(false);
+            this.panel100.PerformLayout();
+            this.panel101.ResumeLayout(false);
+            this.panel101.PerformLayout();
+            this.panel102.ResumeLayout(false);
+            this.panel102.PerformLayout();
+            this.panel103.ResumeLayout(false);
+            this.panel103.PerformLayout();
+            this.panel104.ResumeLayout(false);
+            this.panel104.PerformLayout();
+            this.panel105.ResumeLayout(false);
+            this.panel105.PerformLayout();
+            this.panel106.ResumeLayout(false);
+            this.panel106.PerformLayout();
+            this.panel107.ResumeLayout(false);
+            this.panel107.PerformLayout();
+            this.panel91.ResumeLayout(false);
+            this.tableLayoutPanel13.ResumeLayout(false);
+            this.panel108.ResumeLayout(false);
+            this.panel108.PerformLayout();
+            this.panel109.ResumeLayout(false);
+            this.panel109.PerformLayout();
+            this.panel110.ResumeLayout(false);
+            this.panel110.PerformLayout();
+            this.panel111.ResumeLayout(false);
+            this.panel111.PerformLayout();
+            this.panel112.ResumeLayout(false);
+            this.panel112.PerformLayout();
+            this.panel113.ResumeLayout(false);
+            this.panel113.PerformLayout();
+            this.panel114.ResumeLayout(false);
+            this.panel114.PerformLayout();
+            this.panel115.ResumeLayout(false);
+            this.panel115.PerformLayout();
+            this.panel116.ResumeLayout(false);
+            this.panel116.PerformLayout();
+            this.panel117.ResumeLayout(false);
+            this.panel117.PerformLayout();
+            this.panel118.ResumeLayout(false);
+            this.panel118.PerformLayout();
+            this.panel120.ResumeLayout(false);
+            this.panel120.PerformLayout();
+            this.panel121.ResumeLayout(false);
+            this.panel121.PerformLayout();
+            this.panel122.ResumeLayout(false);
+            this.panel122.PerformLayout();
+            this.panel123.ResumeLayout(false);
+            this.panel123.PerformLayout();
+            this.panel124.ResumeLayout(false);
+            this.panel124.PerformLayout();
+            this.panel125.ResumeLayout(false);
+            this.panel125.PerformLayout();
+            this.panel126.ResumeLayout(false);
+            this.panel126.PerformLayout();
+            this.panel127.ResumeLayout(false);
+            this.panel127.PerformLayout();
+            this.panel128.ResumeLayout(false);
+            this.panel128.PerformLayout();
+            this.panel129.ResumeLayout(false);
+            this.panel129.PerformLayout();
+            this.panel130.ResumeLayout(false);
+            this.panel130.PerformLayout();
+            this.panel131.ResumeLayout(false);
+            this.panel131.PerformLayout();
+            this.panel132.ResumeLayout(false);
+            this.panel132.PerformLayout();
+            this.panel133.ResumeLayout(false);
+            this.panel133.PerformLayout();
+            this.panel134.ResumeLayout(false);
+            this.panel134.PerformLayout();
+            this.panel136.ResumeLayout(false);
+            this.panel136.PerformLayout();
+            this.panel137.ResumeLayout(false);
+            this.panel137.PerformLayout();
+            this.panel138.ResumeLayout(false);
+            this.panel138.PerformLayout();
+            this.panel139.ResumeLayout(false);
+            this.panel139.PerformLayout();
+            this.panel140.ResumeLayout(false);
+            this.panel140.PerformLayout();
+            this.panel144.ResumeLayout(false);
+            this.panel144.PerformLayout();
+            this.panel92.ResumeLayout(false);
+            this.tableLayoutPanel14.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picbx_cog_limits)).EndInit();
+            this.panel145.ResumeLayout(false);
+            this.panel145.PerformLayout();
+            this.panel93.ResumeLayout(false);
+            this.panel94.ResumeLayout(false);
+            this.tableLayoutPanel11.ResumeLayout(false);
             this.tab_compliance_data.ResumeLayout(false);
             this.tableLayoutPanel9.ResumeLayout(false);
             this.panel43.ResumeLayout(false);
@@ -4797,106 +4944,6 @@ namespace myFlightInfo
             this.panel86.ResumeLayout(false);
             this.panel86.PerformLayout();
             this.panel89.ResumeLayout(false);
-            this.tableLayoutPanel10.ResumeLayout(false);
-            this.panel90.ResumeLayout(false);
-            this.panel91.ResumeLayout(false);
-            this.panel92.ResumeLayout(false);
-            this.panel93.ResumeLayout(false);
-            this.panel94.ResumeLayout(false);
-            this.tableLayoutPanel11.ResumeLayout(false);
-            this.tableLayoutPanel12.ResumeLayout(false);
-            this.panel95.ResumeLayout(false);
-            this.panel95.PerformLayout();
-            this.panel96.ResumeLayout(false);
-            this.panel96.PerformLayout();
-            this.panel97.ResumeLayout(false);
-            this.panel97.PerformLayout();
-            this.panel98.ResumeLayout(false);
-            this.panel98.PerformLayout();
-            this.panel99.ResumeLayout(false);
-            this.panel99.PerformLayout();
-            this.panel100.ResumeLayout(false);
-            this.panel100.PerformLayout();
-            this.panel101.ResumeLayout(false);
-            this.panel101.PerformLayout();
-            this.panel102.ResumeLayout(false);
-            this.panel102.PerformLayout();
-            this.panel103.ResumeLayout(false);
-            this.panel103.PerformLayout();
-            this.panel104.ResumeLayout(false);
-            this.panel104.PerformLayout();
-            this.panel105.ResumeLayout(false);
-            this.panel105.PerformLayout();
-            this.panel106.ResumeLayout(false);
-            this.panel106.PerformLayout();
-            this.panel107.ResumeLayout(false);
-            this.panel107.PerformLayout();
-            this.tableLayoutPanel13.ResumeLayout(false);
-            this.panel108.ResumeLayout(false);
-            this.panel108.PerformLayout();
-            this.panel109.ResumeLayout(false);
-            this.panel109.PerformLayout();
-            this.panel110.ResumeLayout(false);
-            this.panel110.PerformLayout();
-            this.panel111.ResumeLayout(false);
-            this.panel111.PerformLayout();
-            this.panel112.ResumeLayout(false);
-            this.panel112.PerformLayout();
-            this.panel113.ResumeLayout(false);
-            this.panel113.PerformLayout();
-            this.panel114.ResumeLayout(false);
-            this.panel114.PerformLayout();
-            this.panel115.ResumeLayout(false);
-            this.panel115.PerformLayout();
-            this.panel116.ResumeLayout(false);
-            this.panel116.PerformLayout();
-            this.panel117.ResumeLayout(false);
-            this.panel117.PerformLayout();
-            this.panel118.ResumeLayout(false);
-            this.panel118.PerformLayout();
-            this.panel120.ResumeLayout(false);
-            this.panel120.PerformLayout();
-            this.panel121.ResumeLayout(false);
-            this.panel121.PerformLayout();
-            this.panel122.ResumeLayout(false);
-            this.panel122.PerformLayout();
-            this.panel123.ResumeLayout(false);
-            this.panel123.PerformLayout();
-            this.panel124.ResumeLayout(false);
-            this.panel124.PerformLayout();
-            this.panel125.ResumeLayout(false);
-            this.panel125.PerformLayout();
-            this.panel126.ResumeLayout(false);
-            this.panel126.PerformLayout();
-            this.panel127.ResumeLayout(false);
-            this.panel127.PerformLayout();
-            this.panel128.ResumeLayout(false);
-            this.panel128.PerformLayout();
-            this.panel129.ResumeLayout(false);
-            this.panel129.PerformLayout();
-            this.panel130.ResumeLayout(false);
-            this.panel130.PerformLayout();
-            this.panel131.ResumeLayout(false);
-            this.panel131.PerformLayout();
-            this.panel132.ResumeLayout(false);
-            this.panel132.PerformLayout();
-            this.panel133.ResumeLayout(false);
-            this.panel133.PerformLayout();
-            this.panel134.ResumeLayout(false);
-            this.panel134.PerformLayout();
-            this.panel136.ResumeLayout(false);
-            this.panel136.PerformLayout();
-            this.panel137.ResumeLayout(false);
-            this.panel137.PerformLayout();
-            this.panel138.ResumeLayout(false);
-            this.panel138.PerformLayout();
-            this.panel139.ResumeLayout(false);
-            this.panel139.PerformLayout();
-            this.panel140.ResumeLayout(false);
-            this.panel140.PerformLayout();
-            this.panel144.ResumeLayout(false);
-            this.panel144.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picbx_cog)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -5259,7 +5306,10 @@ namespace myFlightInfo
         private System.Windows.Forms.TextBox txtbx_cog_fuel;
         private System.Windows.Forms.TextBox txtbx_cog_total_moment;
         private System.Windows.Forms.TextBox txtbx_fuel_weight;
-        private System.Windows.Forms.PictureBox picbx_cog;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
+        private System.Windows.Forms.PictureBox picbx_cog_limits;
+        private System.Windows.Forms.Panel panel145;
+        private System.Windows.Forms.Label label53;
     }
 }
 

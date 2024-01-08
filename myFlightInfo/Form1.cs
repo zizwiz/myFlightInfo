@@ -378,5 +378,16 @@ namespace myFlightInfo
                 }
             }
         }
+
+        private void ShowError(string myError)
+        {
+            MsgBox.Show("Check as value in " + myError + " is not correct", "Error", MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+        }
+
+        private bool CheckDouble(TextBox myTextBox)
+        {
+            return double.TryParse(myTextBox.Text, out var myValue);
+        }
     }
 }

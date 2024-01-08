@@ -114,6 +114,16 @@ namespace myFlightInfo.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap c42_sideview {
+            get {
+                object obj = ResourceManager.GetObject("c42_sideview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
         internal static byte[] Microsoft_Web_WebView2_Core {
