@@ -120,6 +120,8 @@ namespace myFlightInfo
             this.panel22 = new System.Windows.Forms.Panel();
             this.lbl_to_pressure = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
+            this.lbl_d_sunset = new System.Windows.Forms.Label();
+            this.lbl_d_sunrise = new System.Windows.Forms.Label();
             this.lbl_d_elevation_m = new System.Windows.Forms.Label();
             this.lbl_d_longitude_dec = new System.Windows.Forms.Label();
             this.lbl_d_longitude_deg = new System.Windows.Forms.Label();
@@ -139,6 +141,8 @@ namespace myFlightInfo
             this.panel37 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
+            this.lbl_p_sunset = new System.Windows.Forms.Label();
+            this.lbl_p_sunrise = new System.Windows.Forms.Label();
             this.lbl_p_elevation_m = new System.Windows.Forms.Label();
             this.lbl_p_longitude_dec = new System.Windows.Forms.Label();
             this.lbl_p_longitude_deg = new System.Windows.Forms.Label();
@@ -161,6 +165,7 @@ namespace myFlightInfo
             this.panel20 = new System.Windows.Forms.Panel();
             this.panel23 = new System.Windows.Forms.Panel();
             this.panel24 = new System.Windows.Forms.Panel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel25 = new System.Windows.Forms.Panel();
             this.tab_crosswind = new System.Windows.Forms.TabPage();
             this.label12 = new System.Windows.Forms.Label();
@@ -475,6 +480,7 @@ namespace myFlightInfo
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
+            this.panel24.SuspendLayout();
             this.tab_crosswind.SuspendLayout();
             this.tab_weight_balance.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
@@ -1879,6 +1885,8 @@ namespace myFlightInfo
             // 
             this.panel18.AutoScroll = true;
             this.tableLayoutPanel5.SetColumnSpan(this.panel18, 3);
+            this.panel18.Controls.Add(this.lbl_d_sunset);
+            this.panel18.Controls.Add(this.lbl_d_sunrise);
             this.panel18.Controls.Add(this.lbl_d_elevation_m);
             this.panel18.Controls.Add(this.lbl_d_longitude_dec);
             this.panel18.Controls.Add(this.lbl_d_longitude_deg);
@@ -1891,6 +1899,24 @@ namespace myFlightInfo
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(257, 355);
             this.panel18.TabIndex = 24;
+            // 
+            // lbl_d_sunset
+            // 
+            this.lbl_d_sunset.AutoSize = true;
+            this.lbl_d_sunset.Location = new System.Drawing.Point(3, 246);
+            this.lbl_d_sunset.Name = "lbl_d_sunset";
+            this.lbl_d_sunset.Size = new System.Drawing.Size(17, 20);
+            this.lbl_d_sunset.TabIndex = 10;
+            this.lbl_d_sunset.Text = "..";
+            // 
+            // lbl_d_sunrise
+            // 
+            this.lbl_d_sunrise.AutoSize = true;
+            this.lbl_d_sunrise.Location = new System.Drawing.Point(3, 226);
+            this.lbl_d_sunrise.Name = "lbl_d_sunrise";
+            this.lbl_d_sunrise.Size = new System.Drawing.Size(17, 20);
+            this.lbl_d_sunrise.TabIndex = 9;
+            this.lbl_d_sunrise.Text = "..";
             // 
             // lbl_d_elevation_m
             // 
@@ -2080,6 +2106,8 @@ namespace myFlightInfo
             // 
             this.panel16.AutoScroll = true;
             this.tableLayoutPanel4.SetColumnSpan(this.panel16, 3);
+            this.panel16.Controls.Add(this.lbl_p_sunset);
+            this.panel16.Controls.Add(this.lbl_p_sunrise);
             this.panel16.Controls.Add(this.lbl_p_elevation_m);
             this.panel16.Controls.Add(this.lbl_p_longitude_dec);
             this.panel16.Controls.Add(this.lbl_p_longitude_deg);
@@ -2092,6 +2120,24 @@ namespace myFlightInfo
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(257, 355);
             this.panel16.TabIndex = 6;
+            // 
+            // lbl_p_sunset
+            // 
+            this.lbl_p_sunset.AutoSize = true;
+            this.lbl_p_sunset.Location = new System.Drawing.Point(3, 246);
+            this.lbl_p_sunset.Name = "lbl_p_sunset";
+            this.lbl_p_sunset.Size = new System.Drawing.Size(17, 20);
+            this.lbl_p_sunset.TabIndex = 8;
+            this.lbl_p_sunset.Text = "..";
+            // 
+            // lbl_p_sunrise
+            // 
+            this.lbl_p_sunrise.AutoSize = true;
+            this.lbl_p_sunrise.Location = new System.Drawing.Point(3, 226);
+            this.lbl_p_sunrise.Name = "lbl_p_sunrise";
+            this.lbl_p_sunrise.Size = new System.Drawing.Size(17, 20);
+            this.lbl_p_sunrise.TabIndex = 7;
+            this.lbl_p_sunrise.Text = "..";
             // 
             // lbl_p_elevation_m
             // 
@@ -2302,11 +2348,21 @@ namespace myFlightInfo
             // 
             // panel24
             // 
+            this.panel24.Controls.Add(this.dateTimePicker1);
             this.panel24.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel24.Location = new System.Drawing.Point(141, 3);
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(271, 34);
             this.panel24.TabIndex = 33;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dateTimePicker1.Location = new System.Drawing.Point(0, 0);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(271, 26);
+            this.dateTimePicker1.TabIndex = 0;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // panel25
             // 
@@ -4758,6 +4814,7 @@ namespace myFlightInfo
             this.panel12.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
+            this.panel24.ResumeLayout(false);
             this.tab_crosswind.ResumeLayout(false);
             this.tab_crosswind.PerformLayout();
             this.tab_weight_balance.ResumeLayout(false);
@@ -5310,6 +5367,11 @@ namespace myFlightInfo
         private System.Windows.Forms.PictureBox picbx_cog_limits;
         private System.Windows.Forms.Panel panel145;
         private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label lbl_d_sunset;
+        private System.Windows.Forms.Label lbl_d_sunrise;
+        private System.Windows.Forms.Label lbl_p_sunset;
+        private System.Windows.Forms.Label lbl_p_sunrise;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
 

@@ -171,12 +171,25 @@ namespace myFlightInfo
         {
             if ((tabcnt_toplevel.SelectedTab == tab_utils) && (tabcnt_utils.SelectedTab == tab_altimeter))
             {
+                int year = dateTimePicker1.Value.Year;
+                int month = dateTimePicker1.Value.Month;
+                int day = dateTimePicker1.Value.Day;
+                double tsunrise, tsunset;
+
                 string[] data = airport_data.GetAirportInfo(cmbobx_airport_info.Text);
 
                 lbl_to_pressure.Text = lbl_qnh_pressure.Text = "";
 
                 if (rdobtn_present.Checked)
                 {
+                    double lat = double.Parse(data[4]);
+                    double lng = double.Parse(data[6]);
+                    Sunriset.SunriseSunset(year, month, day, lat, lng, out tsunrise, out tsunset);
+                    TimeSpan sunriseTime = TimeSpan.FromHours(tsunrise);
+                    string sunriseTimeString = sunriseTime.ToString(@"hh\:mm\:ss");
+                    TimeSpan sunsetTime = TimeSpan.FromHours(tsunset);
+                    string sunsetTimeString = sunriseTime.ToString(@"hh\:mm\:ss");
+
                     lbl_p_airport_name.Text = "Airport Name = " + data[2];
                     lbl_p_icao_code.Text = "ICAO Code = " + data[1];
                     lbl_p_latitude_deg.Text = "Latitude degrees = " + data[3];
@@ -184,10 +197,20 @@ namespace myFlightInfo
                     lbl_p_longitude_deg.Text = "Longitude degrees = " + data[5];
                     lbl_p_longitude_dec.Text = "Logitude decimal = " + data[6];
                     lbl_p_elevation_m.Text = "Elevation = " + data[7] + "m";
+                    lbl_p_sunrise.Text = "Sunrise = " + sunriseTimeString;
+                    lbl_p_sunset.Text = "Sunset = " + sunsetTimeString;
                     txtbx_present_altitude.Text = data[8];
                 }
                 else
                 {
+                    double lat = double.Parse(data[4]);
+                    double lng = double.Parse(data[6]);
+                    Sunriset.SunriseSunset(year, month, day, lat, lng, out tsunrise, out tsunset);
+                    TimeSpan sunriseTime = TimeSpan.FromHours(tsunrise);
+                    string sunriseTimeString = sunriseTime.ToString(@"hh\:mm\:ss");
+                    TimeSpan sunsetTime = TimeSpan.FromHours(tsunset);
+                    string sunsetTimeString = sunriseTime.ToString(@"hh\:mm\:ss");
+
                     lbl_d_airport_name.Text = "Airport Name = " + data[2];
                     lbl_d_icao_code.Text = "ICAO Code = " + data[1];
                     lbl_d_latitude_deg.Text = "Latitude degrees = " + data[3];
@@ -195,6 +218,8 @@ namespace myFlightInfo
                     lbl_d_longitude_deg.Text = "Longitude degrees = " + data[5];
                     lbl_d_longitude_dec.Text = "Logitude decimal = " + data[6];
                     lbl_d_elevation_m.Text = "Elevation = " + data[7] + "m";
+                    lbl_d_sunrise.Text = "Sunrise = " + sunriseTimeString;
+                    lbl_d_sunset.Text = "Sunset = " + sunsetTimeString;
                     txtbx_to_altitude.Text = data[8];
                 }
             }
@@ -204,6 +229,28 @@ namespace myFlightInfo
                 webView_browser.CoreWebView2.Navigate(URI);
                 txtbx_navigate_to_url.Text = URI;
             }
+        }
+
+        private string GetSunriset(double lng, double lat, string type)
+        {
+            int year = dateTimePicker1.Value.Year;
+            int month = dateTimePicker1.Value.Month;
+            int day = dateTimePicker1.Value.Day;
+            double tsunrise, tsunset;
+            string result;
+
+           Sunriset.SunriseSunset(year, month, day, lat, lng, out tsunrise, out tsunset);
+
+           if (type == "sunrise")
+           {
+               result = TimeSpan.FromHours(tsunrise).ToString(@"hh\:mm\:ss");
+           }
+           else
+           {
+               result = TimeSpan.FromHours(tsunset).ToString(@"hh\:mm\:ss");
+           }
+           
+            return result;
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
@@ -388,6 +435,11 @@ namespace myFlightInfo
         private bool CheckDouble(TextBox myTextBox)
         {
             return double.TryParse(myTextBox.Text, out var myValue);
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+           // string GetSunriset(double lng, double lat, string type)
         }
     }
 }

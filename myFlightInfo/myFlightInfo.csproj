@@ -77,6 +77,7 @@
     <Compile Include="Settings.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="sunrise_sunset\Sunriset.cs" />
     <Compile Include="WeightsBalance.cs">
       <SubType>Form</SubType>
     </Compile>

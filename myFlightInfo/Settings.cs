@@ -192,7 +192,7 @@ namespace myFlightInfo
 
             if (CheckDouble(txtbx_settings_max_fuel_vol))
             {
-                settings.FwdCGLimit = double.Parse(txtbx_settings_max_fuel_vol.Text);
+                settings.MaxFuelVol = double.Parse(txtbx_settings_max_fuel_vol.Text);
             }
             else
             {
@@ -202,7 +202,7 @@ namespace myFlightInfo
 
             if (CheckDouble(txtbx_settings_min_fuel_vol))
             {
-                settings.FwdCGLimit = double.Parse(txtbx_settings_min_fuel_vol.Text);
+                settings.MinFuelVol = double.Parse(txtbx_settings_min_fuel_vol.Text);
             }
             else
             {
@@ -211,6 +211,8 @@ namespace myFlightInfo
             }
 
             settings.Save();
+
+            ResetweightsAndBalances();
         }
 
         //private void ShowError(string myError)
@@ -242,6 +244,7 @@ namespace myFlightInfo
             txtbx_settings_min_fuel_vol.Text = "10";
 
             SaveSettings();
+           
         }
 
         private void GetSettings()

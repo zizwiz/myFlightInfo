@@ -46,7 +46,7 @@ namespace myFlightInfo
             if (!CheckDouble(txtbx_cog_fuel_arm)) { ShowError("Fuel Arm "); return; }
 
             /////////////////////////////////////////////////////////////////////////////////
-            //Clear the CoG graphices
+            //Clear the CoG graphics
             ///////////////////////////////////////////////////////////////////////////////////
             ResetGraphics();
 
@@ -226,26 +226,26 @@ namespace myFlightInfo
             {
                 rchtxtbx_cog_report.SelectionColor = Color.Red;
                 rchtxtbx_cog_report.AppendText("\r\tTake-off CoG = " + TakeOffCoG + "mm = Outside aircraft limits");
-                DrawLimitLines(TakeOffCoG, 70, TakeOffCoG + 12, "Takeoff CoG", "Red", true);
+                DrawLimitLines(TakeOffCoG, 70, TakeOffCoG + 12, "CoG_T", "Red", true);
             }
             else
             {
                 rchtxtbx_cog_report.SelectionColor = Color.Green;
                 rchtxtbx_cog_report.AppendText("\r\tTake-off CoG = " + TakeOffCoG + "mm = OK");
-                DrawLimitLines(TakeOffCoG, 70, TakeOffCoG + 12, "Takeoff CoG", "Green", true);
+                DrawLimitLines(TakeOffCoG, 70, TakeOffCoG + 12, "CoG_T", "Green", true);
             }
 
             if ((LandingCofG > AftCGLimit) || (LandingCofG < FwdCGLimit))
             {
                 rchtxtbx_cog_report.SelectionColor = Color.Red;
                 rchtxtbx_cog_report.AppendText("\r\tLanding CoG = " + LandingCofG + "mm = Outside aircraft limits");
-                DrawLimitLines(LandingCofG, 70, 60, "Landing CoG", "Red", true);
+                DrawLimitLines(LandingCofG, 70, LandingCofG-200, "CoG_L", "Red", true);
             }
             else
             {
                 rchtxtbx_cog_report.SelectionColor = Color.Green;
                 rchtxtbx_cog_report.AppendText("\r\tLanding CoG = " + LandingCofG + "mm = OK");
-                DrawLimitLines(LandingCofG, 70, 60, "Landing CoG", "Green", true);
+                DrawLimitLines(LandingCofG, 70, LandingCofG - 200, "CoG_L", "Green", true);
             }
 
             if ((ZeroCofG > AftCGLimit) || (ZeroCofG < FwdCGLimit))
@@ -345,6 +345,7 @@ namespace myFlightInfo
             }
 
             //Fuel Volume
+            rchtxtbx_cog_report.AppendText("\rFuel volume needs to be >" + MinFuelVol + "ℓ and <=" + MaxFuelVol + "ℓ");
             if (TakeoffFuelVolume <= MinFuelVol)
             {
                 rchtxtbx_cog_report.SelectionColor = Color.Red;
@@ -352,7 +353,6 @@ namespace myFlightInfo
             }
             else
             {
-                rchtxtbx_cog_report.AppendText("\rFuel volume needs to be between " + MinFuelVol + "ℓ and " + MaxFuelVol + "ℓ");
                 if (TakeoffFuelVolume <= MaxFuelVol)
                 {
                     rchtxtbx_cog_report.SelectionColor = Color.Green;
@@ -388,10 +388,17 @@ namespace myFlightInfo
 
         private void btn_cog_clear_report_Click(object sender, EventArgs e)
         {
+            ResetweightsAndBalances();
+        }
+
+        private void ResetweightsAndBalances()
+
+        {
             txtbx_cog_pilot_weight.Text = txtbx_cog_passenger_weight.Text = txtbx_cog_cabin_bag_weight.Text =
                 txtbx_cog_hold_bag_weight.Text = txtbx_cog_takeoff_fuel.Text = txtbx_cog_zero_fuel.Text = "0";
 
-            txtbx_cog_pilot_arm.Text = txtbx_cog_passenger_arm.Text = txtbx_cog_cabin_bag_arm.Text = settings.FwdMomentArm.ToString();
+            txtbx_cog_pilot_arm.Text = txtbx_cog_passenger_arm.Text = txtbx_cog_cabin_bag_arm.Text = 
+                settings.FwdMomentArm.ToString();
 
             txtbx_cog_hold_bag_arm.Text = txtbx_cog_fuel_arm.Text = settings.AftMomentArm.ToString();
 
@@ -427,6 +434,8 @@ namespace myFlightInfo
 
             //We now choose to draw a line, you can draw many other things like square circle etc.
             //All the parameters come from the UI
+            //The scale we are using is to divide the values by 3. This allows the values to be shown on the
+            //graphics screen.
 
             g.DrawLine(new Pen(Color.FromName(colour)),
                         (float)xStart / 3, (float)yStart,
