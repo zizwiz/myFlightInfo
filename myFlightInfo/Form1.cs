@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
 using CenteredMessagebox;
@@ -166,7 +167,7 @@ namespace myFlightInfo
         {
 
         }
-
+       
         private void cmbobx_airport_info_SelectedIndexChanged(object sender, EventArgs e)
         {
             if ((tabcnt_toplevel.SelectedTab == tab_utils) && (tabcnt_utils.SelectedTab == tab_altimeter))
@@ -174,22 +175,16 @@ namespace myFlightInfo
                 int year = dateTimePicker1.Value.Year;
                 int month = dateTimePicker1.Value.Month;
                 int day = dateTimePicker1.Value.Day;
-                double tsunrise, tsunset;
-
+                
                 string[] data = airport_data.GetAirportInfo(cmbobx_airport_info.Text);
+
+                double lat = double.Parse(data[4]);
+                double lng = double.Parse(data[6]);
 
                 lbl_to_pressure.Text = lbl_qnh_pressure.Text = "";
 
                 if (rdobtn_present.Checked)
                 {
-                    double lat = double.Parse(data[4]);
-                    double lng = double.Parse(data[6]);
-                    Sunriset.SunriseSunset(year, month, day, lat, lng, out tsunrise, out tsunset);
-                    TimeSpan sunriseTime = TimeSpan.FromHours(tsunrise);
-                    string sunriseTimeString = sunriseTime.ToString(@"hh\:mm\:ss");
-                    TimeSpan sunsetTime = TimeSpan.FromHours(tsunset);
-                    string sunsetTimeString = sunriseTime.ToString(@"hh\:mm\:ss");
-
                     lbl_p_airport_name.Text = "Airport Name = " + data[2];
                     lbl_p_icao_code.Text = "ICAO Code = " + data[1];
                     lbl_p_latitude_deg.Text = "Latitude degrees = " + data[3];
@@ -197,20 +192,13 @@ namespace myFlightInfo
                     lbl_p_longitude_deg.Text = "Longitude degrees = " + data[5];
                     lbl_p_longitude_dec.Text = "Logitude decimal = " + data[6];
                     lbl_p_elevation_m.Text = "Elevation = " + data[7] + "m";
-                    lbl_p_sunrise.Text = "Sunrise = " + sunriseTimeString;
-                    lbl_p_sunset.Text = "Sunset = " + sunsetTimeString;
                     txtbx_present_altitude.Text = data[8];
+
+                    lbl_p_sunrise.Text = "Sunrise = " + GetSunriset(lng, lat, "sunrise");
+                    lbl_p_sunset.Text = "Sunset = " + GetSunriset(lng, lat, "sunset");
                 }
                 else
                 {
-                    double lat = double.Parse(data[4]);
-                    double lng = double.Parse(data[6]);
-                    Sunriset.SunriseSunset(year, month, day, lat, lng, out tsunrise, out tsunset);
-                    TimeSpan sunriseTime = TimeSpan.FromHours(tsunrise);
-                    string sunriseTimeString = sunriseTime.ToString(@"hh\:mm\:ss");
-                    TimeSpan sunsetTime = TimeSpan.FromHours(tsunset);
-                    string sunsetTimeString = sunriseTime.ToString(@"hh\:mm\:ss");
-
                     lbl_d_airport_name.Text = "Airport Name = " + data[2];
                     lbl_d_icao_code.Text = "ICAO Code = " + data[1];
                     lbl_d_latitude_deg.Text = "Latitude degrees = " + data[3];
@@ -218,9 +206,10 @@ namespace myFlightInfo
                     lbl_d_longitude_deg.Text = "Longitude degrees = " + data[5];
                     lbl_d_longitude_dec.Text = "Logitude decimal = " + data[6];
                     lbl_d_elevation_m.Text = "Elevation = " + data[7] + "m";
-                    lbl_d_sunrise.Text = "Sunrise = " + sunriseTimeString;
-                    lbl_d_sunset.Text = "Sunset = " + sunsetTimeString;
                     txtbx_to_altitude.Text = data[8];
+
+                    lbl_d_sunrise.Text = "Sunrise = " + GetSunriset(lng, lat, "sunrise");
+                    lbl_d_sunset.Text = "Sunset = " + GetSunriset(lng, lat, "sunset");
                 }
             }
             else if ((tabcnt_toplevel.SelectedTab == tab_utils) && (tabcnt_utils.SelectedTab == tab_browser))
@@ -228,6 +217,28 @@ namespace myFlightInfo
                 string URI = "https://metar-taf.com/" + airport_data.GetAirportInfo(cmbobx_airport_info.Text)[1];
                 webView_browser.CoreWebView2.Navigate(URI);
                 txtbx_navigate_to_url.Text = URI;
+            }
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            if (((lbl_p_airport_name.Text != "")&&(lbl_p_airport_name.Text != "..")) || ((lbl_d_airport_name.Text != "..") && (lbl_d_airport_name.Text != "")))
+            {
+                if ((lbl_p_latitude_dec.Text != "") && (lbl_p_latitude_dec.Text != ".."))
+                {
+                    double lng = double.Parse(lbl_p_longitude_dec.Text.Split(' ').Last());
+                    double lat = double.Parse(lbl_p_latitude_dec.Text.Split(' ').Last());
+                    lbl_p_sunrise.Text = "Sunrise = " + GetSunriset(lng, lat, "sunrise");
+                    lbl_p_sunset.Text = "Sunset = " + GetSunriset(lng, lat, "sunset");
+                }
+                
+                if ((lbl_d_latitude_dec.Text != "") && (lbl_d_latitude_dec.Text != ".."))
+                {
+                    double lng = double.Parse(lbl_d_longitude_dec.Text.Split(' ').Last());
+                    double lat = double.Parse(lbl_d_latitude_dec.Text.Split(' ').Last());
+                    lbl_d_sunrise.Text = "Sunrise = " + GetSunriset(lng, lat, "sunrise");
+                    lbl_d_sunset.Text = "Sunset = " + GetSunriset(lng, lat, "sunset");
+                }
             }
         }
 
@@ -245,7 +256,7 @@ namespace myFlightInfo
            {
                result = TimeSpan.FromHours(tsunrise).ToString(@"hh\:mm\:ss");
            }
-           else
+           else //sunset
            {
                result = TimeSpan.FromHours(tsunset).ToString(@"hh\:mm\:ss");
            }
@@ -274,7 +285,6 @@ namespace myFlightInfo
                 cmbobx_airport_info.Visible = true;
                 grpbx_browser_navigation.Visible = true;
             }
-
         }
 
         private void tabcnt_utils_SelectedIndexChanged(object sender, EventArgs e)
@@ -437,9 +447,6 @@ namespace myFlightInfo
             return double.TryParse(myTextBox.Text, out var myValue);
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-           // string GetSunriset(double lng, double lat, string type)
-        }
+        
     }
 }
