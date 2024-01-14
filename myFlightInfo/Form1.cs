@@ -99,6 +99,7 @@ namespace myFlightInfo
 
             cmbobx_airport_info.SelectedIndex = 0;
             cmbobx_gransden_lodge.SelectedIndex = 0;
+            //tabcnt_weather.TabPages.Remove(tab_gransden_lodge);
         }
 
         private void btn_close_Click(object sender, EventArgs e)
@@ -112,6 +113,15 @@ namespace myFlightInfo
             {
                 webView_notams.CoreWebView2.Navigate("https://www.notaminfo.com/ukmap?destination=node%2F39");
             }
+            else if (tabcnt_toplevel.SelectedTab == tab_metar)
+            {
+                SetMatarPages();
+            }
+            else if (tabcnt_toplevel.SelectedTab == tab_weather)
+            {
+                SetWeatherPages();
+            }
+
             else if ((tabcnt_toplevel.SelectedTab == tab_utils) && (tabcnt_utils.SelectedTab == tab_altimeter))
             {
                 txtbx_present_pressure.Text = txtbx_present_altitude.Text = txtbx_to_altitude.Text =
@@ -120,7 +130,7 @@ namespace myFlightInfo
                             lbl_p_elevation_m.Text = lbl_d_airport_name.Text = lbl_d_icao_code.Text =
                                 lbl_d_latitude_deg.Text = lbl_d_latitude_dec.Text = lbl_d_longitude_deg.Text =
                                     lbl_d_longitude_dec.Text = lbl_d_elevation_m.Text =
-                                        lbl_to_pressure.Text = lbl_qnh_pressure.Text = "";
+                                        lbl_to_pressure.Text = lbl_qnh_pressure.Text = lbl_qnh_pressure2.Text = "";
             }
             else if ((tabcnt_toplevel.SelectedTab == tab_utils) && (tabcnt_utils.SelectedTab == tab_browser))
             {
@@ -155,7 +165,7 @@ namespace myFlightInfo
             if ((firstValue != "F") && (secondValue != "F"))
             {
                 lbl_to_pressure.Text = firstValue;
-                lbl_qnh_pressure.Text = secondValue;
+                lbl_qnh_pressure.Text = lbl_qnh_pressure2.Text = "QNH = " +  secondValue + " mb";
             }
             else
             {
@@ -165,13 +175,43 @@ namespace myFlightInfo
 
         private void cmbobx_gransden_lodge_SelectedIndexChanged(object sender, EventArgs e)
         {
+            btn_gransden_lodge_photo_update.Visible = false;
 
+            if (cmbobx_gransden_lodge.Text == "General Weather")
+            {
+                webView_gransden_lodge_weather.CoreWebView2.Navigate(
+                    "https://members.camgliding.uk/members/GRLweather.aspx");
+            }
+            else if (cmbobx_gransden_lodge.Text == "Navigation Weather")
+            {
+                webView_gransden_lodge_weather.CoreWebView2.Navigate(
+                    "https://members.camgliding.uk/xcplanning/weather.aspx");
+            }
+            else if (cmbobx_gransden_lodge.Text == "Radar Weather")
+            {
+                webView_gransden_lodge_weather.CoreWebView2.Navigate(
+                    "https://members.camgliding.uk/tracking/");
+            }
+            else if (cmbobx_gransden_lodge.Text == "South Camera")
+            {
+                btn_gransden_lodge_photo_update.Visible = true;
+                webView_gransden_lodge_weather.CoreWebView2.Navigate(
+                    "https://members.camgliding.uk/volatile/camsouth.jpg");
+            }
+            else if (cmbobx_gransden_lodge.Text == "West Camera")
+            {
+                btn_gransden_lodge_photo_update.Visible = true;
+                webView_gransden_lodge_weather.CoreWebView2.Navigate(
+                    "https://members.camgliding.uk/volatile/camwest.jpg");
+            }
         }
        
         private void cmbobx_airport_info_SelectedIndexChanged(object sender, EventArgs e)
         {
             if ((tabcnt_toplevel.SelectedTab == tab_utils) && (tabcnt_utils.SelectedTab == tab_altimeter))
             {
+                grpbx_towns.Visible = false;
+
                 int year = dateTimePicker1.Value.Year;
                 int month = dateTimePicker1.Value.Month;
                 int day = dateTimePicker1.Value.Day;
@@ -181,7 +221,7 @@ namespace myFlightInfo
                 double lat = double.Parse(data[4]);
                 double lng = double.Parse(data[6]);
 
-                lbl_to_pressure.Text = lbl_qnh_pressure.Text = "";
+                lbl_to_pressure.Text = lbl_qnh_pressure.Text = lbl_qnh_pressure2.Text = "";
 
                 if (rdobtn_present.Checked)
                 {
@@ -193,6 +233,7 @@ namespace myFlightInfo
                     lbl_p_longitude_dec.Text = "Logitude decimal = " + data[6];
                     lbl_p_elevation_m.Text = "Elevation = " + data[7] + "m";
                     txtbx_present_altitude.Text = data[8];
+                    txtbx_present_pressure.Text = "";
 
                     lbl_p_sunrise.Text = "Sunrise = " + GetSunriset(lng, lat, "sunrise");
                     lbl_p_sunset.Text = "Sunset = " + GetSunriset(lng, lat, "sunset");
@@ -214,6 +255,8 @@ namespace myFlightInfo
             }
             else if ((tabcnt_toplevel.SelectedTab == tab_utils) && (tabcnt_utils.SelectedTab == tab_browser))
             {
+                grpbx_towns.Visible = false;
+
                 string URI = "https://metar-taf.com/" + airport_data.GetAirportInfo(cmbobx_airport_info.Text)[1];
                 webView_browser.CoreWebView2.Navigate(URI);
                 txtbx_navigate_to_url.Text = URI;
@@ -285,6 +328,12 @@ namespace myFlightInfo
                 cmbobx_airport_info.Visible = true;
                 grpbx_browser_navigation.Visible = true;
             }
+            else if (tabcnt_toplevel.SelectedTab == tab_metar)
+            {
+                grpbx_towns.Visible = false;
+            }
+
+          
         }
 
         private void tabcnt_utils_SelectedIndexChanged(object sender, EventArgs e)
@@ -296,7 +345,7 @@ namespace myFlightInfo
 
             if (tabcnt_utils.SelectedTab == tab_altimeter)
             {
-                cmbobx_airport_info.SelectedIndex = 0;
+                //cmbobx_airport_info.SelectedIndex = 0;
                 cmbobx_airport_info.Visible = true;
                 grpbx_altimeter.Visible = true;
                 grpbx_browser_navigation.Visible = false;
@@ -399,7 +448,12 @@ namespace myFlightInfo
             }
             else
             {
-                tabcnt_weather.TabPages.Insert(4, tab_gransden_lodge);
+                if (tab_gransden_lodge.Visible)
+                {
+                    tabcnt_weather.TabPages.Insert(4, tab_gransden_lodge);
+                    webView_gransden_lodge_weather.CoreWebView2.Navigate("https://members.camgliding.uk/members/GRLweather.aspx");
+                }
+
                 webView_weather_bbc.CoreWebView2.Navigate("https://www.bbc.co.uk/weather/2653941"); //Gamlinggay = 2648899 Gt Gransden = 2648095
                 webView_weather_met.CoreWebView2.Navigate("https://metoffice.gov.uk/weather/forecast/u1214b469"); //waresley = gcrbu1fn7
                 webView_synoptic.CoreWebView2.Navigate("https://metoffice.gov.uk/weather/maps-and-charts/surface-pressure");
@@ -447,6 +501,15 @@ namespace myFlightInfo
             return double.TryParse(myTextBox.Text, out var myValue);
         }
 
-        
+        private void tabcnt_weather_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbobx_gransden_lodge.Visible = false;
+
+            if ((tabcnt_toplevel.SelectedTab == tab_weather) && (tabcnt_weather.SelectedTab == tab_gransden_lodge))
+            {
+                cmbobx_gransden_lodge.Visible = true;
+                cmbobx_gransden_lodge.SelectedIndex = 0;
+            }
+        }
     }
 }

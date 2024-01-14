@@ -126,6 +126,7 @@
     <Content Include="common_data\arm64_WebView2Loader.dll" />
     <Content Include="common_data\Microsoft.Web.WebView2.Core.dll" />
     <Content Include="common_data\Microsoft.Web.WebView2.WinForms.dll" />
+    <Content Include="compliance_data\aircraft_data.xml" />
     <Content Include="CrystalBall.ico" />
     <Content Include="graphics\c42_sideview.jpg" />
   </ItemGroup>
