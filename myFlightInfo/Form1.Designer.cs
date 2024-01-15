@@ -318,6 +318,8 @@ namespace myFlightInfo
             this.panel50 = new System.Windows.Forms.Panel();
             this.label50 = new System.Windows.Forms.Label();
             this.panel51 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_settings_delete_aircraft = new System.Windows.Forms.Button();
             this.btn_settings_add_aircraft = new System.Windows.Forms.Button();
             this.panel52 = new System.Windows.Forms.Panel();
             this.txtbx_settings_mtow = new System.Windows.Forms.TextBox();
@@ -341,7 +343,8 @@ namespace myFlightInfo
             this.panel62 = new System.Windows.Forms.Panel();
             this.txtbx_settings_min_fuel_vol = new System.Windows.Forms.TextBox();
             this.panel63 = new System.Windows.Forms.Panel();
-            this.btn_settings_delete_aircraft = new System.Windows.Forms.Button();
+            this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_settings_update_aircraft = new System.Windows.Forms.Button();
             this.panel64 = new System.Windows.Forms.Panel();
             this.label41 = new System.Windows.Forms.Label();
             this.panel65 = new System.Windows.Forms.Panel();
@@ -541,6 +544,7 @@ namespace myFlightInfo
             this.panel49.SuspendLayout();
             this.panel50.SuspendLayout();
             this.panel51.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
             this.panel52.SuspendLayout();
             this.panel53.SuspendLayout();
             this.panel54.SuspendLayout();
@@ -552,6 +556,7 @@ namespace myFlightInfo
             this.panel61.SuspendLayout();
             this.panel62.SuspendLayout();
             this.panel63.SuspendLayout();
+            this.tableLayoutPanel15.SuspendLayout();
             this.panel64.SuspendLayout();
             this.panel65.SuspendLayout();
             this.panel66.SuspendLayout();
@@ -1121,6 +1126,7 @@ namespace myFlightInfo
             this.btn_gransden_lodge_photo_update.TabIndex = 1;
             this.btn_gransden_lodge_photo_update.Text = "Update Picture";
             this.btn_gransden_lodge_photo_update.UseVisualStyleBackColor = true;
+            this.btn_gransden_lodge_photo_update.Click += new System.EventHandler(this.btn_gransden_lodge_photo_update_Click);
             // 
             // panel3
             // 
@@ -3810,7 +3816,7 @@ namespace myFlightInfo
             // label54
             // 
             this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(5, 11);
+            this.label54.Location = new System.Drawing.Point(193, 10);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(119, 20);
             this.label54.TabIndex = 1;
@@ -4022,19 +4028,44 @@ namespace myFlightInfo
             // 
             // panel51
             // 
-            this.panel51.Controls.Add(this.btn_settings_add_aircraft);
+            this.panel51.Controls.Add(this.tableLayoutPanel6);
             this.panel51.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel51.Location = new System.Drawing.Point(29, 640);
             this.panel51.Name = "panel51";
             this.panel51.Size = new System.Drawing.Size(315, 43);
             this.panel51.TabIndex = 22;
             // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 2;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Controls.Add(this.btn_settings_delete_aircraft, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.btn_settings_add_aircraft, 0, 0);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(315, 43);
+            this.tableLayoutPanel6.TabIndex = 0;
+            // 
+            // btn_settings_delete_aircraft
+            // 
+            this.btn_settings_delete_aircraft.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_settings_delete_aircraft.Location = new System.Drawing.Point(160, 3);
+            this.btn_settings_delete_aircraft.Name = "btn_settings_delete_aircraft";
+            this.btn_settings_delete_aircraft.Size = new System.Drawing.Size(152, 37);
+            this.btn_settings_delete_aircraft.TabIndex = 1;
+            this.btn_settings_delete_aircraft.Text = "Delete Aircraft";
+            this.btn_settings_delete_aircraft.UseVisualStyleBackColor = true;
+            // 
             // btn_settings_add_aircraft
             // 
             this.btn_settings_add_aircraft.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_settings_add_aircraft.Location = new System.Drawing.Point(0, 0);
+            this.btn_settings_add_aircraft.Location = new System.Drawing.Point(3, 3);
             this.btn_settings_add_aircraft.Name = "btn_settings_add_aircraft";
-            this.btn_settings_add_aircraft.Size = new System.Drawing.Size(315, 43);
+            this.btn_settings_add_aircraft.Size = new System.Drawing.Size(151, 37);
             this.btn_settings_add_aircraft.TabIndex = 1;
             this.btn_settings_add_aircraft.Text = "Add Aircraft";
             this.btn_settings_add_aircraft.UseVisualStyleBackColor = true;
@@ -4209,22 +4240,36 @@ namespace myFlightInfo
             // 
             // panel63
             // 
-            this.panel63.Controls.Add(this.btn_settings_delete_aircraft);
+            this.panel63.Controls.Add(this.tableLayoutPanel15);
             this.panel63.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel63.Location = new System.Drawing.Point(360, 640);
             this.panel63.Name = "panel63";
             this.panel63.Size = new System.Drawing.Size(315, 43);
             this.panel63.TabIndex = 34;
             // 
-            // btn_settings_delete_aircraft
+            // tableLayoutPanel15
             // 
-            this.btn_settings_delete_aircraft.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_settings_delete_aircraft.Location = new System.Drawing.Point(0, 0);
-            this.btn_settings_delete_aircraft.Name = "btn_settings_delete_aircraft";
-            this.btn_settings_delete_aircraft.Size = new System.Drawing.Size(315, 43);
-            this.btn_settings_delete_aircraft.TabIndex = 1;
-            this.btn_settings_delete_aircraft.Text = "Delete Aircraft";
-            this.btn_settings_delete_aircraft.UseVisualStyleBackColor = true;
+            this.tableLayoutPanel15.ColumnCount = 2;
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel15.Controls.Add(this.btn_settings_update_aircraft, 0, 0);
+            this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel15.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel15.Name = "tableLayoutPanel15";
+            this.tableLayoutPanel15.RowCount = 1;
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(315, 43);
+            this.tableLayoutPanel15.TabIndex = 0;
+            // 
+            // btn_settings_update_aircraft
+            // 
+            this.btn_settings_update_aircraft.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_settings_update_aircraft.Location = new System.Drawing.Point(3, 3);
+            this.btn_settings_update_aircraft.Name = "btn_settings_update_aircraft";
+            this.btn_settings_update_aircraft.Size = new System.Drawing.Size(151, 37);
+            this.btn_settings_update_aircraft.TabIndex = 0;
+            this.btn_settings_update_aircraft.Text = "Update Aircraft";
+            this.btn_settings_update_aircraft.UseVisualStyleBackColor = true;
             // 
             // panel64
             // 
@@ -4610,6 +4655,7 @@ namespace myFlightInfo
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "myFlightInfo";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -4837,6 +4883,7 @@ namespace myFlightInfo
             this.panel50.ResumeLayout(false);
             this.panel50.PerformLayout();
             this.panel51.ResumeLayout(false);
+            this.tableLayoutPanel6.ResumeLayout(false);
             this.panel52.ResumeLayout(false);
             this.panel52.PerformLayout();
             this.panel53.ResumeLayout(false);
@@ -4858,6 +4905,7 @@ namespace myFlightInfo
             this.panel62.ResumeLayout(false);
             this.panel62.PerformLayout();
             this.panel63.ResumeLayout(false);
+            this.tableLayoutPanel15.ResumeLayout(false);
             this.panel64.ResumeLayout(false);
             this.panel64.PerformLayout();
             this.panel65.ResumeLayout(false);
@@ -5254,6 +5302,9 @@ namespace myFlightInfo
         private System.Windows.Forms.Label lbl_qnh_pressure2;
         private System.Windows.Forms.Label lbl_qnh_pressure;
         private System.Windows.Forms.Button btn_calculate_altimiter;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
+        private System.Windows.Forms.Button btn_settings_update_aircraft;
     }
 }
 

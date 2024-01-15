@@ -90,7 +90,9 @@ namespace myFlightInfo.school
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "school";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Which School?";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.school_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

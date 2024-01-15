@@ -21,5 +21,10 @@ namespace myFlightInfo.school
 
             Close();
         }
+
+        private void school_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0); //Do not carry on starting the main app
+        }
     }
 }

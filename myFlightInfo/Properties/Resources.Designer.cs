@@ -124,6 +124,28 @@ namespace myFlightInfo.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///&lt;compliance_data&gt;
+        ///	&lt;aircraft_info&gt;
+        ///		&lt;aircraft_name&gt;Default&lt;/aircraft_name&gt;
+        ///		&lt;MaxTakeOffWeight&gt;450&lt;/MaxTakeOffWeight&gt;
+        ///		&lt;EmptyWeight&gt;268&lt;/EmptyWeight&gt;
+        ///		&lt;MinPilotWeight&gt;55&lt;/MinPilotWeight&gt;
+        ///		&lt;MaxWeightPerCrewMember&gt;120&lt;/MaxWeightPerCrewMember&gt;
+        ///		&lt;MaxCockpitWeight&gt;172&lt;/MaxCockpitWeight&gt;
+        ///		&lt;MinCockpitWeight&gt;55&lt;/MinCockpitWeight&gt;
+        ///		&lt;MaxWeightPerSeat&gt;120&lt;/MaxWeightPerSeat&gt;
+        ///		&lt;MaxHoldBaggageWeight&gt;10&lt;/MaxHoldBaggageWeight&gt;
+        ///		&lt;MaxFuelVol&gt;65&lt;/MaxFuelVol&gt;
+        ///		&lt;Min [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string compliance_data {
+            get {
+                return ResourceManager.GetString("compliance_data", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
         internal static byte[] Microsoft_Web_WebView2_Core {

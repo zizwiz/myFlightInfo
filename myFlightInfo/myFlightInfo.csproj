@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Altimeter\Altimeter.cs" />
     <Compile Include="common_data\airport_data.cs" />
+    <Compile Include="compliance_data\compliance_data.cs" />
     <Compile Include="crosswind\Crosswind.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -70,7 +71,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="metar\SetMetarTabs.cs" />
     <Compile Include="navigation\Navigation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -78,6 +78,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="sunrise_sunset\Sunriset.cs" />
+    <Compile Include="TabChanges.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="WeightsBalance.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,11 +129,13 @@
     <Content Include="common_data\arm64_WebView2Loader.dll" />
     <Content Include="common_data\Microsoft.Web.WebView2.Core.dll" />
     <Content Include="common_data\Microsoft.Web.WebView2.WinForms.dll" />
-    <Content Include="compliance_data\aircraft_data.xml" />
+    <Content Include="compliance_data\compliance_data.xml" />
     <Content Include="CrystalBall.ico" />
     <Content Include="graphics\c42_sideview.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="metar\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Web.WebView2.1.0.2210.55\build\Microsoft.Web.WebView2.targets" Condition="Exists('..\packages\Microsoft.Web.WebView2.1.0.2210.55\build\Microsoft.Web.WebView2.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<compliance_data>
+	<aircraft_info>
+		<aircraft_name>Default</aircraft_name>
+		<MaxTakeOffWeight>450</MaxTakeOffWeight>
+		<EmptyWeight>268</EmptyWeight>
+		<MinPilotWeight>55</MinPilotWeight>
+		<MaxWeightPerCrewMember>120</MaxWeightPerCrewMember>
+		<MaxCockpitWeight>172</MaxCockpitWeight>
+		<MinCockpitWeight>55</MinCockpitWeight>
+		<MaxWeightPerSeat>120</MaxWeightPerSeat>
+		<MaxHoldBaggageWeight>10</MaxHoldBaggageWeight>
+		<MaxFuelVol>65</MaxFuelVol>
+		<MinFuelVol>10</MinFuelVol>
+		<Vne>121</Vne>
+		<Va>82</Va>
+		<Vs0>32</Vs0>
+		<Vs1>41</Vs1>
+		<Vfe>63</Vfe>
+		<AftMomentArm>950</AftMomentArm>
+		<FwdMomentArm>400</FwdMomentArm>
+		<AftCGLimit>560</AftCGLimit>
+		<FwdCGLimit>350</FwdCGLimit>
+	</aircraft_info>
+	<aircraft_info>
+		<aircraft_name>G-CECC</aircraft_name>
+		<MaxTakeOffWeight>472.5</MaxTakeOffWeight>
+		<EmptyWeight>274.2</EmptyWeight>
+		<MinPilotWeight>55</MinPilotWeight>
+		<MaxWeightPerCrewMember>120</MaxWeightPerCrewMember>
+		<MaxCockpitWeight>172</MaxCockpitWeight>
+		<MinCockpitWeight>55</MinCockpitWeight>
+		<MaxWeightPerSeat>120</MaxWeightPerSeat>
+		<MaxHoldBaggageWeight>10</MaxHoldBaggageWeight>
+		<MaxFuelVol>65</MaxFuelVol>
+		<MinFuelVol>10</MinFuelVol>
+		<Vne>121</Vne>
+		<Va>82</Va>
+		<Vs0>32</Vs0>
+		<Vs1>41</Vs1>
+		<Vfe>63</Vfe>
+		<AftMomentArm>950</AftMomentArm>
+		<FwdMomentArm>400</FwdMomentArm>
+		<AftCGLimit>560</AftCGLimit>
+		<FwdCGLimit>350</FwdCGLimit>
+	</aircraft_info>
+</compliance_data>
