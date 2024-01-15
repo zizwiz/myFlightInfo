@@ -291,7 +291,7 @@ namespace myFlightInfo
             this.panel41 = new System.Windows.Forms.Panel();
             this.label40 = new System.Windows.Forms.Label();
             this.panel38 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbobx_aircraftName = new System.Windows.Forms.ComboBox();
             this.panel26 = new System.Windows.Forms.Panel();
             this.label54 = new System.Windows.Forms.Label();
             this.panel45 = new System.Windows.Forms.Panel();
@@ -3788,21 +3788,21 @@ namespace myFlightInfo
             // 
             // panel38
             // 
-            this.panel38.Controls.Add(this.comboBox1);
+            this.panel38.Controls.Add(this.cmbobx_aircraftName);
             this.panel38.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel38.Location = new System.Drawing.Point(360, 3);
             this.panel38.Name = "panel38";
             this.panel38.Size = new System.Drawing.Size(315, 43);
             this.panel38.TabIndex = 3;
             // 
-            // comboBox1
+            // cmbobx_aircraftName
             // 
-            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(0, 0);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(315, 28);
-            this.comboBox1.TabIndex = 0;
+            this.cmbobx_aircraftName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cmbobx_aircraftName.FormattingEnabled = true;
+            this.cmbobx_aircraftName.Location = new System.Drawing.Point(0, 0);
+            this.cmbobx_aircraftName.Name = "cmbobx_aircraftName";
+            this.cmbobx_aircraftName.Size = new System.Drawing.Size(315, 28);
+            this.cmbobx_aircraftName.TabIndex = 0;
             // 
             // panel26
             // 
@@ -5295,7 +5295,7 @@ namespace myFlightInfo
         private System.Windows.Forms.Label lbl_p_sunset;
         private System.Windows.Forms.Label lbl_p_sunrise;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbobx_aircraftName;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Button btn_settings_add_aircraft;
         private System.Windows.Forms.Button btn_settings_delete_aircraft;

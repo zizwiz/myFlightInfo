@@ -3,6 +3,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
+using System.Xml;
 using CenteredMessagebox;
 using myFlightInfo.Altimeter;
 using myFlightInfo.common_data;
@@ -57,8 +58,6 @@ namespace myFlightInfo
                 f1.ShowDialog();
                 GC.Collect();
             }
-
-
 
             GetSettings();
 
@@ -115,7 +114,9 @@ namespace myFlightInfo
 
             cmbobx_airport_info.SelectedIndex = 0;
             cmbobx_gransden_lodge.SelectedIndex = 0;
-            //tabcnt_weather.TabPages.Remove(tab_gransden_lodge);
+            
+            //do this last to make sure all else is working.
+            PopulateComplianceDataCmboBx();
         }
 
         private void btn_close_Click(object sender, EventArgs e)
@@ -510,6 +511,24 @@ namespace myFlightInfo
                 webView_gransden_lodge_weather.CoreWebView2.Navigate(
                     "https://members.camgliding.uk/volatile/camwest.jpg");
             }
+        }
+
+        /// <summary>
+        /// Populate the combobox in the compliance data from the xml file.
+        /// </summary>
+        private void PopulateComplianceDataCmboBx()
+        {
+            XmlDocument doc = new XmlDocument();
+            doc.Load("compliance_data.xml");
+            XmlNode root = doc.DocumentElement;
+            XmlNodeList nodeList = root.SelectNodes("aircraft_info");
+            
+            foreach (XmlNode aircraft in nodeList)
+            {
+                cmbobx_aircraftName.Items.Add(aircraft["aircraft_name"].InnerText);
+            }
+
+            cmbobx_aircraftName.SelectedIndex = 0;
         }
     }
 }

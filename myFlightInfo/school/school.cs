@@ -7,6 +7,7 @@ namespace myFlightInfo.school
     public partial class school : Form
     {
         private Settings settings = Settings.Default;
+        private bool flag = true;
 
         public school()
         {
@@ -19,12 +20,17 @@ namespace myFlightInfo.school
 
             settings.Save();
 
+            flag = false;
+
             Close();
         }
 
         private void school_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Environment.Exit(0); //Do not carry on starting the main app
+            if (flag)
+            {
+                Environment.Exit(0); //Do not carry on starting the main app
+            }
         }
     }
 }
