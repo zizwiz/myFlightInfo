@@ -5,6 +5,7 @@ using System.Reflection;
 using System.Windows.Forms;
 using System.Xml;
 using CenteredMessagebox;
+using Microsoft.Web.WebView2.Core.Raw;
 using myFlightInfo.Altimeter;
 using myFlightInfo.common_data;
 using myFlightInfo.crosswind;
@@ -22,9 +23,8 @@ namespace myFlightInfo
         public Form1()
         {
             //write the dlls before initialising.
-            File.WriteAllBytes("Microsoft.Web.WebView2.Core.dll", Properties.Resources.Microsoft_Web_WebView2_Core);
-            File.WriteAllBytes("Microsoft.Web.WebView2.WinForms.dll",
-                Properties.Resources.Microsoft_Web_WebView2_WinForms);
+            File.WriteAllBytes("Microsoft.Web.WebView2.Core.dll", Resources.Microsoft_Web_WebView2_Core);
+            File.WriteAllBytes("Microsoft.Web.WebView2.WinForms.dll", Resources.Microsoft_Web_WebView2_WinForms);
 
             string arcitectureProcessArchitecture =
                 System.Runtime.InteropServices.RuntimeInformation.ProcessArchitecture.ToString();
@@ -32,17 +32,17 @@ namespace myFlightInfo
             if (arcitectureProcessArchitecture == "X64")
             {
                 //64bit 
-                File.WriteAllBytes("WebView2Loader.dll", Properties.Resources._64_WebView2Loader);
+                File.WriteAllBytes("WebView2Loader.dll", Resources._64_WebView2Loader);
             }
             else if (arcitectureProcessArchitecture == "X86")
             {
                 // 32bit
-                File.WriteAllBytes("WebView2Loader.dll", Properties.Resources._32_WebView2Loader);
+                File.WriteAllBytes("WebView2Loader.dll", Resources._32_WebView2Loader);
             }
             else if (arcitectureProcessArchitecture == "Arm64")
             {
                 //ARM64bit 
-                File.WriteAllBytes("WebView2Loader.dll", Properties.Resources.arm64_WebView2Loader);
+                File.WriteAllBytes("WebView2Loader.dll", Resources.arm64_WebView2Loader);
             }
 
             InitializeComponent();
@@ -252,7 +252,7 @@ namespace myFlightInfo
                     lbl_p_latitude_deg.Text = "Latitude degrees = " + data[3];
                     lbl_p_latitude_dec.Text = "Latitude decimal = " + data[4];
                     lbl_p_longitude_deg.Text = "Longitude degrees = " + data[5];
-                    lbl_p_longitude_dec.Text = "Logitude decimal = " + data[6];
+                    lbl_p_longitude_dec.Text = "Longitude decimal = " + data[6];
                     lbl_p_elevation_m.Text = "Elevation = " + data[7] + "m";
                     txtbx_present_altitude.Text = data[8];
                     txtbx_present_pressure.Text = "";
@@ -267,7 +267,7 @@ namespace myFlightInfo
                     lbl_d_latitude_deg.Text = "Latitude degrees = " + data[3];
                     lbl_d_latitude_dec.Text = "Latitude decimal = " + data[4];
                     lbl_d_longitude_deg.Text = "Longitude degrees = " + data[5];
-                    lbl_d_longitude_dec.Text = "Logitude decimal = " + data[6];
+                    lbl_d_longitude_dec.Text = "Longitude decimal = " + data[6];
                     lbl_d_elevation_m.Text = "Elevation = " + data[7] + "m";
                     txtbx_to_altitude.Text = data[8];
 
@@ -385,11 +385,12 @@ namespace myFlightInfo
 
         private void SetMatarPages()
         {
+            tabCnt_airfields.TabPages.Clear(); //Remove all pages associated with tab control airfields.
+
             //Show only pages for the school you are at.
             if (settings.school == "Rochester")
             {
                 grpbx_towns.Visible = false;
-                tabCnt_airfields.TabPages.Remove(tab_lt_gransden);
                 tabCnt_airfields.TabPages.Insert(0, tab_rochester);
                 webView_egcc.CoreWebView2.Navigate("https://metar-taf.com/EGCC");
                 webView_egss2.CoreWebView2.Navigate("https://metar-taf.com/EGSS");
@@ -400,7 +401,6 @@ namespace myFlightInfo
             else
             {
                 grpbx_towns.Visible = true;
-                tabCnt_airfields.TabPages.Remove(tab_rochester);
                 tabCnt_airfields.TabPages.Insert(0, tab_lt_gransden);
                 webView_egmj.CoreWebView2.Navigate("https://metar-taf.com/EGMJ");
                 webView_egss.CoreWebView2.Navigate("https://metar-taf.com/EGSS");
@@ -488,17 +488,6 @@ namespace myFlightInfo
             }
         }
 
-        private void ShowError(string myError)
-        {
-            MsgBox.Show("Check as value in " + myError + " is not correct", "Error", MessageBoxButtons.OK,
-                MessageBoxIcon.Error);
-        }
-
-        private bool CheckDouble(TextBox myTextBox)
-        {
-            return double.TryParse(myTextBox.Text, out var myValue);
-        }
-
         private void btn_gransden_lodge_photo_update_Click(object sender, EventArgs e)
         {
             if (cmbobx_gransden_lodge.Text == "South Camera")
@@ -529,6 +518,15 @@ namespace myFlightInfo
             }
 
             cmbobx_aircraftName.SelectedIndex = 0;
+        }
+
+        private void btn_settings_add_aircraft_Click(object sender, EventArgs e)
+        {
+            if (!ComplianceData.AddAircraftComplianceData("testAircraft"))
+            {
+                verification.ShowError("data");
+            }
+
         }
     }
 }

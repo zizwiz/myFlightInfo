@@ -66,6 +66,7 @@ namespace myFlightInfo
 
             if (tabcnt_toplevel.SelectedTab == tab_utils)
             {
+                tabcnt_weather.SelectedTab = tab_met_office;
                 tabcnt_utils.SelectedTab = tab_browser;
                 cmbobx_airport_info.SelectedIndex = 0;
                 cmbobx_airport_info.Visible = true;
@@ -99,7 +100,7 @@ namespace myFlightInfo
         {
             if (settings.school != "Rochester") grpbx_towns.Visible = true;
             btn_school.Visible = true;
-            cmbobx_gransden_lodge.Visible = false;
+            cmbobx_gransden_lodge.Visible = true;
 
             if (tabcnt_weather.SelectedTab == tab_gransden_lodge)
             {

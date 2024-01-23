@@ -1,4 +1,5 @@
 ﻿using System;
+using myFlightInfo.common_data;
 
 
 namespace myFlightInfo
@@ -17,194 +18,193 @@ namespace myFlightInfo
 
         private void SaveSettings()
         {
-            if (CheckDouble(txtbx_settings_mtow))
+            if (verification.CheckDouble(txtbx_settings_mtow))
             {
                 settings.MaxTakeOffWeight = double.Parse(txtbx_settings_mtow.Text);
             }
             else
             {
-                ShowError("Max Take Off Weight");
+                verification.ShowError("Max Take Off Weight");
                 return;
             }
 
-            if (CheckDouble(txtbx_settings_empty_weight))
+            if (verification.CheckDouble(txtbx_settings_empty_weight))
             {
                 settings.EmptyWeight = double.Parse(txtbx_settings_empty_weight.Text);
             }
             else
             {
-                ShowError("Empty Weight");
+                verification.ShowError("Empty Weight");
                 return;
             }
 
-            if (CheckDouble(txtbx_settings_min_pilot_weight))
+            if (verification.CheckDouble(txtbx_settings_min_pilot_weight))
             {
                 settings.MinPilotWeight = double.Parse(txtbx_settings_min_pilot_weight.Text);
             }
             else
             {
-                ShowError("Min Pilot Weight");
+                verification.ShowError("Min Pilot Weight");
                 return;
             }
 
-            if (CheckDouble(txtbx_settings_max_per_crew_weight))
+            if (verification.CheckDouble(txtbx_settings_max_per_crew_weight))
             {
                 settings.MaxWeightPerCrewMember = double.Parse(txtbx_settings_max_per_crew_weight.Text);
             }
             else
             {
-                ShowError("Max Weight Per Crew Member");
+                verification.ShowError("Max Weight Per Crew Member");
                 return;
             }
 
-            if (CheckDouble(txtbx_settings_max_cockpit_weight))
+            if (verification.CheckDouble(txtbx_settings_max_cockpit_weight))
             {
                 settings.MaxCockpitWeight = double.Parse(txtbx_settings_max_cockpit_weight.Text);
             }
             else
             {
-                ShowError("Max Cockpit Weight");
+                verification.ShowError("Max Cockpit Weight");
                 return;
             }
 
-            if (CheckDouble(txtbx_settings_min_cockpit_weight))
+            if (verification.CheckDouble(txtbx_settings_min_cockpit_weight))
             {
                 settings.MinCockpitWeight = double.Parse(txtbx_settings_min_cockpit_weight.Text);
             }
             else
             {
-                ShowError("Min Cockpit Weight");
+                verification.ShowError("Min Cockpit Weight");
                 return;
             }
 
-            if (CheckDouble(txtbx_settings_max_weight_per_seat
-                ))
+            if (verification.CheckDouble(txtbx_settings_max_weight_per_seat))
             {
                 settings.MaxWeightPerSeat = double.Parse(txtbx_settings_max_weight_per_seat.Text);
             }
             else
             {
-                ShowError("Max Weight Per Seat");
+                verification.ShowError("Max Weight Per Seat");
                 return;
             }
 
-            if (CheckDouble(txtbx_settings_max_hold_bag_weight))
+            if (verification.CheckDouble(txtbx_settings_max_hold_bag_weight))
             {
                 settings.MaxHoldBaggageWeight = double.Parse(txtbx_settings_max_hold_bag_weight.Text);
             }
             else
             {
-                ShowError("Max Hold Baggage Weight");
+                verification.ShowError("Max Hold Baggage Weight");
                 return;
             }
 
-            if (CheckDouble(txtbx_settings_vne))
+            if (verification.CheckDouble(txtbx_settings_vne))
             {
                 settings.Vne = double.Parse(txtbx_settings_vne.Text);
             }
             else
             {
-                ShowError("Vne");
+                verification.ShowError("Vne");
                 return;
             }
 
-            if (CheckDouble(txtbx_settings_va))
+            if (verification.CheckDouble(txtbx_settings_va))
             {
                 settings.Va = double.Parse(txtbx_settings_va.Text);
             }
             else
             {
-                ShowError("Va");
+                verification.ShowError("Va");
                 return;
             }
 
-            if (CheckDouble(txtbx_settings_vs0))
+            if (verification.CheckDouble(txtbx_settings_vs0))
             {
                 settings.Vs0 = double.Parse(txtbx_settings_vs0.Text);
             }
             else
             {
-                ShowError("Vs0");
+                verification.ShowError("Vs0");
                 return;
             }
 
-            if (CheckDouble(txtbx_settings_vs1))
+            if (verification.CheckDouble(txtbx_settings_vs1))
             {
                 settings.Vs1 = double.Parse(txtbx_settings_vs1.Text);
             }
             else
             {
-                ShowError("Vs1");
+                verification.ShowError("Vs1");
                 return;
             }
 
-            if (CheckDouble(txtbx_settings_vfe))
+            if (verification.CheckDouble(txtbx_settings_vfe))
             {
                 settings.Vfe = double.Parse(txtbx_settings_vfe.Text);
             }
             else
             {
-                ShowError("Vfe");
+                verification.ShowError("Vfe");
                 return;
             }
 
-            if (CheckDouble(txtbx_settings_hold_arm))
+            if (verification.CheckDouble(txtbx_settings_hold_arm))
             {
                 settings.AftMomentArm = double.Parse(txtbx_settings_hold_arm.Text);
             }
             else
             {
-                ShowError("Aft Moment Arm");
+                verification.ShowError("Aft Moment Arm");
                 return;
             }
 
-            if (CheckDouble(txtbx_settings_cabin_arm))
+            if (verification.CheckDouble(txtbx_settings_cabin_arm))
             {
                 settings.FwdMomentArm = double.Parse(txtbx_settings_cabin_arm.Text);
             }
             else
             {
-                ShowError("Fwd Moment Arm");
+                verification.ShowError("Fwd Moment Arm");
                 return;
             }
 
-            if (CheckDouble(txtbx_settings_aft_cg_limit))
+            if (verification.CheckDouble(txtbx_settings_aft_cg_limit))
             {
                 settings.AftCGLimit = double.Parse(txtbx_settings_aft_cg_limit.Text);
             }
             else
             {
-                ShowError("Aft CG Limit");
+                verification.ShowError("Aft CG Limit");
                 return;
             }
 
-            if (CheckDouble(txtbx_settings_fwd_cg_limit))
+            if (verification.CheckDouble(txtbx_settings_fwd_cg_limit))
             {
                 settings.FwdCGLimit = double.Parse(txtbx_settings_fwd_cg_limit.Text);
             }
             else
             {
-                ShowError("Fwd CG Limit");
+                verification.ShowError("Fwd CG Limit");
                 return;
             }
 
-            if (CheckDouble(txtbx_settings_max_fuel_vol))
+            if (verification.CheckDouble(txtbx_settings_max_fuel_vol))
             {
                 settings.MaxFuelVol = double.Parse(txtbx_settings_max_fuel_vol.Text);
             }
             else
             {
-                ShowError("Max Fuel Volume");
+                verification.ShowError("Max Fuel Volume");
                 return;
             }
 
-            if (CheckDouble(txtbx_settings_min_fuel_vol))
+            if (verification.CheckDouble(txtbx_settings_min_fuel_vol))
             {
                 settings.MinFuelVol = double.Parse(txtbx_settings_min_fuel_vol.Text);
             }
             else
             {
-                ShowError("Min Fuel Volume");
+                verification.ShowError("Min Fuel Volume");
                 return;
             }
 

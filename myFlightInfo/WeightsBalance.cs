@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
+using myFlightInfo.common_data;
 
 
 namespace myFlightInfo
@@ -29,21 +30,21 @@ namespace myFlightInfo
             // We do not check if within range
             /////////////////////////////////////////////////////////////////////////////////
 
-            if (!CheckDouble(txtbx_cog_pilot_weight)) { ShowError("Pilots Weight"); return; }
-            if (!CheckDouble(txtbx_cog_passenger_weight)) { ShowError("Passengers Weight "); return; }
-            if (!CheckDouble(txtbx_cog_cabin_bag_weight)) { ShowError("Cabin Bag Weight "); return; }
-            if (!CheckDouble(txtbx_cog_hold_bag_weight)) { ShowError("Hold Bag Weight "); return; }
-            if (!CheckDouble(txtbx_cog_accessories_weight)) { ShowError("Accessories Weight "); return; }
-            if (!CheckDouble(txtbx_cog_pilot_arm)) { ShowError("Pilots Arm "); return; }
-            if (!CheckDouble(txtbx_cog_passenger_arm)) { ShowError("Passengers Arm "); return; }
-            if (!CheckDouble(txtbx_cog_cabin_bag_arm)) { ShowError("Cabin Bag Arm "); return; }
-            if (!CheckDouble(txtbx_cog_hold_bag_arm)) { ShowError("Hold Bag Arm "); return; }
-            if (!CheckDouble(txtbx_cog_accessories_arm)) { ShowError("Accessories Arm "); return; }
-            if (!CheckDouble(txtbx_cog_takeoff_fuel)) { ShowError("Takeoff Fuel Volume "); return; }
-            if (!CheckDouble(txtbx_cog_landing_fuel)) { ShowError("Landing Fuel Volume "); return; }
-            if (!CheckDouble(txtbx_cog_zero_fuel)) { ShowError("Zero Fuel Volume "); return; }
-            if (!CheckDouble(txtbx_specific_gravity)) { ShowError("Fuel Specific Gravity "); return; }
-            if (!CheckDouble(txtbx_cog_fuel_arm)) { ShowError("Fuel Arm "); return; }
+            if (!verification.CheckDouble(txtbx_cog_pilot_weight)) { verification.ShowError("Pilots Weight"); return; }
+            if (!verification.CheckDouble(txtbx_cog_passenger_weight)) { verification.ShowError("Passengers Weight "); return; }
+            if (!verification.CheckDouble(txtbx_cog_cabin_bag_weight)) { verification.ShowError("Cabin Bag Weight "); return; }
+            if (!verification.CheckDouble(txtbx_cog_hold_bag_weight)) { verification.ShowError("Hold Bag Weight "); return; }
+            if (!verification.CheckDouble(txtbx_cog_accessories_weight)) { verification.ShowError("Accessories Weight "); return; }
+            if (!verification.CheckDouble(txtbx_cog_pilot_arm)) { verification.ShowError("Pilots Arm "); return; }
+            if (!verification.CheckDouble(txtbx_cog_passenger_arm)) { verification.ShowError("Passengers Arm "); return; }
+            if (!verification.CheckDouble(txtbx_cog_cabin_bag_arm)) { verification.ShowError("Cabin Bag Arm "); return; }
+            if (!verification.CheckDouble(txtbx_cog_hold_bag_arm)) { verification.ShowError("Hold Bag Arm "); return; }
+            if (!verification.CheckDouble(txtbx_cog_accessories_arm)) { verification.ShowError("Accessories Arm "); return; }
+            if (!verification.CheckDouble(txtbx_cog_takeoff_fuel)) { verification.ShowError("Takeoff Fuel Volume "); return; }
+            if (!verification.CheckDouble(txtbx_cog_landing_fuel)) { verification.ShowError("Landing Fuel Volume "); return; }
+            if (!verification.CheckDouble(txtbx_cog_zero_fuel)) { verification.ShowError("Zero Fuel Volume "); return; }
+            if (!verification.CheckDouble(txtbx_specific_gravity)) { verification.ShowError("Fuel Specific Gravity "); return; }
+            if (!verification.CheckDouble(txtbx_cog_fuel_arm)) { verification.ShowError("Fuel Arm "); return; }
 
             /////////////////////////////////////////////////////////////////////////////////
             //Clear the CoG graphics

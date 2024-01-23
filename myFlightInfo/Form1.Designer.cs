@@ -4069,6 +4069,7 @@ namespace myFlightInfo
             this.btn_settings_add_aircraft.TabIndex = 1;
             this.btn_settings_add_aircraft.Text = "Add Aircraft";
             this.btn_settings_add_aircraft.UseVisualStyleBackColor = true;
+            this.btn_settings_add_aircraft.Click += new System.EventHandler(this.btn_settings_add_aircraft_Click);
             // 
             // panel52
             // 
@@ -5194,28 +5195,9 @@ namespace myFlightInfo
         private System.Windows.Forms.Panel panel88;
         private System.Windows.Forms.Panel panel89;
         private System.Windows.Forms.Button btn_save_settings;
-        private System.Windows.Forms.TextBox txtbx_settings_vne;
-        private System.Windows.Forms.TextBox txtbx_settings_mtow;
-        private System.Windows.Forms.TextBox txtbx_settings_empty_weight;
-        private System.Windows.Forms.TextBox txtbx_settings_min_pilot_weight;
-        private System.Windows.Forms.TextBox txtbx_settings_max_per_crew_weight;
-        private System.Windows.Forms.TextBox txtbx_settings_max_cockpit_weight;
-        private System.Windows.Forms.TextBox txtbx_settings_min_cockpit_weight;
-        private System.Windows.Forms.TextBox txtbx_settings_max_weight_per_seat;
-        private System.Windows.Forms.TextBox txtbx_settings_max_hold_bag_weight;
-        private System.Windows.Forms.TextBox txtbx_settings_va;
-        private System.Windows.Forms.TextBox txtbx_settings_vs0;
-        private System.Windows.Forms.TextBox txtbx_settings_vs1;
-        private System.Windows.Forms.TextBox txtbx_settings_vfe;
-        private System.Windows.Forms.TextBox txtbx_settings_hold_arm;
-        private System.Windows.Forms.TextBox txtbx_settings_cabin_arm;
-        private System.Windows.Forms.TextBox txtbx_settings_aft_cg_limit;
-        private System.Windows.Forms.TextBox txtbx_settings_fwd_cg_limit;
         private System.Windows.Forms.Button btn_settings_defaults;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.TextBox txtbx_settings_max_fuel_vol;
-        private System.Windows.Forms.TextBox txtbx_settings_min_fuel_vol;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
         private System.Windows.Forms.Panel panel90;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
@@ -5305,6 +5287,25 @@ namespace myFlightInfo
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
         private System.Windows.Forms.Button btn_settings_update_aircraft;
+        internal System.Windows.Forms.TextBox txtbx_settings_empty_weight;
+        internal System.Windows.Forms.TextBox txtbx_settings_mtow;
+        internal System.Windows.Forms.TextBox txtbx_settings_vne;
+        internal System.Windows.Forms.TextBox txtbx_settings_min_pilot_weight;
+        internal System.Windows.Forms.TextBox txtbx_settings_max_per_crew_weight;
+        internal System.Windows.Forms.TextBox txtbx_settings_max_cockpit_weight;
+        internal System.Windows.Forms.TextBox txtbx_settings_min_cockpit_weight;
+        internal System.Windows.Forms.TextBox txtbx_settings_max_weight_per_seat;
+        internal System.Windows.Forms.TextBox txtbx_settings_max_hold_bag_weight;
+        internal System.Windows.Forms.TextBox txtbx_settings_va;
+        internal System.Windows.Forms.TextBox txtbx_settings_vs0;
+        internal System.Windows.Forms.TextBox txtbx_settings_vs1;
+        internal System.Windows.Forms.TextBox txtbx_settings_vfe;
+        internal System.Windows.Forms.TextBox txtbx_settings_hold_arm;
+        internal System.Windows.Forms.TextBox txtbx_settings_cabin_arm;
+        internal System.Windows.Forms.TextBox txtbx_settings_aft_cg_limit;
+        internal System.Windows.Forms.TextBox txtbx_settings_fwd_cg_limit;
+        internal System.Windows.Forms.TextBox txtbx_settings_max_fuel_vol;
+        internal System.Windows.Forms.TextBox txtbx_settings_min_fuel_vol;
     }
 }
 
