@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
 using System.Xml;
+using System.Xml.Linq;
 using CenteredMessagebox;
 using Microsoft.Web.WebView2.Core.Raw;
 using myFlightInfo.Altimeter;
@@ -11,7 +13,7 @@ using myFlightInfo.common_data;
 using myFlightInfo.crosswind;
 using myFlightInfo.navigation;
 using myFlightInfo.Properties;
-using myFlightInfo.compliance_data;
+//using myFlightInfo.compliance_data;
 
 
 namespace myFlightInfo
@@ -75,7 +77,7 @@ namespace myFlightInfo
             }
 
             //Get the information so we can use it when we need to
-            string[] compliance_data_array = ComplianceData.GetComplianceData("Default");
+            string[] compliance_data_array = GetComplianceData("Default");
 
 
             Text += " : " + settings.school + " : v" +
@@ -522,11 +524,65 @@ namespace myFlightInfo
 
         private void btn_settings_add_aircraft_Click(object sender, EventArgs e)
         {
-            if (!ComplianceData.AddAircraftComplianceData("testAircraft"))
+            //create a dialog and get the name entered on it
+            var aircraftNameForm = new compliance_data.aircraftName();
+            aircraftNameForm.ShowDialog();
+            string myAircraftName = aircraftNameForm.myAircraftName;
+
+            if (myAircraftName == "error")
             {
-                verification.ShowError("data");
+                return;
+            }
+            else
+            {
+                //XDocument doc = XDocument.Load("compliance_data.xml");
+
+                //var matches = doc
+                //    .Descendants("aircraft_info")
+                //    .Where(ft => ((string)ft.Element("aircraft_name")) == myAircraftName);
+
+                //
+
+                if (CheckIfAircraftNamexists(myAircraftName))
+                {
+                    MsgBox.Show("Cannot add as named aircraft already exists\rChoose aircraft and use update", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MsgBox.Show(myAircraftName, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+
+
             }
 
+            GC.Collect();
+
+            
+
+            //if (!AddAircraftComplianceData("testAircraft"))
+            //{
+            //    verification.ShowError("data");
+            //}
+
+        }
+
+        private bool CheckIfAircraftNamexists(string myAircraftName)
+        {
+            bool result = true;
+
+            XDocument doc = XDocument.Load("compliance_data.xml");
+
+            var matches = doc
+                .Descendants("aircraft_info")
+                .Where(ft => ((string)ft.Element("aircraft_name")) == myAircraftName);
+
+            if (matches.Count() == 0)
+            {
+                result = false;
+            }
+
+            return result;
         }
     }
 }

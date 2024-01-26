@@ -3803,6 +3803,7 @@ namespace myFlightInfo
             this.cmbobx_aircraftName.Name = "cmbobx_aircraftName";
             this.cmbobx_aircraftName.Size = new System.Drawing.Size(315, 28);
             this.cmbobx_aircraftName.TabIndex = 0;
+            this.cmbobx_aircraftName.SelectedValueChanged += new System.EventHandler(this.cmbobx_aircraftName_SelectedValueChanged);
             // 
             // panel26
             // 

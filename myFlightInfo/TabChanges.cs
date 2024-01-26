@@ -111,10 +111,13 @@ namespace myFlightInfo
             }
             else if (tabcnt_weather.SelectedTab == tab_windy)
             {
+                cmbobx_gransden_lodge.Visible = false;
                 grpbx_towns.Visible = false;
             }
             else if (tabcnt_weather.SelectedTab == tab_bbc)
             {
+                cmbobx_gransden_lodge.Visible = false;
+
                 if (settings.school == "Rochester")
                 {
                     grpbx_towns.Visible = false;
@@ -140,6 +143,8 @@ namespace myFlightInfo
             }
             else if (tabcnt_weather.SelectedTab == tab_met_office)
             {
+                cmbobx_gransden_lodge.Visible = false;
+
                 if (settings.school == "Rochester")
                 {
                     grpbx_towns.Visible = false;
@@ -162,6 +167,8 @@ namespace myFlightInfo
             }
             else if (tabcnt_weather.SelectedTab == tab_synoptic)
             {
+                cmbobx_gransden_lodge.Visible = false;
+
                 grpbx_towns.Visible = false;
                 btn_school.Visible = false;
             }

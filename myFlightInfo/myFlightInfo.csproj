@@ -64,6 +64,12 @@
     <Compile Include="Altimeter\Altimeter.cs" />
     <Compile Include="common_data\airport_data.cs" />
     <Compile Include="common_data\verification.cs" />
+    <Compile Include="compliance_data\aircraftName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="compliance_data\aircraftName.Designer.cs">
+      <DependentUpon>aircraftName.cs</DependentUpon>
+    </Compile>
     <Compile Include="compliance_data\compliance_data.cs" />
     <Compile Include="crosswind\Crosswind.cs" />
     <Compile Include="Form1.cs">
@@ -93,6 +99,9 @@
     </Compile>
     <Compile Include="utils\MsgBox.cs" />
     <Compile Include="utils\Win32.cs" />
+    <EmbeddedResource Include="compliance_data\aircraftName.resx">
+      <DependentUpon>aircraftName.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
