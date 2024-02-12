@@ -792,7 +792,7 @@
 	</airport_info>
 	<airport_info>
 		<icao_code>EGHE</icao_code>
-		<airport_name>St Mary's Airport</airport_name>
+		<airport_name>St Mary`s Airport</airport_name>
 		<latitude_deg>49°54'48"N</latitude_deg>
 		<latitude_dec>49.91333</latitude_dec>
 		<longitude_deg>6°17'31"W</longitude_deg>

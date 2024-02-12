@@ -144,6 +144,7 @@
     <Content Include="graphics\c42_sideview.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="compass\" />
     <Folder Include="metar\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -83,6 +83,21 @@ namespace myFlightInfo
             Text += " : " + settings.school + " : v" +
                     Assembly.GetExecutingAssembly().GetName().Version; // put in the version number
 
+            //populate the combo boxes with the airfield names direct from xml file so we get 
+            //names correctly spelt for later look up
+            XmlDocument doc = new XmlDocument();
+            doc.Load("airport_data.xml");
+            XmlNodeList airportList = doc.SelectNodes("uk_airports/airport_info/airport_name");
+            foreach (XmlNode Name in airportList)
+            {
+                cmbobx_airport_info.Items.Add(Name.InnerText);
+                // cmbobx_airportinfo_to.Items.Add(Name.InnerText);
+                // cmbobx_airportinfo_from.Items.Add(Name.InnerText);
+            }
+
+            cmbobx_airport_info.SelectedIndex = 0;
+            
+
             grpbx_towns.Visible = false;
             grpbx_browser_navigation.Visible = false;
             cmbobx_airport_info.Visible = false;
@@ -114,9 +129,8 @@ namespace myFlightInfo
             SetMatarPages();
             SetWeatherPages();
 
-            cmbobx_airport_info.SelectedIndex = 0;
             cmbobx_gransden_lodge.SelectedIndex = 0;
-            
+
             //do this last to make sure all else is working.
             PopulateComplianceDataCmboBx();
         }
