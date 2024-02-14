@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -7,11 +6,10 @@ using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
 using CenteredMessagebox;
-using Microsoft.Web.WebView2.Core.Raw;
-using myFlightInfo.Altimeter;
+using myFlightInfo.Navigation;
 using myFlightInfo.common_data;
 using myFlightInfo.crosswind;
-using myFlightInfo.navigation;
+using myFlightInfo.browsing;
 using myFlightInfo.Properties;
 //using myFlightInfo.compliance_data;
 
@@ -96,7 +94,7 @@ namespace myFlightInfo
             }
 
             cmbobx_airport_info.SelectedIndex = 0;
-            
+
 
             grpbx_towns.Visible = false;
             grpbx_browser_navigation.Visible = false;
@@ -150,7 +148,7 @@ namespace myFlightInfo
             {
                 SetMatarPages();
             }
-            else if ((tabcnt_toplevel.SelectedTab == tab_weather)&&(tabcnt_weather.SelectedTab == tab_gransden_lodge))
+            else if ((tabcnt_toplevel.SelectedTab == tab_weather) && (tabcnt_weather.SelectedTab == tab_gransden_lodge))
             {
                 webView_gransden_lodge_weather.CoreWebView2.Navigate("https://members.camgliding.uk/members/GRLweather.aspx");
             }
@@ -158,15 +156,10 @@ namespace myFlightInfo
             {
                 SetWeatherPages();
             }
-            else if ((tabcnt_toplevel.SelectedTab == tab_utils) && (tabcnt_utils.SelectedTab == tab_altimeter))
+            else if ((tabcnt_toplevel.SelectedTab == tab_utils) && (tabcnt_utils.SelectedTab == tab_navigation))
             {
                 txtbx_present_pressure.Text = txtbx_present_altitude.Text = txtbx_to_altitude.Text =
-                    lbl_p_airport_name.Text = lbl_p_icao_code.Text = lbl_p_latitude_deg.Text =
-                        lbl_p_latitude_dec.Text = lbl_p_longitude_deg.Text = lbl_p_longitude_dec.Text =
-                            lbl_p_elevation_m.Text = lbl_d_airport_name.Text = lbl_d_icao_code.Text =
-                                lbl_d_latitude_deg.Text = lbl_d_latitude_dec.Text = lbl_d_longitude_deg.Text =
-                                    lbl_d_longitude_dec.Text = lbl_d_elevation_m.Text =
-                                        lbl_to_pressure.Text = lbl_qnh_pressure.Text = lbl_qnh_pressure2.Text = "";
+                     lbl_d_airport_name.Text = lbl_to_pressure.Text = "";
             }
             else if ((tabcnt_toplevel.SelectedTab == tab_utils) && (tabcnt_utils.SelectedTab == tab_browser))
             {
@@ -193,6 +186,13 @@ namespace myFlightInfo
 
              */
 
+            int year = dateTimePicker1.Value.Year;
+            int month = dateTimePicker1.Value.Month;
+            int day = dateTimePicker1.Value.Day;
+            int hour = DateTime.Now.Hour;
+            int minute = DateTime.Now.Minute;
+            int second = DateTime.Now.Second;
+
             var values = altimeter.Calculate_altimeter(txtbx_present_pressure.Text, txtbx_present_altitude.Text,
                 txtbx_to_altitude.Text);
 
@@ -201,14 +201,27 @@ namespace myFlightInfo
 
             if ((firstValue != "F") && (secondValue != "F"))
             {
+                //From Airfield
+                lstbx_navigation_from.Items.Add("");
+                lstbx_navigation_from.Items.Add("QNH = \t" + secondValue + " mb");
+
+                //To Airfield
                 lbl_to_pressure.Text = firstValue;
-                lbl_qnh_pressure.Text = lbl_qnh_pressure2.Text = "QNH = " + secondValue + " mb";
+                lstbx_navigation_to.Items.Add("");
+                lstbx_navigation_to.Items.Add("QNH = \t" + secondValue + " mb");
             }
             else
             {
                 MsgBox.Show("Check you have filled in all the information correctly", "Incorrect Information",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            // Get bearing and distance display in listbox for both airfields
+            Navigate.BearingAndDistance(lbl_p_airport_name.Text, lbl_d_airport_name.Text, year, month, day, hour,
+                minute, second, lstbx_navigation_from);
+
+            Navigate.BearingAndDistance(lbl_d_airport_name.Text, lbl_p_airport_name.Text, year, month, day, hour,
+                minute, second, lstbx_navigation_to);
         }
 
         private void cmbobx_gransden_lodge_SelectedIndexChanged(object sender, EventArgs e)
@@ -220,7 +233,7 @@ namespace myFlightInfo
                 webView_gransden_lodge_weather.CoreWebView2.Navigate(
                     "https://members.camgliding.uk/members/GRLweather.aspx");
             }
-            else if (cmbobx_gransden_lodge.Text == "Navigation Weather")
+            else if (cmbobx_gransden_lodge.Text == "Browse Weather")
             {
                 webView_gransden_lodge_weather.CoreWebView2.Navigate(
                     "https://members.camgliding.uk/xcplanning/weather.aspx");
@@ -246,8 +259,24 @@ namespace myFlightInfo
 
         private void cmbobx_airport_info_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if ((tabcnt_toplevel.SelectedTab == tab_utils) && (tabcnt_utils.SelectedTab == tab_altimeter))
+            if ((tabcnt_toplevel.SelectedTab == tab_utils) && (tabcnt_utils.SelectedTab == tab_navigation))
             {
+                
+
+                // Make the ListBox use tabs.
+                lstbx_navigation_from.UseTabStops = true;
+                lstbx_navigation_from.UseCustomTabOffsets = true;
+
+                lstbx_navigation_to.UseTabStops = true;
+                lstbx_navigation_to.UseCustomTabOffsets = true;
+
+                // Define the tabs.
+                ListBox.IntegerCollection offsetsFrom = lstbx_navigation_from.CustomTabOffsets;
+                offsetsFrom.Add(100);
+
+                ListBox.IntegerCollection offsetsto = lstbx_navigation_to.CustomTabOffsets;
+                offsetsto.Add(100);
+
                 grpbx_towns.Visible = false;
 
                 int year = dateTimePicker1.Value.Year;
@@ -259,36 +288,63 @@ namespace myFlightInfo
                 double lat = double.Parse(data[4]);
                 double lng = double.Parse(data[6]);
 
-                lbl_to_pressure.Text = lbl_qnh_pressure.Text = lbl_qnh_pressure2.Text = "";
+                lbl_to_pressure.Text = "";
 
                 if (rdobtn_present.Checked)
                 {
-                    lbl_p_airport_name.Text = "Airport Name = " + data[2];
-                    lbl_p_icao_code.Text = "ICAO Code = " + data[1];
-                    lbl_p_latitude_deg.Text = "Latitude degrees = " + data[3];
-                    lbl_p_latitude_dec.Text = "Latitude decimal = " + data[4];
-                    lbl_p_longitude_deg.Text = "Longitude degrees = " + data[5];
-                    lbl_p_longitude_dec.Text = "Longitude decimal = " + data[6];
-                    lbl_p_elevation_m.Text = "Elevation = " + data[7] + "m";
+                    //Clear listbox
+                    lstbx_navigation_from.Items.Clear();
+
+                    lbl_p_airport_name.Text = data[2];
                     txtbx_present_altitude.Text = data[8];
                     txtbx_present_pressure.Text = "";
 
-                    lbl_p_sunrise.Text = "Sunrise = " + GetSunriset(lng, lat, "sunrise");
-                    lbl_p_sunset.Text = "Sunset = " + GetSunriset(lng, lat, "sunset");
+                    lstbx_navigation_from.Items.Add("ICAO Code = \t" + data[1]);
+
+                    lstbx_navigation_from.Items.Add("");
+                    lstbx_navigation_from.Items.Add("Latitude degrees = \t" + data[3]);
+                    lstbx_navigation_from.Items.Add("Latitude decimal = \t" + data[4]);
+
+                    lstbx_navigation_from.Items.Add("");
+                    lstbx_navigation_from.Items.Add("Longitude degrees = \t" + data[5]);
+                    lstbx_navigation_from.Items.Add("Longitude decimal = \t" + data[6]);
+
+                    lstbx_navigation_from.Items.Add("");
+                    lstbx_navigation_from.Items.Add("Elevation = \t" + data[7] + "m");
+
+                    lstbx_navigation_from.Items.Add("");
+                    lstbx_navigation_from.Items.Add("Sunrise = \t" + GetSunriset(lng, lat, "sunrise"));
+                    lstbx_navigation_from.Items.Add("Sunset = \t" + GetSunriset(lng, lat, "sunset"));
+
+                    lstbx_navigation_from.TopIndex = lstbx_navigation_from.Items.Count - 1;
                 }
                 else
                 {
-                    lbl_d_airport_name.Text = "Airport Name = " + data[2];
-                    lbl_d_icao_code.Text = "ICAO Code = " + data[1];
-                    lbl_d_latitude_deg.Text = "Latitude degrees = " + data[3];
-                    lbl_d_latitude_dec.Text = "Latitude decimal = " + data[4];
-                    lbl_d_longitude_deg.Text = "Longitude degrees = " + data[5];
-                    lbl_d_longitude_dec.Text = "Longitude decimal = " + data[6];
-                    lbl_d_elevation_m.Text = "Elevation = " + data[7] + "m";
+                    //Clear listbox
+                    lstbx_navigation_to.Items.Clear();
+
+                    lbl_d_airport_name.Text = data[2];
                     txtbx_to_altitude.Text = data[8];
 
-                    lbl_d_sunrise.Text = "Sunrise = " + GetSunriset(lng, lat, "sunrise");
-                    lbl_d_sunset.Text = "Sunset = " + GetSunriset(lng, lat, "sunset");
+                    lstbx_navigation_to.Items.Add("ICAO Code = \t" + data[1]);
+
+                    lstbx_navigation_to.Items.Add("");
+                    lstbx_navigation_to.Items.Add("Latitude degrees = \t" + data[3]);
+                    lstbx_navigation_to.Items.Add("Latitude decimal = \t" + data[4]);
+
+                    lstbx_navigation_to.Items.Add("");
+                    lstbx_navigation_to.Items.Add("Longitude degrees = \t" + data[5]);
+                    lstbx_navigation_to.Items.Add("Longitude decimal = \t" + data[6]);
+
+                    lstbx_navigation_to.Items.Add("");
+                    lstbx_navigation_to.Items.Add("Elevation = \t" + data[7] + "m");
+
+                    lstbx_navigation_to.Items.Add("");
+                    lstbx_navigation_to.Items.Add("Sunrise = \t" + GetSunriset(lng, lat, "sunrise"));
+                    lstbx_navigation_to.Items.Add("Sunset = \t" + GetSunriset(lng, lat, "sunset"));
+
+                    lstbx_navigation_to.TopIndex = lstbx_navigation_to.Items.Count - 1;
+
                 }
             }
             else if ((tabcnt_toplevel.SelectedTab == tab_utils) && (tabcnt_utils.SelectedTab == tab_browser))
@@ -306,21 +362,21 @@ namespace myFlightInfo
             if (((lbl_p_airport_name.Text != "") && (lbl_p_airport_name.Text != "..")) ||
                 ((lbl_d_airport_name.Text != "..") && (lbl_d_airport_name.Text != "")))
             {
-                if ((lbl_p_latitude_dec.Text != "") && (lbl_p_latitude_dec.Text != ".."))
-                {
-                    double lng = double.Parse(lbl_p_longitude_dec.Text.Split(' ').Last());
-                    double lat = double.Parse(lbl_p_latitude_dec.Text.Split(' ').Last());
-                    lbl_p_sunrise.Text = "Sunrise = " + GetSunriset(lng, lat, "sunrise");
-                    lbl_p_sunset.Text = "Sunset = " + GetSunriset(lng, lat, "sunset");
-                }
+                //    if ((lbl_p_latitude_dec.Text != "") && (lbl_p_latitude_dec.Text != ".."))
+                //    {
+                //        double lng = double.Parse(lbl_p_longitude_dec.Text.Split(' ').Last());
+                //        double lat = double.Parse(lbl_p_latitude_dec.Text.Split(' ').Last());
+                //        lbl_p_sunrise.Text = "Sunrise = " + GetSunriset(lng, lat, "sunrise");
+                //        lbl_p_sunset.Text = "Sunset = " + GetSunriset(lng, lat, "sunset");
+                //    }
 
-                if ((lbl_d_latitude_dec.Text != "") && (lbl_d_latitude_dec.Text != ".."))
-                {
-                    double lng = double.Parse(lbl_d_longitude_dec.Text.Split(' ').Last());
-                    double lat = double.Parse(lbl_d_latitude_dec.Text.Split(' ').Last());
-                    lbl_d_sunrise.Text = "Sunrise = " + GetSunriset(lng, lat, "sunrise");
-                    lbl_d_sunset.Text = "Sunset = " + GetSunriset(lng, lat, "sunset");
-                }
+                //    if ((lbl_d_latitude_dec.Text != "") && (lbl_d_latitude_dec.Text != ".."))
+                //    {
+                //        double lng = double.Parse(lbl_d_longitude_dec.Text.Split(' ').Last());
+                //        double lat = double.Parse(lbl_d_latitude_dec.Text.Split(' ').Last());
+                //        lbl_d_sunrise.Text = "Sunrise = " + GetSunriset(lng, lat, "sunrise");
+                //        lbl_d_sunset.Text = "Sunset = " + GetSunriset(lng, lat, "sunset");
+                //    }
             }
         }
 
@@ -354,14 +410,14 @@ namespace myFlightInfo
 
         private void btn_navigate_to_Click(object sender, EventArgs e)
         {
-            Navigation.NavigateTo(txtbx_navigate_to_url.Text, webView_browser);
+            Browse.NavigateTo(txtbx_navigate_to_url.Text, webView_browser);
         }
 
         private void txtbx_navigate_to_url_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (char) 13)
+            if (e.KeyChar == (char)13)
             {
-                Navigation.NavigateTo(txtbx_navigate_to_url.Text, webView_browser);
+                Browse.NavigateTo(txtbx_navigate_to_url.Text, webView_browser);
             }
         }
 
@@ -452,9 +508,9 @@ namespace myFlightInfo
                 if (rdobtn_cambridge.Checked)
                 {
                     webView_weather_bbc.CoreWebView2.Navigate(
-                        "https://www.bbc.co.uk/weather/2653941"); 
+                        "https://www.bbc.co.uk/weather/2653941");
                     webView_weather_met.CoreWebView2.Navigate(
-                        "https://metoffice.gov.uk/weather/forecast/u1214b469"); 
+                        "https://metoffice.gov.uk/weather/forecast/u1214b469");
                 }
                 else
                 {
@@ -527,7 +583,7 @@ namespace myFlightInfo
             doc.Load("compliance_data.xml");
             XmlNode root = doc.DocumentElement;
             XmlNodeList nodeList = root.SelectNodes("aircraft_info");
-            
+
             foreach (XmlNode aircraft in nodeList)
             {
                 cmbobx_aircraftName.Items.Add(aircraft["aircraft_name"].InnerText);
@@ -572,7 +628,7 @@ namespace myFlightInfo
 
             GC.Collect();
 
-            
+
 
             //if (!AddAircraftComplianceData("testAircraft"))
             //{

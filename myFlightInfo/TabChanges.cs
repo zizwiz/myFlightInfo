@@ -189,7 +189,7 @@ namespace myFlightInfo
             grpbx_browser_navigation.Visible = false;
 
 
-            if (tabcnt_utils.SelectedTab == tab_altimeter)
+            if (tabcnt_utils.SelectedTab == tab_navigation)
             {
                 //cmbobx_airport_info.SelectedIndex = 0;
                 cmbobx_airport_info.Visible = true;

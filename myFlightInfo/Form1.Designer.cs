@@ -105,12 +105,8 @@ namespace myFlightInfo
             this.tabcnt_utils = new System.Windows.Forms.TabControl();
             this.tab_browser = new System.Windows.Forms.TabPage();
             this.webView_browser = new Microsoft.Web.WebView2.WinForms.WebView2();
-            this.tab_altimeter = new System.Windows.Forms.TabPage();
+            this.tab_navigation = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.btn_calculate_altimiter = new System.Windows.Forms.Button();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.grpbx_to = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel21 = new System.Windows.Forms.Panel();
@@ -119,18 +115,7 @@ namespace myFlightInfo
             this.panel22 = new System.Windows.Forms.Panel();
             this.lbl_to_pressure = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
-            this.lbl_qnh_pressure2 = new System.Windows.Forms.Label();
-            this.lbl_d_sunset = new System.Windows.Forms.Label();
-            this.lbl_d_sunrise = new System.Windows.Forms.Label();
-            this.lbl_d_elevation_m = new System.Windows.Forms.Label();
-            this.lbl_d_longitude_dec = new System.Windows.Forms.Label();
-            this.lbl_d_longitude_deg = new System.Windows.Forms.Label();
-            this.lbl_d_latitude_dec = new System.Windows.Forms.Label();
-            this.lbl_d_latitude_deg = new System.Windows.Forms.Label();
-            this.lbl_d_icao_code = new System.Windows.Forms.Label();
-            this.lbl_d_airport_name = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.grpbx_present = new System.Windows.Forms.GroupBox();
+            this.lstbx_navigation_to = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.panel15 = new System.Windows.Forms.Panel();
             this.txtbx_present_altitude = new System.Windows.Forms.TextBox();
@@ -141,19 +126,16 @@ namespace myFlightInfo
             this.panel37 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.lbl_qnh_pressure = new System.Windows.Forms.Label();
-            this.lbl_p_sunset = new System.Windows.Forms.Label();
-            this.lbl_p_sunrise = new System.Windows.Forms.Label();
-            this.lbl_p_elevation_m = new System.Windows.Forms.Label();
-            this.lbl_p_longitude_dec = new System.Windows.Forms.Label();
-            this.lbl_p_longitude_deg = new System.Windows.Forms.Label();
-            this.lbl_p_latitude_dec = new System.Windows.Forms.Label();
-            this.lbl_p_latitude_deg = new System.Windows.Forms.Label();
-            this.lbl_p_icao_code = new System.Windows.Forms.Label();
+            this.lstbx_navigation_from = new System.Windows.Forms.ListBox();
+            this.btn_calculate_altimiter = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.lbl_d_airport_name = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.lbl_p_airport_name = new System.Windows.Forms.Label();
-            this.panel19 = new System.Windows.Forms.Panel();
             this.panel24 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.panel19 = new System.Windows.Forms.Panel();
             this.tab_crosswind = new System.Windows.Forms.TabPage();
             this.label12 = new System.Windows.Forms.Label();
             this.btn_calc_wind = new System.Windows.Forms.Button();
@@ -451,22 +433,19 @@ namespace myFlightInfo
             this.tabcnt_utils.SuspendLayout();
             this.tab_browser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.webView_browser)).BeginInit();
-            this.tab_altimeter.SuspendLayout();
+            this.tab_navigation.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.grpbx_to.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.panel21.SuspendLayout();
             this.panel18.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.grpbx_present.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel17.SuspendLayout();
             this.panel30.SuspendLayout();
             this.panel37.SuspendLayout();
             this.panel16.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.panel24.SuspendLayout();
             this.tab_crosswind.SuspendLayout();
             this.tab_weight_balance.SuspendLayout();
@@ -716,8 +695,8 @@ namespace myFlightInfo
             // 
             this.cmbobx_gransden_lodge.FormattingEnabled = true;
             this.cmbobx_gransden_lodge.Items.AddRange(new object[] {
+            "Browse Weather",
             "General Weather",
-            "Navigation Weather",
             "Radar Weather",
             "South Camera",
             "West Camera"});
@@ -1413,7 +1392,7 @@ namespace myFlightInfo
             // 
             this.tabcnt_utils.Alignment = System.Windows.Forms.TabAlignment.Left;
             this.tabcnt_utils.Controls.Add(this.tab_browser);
-            this.tabcnt_utils.Controls.Add(this.tab_altimeter);
+            this.tabcnt_utils.Controls.Add(this.tab_navigation);
             this.tabcnt_utils.Controls.Add(this.tab_crosswind);
             this.tabcnt_utils.Controls.Add(this.tab_weight_balance);
             this.tabcnt_utils.Controls.Add(this.tab_compliance_data);
@@ -1449,85 +1428,45 @@ namespace myFlightInfo
             this.webView_browser.TabIndex = 1;
             this.webView_browser.ZoomFactor = 1D;
             // 
-            // tab_altimeter
+            // tab_navigation
             // 
-            this.tab_altimeter.Controls.Add(this.tableLayoutPanel3);
-            this.tab_altimeter.Location = new System.Drawing.Point(28, 4);
-            this.tab_altimeter.Name = "tab_altimeter";
-            this.tab_altimeter.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_altimeter.Size = new System.Drawing.Size(1391, 692);
-            this.tab_altimeter.TabIndex = 1;
-            this.tab_altimeter.Text = "Altimeter";
-            this.tab_altimeter.UseVisualStyleBackColor = true;
+            this.tab_navigation.Controls.Add(this.tableLayoutPanel3);
+            this.tab_navigation.Location = new System.Drawing.Point(28, 4);
+            this.tab_navigation.Name = "tab_navigation";
+            this.tab_navigation.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_navigation.Size = new System.Drawing.Size(1391, 692);
+            this.tab_navigation.TabIndex = 1;
+            this.tab_navigation.Text = "Navigation";
+            this.tab_navigation.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 5;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.57143F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.57143F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel5, 3, 2);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.btn_calculate_altimiter, 3, 4);
             this.tableLayoutPanel3.Controls.Add(this.panel6, 3, 3);
             this.tableLayoutPanel3.Controls.Add(this.panel9, 3, 1);
             this.tableLayoutPanel3.Controls.Add(this.panel10, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.panel19, 1, 3);
             this.tableLayoutPanel3.Controls.Add(this.panel24, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.panel19, 1, 4);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 5;
+            this.tableLayoutPanel3.RowCount = 6;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1385, 686);
             this.tableLayoutPanel3.TabIndex = 27;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.btn_calculate_altimiter);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(792, 569);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(389, 74);
-            this.panel6.TabIndex = 25;
-            // 
-            // btn_calculate_altimiter
-            // 
-            this.btn_calculate_altimiter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_calculate_altimiter.Location = new System.Drawing.Point(0, 0);
-            this.btn_calculate_altimiter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btn_calculate_altimiter.Name = "btn_calculate_altimiter";
-            this.btn_calculate_altimiter.Size = new System.Drawing.Size(389, 74);
-            this.btn_calculate_altimiter.TabIndex = 22;
-            this.btn_calculate_altimiter.Text = "Calculate";
-            this.btn_calculate_altimiter.UseVisualStyleBackColor = true;
-            this.btn_calculate_altimiter.Click += new System.EventHandler(this.btn_calculate_altimiter_Click);
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.grpbx_to);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(792, 43);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(389, 480);
-            this.panel9.TabIndex = 28;
-            // 
-            // grpbx_to
-            // 
-            this.grpbx_to.BackColor = System.Drawing.Color.Transparent;
-            this.grpbx_to.Controls.Add(this.tableLayoutPanel5);
-            this.grpbx_to.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grpbx_to.Location = new System.Drawing.Point(0, 0);
-            this.grpbx_to.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.grpbx_to.Name = "grpbx_to";
-            this.grpbx_to.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.grpbx_to.Size = new System.Drawing.Size(389, 480);
-            this.grpbx_to.TabIndex = 21;
-            this.grpbx_to.TabStop = false;
-            this.grpbx_to.Text = "Destination QFE";
             // 
             // tableLayoutPanel5
             // 
@@ -1542,7 +1481,7 @@ namespace myFlightInfo
             this.tableLayoutPanel5.Controls.Add(this.lbl_to_pressure, 0, 3);
             this.tableLayoutPanel5.Controls.Add(this.panel18, 0, 5);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(4, 24);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(792, 83);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 6;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
@@ -1551,13 +1490,13 @@ namespace myFlightInfo
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(381, 451);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(389, 480);
             this.tableLayoutPanel5.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Location = new System.Drawing.Point(335, 50);
+            this.label4.Location = new System.Drawing.Point(343, 50);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 30);
@@ -1568,7 +1507,7 @@ namespace myFlightInfo
             // 
             this.panel21.Controls.Add(this.label3);
             this.panel21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel21.Location = new System.Drawing.Point(334, 13);
+            this.panel21.Location = new System.Drawing.Point(342, 13);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(44, 24);
             this.panel21.TabIndex = 2;
@@ -1589,13 +1528,13 @@ namespace myFlightInfo
             this.txtbx_to_altitude.Location = new System.Drawing.Point(4, 15);
             this.txtbx_to_altitude.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtbx_to_altitude.Name = "txtbx_to_altitude";
-            this.txtbx_to_altitude.Size = new System.Drawing.Size(313, 26);
+            this.txtbx_to_altitude.Size = new System.Drawing.Size(321, 26);
             this.txtbx_to_altitude.TabIndex = 19;
             // 
             // panel22
             // 
             this.panel22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel22.Location = new System.Drawing.Point(334, 43);
+            this.panel22.Location = new System.Drawing.Point(342, 43);
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(44, 4);
             this.panel22.TabIndex = 3;
@@ -1606,7 +1545,7 @@ namespace myFlightInfo
             this.lbl_to_pressure.Location = new System.Drawing.Point(4, 50);
             this.lbl_to_pressure.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_to_pressure.Name = "lbl_to_pressure";
-            this.lbl_to_pressure.Size = new System.Drawing.Size(313, 30);
+            this.lbl_to_pressure.Size = new System.Drawing.Size(321, 30);
             this.lbl_to_pressure.TabIndex = 23;
             this.lbl_to_pressure.Text = "....";
             // 
@@ -1614,134 +1553,23 @@ namespace myFlightInfo
             // 
             this.panel18.AutoScroll = true;
             this.tableLayoutPanel5.SetColumnSpan(this.panel18, 3);
-            this.panel18.Controls.Add(this.lbl_qnh_pressure2);
-            this.panel18.Controls.Add(this.lbl_d_sunset);
-            this.panel18.Controls.Add(this.lbl_d_sunrise);
-            this.panel18.Controls.Add(this.lbl_d_elevation_m);
-            this.panel18.Controls.Add(this.lbl_d_longitude_dec);
-            this.panel18.Controls.Add(this.lbl_d_longitude_deg);
-            this.panel18.Controls.Add(this.lbl_d_latitude_dec);
-            this.panel18.Controls.Add(this.lbl_d_latitude_deg);
-            this.panel18.Controls.Add(this.lbl_d_icao_code);
-            this.panel18.Controls.Add(this.lbl_d_airport_name);
+            this.panel18.Controls.Add(this.lstbx_navigation_to);
             this.panel18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel18.Location = new System.Drawing.Point(3, 93);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(375, 355);
+            this.panel18.Size = new System.Drawing.Size(383, 384);
             this.panel18.TabIndex = 24;
             // 
-            // lbl_qnh_pressure2
+            // lstbx_navigation_to
             // 
-            this.lbl_qnh_pressure2.Location = new System.Drawing.Point(3, 16);
-            this.lbl_qnh_pressure2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_qnh_pressure2.Name = "lbl_qnh_pressure2";
-            this.lbl_qnh_pressure2.Size = new System.Drawing.Size(163, 24);
-            this.lbl_qnh_pressure2.TabIndex = 26;
-            this.lbl_qnh_pressure2.Text = "..";
-            // 
-            // lbl_d_sunset
-            // 
-            this.lbl_d_sunset.AutoSize = true;
-            this.lbl_d_sunset.Location = new System.Drawing.Point(3, 280);
-            this.lbl_d_sunset.Name = "lbl_d_sunset";
-            this.lbl_d_sunset.Size = new System.Drawing.Size(17, 20);
-            this.lbl_d_sunset.TabIndex = 10;
-            this.lbl_d_sunset.Text = "..";
-            // 
-            // lbl_d_sunrise
-            // 
-            this.lbl_d_sunrise.AutoSize = true;
-            this.lbl_d_sunrise.Location = new System.Drawing.Point(3, 260);
-            this.lbl_d_sunrise.Name = "lbl_d_sunrise";
-            this.lbl_d_sunrise.Size = new System.Drawing.Size(17, 20);
-            this.lbl_d_sunrise.TabIndex = 9;
-            this.lbl_d_sunrise.Text = "..";
-            // 
-            // lbl_d_elevation_m
-            // 
-            this.lbl_d_elevation_m.AutoSize = true;
-            this.lbl_d_elevation_m.Location = new System.Drawing.Point(3, 221);
-            this.lbl_d_elevation_m.Name = "lbl_d_elevation_m";
-            this.lbl_d_elevation_m.Size = new System.Drawing.Size(17, 20);
-            this.lbl_d_elevation_m.TabIndex = 13;
-            this.lbl_d_elevation_m.Text = "..";
-            // 
-            // lbl_d_longitude_dec
-            // 
-            this.lbl_d_longitude_dec.AutoSize = true;
-            this.lbl_d_longitude_dec.Location = new System.Drawing.Point(3, 182);
-            this.lbl_d_longitude_dec.Name = "lbl_d_longitude_dec";
-            this.lbl_d_longitude_dec.Size = new System.Drawing.Size(17, 20);
-            this.lbl_d_longitude_dec.TabIndex = 12;
-            this.lbl_d_longitude_dec.Text = "..";
-            // 
-            // lbl_d_longitude_deg
-            // 
-            this.lbl_d_longitude_deg.AutoSize = true;
-            this.lbl_d_longitude_deg.Location = new System.Drawing.Point(3, 162);
-            this.lbl_d_longitude_deg.Name = "lbl_d_longitude_deg";
-            this.lbl_d_longitude_deg.Size = new System.Drawing.Size(17, 20);
-            this.lbl_d_longitude_deg.TabIndex = 11;
-            this.lbl_d_longitude_deg.Text = "..";
-            // 
-            // lbl_d_latitude_dec
-            // 
-            this.lbl_d_latitude_dec.AutoSize = true;
-            this.lbl_d_latitude_dec.Location = new System.Drawing.Point(3, 126);
-            this.lbl_d_latitude_dec.Name = "lbl_d_latitude_dec";
-            this.lbl_d_latitude_dec.Size = new System.Drawing.Size(17, 20);
-            this.lbl_d_latitude_dec.TabIndex = 10;
-            this.lbl_d_latitude_dec.Text = "..";
-            // 
-            // lbl_d_latitude_deg
-            // 
-            this.lbl_d_latitude_deg.AutoSize = true;
-            this.lbl_d_latitude_deg.Location = new System.Drawing.Point(3, 106);
-            this.lbl_d_latitude_deg.Name = "lbl_d_latitude_deg";
-            this.lbl_d_latitude_deg.Size = new System.Drawing.Size(17, 20);
-            this.lbl_d_latitude_deg.TabIndex = 9;
-            this.lbl_d_latitude_deg.Text = "..";
-            // 
-            // lbl_d_icao_code
-            // 
-            this.lbl_d_icao_code.AutoSize = true;
-            this.lbl_d_icao_code.Location = new System.Drawing.Point(3, 69);
-            this.lbl_d_icao_code.Name = "lbl_d_icao_code";
-            this.lbl_d_icao_code.Size = new System.Drawing.Size(17, 20);
-            this.lbl_d_icao_code.TabIndex = 8;
-            this.lbl_d_icao_code.Text = "..";
-            // 
-            // lbl_d_airport_name
-            // 
-            this.lbl_d_airport_name.AutoSize = true;
-            this.lbl_d_airport_name.Location = new System.Drawing.Point(3, 49);
-            this.lbl_d_airport_name.Name = "lbl_d_airport_name";
-            this.lbl_d_airport_name.Size = new System.Drawing.Size(17, 20);
-            this.lbl_d_airport_name.TabIndex = 7;
-            this.lbl_d_airport_name.Text = "..";
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.grpbx_present);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(200, 43);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(389, 480);
-            this.panel10.TabIndex = 29;
-            // 
-            // grpbx_present
-            // 
-            this.grpbx_present.BackColor = System.Drawing.Color.Transparent;
-            this.grpbx_present.Controls.Add(this.tableLayoutPanel4);
-            this.grpbx_present.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grpbx_present.Location = new System.Drawing.Point(0, 0);
-            this.grpbx_present.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.grpbx_present.Name = "grpbx_present";
-            this.grpbx_present.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.grpbx_present.Size = new System.Drawing.Size(389, 480);
-            this.grpbx_present.TabIndex = 20;
-            this.grpbx_present.TabStop = false;
-            this.grpbx_present.Text = "Present QFE";
+            this.lstbx_navigation_to.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstbx_navigation_to.FormattingEnabled = true;
+            this.lstbx_navigation_to.HorizontalScrollbar = true;
+            this.lstbx_navigation_to.ItemHeight = 20;
+            this.lstbx_navigation_to.Location = new System.Drawing.Point(0, 0);
+            this.lstbx_navigation_to.Name = "lstbx_navigation_to";
+            this.lstbx_navigation_to.Size = new System.Drawing.Size(383, 384);
+            this.lstbx_navigation_to.TabIndex = 0;
             // 
             // tableLayoutPanel4
             // 
@@ -1755,7 +1583,7 @@ namespace myFlightInfo
             this.tableLayoutPanel4.Controls.Add(this.panel37, 2, 3);
             this.tableLayoutPanel4.Controls.Add(this.panel16, 0, 5);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(4, 24);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(200, 83);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 6;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
@@ -1764,7 +1592,7 @@ namespace myFlightInfo
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(381, 451);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(389, 480);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
             // panel15
@@ -1773,7 +1601,7 @@ namespace myFlightInfo
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel15.Location = new System.Drawing.Point(3, 13);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(315, 24);
+            this.panel15.Size = new System.Drawing.Size(323, 24);
             this.panel15.TabIndex = 0;
             // 
             // txtbx_present_altitude
@@ -1782,14 +1610,14 @@ namespace myFlightInfo
             this.txtbx_present_altitude.Location = new System.Drawing.Point(0, 0);
             this.txtbx_present_altitude.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtbx_present_altitude.Name = "txtbx_present_altitude";
-            this.txtbx_present_altitude.Size = new System.Drawing.Size(315, 26);
+            this.txtbx_present_altitude.Size = new System.Drawing.Size(323, 26);
             this.txtbx_present_altitude.TabIndex = 15;
             // 
             // panel17
             // 
             this.panel17.Controls.Add(this.label5);
             this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel17.Location = new System.Drawing.Point(334, 13);
+            this.panel17.Location = new System.Drawing.Point(342, 13);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(44, 24);
             this.panel17.TabIndex = 2;
@@ -1810,7 +1638,7 @@ namespace myFlightInfo
             this.panel30.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel30.Location = new System.Drawing.Point(3, 53);
             this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(315, 24);
+            this.panel30.Size = new System.Drawing.Size(323, 24);
             this.panel30.TabIndex = 4;
             // 
             // txtbx_present_pressure
@@ -1819,14 +1647,14 @@ namespace myFlightInfo
             this.txtbx_present_pressure.Location = new System.Drawing.Point(0, 0);
             this.txtbx_present_pressure.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtbx_present_pressure.Name = "txtbx_present_pressure";
-            this.txtbx_present_pressure.Size = new System.Drawing.Size(315, 26);
+            this.txtbx_present_pressure.Size = new System.Drawing.Size(323, 26);
             this.txtbx_present_pressure.TabIndex = 16;
             // 
             // panel37
             // 
             this.panel37.Controls.Add(this.label6);
             this.panel37.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel37.Location = new System.Drawing.Point(334, 53);
+            this.panel37.Location = new System.Drawing.Point(342, 53);
             this.panel37.Name = "panel37";
             this.panel37.Size = new System.Drawing.Size(44, 24);
             this.panel37.TabIndex = 5;
@@ -1845,119 +1673,81 @@ namespace myFlightInfo
             // 
             this.panel16.AutoScroll = true;
             this.tableLayoutPanel4.SetColumnSpan(this.panel16, 3);
-            this.panel16.Controls.Add(this.lbl_qnh_pressure);
-            this.panel16.Controls.Add(this.lbl_p_sunset);
-            this.panel16.Controls.Add(this.lbl_p_sunrise);
-            this.panel16.Controls.Add(this.lbl_p_elevation_m);
-            this.panel16.Controls.Add(this.lbl_p_longitude_dec);
-            this.panel16.Controls.Add(this.lbl_p_longitude_deg);
-            this.panel16.Controls.Add(this.lbl_p_latitude_dec);
-            this.panel16.Controls.Add(this.lbl_p_latitude_deg);
-            this.panel16.Controls.Add(this.lbl_p_icao_code);
-            this.panel16.Controls.Add(this.lbl_p_airport_name);
+            this.panel16.Controls.Add(this.lstbx_navigation_from);
             this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel16.Location = new System.Drawing.Point(3, 93);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(375, 355);
+            this.panel16.Size = new System.Drawing.Size(383, 384);
             this.panel16.TabIndex = 6;
             // 
-            // lbl_qnh_pressure
+            // lstbx_navigation_from
             // 
-            this.lbl_qnh_pressure.Location = new System.Drawing.Point(3, 16);
-            this.lbl_qnh_pressure.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_qnh_pressure.Name = "lbl_qnh_pressure";
-            this.lbl_qnh_pressure.Size = new System.Drawing.Size(250, 30);
-            this.lbl_qnh_pressure.TabIndex = 25;
-            this.lbl_qnh_pressure.Text = "..";
+            this.lstbx_navigation_from.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstbx_navigation_from.FormattingEnabled = true;
+            this.lstbx_navigation_from.HorizontalScrollbar = true;
+            this.lstbx_navigation_from.ItemHeight = 20;
+            this.lstbx_navigation_from.Location = new System.Drawing.Point(0, 0);
+            this.lstbx_navigation_from.Name = "lstbx_navigation_from";
+            this.lstbx_navigation_from.Size = new System.Drawing.Size(383, 384);
+            this.lstbx_navigation_from.TabIndex = 0;
             // 
-            // lbl_p_sunset
+            // btn_calculate_altimiter
             // 
-            this.lbl_p_sunset.AutoSize = true;
-            this.lbl_p_sunset.Location = new System.Drawing.Point(3, 277);
-            this.lbl_p_sunset.Name = "lbl_p_sunset";
-            this.lbl_p_sunset.Size = new System.Drawing.Size(17, 20);
-            this.lbl_p_sunset.TabIndex = 8;
-            this.lbl_p_sunset.Text = "..";
+            this.btn_calculate_altimiter.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_calculate_altimiter.Location = new System.Drawing.Point(793, 591);
+            this.btn_calculate_altimiter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_calculate_altimiter.Name = "btn_calculate_altimiter";
+            this.btn_calculate_altimiter.Size = new System.Drawing.Size(387, 70);
+            this.btn_calculate_altimiter.TabIndex = 22;
+            this.btn_calculate_altimiter.Text = "Calculate";
+            this.btn_calculate_altimiter.UseVisualStyleBackColor = true;
+            this.btn_calculate_altimiter.Click += new System.EventHandler(this.btn_calculate_altimiter_Click);
             // 
-            // lbl_p_sunrise
+            // panel6
             // 
-            this.lbl_p_sunrise.AutoSize = true;
-            this.lbl_p_sunrise.Location = new System.Drawing.Point(3, 257);
-            this.lbl_p_sunrise.Name = "lbl_p_sunrise";
-            this.lbl_p_sunrise.Size = new System.Drawing.Size(17, 20);
-            this.lbl_p_sunrise.TabIndex = 7;
-            this.lbl_p_sunrise.Text = "..";
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(792, 569);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(389, 14);
+            this.panel6.TabIndex = 25;
             // 
-            // lbl_p_elevation_m
+            // panel9
             // 
-            this.lbl_p_elevation_m.AutoSize = true;
-            this.lbl_p_elevation_m.Location = new System.Drawing.Point(3, 218);
-            this.lbl_p_elevation_m.Name = "lbl_p_elevation_m";
-            this.lbl_p_elevation_m.Size = new System.Drawing.Size(17, 20);
-            this.lbl_p_elevation_m.TabIndex = 6;
-            this.lbl_p_elevation_m.Text = "..";
+            this.panel9.Controls.Add(this.lbl_d_airport_name);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel9.Location = new System.Drawing.Point(792, 43);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(389, 34);
+            this.panel9.TabIndex = 28;
             // 
-            // lbl_p_longitude_dec
+            // lbl_d_airport_name
             // 
-            this.lbl_p_longitude_dec.AutoSize = true;
-            this.lbl_p_longitude_dec.Location = new System.Drawing.Point(3, 179);
-            this.lbl_p_longitude_dec.Name = "lbl_p_longitude_dec";
-            this.lbl_p_longitude_dec.Size = new System.Drawing.Size(17, 20);
-            this.lbl_p_longitude_dec.TabIndex = 5;
-            this.lbl_p_longitude_dec.Text = "..";
+            this.lbl_d_airport_name.AutoSize = true;
+            this.lbl_d_airport_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_d_airport_name.Location = new System.Drawing.Point(186, 7);
+            this.lbl_d_airport_name.Name = "lbl_d_airport_name";
+            this.lbl_d_airport_name.Size = new System.Drawing.Size(19, 20);
+            this.lbl_d_airport_name.TabIndex = 7;
+            this.lbl_d_airport_name.Text = "..";
             // 
-            // lbl_p_longitude_deg
+            // panel10
             // 
-            this.lbl_p_longitude_deg.AutoSize = true;
-            this.lbl_p_longitude_deg.Location = new System.Drawing.Point(3, 159);
-            this.lbl_p_longitude_deg.Name = "lbl_p_longitude_deg";
-            this.lbl_p_longitude_deg.Size = new System.Drawing.Size(17, 20);
-            this.lbl_p_longitude_deg.TabIndex = 4;
-            this.lbl_p_longitude_deg.Text = "..";
-            // 
-            // lbl_p_latitude_dec
-            // 
-            this.lbl_p_latitude_dec.AutoSize = true;
-            this.lbl_p_latitude_dec.Location = new System.Drawing.Point(3, 123);
-            this.lbl_p_latitude_dec.Name = "lbl_p_latitude_dec";
-            this.lbl_p_latitude_dec.Size = new System.Drawing.Size(17, 20);
-            this.lbl_p_latitude_dec.TabIndex = 3;
-            this.lbl_p_latitude_dec.Text = "..";
-            // 
-            // lbl_p_latitude_deg
-            // 
-            this.lbl_p_latitude_deg.AutoSize = true;
-            this.lbl_p_latitude_deg.Location = new System.Drawing.Point(3, 103);
-            this.lbl_p_latitude_deg.Name = "lbl_p_latitude_deg";
-            this.lbl_p_latitude_deg.Size = new System.Drawing.Size(17, 20);
-            this.lbl_p_latitude_deg.TabIndex = 2;
-            this.lbl_p_latitude_deg.Text = "..";
-            // 
-            // lbl_p_icao_code
-            // 
-            this.lbl_p_icao_code.AutoSize = true;
-            this.lbl_p_icao_code.Location = new System.Drawing.Point(3, 66);
-            this.lbl_p_icao_code.Name = "lbl_p_icao_code";
-            this.lbl_p_icao_code.Size = new System.Drawing.Size(17, 20);
-            this.lbl_p_icao_code.TabIndex = 1;
-            this.lbl_p_icao_code.Text = "..";
+            this.panel10.Controls.Add(this.lbl_p_airport_name);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(200, 43);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(389, 34);
+            this.panel10.TabIndex = 29;
             // 
             // lbl_p_airport_name
             // 
             this.lbl_p_airport_name.AutoSize = true;
-            this.lbl_p_airport_name.Location = new System.Drawing.Point(3, 46);
+            this.lbl_p_airport_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_p_airport_name.Location = new System.Drawing.Point(169, 7);
             this.lbl_p_airport_name.Name = "lbl_p_airport_name";
-            this.lbl_p_airport_name.Size = new System.Drawing.Size(17, 20);
+            this.lbl_p_airport_name.Size = new System.Drawing.Size(19, 20);
             this.lbl_p_airport_name.TabIndex = 0;
             this.lbl_p_airport_name.Text = "..";
-            // 
-            // panel19
-            // 
-            this.panel19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel19.Location = new System.Drawing.Point(200, 569);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(389, 74);
-            this.panel19.TabIndex = 30;
             // 
             // panel24
             // 
@@ -1977,6 +1767,14 @@ namespace myFlightInfo
             this.dateTimePicker1.Size = new System.Drawing.Size(981, 26);
             this.dateTimePicker1.TabIndex = 0;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // panel19
+            // 
+            this.panel19.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel19.Location = new System.Drawing.Point(200, 589);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(389, 74);
+            this.panel19.TabIndex = 30;
             // 
             // tab_crosswind
             // 
@@ -4476,18 +4274,12 @@ namespace myFlightInfo
             this.tabcnt_utils.ResumeLayout(false);
             this.tab_browser.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.webView_browser)).EndInit();
-            this.tab_altimeter.ResumeLayout(false);
+            this.tab_navigation.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.grpbx_to.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
             this.panel21.ResumeLayout(false);
             this.panel18.ResumeLayout(false);
-            this.panel18.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.grpbx_present.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
@@ -4496,7 +4288,10 @@ namespace myFlightInfo
             this.panel30.PerformLayout();
             this.panel37.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
-            this.panel16.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
             this.panel24.ResumeLayout(false);
             this.tab_crosswind.ResumeLayout(false);
             this.tab_crosswind.PerformLayout();
@@ -4710,7 +4505,7 @@ namespace myFlightInfo
         private System.Windows.Forms.TabPage tab_utils;
         private System.Windows.Forms.TabControl tabcnt_utils;
         private System.Windows.Forms.TabPage tab_browser;
-        private System.Windows.Forms.TabPage tab_altimeter;
+        private System.Windows.Forms.TabPage tab_navigation;
         private System.Windows.Forms.TabPage tab_crosswind;
         private Microsoft.Web.WebView2.WinForms.WebView2 webView_notams;
         private Microsoft.Web.WebView2.WinForms.WebView2 webView_browser;
@@ -4733,7 +4528,6 @@ namespace myFlightInfo
         private System.Windows.Forms.TabPage tab_weather;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.GroupBox grpbx_to;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel21;
@@ -4742,15 +4536,8 @@ namespace myFlightInfo
         private System.Windows.Forms.Panel panel22;
         private System.Windows.Forms.Label lbl_to_pressure;
         private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.Label lbl_d_elevation_m;
-        private System.Windows.Forms.Label lbl_d_longitude_dec;
-        private System.Windows.Forms.Label lbl_d_longitude_deg;
-        private System.Windows.Forms.Label lbl_d_latitude_dec;
-        private System.Windows.Forms.Label lbl_d_latitude_deg;
-        private System.Windows.Forms.Label lbl_d_icao_code;
         private System.Windows.Forms.Label lbl_d_airport_name;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.GroupBox grpbx_present;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.TextBox txtbx_present_altitude;
@@ -4761,13 +4548,6 @@ namespace myFlightInfo
         private System.Windows.Forms.Panel panel37;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel16;
-        private System.Windows.Forms.Label lbl_p_elevation_m;
-        private System.Windows.Forms.Label lbl_p_longitude_dec;
-        private System.Windows.Forms.Label lbl_p_longitude_deg;
-        private System.Windows.Forms.Label lbl_p_latitude_dec;
-        private System.Windows.Forms.Label lbl_p_latitude_deg;
-        private System.Windows.Forms.Label lbl_p_icao_code;
-        private System.Windows.Forms.Label lbl_p_airport_name;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Panel panel24;
@@ -5022,17 +4802,11 @@ namespace myFlightInfo
         private System.Windows.Forms.PictureBox picbx_cog_limits;
         private System.Windows.Forms.Panel panel145;
         private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.Label lbl_d_sunset;
-        private System.Windows.Forms.Label lbl_d_sunrise;
-        private System.Windows.Forms.Label lbl_p_sunset;
-        private System.Windows.Forms.Label lbl_p_sunrise;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox cmbobx_aircraftName;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Button btn_settings_add_aircraft;
         private System.Windows.Forms.Button btn_settings_delete_aircraft;
-        private System.Windows.Forms.Label lbl_qnh_pressure2;
-        private System.Windows.Forms.Label lbl_qnh_pressure;
         private System.Windows.Forms.Button btn_calculate_altimiter;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
@@ -5056,6 +4830,9 @@ namespace myFlightInfo
         internal System.Windows.Forms.TextBox txtbx_settings_fwd_cg_limit;
         internal System.Windows.Forms.TextBox txtbx_settings_max_fuel_vol;
         internal System.Windows.Forms.TextBox txtbx_settings_min_fuel_vol;
+        private System.Windows.Forms.ListBox lstbx_navigation_from;
+        private System.Windows.Forms.Label lbl_p_airport_name;
+        private System.Windows.Forms.ListBox lstbx_navigation_to;
     }
 }
 
