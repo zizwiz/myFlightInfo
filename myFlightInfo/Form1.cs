@@ -158,8 +158,18 @@ namespace myFlightInfo
             }
             else if ((tabcnt_toplevel.SelectedTab == tab_utils) && (tabcnt_utils.SelectedTab == tab_navigation))
             {
-                txtbx_present_pressure.Text = txtbx_present_altitude.Text = txtbx_to_altitude.Text =
-                     lbl_d_airport_name.Text = lbl_to_pressure.Text = "";
+                cmbobx_airport_info.SelectedIndex = 0;
+                rdobtn_present.Checked = true;
+                
+                txtbx_present_pressure.Text = "0";
+                txtbx_present_altitude.Text = "";
+                txtbx_to_altitude.Text = "";
+                lbl_p_airport_name.Text = "";
+                lbl_d_airport_name.Text = "";
+                lbl_to_pressure.Text = "";
+
+                lstbx_navigation_from.Items.Clear();
+                lstbx_navigation_to.Items.Clear();
             }
             else if ((tabcnt_toplevel.SelectedTab == tab_utils) && (tabcnt_utils.SelectedTab == tab_browser))
             {
@@ -193,37 +203,21 @@ namespace myFlightInfo
             int minute = DateTime.Now.Minute;
             int second = DateTime.Now.Second;
 
-            var values = altimeter.Calculate_altimeter(txtbx_present_pressure.Text, txtbx_present_altitude.Text,
-                txtbx_to_altitude.Text);
-
-            var firstValue = values.Item1;
-            var secondValue = values.Item2;
-
-            if ((firstValue != "F") && (secondValue != "F"))
+            if (altimeter.Calculate_altimeter(txtbx_present_pressure.Text, txtbx_present_altitude.Text,
+                    txtbx_to_altitude.Text, lstbx_navigation_from, lstbx_navigation_to, lbl_to_pressure))
             {
-                //From Airfield
-                lstbx_navigation_from.Items.Add("");
-                lstbx_navigation_from.Items.Add("QNH = \t" + secondValue + " mb");
+                // Get bearing and distance display in listbox for both airfields
+                Navigate.BearingAndDistance(lbl_p_airport_name.Text, lbl_d_airport_name.Text, year, month, day, hour,
+                    minute, second, lstbx_navigation_from);
 
-                //To Airfield
-                lbl_to_pressure.Text = firstValue;
-                lstbx_navigation_to.Items.Add("");
-                lstbx_navigation_to.Items.Add(""); 
-                //We do not put in QNH as the distance between the two airports may be great and
-                //mean there is a pressure difference between the two.
+                Navigate.BearingAndDistance(lbl_d_airport_name.Text, lbl_p_airport_name.Text, year, month, day, hour,
+                    minute, second, lstbx_navigation_to);
             }
             else
             {
                 MsgBox.Show("Check you have filled in all the information correctly", "Incorrect Information",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            // Get bearing and distance display in listbox for both airfields
-            Navigate.BearingAndDistance(lbl_p_airport_name.Text, lbl_d_airport_name.Text, year, month, day, hour,
-                minute, second, lstbx_navigation_from);
-
-            Navigate.BearingAndDistance(lbl_d_airport_name.Text, lbl_p_airport_name.Text, year, month, day, hour,
-                minute, second, lstbx_navigation_to);
         }
 
         private void cmbobx_gransden_lodge_SelectedIndexChanged(object sender, EventArgs e)
@@ -271,16 +265,16 @@ namespace myFlightInfo
 
                 if (rdobtn_present.Checked)
                 {
-                    Navigate.AirfieldCoOrdinates(true, cmbobx_airport_info.Text, lstbx_navigation_from, 
+                    Navigate.AirfieldCoOrdinates(true, cmbobx_airport_info.Text, lstbx_navigation_from,
                         lbl_to_pressure, lbl_p_airport_name, txtbx_present_altitude, txtbx_present_pressure);
-                   
+
                     Navigate.SolarInfo(cmbobx_airport_info.Text, lstbx_navigation_from, year, month, day);
                 }
                 else
                 {
                     Navigate.AirfieldCoOrdinates(false, cmbobx_airport_info.Text, lstbx_navigation_to,
                         lbl_to_pressure, lbl_d_airport_name, txtbx_to_altitude, txtbx_present_pressure);
-                  
+
                     Navigate.SolarInfo(cmbobx_airport_info.Text, lstbx_navigation_to, year, month, day);
                 }
             }
@@ -296,47 +290,19 @@ namespace myFlightInfo
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
+            //Update with Sunrise and Sunset for this new date
+
             if (((lbl_p_airport_name.Text != "") && (lbl_p_airport_name.Text != "..")) ||
                 ((lbl_d_airport_name.Text != "..") && (lbl_d_airport_name.Text != "")))
             {
-                //    if ((lbl_p_latitude_dec.Text != "") && (lbl_p_latitude_dec.Text != ".."))
-                //    {
-                //        double lng = double.Parse(lbl_p_longitude_dec.Text.Split(' ').Last());
-                //        double lat = double.Parse(lbl_p_latitude_dec.Text.Split(' ').Last());
-                //        lbl_p_sunrise.Text = "Sunrise = " + GetSunriset(lng, lat, "sunrise");
-                //        lbl_p_sunset.Text = "Sunset = " + GetSunriset(lng, lat, "sunset");
-                //    }
 
-                //    if ((lbl_d_latitude_dec.Text != "") && (lbl_d_latitude_dec.Text != ".."))
-                //    {
-                //        double lng = double.Parse(lbl_d_longitude_dec.Text.Split(' ').Last());
-                //        double lat = double.Parse(lbl_d_latitude_dec.Text.Split(' ').Last());
-                //        lbl_d_sunrise.Text = "Sunrise = " + GetSunriset(lng, lat, "sunrise");
-                //        lbl_d_sunset.Text = "Sunset = " + GetSunriset(lng, lat, "sunset");
-                //    }
+                int year = dateTimePicker1.Value.Year;
+                int month = dateTimePicker1.Value.Month;
+                int day = dateTimePicker1.Value.Day;
+
+                Navigate.SolarInfo(lbl_p_airport_name.Text, lstbx_navigation_from, year, month, day);
+                Navigate.SolarInfo(lbl_d_airport_name.Text, lstbx_navigation_to, year, month, day);
             }
-        }
-
-        private string GetSunriset(double lng, double lat, string type)
-        {
-            int year = dateTimePicker1.Value.Year;
-            int month = dateTimePicker1.Value.Month;
-            int day = dateTimePicker1.Value.Day;
-            double tsunrise, tsunset;
-            string result;
-
-            Sunriset.SunriseSunset(year, month, day, lat, lng, out tsunrise, out tsunset);
-
-            if (type == "sunrise")
-            {
-                result = TimeSpan.FromHours(tsunrise).ToString(@"hh\:mm\:ss");
-            }
-            else //sunset
-            {
-                result = TimeSpan.FromHours(tsunset).ToString(@"hh\:mm\:ss");
-            }
-
-            return result;
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
