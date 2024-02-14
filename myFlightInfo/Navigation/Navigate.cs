@@ -35,10 +35,81 @@ namespace myFlightInfo.Navigation
 {
     class Navigate
     {
+        public static void SolarInfo(string airfield, ListBox myListBox, int year, int month, int day)
+        {
+            string[] data = airport_data.GetAirportInfo(airfield);
 
+            double lat = double.Parse(data[4]);
+            double lng = double.Parse(data[6]);
+
+            Sunriset.SunriseSunset(year, month, day, lat, lng, out double tsunrise, out double tsunset);
+
+            myListBox.Items.Add("");
+            myListBox.Items.Add("Sunrise = \t" + TimeSpan.FromHours(tsunrise).ToString(@"hh\:mm\:ss"));
+            myListBox.Items.Add("Sunset = \t" + TimeSpan.FromHours(tsunset).ToString(@"hh\:mm\:ss"));
+            myListBox.TopIndex = myListBox.Items.Count - 1;
+
+        }
+
+        public static void AirfieldCoOrdinates(bool flag, string airfield, ListBox myListBox, Label lblPressure, Label lblAirportName,
+            TextBox txtbxAltitude, TextBox txtbxPressure)
+        {
+            // Make the ListBox use tabs.
+            myListBox.UseTabStops = true;
+            myListBox.UseCustomTabOffsets = true;
+
+            // Define the tabs.
+            ListBox.IntegerCollection offsets = myListBox.CustomTabOffsets;
+            offsets.Add(100);
+
+            string[] data = airport_data.GetAirportInfo(airfield);
+
+            lblPressure.Text = "";
+
+            //Clear listbox
+            myListBox.Items.Clear();
+
+            lblAirportName.Text = data[2];
+            txtbxAltitude.Text = data[8];
+            if (flag) txtbxPressure.Text = "";
+
+            myListBox.Items.Add("ICAO Code = \t" + data[1]);
+
+            myListBox.Items.Add("");
+            myListBox.Items.Add("Latitude degrees = \t" + data[3]);
+            myListBox.Items.Add("Latitude decimal = \t" + data[4]);
+
+            myListBox.Items.Add("");
+            myListBox.Items.Add("Longitude degrees = \t" + data[5]);
+            myListBox.Items.Add("Longitude decimal = \t" + data[6]);
+
+            myListBox.Items.Add("");
+            myListBox.Items.Add("Elevation = \t" + data[7] + "m");
+
+            myListBox.TopIndex = myListBox.Items.Count - 1;
+        }
+        
         public static void BearingAndDistance(string fromAirfieldName, string toAirfieldName, int year, int month, int day, int hour,
             int minute, int second, ListBox myListBox)
         {
+            //Clear the area if it is already written
+            int NumItems = myListBox.Items.Count;
+
+            if (NumItems > 14)
+            {
+                for (int i = 15; i < NumItems + 3; i++)
+                {
+                    try
+                    {
+                        myListBox.Items.RemoveAt(14);
+                    }
+                    catch (Exception e)
+                    {
+                       //ignore and carry on
+                    }
+                }
+            }
+
             string[] from_data = airport_data.GetAirportInfo(fromAirfieldName);
             double from_lat = double.Parse(from_data[4]);
             double from_lng = double.Parse(from_data[6]);
@@ -55,23 +126,19 @@ namespace myFlightInfo.Navigation
 
             Magnetic m = new Magnetic(fc, DataModel.WMM2020);
 
-            //  rchtxtbx_charting_output.SelectionFont = new Font("Ariel", 8, FontStyle.Underline);
             myListBox.Items.Add("");
             myListBox.Items.Add("Decimal Degrees for " + fromAirfieldName);
             myListBox.Items.Add("Declination: \t" + Math.Round(m.MagneticFieldElements.Declination, 2));
             myListBox.Items.Add("Variation: \t" + Math.Round(m.SecularVariations.Declination, 2));
             myListBox.Items.Add("Uncertainty: \t" + Math.Round(m.Uncertainty.Declination, 2));
 
-            //rchtxtbx_charting_output.SelectionFont = new Font("Ariel", 8, FontStyle.Underline);
             myListBox.Items.Add("");
             myListBox.Items.Add("Degrees, minutes and seconds for " + fromAirfieldName);
             myListBox.Items.Add("Declination: \t" +
                                 Converts.DecimalToDegrees(m.MagneticFieldElements.Declination));
             myListBox.Items.Add("Variation: \t" + Converts.DecimalToDegrees(m.SecularVariations.Declination));
             myListBox.Items.Add("Uncertainty: \t" + Converts.DecimalToDegrees(m.Uncertainty.Declination));
-
-
-
+            
             string[] to_data = airport_data.GetAirportInfo(toAirfieldName);
             double to_lat = double.Parse(to_data[4]);
             double to_lng = double.Parse(to_data[6]);
@@ -82,7 +149,7 @@ namespace myFlightInfo.Navigation
 
             myListBox.ClearSelected();
             myListBox.Font = new Font("Ariel", 18, FontStyle.Underline);
-            
+
             myListBox.Items.Add("Flying from " + fromAirfieldName + " to " +
                                 toAirfieldName);
 
@@ -90,6 +157,7 @@ namespace myFlightInfo.Navigation
             myListBox.Items.Add("Distance = \t" + Math.Round(d.NauticalMiles, 2) + "nm");
             myListBox.Items.Add("Bearing = \t" + Math.Round(d.Bearing, 2) + "°");
 
+            myListBox.TopIndex = myListBox.Items.Count - 1;
             myListBox.SelectedIndex = -1; //removes the blue line
         }
 

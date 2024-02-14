@@ -1528,6 +1528,7 @@ namespace myFlightInfo
             this.txtbx_to_altitude.Location = new System.Drawing.Point(4, 15);
             this.txtbx_to_altitude.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtbx_to_altitude.Name = "txtbx_to_altitude";
+            this.txtbx_to_altitude.ReadOnly = true;
             this.txtbx_to_altitude.Size = new System.Drawing.Size(321, 26);
             this.txtbx_to_altitude.TabIndex = 19;
             // 
@@ -1610,6 +1611,7 @@ namespace myFlightInfo
             this.txtbx_present_altitude.Location = new System.Drawing.Point(0, 0);
             this.txtbx_present_altitude.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtbx_present_altitude.Name = "txtbx_present_altitude";
+            this.txtbx_present_altitude.ReadOnly = true;
             this.txtbx_present_altitude.Size = new System.Drawing.Size(323, 26);
             this.txtbx_present_altitude.TabIndex = 15;
             // 
@@ -1649,6 +1651,7 @@ namespace myFlightInfo
             this.txtbx_present_pressure.Name = "txtbx_present_pressure";
             this.txtbx_present_pressure.Size = new System.Drawing.Size(323, 26);
             this.txtbx_present_pressure.TabIndex = 16;
+            this.txtbx_present_pressure.Text = "0";
             // 
             // panel37
             // 
