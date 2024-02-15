@@ -131,6 +131,7 @@ namespace myFlightInfo
 
             //do this last to make sure all else is working.
             PopulateComplianceDataCmboBx();
+            cmbobx_aircraftName.SelectedIndex = 0;
         }
 
         private void btn_close_Click(object sender, EventArgs e)
@@ -160,13 +161,15 @@ namespace myFlightInfo
             {
                 cmbobx_airport_info.SelectedIndex = 0;
                 rdobtn_present.Checked = true;
-                
+
                 txtbx_present_pressure.Text = "0";
                 txtbx_present_altitude.Text = "";
                 txtbx_to_altitude.Text = "";
                 lbl_p_airport_name.Text = "";
                 lbl_d_airport_name.Text = "";
                 lbl_to_pressure.Text = "";
+
+                dateTimePicker1.Value = DateTime.Now;
 
                 lstbx_navigation_from.Items.Clear();
                 lstbx_navigation_to.Items.Clear();
@@ -480,10 +483,12 @@ namespace myFlightInfo
         /// <summary>
         /// Populate the combobox in the compliance data from the xml file.
         /// </summary>
-        private void PopulateComplianceDataCmboBx()
+        private void PopulateComplianceDataCmboBx(string myAircraftName)
         {
+            cmbobx_aircraftName.Items.Clear();
+
             XmlDocument doc = new XmlDocument();
-            doc.Load("compliance_data.xml");
+            doc.Load("compliance_data");
             XmlNode root = doc.DocumentElement;
             XmlNodeList nodeList = root.SelectNodes("aircraft_info");
 
@@ -492,7 +497,33 @@ namespace myFlightInfo
                 cmbobx_aircraftName.Items.Add(aircraft["aircraft_name"].InnerText);
             }
 
-            cmbobx_aircraftName.SelectedIndex = 0;
+            if (!cmbobx_aircraftName.Items.Contains(myAircraftName))
+            {
+                cmbobx_aircraftName.SelectedIndex = 0;
+            }
+            else
+            {
+                cmbobx_aircraftName.SelectedText = myAircraftName;
+            }
+
+            GetData(cmbobx_aircraftName.Text);
+        }
+
+        private void GetData(string myAircraftName)
+        {
+            string xQryStr = "//aircraft_info[aircraft_name ='" + myAircraftName + "']";
+
+            XmlDocument doc = new XmlDocument();
+            doc.Load("compliance_data");
+            XmlNodeList listOfNodes = doc.SelectNodes(xQryStr);
+
+            foreach (XmlNode node in listOfNodes)
+            {
+                //txtbx_AftMomentArm.Text = node.SelectSingleNode("AftMomentArm").InnerText;
+                //txtbx_FwdMomentArm.Text = node.SelectSingleNode("FwdMomentArm").InnerText;
+                //txtbx_AftCGLimit.Text = node.SelectSingleNode("AftCGLimit").InnerText;
+                //txtbx_FwdCGLimit.Text = node.SelectSingleNode("FwdCGLimit").InnerText;
+            }
         }
 
         private void btn_settings_add_aircraft_Click(object sender, EventArgs e)
@@ -502,42 +533,58 @@ namespace myFlightInfo
             aircraftNameForm.ShowDialog();
             string myAircraftName = aircraftNameForm.myAircraftName;
 
-            if (myAircraftName == "error")
+            if (myAircraftName != "")
             {
-                return;
-            }
-            else
-            {
-                //XDocument doc = XDocument.Load("compliance_data.xml");
-
-                //var matches = doc
-                //    .Descendants("aircraft_info")
-                //    .Where(ft => ((string)ft.Element("aircraft_name")) == myAircraftName);
-
-                //
-
-                if (CheckIfAircraftNamexists(myAircraftName))
+                if ((!CheckIfAircraftNamexists(myAircraftName))&&(File.Exists("compliance_data.xml")))
                 {
-                    MsgBox.Show("Cannot add as named aircraft already exists\rChoose aircraft and use update", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    XDocument doc = XDocument.Load("compliance_data.xml");
+                    XElement root = new XElement("aircraft_info");
+
+                    root.Add(new XElement("aircraft_name", myAircraftName));
+                    root.Add(new XElement("MaxTakeOffWeight", txtbx_settings_mtow.Text));
+                    root.Add(new XElement("EmptyWeight", txtbx_settings_empty_weight.Text));
+                    root.Add(new XElement("MinPilotWeight", txtbx_settings_min_pilot_weight.Text));
+                    root.Add(new XElement("MaxWeightPerCrewMember", txtbx_settings_max_per_crew_weight.Text));
+                    root.Add(new XElement("MaxCockpitWeight", txtbx_settings_max_cockpit_weight.Text));
+                    root.Add(new XElement("MinCockpitWeight", txtbx_settings_min_cockpit_weight.Text));
+                    root.Add(new XElement("MaxWeightPerSeat", txtbx_settings_max_weight_per_seat.Text));
+                    root.Add(new XElement("MaxHoldBaggageWeight", txtbx_settings_max_hold_bag_weight.Text));
+                    root.Add(new XElement("MaxFuelVol", txtbx_settings_max_fuel_vol.Text));
+                    root.Add(new XElement("MinFuelVol", txtbx_settings_min_fuel_vol.Text));
+                    root.Add(new XElement("Vne", txtbx_settings_vne.Text));
+                    root.Add(new XElement("Va", txtbx_settings_va.Text));
+                    root.Add(new XElement("Vs0", txtbx_settings_vs0.Text));
+                    root.Add(new XElement("Vs1", txtbx_settings_vs1.Text));
+                    root.Add(new XElement("Vfe", txtbx_settings_vfe.Text));
+                    root.Add(new XElement("AftMomentArm", txtbx_settings_hold_arm.Text));
+                    root.Add(new XElement("FwdMomentArm", txtbx_settings_cabin_arm.Text));
+                    root.Add(new XElement("AftCGLimit", txtbx_settings_aft_cg_limit.Text));
+                    root.Add(new XElement("FwdCGLimit", txtbx_settings_fwd_cg_limit.Text));
+
+
+                    doc.Element("compliance_data").Add(root);
+                    doc.Save("compliance_data.xml");
+
+                    PopulateComplianceDataCmboBx(myAircraftName);
+                    cmbobx_aircraftName.SelectedIndex = cmbobx_aircraftName.Items.Count-1;
                 }
                 else
                 {
-                    MsgBox.Show(myAircraftName, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                    MsgBox.Show("1. Cannot add as named aircraft already exists\rChoose aircraft and use update" +
+                                "\r\r2. The file compliance_data.xml is missing", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
 
-
+            }
+            else
+            {
+                MsgBox.Show("The aircraft needs to have a name, please try again", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
             GC.Collect();
-
-
-
-            //if (!AddAircraftComplianceData("testAircraft"))
-            //{
-            //    verification.ShowError("data");
-            //}
-
         }
 
         private bool CheckIfAircraftNamexists(string myAircraftName)
@@ -556,6 +603,57 @@ namespace myFlightInfo
             }
 
             return result;
+        }
+
+        private void btn_settings_delete_aircraft_Click(object sender, EventArgs e)
+        {
+            string myAircraftName = cmbobx_aircraftName.Text;
+            DeleteData(myAircraftName);
+
+            PopulateComplianceDataCmboBx(myAircraftName);
+            cmbobx_aircraftName.SelectedIndex = 0;
+        }
+
+        private bool DeleteData(string myAircraftName)
+        {
+            //bool areYouSure = true;
+
+            //if (grpbx_aircraftname_new.Visible)
+            //{
+            //    //create a dialog to ask if user is sure they want to delete aircraft
+            //    var AreYouSureForm = new AreYouSure(myAircraftName);
+            //    AreYouSureForm.ShowDialog();
+            //    areYouSure = AreYouSureForm.areYouSureToDelete;
+            //}
+
+            //if (areYouSure) //Only delete is yes else ignore
+            //{
+            //    // create the XML, load the contents
+            //    XmlDocument doc = new XmlDocument();
+            //    doc.Load("compliance_data.xml");
+
+            //    string xQryStr = "//aircraft_info[aircraft_name ='" + myAircraftName + "']";
+
+            //    XmlNode node = doc.SelectSingleNode(xQryStr);
+
+            //    // if found....
+            //    if (node != null)
+            //    {
+            //        // get its parent node
+            //        XmlNode parent = node.ParentNode;
+
+            //        // remove the child node
+            //        parent.RemoveChild(node);
+
+            //        // verify the new XML structure
+            //        string newXML = doc.OuterXml;
+
+            //        // save to file
+            //        doc.Save(@"compliance_data.xml");
+            //    }
+            //}
+
+            return true;
         }
     }
 }

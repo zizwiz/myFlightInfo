@@ -19,6 +19,11 @@ namespace myFlightInfo.utils
 
         }
 
+        public static string DegreesToDecimal(double degrees, double minutes, double seconds)
+        {
+
+            return (degrees + (minutes / 60) + (seconds / 3600)).ToString();
+        }
 
     }
 }
