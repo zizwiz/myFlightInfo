@@ -11,7 +11,10 @@ namespace myFlightInfo.common_data
             return double.TryParse(myTextBox.Text, out var myValue);
         }
 
-
+        public static bool CheckDouble(string myTextBoxString)
+        {
+            return double.TryParse(myTextBoxString, out var myValue);
+        }
 
 
 

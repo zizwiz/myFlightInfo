@@ -6,11 +6,6 @@ namespace myFlightInfo
 {
     public partial class Form1
     {
-        private void btn_save_settings_Click(object sender, EventArgs e)
-        {
-            SaveSettings();
-        }
-
         private void btn_settings_defaults_Click(object sender, EventArgs e)
         {
             DefaultSettings();

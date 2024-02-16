@@ -371,7 +371,7 @@ namespace myFlightInfo
             this.panel87 = new System.Windows.Forms.Panel();
             this.panel88 = new System.Windows.Forms.Panel();
             this.panel89 = new System.Windows.Forms.Panel();
-            this.btn_save_settings = new System.Windows.Forms.Button();
+            this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.panel31.SuspendLayout();
@@ -554,7 +554,7 @@ namespace myFlightInfo
             this.panel83.SuspendLayout();
             this.panel85.SuspendLayout();
             this.panel86.SuspendLayout();
-            this.panel89.SuspendLayout();
+            this.tableLayoutPanel16.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -3808,7 +3808,6 @@ namespace myFlightInfo
             this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel15.Controls.Add(this.btn_settings_update_aircraft, 0, 0);
-            this.tableLayoutPanel15.Controls.Add(this.btn_reset_compliance_xml, 1, 0);
             this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel15.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel15.Name = "tableLayoutPanel15";
@@ -4121,7 +4120,7 @@ namespace myFlightInfo
             // 
             // panel83
             // 
-            this.panel83.Controls.Add(this.btn_settings_defaults);
+            this.panel83.Controls.Add(this.tableLayoutPanel16);
             this.panel83.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel83.Location = new System.Drawing.Point(708, 640);
             this.panel83.Name = "panel83";
@@ -4131,11 +4130,11 @@ namespace myFlightInfo
             // btn_settings_defaults
             // 
             this.btn_settings_defaults.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_settings_defaults.Location = new System.Drawing.Point(0, 0);
+            this.btn_settings_defaults.Location = new System.Drawing.Point(3, 3);
             this.btn_settings_defaults.Name = "btn_settings_defaults";
-            this.btn_settings_defaults.Size = new System.Drawing.Size(315, 43);
+            this.btn_settings_defaults.Size = new System.Drawing.Size(151, 37);
             this.btn_settings_defaults.TabIndex = 0;
-            this.btn_settings_defaults.Text = "Use Default Settings";
+            this.btn_settings_defaults.Text = "Default Settings";
             this.btn_settings_defaults.UseVisualStyleBackColor = true;
             this.btn_settings_defaults.Click += new System.EventHandler(this.btn_settings_defaults_Click);
             // 
@@ -4197,23 +4196,26 @@ namespace myFlightInfo
             // 
             // panel89
             // 
-            this.panel89.Controls.Add(this.btn_save_settings);
             this.panel89.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel89.Location = new System.Drawing.Point(1039, 640);
             this.panel89.Name = "panel89";
             this.panel89.Size = new System.Drawing.Size(315, 43);
             this.panel89.TabIndex = 60;
             // 
-            // btn_save_settings
+            // tableLayoutPanel16
             // 
-            this.btn_save_settings.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_save_settings.Location = new System.Drawing.Point(0, 0);
-            this.btn_save_settings.Name = "btn_save_settings";
-            this.btn_save_settings.Size = new System.Drawing.Size(315, 43);
-            this.btn_save_settings.TabIndex = 0;
-            this.btn_save_settings.Text = "Save Settings";
-            this.btn_save_settings.UseVisualStyleBackColor = true;
-            this.btn_save_settings.Click += new System.EventHandler(this.btn_save_settings_Click);
+            this.tableLayoutPanel16.ColumnCount = 2;
+            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel16.Controls.Add(this.btn_settings_defaults, 0, 0);
+            this.tableLayoutPanel16.Controls.Add(this.btn_reset_compliance_xml, 1, 0);
+            this.tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel16.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel16.Name = "tableLayoutPanel16";
+            this.tableLayoutPanel16.RowCount = 1;
+            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(315, 43);
+            this.tableLayoutPanel16.TabIndex = 0;
             // 
             // Form1
             // 
@@ -4504,7 +4506,7 @@ namespace myFlightInfo
             this.panel85.PerformLayout();
             this.panel86.ResumeLayout(false);
             this.panel86.PerformLayout();
-            this.panel89.ResumeLayout(false);
+            this.tableLayoutPanel16.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -4743,7 +4745,6 @@ namespace myFlightInfo
         private System.Windows.Forms.Panel panel87;
         private System.Windows.Forms.Panel panel88;
         private System.Windows.Forms.Panel panel89;
-        private System.Windows.Forms.Button btn_save_settings;
         private System.Windows.Forms.Button btn_settings_defaults;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Label label50;
@@ -4853,6 +4854,7 @@ namespace myFlightInfo
         private System.Windows.Forms.ListBox lstbx_navigation_to;
         private System.Windows.Forms.Panel panel108;
         private System.Windows.Forms.Button btn_reset_compliance_xml;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
     }
 }
 

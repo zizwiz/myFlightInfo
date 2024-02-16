@@ -2490,4 +2490,14 @@
 		<elevation_m>77</elevation_m>
 		<elevation_ft>253</elevation_ft>
 	</airport_info>
+	<airport_info>
+		<icao_code>EG95</icao_code>
+		<airport_name>Sutton Meadows</airport_name>
+		<latitude_deg>52°23'N</latitude_deg>
+		<latitude_dec>52.38572</latitude_dec>
+		<longitude_deg>0°03'E</longitude_deg>
+		<longitude_dec>0.06242</longitude_dec>
+		<elevation_m>0</elevation_m>
+		<elevation_ft>0</elevation_ft>
+	</airport_info>
 </uk_airports>
