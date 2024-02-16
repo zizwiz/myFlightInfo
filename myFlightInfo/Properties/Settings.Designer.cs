@@ -262,5 +262,17 @@ namespace myFlightInfo.Properties {
                 this["MinFuelVol"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Default")]
+        public string Aircraft {
+            get {
+                return ((string)(this["Aircraft"]));
+            }
+            set {
+                this["Aircraft"] = value;
+            }
+        }
     }
 }

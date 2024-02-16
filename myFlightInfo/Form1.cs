@@ -59,7 +59,7 @@ namespace myFlightInfo
                 GC.Collect();
             }
 
-            GetSettings();
+           
 
             //check which school is set and use it but also set button to change to other school
             btn_school.Text += settings.school == "Rochester" ? "\rLt Gransden" : "\rRochester";
@@ -129,9 +129,9 @@ namespace myFlightInfo
 
             cmbobx_gransden_lodge.SelectedIndex = 0;
 
-            //do this last to make sure all else is working.
-            PopulateComplianceDataCmboBx();
-            cmbobx_aircraftName.SelectedIndex = 0;
+            //do this last in this order to make sure all else is working.
+            PopulateComplianceDataCmboBx(settings.Aircraft); //set to aircraft in settings
+            GetSettings();
         }
 
         private void btn_close_Click(object sender, EventArgs e)
@@ -488,7 +488,7 @@ namespace myFlightInfo
             cmbobx_aircraftName.Items.Clear();
 
             XmlDocument doc = new XmlDocument();
-            doc.Load("compliance_data");
+            doc.Load("compliance_data.xml");
             XmlNode root = doc.DocumentElement;
             XmlNodeList nodeList = root.SelectNodes("aircraft_info");
 
@@ -514,7 +514,7 @@ namespace myFlightInfo
             string xQryStr = "//aircraft_info[aircraft_name ='" + myAircraftName + "']";
 
             XmlDocument doc = new XmlDocument();
-            doc.Load("compliance_data");
+            doc.Load("compliance_data.xml");
             XmlNodeList listOfNodes = doc.SelectNodes(xQryStr);
 
             foreach (XmlNode node in listOfNodes)

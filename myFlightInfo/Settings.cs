@@ -18,6 +18,8 @@ namespace myFlightInfo
 
         private void SaveSettings()
         {
+            settings.Aircraft = cmbobx_aircraftName.Text;
+
             if (verification.CheckDouble(txtbx_settings_mtow))
             {
                 settings.MaxTakeOffWeight = double.Parse(txtbx_settings_mtow.Text);
@@ -221,6 +223,7 @@ namespace myFlightInfo
 
         private void DefaultSettings()
         {
+            cmbobx_aircraftName.SelectedIndex = 0;
             txtbx_settings_mtow.Text = "450";
             txtbx_settings_empty_weight.Text = "268";
             txtbx_settings_min_pilot_weight.Text = "55";
@@ -247,6 +250,7 @@ namespace myFlightInfo
 
         private void GetSettings()
         {
+            cmbobx_aircraftName.Text = settings.Aircraft;
             txtbx_settings_mtow.Text = settings.MaxTakeOffWeight.ToString();
             txtbx_settings_empty_weight.Text = settings.EmptyWeight.ToString();
             txtbx_settings_min_pilot_weight.Text = settings.MinPilotWeight.ToString();
@@ -276,11 +280,5 @@ namespace myFlightInfo
             txtbx_settings_fwd_cg_limit.Text = settings.FwdCGLimit.ToString();
 
         }
-
-        //    private bool CheckDouble(TextBox myTextBox)
-        //    {
-        //        return double.TryParse(myTextBox.Text, out var myValue);
-        //    }
-        //}
     }
 }
