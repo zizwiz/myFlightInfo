@@ -11,6 +11,8 @@ using myFlightInfo.common_data;
 using myFlightInfo.crosswind;
 using myFlightInfo.browsing;
 using myFlightInfo.Properties;
+using xmlFactory;
+
 //using myFlightInfo.compliance_data;
 
 
@@ -75,7 +77,7 @@ namespace myFlightInfo
             }
 
             //Get the information so we can use it when we need to
-            string[] compliance_data_array = GetComplianceData("Default");
+          //  string[] compliance_data_array = GetComplianceData("Default");
 
 
             Text += " : " + settings.school + " : v" +
@@ -480,52 +482,9 @@ namespace myFlightInfo
             }
         }
 
-        /// <summary>
-        /// Populate the combobox in the compliance data from the xml file.
-        /// </summary>
-        private void PopulateComplianceDataCmboBx(string myAircraftName)
-        {
-            cmbobx_aircraftName.Items.Clear();
+       
 
-            XmlDocument doc = new XmlDocument();
-            doc.Load("compliance_data.xml");
-            XmlNode root = doc.DocumentElement;
-            XmlNodeList nodeList = root.SelectNodes("aircraft_info");
-
-            foreach (XmlNode aircraft in nodeList)
-            {
-                cmbobx_aircraftName.Items.Add(aircraft["aircraft_name"].InnerText);
-            }
-
-            if (!cmbobx_aircraftName.Items.Contains(myAircraftName))
-            {
-                cmbobx_aircraftName.SelectedIndex = 0;
-            }
-            else
-            {
-                cmbobx_aircraftName.SelectedText = myAircraftName;
-            }
-
-            GetData(cmbobx_aircraftName.Text);
-        }
-
-        private void GetData(string myAircraftName)
-        {
-            string xQryStr = "//aircraft_info[aircraft_name ='" + myAircraftName + "']";
-
-            XmlDocument doc = new XmlDocument();
-            doc.Load("compliance_data.xml");
-            XmlNodeList listOfNodes = doc.SelectNodes(xQryStr);
-
-            foreach (XmlNode node in listOfNodes)
-            {
-                //txtbx_AftMomentArm.Text = node.SelectSingleNode("AftMomentArm").InnerText;
-                //txtbx_FwdMomentArm.Text = node.SelectSingleNode("FwdMomentArm").InnerText;
-                //txtbx_AftCGLimit.Text = node.SelectSingleNode("AftCGLimit").InnerText;
-                //txtbx_FwdCGLimit.Text = node.SelectSingleNode("FwdCGLimit").InnerText;
-            }
-        }
-
+ 
         private void btn_settings_add_aircraft_Click(object sender, EventArgs e)
         {
             //create a dialog and get the name entered on it
@@ -535,31 +494,236 @@ namespace myFlightInfo
 
             if (myAircraftName != "")
             {
-                if ((!CheckIfAircraftNamexists(myAircraftName))&&(File.Exists("compliance_data.xml")))
+                if ((!CheckIfAircraftNameExists(myAircraftName))&&(File.Exists("compliance_data.xml")))
                 {
                     XDocument doc = XDocument.Load("compliance_data.xml");
                     XElement root = new XElement("aircraft_info");
 
+
                     root.Add(new XElement("aircraft_name", myAircraftName));
-                    root.Add(new XElement("MaxTakeOffWeight", txtbx_settings_mtow.Text));
-                    root.Add(new XElement("EmptyWeight", txtbx_settings_empty_weight.Text));
-                    root.Add(new XElement("MinPilotWeight", txtbx_settings_min_pilot_weight.Text));
-                    root.Add(new XElement("MaxWeightPerCrewMember", txtbx_settings_max_per_crew_weight.Text));
-                    root.Add(new XElement("MaxCockpitWeight", txtbx_settings_max_cockpit_weight.Text));
-                    root.Add(new XElement("MinCockpitWeight", txtbx_settings_min_cockpit_weight.Text));
-                    root.Add(new XElement("MaxWeightPerSeat", txtbx_settings_max_weight_per_seat.Text));
-                    root.Add(new XElement("MaxHoldBaggageWeight", txtbx_settings_max_hold_bag_weight.Text));
-                    root.Add(new XElement("MaxFuelVol", txtbx_settings_max_fuel_vol.Text));
-                    root.Add(new XElement("MinFuelVol", txtbx_settings_min_fuel_vol.Text));
-                    root.Add(new XElement("Vne", txtbx_settings_vne.Text));
-                    root.Add(new XElement("Va", txtbx_settings_va.Text));
-                    root.Add(new XElement("Vs0", txtbx_settings_vs0.Text));
-                    root.Add(new XElement("Vs1", txtbx_settings_vs1.Text));
-                    root.Add(new XElement("Vfe", txtbx_settings_vfe.Text));
-                    root.Add(new XElement("AftMomentArm", txtbx_settings_hold_arm.Text));
-                    root.Add(new XElement("FwdMomentArm", txtbx_settings_cabin_arm.Text));
-                    root.Add(new XElement("AftCGLimit", txtbx_settings_aft_cg_limit.Text));
-                    root.Add(new XElement("FwdCGLimit", txtbx_settings_fwd_cg_limit.Text));
+
+                    if (verification.CheckDouble(txtbx_settings_mtow))
+                    {
+                        root.Add(new XElement("MaxTakeOffWeight", txtbx_settings_mtow.Text));
+                    }
+                    else
+                    {
+                        verification.ShowError("Max Take Off Weight");
+                        return;
+                    }
+
+                    if (verification.CheckDouble(txtbx_settings_empty_weight))
+                    {
+                        root.Add(new XElement("EmptyWeight", txtbx_settings_empty_weight.Text));
+                    }
+                    else
+                    {
+                        verification.ShowError("Empty Weight");
+                        return;
+                    }
+
+
+                    if (verification.CheckDouble(txtbx_settings_empty_weight))
+                    {
+                        root.Add(new XElement("EmptyWeight", txtbx_settings_empty_weight));
+                    }
+                    else
+                    {
+                        verification.ShowError("Empty Weight");
+                        return;
+                    }
+
+                    if (verification.CheckDouble(txtbx_settings_min_pilot_weight))
+                    {
+                        root.Add(new XElement("MinPilotWeight", txtbx_settings_min_pilot_weight.Text));
+                    }
+                    else
+                    {
+                        verification.ShowError("Min Pilot Weight");
+                        return;
+                    }
+
+                    if (verification.CheckDouble(txtbx_settings_max_per_crew_weight))
+                    {
+                        root.Add(new XElement("MaxWeightPerCrewMember", txtbx_settings_max_per_crew_weight.Text));
+                    }
+                    else
+                    {
+                        verification.ShowError("Max Weight Per Crew Member");
+                        return;
+                    }
+
+                    if (verification.CheckDouble(txtbx_settings_max_cockpit_weight))
+                    {
+                        root.Add(new XElement("MaxCockpitWeight", txtbx_settings_max_cockpit_weight.Text));
+                    }
+                    else
+                    {
+                        verification.ShowError("Max Cockpit Weight");
+                        return;
+                    }
+
+                    if (verification.CheckDouble(txtbx_settings_min_cockpit_weight))
+                    {
+                        root.Add(new XElement("MinCockpitWeight", txtbx_settings_min_cockpit_weight.Text));
+                    }
+                    else
+                    {
+                        verification.ShowError("Min Cockpit Weight");
+                        return;
+                    }
+
+                    if (verification.CheckDouble(txtbx_settings_max_weight_per_seat))
+                    {
+                        root.Add(new XElement("MaxWeightPerSeat", txtbx_settings_max_weight_per_seat.Text));
+                    }
+                    else
+                    {
+                        verification.ShowError("Max Weight Per Seat");
+                        return;
+                    }
+
+                    if (verification.CheckDouble(txtbx_settings_max_hold_bag_weight))
+                    {
+                        root.Add(new XElement("MaxHoldBaggageWeight", txtbx_settings_max_hold_bag_weight.Text));
+                    }
+                    else
+                    {
+                        verification.ShowError("Max Hold Baggage Weight");
+                        return;
+                    }
+
+                    if (verification.CheckDouble(txtbx_settings_vne))
+                    {
+                        root.Add(new XElement("Vne", txtbx_settings_vne.Text));
+                    }
+                    else
+                    {
+                        verification.ShowError("Vne");
+                        return;
+                    }
+
+                    if (verification.CheckDouble(txtbx_settings_va))
+                    {
+                        root.Add(new XElement("Va", txtbx_settings_va.Text));
+                    }
+                    else
+                    {
+                        verification.ShowError("Va");
+                        return;
+                    }
+
+                    if (verification.CheckDouble(txtbx_settings_vs0))
+                    {
+                        root.Add(new XElement("Vs0", txtbx_settings_vs0.Text));
+                    }
+                    else
+                    {
+                        verification.ShowError("Vs0");
+                        return;
+                    }
+
+                    if (verification.CheckDouble(txtbx_settings_vs1))
+                    {
+                        root.Add(new XElement("Vs1", txtbx_settings_vs1.Text));
+                    }
+                    else
+                    {
+                        verification.ShowError("Vs1");
+                        return;
+                    }
+
+                    if (verification.CheckDouble(txtbx_settings_vfe))
+                    {
+                        root.Add(new XElement("Vfe", txtbx_settings_vfe.Text));
+                    }
+                    else
+                    {
+                        verification.ShowError("Vfe");
+                        return;
+                    }
+
+                    if (verification.CheckDouble(txtbx_settings_hold_arm))
+                    {
+                        root.Add(new XElement("AftMomentArm", txtbx_settings_hold_arm.Text));
+                    }
+                    else
+                    {
+                        verification.ShowError("Aft Moment Arm");
+                        return;
+                    }
+
+                    if (verification.CheckDouble(txtbx_settings_cabin_arm))
+                    {
+                        root.Add(new XElement("FwdMomentArm", txtbx_settings_cabin_arm.Text));
+                    }
+                    else
+                    {
+                        verification.ShowError("Fwd Moment Arm");
+                        return;
+                    }
+
+                    if (verification.CheckDouble(txtbx_settings_aft_cg_limit))
+                    {
+                        root.Add(new XElement("AftCGLimit", txtbx_settings_aft_cg_limit.Text));
+                    }
+                    else
+                    {
+                        verification.ShowError("Aft CG Limit");
+                        return;
+                    }
+
+                    if (verification.CheckDouble(txtbx_settings_fwd_cg_limit))
+                    {
+                        root.Add(new XElement("FwdCGLimit", txtbx_settings_fwd_cg_limit.Text));
+                    }
+                    else
+                    {
+                        verification.ShowError("Fwd CG Limit");
+                        return;
+                    }
+
+                    if (verification.CheckDouble(txtbx_settings_max_fuel_vol))
+                    {
+                        root.Add(new XElement("MaxFuelVol", txtbx_settings_max_fuel_vol.Text));
+                    }
+                    else
+                    {
+                        verification.ShowError("Max Fuel Volume");
+                        return;
+                    }
+
+                    if (verification.CheckDouble(txtbx_settings_min_fuel_vol))
+                    {
+                        root.Add(new XElement("MinFuelVol", txtbx_settings_min_fuel_vol.Text));
+                    }
+                    else
+                    {
+                        verification.ShowError("Min Fuel Volume");
+                        return;
+                    }
+
+                  
+                    //root.Add(new XElement("aircraft_name", myAircraftName));
+                    //root.Add(new XElement("MaxTakeOffWeight", txtbx_settings_mtow.Text));
+                    //root.Add(new XElement("EmptyWeight", txtbx_settings_empty_weight.Text));
+                    //root.Add(new XElement("MinPilotWeight", txtbx_settings_min_pilot_weight.Text));
+                    //root.Add(new XElement("MaxWeightPerCrewMember", txtbx_settings_max_per_crew_weight.Text));
+                    //root.Add(new XElement("MaxCockpitWeight", txtbx_settings_max_cockpit_weight.Text));
+                    //root.Add(new XElement("MinCockpitWeight", txtbx_settings_min_cockpit_weight.Text));
+                    //root.Add(new XElement("MaxWeightPerSeat", txtbx_settings_max_weight_per_seat.Text));
+                    //root.Add(new XElement("MaxHoldBaggageWeight", txtbx_settings_max_hold_bag_weight.Text));
+                    //root.Add(new XElement("MaxFuelVol", txtbx_settings_max_fuel_vol.Text));
+                    //root.Add(new XElement("MinFuelVol", txtbx_settings_min_fuel_vol.Text));
+                    //root.Add(new XElement("Vne", txtbx_settings_vne.Text));
+                    //root.Add(new XElement("Va", txtbx_settings_va.Text));
+                    //root.Add(new XElement("Vs0", txtbx_settings_vs0.Text));
+                    //root.Add(new XElement("Vs1", txtbx_settings_vs1.Text));
+                    //root.Add(new XElement("Vfe", txtbx_settings_vfe.Text));
+                    //root.Add(new XElement("AftMomentArm", txtbx_settings_hold_arm.Text));
+                    //root.Add(new XElement("FwdMomentArm", txtbx_settings_cabin_arm.Text));
+                    //root.Add(new XElement("AftCGLimit", txtbx_settings_aft_cg_limit.Text));
+                    //root.Add(new XElement("FwdCGLimit", txtbx_settings_fwd_cg_limit.Text));
 
 
                     doc.Element("compliance_data").Add(root);
@@ -587,7 +751,7 @@ namespace myFlightInfo
             GC.Collect();
         }
 
-        private bool CheckIfAircraftNamexists(string myAircraftName)
+        private bool CheckIfAircraftNameExists(string myAircraftName)
         {
             bool result = true;
 
@@ -608,52 +772,143 @@ namespace myFlightInfo
         private void btn_settings_delete_aircraft_Click(object sender, EventArgs e)
         {
             string myAircraftName = cmbobx_aircraftName.Text;
-            DeleteData(myAircraftName);
 
-            PopulateComplianceDataCmboBx(myAircraftName);
-            cmbobx_aircraftName.SelectedIndex = 0;
+            if (DeleteData(myAircraftName, true))
+            {
+                PopulateComplianceDataCmboBx(myAircraftName);
+                cmbobx_aircraftName.SelectedIndex = 0;
+            }
         }
 
-        private bool DeleteData(string myAircraftName)
+        private bool DeleteData(string myAircraftName, bool flag)
         {
-            //bool areYouSure = true;
+            bool areYouSure = true;
 
-            //if (grpbx_aircraftname_new.Visible)
-            //{
-            //    //create a dialog to ask if user is sure they want to delete aircraft
-            //    var AreYouSureForm = new AreYouSure(myAircraftName);
-            //    AreYouSureForm.ShowDialog();
-            //    areYouSure = AreYouSureForm.areYouSureToDelete;
-            //}
+            if (flag) //false if update button clicked
+            {
+                if (myAircraftName == "Default") //always keep Default aircraft
+                {
+                    MsgBox.Show("Cannot Delete aircraft called Default\rPlease try another aircraft name.",
+                        "Cannot Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return false;
+                }
 
-            //if (areYouSure) //Only delete is yes else ignore
-            //{
-            //    // create the XML, load the contents
-            //    XmlDocument doc = new XmlDocument();
-            //    doc.Load("compliance_data.xml");
+                //create a dialog to ask if user is sure they want to delete aircraft
+                var AreYouSureForm = new AreYouSure(myAircraftName);
+                AreYouSureForm.ShowDialog();
+                areYouSure = AreYouSureForm.areYouSureToDelete;
+            }
 
-            //    string xQryStr = "//aircraft_info[aircraft_name ='" + myAircraftName + "']";
+            if (areYouSure) //Only delete is yes else ignore
+            {
+                // create the XML, load the contents
+                XmlDocument doc = new XmlDocument();
+                doc.Load("compliance_data.xml");
 
-            //    XmlNode node = doc.SelectSingleNode(xQryStr);
+                string xQryStr = "//aircraft_info[aircraft_name ='" + myAircraftName + "']";
 
-            //    // if found....
-            //    if (node != null)
-            //    {
-            //        // get its parent node
-            //        XmlNode parent = node.ParentNode;
+                XmlNode node = doc.SelectSingleNode(xQryStr);
 
-            //        // remove the child node
-            //        parent.RemoveChild(node);
+                // if found....
+                if (node != null)
+                {
+                    // get its parent node
+                    XmlNode parent = node.ParentNode;
 
-            //        // verify the new XML structure
-            //        string newXML = doc.OuterXml;
+                    // remove the child node
+                    parent.RemoveChild(node);
 
-            //        // save to file
-            //        doc.Save(@"compliance_data.xml");
-            //    }
-            //}
+                    // verify the new XML structure
+                    string newXML = doc.OuterXml;
+
+                    // save to file
+                    doc.Save(@"compliance_data.xml");
+                }
+            }
 
             return true;
+        }
+
+        private void btn_reset_compliance_xml_Click(object sender, EventArgs e)
+        {
+            if (MsgBox.Show("All data will revert to default\rYou will lose any aircraft you have entered", "Information",
+                    MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+            {
+                if (MsgBox.Show("Do you want to backup original files?",
+                        "Information",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    string ID = DateTime.Now.ToString("dd_MM_yy_H_mm_ss"); //Create a unique ID
+                    File.Copy("compliance_data.xml", "Data_" + ID + ".xml"); //save file with unique ID
+                }
+
+                if (File.Exists("compliance_data.xml")) File.Delete("compliance_data.xml");
+                File.WriteAllText("compliance_data.xml", Resources.compliance_data);
+                PopulateComplianceDataCmboBx("Default");
+                cmbobx_aircraftName.SelectedIndex = 0;
+            }
+        }
+
+        private void btn_settings_update_aircraft_Click(object sender, EventArgs e)
+        {
+            // Get hold of the data because we will delete this node next
+            string[] originalData = new string[20];
+
+            originalData[0] = cmbobx_aircraftName.Text;
+            originalData[1] = txtbx_settings_mtow.Text;
+            originalData[2] = txtbx_settings_empty_weight.Text;
+            originalData[3] = txtbx_settings_min_pilot_weight.Text;
+            originalData[4] = txtbx_settings_max_per_crew_weight.Text;
+            originalData[5] = txtbx_settings_max_cockpit_weight.Text;
+            originalData[6] = txtbx_settings_min_cockpit_weight.Text;
+            originalData[7] = txtbx_settings_max_weight_per_seat.Text;
+            originalData[8] = txtbx_settings_max_hold_bag_weight.Text;
+            originalData[9] = txtbx_settings_max_fuel_vol.Text;
+            originalData[10] = txtbx_settings_min_fuel_vol.Text;
+            originalData[11] = txtbx_settings_vne.Text;
+            originalData[12] = txtbx_settings_va.Text;
+            originalData[13] = txtbx_settings_vs0.Text;
+            originalData[14] = txtbx_settings_vs1.Text;
+            originalData[15] = txtbx_settings_vfe.Text;
+            originalData[16] = txtbx_settings_hold_arm.Text;
+            originalData[17] = txtbx_settings_cabin_arm.Text;
+            originalData[18] = txtbx_settings_aft_cg_limit.Text;
+            originalData[19] = txtbx_settings_fwd_cg_limit.Text;
+            
+            if (DeleteData(originalData[0], false)) //Delete the node
+            {
+                //Re-add the node with stored information
+                XDocument doc = XDocument.Load("compliance_data.xml");
+                XElement root = new XElement("aircraft_info");
+
+                root.Add(new XElement("aircraft_name", originalData[0]));
+                root.Add(new XElement("MaxTakeOffWeight", originalData[1]));
+                root.Add(new XElement("EmptyWeight", originalData[2]));
+                root.Add(new XElement("MinPilotWeight", originalData[3]));
+                root.Add(new XElement("MaxWeightPerCrewMember", originalData[4]));
+                root.Add(new XElement("MaxCockpitWeight", originalData[5]));
+                root.Add(new XElement("MinCockpitWeight", originalData[6]));
+                root.Add(new XElement("MaxWeightPerSeat", originalData[7]));
+                root.Add(new XElement("MaxHoldBaggageWeight", originalData[8]));
+                root.Add(new XElement("MaxFuelVol", originalData[9]));
+                root.Add(new XElement("MinFuelVol", originalData[10]));
+                root.Add(new XElement("Vne", originalData[11]));
+                root.Add(new XElement("Va", originalData[12]));
+                root.Add(new XElement("Vs0", originalData[13]));
+                root.Add(new XElement("Vs1", originalData[14]));
+                root.Add(new XElement("Vfe", originalData[15]));
+                root.Add(new XElement("AftMomentArm", originalData[16]));
+                root.Add(new XElement("FwdMomentArm", originalData[17]));
+                root.Add(new XElement("AftCGLimit", originalData[18]));
+                root.Add(new XElement("FwdCGLimit", originalData[19]));
+
+                doc.Element("compliance_data").Add(root);
+                doc.Save("compliance_data.xml");
+
+                PopulateComplianceDataCmboBx(originalData[0]); //rebuild the combobox
+
+                cmbobx_aircraftName.SelectedIndex = cmbobx_aircraftName.Items.Count - 1;
+            }
         }
     }
 }

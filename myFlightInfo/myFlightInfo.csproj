@@ -67,6 +67,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AreYouSure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AreYouSure.Designer.cs">
+      <DependentUpon>AreYouSure.cs</DependentUpon>
+    </Compile>
     <Compile Include="Navigation\Altimeter.cs" />
     <Compile Include="common_data\airport_data.cs" />
     <Compile Include="common_data\verification.cs" />
@@ -107,6 +113,9 @@
     </Compile>
     <Compile Include="utils\MsgBox.cs" />
     <Compile Include="utils\Win32.cs" />
+    <EmbeddedResource Include="AreYouSure.resx">
+      <DependentUpon>AreYouSure.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="compliance_data\aircraftName.resx">
       <DependentUpon>aircraftName.cs</DependentUpon>
     </EmbeddedResource>

@@ -327,6 +327,7 @@ namespace myFlightInfo
             this.panel63 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_settings_update_aircraft = new System.Windows.Forms.Button();
+            this.btn_reset_compliance_xml = new System.Windows.Forms.Button();
             this.panel64 = new System.Windows.Forms.Panel();
             this.label41 = new System.Windows.Forms.Label();
             this.panel65 = new System.Windows.Forms.Panel();
@@ -3807,6 +3808,7 @@ namespace myFlightInfo
             this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel15.Controls.Add(this.btn_settings_update_aircraft, 0, 0);
+            this.tableLayoutPanel15.Controls.Add(this.btn_reset_compliance_xml, 1, 0);
             this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel15.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel15.Name = "tableLayoutPanel15";
@@ -3824,6 +3826,18 @@ namespace myFlightInfo
             this.btn_settings_update_aircraft.TabIndex = 0;
             this.btn_settings_update_aircraft.Text = "Update Aircraft";
             this.btn_settings_update_aircraft.UseVisualStyleBackColor = true;
+            this.btn_settings_update_aircraft.Click += new System.EventHandler(this.btn_settings_update_aircraft_Click);
+            // 
+            // btn_reset_compliance_xml
+            // 
+            this.btn_reset_compliance_xml.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_reset_compliance_xml.Location = new System.Drawing.Point(160, 3);
+            this.btn_reset_compliance_xml.Name = "btn_reset_compliance_xml";
+            this.btn_reset_compliance_xml.Size = new System.Drawing.Size(152, 37);
+            this.btn_reset_compliance_xml.TabIndex = 1;
+            this.btn_reset_compliance_xml.Text = "Reset XML";
+            this.btn_reset_compliance_xml.UseVisualStyleBackColor = true;
+            this.btn_reset_compliance_xml.Click += new System.EventHandler(this.btn_reset_compliance_xml_Click);
             // 
             // panel64
             // 
@@ -4838,6 +4852,7 @@ namespace myFlightInfo
         private System.Windows.Forms.Label lbl_p_airport_name;
         private System.Windows.Forms.ListBox lstbx_navigation_to;
         private System.Windows.Forms.Panel panel108;
+        private System.Windows.Forms.Button btn_reset_compliance_xml;
     }
 }
 
