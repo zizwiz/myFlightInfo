@@ -87,6 +87,7 @@ namespace xmlFactory
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AreYouSure";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Are You Sure?";
             this.ResumeLayout(false);
             this.PerformLayout();

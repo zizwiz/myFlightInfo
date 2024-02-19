@@ -327,7 +327,6 @@ namespace myFlightInfo
             this.panel63 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_settings_update_aircraft = new System.Windows.Forms.Button();
-            this.btn_reset_compliance_xml = new System.Windows.Forms.Button();
             this.panel64 = new System.Windows.Forms.Panel();
             this.label41 = new System.Windows.Forms.Label();
             this.panel65 = new System.Windows.Forms.Panel();
@@ -362,7 +361,9 @@ namespace myFlightInfo
             this.panel81 = new System.Windows.Forms.Panel();
             this.panel82 = new System.Windows.Forms.Panel();
             this.panel83 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_settings_defaults = new System.Windows.Forms.Button();
+            this.btn_reset_compliance_xml = new System.Windows.Forms.Button();
             this.panel84 = new System.Windows.Forms.Panel();
             this.panel85 = new System.Windows.Forms.Panel();
             this.txtbx_settings_aft_cg_limit = new System.Windows.Forms.TextBox();
@@ -371,7 +372,6 @@ namespace myFlightInfo
             this.panel87 = new System.Windows.Forms.Panel();
             this.panel88 = new System.Windows.Forms.Panel();
             this.panel89 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.panel31.SuspendLayout();
@@ -552,9 +552,9 @@ namespace myFlightInfo
             this.panel79.SuspendLayout();
             this.panel80.SuspendLayout();
             this.panel83.SuspendLayout();
+            this.tableLayoutPanel16.SuspendLayout();
             this.panel85.SuspendLayout();
             this.panel86.SuspendLayout();
-            this.tableLayoutPanel16.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -3827,17 +3827,6 @@ namespace myFlightInfo
             this.btn_settings_update_aircraft.UseVisualStyleBackColor = true;
             this.btn_settings_update_aircraft.Click += new System.EventHandler(this.btn_settings_update_aircraft_Click);
             // 
-            // btn_reset_compliance_xml
-            // 
-            this.btn_reset_compliance_xml.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_reset_compliance_xml.Location = new System.Drawing.Point(160, 3);
-            this.btn_reset_compliance_xml.Name = "btn_reset_compliance_xml";
-            this.btn_reset_compliance_xml.Size = new System.Drawing.Size(152, 37);
-            this.btn_reset_compliance_xml.TabIndex = 1;
-            this.btn_reset_compliance_xml.Text = "Reset XML";
-            this.btn_reset_compliance_xml.UseVisualStyleBackColor = true;
-            this.btn_reset_compliance_xml.Click += new System.EventHandler(this.btn_reset_compliance_xml_Click);
-            // 
             // panel64
             // 
             this.panel64.Controls.Add(this.label41);
@@ -4127,6 +4116,21 @@ namespace myFlightInfo
             this.panel83.Size = new System.Drawing.Size(315, 43);
             this.panel83.TabIndex = 54;
             // 
+            // tableLayoutPanel16
+            // 
+            this.tableLayoutPanel16.ColumnCount = 2;
+            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel16.Controls.Add(this.btn_settings_defaults, 0, 0);
+            this.tableLayoutPanel16.Controls.Add(this.btn_reset_compliance_xml, 1, 0);
+            this.tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel16.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel16.Name = "tableLayoutPanel16";
+            this.tableLayoutPanel16.RowCount = 1;
+            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(315, 43);
+            this.tableLayoutPanel16.TabIndex = 0;
+            // 
             // btn_settings_defaults
             // 
             this.btn_settings_defaults.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -4137,6 +4141,17 @@ namespace myFlightInfo
             this.btn_settings_defaults.Text = "Default Settings";
             this.btn_settings_defaults.UseVisualStyleBackColor = true;
             this.btn_settings_defaults.Click += new System.EventHandler(this.btn_settings_defaults_Click);
+            // 
+            // btn_reset_compliance_xml
+            // 
+            this.btn_reset_compliance_xml.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_reset_compliance_xml.Location = new System.Drawing.Point(160, 3);
+            this.btn_reset_compliance_xml.Name = "btn_reset_compliance_xml";
+            this.btn_reset_compliance_xml.Size = new System.Drawing.Size(152, 37);
+            this.btn_reset_compliance_xml.TabIndex = 1;
+            this.btn_reset_compliance_xml.Text = "Reset XML";
+            this.btn_reset_compliance_xml.UseVisualStyleBackColor = true;
+            this.btn_reset_compliance_xml.Click += new System.EventHandler(this.btn_reset_compliance_xml_Click);
             // 
             // panel84
             // 
@@ -4202,21 +4217,6 @@ namespace myFlightInfo
             this.panel89.Size = new System.Drawing.Size(315, 43);
             this.panel89.TabIndex = 60;
             // 
-            // tableLayoutPanel16
-            // 
-            this.tableLayoutPanel16.ColumnCount = 2;
-            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel16.Controls.Add(this.btn_settings_defaults, 0, 0);
-            this.tableLayoutPanel16.Controls.Add(this.btn_reset_compliance_xml, 1, 0);
-            this.tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel16.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel16.Name = "tableLayoutPanel16";
-            this.tableLayoutPanel16.RowCount = 1;
-            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel16.Size = new System.Drawing.Size(315, 43);
-            this.tableLayoutPanel16.TabIndex = 0;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -4227,6 +4227,7 @@ namespace myFlightInfo
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "myFlightInfo";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.SizeChanged += new System.EventHandler(this.Form1_SizeChanged);
@@ -4502,11 +4503,11 @@ namespace myFlightInfo
             this.panel80.ResumeLayout(false);
             this.panel80.PerformLayout();
             this.panel83.ResumeLayout(false);
+            this.tableLayoutPanel16.ResumeLayout(false);
             this.panel85.ResumeLayout(false);
             this.panel85.PerformLayout();
             this.panel86.ResumeLayout(false);
             this.panel86.PerformLayout();
-            this.tableLayoutPanel16.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
