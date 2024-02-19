@@ -1471,7 +1471,7 @@
 		<elevation_ft>-7</elevation_ft>
 	</airport_info>
 	<airport_info>
-		<icao_code>EGO2</icao_code>
+		<icao_code>GB-0065</icao_code>
 		<airport_name>Audley End Airfield</airport_name>
 		<latitude_deg>52°0'28"N</latitude_deg>
 		<latitude_dec>52.00778</latitude_dec>
@@ -2401,7 +2401,7 @@
 		<elevation_ft>348</elevation_ft>
 	</airport_info>
 	<airport_info>
-		<icao_code>EGYK</icao_code>
+		<icao_code>GB-0075</icao_code>
 		<airport_name>Elvington Airfield</airport_name>
 		<latitude_deg>53°55'28"N</latitude_deg>
 		<latitude_dec>53.924444</latitude_dec>
@@ -2451,7 +2451,7 @@
 		<elevation_ft>56</elevation_ft>
 	</airport_info>
 	<airport_info>
-		<icao_code>X0AI</icao_code>
+		<icao_code>GB-0625</icao_code>
 		<airport_name>Aintree Heliport</airport_name>
 		<latitude_deg>53°28'37"N</latitude_deg>
 		<latitude_dec>53.47694</latitude_dec>
@@ -2471,7 +2471,7 @@
 		<elevation_ft>46</elevation_ft>
 	</airport_info>
 	<airport_info>
-		<icao_code>EG07</icao_code>
+		<icao_code>GB-0280</icao_code>
 		<airport_name>Deenethorpe</airport_name>
 		<latitude_deg>52°30'09"N</latitude_deg>
 		<latitude_dec>52.5038</latitude_dec>
@@ -2491,7 +2491,7 @@
 		<elevation_ft>253</elevation_ft>
 	</airport_info>
 	<airport_info>
-		<icao_code>EG95</icao_code>
+		<icao_code>GB-0389</icao_code>
 		<airport_name>Sutton Meadows</airport_name>
 		<latitude_deg>52°23'N</latitude_deg>
 		<latitude_dec>52.38572</latitude_dec>
