@@ -2500,4 +2500,44 @@
 		<elevation_m>0</elevation_m>
 		<elevation_ft>0</elevation_ft>
 	</airport_info>
+	<airport_info>
+		<icao_code>GB-0551</icao_code>
+		<airport_name>Sackville Farm Airstrip</airport_name>
+		<latitude_deg>52°15'45"N</latitude_deg>
+		<latitude_dec>52.26253</latitude_dec>
+		<longitude_deg>0°29'12"W</longitude_deg>
+		<longitude_dec>-0.48669</longitude_dec>
+		<elevation_m>66</elevation_m>
+		<elevation_ft>217</elevation_ft>
+	</airport_info>
+	<airport_info>
+		<icao_code>GB-0047</icao_code>
+		<airport_name>Northrepps</airport_name>
+		<latitude_deg>52°53'31"N</latitude_deg>
+		<latitude_dec>52.89204</latitude_dec>
+		<longitude_deg>1°19'2"E</longitude_deg>
+		<longitude_dec>1.31727</longitude_dec>
+		<elevation_m>58</elevation_m>
+		<elevation_ft>190</elevation_ft>
+	</airport_info>
+	<airport_info>
+		<icao_code>GB-0394</icao_code>
+		<airport_name>Little Snoring</airport_name>
+		<latitude_deg>52°51'34"N</latitude_deg>
+		<latitude_dec>52.859497</latitude_dec>
+		<longitude_deg>0°54'1"E</longitude_deg>
+		<longitude_dec>0.900380</longitude_dec>
+		<elevation_m>52</elevation_m>
+		<elevation_ft>171</elevation_ft>
+	</airport_info>
+	<airport_info>
+		<icao_code>LFAT</icao_code>
+		<airport_name>Le Touquet</airport_name>
+		<latitude_deg>50°31'5"N</latitude_deg>
+		<latitude_dec>50.51825</latitude_dec>
+		<longitude_deg>1°37'18"E</longitude_deg>
+		<longitude_dec>1.62193</longitude_dec>
+		<elevation_m>2</elevation_m>
+		<elevation_ft>7</elevation_ft>
+	</airport_info>
 </uk_airports>
