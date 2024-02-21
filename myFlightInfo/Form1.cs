@@ -28,6 +28,9 @@ namespace myFlightInfo
             File.WriteAllBytes("Microsoft.Web.WebView2.Core.dll", Resources.Microsoft_Web_WebView2_Core);
             File.WriteAllBytes("Microsoft.Web.WebView2.WinForms.dll", Resources.Microsoft_Web_WebView2_WinForms);
 
+            File.WriteAllBytes("CoordinateSharp.Magnetic.dll", Resources.CoordinateSharp_Magnetic);
+            File.WriteAllBytes("CoordinateSharp.dll", Resources.CoordinateSharp);
+
             string arcitectureProcessArchitecture =
                 System.Runtime.InteropServices.RuntimeInformation.ProcessArchitecture.ToString();
 
@@ -61,7 +64,7 @@ namespace myFlightInfo
                 GC.Collect();
             }
 
-           
+
 
             //check which school is set and use it but also set button to change to other school
             btn_school.Text += settings.school == "Rochester" ? "\rLt Gransden" : "\rRochester";
@@ -77,7 +80,7 @@ namespace myFlightInfo
             }
 
             //Get the information so we can use it when we need to
-          //  string[] compliance_data_array = GetComplianceData("Default");
+            //  string[] compliance_data_array = GetComplianceData("Default");
 
 
             Text += " : " + settings.school + " : v" +
@@ -90,9 +93,12 @@ namespace myFlightInfo
             XmlNodeList airportList = doc.SelectNodes("uk_airports/airport_info/airport_name");
             foreach (XmlNode Name in airportList)
             {
-                cmbobx_airport_info.Items.Add(Name.InnerText);
-                // cmbobx_airportinfo_to.Items.Add(Name.InnerText);
-                // cmbobx_airportinfo_from.Items.Add(Name.InnerText);
+                if (Name.InnerText != "UN-ASSIGNED")
+                {
+                    cmbobx_airport_info.Items.Add(Name.InnerText);
+                    // cmbobx_airportinfo_to.Items.Add(Name.InnerText);
+                    // cmbobx_airportinfo_from.Items.Add(Name.InnerText);
+                }
             }
 
             cmbobx_airport_info.SelectedIndex = 0;
@@ -103,6 +109,7 @@ namespace myFlightInfo
             cmbobx_airport_info.Visible = false;
             cmbobx_gransden_lodge.Visible = false;
             grpbx_altimeter.Visible = false;
+            btn_calculate_altimiter.Visible = false;
 
             await webView_notams.EnsureCoreWebView2Async();
             await webView_browser.EnsureCoreWebView2Async();
@@ -267,20 +274,36 @@ namespace myFlightInfo
                 int year = dateTimePicker1.Value.Year;
                 int month = dateTimePicker1.Value.Month;
                 int day = dateTimePicker1.Value.Day;
+                
+                //we use flags as the info in the xml file we will use may not be complete
+                //we only show info if it is complete.
+                bool noInfoFlag;
+                bool fromDataOK = true;
 
                 if (rdobtn_present.Checked)
                 {
-                    Navigate.AirfieldCoOrdinates(true, cmbobx_airport_info.Text, lstbx_navigation_from,
+                    fromDataOK = false;
+
+                    noInfoFlag = Navigate.AirfieldCoOrdinates(true, cmbobx_airport_info.Text, lstbx_navigation_from,
                         lbl_to_pressure, lbl_p_airport_name, txtbx_present_altitude, txtbx_present_pressure);
 
-                    Navigate.SolarInfo(cmbobx_airport_info.Text, lstbx_navigation_from, year, month, day);
+                    if (noInfoFlag)
+                    {
+                        Navigate.SolarInfo(cmbobx_airport_info.Text, lstbx_navigation_from, year, month, day);
+                        fromDataOK = true;
+                    }
                 }
                 else
                 {
-                    Navigate.AirfieldCoOrdinates(false, cmbobx_airport_info.Text, lstbx_navigation_to,
+                    noInfoFlag = Navigate.AirfieldCoOrdinates(false, cmbobx_airport_info.Text, lstbx_navigation_to,
                         lbl_to_pressure, lbl_d_airport_name, txtbx_to_altitude, txtbx_present_pressure);
 
-                    Navigate.SolarInfo(cmbobx_airport_info.Text, lstbx_navigation_to, year, month, day);
+                    if ((noInfoFlag) && (fromDataOK))
+                    {
+                        Navigate.SolarInfo(cmbobx_airport_info.Text, lstbx_navigation_to, year, month, day);
+                        btn_calculate_altimiter.Visible = true; //Now show button to calculate
+                    }
+
                 }
             }
             else if ((tabcnt_toplevel.SelectedTab == tab_utils) && (tabcnt_utils.SelectedTab == tab_browser))

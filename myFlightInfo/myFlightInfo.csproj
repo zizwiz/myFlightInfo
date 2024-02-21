@@ -154,6 +154,8 @@
     <Content Include="common_data\64_WebView2Loader.dll" />
     <Content Include="common_data\airport_data.xml" />
     <Content Include="common_data\arm64_WebView2Loader.dll" />
+    <Content Include="common_data\CoordinateSharp.dll" />
+    <Content Include="common_data\CoordinateSharp.Magnetic.dll" />
     <Content Include="common_data\Microsoft.Web.WebView2.Core.dll" />
     <Content Include="common_data\Microsoft.Web.WebView2.WinForms.dll" />
     <Content Include="compliance_data\compliance_data.xml" />

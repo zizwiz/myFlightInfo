@@ -83,14 +83,17 @@ namespace myFlightInfo.Navigation
 
         }
 
-        public static void AirfieldCoOrdinates(bool flag, string airfield, ListBox myListBox, Label lblPressure, Label lblAirportName,
+        public static bool AirfieldCoOrdinates(bool flag, string airfield, ListBox myListBox, Label lblPressure, Label lblAirportName,
             TextBox txtbxAltitude, TextBox txtbxPressure)
         {
+            bool infoFlag = false;
+            
             try
             {
                 // Make the ListBox use tabs.
                 myListBox.UseTabStops = true;
                 myListBox.UseCustomTabOffsets = true;
+                
 
                 // Define the tabs.
                 ListBox.IntegerCollection offsets = myListBox.CustomTabOffsets;
@@ -98,34 +101,47 @@ namespace myFlightInfo.Navigation
 
                 string[] data = airport_data.GetAirportInfo(airfield);
 
-                lblPressure.Text = "";
+                if (data[8] != "")
+                {
 
-                //Clear listbox
-                myListBox.Items.Clear();
+                    lblPressure.Text = "";
 
-                lblAirportName.Text = data[2];
-                txtbxAltitude.Text = data[8];
-                if (flag) txtbxPressure.Text = "0"; //only do if from airfield
+                    //Clear listbox
+                    myListBox.Items.Clear();
 
-                myListBox.Items.Add("ICAO Code = \t" + data[1]);
+                    lblAirportName.Text = data[2];
+                    txtbxAltitude.Text = data[8];
+                    if (flag) txtbxPressure.Text = "0"; //only do if from airfield
 
-                myListBox.Items.Add("");
-                myListBox.Items.Add("Latitude degrees = \t" + data[3]);
-                myListBox.Items.Add("Latitude decimal = \t" + data[4]);
+                    myListBox.Items.Add("ICAO Code = \t" + data[1]);
 
-                myListBox.Items.Add("");
-                myListBox.Items.Add("Longitude degrees = \t" + data[5]);
-                myListBox.Items.Add("Longitude decimal = \t" + data[6]);
+                    myListBox.Items.Add("");
+                    myListBox.Items.Add("Latitude degrees = \t" + data[3]);
+                    myListBox.Items.Add("Latitude decimal = \t" + data[4]);
 
-                myListBox.Items.Add("");
-                myListBox.Items.Add("Elevation = \t" + data[7] + "m");
+                    myListBox.Items.Add("");
+                    myListBox.Items.Add("Longitude degrees = \t" + data[5]);
+                    myListBox.Items.Add("Longitude decimal = \t" + data[6]);
 
-                myListBox.TopIndex = myListBox.Items.Count - 1;
+                    myListBox.Items.Add("");
+                    myListBox.Items.Add("Elevation = \t" + data[7] + "m");
+
+                    myListBox.TopIndex = myListBox.Items.Count - 1;
+                    infoFlag = true;
+                }
+                else
+                {
+                    MsgBox.Show("No information about that airfield\rPlease try another airfield",
+                        "No Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
+                }
             }
             catch (Exception e)
             {
                 MsgBox.Show("Check all information is correct", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            return infoFlag;
         }
 
         public static void BearingAndDistance(string fromAirfieldName, string toAirfieldName, int year, int month, int day, int hour,

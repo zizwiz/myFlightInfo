@@ -41,8 +41,8 @@ namespace myFlightInfo
             this.rdobtn_destination = new System.Windows.Forms.RadioButton();
             this.rdobtn_present = new System.Windows.Forms.RadioButton();
             this.panel33 = new System.Windows.Forms.Panel();
-            this.cmbobx_gransden_lodge = new System.Windows.Forms.ComboBox();
             this.cmbobx_airport_info = new System.Windows.Forms.ComboBox();
+            this.cmbobx_gransden_lodge = new System.Windows.Forms.ComboBox();
             this.panel34 = new System.Windows.Forms.Panel();
             this.grpbx_browser_navigation = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
@@ -684,13 +684,23 @@ namespace myFlightInfo
             // 
             // panel33
             // 
-            this.panel33.Controls.Add(this.cmbobx_gransden_lodge);
             this.panel33.Controls.Add(this.cmbobx_airport_info);
+            this.panel33.Controls.Add(this.cmbobx_gransden_lodge);
             this.panel33.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel33.Location = new System.Drawing.Point(332, 3);
             this.panel33.Name = "panel33";
             this.panel33.Size = new System.Drawing.Size(329, 88);
             this.panel33.TabIndex = 2;
+            // 
+            // cmbobx_airport_info
+            // 
+            this.cmbobx_airport_info.FormattingEnabled = true;
+            this.cmbobx_airport_info.Location = new System.Drawing.Point(6, 32);
+            this.cmbobx_airport_info.Name = "cmbobx_airport_info";
+            this.cmbobx_airport_info.Size = new System.Drawing.Size(318, 28);
+            this.cmbobx_airport_info.Sorted = true;
+            this.cmbobx_airport_info.TabIndex = 0;
+            this.cmbobx_airport_info.SelectedIndexChanged += new System.EventHandler(this.cmbobx_airport_info_SelectedIndexChanged);
             // 
             // cmbobx_gransden_lodge
             // 
@@ -707,16 +717,6 @@ namespace myFlightInfo
             this.cmbobx_gransden_lodge.Sorted = true;
             this.cmbobx_gransden_lodge.TabIndex = 1;
             this.cmbobx_gransden_lodge.SelectedIndexChanged += new System.EventHandler(this.cmbobx_gransden_lodge_SelectedIndexChanged);
-            // 
-            // cmbobx_airport_info
-            // 
-            this.cmbobx_airport_info.FormattingEnabled = true;
-            this.cmbobx_airport_info.Location = new System.Drawing.Point(6, 32);
-            this.cmbobx_airport_info.Name = "cmbobx_airport_info";
-            this.cmbobx_airport_info.Size = new System.Drawing.Size(318, 28);
-            this.cmbobx_airport_info.Sorted = true;
-            this.cmbobx_airport_info.TabIndex = 0;
-            this.cmbobx_airport_info.SelectedIndexChanged += new System.EventHandler(this.cmbobx_airport_info_SelectedIndexChanged);
             // 
             // panel34
             // 

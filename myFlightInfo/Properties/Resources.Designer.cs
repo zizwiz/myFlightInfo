@@ -84,18 +84,19 @@ namespace myFlightInfo.Properties {
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
         ///&lt;uk_airports&gt;
         ///	&lt;airport_info&gt;
-        ///		&lt;icao_code&gt;EG74&lt;/icao_code&gt;
-        ///		&lt;airport_name&gt;Bruntingthorpe Aerodrome&lt;/airport_name&gt;
-        ///		&lt;latitude_deg&gt;52°29&apos;28&quot;N&lt;/latitude_deg&gt;
-        ///		&lt;latitude_dec&gt;52.49111&lt;/latitude_dec&gt;
-        ///		&lt;longitude_deg&gt;1°7&apos;56&quot;W&lt;/longitude_deg&gt;
-        ///		&lt;longitude_dec&gt;-1.13222&lt;/longitude_dec&gt;
-        ///		&lt;elevation_m&gt;139&lt;/elevation_m&gt;
-        ///		&lt;elevation_ft&gt;456&lt;/elevation_ft&gt;
-        ///	&lt;/airport_info&gt;
-        ///	&lt;airport_info&gt;
-        ///		&lt;icao_code&gt;EGAA&lt;/icao_code&gt;
-        ///		&lt;airport_name&gt;Belfast International Airport [rest of string was truncated]&quot;;.
+        ///		&lt;icao_code&gt;CARK&lt;/icao_code&gt;
+        ///		&lt;airport_name&gt;Cark airfield&lt;/airport_name&gt;
+        ///		&lt;latitude_deg&gt;54°09&apos;45&quot;N&lt;/latitude_deg&gt;
+        ///		&lt;latitude_dec&gt;54.1625&lt;/latitude_dec&gt;
+        ///		&lt;longitude_deg&gt;2°57&apos;30&quot;W&lt;/longitude_deg&gt;
+        ///		&lt;longitude_dec&gt;2.9583&lt;/longitude_dec&gt;
+        ///		&lt;elevation_m&gt;5&lt;/elevation_m&gt;
+        ///		&lt;elevation_ft&gt;16&lt;/elevation_ft&gt;
+        ///		&lt;iata_code&gt;&lt;/iata_code&gt;
+        ///		&lt;alternate_name&gt;&lt;/alternate_name&gt;
+        ///		&lt;fir&gt;London FIR&lt;/fir&gt;
+        ///		&lt;city&gt;Cark&lt;/city&gt;
+        ///		&lt;type&gt;Small air [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string airport_data {
             get {
@@ -142,6 +143,26 @@ namespace myFlightInfo.Properties {
         internal static string compliance_data {
             get {
                 return ResourceManager.GetString("compliance_data", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] CoordinateSharp {
+            get {
+                object obj = ResourceManager.GetObject("CoordinateSharp", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] CoordinateSharp_Magnetic {
+            get {
+                object obj = ResourceManager.GetObject("CoordinateSharp_Magnetic", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         

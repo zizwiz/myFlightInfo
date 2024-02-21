@@ -8,7 +8,7 @@
 		<longitude_deg>2°57'30"W</longitude_deg>
 		<longitude_dec>2.9583</longitude_dec>
 		<elevation_m>5</elevation_m>
-		<elevation_ft>17</elevation_ft>
+		<elevation_ft>16</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -668,7 +668,7 @@
 		<longitude_deg>2°10'2"W</longitude_deg>
 		<longitude_dec>-2.16722</longitude_dec>
 		<elevation_m>25</elevation_m>
-		<elevation_ft>73</elevation_ft>
+		<elevation_ft>82</elevation_ft>
 		<iata_code>GLO</iata_code>
 		<alternate_name>Staverton</alternate_name>
 		<fir>London FIR</fir>
@@ -1148,7 +1148,7 @@
 		<longitude_deg></longitude_deg>
 		<longitude_dec></longitude_dec>
 		<elevation_m></elevation_m>
-		<elevation_ft>141</elevation_ft>
+		<elevation_ft></elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -1163,7 +1163,7 @@
 		<longitude_deg></longitude_deg>
 		<longitude_dec></longitude_dec>
 		<elevation_m></elevation_m>
-		<elevation_ft>56</elevation_ft>
+		<elevation_ft></elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir></fir>
@@ -1178,7 +1178,7 @@
 		<longitude_deg>2°34'20"W</longitude_deg>
 		<longitude_dec>-2.57222</longitude_dec>
 		<elevation_m>43</elevation_m>
-		<elevation_ft>302</elevation_ft>
+		<elevation_ft>141</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -1193,7 +1193,7 @@
 		<longitude_deg>0°41'13"W</longitude_deg>
 		<longitude_dec>-0.68703</longitude_dec>
 		<elevation_m>17</elevation_m>
-		<elevation_ft>276</elevation_ft>
+		<elevation_ft>56</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -1208,7 +1208,7 @@
 		<longitude_deg>2°39'8"W</longitude_deg>
 		<longitude_dec>-2.65222</longitude_dec>
 		<elevation_m>92</elevation_m>
-		<elevation_ft>240</elevation_ft>
+		<elevation_ft>302</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -1238,7 +1238,7 @@
 		<longitude_deg>2°46'18"W</longitude_deg>
 		<longitude_dec>-2.77167</longitude_dec>
 		<elevation_m>84</elevation_m>
-		<elevation_ft>20</elevation_ft>
+		<elevation_ft>276</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -1253,7 +1253,7 @@
 		<longitude_deg>3°9'9"W</longitude_deg>
 		<longitude_dec>-3.1525</longitude_dec>
 		<elevation_m>73</elevation_m>
-		<elevation_ft>262</elevation_ft>
+		<elevation_ft>240</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -1358,7 +1358,7 @@
 		<longitude_deg>4°9'1"W</longitude_deg>
 		<longitude_dec>-4.15028</longitude_dec>
 		<elevation_m>6</elevation_m>
-		<elevation_ft>548</elevation_ft>
+		<elevation_ft>20</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>Chivenor</alternate_name>
 		<fir>London FIR</fir>
@@ -1373,7 +1373,7 @@
 		<longitude_deg>1°7'54"W</longitude_deg>
 		<longitude_dec>-1.13167</longitude_dec>
 		<elevation_m>80</elevation_m>
-		<elevation_ft>472</elevation_ft>
+		<elevation_ft>262</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -1448,7 +1448,7 @@
 		<longitude_deg></longitude_deg>
 		<longitude_dec></longitude_dec>
 		<elevation_m></elevation_m>
-		<elevation_ft>390</elevation_ft>
+		<elevation_ft></elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -1463,7 +1463,7 @@
 		<longitude_deg>1°48'53.2"W</longitude_deg>
 		<longitude_dec>-1.78146</longitude_dec>
 		<elevation_m>167</elevation_m>
-		<elevation_ft>417</elevation_ft>
+		<elevation_ft>548</elevation_ft>
 		<iata_code>UPV</iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -1493,7 +1493,7 @@
 		<longitude_deg>1°59'46"W</longitude_deg>
 		<longitude_dec>-1.99611</longitude_dec>
 		<elevation_m>144</elevation_m>
-		<elevation_ft>7</elevation_ft>
+		<elevation_ft>472</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -1508,7 +1508,7 @@
 		<longitude_deg>1°45'4"W</longitude_deg>
 		<longitude_dec>-1.75111</longitude_dec>
 		<elevation_m>119</elevation_m>
-		<elevation_ft>266</elevation_ft>
+		<elevation_ft>390</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>Boscombe Down</alternate_name>
 		<fir>London FIR</fir>
@@ -1523,7 +1523,7 @@
 		<longitude_deg>1°45'15"W</longitude_deg>
 		<longitude_dec>-1.75417</longitude_dec>
 		<elevation_m>127</elevation_m>
-		<elevation_ft>144</elevation_ft>
+		<elevation_ft>417</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -1553,7 +1553,7 @@
 		<longitude_deg>2°26'59"W</longitude_deg>
 		<longitude_dec>-2.44972</longitude_dec>
 		<elevation_m>2</elevation_m>
-		<elevation_ft>49</elevation_ft>
+		<elevation_ft>7</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>Portland</alternate_name>
 		<fir>London FIR</fir>
@@ -1583,7 +1583,7 @@
 		<longitude_deg>5°15'17"W</longitude_deg>
 		<longitude_dec>-5.25472</longitude_dec>
 		<elevation_m>81</elevation_m>
-		<elevation_ft>295</elevation_ft>
+		<elevation_ft>266</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>Culdrose</alternate_name>
 		<fir>London FIR</fir>
@@ -1673,7 +1673,7 @@
 		<longitude_deg>3°26'9"W</longitude_deg>
 		<longitude_dec>-3.43583</longitude_dec>
 		<elevation_m>44</elevation_m>
-		<elevation_ft>33</elevation_ft>
+		<elevation_ft>144</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -1688,7 +1688,7 @@
 		<longitude_deg>2°38'43"W</longitude_deg>
 		<longitude_dec>-2.64528</longitude_dec>
 		<elevation_m>15</elevation_m>
-		<elevation_ft>13</elevation_ft>
+		<elevation_ft>49</elevation_ft>
 		<iata_code>YEO</iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -1718,7 +1718,7 @@
 		<longitude_deg>2°19'15"W</longitude_deg>
 		<longitude_dec>-2.32083</longitude_dec>
 		<elevation_m>90</elevation_m>
-		<elevation_ft>240</elevation_ft>
+		<elevation_ft>295</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>Scottish FIR</fir>
@@ -1748,7 +1748,7 @@
 		<longitude_deg>5°41'10"W</longitude_deg>
 		<longitude_dec>-5.68611</longitude_dec>
 		<elevation_m>10</elevation_m>
-		<elevation_ft>0</elevation_ft>
+		<elevation_ft>33</elevation_ft>
 		<iata_code>CAL</iata_code>
 		<alternate_name>Machrihanish</alternate_name>
 		<fir>Scottish FIR</fir>
@@ -1763,7 +1763,7 @@
 		<longitude_deg>2°46'14"W</longitude_deg>
 		<longitude_dec>-2.77056</longitude_dec>
 		<elevation_m>4</elevation_m>
-		<elevation_ft>89</elevation_ft>
+		<elevation_ft>13</elevation_ft>
 		<iata_code>EOI</iata_code>
 		<alternate_name></alternate_name>
 		<fir>Scottish FIR</fir>
@@ -1793,7 +1793,7 @@
 		<longitude_deg>1°37'41"W</longitude_deg>
 		<longitude_dec>-1.62806</longitude_dec>
 		<elevation_m>73</elevation_m>
-		<elevation_ft>26</elevation_ft>
+		<elevation_ft>240</elevation_ft>
 		<iata_code>FIE</iata_code>
 		<alternate_name></alternate_name>
 		<fir>Scottish FIR</fir>
@@ -1808,7 +1808,7 @@
 		<longitude_deg>4°17'49"W</longitude_deg>
 		<longitude_dec>-4.29694</longitude_dec>
 		<elevation_m>0</elevation_m>
-		<elevation_ft>13</elevation_ft>
+		<elevation_ft>0</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>Scottish FIR</fir>
@@ -1823,7 +1823,7 @@
 		<longitude_deg>0°55'38"W</longitude_deg>
 		<longitude_dec>-0.92722</longitude_dec>
 		<elevation_m>27</elevation_m>
-		<elevation_ft>56</elevation_ft>
+		<elevation_ft>89</elevation_ft>
 		<iata_code>WHS</iata_code>
 		<alternate_name></alternate_name>
 		<fir>Scottish FIR</fir>
@@ -1883,7 +1883,7 @@
 		<longitude_deg>6°37'4"W</longitude_deg>
 		<longitude_dec>-6.61778</longitude_dec>
 		<elevation_m>4</elevation_m>
-		<elevation_ft>92</elevation_ft>
+		<elevation_ft>13</elevation_ft>
 		<iata_code>COL</iata_code>
 		<alternate_name></alternate_name>
 		<fir>Scottish FIR</fir>
@@ -1913,7 +1913,7 @@
 		<longitude_deg>2°26'2"W</longitude_deg>
 		<longitude_dec>-2.43389</longitude_dec>
 		<elevation_m>17</elevation_m>
-		<elevation_ft>33</elevation_ft>
+		<elevation_ft>56</elevation_ft>
 		<iata_code>NRL</iata_code>
 		<alternate_name></alternate_name>
 		<fir>Scottish FIR</fir>
@@ -1928,7 +1928,7 @@
 		<longitude_deg>5°24'4"W</longitude_deg>
 		<longitude_dec>-5.40111</longitude_dec>
 		<elevation_m>5</elevation_m>
-		<elevation_ft>49</elevation_ft>
+		<elevation_ft>16</elevation_ft>
 		<iata_code>OBN</iata_code>
 		<alternate_name>North Connel</alternate_name>
 		<fir>Scottish FIR</fir>
@@ -1943,7 +1943,7 @@
 		<longitude_deg>2°54'1"W</longitude_deg>
 		<longitude_dec>-2.90028</longitude_dec>
 		<elevation_m>28</elevation_m>
-		<elevation_ft>30</elevation_ft>
+		<elevation_ft>92</elevation_ft>
 		<iata_code>PPW</iata_code>
 		<alternate_name></alternate_name>
 		<fir>Scottish FIR</fir>
@@ -1973,7 +1973,7 @@
 		<longitude_deg>2°38'30"W</longitude_deg>
 		<longitude_dec>-2.64167</longitude_dec>
 		<elevation_m>10</elevation_m>
-		<elevation_ft>30</elevation_ft>
+		<elevation_ft>33</elevation_ft>
 		<iata_code>SOY</iata_code>
 		<alternate_name></alternate_name>
 		<fir>Scottish FIR</fir>
@@ -1988,7 +1988,7 @@
 		<longitude_deg>2°34'30"W</longitude_deg>
 		<longitude_dec>-2.575</longitude_dec>
 		<elevation_m>15</elevation_m>
-		<elevation_ft>26</elevation_ft>
+		<elevation_ft>49</elevation_ft>
 		<iata_code>NDY</iata_code>
 		<alternate_name></alternate_name>
 		<fir>Scottish FIR</fir>
@@ -2003,7 +2003,7 @@
 		<longitude_deg>1°14'37"W</longitude_deg>
 		<longitude_dec>-1.24361</longitude_dec>
 		<elevation_m>9</elevation_m>
-		<elevation_ft>423</elevation_ft>
+		<elevation_ft>30</elevation_ft>
 		<iata_code>LWK</iata_code>
 		<alternate_name></alternate_name>
 		<fir>Scottish FIR</fir>
@@ -2033,7 +2033,7 @@
 		<longitude_deg>5°40'23"W</longitude_deg>
 		<longitude_dec>-5.67309</longitude_dec>
 		<elevation_m>25</elevation_m>
-		<elevation_ft>18</elevation_ft>
+		<elevation_ft>82</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>Scottish FIR</fir>
@@ -2048,7 +2048,7 @@
 		<longitude_deg>2°56'59"W</longitude_deg>
 		<longitude_dec>-2.94972</longitude_dec>
 		<elevation_m>9</elevation_m>
-		<elevation_ft>36</elevation_ft>
+		<elevation_ft>30</elevation_ft>
 		<iata_code>WRY</iata_code>
 		<alternate_name>Westray</alternate_name>
 		<fir>Scottish FIR</fir>
@@ -2078,7 +2078,7 @@
 		<longitude_deg>6°14'37"W</longitude_deg>
 		<longitude_dec>-6.24361</longitude_dec>
 		<elevation_m>8</elevation_m>
-		<elevation_ft>20</elevation_ft>
+		<elevation_ft>26</elevation_ft>
 		<iata_code>CSA</iata_code>
 		<alternate_name></alternate_name>
 		<fir>Scottish FIR</fir>
@@ -2108,7 +2108,7 @@
 		<longitude_deg>4°33'25"W</longitude_deg>
 		<longitude_dec>-4.55694</longitude_dec>
 		<elevation_m>129</elevation_m>
-		<elevation_ft>141</elevation_ft>
+		<elevation_ft>423</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>West Wales</alternate_name>
 		<fir>London FIR</fir>
@@ -2138,7 +2138,7 @@
 		<longitude_deg>3°8'15"W</longitude_deg>
 		<longitude_dec>-3.1375</longitude_dec>
 		<elevation_m>11</elevation_m>
-		<elevation_ft>213</elevation_ft>
+		<elevation_ft>36</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>Tremorfa Foreshore Heliport</alternate_name>
 		<fir>London FIR</fir>
@@ -2153,7 +2153,7 @@
 		<longitude_deg>4°7'38"W</longitude_deg>
 		<longitude_dec>-4.12722</longitude_dec>
 		<elevation_m>6</elevation_m>
-		<elevation_ft>276</elevation_ft>
+		<elevation_ft>20</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -2168,7 +2168,7 @@
 		<longitude_deg>4°57'40"W</longitude_deg>
 		<longitude_dec>-4.96111</longitude_dec>
 		<elevation_m>43</elevation_m>
-		<elevation_ft>23</elevation_ft>
+		<elevation_ft>141</elevation_ft>
 		<iata_code>HAW</iata_code>
 		<alternate_name>Withybush</alternate_name>
 		<fir>London FIR</fir>
@@ -2183,7 +2183,7 @@
 		<longitude_deg>3°20'36"W</longitude_deg>
 		<longitude_dec>-3.34333</longitude_dec>
 		<elevation_m>65</elevation_m>
-		<elevation_ft>604</elevation_ft>
+		<elevation_ft>213</elevation_ft>
 		<iata_code>CWL</iata_code>
 		<alternate_name>Rhoose</alternate_name>
 		<fir>London FIR</fir>
@@ -2213,7 +2213,7 @@
 		<longitude_deg>4°4'5"W</longitude_deg>
 		<longitude_dec>-4.06806</longitude_dec>
 		<elevation_m>84</elevation_m>
-		<elevation_ft>72</elevation_ft>
+		<elevation_ft>276</elevation_ft>
 		<iata_code>SWS</iata_code>
 		<alternate_name>Fairwood Common</alternate_name>
 		<fir>London FIR</fir>
@@ -2333,7 +2333,7 @@
 		<longitude_deg>4°18'44"W</longitude_deg>
 		<longitude_dec>-4.31222</longitude_dec>
 		<elevation_m>7</elevation_m>
-		<elevation_ft>525</elevation_ft>
+		<elevation_ft>23</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -2543,7 +2543,7 @@
 		<longitude_deg>2°43'9"W</longitude_deg>
 		<longitude_dec>-2.71917</longitude_dec>
 		<elevation_m>184</elevation_m>
-		<elevation_ft>787</elevation_ft>
+		<elevation_ft>604</elevation_ft>
 		<iata_code>BRS</iata_code>
 		<alternate_name>Lulsgate Bottom</alternate_name>
 		<fir>London FIR</fir>
@@ -2738,7 +2738,7 @@
 		<longitude_deg>2°50'59"W</longitude_deg>
 		<longitude_dec>-2.84972</longitude_dec>
 		<elevation_m>22</elevation_m>
-		<elevation_ft>121</elevation_ft>
+		<elevation_ft>72</elevation_ft>
 		<iata_code>LPL</iata_code>
 		<alternate_name>Speke</alternate_name>
 		<fir>London FIR</fir>
@@ -2843,7 +2843,7 @@
 		<longitude_deg>0°22'6"W</longitude_deg>
 		<longitude_dec>-0.36833</longitude_dec>
 		<elevation_m>160</elevation_m>
-		<elevation_ft>387</elevation_ft>
+		<elevation_ft>525</elevation_ft>
 		<iata_code>LTN</iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -2903,7 +2903,7 @@
 		<longitude_deg>2°9'13"W</longitude_deg>
 		<longitude_dec>-2.15361</longitude_dec>
 		<elevation_m>240</elevation_m>
-		<elevation_ft>466</elevation_ft>
+		<elevation_ft>787</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>Christchurch</alternate_name>
 		<fir>London FIR</fir>
@@ -2918,7 +2918,7 @@
 		<longitude_deg>1°9'19"E</longitude_deg>
 		<longitude_dec>1.15528</longitude_dec>
 		<elevation_m>37</elevation_m>
-		<elevation_ft>118</elevation_ft>
+		<elevation_ft>121</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>Exeter</alternate_name>
 		<fir>London FIR</fir>
@@ -2927,17 +2927,17 @@
 	</airport_info>
 	<airport_info>
 		<icao_code>EGHC</icao_code>
-		<airport_name>Land's End Airport</airport_name>
+		<airport_name>Land`s End Airport</airport_name>
 		<latitude_deg>50°6'10"N</latitude_deg>
 		<latitude_dec>50.10278</latitude_dec>
 		<longitude_deg>5°40'14"W</longitude_deg>
 		<longitude_dec>-5.67056</longitude_dec>
 		<elevation_m>118</elevation_m>
-		<elevation_ft>20</elevation_ft>
+		<elevation_ft>387</elevation_ft>
 		<iata_code>LEQ</iata_code>
 		<alternate_name>St Just</alternate_name>
 		<fir>London FIR</fir>
-		<city>Land's End</city>
+		<city>Land`s End</city>
 		<type>Small airport</type>
 	</airport_info>
 	<airport_info>
@@ -2948,7 +2948,7 @@
 		<longitude_deg>4°6'21"W</longitude_deg>
 		<longitude_dec>-4.10583</longitude_dec>
 		<elevation_m>142</elevation_m>
-		<elevation_ft>180</elevation_ft>
+		<elevation_ft>466</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>Roborough</alternate_name>
 		<fir></fir>
@@ -2957,17 +2957,17 @@
 	</airport_info>
 	<airport_info>
 		<icao_code>EGHE</icao_code>
-		<airport_name>St. Mary's Airport</airport_name>
+		<airport_name>St. Mary`s Airport</airport_name>
 		<latitude_deg>49°54'48"N</latitude_deg>
 		<latitude_dec>49.91333</latitude_dec>
 		<longitude_deg>6°17'31"W</longitude_deg>
 		<longitude_dec>-6.29194</longitude_dec>
 		<elevation_m>36</elevation_m>
-		<elevation_ft>30</elevation_ft>
+		<elevation_ft>118</elevation_ft>
 		<iata_code>ISC</iata_code>
 		<alternate_name>Scilly Isles</alternate_name>
 		<fir>London FIR</fir>
-		<city>St. Mary's</city>
+		<city>St. Mary`s</city>
 		<type>Small airport</type>
 	</airport_info>
 	<airport_info>
@@ -2978,7 +2978,7 @@
 		<longitude_deg>1°12'26"W</longitude_deg>
 		<longitude_dec>-1.20722</longitude_dec>
 		<elevation_m>6</elevation_m>
-		<elevation_ft>36</elevation_ft>
+		<elevation_ft>20</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>HMS Daedalus</alternate_name>
 		<fir>London FIR</fir>
@@ -2993,7 +2993,7 @@
 		<longitude_deg>2°39'31"W</longitude_deg>
 		<longitude_dec>-2.65861</longitude_dec>
 		<elevation_m>55</elevation_m>
-		<elevation_ft>30</elevation_ft>
+		<elevation_ft>180</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -3008,7 +3008,7 @@
 		<longitude_deg>1°50'33"W</longitude_deg>
 		<longitude_dec>-1.8425</longitude_dec>
 		<elevation_m>9</elevation_m>
-		<elevation_ft>20</elevation_ft>
+		<elevation_ft>30</elevation_ft>
 		<iata_code>BOH</iata_code>
 		<alternate_name>Hurn</alternate_name>
 		<fir>London FIR</fir>
@@ -3023,7 +3023,7 @@
 		<longitude_deg>1°21'24"W</longitude_deg>
 		<longitude_dec>-1.35667</longitude_dec>
 		<elevation_m>11</elevation_m>
-		<elevation_ft>646</elevation_ft>
+		<elevation_ft>36</elevation_ft>
 		<iata_code>SOU</iata_code>
 		<alternate_name>Eastleigh</alternate_name>
 		<fir>London FIR</fir>
@@ -3038,7 +3038,7 @@
 		<longitude_deg>1°6'35"W</longitude_deg>
 		<longitude_dec>-1.10972</longitude_dec>
 		<elevation_m>9</elevation_m>
-		<elevation_ft>39</elevation_ft>
+		<elevation_ft>30</elevation_ft>
 		<iata_code>BBP</iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -3053,7 +3053,7 @@
 		<longitude_deg>5°30'50"W</longitude_deg>
 		<longitude_dec>-5.51389</longitude_dec>
 		<elevation_m>6</elevation_m>
-		<elevation_ft>292</elevation_ft>
+		<elevation_ft>20</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -3068,7 +3068,7 @@
 		<longitude_deg>1°1'54"W</longitude_deg>
 		<longitude_dec>-1.03167</longitude_dec>
 		<elevation_m>197</elevation_m>
-		<elevation_ft>528</elevation_ft>
+		<elevation_ft>646</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -3098,7 +3098,7 @@
 		<longitude_deg>1°10'56"W</longitude_deg>
 		<longitude_dec>-1.18222</longitude_dec>
 		<elevation_m>12</elevation_m>
-		<elevation_ft>367</elevation_ft>
+		<elevation_ft>39</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>Isle of Wight</alternate_name>
 		<fir>London FIR</fir>
@@ -3113,7 +3113,7 @@
 		<longitude_deg>1°36'0"W</longitude_deg>
 		<longitude_dec>-1.6</longitude_dec>
 		<elevation_m>89</elevation_m>
-		<elevation_ft>98</elevation_ft>
+		<elevation_ft>292</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -3128,7 +3128,7 @@
 		<longitude_deg>1°14'4"W</longitude_deg>
 		<longitude_dec>-1.23444</longitude_dec>
 		<elevation_m>161</elevation_m>
-		<elevation_ft>174</elevation_ft>
+		<elevation_ft>528</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -3143,7 +3143,7 @@
 		<longitude_deg>4°59'42"W</longitude_deg>
 		<longitude_dec>-4.995</longitude_dec>
 		<elevation_m>112</elevation_m>
-		<elevation_ft>7</elevation_ft>
+		<elevation_ft>367</elevation_ft>
 		<iata_code>NQY</iata_code>
 		<alternate_name>RAF St Mawgan</alternate_name>
 		<fir>London FIR</fir>
@@ -3158,7 +3158,7 @@
 		<longitude_deg>0°45'33"W</longitude_deg>
 		<longitude_dec>-0.75917</longitude_dec>
 		<elevation_m>30</elevation_m>
-		<elevation_ft>630</elevation_ft>
+		<elevation_ft>98</elevation_ft>
 		<iata_code>QUG</iata_code>
 		<alternate_name>Westhampnett, Chichester</alternate_name>
 		<fir>London FIR</fir>
@@ -3173,7 +3173,7 @@
 		<longitude_deg>2°21'26"W</longitude_deg>
 		<longitude_dec>-2.35722</longitude_dec>
 		<elevation_m>53</elevation_m>
-		<elevation_ft>397</elevation_ft>
+		<elevation_ft>174</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>Lower Marsh</alternate_name>
 		<fir>London FIR</fir>
@@ -3188,7 +3188,7 @@
 		<longitude_deg>6°19'53"W</longitude_deg>
 		<longitude_dec>-6.33139</longitude_dec>
 		<elevation_m>2</elevation_m>
-		<elevation_ft>272</elevation_ft>
+		<elevation_ft>7</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>Tarrant Rushton</alternate_name>
 		<fir>London FIR</fir>
@@ -3203,7 +3203,7 @@
 		<longitude_deg>3°59'20"W</longitude_deg>
 		<longitude_dec>-3.98889</longitude_dec>
 		<elevation_m>192</elevation_m>
-		<elevation_ft>312</elevation_ft>
+		<elevation_ft>630</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -3263,7 +3263,7 @@
 		<longitude_deg>5°8'33"W</longitude_deg>
 		<longitude_dec>-5.1425</longitude_dec>
 		<elevation_m>121</elevation_m>
-		<elevation_ft>272</elevation_ft>
+		<elevation_ft>397</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -3683,7 +3683,7 @@
 		<longitude_deg>2°12'54"W</longitude_deg>
 		<longitude_dec>-2.215</longitude_dec>
 		<elevation_m>83</elevation_m>
-		<elevation_ft>-3</elevation_ft>
+		<elevation_ft>272</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir></fir>
@@ -3698,7 +3698,7 @@
 		<longitude_deg>2°36'7"W</longitude_deg>
 		<longitude_dec>-2.60194</longitude_dec>
 		<elevation_m>95</elevation_m>
-		<elevation_ft>558</elevation_ft>
+		<elevation_ft>312</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir></fir>
@@ -3818,7 +3818,7 @@
 		<longitude_deg>2°11'44"W</longitude_deg>
 		<longitude_dec>-2.19556</longitude_dec>
 		<elevation_m>83</elevation_m>
-		<elevation_ft>617</elevation_ft>
+		<elevation_ft>272</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir></fir>
@@ -4073,7 +4073,7 @@
 		<longitude_deg>0°17'49"W</longitude_deg>
 		<longitude_dec>-0.29694</longitude_dec>
 		<elevation_m>-1</elevation_m>
-		<elevation_ft>486</elevation_ft>
+		<elevation_ft>-3</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>Brighton City</alternate_name>
 		<fir></fir>
@@ -4088,7 +4088,7 @@
 		<longitude_deg>0°1'57"E</longitude_deg>
 		<longitude_dec>0.0325</longitude_dec>
 		<elevation_m>170</elevation_m>
-		<elevation_ft>66</elevation_ft>
+		<elevation_ft>558</elevation_ft>
 		<iata_code>BQH</iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -4133,7 +4133,7 @@
 		<longitude_deg>0°49'40"E</longitude_deg>
 		<longitude_dec>0.82778</longitude_dec>
 		<elevation_m>188</elevation_m>
-		<elevation_ft>187</elevation_ft>
+		<elevation_ft>617</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -4163,7 +4163,7 @@
 		<longitude_deg>0°44'23"W</longitude_deg>
 		<longitude_dec>-0.73972</longitude_dec>
 		<elevation_m>148</elevation_m>
-		<elevation_ft>66</elevation_ft>
+		<elevation_ft>486</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -4178,7 +4178,7 @@
 		<longitude_deg>0°38'44.196"E</longitude_deg>
 		<longitude_dec>0.64561</longitude_dec>
 		<elevation_m>20</elevation_m>
-		<elevation_ft>207</elevation_ft>
+		<elevation_ft>66</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>Lashenden</alternate_name>
 		<fir>London FIR</fir>
@@ -4208,7 +4208,7 @@
 		<longitude_deg>0°11'25"W</longitude_deg>
 		<longitude_dec>-0.19028</longitude_dec>
 		<elevation_m>57</elevation_m>
-		<elevation_ft>636</elevation_ft>
+		<elevation_ft>187</elevation_ft>
 		<iata_code>LGW</iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -4223,7 +4223,7 @@
 		<longitude_deg>0°9'21"E</longitude_deg>
 		<longitude_dec>0.15583</longitude_dec>
 		<elevation_m>20</elevation_m>
-		<elevation_ft>56</elevation_ft>
+		<elevation_ft>66</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -4313,7 +4313,7 @@
 		<longitude_deg>0°8'19"W</longitude_deg>
 		<longitude_dec>-0.13861</longitude_dec>
 		<elevation_m>63</elevation_m>
-		<elevation_ft>20</elevation_ft>
+		<elevation_ft>207</elevation_ft>
 		<iata_code>KRH</iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -4448,7 +4448,7 @@
 		<longitude_deg>4°39'57"W</longitude_deg>
 		<longitude_dec>-4.66583</longitude_dec>
 		<elevation_m>194</elevation_m>
-		<elevation_ft>246</elevation_ft>
+		<elevation_ft>636</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -4463,7 +4463,7 @@
 		<longitude_deg>0°28'13"W</longitude_deg>
 		<longitude_dec>-0.47028</longitude_dec>
 		<elevation_m>17</elevation_m>
-		<elevation_ft>213</elevation_ft>
+		<elevation_ft>56</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir></fir>
@@ -4478,7 +4478,7 @@
 		<longitude_deg>0°3'19"E</longitude_deg>
 		<longitude_dec>0.05528</longitude_dec>
 		<elevation_m>6</elevation_m>
-		<elevation_ft>230</elevation_ft>
+		<elevation_ft>20</elevation_ft>
 		<iata_code>LCY</iata_code>
 		<alternate_name>London City</alternate_name>
 		<fir>London FIR</fir>
@@ -4493,7 +4493,7 @@
 		<longitude_deg>0°30'47"W</longitude_deg>
 		<longitude_dec>-0.51306</longitude_dec>
 		<elevation_m>75</elevation_m>
-		<elevation_ft>302</elevation_ft>
+		<elevation_ft>246</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>Denham</alternate_name>
 		<fir>London FIR</fir>
@@ -4523,7 +4523,7 @@
 		<longitude_deg>0°46'35"W</longitude_deg>
 		<longitude_dec>-0.77639</longitude_dec>
 		<elevation_m>65</elevation_m>
-		<elevation_ft>89</elevation_ft>
+		<elevation_ft>213</elevation_ft>
 		<iata_code>FAB</iata_code>
 		<alternate_name>South Marston</alternate_name>
 		<fir>London FIR</fir>
@@ -4598,7 +4598,7 @@
 		<longitude_deg>1°4'51"W</longitude_deg>
 		<longitude_dec>-1.08083</longitude_dec>
 		<elevation_m>70</elevation_m>
-		<elevation_ft>135</elevation_ft>
+		<elevation_ft>230</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -4613,7 +4613,7 @@
 		<longitude_deg>0°50'48"W</longitude_deg>
 		<longitude_dec>-0.84667</longitude_dec>
 		<elevation_m>92</elevation_m>
-		<elevation_ft>197</elevation_ft>
+		<elevation_ft>302</elevation_ft>
 		<iata_code>BBS</iata_code>
 		<alternate_name>Hartfordbridge</alternate_name>
 		<fir>London FIR</fir>
@@ -4628,7 +4628,7 @@
 		<longitude_deg>0°27'41"W</longitude_deg>
 		<longitude_dec>-0.46139</longitude_dec>
 		<elevation_m>27</elevation_m>
-		<elevation_ft>269</elevation_ft>
+		<elevation_ft>89</elevation_ft>
 		<iata_code>LHR</iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -4643,7 +4643,7 @@
 		<longitude_deg>0°46'28"W</longitude_deg>
 		<longitude_dec>-0.77444</longitude_dec>
 		<elevation_m>41</elevation_m>
-		<elevation_ft>223</elevation_ft>
+		<elevation_ft>135</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -4688,7 +4688,7 @@
 		<longitude_deg>1°10'15"W</longitude_deg>
 		<longitude_dec>-1.17083</longitude_dec>
 		<elevation_m>60</elevation_m>
-		<elevation_ft>16</elevation_ft>
+		<elevation_ft>197</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -4733,7 +4733,7 @@
 		<longitude_deg>1°47'3"W</longitude_deg>
 		<longitude_dec>-1.78417</longitude_dec>
 		<elevation_m>89</elevation_m>
-		<elevation_ft>125</elevation_ft>
+		<elevation_ft>292</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -4748,7 +4748,7 @@
 		<longitude_deg>0°39'29"W</longitude_deg>
 		<longitude_dec>-0.65806</longitude_dec>
 		<elevation_m>68</elevation_m>
-		<elevation_ft>46</elevation_ft>
+		<elevation_ft>223</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -4793,7 +4793,7 @@
 		<longitude_deg>0°10'46"W</longitude_deg>
 		<longitude_dec>-0.17944</longitude_dec>
 		<elevation_m>5</elevation_m>
-		<elevation_ft>10</elevation_ft>
+		<elevation_ft>16</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>London Westland Heliport, Battersea Heliport, Westland Heliport</alternate_name>
 		<fir>London FIR</fir>
@@ -4853,7 +4853,7 @@
 		<longitude_deg>0°3'40"E</longitude_deg>
 		<longitude_dec>0.06111</longitude_dec>
 		<elevation_m>38</elevation_m>
-		<elevation_ft>407</elevation_ft>
+		<elevation_ft>125</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -4883,7 +4883,7 @@
 		<longitude_deg>0°41'44"E</longitude_deg>
 		<longitude_dec>0.69556</longitude_dec>
 		<elevation_m>14</elevation_m>
-		<elevation_ft>174</elevation_ft>
+		<elevation_ft>46</elevation_ft>
 		<iata_code>SEN</iata_code>
 		<alternate_name>Rochford</alternate_name>
 		<fir>London FIR</fir>
@@ -4898,7 +4898,7 @@
 		<longitude_deg>0°56'21"E</longitude_deg>
 		<longitude_dec>0.93917</longitude_dec>
 		<elevation_m>3</elevation_m>
-		<elevation_ft>236</elevation_ft>
+		<elevation_ft>10</elevation_ft>
 		<iata_code>LYX</iata_code>
 		<alternate_name>Ferryfield</alternate_name>
 		<fir>London FIR</fir>
@@ -4928,7 +4928,7 @@
 		<longitude_deg>0°35'59"E</longitude_deg>
 		<longitude_dec>0.59972</longitude_dec>
 		<elevation_m>124</elevation_m>
-		<elevation_ft>46</elevation_ft>
+		<elevation_ft>407</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -4958,7 +4958,7 @@
 		<longitude_deg>1°20'46"E</longitude_deg>
 		<longitude_dec>1.34611</longitude_dec>
 		<elevation_m>53</elevation_m>
-		<elevation_ft>20</elevation_ft>
+		<elevation_ft>174</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>Kent International</alternate_name>
 		<fir>London FIR</fir>
@@ -4988,11 +4988,11 @@
 		<longitude_deg>0°9'12"W</longitude_deg>
 		<longitude_dec>-0.15333</longitude_dec>
 		<elevation_m>72</elevation_m>
-		<elevation_ft>161</elevation_ft>
+		<elevation_ft>236</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
-		<city>St. Neot's</city>
+		<city>>Little Gransden</city>
 		<type>Small airport</type>
 	</airport_info>
 	<airport_info>
@@ -5018,7 +5018,7 @@
 		<longitude_deg>0°14'44"E</longitude_deg>
 		<longitude_dec>0.24556</longitude_dec>
 		<elevation_m>14</elevation_m>
-		<elevation_ft>774</elevation_ft>
+		<elevation_ft>46</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -5138,7 +5138,7 @@
 		<longitude_deg>0°22'3"E</longitude_deg>
 		<longitude_dec>0.3675</longitude_dec>
 		<elevation_m>6</elevation_m>
-		<elevation_ft>92</elevation_ft>
+		<elevation_ft>20</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>Thurrock</alternate_name>
 		<fir>London FIR</fir>
@@ -5273,7 +5273,7 @@
 		<longitude_deg>2°48'32"W</longitude_deg>
 		<longitude_dec>-2.80889</longitude_dec>
 		<elevation_m>49</elevation_m>
-		<elevation_ft>246</elevation_ft>
+		<elevation_ft>161</elevation_ft>
 		<iata_code>CAX</iata_code>
 		<alternate_name>Crosby-on-Eden</alternate_name>
 		<fir>London FIR</fir>
@@ -5288,7 +5288,7 @@
 		<longitude_deg>1°49'50"W</longitude_deg>
 		<longitude_dec>-1.83056</longitude_dec>
 		<elevation_m>236</elevation_m>
-		<elevation_ft>190</elevation_ft>
+		<elevation_ft>774</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>Huddersfield</alternate_name>
 		<fir>London FIR</fir>
@@ -5303,7 +5303,7 @@
 		<longitude_deg>0°57'5"W</longitude_deg>
 		<longitude_dec>-0.95139</longitude_dec>
 		<elevation_m>28</elevation_m>
-		<elevation_ft>26</elevation_ft>
+		<elevation_ft>92</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>Gamston</alternate_name>
 		<fir>London FIR</fir>
@@ -5318,7 +5318,7 @@
 		<longitude_deg>1°11'47"W</longitude_deg>
 		<longitude_dec>-1.19639</longitude_dec>
 		<elevation_m>75</elevation_m>
-		<elevation_ft>0</elevation_ft>
+		<elevation_ft>246</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -5333,7 +5333,7 @@
 		<longitude_deg>1°17'31"W</longitude_deg>
 		<longitude_dec>-1.29194</longitude_dec>
 		<elevation_m>58</elevation_m>
-		<elevation_ft>98</elevation_ft>
+		<elevation_ft>190</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -5348,7 +5348,7 @@
 		<longitude_deg>3°1'46"W</longitude_deg>
 		<longitude_dec>-3.02944</longitude_dec>
 		<elevation_m>8</elevation_m>
-		<elevation_ft>39</elevation_ft>
+		<elevation_ft>26</elevation_ft>
 		<iata_code>BLK</iata_code>
 		<alternate_name>Squires Gate</alternate_name>
 		<fir>London FIR</fir>
@@ -5363,7 +5363,7 @@
 		<longitude_deg>0°19'42.096"E</longitude_deg>
 		<longitude_dec>0.32836</longitude_dec>
 		<elevation_m>0</elevation_m>
-		<elevation_ft>666</elevation_ft>
+		<elevation_ft>0</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -5378,7 +5378,7 @@
 		<longitude_deg>0°21'3"W</longitude_deg>
 		<longitude_dec>-0.35083</longitude_dec>
 		<elevation_m>30</elevation_m>
-		<elevation_ft>39</elevation_ft>
+		<elevation_ft>98</elevation_ft>
 		<iata_code>HUY</iata_code>
 		<alternate_name>Kirmington</alternate_name>
 		<fir>London FIR</fir>
@@ -5408,7 +5408,7 @@
 		<longitude_deg>3°16'3"W</longitude_deg>
 		<longitude_dec>-3.2675</longitude_dec>
 		<elevation_m>12</elevation_m>
-		<elevation_ft>0</elevation_ft>
+		<elevation_ft>39</elevation_ft>
 		<iata_code>BWF</iata_code>
 		<alternate_name>Walney Island</alternate_name>
 		<fir>London FIR</fir>
@@ -5423,7 +5423,7 @@
 		<longitude_deg>1°39'38"W</longitude_deg>
 		<longitude_dec>-1.66056</longitude_dec>
 		<elevation_m>203</elevation_m>
-		<elevation_ft>30</elevation_ft>
+		<elevation_ft>666</elevation_ft>
 		<iata_code>LBA</iata_code>
 		<alternate_name>Yeadon</alternate_name>
 		<fir>London FIR</fir>
@@ -5453,7 +5453,7 @@
 		<longitude_deg>2°53'2"W</longitude_deg>
 		<longitude_dec>-2.88389</longitude_dec>
 		<elevation_m>12</elevation_m>
-		<elevation_ft>246</elevation_ft>
+		<elevation_ft>39</elevation_ft>
 		<iata_code>WRT</iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -5498,7 +5498,7 @@
 		<longitude_deg>2°58'40"W</longitude_deg>
 		<longitude_dec>-2.97778</longitude_dec>
 		<elevation_m>0</elevation_m>
-		<elevation_ft>56</elevation_ft>
+		<elevation_ft>0</elevation_ft>
 		<iata_code>CEG</iata_code>
 		<alternate_name>Chester</alternate_name>
 		<fir>London FIR</fir>
@@ -5513,7 +5513,7 @@
 		<longitude_deg>4°37'26"W</longitude_deg>
 		<longitude_dec>-4.62389</longitude_dec>
 		<elevation_m>9</elevation_m>
-		<elevation_ft>108</elevation_ft>
+		<elevation_ft>30</elevation_ft>
 		<iata_code>IOM</iata_code>
 		<alternate_name>Ronaldsway</alternate_name>
 		<fir></fir>
@@ -5528,7 +5528,7 @@
 		<longitude_deg>1°41'30"W</longitude_deg>
 		<longitude_dec>-1.69167</longitude_dec>
 		<elevation_m>75</elevation_m>
-		<elevation_ft>89</elevation_ft>
+		<elevation_ft>246</elevation_ft>
 		<iata_code>NCL</iata_code>
 		<alternate_name>Woolsington</alternate_name>
 		<fir>Scottish FIR</fir>
@@ -5543,7 +5543,7 @@
 		<longitude_deg>0°51'52"W</longitude_deg>
 		<longitude_dec>-0.86444</longitude_dec>
 		<elevation_m>17</elevation_m>
-		<elevation_ft>305</elevation_ft>
+		<elevation_ft>56</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>Sunderland</alternate_name>
 		<fir>London FIR</fir>
@@ -5558,7 +5558,7 @@
 		<longitude_deg>1°25'46"W</longitude_deg>
 		<longitude_dec>-1.42944</longitude_dec>
 		<elevation_m>33</elevation_m>
-		<elevation_ft>-7</elevation_ft>
+		<elevation_ft>108</elevation_ft>
 		<iata_code>MME</iata_code>
 		<alternate_name>Durham Tees Valley</alternate_name>
 		<fir>London FIR</fir>
@@ -5573,7 +5573,7 @@
 		<longitude_deg>0°20'59"W</longitude_deg>
 		<longitude_dec>-0.34972</longitude_dec>
 		<elevation_m>27</elevation_m>
-		<elevation_ft>276</elevation_ft>
+		<elevation_ft>89</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>Lincoln</alternate_name>
 		<fir>London FIR</fir>
@@ -5588,7 +5588,7 @@
 		<longitude_deg>1°19'41"W</longitude_deg>
 		<longitude_dec>-1.32806</longitude_dec>
 		<elevation_m>93</elevation_m>
-		<elevation_ft>236</elevation_ft>
+		<elevation_ft>305</elevation_ft>
 		<iata_code>EMA</iata_code>
 		<alternate_name>Castle Donnington</alternate_name>
 		<fir>London FIR</fir>
@@ -5603,7 +5603,7 @@
 		<longitude_deg>0°21'41"W</longitude_deg>
 		<longitude_dec>-0.36139</longitude_dec>
 		<elevation_m>-2</elevation_m>
-		<elevation_ft>26</elevation_ft>
+		<elevation_ft>-7</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>Linley Hill Airfield</alternate_name>
 		<fir>London FIR</fir>
@@ -5708,7 +5708,7 @@
 		<longitude_deg>2°31'54"W</longitude_deg>
 		<longitude_dec>-2.53167</longitude_dec>
 		<elevation_m>84</elevation_m>
-		<elevation_ft>39</elevation_ft>
+		<elevation_ft>276</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -5903,7 +5903,7 @@
 		<longitude_deg>2°40'5"W</longitude_deg>
 		<longitude_dec>-2.66806</longitude_dec>
 		<elevation_m>72</elevation_m>
-		<elevation_ft>46</elevation_ft>
+		<elevation_ft>236</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -5948,7 +5948,7 @@
 		<longitude_deg>4°32'10.392"W</longitude_deg>
 		<longitude_dec>-4.53622</longitude_dec>
 		<elevation_m>8</elevation_m>
-		<elevation_ft>36</elevation_ft>
+		<elevation_ft>26</elevation_ft>
 		<iata_code>VLY</iata_code>
 		<alternate_name>Valley</alternate_name>
 		<fir>London FIR</fir>
@@ -5963,7 +5963,7 @@
 		<longitude_deg>3°3'24"W</longitude_deg>
 		<longitude_dec>-3.05667</longitude_dec>
 		<elevation_m>12</elevation_m>
-		<elevation_ft>7</elevation_ft>
+		<elevation_ft>39</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -5993,7 +5993,7 @@
 		<longitude_deg>4°56'35"W</longitude_deg>
 		<longitude_dec>-4.94306</longitude_dec>
 		<elevation_m>14</elevation_m>
-		<elevation_ft>121</elevation_ft>
+		<elevation_ft>46</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir></fir>
@@ -6023,7 +6023,7 @@
 		<longitude_deg>2°54'18"W</longitude_deg>
 		<longitude_dec>-2.905</longitude_dec>
 		<elevation_m>11</elevation_m>
-		<elevation_ft>187</elevation_ft>
+		<elevation_ft>36</elevation_ft>
 		<iata_code>KOI</iata_code>
 		<alternate_name>Grimsetter</alternate_name>
 		<fir>Scottish FIR</fir>
@@ -6038,7 +6038,7 @@
 		<longitude_deg>1°17'44"W</longitude_deg>
 		<longitude_dec>-1.29556</longitude_dec>
 		<elevation_m>2</elevation_m>
-		<elevation_ft>23</elevation_ft>
+		<elevation_ft>7</elevation_ft>
 		<iata_code>LSI</iata_code>
 		<alternate_name>Sumburgh Cape</alternate_name>
 		<fir>Scottish FIR</fir>
@@ -6053,7 +6053,7 @@
 		<longitude_deg>3°5'35"W</longitude_deg>
 		<longitude_dec>-3.09306</longitude_dec>
 		<elevation_m>37</elevation_m>
-		<elevation_ft>7</elevation_ft>
+		<elevation_ft>121</elevation_ft>
 		<iata_code>WIC</iata_code>
 		<alternate_name></alternate_name>
 		<fir>Scottish FIR</fir>
@@ -6068,7 +6068,7 @@
 		<longitude_deg>2°11'52"W</longitude_deg>
 		<longitude_dec>-2.19778</longitude_dec>
 		<elevation_m>57</elevation_m>
-		<elevation_ft>344</elevation_ft>
+		<elevation_ft>187</elevation_ft>
 		<iata_code>ABZ</iata_code>
 		<alternate_name></alternate_name>
 		<fir>Scottish FIR</fir>
@@ -6083,7 +6083,7 @@
 		<longitude_deg>4°2'53"W</longitude_deg>
 		<longitude_dec>-4.04806</longitude_dec>
 		<elevation_m>7</elevation_m>
-		<elevation_ft>92</elevation_ft>
+		<elevation_ft>23</elevation_ft>
 		<iata_code>INV</iata_code>
 		<alternate_name>Dalcross</alternate_name>
 		<fir>Scottish FIR</fir>
@@ -6098,7 +6098,7 @@
 		<longitude_deg>4°25'59"W</longitude_deg>
 		<longitude_dec>-4.43306</longitude_dec>
 		<elevation_m>2</elevation_m>
-		<elevation_ft>33</elevation_ft>
+		<elevation_ft>7</elevation_ft>
 		<iata_code>GLA</iata_code>
 		<alternate_name></alternate_name>
 		<fir>Scottish FIR</fir>
@@ -6113,7 +6113,7 @@
 		<longitude_deg>3°58'32"W</longitude_deg>
 		<longitude_dec>-3.97556</longitude_dec>
 		<elevation_m>105</elevation_m>
-		<elevation_ft>397</elevation_ft>
+		<elevation_ft>344</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>Scottish FIR</fir>
@@ -6128,7 +6128,7 @@
 		<longitude_deg>3°22'21"W</longitude_deg>
 		<longitude_dec>-3.3725</longitude_dec>
 		<elevation_m>28</elevation_m>
-		<elevation_ft>46</elevation_ft>
+		<elevation_ft>92</elevation_ft>
 		<iata_code>EDI</iata_code>
 		<alternate_name>Turnhouse</alternate_name>
 		<fir>Scottish FIR</fir>
@@ -6143,7 +6143,7 @@
 		<longitude_deg>6°15'24"W</longitude_deg>
 		<longitude_dec>-6.25667</longitude_dec>
 		<elevation_m>10</elevation_m>
-		<elevation_ft>16</elevation_ft>
+		<elevation_ft>33</elevation_ft>
 		<iata_code>ILY</iata_code>
 		<alternate_name>Port Ellen</alternate_name>
 		<fir>Scottish FIR</fir>
@@ -6158,7 +6158,7 @@
 		<longitude_deg>3°13'13"W</longitude_deg>
 		<longitude_dec>-3.22028</longitude_dec>
 		<elevation_m>121</elevation_m>
-		<elevation_ft>43</elevation_ft>
+		<elevation_ft>397</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>Glenrothes</alternate_name>
 		<fir>Scottish FIR</fir>
@@ -6173,7 +6173,7 @@
 		<longitude_deg>4°35'40"W</longitude_deg>
 		<longitude_dec>-4.59444</longitude_dec>
 		<elevation_m>14</elevation_m>
-		<elevation_ft>16</elevation_ft>
+		<elevation_ft>46</elevation_ft>
 		<iata_code>PIK</iata_code>
 		<alternate_name></alternate_name>
 		<fir>Scottish FIR</fir>
@@ -6188,7 +6188,7 @@
 		<longitude_deg>7°21'43"W</longitude_deg>
 		<longitude_dec>-7.36194</longitude_dec>
 		<elevation_m>5</elevation_m>
-		<elevation_ft>10</elevation_ft>
+		<elevation_ft>16</elevation_ft>
 		<iata_code>BEB</iata_code>
 		<alternate_name></alternate_name>
 		<fir>Scottish FIR</fir>
@@ -6203,7 +6203,7 @@
 		<longitude_deg>1°17'46"W</longitude_deg>
 		<longitude_dec>-1.29611</longitude_dec>
 		<elevation_m>13</elevation_m>
-		<elevation_ft>138</elevation_ft>
+		<elevation_ft>43</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir></fir>
@@ -6218,7 +6218,7 @@
 		<longitude_deg>3°1'33"W</longitude_deg>
 		<longitude_dec>-3.02583</longitude_dec>
 		<elevation_m>5</elevation_m>
-		<elevation_ft>157</elevation_ft>
+		<elevation_ft>16</elevation_ft>
 		<iata_code>DND</iata_code>
 		<alternate_name></alternate_name>
 		<fir>Scottish FIR</fir>
@@ -6233,7 +6233,7 @@
 		<longitude_deg>6°19'52"W</longitude_deg>
 		<longitude_dec>-6.33111</longitude_dec>
 		<elevation_m>3</elevation_m>
-		<elevation_ft>390</elevation_ft>
+		<elevation_ft>10</elevation_ft>
 		<iata_code>SYY</iata_code>
 		<alternate_name></alternate_name>
 		<fir>Scottish FIR</fir>
@@ -6278,7 +6278,7 @@
 		<longitude_deg>7°26'33"W</longitude_deg>
 		<longitude_dec>-7.4425</longitude_dec>
 		<elevation_m>42</elevation_m>
-		<elevation_ft>23</elevation_ft>
+		<elevation_ft>138</elevation_ft>
 		<iata_code>BRR</iata_code>
 		<alternate_name>North Bay</alternate_name>
 		<fir>Scottish FIR</fir>
@@ -6293,7 +6293,7 @@
 		<longitude_deg>1°52'23"W</longitude_deg>
 		<longitude_dec>-1.87306</longitude_dec>
 		<elevation_m>48</elevation_m>
-		<elevation_ft>43</elevation_ft>
+		<elevation_ft>157</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>Peterhead Heliport</alternate_name>
 		<fir>Scottish FIR</fir>
@@ -6308,7 +6308,7 @@
 		<longitude_deg>3°22'20"W</longitude_deg>
 		<longitude_dec>-3.37222</longitude_dec>
 		<elevation_m>119</elevation_m>
-		<elevation_ft>20</elevation_ft>
+		<elevation_ft>390</elevation_ft>
 		<iata_code>PSL</iata_code>
 		<alternate_name>Scone</alternate_name>
 		<fir>Scottish FIR</fir>
@@ -6323,7 +6323,7 @@
 		<longitude_deg>6°52'9"W</longitude_deg>
 		<longitude_dec>-6.86917</longitude_dec>
 		<elevation_m>7</elevation_m>
-		<elevation_ft>36</elevation_ft>
+		<elevation_ft>23</elevation_ft>
 		<iata_code>TRE</iata_code>
 		<alternate_name></alternate_name>
 		<fir>Scottish FIR</fir>
@@ -6353,7 +6353,7 @@
 		<longitude_deg>0°51'14"W</longitude_deg>
 		<longitude_dec>-0.85389</longitude_dec>
 		<elevation_m>13</elevation_m>
-		<elevation_ft>36</elevation_ft>
+		<elevation_ft>43</elevation_ft>
 		<iata_code>UNT</iata_code>
 		<alternate_name>Baltasound</alternate_name>
 		<fir>Scottish FIR</fir>
@@ -6593,7 +6593,7 @@
 		<longitude_deg>3°33'38"W</longitude_deg>
 		<longitude_dec>-3.56056</longitude_dec>
 		<elevation_m>6</elevation_m>
-		<elevation_ft>213</elevation_ft>
+		<elevation_ft>20</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>Grampian</alternate_name>
 		<fir>Scottish FIR</fir>
@@ -6608,7 +6608,7 @@
 		<longitude_deg>2°51'50"W</longitude_deg>
 		<longitude_dec>-2.86389</longitude_dec>
 		<elevation_m>11</elevation_m>
-		<elevation_ft>62</elevation_ft>
+		<elevation_ft>36</elevation_ft>
 		<iata_code>ADX</iata_code>
 		<alternate_name>St. Andrews</alternate_name>
 		<fir>Scottish FIR</fir>
@@ -6713,7 +6713,7 @@
 		<longitude_deg>3°20'20"W</longitude_deg>
 		<longitude_dec>-3.33889</longitude_dec>
 		<elevation_m>11</elevation_m>
-		<elevation_ft>0</elevation_ft>
+		<elevation_ft>36</elevation_ft>
 		<iata_code>LMO</iata_code>
 		<alternate_name></alternate_name>
 		<fir>Scottish FIR</fir>
@@ -7223,7 +7223,7 @@
 		<longitude_deg>0°55'51"E</longitude_deg>
 		<longitude_dec>0.93083</longitude_dec>
 		<elevation_m>65</elevation_m>
-		<elevation_ft>39</elevation_ft>
+		<elevation_ft>213</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -7253,7 +7253,7 @@
 		<longitude_deg>0°10'30"E</longitude_deg>
 		<longitude_dec>0.175</longitude_dec>
 		<elevation_m>19</elevation_m>
-		<elevation_ft>148</elevation_ft>
+		<elevation_ft>62</elevation_ft>
 		<iata_code>CBG</iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -7268,7 +7268,7 @@
 		<longitude_deg>1°43'24"E</longitude_deg>
 		<longitude_dec>1.72333</longitude_dec>
 		<elevation_m>0</elevation_m>
-		<elevation_ft>49</elevation_ft>
+		<elevation_ft>0</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -7298,7 +7298,7 @@
 		<longitude_deg>0°15'10.152"W</longitude_deg>
 		<longitude_dec>-0.25282</longitude_dec>
 		<elevation_m>12</elevation_m>
-		<elevation_ft>3</elevation_ft>
+		<elevation_ft>39</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>Conington, Glatton</alternate_name>
 		<fir>London FIR</fir>
@@ -7313,7 +7313,7 @@
 		<longitude_deg>0°9'21"E</longitude_deg>
 		<longitude_dec>0.15583</longitude_dec>
 		<elevation_m>45</elevation_m>
-		<elevation_ft>128</elevation_ft>
+		<elevation_ft>148</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>Stapleford Tawney</alternate_name>
 		<fir>London FIR</fir>
@@ -7328,7 +7328,7 @@
 		<longitude_deg>1°16'58"E</longitude_deg>
 		<longitude_dec>1.28278</longitude_dec>
 		<elevation_m>15</elevation_m>
-		<elevation_ft>279</elevation_ft>
+		<elevation_ft>49</elevation_ft>
 		<iata_code>NWI</iata_code>
 		<alternate_name>Horsham St. Faith</alternate_name>
 		<fir>London FIR</fir>
@@ -7343,7 +7343,7 @@
 		<longitude_deg>0°17'42"E</longitude_deg>
 		<longitude_dec>0.295</longitude_dec>
 		<elevation_m>1</elevation_m>
-		<elevation_ft>72</elevation_ft>
+		<elevation_ft>3</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>Wisbech</alternate_name>
 		<fir>London FIR</fir>
@@ -7358,7 +7358,7 @@
 		<longitude_deg>1°25'2"E</longitude_deg>
 		<longitude_dec>1.41722</longitude_dec>
 		<elevation_m>39</elevation_m>
-		<elevation_ft>230</elevation_ft>
+		<elevation_ft>128</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>Seething</alternate_name>
 		<fir>London FIR</fir>
@@ -7388,7 +7388,7 @@
 		<longitude_deg>0°26'58"E</longitude_deg>
 		<longitude_dec>0.44944</longitude_dec>
 		<elevation_m>85</elevation_m>
-		<elevation_ft>194</elevation_ft>
+		<elevation_ft>279</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -7403,7 +7403,7 @@
 		<longitude_deg>1°36'33"E</longitude_deg>
 		<longitude_dec>1.60917</longitude_dec>
 		<elevation_m>22</elevation_m>
-		<elevation_ft>115</elevation_ft>
+		<elevation_ft>72</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -7418,7 +7418,7 @@
 		<longitude_deg>0°2'25"W</longitude_deg>
 		<longitude_dec>-0.04028</longitude_dec>
 		<elevation_m>70</elevation_m>
-		<elevation_ft>23</elevation_ft>
+		<elevation_ft>230</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -7433,7 +7433,7 @@
 		<longitude_deg>1°6'40"E</longitude_deg>
 		<longitude_dec>1.11111</longitude_dec>
 		<elevation_m>59</elevation_m>
-		<elevation_ft>226</elevation_ft>
+		<elevation_ft>194</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>Crowfield</alternate_name>
 		<fir>London FIR</fir>
@@ -7448,7 +7448,7 @@
 		<longitude_deg>0°23'15"W</longitude_deg>
 		<longitude_dec>-0.3875</longitude_dec>
 		<elevation_m>35</elevation_m>
-		<elevation_ft>338</elevation_ft>
+		<elevation_ft>115</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -7463,7 +7463,7 @@
 		<longitude_deg>1°7'48"E</longitude_deg>
 		<longitude_dec>1.13</longitude_dec>
 		<elevation_m>7</elevation_m>
-		<elevation_ft>210</elevation_ft>
+		<elevation_ft>23</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -7478,7 +7478,7 @@
 		<longitude_deg>0°40'57"E</longitude_deg>
 		<longitude_dec>0.6825</longitude_dec>
 		<elevation_m>69</elevation_m>
-		<elevation_ft>102</elevation_ft>
+		<elevation_ft>226</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -7493,7 +7493,7 @@
 		<longitude_deg>0°14'6"E</longitude_deg>
 		<longitude_dec>0.235</longitude_dec>
 		<elevation_m>103</elevation_m>
-		<elevation_ft>190</elevation_ft>
+		<elevation_ft>338</elevation_ft>
 		<iata_code>STN</iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -7508,7 +7508,7 @@
 		<longitude_deg>0°58'41"E</longitude_deg>
 		<longitude_dec>0.97806</longitude_dec>
 		<elevation_m>64</elevation_m>
-		<elevation_ft>98</elevation_ft>
+		<elevation_ft>210</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>Hadleigh</alternate_name>
 		<fir>London FIR</fir>
@@ -7523,7 +7523,7 @@
 		<longitude_deg>0°7'55"E</longitude_deg>
 		<longitude_dec>0.13194</longitude_dec>
 		<elevation_m>31</elevation_m>
-		<elevation_ft>266</elevation_ft>
+		<elevation_ft>102</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -7538,7 +7538,7 @@
 		<longitude_deg>1°3'32"E</longitude_deg>
 		<longitude_dec>1.05889</longitude_dec>
 		<elevation_m>58</elevation_m>
-		<elevation_ft>522</elevation_ft>
+		<elevation_ft>190</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -7553,7 +7553,7 @@
 		<longitude_deg>0°21'1.728"E</longitude_deg>
 		<longitude_dec>0.35048</longitude_dec>
 		<elevation_m>30</elevation_m>
-		<elevation_ft>361</elevation_ft>
+		<elevation_ft>98</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>Rowley Mile</alternate_name>
 		<fir>London FIR</fir>
@@ -7568,7 +7568,7 @@
 		<longitude_deg>0°9'15"E</longitude_deg>
 		<longitude_dec>0.15417</longitude_dec>
 		<elevation_m>81</elevation_m>
-		<elevation_ft>174</elevation_ft>
+		<elevation_ft>266</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -7628,7 +7628,7 @@
 		<longitude_deg>0°48'30"W</longitude_deg>
 		<longitude_dec>-0.80833</longitude_dec>
 		<elevation_m>159</elevation_m>
-		<elevation_ft>85</elevation_ft>
+		<elevation_ft>522</elevation_ft>
 		<iata_code>HYC</iata_code>
 		<alternate_name>Booker</alternate_name>
 		<fir>London FIR</fir>
@@ -7643,7 +7643,7 @@
 		<longitude_deg>0°37'0"W</longitude_deg>
 		<longitude_dec>-0.61667</longitude_dec>
 		<elevation_m>110</elevation_m>
-		<elevation_ft>75</elevation_ft>
+		<elevation_ft>361</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -7658,7 +7658,7 @@
 		<longitude_deg>0°32'5"W</longitude_deg>
 		<longitude_dec>-0.53472</longitude_dec>
 		<elevation_m>53</elevation_m>
-		<elevation_ft>223</elevation_ft>
+		<elevation_ft>174</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -7673,7 +7673,7 @@
 		<longitude_deg>3°24'50"W</longitude_deg>
 		<longitude_dec>-3.41389</longitude_dec>
 		<elevation_m>26</elevation_m>
-		<elevation_ft>102</elevation_ft>
+		<elevation_ft>85</elevation_ft>
 		<iata_code>EXT</iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -7688,7 +7688,7 @@
 		<longitude_deg>0°33'31"W</longitude_deg>
 		<longitude_dec>-0.55861</longitude_dec>
 		<elevation_m>23</elevation_m>
-		<elevation_ft>262</elevation_ft>
+		<elevation_ft>75</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -7703,7 +7703,7 @@
 		<longitude_deg>2°35'27"W</longitude_deg>
 		<longitude_dec>-2.59083</longitude_dec>
 		<elevation_m>68</elevation_m>
-		<elevation_ft>541</elevation_ft>
+		<elevation_ft>223</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir></fir>
@@ -7718,7 +7718,7 @@
 		<longitude_deg>0°19'6"W</longitude_deg>
 		<longitude_dec>-0.31833</longitude_dec>
 		<elevation_m>31</elevation_m>
-		<elevation_ft>413</elevation_ft>
+		<elevation_ft>102</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>Shuttleworth Aerodrome</alternate_name>
 		<fir>London FIR</fir>
@@ -7763,7 +7763,7 @@
 		<longitude_deg>1°19'12"W</longitude_deg>
 		<longitude_dec>-1.32</longitude_dec>
 		<elevation_m>80</elevation_m>
-		<elevation_ft>322</elevation_ft>
+		<elevation_ft>262</elevation_ft>
 		<iata_code>OXF</iata_code>
 		<alternate_name>Kidlington Airport</alternate_name>
 		<fir>London FIR</fir>
@@ -7808,7 +7808,7 @@
 		<longitude_deg>1°25'55"W</longitude_deg>
 		<longitude_dec>-1.43194</longitude_dec>
 		<elevation_m>165</elevation_m>
-		<elevation_ft>315</elevation_ft>
+		<elevation_ft>541</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -7823,7 +7823,7 @@
 		<longitude_deg>0°30'12"E</longitude_deg>
 		<longitude_dec>0.50333</longitude_dec>
 		<elevation_m>126</elevation_m>
-		<elevation_ft>830</elevation_ft>
+		<elevation_ft>413</elevation_ft>
 		<iata_code>RCS</iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -7838,7 +7838,7 @@
 		<longitude_deg>5°10'39"W</longitude_deg>
 		<longitude_dec>-5.1775</longitude_dec>
 		<elevation_m>98</elevation_m>
-		<elevation_ft>285</elevation_ft>
+		<elevation_ft>322</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -7868,7 +7868,7 @@
 		<longitude_deg>0°19'33"W</longitude_deg>
 		<longitude_dec>-0.32583</longitude_dec>
 		<elevation_m>96</elevation_m>
-		<elevation_ft>177</elevation_ft>
+		<elevation_ft>315</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>Elstree</alternate_name>
 		<fir>London FIR</fir>
@@ -7928,7 +7928,7 @@
 		<longitude_deg>3°14'5"W</longitude_deg>
 		<longitude_dec>-3.23472</longitude_dec>
 		<elevation_m>253</elevation_m>
-		<elevation_ft>39</elevation_ft>
+		<elevation_ft>830</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -7958,7 +7958,7 @@
 		<longitude_deg>2°0'46"W</longitude_deg>
 		<longitude_dec>-2.01278</longitude_dec>
 		<elevation_m>87</elevation_m>
-		<elevation_ft>26</elevation_ft>
+		<elevation_ft>285</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>Wisley</alternate_name>
 		<fir>London FIR</fir>
@@ -8033,7 +8033,7 @@
 		<longitude_deg>1°5'45"W</longitude_deg>
 		<longitude_dec>-1.09583</longitude_dec>
 		<elevation_m>54</elevation_m>
-		<elevation_ft>571</elevation_ft>
+		<elevation_ft>177</elevation_ft>
 		<iata_code>BEX</iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -8183,7 +8183,7 @@
 		<longitude_deg>0°33'40"E</longitude_deg>
 		<longitude_dec>0.56111</longitude_dec>
 		<elevation_m>12</elevation_m>
-		<elevation_ft>276</elevation_ft>
+		<elevation_ft>39</elevation_ft>
 		<iata_code>LKZ</iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -8213,7 +8213,7 @@
 		<longitude_deg>0°29'12"E</longitude_deg>
 		<longitude_dec>0.48667</longitude_dec>
 		<elevation_m>8</elevation_m>
-		<elevation_ft>131</elevation_ft>
+		<elevation_ft>26</elevation_ft>
 		<iata_code>MHZ</iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -8228,7 +8228,7 @@
 		<longitude_deg>2°16'46"W</longitude_deg>
 		<longitude_dec>-2.27944</longitude_dec>
 		<elevation_m>174</elevation_m>
-		<elevation_ft>282</elevation_ft>
+		<elevation_ft>571</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir></fir>
@@ -8363,7 +8363,7 @@
 		<longitude_deg>0°57'21"E</longitude_deg>
 		<longitude_dec>0.95583</longitude_dec>
 		<elevation_m>84</elevation_m>
-		<elevation_ft>269</elevation_ft>
+		<elevation_ft>276</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -8393,7 +8393,7 @@
 		<longitude_deg>0°6'28"W</longitude_deg>
 		<longitude_dec>-0.10778</longitude_dec>
 		<elevation_m>40</elevation_m>
-		<elevation_ft>397</elevation_ft>
+		<elevation_ft>131</elevation_ft>
 		<iata_code>QUY</iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -8618,7 +8618,7 @@
 		<longitude_deg>1°35'1"W</longitude_deg>
 		<longitude_dec>-1.58361</longitude_dec>
 		<elevation_m>82</elevation_m>
-		<elevation_ft>266</elevation_ft>
+		<elevation_ft>269</elevation_ft>
 		<iata_code>BZZ</iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -8633,7 +8633,7 @@
 		<longitude_deg>0°56'34"W</longitude_deg>
 		<longitude_dec>-0.94278</longitude_dec>
 		<elevation_m>121</elevation_m>
-		<elevation_ft>151</elevation_ft>
+		<elevation_ft>397</elevation_ft>
 		<iata_code>ODH</iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -8648,7 +8648,7 @@
 		<longitude_deg>1°34'14"W</longitude_deg>
 		<longitude_dec>-1.57056</longitude_dec>
 		<elevation_m>86</elevation_m>
-		<elevation_ft>354</elevation_ft>
+		<elevation_ft>282</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -8843,7 +8843,7 @@
 		<longitude_deg>2°18'20"W</longitude_deg>
 		<longitude_dec>-2.30556</longitude_dec>
 		<elevation_m>81</elevation_m>
-		<elevation_ft>98</elevation_ft>
+		<elevation_ft>266</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -8873,7 +8873,7 @@
 		<longitude_deg>0°18'6"W</longitude_deg>
 		<longitude_dec>-0.30167</longitude_dec>
 		<elevation_m>46</elevation_m>
-		<elevation_ft>39</elevation_ft>
+		<elevation_ft>151</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -9008,7 +9008,7 @@
 		<longitude_deg>0°44'11"W</longitude_deg>
 		<longitude_dec>-0.73639</longitude_dec>
 		<elevation_m>108</elevation_m>
-		<elevation_ft>105</elevation_ft>
+		<elevation_ft>354</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -9113,7 +9113,7 @@
 		<longitude_deg>0°25'6"W</longitude_deg>
 		<longitude_dec>-0.41833</longitude_dec>
 		<elevation_m>30</elevation_m>
-		<elevation_ft>112</elevation_ft>
+		<elevation_ft>98</elevation_ft>
 		<iata_code>NHT</iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -9233,7 +9233,7 @@
 		<longitude_deg>0°10'0"W</longitude_deg>
 		<longitude_dec>-0.16667</longitude_dec>
 		<elevation_m>12</elevation_m>
-		<elevation_ft>13</elevation_ft>
+		<elevation_ft>39</elevation_ft>
 		<iata_code>QCY</iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -9248,7 +9248,7 @@
 		<longitude_deg>1°25'13"W</longitude_deg>
 		<longitude_dec>-1.42028</longitude_dec>
 		<elevation_m>32</elevation_m>
-		<elevation_ft>164</elevation_ft>
+		<elevation_ft>105</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>Ripon</alternate_name>
 		<fir>London FIR</fir>
@@ -9263,7 +9263,7 @@
 		<longitude_deg>1°32'7"W</longitude_deg>
 		<longitude_dec>-1.53528</longitude_dec>
 		<elevation_m>34</elevation_m>
-		<elevation_ft>425</elevation_ft>
+		<elevation_ft>112</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -9293,7 +9293,7 @@
 		<longitude_deg>1°11'43"W</longitude_deg>
 		<longitude_dec>-1.19528</longitude_dec>
 		<elevation_m>4</elevation_m>
-		<elevation_ft>210</elevation_ft>
+		<elevation_ft>13</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>Church Fenton</alternate_name>
 		<fir>London FIR</fir>
@@ -9308,7 +9308,7 @@
 		<longitude_deg>0°46'23"E</longitude_deg>
 		<longitude_dec>0.77306</longitude_dec>
 		<elevation_m>50</elevation_m>
-		<elevation_ft>269</elevation_ft>
+		<elevation_ft>164</elevation_ft>
 		<iata_code>BEQ</iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -9338,7 +9338,7 @@
 		<longitude_deg>0°38'56"W</longitude_deg>
 		<longitude_dec>-0.64889</longitude_dec>
 		<elevation_m>130</elevation_m>
-		<elevation_ft>43</elevation_ft>
+		<elevation_ft>427</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -9443,7 +9443,7 @@
 		<longitude_deg>0°33'4"W</longitude_deg>
 		<longitude_dec>-0.55111</longitude_dec>
 		<elevation_m>64</elevation_m>
-		<elevation_ft>23</elevation_ft>
+		<elevation_ft>210</elevation_ft>
 		<iata_code>SQZ</iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -9518,7 +9518,7 @@
 		<longitude_deg>0°28'36"W</longitude_deg>
 		<longitude_dec>-0.47667</longitude_dec>
 		<elevation_m>82</elevation_m>
-		<elevation_ft>223</elevation_ft>
+		<elevation_ft>269</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -9533,7 +9533,7 @@
 		<longitude_deg>1°15'12"W</longitude_deg>
 		<longitude_dec>-1.25333</longitude_dec>
 		<elevation_m>13</elevation_m>
-		<elevation_ft>92</elevation_ft>
+		<elevation_ft>43</elevation_ft>
 		<iata_code>HRT</iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -9548,7 +9548,7 @@
 		<longitude_deg>0°26'8"W</longitude_deg>
 		<longitude_dec>-0.43556</longitude_dec>
 		<elevation_m>7</elevation_m>
-		<elevation_ft>69</elevation_ft>
+		<elevation_ft>23</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir></fir>
@@ -9563,7 +9563,7 @@
 		<longitude_deg>0°31'26"W</longitude_deg>
 		<longitude_dec>-0.52389</longitude_dec>
 		<elevation_m>68</elevation_m>
-		<elevation_ft>187</elevation_ft>
+		<elevation_ft>223</elevation_ft>
 		<iata_code>WTN</iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -9608,7 +9608,7 @@
 		<longitude_deg>1°22'55"W</longitude_deg>
 		<longitude_dec>-1.38194</longitude_dec>
 		<elevation_m>28</elevation_m>
-		<elevation_ft>348</elevation_ft>
+		<elevation_ft>92</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -9653,7 +9653,7 @@
 		<longitude_deg>1°21'27"E</longitude_deg>
 		<longitude_dec>1.3575</longitude_dec>
 		<elevation_m>21</elevation_m>
-		<elevation_ft>66</elevation_ft>
+		<elevation_ft>69</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir></fir>
@@ -9668,7 +9668,7 @@
 		<longitude_deg>0°29'0"W</longitude_deg>
 		<longitude_dec>-0.48333</longitude_dec>
 		<elevation_m>57</elevation_m>
-		<elevation_ft>361</elevation_ft>
+		<elevation_ft>187</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -9683,7 +9683,7 @@
 		<longitude_deg>0°33'38"W</longitude_deg>
 		<longitude_dec>-0.56056</longitude_dec>
 		<elevation_m>106</elevation_m>
-		<elevation_ft>276</elevation_ft>
+		<elevation_ft>348</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -9803,7 +9803,7 @@
 		<longitude_deg>0°33'2"E</longitude_deg>
 		<longitude_dec>0.55056</longitude_dec>
 		<elevation_m>20</elevation_m>
-		<elevation_ft>56</elevation_ft>
+		<elevation_ft>66</elevation_ft>
 		<iata_code>KNF</iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -10433,7 +10433,7 @@
 		<longitude_deg>1°27'31"W</longitude_deg>
 		<longitude_dec>-1.45861</longitude_dec>
 		<elevation_m>110</elevation_m>
-		<elevation_ft>360</elevation_ft>
+		<elevation_ft>361</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -12077,7 +12077,7 @@
 	</airport_info>
 	<airport_info>
 		<icao_code>GB-0216</icao_code>
-		<airport_name>Ashley's Field Airstrip</airport_name>
+		<airport_name>Ashley`s Field Airstrip</airport_name>
 		<latitude_deg></latitude_deg>
 		<latitude_dec></latitude_dec>
 		<longitude_deg></longitude_deg>
@@ -12692,7 +12692,7 @@
 	</airport_info>
 	<airport_info>
 		<icao_code>GB-0262</icao_code>
-		<airport_name>Griffin's Farm Airstrip</airport_name>
+		<airport_name>Griffin`s Farm Airstrip</airport_name>
 		<latitude_deg></latitude_deg>
 		<latitude_dec></latitude_dec>
 		<longitude_deg></longitude_deg>
@@ -12717,7 +12717,7 @@
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
-		<city>Child's Ercall</city>
+		<city>Child`s Ercall</city>
 		<type>Small airport</type>
 	</airport_info>
 	<airport_info>
@@ -12797,7 +12797,7 @@
 	</airport_info>
 	<airport_info>
 		<icao_code>GB-0270</icao_code>
-		<airport_name>Mitchell's Farm Airstrip</airport_name>
+		<airport_name>Mitchell`s Farm Airstrip</airport_name>
 		<latitude_deg></latitude_deg>
 		<latitude_dec></latitude_dec>
 		<longitude_deg></longitude_deg>
@@ -12812,7 +12812,7 @@
 	</airport_info>
 	<airport_info>
 		<icao_code>GB-0271</icao_code>
-		<airport_name>Kingfisher's Bridge Airstrip</airport_name>
+		<airport_name>Kingfisher`s Bridge Airstrip</airport_name>
 		<latitude_deg></latitude_deg>
 		<latitude_dec></latitude_dec>
 		<longitude_deg></longitude_deg>
@@ -13922,7 +13922,7 @@
 	</airport_info>
 	<airport_info>
 		<icao_code>GB-0352</icao_code>
-		<airport_name>St Mary's Hospital Helipad</airport_name>
+		<airport_name>St Mary`s Hospital Helipad</airport_name>
 		<latitude_deg></latitude_deg>
 		<latitude_dec></latitude_dec>
 		<longitude_deg></longitude_deg>
@@ -18062,7 +18062,7 @@
 	</airport_info>
 	<airport_info>
 		<icao_code>GB-0685</icao_code>
-		<airport_name>Athey's Moor Airfield</airport_name>
+		<airport_name>Athey`s Moor Airfield</airport_name>
 		<latitude_deg></latitude_deg>
 		<latitude_dec></latitude_dec>
 		<longitude_deg></longitude_deg>
@@ -18257,7 +18257,7 @@
 	</airport_info>
 	<airport_info>
 		<icao_code>GB-0698</icao_code>
-		<airport_name>Stitchin's Hill Farm Airstrip</airport_name>
+		<airport_name>Stitchin`s Hill Farm Airstrip</airport_name>
 		<latitude_deg></latitude_deg>
 		<latitude_dec></latitude_dec>
 		<longitude_deg></longitude_deg>
@@ -19262,7 +19262,7 @@
 	</airport_info>
 	<airport_info>
 		<icao_code>GB-0766</icao_code>
-		<airport_name>Baynard's Park Airstrip</airport_name>
+		<airport_name>Baynard`s Park Airstrip</airport_name>
 		<latitude_deg></latitude_deg>
 		<latitude_dec></latitude_dec>
 		<longitude_deg></longitude_deg>
@@ -22142,7 +22142,7 @@
 	</airport_info>
 	<airport_info>
 		<icao_code>GB-0967</icao_code>
-		<airport_name>Moxon's Farm Private Airstrip</airport_name>
+		<airport_name>Moxon`s Farm Private Airstrip</airport_name>
 		<latitude_deg></latitude_deg>
 		<latitude_dec></latitude_dec>
 		<longitude_deg></longitude_deg>
@@ -22412,18 +22412,18 @@
 	</airport_info>
 	<airport_info>
 		<icao_code>GB-0985</icao_code>
-		<airport_name>Addenbrooke's Hospital Helipad</airport_name>
-		<latitude_deg></latitude_deg>
-		<latitude_dec></latitude_dec>
-		<longitude_deg></longitude_deg>
-		<longitude_dec></longitude_dec>
-		<elevation_m></elevation_m>
-		<elevation_ft></elevation_ft>
+		<airport_name>Addenbrooke`s Hospital Helipad</airport_name>
+		<latitude_deg>52°10'15"N</latitude_deg>
+		<latitude_dec>52.17080</latitude_dec>
+		<longitude_deg>0°8'23"E</longitude_deg>
+		<longitude_dec>0.13970</longitude_dec>
+		<elevation_m>14</elevation_m>
+		<elevation_ft>46</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
-		<city></city>
-		<type>Small airport</type>
+		<city>Cambridge</city>
+		<type>Small Helipad</type>
 	</airport_info>
 	<airport_info>
 		<icao_code>GB-0986</icao_code>
