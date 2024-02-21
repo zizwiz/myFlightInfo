@@ -2461,14 +2461,14 @@
 		<elevation_ft>79</elevation_ft>
 	</airport_info>
 	<airport_info>
-		<icao_code>X0AN</icao_code>
-		<airport_name>Anwick</airport_name>
-		<latitude_deg>53°3'0"N</latitude_deg>
-		<latitude_dec>53.05</latitude_dec>
+		<icao_code>GB-0686</icao_code>
+		<airport_name>Old Manor Farm</airport_name>
+		<latitude_deg>53°2'39"N</latitude_deg>
+		<latitude_dec>53.04430</latitude_dec>
 		<longitude_deg>0°21'0"W</longitude_deg>
-		<longitude_dec>-0.35</longitude_dec>
-		<elevation_m>14</elevation_m>
-		<elevation_ft>46</elevation_ft>
+		<longitude_dec>0°19'58"W</longitude_dec>
+		<elevation_m>10</elevation_m>
+		<elevation_ft>33</elevation_ft>
 	</airport_info>
 	<airport_info>
 		<icao_code>GB-0280</icao_code>
