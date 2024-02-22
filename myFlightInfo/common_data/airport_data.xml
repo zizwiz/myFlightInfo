@@ -243,12 +243,12 @@
 	<airport_info>
 		<icao_code>EGAH</icao_code>
 		<airport_name>Halley Research Station</airport_name>
-		<latitude_deg></latitude_deg>
-		<latitude_dec></latitude_dec>
-		<longitude_deg></longitude_deg>
-		<longitude_dec></longitude_dec>
-		<elevation_m></elevation_m>
-		<elevation_ft></elevation_ft>
+		<latitude_deg>75°36'42"S</latitude_deg>
+		<latitude_dec>-75.61168</latitude_dec>
+		<longitude_deg>26°11'54"W</longitude_deg>
+		<longitude_dec>-26.19828</longitude_dec>
+		<elevation_m>30</elevation_m>
+		<elevation_ft>98</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name>Halley - Station Z</alternate_name>
 		<fir></fir>
@@ -1562,7 +1562,7 @@
 	</airport_info>
 	<airport_info>
 		<icao_code>EGDQ</icao_code>
-		<airport_name>Colerne</airport_name>
+		<airport_name>UN-ASSIGNED</airport_name>
 		<latitude_deg></latitude_deg>
 		<latitude_dec></latitude_dec>
 		<longitude_deg></longitude_deg>
@@ -5927,7 +5927,7 @@
 	</airport_info>
 	<airport_info>
 		<icao_code>EGOU</icao_code>
-		<airport_name>Colerne</airport_name>
+		<airport_name>UN-ASSIGNED</airport_name>
 		<latitude_deg></latitude_deg>
 		<latitude_dec></latitude_dec>
 		<longitude_deg></longitude_deg>
@@ -8232,8 +8232,8 @@
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir></fir>
-		<city></city>
-		<type></type>
+		<city>Colerne</city>
+		<type>Closed</type>
 	</airport_info>
 	<airport_info>
 		<icao_code>EGUO</icao_code>
@@ -9851,7 +9851,7 @@
 		<elevation_ft>249</elevation_ft>
 		<iata_code>MPN</iata_code>
 		<alternate_name></alternate_name>
-		<fir></fir>
+		<fir>Comodoro Rivadavia FIR</fir>
 		<city>Falkland Islands</city>
 		<type></type>
 	</airport_info>
@@ -11763,12 +11763,12 @@
 	<airport_info>
 		<icao_code>GB-0194</icao_code>
 		<airport_name>East Winch Airstrip</airport_name>
-		<latitude_deg></latitude_deg>
-		<latitude_dec></latitude_dec>
-		<longitude_deg></longitude_deg>
-		<longitude_dec></longitude_dec>
-		<elevation_m></elevation_m>
-		<elevation_ft></elevation_ft>
+		<latitude_deg>52°43'25"N</latitude_deg>
+		<latitude_dec>52.723675</latitude_dec>
+		<longitude_deg>0°31'21"E</longitude_deg>
+		<longitude_dec>0.522480</longitude_dec>
+		<elevation_m>14</elevation_m>
+		<elevation_ft>46</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -12018,12 +12018,12 @@
 	<airport_info>
 		<icao_code>GB-0212</icao_code>
 		<airport_name>Whitehill Farm Airstrip</airport_name>
-		<latitude_deg></latitude_deg>
-		<latitude_dec></latitude_dec>
-		<longitude_deg></longitude_deg>
-		<longitude_dec></longitude_dec>
-		<elevation_m></elevation_m>
-		<elevation_ft></elevation_ft>
+		<latitude_deg>52°5'50"N</latitude_deg>
+		<latitude_dec>52.097163</latitude_dec>
+		<longitude_deg>0°1'0"E</longitude_deg>
+		<longitude_dec>0.016687</longitude_dec>
+		<elevation_m>22</elevation_m>
+		<elevation_ft>72</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -12678,12 +12678,12 @@
 	<airport_info>
 		<icao_code>GB-0261</icao_code>
 		<airport_name>Top Farm Airfield</airport_name>
-		<latitude_deg></latitude_deg>
-		<latitude_dec></latitude_dec>
-		<longitude_deg></longitude_deg>
-		<longitude_dec></longitude_dec>
-		<elevation_m></elevation_m>
-		<elevation_ft></elevation_ft>
+		<latitude_deg>52°7'23"N</latitude_deg>
+		<latitude_dec>52.122968</latitude_dec>
+		<longitude_deg>0°7'3"W</longitude_deg>
+		<longitude_dec>-0.117547</longitude_dec>
+		<elevation_m>65</elevation_m>
+		<elevation_ft>213</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -12798,12 +12798,12 @@
 	<airport_info>
 		<icao_code>GB-0270</icao_code>
 		<airport_name>Mitchell`s Farm Airstrip</airport_name>
-		<latitude_deg></latitude_deg>
-		<latitude_dec></latitude_dec>
-		<longitude_deg></longitude_deg>
-		<longitude_dec></longitude_dec>
-		<elevation_m></elevation_m>
-		<elevation_ft></elevation_ft>
+		<latitude_deg>52°20'14"N</latitude_deg>
+		<latitude_dec>52.337151</latitude_dec>
+		<longitude_deg>0°10'59"E</longitude_deg>
+		<longitude_dec>0.182962</longitude_dec>
+		<elevation_m>2</elevation_m>
+		<elevation_ft>7</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -12813,12 +12813,12 @@
 	<airport_info>
 		<icao_code>GB-0271</icao_code>
 		<airport_name>Kingfisher`s Bridge Airstrip</airport_name>
-		<latitude_deg></latitude_deg>
-		<latitude_dec></latitude_dec>
-		<longitude_deg></longitude_deg>
-		<longitude_dec></longitude_dec>
-		<elevation_m></elevation_m>
-		<elevation_ft></elevation_ft>
+		<latitude_deg>52°19'50"N</latitude_deg>
+		<latitude_dec>52.330476</latitude_dec>
+		<longitude_deg>0°16'4"E</longitude_deg>
+		<longitude_dec>0.267792</longitude_dec>
+		<elevation_m>7</elevation_m>
+		<elevation_ft>23</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -12993,12 +12993,12 @@
 	<airport_info>
 		<icao_code>GB-0283</icao_code>
 		<airport_name>Lark Engine Farmhouse Airstrip</airport_name>
-		<latitude_deg></latitude_deg>
-		<latitude_dec></latitude_dec>
-		<longitude_deg></longitude_deg>
-		<longitude_dec></longitude_dec>
-		<elevation_m></elevation_m>
-		<elevation_ft></elevation_ft>
+		<latitude_deg>52°25'22"N</latitude_deg>
+		<latitude_dec>52.422796</latitude_dec>
+		<longitude_deg>0°22'40"E</longitude_deg>
+		<longitude_dec>0.377712</longitude_dec>
+		<elevation_m>-2</elevation_m>
+		<elevation_ft>-7</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -13593,12 +13593,12 @@
 	<airport_info>
 		<icao_code>GB-0330</icao_code>
 		<airport_name>Boughton North Airfield</airport_name>
-		<latitude_deg></latitude_deg>
-		<latitude_dec></latitude_dec>
-		<longitude_deg></longitude_deg>
-		<longitude_dec></longitude_dec>
-		<elevation_m></elevation_m>
-		<elevation_ft></elevation_ft>
+		<latitude_deg>52°35'27"N</latitude_deg>
+		<latitude_dec>52.590862</latitude_dec>
+		<longitude_deg>0°31'2"E</longitude_deg>
+		<longitude_dec>0.517173</longitude_dec>
+		<elevation_m>24</elevation_m>
+		<elevation_ft>79</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -13608,12 +13608,12 @@
 	<airport_info>
 		<icao_code>GB-0331</icao_code>
 		<airport_name>Stoke Ferry Airfield</airport_name>
-		<latitude_deg></latitude_deg>
-		<latitude_dec></latitude_dec>
-		<longitude_deg></longitude_deg>
-		<longitude_dec></longitude_dec>
-		<elevation_m></elevation_m>
-		<elevation_ft></elevation_ft>
+		<latitude_deg>52°35'3"N</latitude_deg>
+		<latitude_dec>52.584180</latitude_dec>
+		<longitude_deg>0°30'55"E</longitude_deg>
+		<longitude_dec>0.515299</longitude_dec>
+		<elevation_m>18</elevation_m>
+		<elevation_ft>59</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -14088,12 +14088,12 @@
 	<airport_info>
 		<icao_code>GB-0363</icao_code>
 		<airport_name>Exning Airstrip</airport_name>
-		<latitude_deg></latitude_deg>
-		<latitude_dec></latitude_dec>
-		<longitude_deg></longitude_deg>
-		<longitude_dec></longitude_dec>
-		<elevation_m></elevation_m>
-		<elevation_ft></elevation_ft>
+		<latitude_deg>52°17'24"N</latitude_deg>
+		<latitude_dec>52.289913</latitude_dec>
+		<longitude_deg>0°22'10"E</longitude_deg>
+		<longitude_dec>0.369544</longitude_dec>
+		<elevation_m>7</elevation_m>
+		<elevation_ft>23</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -14148,12 +14148,12 @@
 	<airport_info>
 		<icao_code>GB-0367</icao_code>
 		<airport_name>Chatteris Airfield</airport_name>
-		<latitude_deg></latitude_deg>
-		<latitude_dec></latitude_dec>
-		<longitude_deg></longitude_deg>
-		<longitude_dec></longitude_dec>
-		<elevation_m></elevation_m>
-		<elevation_ft></elevation_ft>
+		<latitude_deg>52°29'20"N</latitude_deg>
+		<latitude_dec>52.488772</latitude_dec>
+		<longitude_deg>0°5'23"E</longitude_deg>
+		<longitude_dec>0.089750</longitude_dec>
+		<elevation_m>0</elevation_m>
+		<elevation_ft>0</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -14268,12 +14268,12 @@
 	<airport_info>
 		<icao_code>GB-0375</icao_code>
 		<airport_name>Falgunzeon Glider Airfield</airport_name>
-		<latitude_deg></latitude_deg>
-		<latitude_dec></latitude_dec>
-		<longitude_deg></longitude_deg>
-		<longitude_dec></longitude_dec>
-		<elevation_m></elevation_m>
-		<elevation_ft></elevation_ft>
+		<latitude_deg>54°56'41"N</latitude_deg>
+		<latitude_dec>54.94482</latitude_dec>
+		<longitude_deg>3°44'21"W</longitude_deg>
+		<longitude_dec>-3.73914</longitude_dec>
+		<elevation_m>196</elevation_m>
+		<elevation_ft>643</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -14538,12 +14538,12 @@
 	<airport_info>
 		<icao_code>GB-0395</icao_code>
 		<airport_name>Main Hall Farm Airfield</airport_name>
-		<latitude_deg></latitude_deg>
-		<latitude_dec></latitude_dec>
-		<longitude_deg></longitude_deg>
-		<longitude_dec></longitude_dec>
-		<elevation_m></elevation_m>
-		<elevation_ft></elevation_ft>
+		<latitude_deg>52°16'18"N</latitude_deg>
+		<latitude_dec>52.271542</latitude_dec>
+		<longitude_deg>0°4'12"W</longitude_deg>
+		<longitude_dec>-0.069938</longitude_dec>
+		<elevation_m>17</elevation_m>
+		<elevation_ft>56</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -15708,12 +15708,12 @@
 	<airport_info>
 		<icao_code>GB-0476</icao_code>
 		<airport_name>Brookfield Farm Airstrip</airport_name>
-		<latitude_deg></latitude_deg>
-		<latitude_dec></latitude_dec>
-		<longitude_deg></longitude_deg>
-		<longitude_dec></longitude_dec>
-		<elevation_m></elevation_m>
-		<elevation_ft></elevation_ft>
+		<latitude_deg>52°20'13"N</latitude_deg>
+		<latitude_dec>52.336876</latitude_dec>
+		<longitude_deg>0°12'54"W</longitude_deg>
+		<longitude_dec>-0.214934</longitude_dec>
+		<elevation_m>24</elevation_m>
+		<elevation_ft>79</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -16608,12 +16608,12 @@
 	<airport_info>
 		<icao_code>GB-0544</icao_code>
 		<airport_name>Rectory Farm Airstrip</airport_name>
-		<latitude_deg></latitude_deg>
-		<latitude_dec></latitude_dec>
-		<longitude_deg></longitude_deg>
-		<longitude_dec></longitude_dec>
-		<elevation_m></elevation_m>
-		<elevation_ft></elevation_ft>
+		<latitude_deg>52°11'60"N</latitude_deg>
+		<latitude_dec>52.199915</latitude_dec>
+		<longitude_deg>0°11'39"W</longitude_deg>
+		<longitude_dec>-0.194063</longitude_dec>
+		<elevation_m>30</elevation_m>
+		<elevation_ft>98</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -17583,12 +17583,12 @@
 	<airport_info>
 		<icao_code>GB-0634</icao_code>
 		<airport_name>Southery Airstrip</airport_name>
-		<latitude_deg></latitude_deg>
-		<latitude_dec></latitude_dec>
-		<longitude_deg></longitude_deg>
-		<longitude_dec></longitude_dec>
-		<elevation_m></elevation_m>
-		<elevation_ft></elevation_ft>
+		<latitude_deg>52°32'19"N</latitude_deg>
+		<latitude_dec>52.538508</latitude_dec>
+		<longitude_deg>0°23'2"E</longitude_deg>
+		<longitude_dec>0.383806</longitude_dec>
+		<elevation_m>2</elevation_m>
+		<elevation_ft>7</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -19323,12 +19323,12 @@
 	<airport_info>
 		<icao_code>GB-0770</icao_code>
 		<airport_name>Armshold Farm Airstrip</airport_name>
-		<latitude_deg></latitude_deg>
-		<latitude_dec></latitude_dec>
-		<longitude_deg></longitude_deg>
-		<longitude_dec></longitude_dec>
-		<elevation_m></elevation_m>
-		<elevation_ft></elevation_ft>
+		<latitude_deg>52°10'28"N</latitude_deg>
+		<latitude_dec>52.174522</latitude_dec>
+		<longitude_deg>0°1'10"W</longitude_deg>
+		<longitude_dec>-0.019512</longitude_dec>
+		<elevation_m>34</elevation_m>
+		<elevation_ft>112</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -19773,12 +19773,12 @@
 	<airport_info>
 		<icao_code>GB-0800</icao_code>
 		<airport_name>Bedwell Hey Farm Airstrip</airport_name>
-		<latitude_deg></latitude_deg>
-		<latitude_dec></latitude_dec>
-		<longitude_deg></longitude_deg>
-		<longitude_dec></longitude_dec>
-		<elevation_m></elevation_m>
-		<elevation_ft></elevation_ft>
+		<latitude_deg>52°22'21"N</latitude_deg>
+		<latitude_dec>52.372553</latitude_dec>
+		<longitude_deg>0°13'28"E</longitude_deg>
+		<longitude_dec>0.224504</longitude_dec>
+		<elevation_m>7</elevation_m>
+		<elevation_ft>23</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -20223,12 +20223,12 @@
 	<airport_info>
 		<icao_code>GB-0831</icao_code>
 		<airport_name>Coldharbour Farm Airstrip</airport_name>
-		<latitude_deg></latitude_deg>
-		<latitude_dec></latitude_dec>
-		<longitude_deg></longitude_deg>
-		<longitude_dec></longitude_dec>
-		<elevation_m></elevation_m>
-		<elevation_ft></elevation_ft>
+		<latitude_deg>52°18'27"N</latitude_deg>
+		<latitude_dec>52.307492</latitude_dec>
+		<longitude_deg>0°2'26"E</longitude_deg>
+		<longitude_dec>0.040483</longitude_dec>
+		<elevation_m>13</elevation_m>
+		<elevation_ft>43</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -20537,7 +20537,7 @@
 	</airport_info>
 	<airport_info>
 		<icao_code>GB-0853</icao_code>
-		<airport_name>Bath 'Charmy Down' airstrip</airport_name>
+		<airport_name>Bath `Charmy Down` airstrip</airport_name>
 		<latitude_deg></latitude_deg>
 		<latitude_dec></latitude_dec>
 		<longitude_deg></longitude_deg>
@@ -21138,12 +21138,12 @@
 	<airport_info>
 		<icao_code>GB-0896</icao_code>
 		<airport_name>Wateringhill Farm Airstrip</airport_name>
-		<latitude_deg></latitude_deg>
-		<latitude_dec></latitude_dec>
-		<longitude_deg></longitude_deg>
-		<longitude_dec></longitude_dec>
-		<elevation_m></elevation_m>
-		<elevation_ft></elevation_ft>
+		<latitude_deg>52°30'42"N</latitude_deg>
+		<latitude_dec>52.511649</latitude_dec>
+		<longitude_deg>0°10'59"E</longitude_deg>
+		<longitude_dec>0.183163</longitude_dec>
+		<elevation_m>0</elevation_m>
+		<elevation_ft>0</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -21453,12 +21453,12 @@
 	<airport_info>
 		<icao_code>GB-0918</icao_code>
 		<airport_name>Little Shelford Airstrip</airport_name>
-		<latitude_deg></latitude_deg>
-		<latitude_dec></latitude_dec>
-		<longitude_deg></longitude_deg>
-		<longitude_dec></longitude_dec>
-		<elevation_m></elevation_m>
-		<elevation_ft></elevation_ft>
+		<latitude_deg>52°7'54"N</latitude_deg>
+		<latitude_dec>52.131629</latitude_dec>
+		<longitude_deg>0°7'28"E</longitude_deg>
+		<longitude_dec>0.124383</longitude_dec>
+		<elevation_m>17</elevation_m>
+		<elevation_ft>56</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -21738,12 +21738,12 @@
 	<airport_info>
 		<icao_code>GB-0939</icao_code>
 		<airport_name>Poplar Farm Airstrip</airport_name>
-		<latitude_deg></latitude_deg>
-		<latitude_dec></latitude_dec>
-		<longitude_deg></longitude_deg>
-		<longitude_dec></longitude_dec>
-		<elevation_m></elevation_m>
-		<elevation_ft></elevation_ft>
+		<latitude_deg>52°36'14"N</latitude_deg>
+		<latitude_dec>52.603844</latitude_dec>
+		<longitude_deg>0°20'46"E</longitude_deg>
+		<longitude_dec>0.346184</longitude_dec>
+		<elevation_m>-3</elevation_m>
+		<elevation_ft>-10</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -21843,12 +21843,12 @@
 	<airport_info>
 		<icao_code>GB-0946</icao_code>
 		<airport_name>Tilney-St-Lawrence Airstrip</airport_name>
-		<latitude_deg></latitude_deg>
-		<latitude_dec></latitude_dec>
-		<longitude_deg></longitude_deg>
-		<longitude_dec></longitude_dec>
-		<elevation_m></elevation_m>
-		<elevation_ft></elevation_ft>
+		<latitude_deg>52°42'13"N</latitude_deg>
+		<latitude_dec>52.703602</latitude_dec>
+		<longitude_deg>0°18'48"E</longitude_deg>
+		<longitude_dec>0.313311</longitude_dec>
+		<elevation_m>2</elevation_m>
+		<elevation_ft>7</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -22218,12 +22218,12 @@
 	<airport_info>
 		<icao_code>GB-0972</icao_code>
 		<airport_name>Orchard House Airstrip</airport_name>
-		<latitude_deg></latitude_deg>
-		<latitude_dec></latitude_dec>
-		<longitude_deg></longitude_deg>
-		<longitude_dec></longitude_dec>
-		<elevation_m></elevation_m>
-		<elevation_ft></elevation_ft>
+		<latitude_deg>52°29'54"N</latitude_deg>
+		<latitude_dec>52.498368</latitude_dec>
+		<longitude_deg>0°16'43"E</longitude_deg>
+		<longitude_dec>0.278521</longitude_dec>
+		<elevation_m>1</elevation_m>
+		<elevation_ft>3</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -22533,12 +22533,12 @@
 	<airport_info>
 		<icao_code>GB-0993</icao_code>
 		<airport_name>Fen-End-Farm Airstrip</airport_name>
-		<latitude_deg></latitude_deg>
-		<latitude_dec></latitude_dec>
-		<longitude_deg></longitude_deg>
-		<longitude_dec></longitude_dec>
-		<elevation_m></elevation_m>
-		<elevation_ft></elevation_ft>
+		<latitude_deg>52°18'50"N</latitude_deg>
+		<latitude_dec>52.313877</latitude_dec>
+		<longitude_deg>0°7'22"E</longitude_deg>
+		<longitude_dec>0.122809</longitude_dec>
+		<elevation_m>4</elevation_m>
+		<elevation_ft>13</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -23208,12 +23208,12 @@
 	<airport_info>
 		<icao_code>GB-1042</icao_code>
 		<airport_name>Barnfield Farm Airstrip</airport_name>
-		<latitude_deg></latitude_deg>
-		<latitude_dec></latitude_dec>
-		<longitude_deg></longitude_deg>
-		<longitude_dec></longitude_dec>
-		<elevation_m></elevation_m>
-		<elevation_ft></elevation_ft>
+		<latitude_deg>52°21'36"N</latitude_deg>
+		<latitude_dec>52.360050</latitude_dec>
+		<longitude_deg>0°0'45"W</longitude_deg>
+		<longitude_dec>-0.012395</longitude_dec>
+		<elevation_m>32</elevation_m>
+		<elevation_ft>105</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -23253,12 +23253,12 @@
 	<airport_info>
 		<icao_code>GB-1046</icao_code>
 		<airport_name>Lutton-Garngate Airstrip</airport_name>
-		<latitude_deg></latitude_deg>
-		<latitude_dec></latitude_dec>
-		<longitude_deg></longitude_deg>
-		<longitude_dec></longitude_dec>
-		<elevation_m></elevation_m>
-		<elevation_ft></elevation_ft>
+		<latitude_deg>52°46'41"N</latitude_deg>
+		<latitude_dec>52.777991</latitude_dec>
+		<longitude_deg>0°5'36"E</longitude_deg>
+		<longitude_dec>0.093312</longitude_dec>
+		<elevation_m>3</elevation_m>
+		<elevation_ft>10</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
@@ -23913,16 +23913,16 @@
 	<airport_info>
 		<icao_code>GB-1100</icao_code>
 		<airport_name>Falgunzeon</airport_name>
-		<latitude_deg></latitude_deg>
-		<latitude_dec></latitude_dec>
-		<longitude_deg></longitude_deg>
-		<longitude_dec></longitude_dec>
-		<elevation_m></elevation_m>
-		<elevation_ft></elevation_ft>
+		<latitude_deg>54°56'41"N</latitude_deg>
+		<latitude_dec>54.94482</latitude_dec>
+		<longitude_deg>3°44'21"W</longitude_deg>
+		<longitude_dec>-3.73914</longitude_dec>
+		<elevation_m>196</elevation_m>
+		<elevation_ft>643</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
-		<city>Dalbeattie</city>
+		<city>Kirkgunzeon by Dalbeattie</city>
 		<type>Closed</type>
 	</airport_info>
 	<airport_info>
@@ -24978,12 +24978,12 @@
 	<airport_info>
 		<icao_code>GB-1171</icao_code>
 		<airport_name>Wingland</airport_name>
-		<latitude_deg></latitude_deg>
-		<latitude_dec></latitude_dec>
-		<longitude_deg></longitude_deg>
-		<longitude_dec></longitude_dec>
-		<elevation_m></elevation_m>
-		<elevation_ft></elevation_ft>
+		<latitude_deg>52°48'51"N</latitude_deg>
+		<latitude_dec>52.814095</latitude_dec>
+		<longitude_deg>0°6'47"E</longitude_deg>
+		<longitude_dec>0.112993</longitude_dec>
+		<elevation_m>3</elevation_m>
+		<elevation_ft>10</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>

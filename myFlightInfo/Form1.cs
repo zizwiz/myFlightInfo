@@ -2,6 +2,7 @@
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Threading;
 using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
@@ -55,6 +56,9 @@ namespace myFlightInfo
 
         private async void Form1_Load(object sender, EventArgs e)
         {
+            // make GUI invisible
+            SetVisibleCore(false);
+
             //if there is no school then ask which one
             //school gets set inside the Schools dialog
             if (settings.school == "")
@@ -64,14 +68,16 @@ namespace myFlightInfo
                 GC.Collect();
             }
 
-
-
             //check which school is set and use it but also set button to change to other school
             btn_school.Text += settings.school == "Rochester" ? "\rLt Gransden" : "\rRochester";
 
 
             //Get the data file from resources and write to file in same dir as the app.
             File.WriteAllText("airport_data.xml", Resources.airport_data);
+            //Start thread to populate the combobox after writing file above
+            //Watch cross threading
+            Thread myThread = new Thread(new ThreadStart(PopulateAirfieldCmboBx));
+            myThread.Start();
 
             //if the file does not exist then copy basic file from resources
             if (!File.Exists("compliance_data.xml"))
@@ -79,30 +85,8 @@ namespace myFlightInfo
                 File.WriteAllText("compliance_data.xml", Resources.compliance_data);
             }
 
-            //Get the information so we can use it when we need to
-            //  string[] compliance_data_array = GetComplianceData("Default");
-
-
             Text += " : " + settings.school + " : v" +
-                    Assembly.GetExecutingAssembly().GetName().Version; // put in the version number
-
-            //populate the combo boxes with the airfield names direct from xml file so we get 
-            //names correctly spelt for later look up
-            XmlDocument doc = new XmlDocument();
-            doc.Load("airport_data.xml");
-            XmlNodeList airportList = doc.SelectNodes("uk_airports/airport_info/airport_name");
-            foreach (XmlNode Name in airportList)
-            {
-                if (Name.InnerText != "UN-ASSIGNED")
-                {
-                    cmbobx_airport_info.Items.Add(Name.InnerText);
-                    // cmbobx_airportinfo_to.Items.Add(Name.InnerText);
-                    // cmbobx_airportinfo_from.Items.Add(Name.InnerText);
-                }
-            }
-
-            cmbobx_airport_info.SelectedIndex = 0;
-
+                     Assembly.GetExecutingAssembly().GetName().Version; // put in the version number
 
             grpbx_towns.Visible = false;
             grpbx_browser_navigation.Visible = false;
@@ -141,7 +125,55 @@ namespace myFlightInfo
             //do this last in this order to make sure all else is working.
             PopulateComplianceDataCmboBx(settings.Aircraft); //set to aircraft in settings
             GetSettings();
+
+            //Make GUI visible but the combobox will still be loading on different thread
+            SetVisibleCore(true);
         }
+
+
+        void PopulateAirfieldCmboBx()
+        {
+            // A different thread watch cross threading
+            //populate the combo boxes with the airfield names direct from xml file so we get 
+            //names correctly spelt for later look up
+            XmlDocument doc = new XmlDocument();
+            doc.Load("airport_data.xml");
+            XmlNodeList airportList = doc.SelectNodes("uk_airports/airport_info/airport_name");
+            foreach (XmlNode Name in airportList)
+            {
+                if (Name.InnerText != "UN-ASSIGNED") // if there is am actual airport
+                {
+                    string[] data = airport_data.GetAirportInfo(Name.InnerText);
+
+                    if (data[8] != "") // only include if we have data for airport in this case altitude in metres
+                    {
+                        //use invoke ot prevent cross threading
+                        BeginInvoke(new Action(() =>
+                        {
+                            cmbobx_airport_info.Items.Add(Name.InnerText);
+                        }));
+                    }
+                }
+            }
+
+            //use invoke ot prevent cross threading
+            BeginInvoke(new Action(() =>
+            {
+                cmbobx_airport_info.SelectedIndex = 0;
+            }));
+        }
+        
+        //Use this to make the GUI visible after it has loaded
+        protected override void SetVisibleCore(bool value)
+        {
+            if (!IsHandleCreated)
+            {
+                CreateHandle();
+            }
+            base.SetVisibleCore(value);
+        }
+
+
 
         private void btn_close_Click(object sender, EventArgs e)
         {
@@ -274,7 +306,7 @@ namespace myFlightInfo
                 int year = dateTimePicker1.Value.Year;
                 int month = dateTimePicker1.Value.Month;
                 int day = dateTimePicker1.Value.Day;
-                
+
                 //we use flags as the info in the xml file we will use may not be complete
                 //we only show info if it is complete.
                 bool noInfoFlag;
