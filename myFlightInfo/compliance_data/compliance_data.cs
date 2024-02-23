@@ -565,29 +565,6 @@ namespace myFlightInfo
                         return;
                     }
 
-
-                    //root.Add(new XElement("aircraft_name", myAircraftName));
-                    //root.Add(new XElement("MaxTakeOffWeight", txtbx_settings_mtow.Text));
-                    //root.Add(new XElement("EmptyWeight", txtbx_settings_empty_weight.Text));
-                    //root.Add(new XElement("MinPilotWeight", txtbx_settings_min_pilot_weight.Text));
-                    //root.Add(new XElement("MaxWeightPerCrewMember", txtbx_settings_max_per_crew_weight.Text));
-                    //root.Add(new XElement("MaxCockpitWeight", txtbx_settings_max_cockpit_weight.Text));
-                    //root.Add(new XElement("MinCockpitWeight", txtbx_settings_min_cockpit_weight.Text));
-                    //root.Add(new XElement("MaxWeightPerSeat", txtbx_settings_max_weight_per_seat.Text));
-                    //root.Add(new XElement("MaxHoldBaggageWeight", txtbx_settings_max_hold_bag_weight.Text));
-                    //root.Add(new XElement("MaxFuelVol", txtbx_settings_max_fuel_vol.Text));
-                    //root.Add(new XElement("MinFuelVol", txtbx_settings_min_fuel_vol.Text));
-                    //root.Add(new XElement("Vne", txtbx_settings_vne.Text));
-                    //root.Add(new XElement("Va", txtbx_settings_va.Text));
-                    //root.Add(new XElement("Vs0", txtbx_settings_vs0.Text));
-                    //root.Add(new XElement("Vs1", txtbx_settings_vs1.Text));
-                    //root.Add(new XElement("Vfe", txtbx_settings_vfe.Text));
-                    //root.Add(new XElement("AftMomentArm", txtbx_settings_hold_arm.Text));
-                    //root.Add(new XElement("FwdMomentArm", txtbx_settings_cabin_arm.Text));
-                    //root.Add(new XElement("AftCGLimit", txtbx_settings_aft_cg_limit.Text));
-                    //root.Add(new XElement("FwdCGLimit", txtbx_settings_fwd_cg_limit.Text));
-
-
                     doc.Element("compliance_data").Add(root);
                     doc.Save("compliance_data.xml");
 
@@ -738,18 +715,20 @@ namespace myFlightInfo
                 originalData[17] = txtbx_settings_cabin_arm.Text;
                 originalData[18] = txtbx_settings_aft_cg_limit.Text;
                 originalData[19] = txtbx_settings_fwd_cg_limit.Text;
+                
+                XmlDocument doc = new XmlDocument();
+                doc.Load("compliance_data.xml");
 
-                if (DeleteData(originalData[0], false)) //Delete the node
+                XmlNode node = doc.SelectSingleNode("//aircraft_info[aircraft_name ='" + originalData[0] + "']");
+
+                // if found....
+                if (node != null)
                 {
-                    //Re-add the node with stored information
-                    XDocument doc = XDocument.Load("compliance_data.xml");
-                    XElement root = new XElement("aircraft_info");
-
-                    root.Add(new XElement("aircraft_name", originalData[0]));
-
+                    node["aircraft_name"].InnerText = cmbobx_aircraftName.Text;
+                    
                     if (verification.CheckDouble(originalData[1]))
                     {
-                        root.Add(new XElement("MaxTakeOffWeight", originalData[1]));
+                        node["MaxTakeOffWeight"].InnerText = originalData[1];
                     }
                     else
                     {
@@ -759,7 +738,7 @@ namespace myFlightInfo
 
                     if (verification.CheckDouble(originalData[2]))
                     {
-                        root.Add(new XElement("EmptyWeight", originalData[2]));
+                        node["EmptyWeight"].InnerText = originalData[2];
                     }
                     else
                     {
@@ -769,7 +748,7 @@ namespace myFlightInfo
 
                     if (verification.CheckDouble(originalData[3]))
                     {
-                        root.Add(new XElement("MinPilotWeight", originalData[3]));
+                       node["MinPilotWeight"].InnerText = originalData[3];
                     }
                     else
                     {
@@ -779,7 +758,7 @@ namespace myFlightInfo
 
                     if (verification.CheckDouble(originalData[4]))
                     {
-                        root.Add(new XElement("MaxWeightPerCrewMember", originalData[4]));
+                        node["MaxWeightPerCrewMember"].InnerText = originalData[4];
                     }
                     else
                     {
@@ -789,7 +768,7 @@ namespace myFlightInfo
 
                     if (verification.CheckDouble(originalData[5]))
                     {
-                        root.Add(new XElement("MaxCockpitWeight", originalData[5]));
+                        node["MaxCockpitWeight"].InnerText = originalData[5];
                     }
                     else
                     {
@@ -799,7 +778,7 @@ namespace myFlightInfo
 
                     if (verification.CheckDouble(originalData[6]))
                     {
-                        root.Add(new XElement("MinCockpitWeight", originalData[6]));
+                        node["MinCockpitWeight"].InnerText = originalData[6];
                     }
                     else
                     {
@@ -809,7 +788,7 @@ namespace myFlightInfo
 
                     if (verification.CheckDouble(originalData[7]))
                     {
-                        root.Add(new XElement("MaxWeightPerSeat", originalData[7]));
+                        node["MaxWeightPerSeat"].InnerText = originalData[7];
                     }
                     else
                     {
@@ -819,7 +798,7 @@ namespace myFlightInfo
 
                     if (verification.CheckDouble(originalData[8]))
                     {
-                        root.Add(new XElement("MaxHoldBaggageWeight", originalData[8]));
+                       node["MaxHoldBaggageWeight"].InnerText = originalData[8];
                     }
                     else
                     {
@@ -829,7 +808,7 @@ namespace myFlightInfo
 
                     if (verification.CheckDouble(originalData[9]))
                     {
-                        root.Add(new XElement("MaxFuelVol", originalData[9]));
+                        node["MaxFuelVol"].InnerText = originalData[9];
                     }
                     else
                     {
@@ -839,7 +818,7 @@ namespace myFlightInfo
 
                     if (verification.CheckDouble(originalData[10]))
                     {
-                        root.Add(new XElement("MinFuelVol", originalData[10]));
+                        node["MinFuelVol"].InnerText = originalData[10];
                     }
                     else
                     {
@@ -849,7 +828,7 @@ namespace myFlightInfo
 
                     if (verification.CheckDouble(originalData[11]))
                     {
-                        root.Add(new XElement("Vne", originalData[11]));
+                        node["Vne"].InnerText = originalData[11];
                     }
                     else
                     {
@@ -859,7 +838,7 @@ namespace myFlightInfo
 
                     if (verification.CheckDouble(originalData[12]))
                     {
-                        root.Add(new XElement("Va", originalData[12]));
+                       node["Va"].InnerText = originalData[12];
                     }
                     else
                     {
@@ -869,7 +848,7 @@ namespace myFlightInfo
 
                     if (verification.CheckDouble(originalData[13]))
                     {
-                        root.Add(new XElement("Vs0", originalData[13]));
+                        node["Vs0"].InnerText = originalData[13];
                     }
                     else
                     {
@@ -879,7 +858,7 @@ namespace myFlightInfo
 
                     if (verification.CheckDouble(originalData[14]))
                     {
-                        root.Add(new XElement("Vs1", originalData[14]));
+                        node["Vs1"].InnerText = originalData[14];
                     }
                     else
                     {
@@ -889,7 +868,7 @@ namespace myFlightInfo
 
                     if (verification.CheckDouble(originalData[15]))
                     {
-                        root.Add(new XElement("Vfe", originalData[15]));
+                        node["Vfe"].InnerText = originalData[15];
                     }
                     else
                     {
@@ -899,7 +878,7 @@ namespace myFlightInfo
 
                     if (verification.CheckDouble(originalData[16]))
                     {
-                        root.Add(new XElement("AftMomentArm", originalData[16]));
+                        node["AftMomentArm"].InnerText = originalData[16];
                     }
                     else
                     {
@@ -909,7 +888,7 @@ namespace myFlightInfo
 
                     if (verification.CheckDouble(originalData[17]))
                     {
-                        root.Add(new XElement("FwdMomentArm", originalData[17]));
+                        node["FwdMomentArm"].InnerText = originalData[17];
                     }
                     else
                     {
@@ -919,7 +898,7 @@ namespace myFlightInfo
 
                     if (verification.CheckDouble(originalData[18]))
                     {
-                        root.Add(new XElement("AftCGLimit", originalData[18]));
+                        node["AftCGLimit"].InnerText = originalData[18];
                     }
                     else
                     {
@@ -929,7 +908,7 @@ namespace myFlightInfo
 
                     if (verification.CheckDouble(originalData[19]))
                     {
-                        root.Add(new XElement("FwdCGLimit", originalData[19]));
+                       node["FwdCGLimit"].InnerText = originalData[19];
                     }
                     else
                     {
@@ -937,12 +916,11 @@ namespace myFlightInfo
                         return;
                     }
 
-                    doc.Element("compliance_data").Add(root);
                     doc.Save("compliance_data.xml");
 
+                    cmbobx_aircraftName.Items.Clear();
                     PopulateComplianceDataCmboBx(originalData[0]); //rebuild the combobox
-
-                    cmbobx_aircraftName.SelectedIndex = cmbobx_aircraftName.Items.Count - 1;
+                    cmbobx_aircraftName.SelectedItem = originalData[0];
                 }
             }
             else
