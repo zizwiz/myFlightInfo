@@ -14103,12 +14103,12 @@
 	<airport_info>
 		<icao_code>GB-0364</icao_code>
 		<airport_name>Cottered Airstrip</airport_name>
-		<latitude_deg></latitude_deg>
-		<latitude_dec></latitude_dec>
-		<longitude_deg></longitude_deg>
-		<longitude_dec></longitude_dec>
-		<elevation_m></elevation_m>
-		<elevation_ft></elevation_ft>
+		<latitude_deg>52°48'51"N</latitude_deg>
+		<latitude_dec>51.94815</latitude_dec>
+		<longitude_deg>0°6'47"E</longitude_deg>
+		<longitude_dec>-0.09852</longitude_dec>
+		<elevation_m>113</elevation_m>
+		<elevation_ft>371</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
