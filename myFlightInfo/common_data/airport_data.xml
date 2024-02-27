@@ -14628,12 +14628,12 @@
 	<airport_info>
 		<icao_code>GB-0401</icao_code>
 		<airport_name>Graveley Airstrip</airport_name>
-		<latitude_deg></latitude_deg>
-		<latitude_dec></latitude_dec>
-		<longitude_deg></longitude_deg>
-		<longitude_dec></longitude_dec>
-		<elevation_m></elevation_m>
-		<elevation_ft></elevation_ft>
+		<latitude_deg>51°56'25"N</latitude_deg>
+		<latitude_dec>51.94034</latitude_dec>
+		<longitude_deg>0°12'13"W</longitude_deg>
+		<longitude_dec>-0.20351</longitude_dec>
+		<elevation_m>101</elevation_m>
+		<elevation_ft>331</elevation_ft>
 		<iata_code></iata_code>
 		<alternate_name></alternate_name>
 		<fir>London FIR</fir>
