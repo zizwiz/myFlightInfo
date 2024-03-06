@@ -22,6 +22,7 @@ namespace myFlightInfo
     public partial class Form1 : Form
     {
         private Settings settings = Settings.Default;
+        private Thread myThread;
 
         public Form1()
         {
@@ -76,7 +77,7 @@ namespace myFlightInfo
             File.WriteAllText("airport_data.xml", Resources.airport_data);
             //Start thread to populate the combobox after writing file above
             //Watch cross threading
-            Thread myThread = new Thread(new ThreadStart(PopulateAirfieldCmboBx));
+            myThread = new Thread(new ThreadStart(PopulateAirfieldCmboBx));
             myThread.Start();
 
             //if the file does not exist then copy basic file from resources
@@ -177,7 +178,7 @@ namespace myFlightInfo
 
         private void btn_close_Click(object sender, EventArgs e)
         {
-            Close();
+           Close();
         }
 
         private void btn_reset_Click(object sender, EventArgs e)
@@ -367,7 +368,9 @@ namespace myFlightInfo
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
-            File.Delete("airport_data.xml");
+            myThread.Abort();
+            Thread.Sleep(500);
+            if (File.Exists("airport_data.xml")) File.Delete("airport_data.xml");
         }
 
 
