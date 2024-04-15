@@ -394,11 +394,40 @@ namespace myFlightInfo
 
             lbl_runway_heading1.Text = "Runway " + double.Parse(results.Item1) / 10;
             lbl_crosswind_1.Text = "Crosswind = " + results.Item2 + "kts";
-            lbl_headwind_1.Text = "Headwind = " + results.Item3 + "kts";
+
+            double windSpeed1 = double.Parse(results.Item3);
+
+            if (windSpeed1 > 0)
+            {
+                lbl_headwind_1.Text = "Headwind = " + windSpeed1 + "kts";
+            }
+            else if (windSpeed1 < 0)
+            {
+
+                lbl_headwind_1.Text = "Tailwind = " + (windSpeed1*-1) + "kts";
+            }
+            else
+            {
+                lbl_headwind_1.Text = "No wind detected";
+            }
 
             lbl_runway_heading2.Text = "Runway " + double.Parse(results.Item4) / 10;
             lbl_crosswind_2.Text = "Crosswind = " + results.Item5 + "kts";
-            lbl_headwind_2.Text = "Crosswind = " + results.Item6 + "kts";
+
+            double windSpeed2 = double.Parse(results.Item6);
+
+            if (windSpeed2 > 0)
+            {
+                lbl_headwind_2.Text = "Headwind = " + windSpeed2 + "kts";
+            }
+            else if (windSpeed2 < 0)
+            {
+                lbl_headwind_2.Text = "Tailwind = " + (windSpeed2*-1) + "kts";
+            }
+            else
+            {
+                lbl_headwind_2.Text = "No wind detected";
+            }
 
         }
 
