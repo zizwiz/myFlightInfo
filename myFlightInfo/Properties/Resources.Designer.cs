@@ -81,7 +81,7 @@ namespace myFlightInfo.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
         ///&lt;uk_airports&gt;
         ///	&lt;airport_info&gt;
         ///		&lt;icao_code&gt;CARK&lt;/icao_code&gt;
@@ -92,11 +92,13 @@ namespace myFlightInfo.Properties {
         ///		&lt;longitude_dec&gt;2.9583&lt;/longitude_dec&gt;
         ///		&lt;elevation_m&gt;5&lt;/elevation_m&gt;
         ///		&lt;elevation_ft&gt;16&lt;/elevation_ft&gt;
-        ///		&lt;iata_code&gt;&lt;/iata_code&gt;
-        ///		&lt;alternate_name&gt;&lt;/alternate_name&gt;
+        ///		&lt;iata_code&gt;
+        ///		&lt;/iata_code&gt;
+        ///		&lt;alternate_name&gt;
+        ///		&lt;/alternate_name&gt;
         ///		&lt;fir&gt;London FIR&lt;/fir&gt;
         ///		&lt;city&gt;Cark&lt;/city&gt;
-        ///		&lt;type&gt;Small air [rest of string was truncated]&quot;;.
+        ///		&lt;type&gt;Sm [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string airport_data {
             get {
@@ -163,6 +165,16 @@ namespace myFlightInfo.Properties {
             get {
                 object obj = ResourceManager.GetObject("CoordinateSharp_Magnetic", resourceCulture);
                 return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap crosswind_runway {
+            get {
+                object obj = ResourceManager.GetObject("crosswind_runway", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

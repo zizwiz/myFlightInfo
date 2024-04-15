@@ -391,6 +391,12 @@ namespace myFlightInfo
 
         private void btn_calc_wind_Click(object sender, EventArgs e)
         {
+            if ((txtbx_magnitude.Text == "") || (txtbx_direction.Text == "") || (txtbx_runway_heading.Text == ""))
+            {
+                MsgBox.Show("Please fill in all the data", "Incomplete Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             var results =
                 Crosswind.CalculateWind(txtbx_magnitude.Text, txtbx_direction.Text, txtbx_runway_heading.Text);
 
@@ -531,8 +537,20 @@ namespace myFlightInfo
                     lbl_RunwayToUse.Text = "Runway to use = " + RunwayToUse;
                 }
             }
+        }
 
-
+        private void btn_crosswind_reset_Click(object sender, EventArgs e)
+        {
+            txtbx_magnitude.Text = "";
+            txtbx_direction.Text = "";
+            txtbx_runway_heading.Text = "";
+            lbl_runway_heading1.Text = "";
+            lbl_crosswind_1.Text = "";
+            lbl_headwind_1.Text = "";
+            lbl_runway_heading2.Text = "";
+            lbl_crosswind_2.Text = "";
+            lbl_headwind_2.Text = "";
+            lbl_RunwayToUse.Text = "";
         }
 
         private void btn_school_Click(object sender, EventArgs e)
@@ -672,5 +690,7 @@ namespace myFlightInfo
                     "https://members.camgliding.uk/volatile/camwest.jpg");
             }
         }
+
+      
     }
 }

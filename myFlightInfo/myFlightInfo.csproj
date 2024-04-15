@@ -161,6 +161,7 @@
     <Content Include="compliance_data\compliance_data.xml" />
     <Content Include="CrystalBall.ico" />
     <Content Include="graphics\c42_sideview.jpg" />
+    <Content Include="graphics\crosswind_runway.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="compass\" />
