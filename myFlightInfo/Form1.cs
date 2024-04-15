@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics.Eventing.Reader;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -392,14 +394,58 @@ namespace myFlightInfo
             var results =
                 Crosswind.CalculateWind(txtbx_magnitude.Text, txtbx_direction.Text, txtbx_runway_heading.Text);
 
-            lbl_runway_heading1.Text = "Runway " + double.Parse(results.Item1) / 10;
-            lbl_crosswind_1.Text = "Crosswind = " + results.Item2 + "kts";
-
+            string RunwayToUse = "";
+            double RunwayHeading1 = double.Parse(results.Item1);
+            double RunwayHeading2 = double.Parse(results.Item4);
+            double crossWind1 = double.Parse(results.Item2);
+            double crossWind2 = double.Parse(results.Item5);
+            double crosswind3 = 0;
             double windSpeed1 = double.Parse(results.Item3);
+            double windSpeed2 = double.Parse(results.Item6);
+
+
+            //Runway 1 data
+            if (crossWind1 > 15)
+            {
+                lbl_runway_heading1.ForeColor = Color.Red;
+                lbl_crosswind_1.ForeColor = Color.Red;
+                lbl_headwind_1.ForeColor = Color.Red;
+            }
+            else if (windSpeed1 < 0)
+            {
+                lbl_runway_heading1.ForeColor = Color.Red;
+                lbl_crosswind_1.ForeColor = Color.Red;
+                lbl_headwind_1.ForeColor = Color.Red;
+            }
+            else
+            {
+                lbl_runway_heading1.ForeColor = Color.Green;
+                lbl_crosswind_1.ForeColor = Color.Green;
+                lbl_headwind_1.ForeColor = Color.Green;
+            }
+
+            lbl_runway_heading1.Text = "Runway " + RunwayHeading1/10;
+            
+           if (crossWind1 > 0)
+            {
+                lbl_crosswind_1.Text = "Crosswind = " + crossWind1 + "kts from Starboard side"; 
+            }
+            else if (crossWind1 < 0)
+            {
+
+                lbl_crosswind_1.Text = "Crosswind = " + (crossWind1*-1) + "kts from Port side"; ;
+            }
+            else
+            {
+                lbl_crosswind_1.Text = "No crosswind detected";
+            }
+
 
             if (windSpeed1 > 0)
             {
                 lbl_headwind_1.Text = "Headwind = " + windSpeed1 + "kts";
+                RunwayToUse = (RunwayHeading1 / 10).ToString();
+                crosswind3 = (crossWind1 > 0) ? crossWind1 : (crossWind1 * -1);
             }
             else if (windSpeed1 < 0)
             {
@@ -411,14 +457,49 @@ namespace myFlightInfo
                 lbl_headwind_1.Text = "No wind detected";
             }
 
-            lbl_runway_heading2.Text = "Runway " + double.Parse(results.Item4) / 10;
-            lbl_crosswind_2.Text = "Crosswind = " + results.Item5 + "kts";
 
-            double windSpeed2 = double.Parse(results.Item6);
+            //Runway 2 data
+
+            if (crossWind2 > 15)
+            {
+                lbl_runway_heading2.ForeColor = Color.Red;
+                lbl_crosswind_2.ForeColor = Color.Red;
+                lbl_headwind_2.ForeColor = Color.Red;
+            }
+            else if (windSpeed2 < 0)
+            {
+                lbl_runway_heading2.ForeColor = Color.Red;
+                lbl_crosswind_2.ForeColor = Color.Red;
+                lbl_headwind_2.ForeColor = Color.Red;
+            }
+            else 
+            {
+                lbl_runway_heading2.ForeColor = Color.Green;
+                lbl_crosswind_2.ForeColor = Color.Green;
+                lbl_headwind_2.ForeColor = Color.Green;
+            }
+            
+            lbl_runway_heading2.Text = "Runway " + RunwayHeading2/10;
+            
+            if (crossWind2 > 0)
+            {
+                lbl_crosswind_2.Text = "Crosswind = " + crossWind2 + "kts from Starboard side";
+            }
+            else if (crossWind2 < 0)
+            {
+                lbl_crosswind_2.Text = "Crosswind = " + (crossWind2 * -1) + "kts from Port side"; ;
+            }
+            else
+            {
+                lbl_crosswind_2.Text = "No crosswind detected";
+            }
 
             if (windSpeed2 > 0)
             {
                 lbl_headwind_2.Text = "Headwind = " + windSpeed2 + "kts";
+                RunwayToUse = (RunwayHeading2 / 10).ToString();
+                crosswind3 = (crossWind2 > 0) ? crossWind2 : (crossWind2 * -1);
+
             }
             else if (windSpeed2 < 0)
             {
@@ -428,6 +509,29 @@ namespace myFlightInfo
             {
                 lbl_headwind_2.Text = "No wind detected";
             }
+
+            //Runway to use
+            if (crosswind3 > 15)
+            {
+                lbl_RunwayToUse.ForeColor = Color.Red;
+
+                lbl_RunwayToUse.Text =
+                    "Not safe to take off.\rCrosswind component is above maximumum allowed for safe takeoff.";
+            }
+            else
+            {
+                lbl_RunwayToUse.ForeColor = Color.Green;
+
+                if (RunwayToUse == "")
+                {
+                    lbl_RunwayToUse.Text = "Runway to use = " + (double.Parse(txtbx_runway_heading.Text) / 10);
+                }
+                else
+                {
+                    lbl_RunwayToUse.Text = "Runway to use = " + RunwayToUse;
+                }
+            }
+
 
         }
 

@@ -137,6 +137,7 @@ namespace myFlightInfo
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel19 = new System.Windows.Forms.Panel();
             this.tab_crosswind = new System.Windows.Forms.TabPage();
+            this.lbl_RunwayToUse = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.btn_calc_wind = new System.Windows.Forms.Button();
             this.lbl_runway_heading2 = new System.Windows.Forms.Label();
@@ -1782,6 +1783,7 @@ namespace myFlightInfo
             // 
             // tab_crosswind
             // 
+            this.tab_crosswind.Controls.Add(this.lbl_RunwayToUse);
             this.tab_crosswind.Controls.Add(this.label12);
             this.tab_crosswind.Controls.Add(this.btn_calc_wind);
             this.tab_crosswind.Controls.Add(this.lbl_runway_heading2);
@@ -1805,6 +1807,15 @@ namespace myFlightInfo
             this.tab_crosswind.Text = "Crosswind";
             this.tab_crosswind.UseVisualStyleBackColor = true;
             // 
+            // lbl_RunwayToUse
+            // 
+            this.lbl_RunwayToUse.AutoSize = true;
+            this.lbl_RunwayToUse.Location = new System.Drawing.Point(163, 340);
+            this.lbl_RunwayToUse.Name = "lbl_RunwayToUse";
+            this.lbl_RunwayToUse.Size = new System.Drawing.Size(60, 20);
+            this.lbl_RunwayToUse.TabIndex = 16;
+            this.lbl_RunwayToUse.Text = "label12";
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -1816,7 +1827,7 @@ namespace myFlightInfo
             // 
             // btn_calc_wind
             // 
-            this.btn_calc_wind.Location = new System.Drawing.Point(234, 341);
+            this.btn_calc_wind.Location = new System.Drawing.Point(234, 396);
             this.btn_calc_wind.Name = "btn_calc_wind";
             this.btn_calc_wind.Size = new System.Drawing.Size(166, 68);
             this.btn_calc_wind.TabIndex = 14;
@@ -4856,6 +4867,7 @@ namespace myFlightInfo
         private System.Windows.Forms.Panel panel108;
         private System.Windows.Forms.Button btn_reset_compliance_xml;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
+        private System.Windows.Forms.Label lbl_RunwayToUse;
     }
 }
 
