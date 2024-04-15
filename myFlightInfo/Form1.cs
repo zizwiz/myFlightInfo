@@ -391,6 +391,8 @@ namespace myFlightInfo
 
         private void btn_calc_wind_Click(object sender, EventArgs e)
         {
+            if (txtbx_magnitude.Text == "0") txtbx_direction.Text = "0";
+
             //catch for incomplete data
             if ((txtbx_magnitude.Text == "") || (txtbx_direction.Text == "") || (txtbx_runway_heading.Text == ""))
             {
@@ -408,11 +410,12 @@ namespace myFlightInfo
             string RunwayToUse = "";
             double RunwayHeading1 = double.Parse(results.Item1);
             double RunwayHeading2 = double.Parse(results.Item4);
-            double crossWind1 = double.Parse(results.Item2);
-            double crossWind2 = double.Parse(results.Item5);
+            double crossWind1 = Math.Ceiling(double.Parse(results.Item2));
+            double crossWind2 = Math.Ceiling(double.Parse(results.Item5));
             double crosswind3 = 0;
-            double windSpeed1 = double.Parse(results.Item3);
-            double windSpeed2 = double.Parse(results.Item6);
+            double headwind = 0;
+            double windSpeed1 = Math.Ceiling(double.Parse(results.Item3));
+            double windSpeed2 = Math.Ceiling(double.Parse(results.Item6));
 
 
             //Runway 1 data
@@ -440,11 +443,12 @@ namespace myFlightInfo
             if (crossWind1 > 0)
             {
                 lbl_crosswind_1.Text = "Crosswind = " + crossWind1 + "kts from Starboard side";
+                StarboardFlag = true;
             }
             else if (crossWind1 < 0)
             {
                 lbl_crosswind_1.Text = "Crosswind = " + (crossWind1 * -1) + "kts from Port side";
-                StarboardFlag = true;
+                StarboardFlag = false;
             }
             else
             {
@@ -457,6 +461,7 @@ namespace myFlightInfo
                 lbl_headwind_1.Text = "Headwind = " + windSpeed1 + "kts";
                 RunwayToUse = RunwayHeading1.ToString();
                 crosswind3 = (crossWind1 > 0) ? crossWind1 : (crossWind1 * -1);
+                headwind = windSpeed1;
             }
             else if (windSpeed1 < 0)
             {
@@ -495,10 +500,12 @@ namespace myFlightInfo
             if (crossWind2 > 0)
             {
                 lbl_crosswind_2.Text = "Crosswind = " + crossWind2 + "kts from Starboard side";
+                StarboardFlag = true;
             }
             else if (crossWind2 < 0)
             {
                 lbl_crosswind_2.Text = "Crosswind = " + (crossWind2 * -1) + "kts from Port side";
+                StarboardFlag = false;
             }
             else
             {
@@ -510,7 +517,7 @@ namespace myFlightInfo
                 lbl_headwind_2.Text = "Headwind = " + windSpeed2 + "kts";
                 RunwayToUse = RunwayHeading2.ToString();
                 crosswind3 = (crossWind2 > 0) ? crossWind2 : (crossWind2 * -1);
-
+                headwind = windSpeed2;
             }
             else if (windSpeed2 < 0)
             {
@@ -555,6 +562,17 @@ namespace myFlightInfo
 
             using (Pen p = new Pen(Brushes.Yellow, 4f))
             {
+                if (RunwayToUse == txtbx_runway_heading.Text) //used when you choose tailwind runway, app always wants headwind for takeoff. 
+                {
+                    if (StarboardFlag)
+                    {
+                        StarboardFlag = false;
+                    }
+                    else
+                    {
+                        StarboardFlag = true;
+                    }
+                }
                 //Specify the EndCap, because we're drawing a right-facing arrow
                 p.EndCap = System.Drawing.Drawing2D.LineCap.ArrowAnchor;
 
@@ -563,20 +581,22 @@ namespace myFlightInfo
                 {
                     g.DrawLine(p, 180, 20, 130, 20);
                     g.DrawLine(p, 180, 20, 180, 60);
+
                     using (Font myFont = new Font("Arial", 12))
                     {
                         g.DrawString(Math.Ceiling(crosswind3) + "kts", myFont, new SolidBrush((Color)new ColorConverter().ConvertFrom("Yellow")), new Point(80, 10));
-                        g.DrawString(crosswind3 + "kts", myFont, new SolidBrush((Color)new ColorConverter().ConvertFrom("Yellow")), new Point(130, 65));
+                        g.DrawString(Math.Ceiling(headwind) + "kts", myFont, new SolidBrush((Color)new ColorConverter().ConvertFrom("Yellow")), new Point(130, 65));
                     }
                 }
                 else
                 {
                     g.DrawLine(p, 15, 20, 65, 20);
                     g.DrawLine(p, 15, 20, 15, 60);
+
                     using (Font myFont = new Font("Arial", 12))
                     {
                         g.DrawString(Math.Ceiling(crosswind3) + "kts", myFont, new SolidBrush((Color)new ColorConverter().ConvertFrom("Yellow")), new Point(68, 10));
-                        g.DrawString(crosswind3 + "kts", myFont, new SolidBrush((Color)new ColorConverter().ConvertFrom("Yellow")), new Point(5, 65));
+                        g.DrawString(Math.Ceiling(headwind) + "kts", myFont, new SolidBrush((Color)new ColorConverter().ConvertFrom("Yellow")), new Point(5, 65));
                     }
                 }
 
@@ -585,13 +605,35 @@ namespace myFlightInfo
            // Draw runway number
             using (Font myFont = new Font("Arial", 60))
             {
-                if (RunwayFlag)
+                if (crossWind1 == 0)
                 {
-                    g.DrawString(RunwayToUse, myFont, new SolidBrush(Color.White), new Point(40, 120));
+                    Font myFont2 = new Font("Arial", 50);
+                    g.DrawString(RunwayHeading1 + "/" + RunwayHeading2, myFont2, new SolidBrush(Color.White), new Point(0, 120));
+
+                    using (Pen p = new Pen(Brushes.Yellow, 4f))
+                    {
+                        p.EndCap = System.Drawing.Drawing2D.LineCap.ArrowAnchor;
+
+                        g.DrawLine(p, 180, 20, 130, 20);
+                        g.DrawLine(p, 180, 20, 180, 60);
+
+                        using (Font myFont3 = new Font("Arial", 12))
+                        {
+                            g.DrawString(Math.Ceiling(headwind) + "kts", myFont3,
+                                new SolidBrush((Color) new ColorConverter().ConvertFrom("Yellow")), new Point(160, 65));
+                        }
+                    }
                 }
                 else
                 {
-                    g.DrawString("XX", myFont, new SolidBrush(Color.Red), new Point(30, 120));
+                    if (RunwayFlag)
+                    {
+                        g.DrawString(RunwayToUse, myFont, new SolidBrush(Color.White), new Point(40, 120));
+                    }
+                    else
+                    {
+                        g.DrawString("X", myFont, new SolidBrush(Color.White), new Point(60, 120));
+                    }
                 }
             }
         }

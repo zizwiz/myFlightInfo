@@ -1975,6 +1975,7 @@ namespace myFlightInfo
             // txtbx_magnitude
             // 
             this.txtbx_magnitude.Location = new System.Drawing.Point(3, 4);
+            this.txtbx_magnitude.MaxLength = 3;
             this.txtbx_magnitude.Name = "txtbx_magnitude";
             this.txtbx_magnitude.Size = new System.Drawing.Size(135, 26);
             this.txtbx_magnitude.TabIndex = 0;
@@ -2001,6 +2002,7 @@ namespace myFlightInfo
             // txtbx_direction
             // 
             this.txtbx_direction.Location = new System.Drawing.Point(3, 4);
+            this.txtbx_direction.MaxLength = 3;
             this.txtbx_direction.Name = "txtbx_direction";
             this.txtbx_direction.Size = new System.Drawing.Size(135, 26);
             this.txtbx_direction.TabIndex = 1;
@@ -2026,6 +2028,7 @@ namespace myFlightInfo
             // txtbx_runway_heading
             // 
             this.txtbx_runway_heading.Location = new System.Drawing.Point(3, 4);
+            this.txtbx_runway_heading.MaxLength = 2;
             this.txtbx_runway_heading.Name = "txtbx_runway_heading";
             this.txtbx_runway_heading.Size = new System.Drawing.Size(75, 26);
             this.txtbx_runway_heading.TabIndex = 6;
