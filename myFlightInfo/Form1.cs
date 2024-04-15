@@ -165,7 +165,7 @@ namespace myFlightInfo
                 cmbobx_airport_info.SelectedIndex = 0;
             }));
         }
-        
+
         //Use this to make the GUI visible after it has loaded
         protected override void SetVisibleCore(bool value)
         {
@@ -180,7 +180,7 @@ namespace myFlightInfo
 
         private void btn_close_Click(object sender, EventArgs e)
         {
-           Close();
+            Close();
         }
 
         private void btn_reset_Click(object sender, EventArgs e)
@@ -391,15 +391,20 @@ namespace myFlightInfo
 
         private void btn_calc_wind_Click(object sender, EventArgs e)
         {
+            //catch for incomplete data
             if ((txtbx_magnitude.Text == "") || (txtbx_direction.Text == "") || (txtbx_runway_heading.Text == ""))
             {
                 MsgBox.Show("Please fill in all the data", "Incomplete Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
+            ResetCrosswindGraphics();
+
             var results =
                 Crosswind.CalculateWind(txtbx_magnitude.Text, txtbx_direction.Text, txtbx_runway_heading.Text);
 
+            bool StarboardFlag = false;
+            bool RunwayFlag = true;
             string RunwayToUse = "";
             double RunwayHeading1 = double.Parse(results.Item1);
             double RunwayHeading2 = double.Parse(results.Item4);
@@ -430,16 +435,16 @@ namespace myFlightInfo
                 lbl_headwind_1.ForeColor = Color.Green;
             }
 
-            lbl_runway_heading1.Text = "Runway " + RunwayHeading1/10;
-            
-           if (crossWind1 > 0)
+            lbl_runway_heading1.Text = "Runway " + RunwayHeading1;
+
+            if (crossWind1 > 0)
             {
-                lbl_crosswind_1.Text = "Crosswind = " + crossWind1 + "kts from Starboard side"; 
+                lbl_crosswind_1.Text = "Crosswind = " + crossWind1 + "kts from Starboard side";
             }
             else if (crossWind1 < 0)
             {
-
-                lbl_crosswind_1.Text = "Crosswind = " + (crossWind1*-1) + "kts from Port side"; ;
+                lbl_crosswind_1.Text = "Crosswind = " + (crossWind1 * -1) + "kts from Port side";
+                StarboardFlag = true;
             }
             else
             {
@@ -450,13 +455,13 @@ namespace myFlightInfo
             if (windSpeed1 > 0)
             {
                 lbl_headwind_1.Text = "Headwind = " + windSpeed1 + "kts";
-                RunwayToUse = (RunwayHeading1 / 10).ToString();
+                RunwayToUse = RunwayHeading1.ToString();
                 crosswind3 = (crossWind1 > 0) ? crossWind1 : (crossWind1 * -1);
             }
             else if (windSpeed1 < 0)
             {
 
-                lbl_headwind_1.Text = "Tailwind = " + (windSpeed1*-1) + "kts";
+                lbl_headwind_1.Text = "Tailwind = " + (windSpeed1 * -1) + "kts";
             }
             else
             {
@@ -478,22 +483,22 @@ namespace myFlightInfo
                 lbl_crosswind_2.ForeColor = Color.Red;
                 lbl_headwind_2.ForeColor = Color.Red;
             }
-            else 
+            else
             {
                 lbl_runway_heading2.ForeColor = Color.Green;
                 lbl_crosswind_2.ForeColor = Color.Green;
                 lbl_headwind_2.ForeColor = Color.Green;
             }
-            
-            lbl_runway_heading2.Text = "Runway " + RunwayHeading2/10;
-            
+
+            lbl_runway_heading2.Text = "Runway " + RunwayHeading2;
+
             if (crossWind2 > 0)
             {
                 lbl_crosswind_2.Text = "Crosswind = " + crossWind2 + "kts from Starboard side";
             }
             else if (crossWind2 < 0)
             {
-                lbl_crosswind_2.Text = "Crosswind = " + (crossWind2 * -1) + "kts from Port side"; ;
+                lbl_crosswind_2.Text = "Crosswind = " + (crossWind2 * -1) + "kts from Port side";
             }
             else
             {
@@ -503,13 +508,13 @@ namespace myFlightInfo
             if (windSpeed2 > 0)
             {
                 lbl_headwind_2.Text = "Headwind = " + windSpeed2 + "kts";
-                RunwayToUse = (RunwayHeading2 / 10).ToString();
+                RunwayToUse = RunwayHeading2.ToString();
                 crosswind3 = (crossWind2 > 0) ? crossWind2 : (crossWind2 * -1);
 
             }
             else if (windSpeed2 < 0)
             {
-                lbl_headwind_2.Text = "Tailwind = " + (windSpeed2*-1) + "kts";
+                lbl_headwind_2.Text = "Tailwind = " + (windSpeed2 * -1) + "kts";
             }
             else
             {
@@ -523,6 +528,7 @@ namespace myFlightInfo
 
                 lbl_RunwayToUse.Text =
                     "Not safe to take off.\rCrosswind component is above maximumum allowed for safe takeoff.";
+                RunwayFlag = false;
             }
             else
             {
@@ -530,11 +536,62 @@ namespace myFlightInfo
 
                 if (RunwayToUse == "")
                 {
-                    lbl_RunwayToUse.Text = "Runway to use = " + (double.Parse(txtbx_runway_heading.Text) / 10);
+                    lbl_RunwayToUse.Text = "Runway to use = " + (double.Parse(txtbx_runway_heading.Text));
                 }
                 else
                 {
                     lbl_RunwayToUse.Text = "Runway to use = " + RunwayToUse;
+                }
+            }
+
+            //Draw the graphics
+            Application.DoEvents();
+            Graphics g = picbx_crosswind.CreateGraphics();
+
+            //We now choose to draw a line, you can draw many other things like square circle etc.
+            //All the parameters come from the UI
+            //The scale we are using is to divide the values by 3. This allows the values to be shown on the
+            //graphics screen.
+
+            using (Pen p = new Pen(Brushes.Yellow, 4f))
+            {
+                //Specify the EndCap, because we're drawing a right-facing arrow
+                p.EndCap = System.Drawing.Drawing2D.LineCap.ArrowAnchor;
+
+                //Draw the arrows
+                if (StarboardFlag)
+                {
+                    g.DrawLine(p, 180, 20, 130, 20);
+                    g.DrawLine(p, 180, 20, 180, 60);
+                    using (Font myFont = new Font("Arial", 12))
+                    {
+                        g.DrawString(Math.Ceiling(crosswind3) + "kts", myFont, new SolidBrush((Color)new ColorConverter().ConvertFrom("Yellow")), new Point(80, 10));
+                        g.DrawString(crosswind3 + "kts", myFont, new SolidBrush((Color)new ColorConverter().ConvertFrom("Yellow")), new Point(130, 65));
+                    }
+                }
+                else
+                {
+                    g.DrawLine(p, 15, 20, 65, 20);
+                    g.DrawLine(p, 15, 20, 15, 60);
+                    using (Font myFont = new Font("Arial", 12))
+                    {
+                        g.DrawString(Math.Ceiling(crosswind3) + "kts", myFont, new SolidBrush((Color)new ColorConverter().ConvertFrom("Yellow")), new Point(68, 10));
+                        g.DrawString(crosswind3 + "kts", myFont, new SolidBrush((Color)new ColorConverter().ConvertFrom("Yellow")), new Point(5, 65));
+                    }
+                }
+
+            }
+
+           // Draw runway number
+            using (Font myFont = new Font("Arial", 60))
+            {
+                if (RunwayFlag)
+                {
+                    g.DrawString(RunwayToUse, myFont, new SolidBrush(Color.White), new Point(40, 120));
+                }
+                else
+                {
+                    g.DrawString("XX", myFont, new SolidBrush(Color.Red), new Point(30, 120));
                 }
             }
         }
@@ -551,6 +608,14 @@ namespace myFlightInfo
             lbl_crosswind_2.Text = "";
             lbl_headwind_2.Text = "";
             lbl_RunwayToUse.Text = "";
+            ResetCrosswindGraphics();
+        }
+        private void ResetCrosswindGraphics()
+        {
+            //reset graphics
+            picbx_crosswind.Image = null;
+            picbx_crosswind.Invalidate();
+            picbx_crosswind.Image = Properties.Resources.crosswind_runway;
         }
 
         private void btn_school_Click(object sender, EventArgs e)
@@ -691,6 +756,6 @@ namespace myFlightInfo
             }
         }
 
-      
+
     }
 }
