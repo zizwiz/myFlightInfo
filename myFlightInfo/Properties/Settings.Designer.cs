@@ -274,5 +274,17 @@ namespace myFlightInfo.Properties {
                 this["Aircraft"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("15")]
+        public double MaxCrossWind {
+            get {
+                return ((double)(this["MaxCrossWind"]));
+            }
+            set {
+                this["MaxCrossWind"] = value;
+            }
+        }
     }
 }

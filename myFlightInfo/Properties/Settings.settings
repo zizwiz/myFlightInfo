@@ -65,5 +65,8 @@
     <Setting Name="Aircraft" Type="System.String" Scope="User">
       <Value Profile="(Default)">Default</Value>
     </Setting>
+    <Setting Name="MaxCrossWind" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">15</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -416,10 +417,11 @@ namespace myFlightInfo
             double headwind = 0;
             double windSpeed1 = Math.Ceiling(double.Parse(results.Item3));
             double windSpeed2 = Math.Ceiling(double.Parse(results.Item6));
+            double MaxCrossWindAllowed = Settings.Default.MaxCrossWind;
 
 
             //Runway 1 data
-            if (crossWind1 > 15)
+            if (crossWind1 > MaxCrossWindAllowed)
             {
                 lbl_runway_heading1.ForeColor = Color.Red;
                 lbl_crosswind_1.ForeColor = Color.Red;
@@ -476,7 +478,7 @@ namespace myFlightInfo
 
             //Runway 2 data
 
-            if (crossWind2 > 15)
+            if (crossWind2 > MaxCrossWindAllowed)
             {
                 lbl_runway_heading2.ForeColor = Color.Red;
                 lbl_crosswind_2.ForeColor = Color.Red;
@@ -529,7 +531,7 @@ namespace myFlightInfo
             }
 
             //Runway to use
-            if (crosswind3 > 15)
+            if (crosswind3 > MaxCrossWindAllowed)
             {
                 lbl_RunwayToUse.ForeColor = Color.Red;
 
@@ -574,7 +576,8 @@ namespace myFlightInfo
                     }
                 }
                 //Specify the EndCap, because we're drawing a right-facing arrow
-                p.EndCap = System.Drawing.Drawing2D.LineCap.ArrowAnchor;
+                p.EndCap = LineCap.ArrowAnchor;
+                p.StartCap = LineCap.RoundAnchor;
 
                 //Draw the arrows
                 if (StarboardFlag)
@@ -612,7 +615,8 @@ namespace myFlightInfo
 
                     using (Pen p = new Pen(Brushes.Yellow, 4f))
                     {
-                        p.EndCap = System.Drawing.Drawing2D.LineCap.ArrowAnchor;
+                        p.EndCap = LineCap.ArrowAnchor;
+                        p.StartCap = LineCap.RoundAnchor;
 
                         g.DrawLine(p, 180, 20, 130, 20);
                         g.DrawLine(p, 180, 20, 180, 60);
