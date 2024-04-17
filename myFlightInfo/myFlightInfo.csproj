@@ -73,6 +73,9 @@
     <Compile Include="AreYouSure.Designer.cs">
       <DependentUpon>AreYouSure.cs</DependentUpon>
     </Compile>
+    <Compile Include="CrossWind.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Navigation\Altimeter.cs" />
     <Compile Include="common_data\airport_data.cs" />
     <Compile Include="common_data\verification.cs" />
@@ -101,6 +104,7 @@
     <Compile Include="TabChanges.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="utils\CheckData.cs" />
     <Compile Include="utils\Convert.cs" />
     <Compile Include="WeightsBalance.cs">
       <SubType>Form</SubType>
