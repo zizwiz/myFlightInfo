@@ -41,6 +41,8 @@ namespace myFlightInfo
             double windSpeed1 = Math.Ceiling(double.Parse(results.Item3));
             double windSpeed2 = Math.Ceiling(double.Parse(results.Item6));
             double MaxCrossWindAllowed = Settings.Default.MaxCrossWind;
+            float HeadwindMultiplier;
+            float CrosswindMultiplier;
 
 
             //Runway 1 data - runway Chosen by user
@@ -185,131 +187,117 @@ namespace myFlightInfo
             //The scale we are using is to divide the values by 3. This allows the values to be shown on the
             //graphics screen.
 
-            using (Pen myPen = new Pen(Brushes.Yellow, 4f))
+            if (RunwayToUse == txtbx_runway_heading.Text) //used when you choose tailwind runway, app always wants headwind for takeoff. 
             {
-                if (RunwayToUse ==
-                    txtbx_runway_heading
-                        .Text) //used when you choose tailwind runway, app always wants headwind for takeoff. 
-                {
-                    if (StarboardFlag)
-                    {
-                        StarboardFlag = false;
-                    }
-                    else
-                    {
-                        StarboardFlag = true;
-                    }
-                }
-
-                //Specify the EndCap and StartCap for line we start with circle and end with arrowhead
-                //myPen.EndCap = LineCap.ArrowAnchor;
-                //myPen.StartCap = LineCap.RoundAnchor;
-
-                //Draw the arrows
                 if (StarboardFlag)
                 {
-                    //RunwayGraphic.DrawLine(myPen, 180, 20, 130, 20);
-                    RunwayGraphic.DrawLine(myPen, 180, 20, 180, 60);
-
-                    using (Font myFont = new Font("Arial", 12))
-                    {
-                        PaintWindComponent_kts(180, 20, 130, 20,
-                            RunwayGraphic, Math.Round(crosswind3, 0) + "kts", myFont,
-                            Color.Yellow, 80, 10);
-
-
-                        //RunwayGraphic.DrawString(Math.Round(crosswind3, 0) + "kts", myFont,
-                        //    new SolidBrush((Color)new ColorConverter().ConvertFrom("Yellow")), new Point(80, 10));
-                        //RunwayGraphic.DrawString(Math.Round(headwind, 0) + "kts", myFont,
-                        //    new SolidBrush((Color)new ColorConverter().ConvertFrom("Yellow")), new Point(130, 65));
-                    }
+                    StarboardFlag = false;
                 }
                 else
                 {
-                    RunwayGraphic.DrawLine(myPen, 15, 20, 65, 20);
-                    RunwayGraphic.DrawLine(myPen, 15, 20, 15, 60);
-
-                    using (Font myFont = new Font("Arial", 12))
-                    {
-                        RunwayGraphic.DrawString(Math.Round(crosswind3, 0) + "kts", myFont,
-                            new SolidBrush((Color)new ColorConverter().ConvertFrom("Yellow")), new Point(68, 10));
-                        RunwayGraphic.DrawString(Math.Round(headwind, 0) + "kts", myFont,
-                            new SolidBrush((Color)new ColorConverter().ConvertFrom("Yellow")), new Point(5, 65));
-                    }
+                    StarboardFlag = true;
                 }
-
             }
 
-            // Draw runway number
-            using (Font myFont = new Font("Arial", 60))
+            if (crosswind3 == headwind)
             {
-                if (crossWind1 == 0)
+                CrosswindMultiplier = 1;
+                HeadwindMultiplier = 1;
+            }
+            else if (crosswind3 > headwind)
+            {
+                CrosswindMultiplier = 2;
+                HeadwindMultiplier = 1;
+            }
+            else
+            {
+                CrosswindMultiplier = 1;
+                HeadwindMultiplier = 2;
+            }
+
+            //Draw the crosswind and headwind arrows
+            if (StarboardFlag) //starboard side
+            {
+                PaintWindComponent_kts(CrosswindMultiplier, 180, 20, 130, 20,
+                    RunwayGraphic, Math.Round(crosswind3, 0) + "kts", new Font("Arial", 12),
+                    Color.Yellow, 80, 10);
+
+                PaintWindComponent_kts(HeadwindMultiplier, 180, 20, 180, 60,
+                    RunwayGraphic, Math.Round(headwind, 0) + "kts", new Font("Arial", 12),
+                    Color.Yellow, 130, 65);
+
+            }
+            else //port side
+            {
+                PaintWindComponent_kts(CrosswindMultiplier, 15, 20, 65, 20,
+                        RunwayGraphic, Math.Round(crosswind3, 0) + "kts", new Font("Arial", 12),
+                        Color.Yellow, 68, 10);
+
+                PaintWindComponent_kts(HeadwindMultiplier, 15, 20, 15, 60,
+                        RunwayGraphic, Math.Round(headwind, 0) + "kts", new Font("Arial", 12),
+                        Color.Yellow, 5, 65);
+            }
+
+
+
+            // Draw runway number
+            if (crossWind1 == 0)
+            {
+                if (headwind == 0)
                 {
-                    Font myFont2 = new Font("Arial", 50);
-
-                    if (headwind == 0)
-                    {
-                        RunwayGraphic.DrawString(RunwayHeading1 + "/" + RunwayHeading2, myFont2, new SolidBrush(Color.White),
-                            new Point(0, 120));
-                    }
-                    else
-                    {
-                        RunwayGraphic.DrawString(RunwayToUse, myFont, new SolidBrush(Color.White), new Point(40, 120));
-                    }
-
-                    using (Pen p = new Pen(Brushes.Yellow, 4f))
-                    {
-                        p.EndCap = LineCap.ArrowAnchor;
-                        p.StartCap = LineCap.RoundAnchor;
-
-                        RunwayGraphic.DrawLine(p, 180, 20, 130, 20);
-                        RunwayGraphic.DrawLine(p, 180, 20, 180, 60);
-
-                        using (Font myFont3 = new Font("Arial", 12))
-                        {
-                            RunwayGraphic.DrawString(Math.Ceiling(headwind) + "kts", myFont3,
-                                new SolidBrush((Color)new ColorConverter().ConvertFrom("Yellow")), new Point(160, 65));
-                        }
-                    }
+                    RunwayGraphic.DrawString(RunwayHeading1 + "/" + RunwayHeading2, new Font("Arial", 50), new SolidBrush(Color.White),
+                        new Point(0, 120));
                 }
                 else
                 {
-                    if (RunwayFlag)
-                    {
-                        RunwayGraphic.DrawString(RunwayToUse, myFont, new SolidBrush(Color.White), new Point(40, 120));
-                    }
-                    else
-                    {
-                        RunwayGraphic.DrawString("X", myFont, new SolidBrush(Color.White), new Point(60, 120));
-                    }
+                    RunwayGraphic.DrawString(RunwayToUse, new Font("Arial", 50), new SolidBrush(Color.White), new Point(40, 120));
+                }
+
+                PaintWindComponent_kts(HeadwindMultiplier, 180, 20, 130, 20,
+                    RunwayGraphic, Math.Round(headwind, 0) + "kts", new Font("Arial", 12),
+                    Color.Yellow, 160, 65);
+
+                PaintWindComponent_kts(HeadwindMultiplier, 180, 20, 180, 60,
+                    RunwayGraphic, Math.Round(headwind, 0) + "kts", new Font("Arial", 12),
+                    Color.Yellow, 160, 65);
+            }
+            else
+            {
+                if (RunwayFlag)
+                {
+                    RunwayGraphic.DrawString(RunwayToUse, new Font("Arial", 50), new SolidBrush(Color.White), new Point(40, 120));
+                }
+                else //wind exceeds aircraft max limits
+                {
+                    RunwayGraphic.DrawString("X", new Font("Arial", 50), new SolidBrush(Color.White), new Point(60, 120));
                 }
             }
         }
 
 
-        private bool PaintWindComponent_kts(int myCrossWindLineStartX,int myCrossWind, int myCrossWindLineEndX, int myCrossWindLineEndY,
+        private bool PaintWindComponent_kts(double myLineWidthMultiplier, int myCrossWindLineStartX, int myCrossWindLineStartY, int myCrossWindLineEndX, int myCrossWindLineEndY,
                                             Graphics myRunwayGraphic, string myRunwayNumber, Font myFont,
                                             Color myColor, int myCrossWindDataStringXCoOrd, int myCrossWindDataStringYCoOrd)
         {
             try
             {
-                float myLineWidth = 4f; //To Do convert into ratio for different wind speeds 
-
-                Pen myPen = new Pen(new SolidBrush(myColor), myLineWidth);
+                Pen myPen = new Pen(new SolidBrush(myColor), 4f * (float)(myLineWidthMultiplier));
 
                 //Specify the EndCap and StartCap for line we start with circle and end with arrowhead
                 myPen.EndCap = LineCap.ArrowAnchor;
                 myPen.StartCap = LineCap.RoundAnchor;
 
                 // Draw line and write in wind strength in knots
-                myRunwayGraphic.DrawLine(myPen, 180, 20, 130, 20);
+                myRunwayGraphic.DrawLine(myPen, myCrossWindLineStartX, myCrossWindLineStartY, myCrossWindLineEndX, myCrossWindLineEndY); //to do change to read in numbers
+
+                //Draw in runway number
                 myRunwayGraphic.DrawString(myRunwayNumber, myFont, new SolidBrush(myColor),
                                 new Point(myCrossWindDataStringXCoOrd, myCrossWindDataStringYCoOrd));
                 return true;
             }
             catch
             {
-                //It did not work instead of crashing just put up hint and return
+                //It did not work instead of crashing just put up hint and return gracefully
                 MsgBox.Show("Something has gone wrong.\rPlease check data and try again", "Something is Wrong",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -343,7 +331,11 @@ namespace myFlightInfo
 
         private bool DataCheck(string myWindStrength, string myDirection, string myRunwayHeading)
         {
-            if (myWindStrength == "0") myDirection = "0";
+            if (myWindStrength == "0")
+            {
+                txtbx_direction.Text = "360";
+                myDirection = "360";
+            }
 
             //catch for incomplete data
             if ((myWindStrength == "") || (myDirection == "") || (myRunwayHeading == ""))
@@ -353,7 +345,7 @@ namespace myFlightInfo
                 return false;
             }
 
-            //Check data is infact a doubles.
+            //Check data is in fact doubles.
             if (!CheckData.IsItADouble(myWindStrength))
             {
 
@@ -379,7 +371,7 @@ namespace myFlightInfo
                     MessageBoxIcon.Error);
                 return false;
             }
-            else if ((double.Parse(myDirection) < 10) || (double.Parse(myDirection) > 360))
+            else if ((double.Parse(myDirection) < 01) || (double.Parse(myDirection) > 360))
             {
                 MsgBox.Show("Check Direction Data is a valid number (0 - 360)", "Data out of scope",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -387,13 +379,13 @@ namespace myFlightInfo
             }
             else if (!CheckData.IsItADouble(myRunwayHeading))
             {
-                MsgBox.Show("Check Runway Heading is valid (0 - 36)", "Incorrect Data", MessageBoxButtons.OK,
+                MsgBox.Show("Check Runway Heading is valid (01 - 36)", "Incorrect Data", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
                 return false;
             }
-            else if ((double.Parse(myRunwayHeading) < 0) || (double.Parse(myRunwayHeading) > 36))
+            else if ((double.Parse(myRunwayHeading) < 01) || (double.Parse(myRunwayHeading) > 36))
             {
-                MsgBox.Show("Check Runway Heading is valid (0 - 36)", "Data out of scope", MessageBoxButtons.OK,
+                MsgBox.Show("Check Runway Heading is valid (01 - 36)", "Data out of scope", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
                 return false;
             }
