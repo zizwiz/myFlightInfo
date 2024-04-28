@@ -67,6 +67,8 @@ namespace myFlightInfo
             this.webView_weather_met = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.tab_bbc = new System.Windows.Forms.TabPage();
             this.webView_weather_bbc = new Microsoft.Web.WebView2.WinForms.WebView2();
+            this.tab_netweather = new System.Windows.Forms.TabPage();
+            this.webView_weather_netweather = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.tab_windy = new System.Windows.Forms.TabPage();
             this.webView_weather_windy = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.tab_synoptic = new System.Windows.Forms.TabPage();
@@ -417,6 +419,8 @@ namespace myFlightInfo
             ((System.ComponentModel.ISupportInitialize)(this.webView_weather_met)).BeginInit();
             this.tab_bbc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.webView_weather_bbc)).BeginInit();
+            this.tab_netweather.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.webView_weather_netweather)).BeginInit();
             this.tab_windy.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.webView_weather_windy)).BeginInit();
             this.tab_synoptic.SuspendLayout();
@@ -975,6 +979,7 @@ namespace myFlightInfo
             this.tabcnt_weather.Alignment = System.Windows.Forms.TabAlignment.Left;
             this.tabcnt_weather.Controls.Add(this.tab_met_office);
             this.tabcnt_weather.Controls.Add(this.tab_bbc);
+            this.tabcnt_weather.Controls.Add(this.tab_netweather);
             this.tabcnt_weather.Controls.Add(this.tab_windy);
             this.tabcnt_weather.Controls.Add(this.tab_synoptic);
             this.tabcnt_weather.Controls.Add(this.tab_gransden_lodge);
@@ -1032,6 +1037,28 @@ namespace myFlightInfo
             this.webView_weather_bbc.Size = new System.Drawing.Size(1385, 686);
             this.webView_weather_bbc.TabIndex = 1;
             this.webView_weather_bbc.ZoomFactor = 1D;
+            // 
+            // tab_netweather
+            // 
+            this.tab_netweather.Controls.Add(this.webView_weather_netweather);
+            this.tab_netweather.Location = new System.Drawing.Point(28, 4);
+            this.tab_netweather.Name = "tab_netweather";
+            this.tab_netweather.Size = new System.Drawing.Size(1391, 692);
+            this.tab_netweather.TabIndex = 5;
+            this.tab_netweather.Text = "NetWeather";
+            this.tab_netweather.UseVisualStyleBackColor = true;
+            // 
+            // webView_weather_netweather
+            // 
+            this.webView_weather_netweather.AllowExternalDrop = true;
+            this.webView_weather_netweather.CreationProperties = null;
+            this.webView_weather_netweather.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.webView_weather_netweather.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webView_weather_netweather.Location = new System.Drawing.Point(0, 0);
+            this.webView_weather_netweather.Name = "webView_weather_netweather";
+            this.webView_weather_netweather.Size = new System.Drawing.Size(1391, 692);
+            this.webView_weather_netweather.TabIndex = 2;
+            this.webView_weather_netweather.ZoomFactor = 1D;
             // 
             // tab_windy
             // 
@@ -4560,6 +4587,8 @@ namespace myFlightInfo
             ((System.ComponentModel.ISupportInitialize)(this.webView_weather_met)).EndInit();
             this.tab_bbc.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.webView_weather_bbc)).EndInit();
+            this.tab_netweather.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.webView_weather_netweather)).EndInit();
             this.tab_windy.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.webView_weather_windy)).EndInit();
             this.tab_synoptic.ResumeLayout(false);
@@ -5211,6 +5240,8 @@ namespace myFlightInfo
         private System.Windows.Forms.Panel panel147;
         private System.Windows.Forms.Panel panel148;
         private System.Windows.Forms.Panel panel149;
+        private System.Windows.Forms.TabPage tab_netweather;
+        private Microsoft.Web.WebView2.WinForms.WebView2 webView_weather_netweather;
     }
 }
 

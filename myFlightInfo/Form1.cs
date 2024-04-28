@@ -115,6 +115,7 @@ namespace myFlightInfo
 
             await webView_weather_met.EnsureCoreWebView2Async();
             await webView_weather_bbc.EnsureCoreWebView2Async();
+            await webView_weather_netweather.EnsureCoreWebView2Async();
             await webView_synoptic.EnsureCoreWebView2Async();
             await webView_gransden_lodge_weather.EnsureCoreWebView2Async();
             await webView_weather_windy.EnsureCoreWebView2Async();
@@ -466,6 +467,7 @@ namespace myFlightInfo
                         "https://www.bbc.co.uk/weather/2653941");
                     webView_weather_met.CoreWebView2.Navigate(
                         "https://metoffice.gov.uk/weather/forecast/u1214b469");
+                    webView_weather_netweather.CoreWebView2.Navigate("https://www.netweather.tv/weather-forecasts/uk/7-day/5155~Cambridge");
                 }
                 else
                 {
@@ -473,6 +475,7 @@ namespace myFlightInfo
                         "https://www.bbc.co.uk/weather/2648095"); //Gamlinggay = 2648899 Gt Gransden = 2648095
                     webView_weather_met.CoreWebView2.Navigate(
                         "https://metoffice.gov.uk/weather/forecast/gcrbu1fn7"); //waresley = gcrbu1fn7
+                    webView_weather_netweather.CoreWebView2.Navigate("https://www.netweather.tv/weather-forecasts/uk/7-day/50408~Little%20Gransden");
                 }
 
                 if (tabcnt_weather.SelectedTab == tab_windy) grpbx_towns.Visible = false;
@@ -511,6 +514,20 @@ namespace myFlightInfo
                 {
                     webView_weather_met.CoreWebView2.Navigate(
                         "https://metoffice.gov.uk/weather/forecast/u1214b469"); //Cambridge
+                }
+            }
+            else if (tabcnt_weather.SelectedTab == tab_netweather)
+            {
+                if (rdobtn_Gt_Gransden.Checked)
+                {
+                    webView_weather_netweather.CoreWebView2.Navigate(
+                        "https://www.netweather.tv/weather-forecasts/uk/7-day/50408~Little%20Gransden");//lt gransden
+
+                }
+                else
+                {
+                    webView_weather_netweather.CoreWebView2.Navigate(
+                        "https://www.netweather.tv/weather-forecasts/uk/7-day/5155~Cambridge"); //Cambridge
                 }
             }
         }

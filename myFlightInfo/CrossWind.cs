@@ -218,22 +218,22 @@ namespace myFlightInfo
             //Draw the crosswind and headwind arrows
             if (StarboardFlag) //starboard side
             {
-                PaintWindComponent_kts(CrosswindMultiplier, 180, 20, 130, 20,
+                PaintDataOnToRunwayGraphics(CrosswindMultiplier, 180, 20, 130, 20,
                     RunwayGraphic, Math.Round(crosswind3, 0) + "kts", new Font("Arial", 12),
                     Color.Yellow, 80, 10);
 
-                PaintWindComponent_kts(HeadwindMultiplier, 180, 20, 180, 60,
+                PaintDataOnToRunwayGraphics(HeadwindMultiplier, 180, 20, 180, 60,
                     RunwayGraphic, Math.Round(headwind, 0) + "kts", new Font("Arial", 12),
                     Color.Yellow, 130, 65);
 
             }
             else //port side
             {
-                PaintWindComponent_kts(CrosswindMultiplier, 15, 20, 65, 20,
+                PaintDataOnToRunwayGraphics(CrosswindMultiplier, 15, 20, 65, 20,
                         RunwayGraphic, Math.Round(crosswind3, 0) + "kts", new Font("Arial", 12),
                         Color.Yellow, 68, 10);
 
-                PaintWindComponent_kts(HeadwindMultiplier, 15, 20, 15, 60,
+                PaintDataOnToRunwayGraphics(HeadwindMultiplier, 15, 20, 15, 60,
                         RunwayGraphic, Math.Round(headwind, 0) + "kts", new Font("Arial", 12),
                         Color.Yellow, 5, 65);
             }
@@ -253,13 +253,19 @@ namespace myFlightInfo
                     RunwayGraphic.DrawString(RunwayToUse, new Font("Arial", 50), new SolidBrush(Color.White), new Point(40, 120));
                 }
 
-                PaintWindComponent_kts(HeadwindMultiplier, 180, 20, 130, 20,
-                    RunwayGraphic, Math.Round(headwind, 0) + "kts", new Font("Arial", 12),
-                    Color.Yellow, 160, 65);
-
-                PaintWindComponent_kts(HeadwindMultiplier, 180, 20, 180, 60,
-                    RunwayGraphic, Math.Round(headwind, 0) + "kts", new Font("Arial", 12),
-                    Color.Yellow, 160, 65);
+                //Draw wind arrows.
+                if ((!PaintDataOnToRunwayGraphics(HeadwindMultiplier, 180, 20, 130, 20,
+                            RunwayGraphic, Math.Round(headwind, 0) + "kts", new Font("Arial", 12),
+                            Color.Yellow, 160, 65)) || 
+                    (!PaintDataOnToRunwayGraphics(HeadwindMultiplier, 180, 20, 180, 60,
+                            RunwayGraphic, Math.Round(headwind, 0) + "kts", new Font("Arial", 12),
+                            Color.Yellow, 160, 65)))
+                {
+                    MsgBox.Show("Unable to draw the data, Please check data", "Error", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                        return;
+                }
+                
             }
             else
             {
@@ -275,7 +281,7 @@ namespace myFlightInfo
         }
 
 
-        private bool PaintWindComponent_kts(double myLineWidthMultiplier, int myCrossWindLineStartX, int myCrossWindLineStartY, int myCrossWindLineEndX, int myCrossWindLineEndY,
+        private bool PaintDataOnToRunwayGraphics(double myLineWidthMultiplier, int myCrossWindLineStartX, int myCrossWindLineStartY, int myCrossWindLineEndX, int myCrossWindLineEndY,
                                             Graphics myRunwayGraphic, string myRunwayNumber, Font myFont,
                                             Color myColor, int myCrossWindDataStringXCoOrd, int myCrossWindDataStringYCoOrd)
         {
