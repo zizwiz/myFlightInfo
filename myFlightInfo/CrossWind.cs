@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
-using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 using CenteredMessagebox;
 using myFlightInfo.crosswind;
@@ -25,137 +24,165 @@ namespace myFlightInfo
             ResetCrosswindGraphics();
 
             //Get cross wind figures. Returns results which is a mixed array of items.
+            /*
+             *Input (all from UI)
+                magnitude
+                direction
+                runway_heading
+               
+               Output
+                runway_heading = runway in UI
+                    crosswind1 = on runway_heading
+                    headwind1 = on runway_heading
+               
+                runway_heading2 = reciprocal of runway in UI
+                    crosswind2 = on runway_heading2
+                    headwind2 = on runway_heading2
+              */
+
             var results =
                 Crosswind.CalculateWind(txtbx_magnitude.Text, txtbx_direction.Text, txtbx_runway_heading.Text);
 
             //We will not write and draw figures to screen
             bool StarboardFlag = false;
             bool RunwayFlag = true;
+
             string RunwayToUse = "";
+
+            //from UI data
             double RunwayHeading1 = double.Parse(results.Item1);
-            double RunwayHeading2 = double.Parse(results.Item4);
             double crossWind1 = Math.Ceiling(double.Parse(results.Item2));
+            double headwind1 = Math.Ceiling(double.Parse(results.Item3));
+
+            //from reciprocal to UI data
+            double RunwayHeading2 = double.Parse(results.Item4);
             double crossWind2 = Math.Ceiling(double.Parse(results.Item5));
+            double headwind2 = Math.Ceiling(double.Parse(results.Item6));
+
             double crosswind3 = 0;
-            double headwind = 0;
-            double windSpeed1 = Math.Ceiling(double.Parse(results.Item3));
-            double windSpeed2 = Math.Ceiling(double.Parse(results.Item6));
+            double headwind3 = 0;
+
             double MaxCrossWindAllowed = Settings.Default.MaxCrossWind;
+
             float HeadwindMultiplier;
             float CrosswindMultiplier;
 
 
             //Runway 1 data - runway Chosen by user
-            if (crossWind1 > MaxCrossWindAllowed)
+            // Set colours we will write labels with
+            if (crossWind1 > MaxCrossWindAllowed) //Cross wind exceeds max allowed for aircraft
+
             {
                 lbl_runway_heading1.ForeColor = Color.Red;
                 lbl_crosswind_1.ForeColor = Color.Red;
                 lbl_headwind_1.ForeColor = Color.Red;
             }
-            else if (windSpeed1 < 0)
+            else if (headwind1 < 0) //a minus headwind means tailwind. We take off into headwind only. crosswind within limits 
             {
                 lbl_runway_heading1.ForeColor = Color.Red;
                 lbl_crosswind_1.ForeColor = Color.Red;
                 lbl_headwind_1.ForeColor = Color.Red;
             }
-            else
+            else //headwind and crosswind within limits so good to takeoff
             {
                 lbl_runway_heading1.ForeColor = Color.Green;
                 lbl_crosswind_1.ForeColor = Color.Green;
                 lbl_headwind_1.ForeColor = Color.Green;
             }
 
+            //write text to UI
             lbl_runway_heading1.Text = "Runway " + RunwayHeading1;
 
-            if (crossWind1 > 0)
+            if (crossWind1 > 0) //Starboard crosswind on RunwayHeading1
             {
                 lbl_crosswind_1.Text = "Crosswind = " + crossWind1 + "kts from Starboard side";
                 StarboardFlag = true;
             }
-            else if (crossWind1 < 0)
+            else if (crossWind1 < 0) //Port side crosswind on RunwayHeading1
             {
                 lbl_crosswind_1.Text = "Crosswind = " + (crossWind1 * -1) + "kts from Port side";
-                StarboardFlag = false;
             }
-            else
+            else //No crosswind across RunwayHeading1
             {
                 lbl_crosswind_1.Text = "No crosswind detected";
             }
 
 
-            if (windSpeed1 > 0)
+            if (headwind1 > 0) //Headwind on RunwayHeading1
             {
-                lbl_headwind_1.Text = "Headwind = " + windSpeed1 + "kts";
-                RunwayToUse = RunwayHeading1.ToString();
-                crosswind3 = (crossWind1 > 0) ? crossWind1 : (crossWind1 * -1);
-                headwind = windSpeed1;
+                lbl_headwind_1.Text = "Headwind = " + headwind1 + "kts";
+                RunwayToUse = RunwayHeading1.ToString(); //This is headwind so use RunwayHeading1
+                crosswind3 = (crossWind1 > 0) ? crossWind1 : (crossWind1 * -1); //Make crosswind1 positive figure
+                headwind3 = headwind1; //Use headwind1 as the headwind
             }
-            else if (windSpeed1 < 0)
+            else if (headwind1 < 0) //Tailwind on RunwayHeading1
             {
 
-                lbl_headwind_1.Text = "Tailwind = " + (windSpeed1 * -1) + "kts";
+                lbl_headwind_1.Text = "Tailwind = " + (headwind1 * -1) + "kts";
             }
-            else
+            else //No Headwind or Tailwind on RunwayHeading1
             {
                 lbl_headwind_1.Text = "No wind detected";
             }
 
 
-            //Runway 2 data
+            //Runway 2 data (reciprocal runway to that in UI)
+            // Set colours we will write labels with
 
-            if (crossWind2 > MaxCrossWindAllowed)
+            if (crossWind2 > MaxCrossWindAllowed) //Cross wind exceeds max allowed for aircraft
             {
                 lbl_runway_heading2.ForeColor = Color.Red;
                 lbl_crosswind_2.ForeColor = Color.Red;
                 lbl_headwind_2.ForeColor = Color.Red;
             }
-            else if (windSpeed2 < 0)
+            else if (headwind2 < 0) //a minus headwind means tailwind. We take off into headwind only. crosswind within limits 
             {
                 lbl_runway_heading2.ForeColor = Color.Red;
                 lbl_crosswind_2.ForeColor = Color.Red;
                 lbl_headwind_2.ForeColor = Color.Red;
             }
-            else
+            else //headwind and crosswind within limits so good to takeoff
             {
                 lbl_runway_heading2.ForeColor = Color.Green;
                 lbl_crosswind_2.ForeColor = Color.Green;
                 lbl_headwind_2.ForeColor = Color.Green;
             }
 
+            //write text to UI
             lbl_runway_heading2.Text = "Runway " + RunwayHeading2;
 
-            if (crossWind2 > 0)
+            if (crossWind2 > 0) //Starboard crosswind on reciprocal runway
             {
                 lbl_crosswind_2.Text = "Crosswind = " + crossWind2 + "kts from Starboard side";
                 StarboardFlag = true;
             }
-            else if (crossWind2 < 0)
+            else if (crossWind2 < 0) //Port side crosswind on reciprocal runway
             {
                 lbl_crosswind_2.Text = "Crosswind = " + (crossWind2 * -1) + "kts from Port side";
                 StarboardFlag = false;
             }
-            else
+            else //No Headwind or Tailwind on reciprocal runway
             {
                 lbl_crosswind_2.Text = "No crosswind detected";
             }
 
-            if (windSpeed2 > 0)
+            if (headwind2 > 0) //Headwind on reciprocal runway
             {
-                lbl_headwind_2.Text = "Headwind = " + windSpeed2 + "kts";
-                RunwayToUse = RunwayHeading2.ToString();
-                crosswind3 = (crossWind2 > 0) ? crossWind2 : (crossWind2 * -1);
-                headwind = windSpeed2;
+                lbl_headwind_2.Text = "Headwind = " + headwind2 + "kts";
+                RunwayToUse = RunwayHeading2.ToString(); //This is headwind so use RunwayHeading2
+                crosswind3 = (crossWind2 > 0) ? crossWind2 : (crossWind2 * -1); //Make crosswind2 positive figure
+                headwind3 = headwind2; //Use headwind2 as the headwind
             }
-            else if (windSpeed2 < 0)
+            else if (headwind2 < 0) //Tailwind on reciprocal runway
             {
-                lbl_headwind_2.Text = "Tailwind = " + (windSpeed2 * -1) + "kts";
+                lbl_headwind_2.Text = "Tailwind = " + (headwind2 * -1) + "kts";
             }
             else
             {
-                lbl_headwind_2.Text = "No wind detected";
+                lbl_headwind_2.Text = "No wind detected"; //No Headwind or Tailwind on reciprocal runway
             }
 
-            //Runway to use
+            // Check if crosswind within limits if not advise via UI that runway is closed so do not take-off
             if (crosswind3 > MaxCrossWindAllowed)
             {
                 lbl_RunwayToUse.ForeColor = Color.Red;
@@ -164,7 +191,7 @@ namespace myFlightInfo
                     "Not safe to take off.\rCrosswind component is above maximumum allowed for safe takeoff.";
                 RunwayFlag = false;
             }
-            else
+            else // Crosswind OK. We can write runway to use to UI. 
             {
                 lbl_RunwayToUse.ForeColor = Color.Green;
 
@@ -178,14 +205,13 @@ namespace myFlightInfo
                 }
             }
 
-            //Draw the graphics
+            //////////////////////////////////////////////////////////////////////////
+            // Now we know the runway, headwind and crosswind we draw the graphics
+            //////////////////////////////////////////////////////////////////////////
+
             Application.DoEvents();
             Graphics RunwayGraphic = picbx_crosswind.CreateGraphics();
 
-            //We now choose to draw a line, you can draw many other things like square circle etc.
-            //All the parameters come from the UI
-            //The scale we are using is to divide the values by 3. This allows the values to be shown on the
-            //graphics screen.
 
             if (RunwayToUse == txtbx_runway_heading.Text) //used when you choose tailwind runway, app always wants headwind for takeoff. 
             {
@@ -199,89 +225,122 @@ namespace myFlightInfo
                 }
             }
 
-            if (crosswind3 == headwind)
+            if (crosswind3 == headwind3)
             {
                 CrosswindMultiplier = 1;
                 HeadwindMultiplier = 1;
             }
-            else if (crosswind3 > headwind)
+            else if (crosswind3 > headwind3)
             {
                 CrosswindMultiplier = 2;
                 HeadwindMultiplier = 1;
             }
-            else
+            else //crosswind < headwind
             {
                 CrosswindMultiplier = 1;
                 HeadwindMultiplier = 2;
             }
 
-            //Draw the crosswind and headwind arrows
-            if (StarboardFlag) //starboard side
+            // when there is no crosswind we set multiplier to 1
+            if (crosswind3 == 0)
             {
-                PaintDataOnToRunwayGraphics(CrosswindMultiplier, 180, 20, 130, 20,
-                    RunwayGraphic, Math.Round(crosswind3, 0) + "kts", new Font("Arial", 12),
-                    Color.Yellow, 80, 10);
-
-                PaintDataOnToRunwayGraphics(HeadwindMultiplier, 180, 20, 180, 60,
-                    RunwayGraphic, Math.Round(headwind, 0) + "kts", new Font("Arial", 12),
-                    Color.Yellow, 130, 65);
-
+                CrosswindMultiplier = 1;
             }
-            else //port side
-            {
-                PaintDataOnToRunwayGraphics(CrosswindMultiplier, 15, 20, 65, 20,
-                        RunwayGraphic, Math.Round(crosswind3, 0) + "kts", new Font("Arial", 12),
-                        Color.Yellow, 68, 10);
 
-                PaintDataOnToRunwayGraphics(HeadwindMultiplier, 15, 20, 15, 60,
-                        RunwayGraphic, Math.Round(headwind, 0) + "kts", new Font("Arial", 12),
-                        Color.Yellow, 5, 65);
+            // when there is no headwind we set multiplier to 1
+            if (headwind3 == 0)
+            {
+                HeadwindMultiplier = 1;
             }
 
 
-
-            // Draw runway number
-            if (crossWind1 == 0)
+            if (crosswind3 > MaxCrossWindAllowed) // crosswind exceeds limits
             {
-                if (headwind == 0)
+                RunwayGraphic.DrawString("X", new Font("Arial", 50), new SolidBrush(Color.White), new Point(60, 120));
+            }
+            else // Crosswind OK. We can write runway to use to UI. 
+            {
+                if (crosswind3 == 0 && headwind3 == 0) // no wind use any runway.
                 {
-                    RunwayGraphic.DrawString(RunwayHeading1 + "/" + RunwayHeading2, new Font("Arial", 50), new SolidBrush(Color.White),
+                    // Paint Runway marking
+                    RunwayGraphic.DrawString(RunwayHeading1 + "/" + RunwayHeading2, new Font("Arial", 50),
+                        new SolidBrush(Color.White),
                         new Point(0, 120));
-                }
-                else
-                {
-                    RunwayGraphic.DrawString(RunwayToUse, new Font("Arial", 50), new SolidBrush(Color.White), new Point(40, 120));
-                }
 
-                //Draw wind arrows.
-                if ((!PaintDataOnToRunwayGraphics(HeadwindMultiplier, 180, 20, 130, 20,
-                            RunwayGraphic, Math.Round(headwind, 0) + "kts", new Font("Arial", 12),
-                            Color.Yellow, 160, 65)) || 
-                    (!PaintDataOnToRunwayGraphics(HeadwindMultiplier, 180, 20, 180, 60,
-                            RunwayGraphic, Math.Round(headwind, 0) + "kts", new Font("Arial", 12),
-                            Color.Yellow, 160, 65)))
-                {
-                    MsgBox.Show("Unable to draw the data, Please check data", "Error", MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
-                        return;
+                    // Draw both wind arrows. only write crosswind number once
+                    PaintDataOnToRunwayGraphics(1, 180, 20, 130, 20,
+                        RunwayGraphic, "", new Font("Arial", 12),
+                        Color.Yellow, 80, 10);
+
+                    PaintDataOnToRunwayGraphics(1, 180, 20, 180, 60,
+                        RunwayGraphic, Math.Round(headwind3, 0) + "kts", new Font("Arial", 12),
+                        Color.Yellow, 130, 65);
+
+                    PaintDataOnToRunwayGraphics(1, 15, 20, 65, 20,
+                        RunwayGraphic, Math.Round(crosswind3, 0) + "kts", new Font("Arial", 12),
+                        Color.Yellow, 78, 10);
+
+                    PaintDataOnToRunwayGraphics(1, 15, 20, 15, 60,
+                        RunwayGraphic, Math.Round(headwind3, 0) + "kts", new Font("Arial", 12),
+                        Color.Yellow, 5, 65);
                 }
-                
-            }
-            else
-            {
-                if (RunwayFlag)
+                else if (crosswind3 == 0 && headwind3 > 0) // headwind only no cross wind
                 {
-                    RunwayGraphic.DrawString(RunwayToUse, new Font("Arial", 50), new SolidBrush(Color.White), new Point(40, 120));
+                    // Paint Runway marking
+                    RunwayGraphic.DrawString(RunwayToUse, new Font("Arial", 50), new SolidBrush(Color.White), new Point(50, 120));
+
+                    // Draw both wind arrows. only write crosswind number once
+                    //crosswind multiplier = 1 headwind multiplier = 2
+                    PaintDataOnToRunwayGraphics(1, 180, 20, 130, 20,
+                        RunwayGraphic, "", new Font("Arial", 12),
+                        Color.Yellow, 80, 10);
+
+                    PaintDataOnToRunwayGraphics(2, 180, 20, 180, 60,
+                        RunwayGraphic, Math.Round(headwind3, 0) + "kts", new Font("Arial", 12),
+                        Color.Yellow, 130, 65);
+
+                    PaintDataOnToRunwayGraphics(1, 15, 20, 65, 20,
+                        RunwayGraphic, Math.Round(crosswind3, 0) + "kts", new Font("Arial", 12),
+                        Color.Yellow, 78, 10);
+
+                    PaintDataOnToRunwayGraphics(2, 15, 20, 15, 60,
+                        RunwayGraphic, Math.Round(headwind3, 0) + "kts", new Font("Arial", 12),
+                        Color.Yellow, 5, 65);
                 }
-                else //wind exceeds aircraft max limits
+                else // headwind and cross wind we need to work out which is greater etc
                 {
-                    RunwayGraphic.DrawString("X", new Font("Arial", 50), new SolidBrush(Color.White), new Point(60, 120));
+                    // Paint Runway marking
+                    RunwayGraphic.DrawString(RunwayToUse, new Font("Arial", 50), new SolidBrush(Color.White), new Point(50, 120));
+
+                    //Draw the crosswind and headwind arrows
+                    if (StarboardFlag) //starboard side
+                    {
+                        PaintDataOnToRunwayGraphics(CrosswindMultiplier, 180, 20, 130, 20,
+                            RunwayGraphic, Math.Round(crosswind3, 0) + "kts", new Font("Arial", 12),
+                            Color.Yellow, 80, 10);
+
+                        PaintDataOnToRunwayGraphics(HeadwindMultiplier, 180, 20, 180, 60,
+                            RunwayGraphic, Math.Round(headwind3, 0) + "kts", new Font("Arial", 12),
+                            Color.Yellow, 130, 65);
+
+                    }
+                    else //port side
+                    {
+                        PaintDataOnToRunwayGraphics(CrosswindMultiplier, 15, 20, 65, 20,
+                                RunwayGraphic, Math.Round(crosswind3, 0) + "kts", new Font("Arial", 12),
+                                Color.Yellow, 68, 10);
+
+                        PaintDataOnToRunwayGraphics(HeadwindMultiplier, 15, 20, 15, 60,
+                                RunwayGraphic, Math.Round(headwind3, 0) + "kts", new Font("Arial", 12),
+                                Color.Yellow, 5, 65);
+                    }
+
                 }
             }
         }
 
 
-        private bool PaintDataOnToRunwayGraphics(double myLineWidthMultiplier, int myCrossWindLineStartX, int myCrossWindLineStartY, int myCrossWindLineEndX, int myCrossWindLineEndY,
+        private void PaintDataOnToRunwayGraphics(double myLineWidthMultiplier, int myCrossWindLineStartX, int myCrossWindLineStartY, int myCrossWindLineEndX, int myCrossWindLineEndY,
                                             Graphics myRunwayGraphic, string myRunwayNumber, Font myFont,
                                             Color myColor, int myCrossWindDataStringXCoOrd, int myCrossWindDataStringYCoOrd)
         {
@@ -299,14 +358,12 @@ namespace myFlightInfo
                 //Draw in runway number
                 myRunwayGraphic.DrawString(myRunwayNumber, myFont, new SolidBrush(myColor),
                                 new Point(myCrossWindDataStringXCoOrd, myCrossWindDataStringYCoOrd));
-                return true;
             }
             catch
             {
                 //It did not work instead of crashing just put up hint and return gracefully
                 MsgBox.Show("Something has gone wrong.\rPlease check data and try again", "Something is Wrong",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
             }
 
         }
