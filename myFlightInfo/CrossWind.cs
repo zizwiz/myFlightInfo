@@ -430,13 +430,13 @@ namespace myFlightInfo
             }
             else if (!CheckData.IsItADouble(myDirection))
             {
-                MsgBox.Show("Check Direction Data is a valid number (0 - 360)", "Incorrect Data", MessageBoxButtons.OK,
+                MsgBox.Show("Check Direction Data is a valid number (1° - 360°)", "Incorrect Data", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
                 return false;
             }
             else if ((double.Parse(myDirection) < 01) || (double.Parse(myDirection) > 360))
             {
-                MsgBox.Show("Check Direction Data is a valid number (0 - 360)", "Data out of scope",
+                MsgBox.Show("Check Direction Data is a valid number (1° - 360°)", "Data out of scope",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
