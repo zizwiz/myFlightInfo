@@ -746,6 +746,7 @@ namespace myFlightInfo
             this.cmbobx_airport_info.Sorted = true;
             this.cmbobx_airport_info.TabIndex = 0;
             this.cmbobx_airport_info.SelectedIndexChanged += new System.EventHandler(this.cmbobx_airport_info_SelectedIndexChanged);
+            this.cmbobx_airport_info.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Navigation_Keydown);
             // 
             // cmbobx_gransden_lodge
             // 
@@ -1721,6 +1722,7 @@ namespace myFlightInfo
             this.txtbx_present_pressure.Size = new System.Drawing.Size(323, 26);
             this.txtbx_present_pressure.TabIndex = 16;
             this.txtbx_present_pressure.Text = "0";
+            this.txtbx_present_pressure.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Navigation_Keydown);
             // 
             // panel37
             // 
@@ -1839,6 +1841,7 @@ namespace myFlightInfo
             this.NavigationDateTimePicker.Size = new System.Drawing.Size(981, 26);
             this.NavigationDateTimePicker.TabIndex = 0;
             this.NavigationDateTimePicker.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.NavigationDateTimePicker.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Navigation_Keydown);
             // 
             // panel19
             // 
@@ -2006,6 +2009,7 @@ namespace myFlightInfo
             this.txtbx_magnitude.Name = "txtbx_magnitude";
             this.txtbx_magnitude.Size = new System.Drawing.Size(135, 26);
             this.txtbx_magnitude.TabIndex = 0;
+            this.txtbx_magnitude.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Crosswind_Keydown);
             // 
             // label9
             // 
@@ -2033,6 +2037,7 @@ namespace myFlightInfo
             this.txtbx_direction.Name = "txtbx_direction";
             this.txtbx_direction.Size = new System.Drawing.Size(135, 26);
             this.txtbx_direction.TabIndex = 1;
+            this.txtbx_direction.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Crosswind_Keydown);
             // 
             // label10
             // 
@@ -2059,6 +2064,7 @@ namespace myFlightInfo
             this.txtbx_runway_heading.Name = "txtbx_runway_heading";
             this.txtbx_runway_heading.Size = new System.Drawing.Size(75, 26);
             this.txtbx_runway_heading.TabIndex = 6;
+            this.txtbx_runway_heading.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Crosswind_Keydown);
             // 
             // panel12
             // 
@@ -4560,6 +4566,7 @@ namespace myFlightInfo
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.SizeChanged += new System.EventHandler(this.Form1_SizeChanged);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.panel31.ResumeLayout(false);

@@ -122,7 +122,7 @@ namespace myFlightInfo
 
             webView_notams.CoreWebView2.Navigate("https://www.notaminfo.com/ukmap?destination=node%2F39");
 
-            SetMatarPages();
+            SetMetarPages();
             SetWeatherPages();
 
             cmbobx_gransden_lodge.SelectedIndex = 0;
@@ -193,7 +193,7 @@ namespace myFlightInfo
             }
             else if (tabcnt_toplevel.SelectedTab == tab_metar)
             {
-                SetMatarPages();
+                SetMetarPages();
             }
             else if ((tabcnt_toplevel.SelectedTab == tab_weather) && (tabcnt_weather.SelectedTab == tab_gransden_lodge))
             {
@@ -383,15 +383,7 @@ namespace myFlightInfo
             Browse.NavigateTo(txtbx_navigate_to_url.Text, webView_browser);
         }
 
-        private void txtbx_navigate_to_url_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)13)
-            {
-                Browse.NavigateTo(txtbx_navigate_to_url.Text, webView_browser);
-            }
-        }
-
-       
+        
         private void btn_school_Click(object sender, EventArgs e)
         {
             //check which school is set and use it but also set button to change to other school
@@ -407,11 +399,11 @@ namespace myFlightInfo
             settings.Save();
 
             grpbx_towns.Visible = false;
-            SetMatarPages();
+            SetMetarPages();
             SetWeatherPages();
         }
 
-        private void SetMatarPages()
+        private void SetMetarPages()
         {
             tabCnt_airfields.TabPages.Clear(); //Remove all pages associated with tab control airfields.
 
@@ -546,6 +538,6 @@ namespace myFlightInfo
             }
         }
 
-
+       
     }
 }

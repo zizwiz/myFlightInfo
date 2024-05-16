@@ -187,8 +187,7 @@ namespace myFlightInfo
             cmbobx_airport_info.Visible = false;
             grpbx_altimeter.Visible = false;
             grpbx_browser_navigation.Visible = false;
-
-
+            
             if (tabcnt_utils.SelectedTab == tab_navigation)
             {
                 //cmbobx_airport_info.SelectedIndex = 0;
@@ -203,18 +202,18 @@ namespace myFlightInfo
                 grpbx_altimeter.Visible = false;
                 grpbx_browser_navigation.Visible = true;
             }
-
-            SetMatarPages();
+            
+            SetMetarPages();
             SetWeatherPages();
 
             grpbx_towns.Visible = false;
             btn_school.Visible = false;
+
+            //Here we select the textbox that will be in focus.
+            if (tabcnt_utils.SelectedTab == tab_crosswind)
+            {
+                txtbx_magnitude.Select(); // Put cursor into Wind Magnitude Textbox"
+            }
         }
-
-
     }
-
-
-
-
 }

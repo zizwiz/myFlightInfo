@@ -50,6 +50,7 @@ namespace myFlightInfo.Navigation
                 //Find last Sunday in March and October of year in datepicker
                 DateTime marchDate = CheckDate.LastSundayOfMonth("3", year.ToString());
                 DateTime octoberDate = CheckDate.LastSundayOfMonth("10", year.ToString());
+
                 // Construct the chosen date we are looking at 
                 DateTime DateToCheck = DateTime.Parse(day + "/" + month + "/" + year + " 00:00:00");
 
