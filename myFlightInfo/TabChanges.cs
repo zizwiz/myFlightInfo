@@ -214,6 +214,10 @@ namespace myFlightInfo
             {
                 txtbx_magnitude.Select(); // Put cursor into Wind Magnitude Textbox"
             }
+            else if (tabcnt_utils.SelectedTab == tab_weight_balance)
+            {
+                txtbx_cog_pilot_weight.Select(); // Put cursor into pilots weight Textbox"
+            }
         }
     }
 }

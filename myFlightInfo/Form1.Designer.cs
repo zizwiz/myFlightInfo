@@ -2959,7 +2959,7 @@ namespace myFlightInfo
             this.txtbx_cog_pilot_weight.Location = new System.Drawing.Point(0, 0);
             this.txtbx_cog_pilot_weight.Name = "txtbx_cog_pilot_weight";
             this.txtbx_cog_pilot_weight.Size = new System.Drawing.Size(151, 26);
-            this.txtbx_cog_pilot_weight.TabIndex = 19;
+            this.txtbx_cog_pilot_weight.TabIndex = 0;
             this.txtbx_cog_pilot_weight.Text = "0";
             this.txtbx_cog_pilot_weight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
