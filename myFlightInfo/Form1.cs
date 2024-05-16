@@ -215,7 +215,7 @@ namespace myFlightInfo
                 lbl_d_airport_name.Text = "";
                 lbl_to_pressure.Text = "";
 
-                dateTimePicker1.Value = DateTime.Now;
+                NavigationDateTimePicker.Value = DateTime.Now;
 
                 lstbx_navigation_from.Items.Clear();
                 lstbx_navigation_to.Items.Clear();
@@ -245,9 +245,9 @@ namespace myFlightInfo
 
              */
 
-            int year = dateTimePicker1.Value.Year;
-            int month = dateTimePicker1.Value.Month;
-            int day = dateTimePicker1.Value.Day;
+            int year = NavigationDateTimePicker.Value.Year;
+            int month = NavigationDateTimePicker.Value.Month;
+            int day = NavigationDateTimePicker.Value.Day;
             int hour = DateTime.Now.Hour;
             int minute = DateTime.Now.Minute;
             int second = DateTime.Now.Second;
@@ -308,9 +308,9 @@ namespace myFlightInfo
             {
                 grpbx_towns.Visible = false;
 
-                int year = dateTimePicker1.Value.Year;
-                int month = dateTimePicker1.Value.Month;
-                int day = dateTimePicker1.Value.Day;
+                int year = NavigationDateTimePicker.Value.Year;
+                int month = NavigationDateTimePicker.Value.Month;
+                int day = NavigationDateTimePicker.Value.Day;
 
                 //we use flags as the info in the xml file we will use may not be complete
                 //we only show info if it is complete.
@@ -361,9 +361,9 @@ namespace myFlightInfo
                 ((lbl_d_airport_name.Text != "..") && (lbl_d_airport_name.Text != "")))
             {
 
-                int year = dateTimePicker1.Value.Year;
-                int month = dateTimePicker1.Value.Month;
-                int day = dateTimePicker1.Value.Day;
+                int year = NavigationDateTimePicker.Value.Year;
+                int month = NavigationDateTimePicker.Value.Month;
+                int day = NavigationDateTimePicker.Value.Day;
 
                 Navigate.SolarInfo(lbl_p_airport_name.Text, lstbx_navigation_from, year, month, day);
                 Navigate.SolarInfo(lbl_d_airport_name.Text, lstbx_navigation_to, year, month, day);

@@ -136,7 +136,7 @@ namespace myFlightInfo
             this.panel10 = new System.Windows.Forms.Panel();
             this.lbl_p_airport_name = new System.Windows.Forms.Label();
             this.panel24 = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.NavigationDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.panel19 = new System.Windows.Forms.Panel();
             this.tab_crosswind = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
@@ -1824,21 +1824,21 @@ namespace myFlightInfo
             // panel24
             // 
             this.tableLayoutPanel3.SetColumnSpan(this.panel24, 3);
-            this.panel24.Controls.Add(this.dateTimePicker1);
+            this.panel24.Controls.Add(this.NavigationDateTimePicker);
             this.panel24.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel24.Location = new System.Drawing.Point(200, 3);
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(981, 34);
             this.panel24.TabIndex = 33;
             // 
-            // dateTimePicker1
+            // NavigationDateTimePicker
             // 
-            this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dateTimePicker1.Location = new System.Drawing.Point(0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(981, 26);
-            this.dateTimePicker1.TabIndex = 0;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.NavigationDateTimePicker.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NavigationDateTimePicker.Location = new System.Drawing.Point(0, 0);
+            this.NavigationDateTimePicker.Name = "NavigationDateTimePicker";
+            this.NavigationDateTimePicker.Size = new System.Drawing.Size(981, 26);
+            this.NavigationDateTimePicker.TabIndex = 0;
+            this.NavigationDateTimePicker.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // panel19
             // 
@@ -5184,7 +5184,7 @@ namespace myFlightInfo
         private System.Windows.Forms.PictureBox picbx_cog_limits;
         private System.Windows.Forms.Panel panel145;
         private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker NavigationDateTimePicker;
         private System.Windows.Forms.ComboBox cmbobx_aircraftName;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Button btn_settings_add_aircraft;

@@ -47,6 +47,23 @@ namespace myFlightInfo.Navigation
 
                 Sunriset.SunriseSunset(year, month, day, lat, lng, out double tsunrise, out double tsunset);
 
+                //Find last Sunday in March and October of year in datepicker
+                DateTime marchDate = CheckDate.LastSundayOfMonth("3", year.ToString());
+                DateTime octoberDate = CheckDate.LastSundayOfMonth("10", year.ToString());
+                // Construct the chosen date we are looking at 
+                DateTime DateToCheck = DateTime.Parse(day + "/" + month + "/" + year + " 00:00:00");
+
+                //Are we in BritishSummerTime for chosen date? 
+                //We only fly in daylight so no need to worry about the hour.
+                bool BritishSummerTime = marchDate <= DateToCheck && DateToCheck <= octoberDate;
+
+                if (BritishSummerTime)
+                {
+                    tsunrise += 1;
+                    tsunset += 1;
+                }
+
+
                 if (NumItems >= 12)
                 {
                     //If we are updating then delete and add again

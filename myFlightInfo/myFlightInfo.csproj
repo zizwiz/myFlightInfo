@@ -73,6 +73,7 @@
     <Compile Include="AreYouSure.Designer.cs">
       <DependentUpon>AreYouSure.cs</DependentUpon>
     </Compile>
+    <Compile Include="common_data\BSTorGMT.cs" />
     <Compile Include="CrossWind.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,7 +86,9 @@
     <Compile Include="compliance_data\aircraftName.Designer.cs">
       <DependentUpon>aircraftName.cs</DependentUpon>
     </Compile>
-    <Compile Include="compliance_data\compliance_data.cs" />
+    <Compile Include="compliance_data\compliance_data.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="crosswind\Crosswind.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
