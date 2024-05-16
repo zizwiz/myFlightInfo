@@ -9,7 +9,7 @@ namespace myFlightInfo
         {
             if ((e.KeyCode == Keys.Enter) && ((tabcnt_toplevel.SelectedTab == tab_utils) && (tabcnt_utils.SelectedTab == tab_navigation)))
             {
-                btn_calculate_altimiter.PerformClick();
+                btn_navigation_calculations.PerformClick();
             }
             else if ((e.KeyCode == Keys.Enter) && ((tabcnt_toplevel.SelectedTab == tab_utils) && (tabcnt_utils.SelectedTab == tab_crosswind)))
             {
@@ -29,7 +29,7 @@ namespace myFlightInfo
         {
             if ((e.KeyCode == Keys.Enter) && ((tabcnt_toplevel.SelectedTab == tab_utils) && (tabcnt_utils.SelectedTab == tab_navigation)))
             {
-                btn_calculate_altimiter.PerformClick();
+                btn_navigation_calculations.PerformClick();
             }
         }
 

@@ -97,7 +97,7 @@ namespace myFlightInfo
             cmbobx_airport_info.Visible = false;
             cmbobx_gransden_lodge.Visible = false;
             grpbx_altimeter.Visible = false;
-            btn_calculate_altimiter.Visible = false;
+            btn_navigation_calculations.Visible = false;
 
             await webView_notams.EnsureCoreWebView2Async();
             await webView_browser.EnsureCoreWebView2Async();
@@ -232,7 +232,7 @@ namespace myFlightInfo
             }
         }
 
-        private void btn_calculate_altimiter_Click(object sender, EventArgs e)
+        private void btn_navigation_calculations_Click(object sender, EventArgs e)
         {
             //Calculate settings for altitude at destination
             /*
@@ -338,7 +338,7 @@ namespace myFlightInfo
                     if ((noInfoFlag) && (fromDataOK))
                     {
                         Navigate.SolarInfo(cmbobx_airport_info.Text, lstbx_navigation_to, year, month, day);
-                        btn_calculate_altimiter.Visible = true; //Now show button to calculate
+                        btn_navigation_calculations.Visible = true; //Now show button to calculate
                     }
 
                 }

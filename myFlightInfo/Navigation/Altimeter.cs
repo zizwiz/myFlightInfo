@@ -18,11 +18,23 @@ namespace myFlightInfo.Navigation
         {
             if (CheckDataCorrect(present_pressure, present_altitude, to_altitude))
             {
-                //From Airfield
-                myListboxFrom.Items.Add("");
-                myListboxFrom.Items.Add("QNH = \t" + Math.Round(
-                    (float.Parse(present_pressure) + ((float.Parse(present_altitude)) / 30)),
-                    2).ToString() + " mb");
+                string QNH = "QNH = \t" + Math.Round(
+                    (float.Parse(present_pressure) + (float.Parse(present_altitude) / 30)), 2).ToString() + " mb";
+
+                if (myListboxFrom.Items.Count >= 13)
+                {
+                    //if it exists then remove it and then replace it with new value.
+                    //From Airfield
+                    myListboxFrom.Items.RemoveAt(13);
+                    myListboxFrom.Items.Insert(13, QNH);
+                }
+                else
+                {
+                    //It does not yet exist so write for first time
+                    //From Airfield
+                    myListboxFrom.Items.Add("");
+                    myListboxFrom.Items.Add(QNH);
+                }
 
                 //To Airfield
                 lbl_to_pressure.Text = Math.Round(
@@ -41,17 +53,6 @@ namespace myFlightInfo.Navigation
 
                 return false;
             }
-
-
-
-
-
-
-
-
-
-
-
         }
 
         /// <summary>

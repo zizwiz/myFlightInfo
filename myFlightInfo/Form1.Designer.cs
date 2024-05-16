@@ -129,7 +129,7 @@ namespace myFlightInfo
             this.label6 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
             this.lstbx_navigation_from = new System.Windows.Forms.ListBox();
-            this.btn_calculate_altimiter = new System.Windows.Forms.Button();
+            this.btn_navigation_calculations = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.lbl_d_airport_name = new System.Windows.Forms.Label();
@@ -1519,7 +1519,7 @@ namespace myFlightInfo
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel5, 3, 2);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 1, 2);
-            this.tableLayoutPanel3.Controls.Add(this.btn_calculate_altimiter, 3, 4);
+            this.tableLayoutPanel3.Controls.Add(this.btn_navigation_calculations, 3, 4);
             this.tableLayoutPanel3.Controls.Add(this.panel6, 3, 3);
             this.tableLayoutPanel3.Controls.Add(this.panel9, 3, 1);
             this.tableLayoutPanel3.Controls.Add(this.panel10, 1, 1);
@@ -1765,17 +1765,17 @@ namespace myFlightInfo
             this.lstbx_navigation_from.Size = new System.Drawing.Size(383, 384);
             this.lstbx_navigation_from.TabIndex = 0;
             // 
-            // btn_calculate_altimiter
+            // btn_navigation_calculations
             // 
-            this.btn_calculate_altimiter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_calculate_altimiter.Location = new System.Drawing.Point(793, 591);
-            this.btn_calculate_altimiter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btn_calculate_altimiter.Name = "btn_calculate_altimiter";
-            this.btn_calculate_altimiter.Size = new System.Drawing.Size(387, 70);
-            this.btn_calculate_altimiter.TabIndex = 22;
-            this.btn_calculate_altimiter.Text = "Calculate";
-            this.btn_calculate_altimiter.UseVisualStyleBackColor = true;
-            this.btn_calculate_altimiter.Click += new System.EventHandler(this.btn_calculate_altimiter_Click);
+            this.btn_navigation_calculations.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_navigation_calculations.Location = new System.Drawing.Point(793, 591);
+            this.btn_navigation_calculations.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_navigation_calculations.Name = "btn_navigation_calculations";
+            this.btn_navigation_calculations.Size = new System.Drawing.Size(387, 70);
+            this.btn_navigation_calculations.TabIndex = 22;
+            this.btn_navigation_calculations.Text = "Calculate";
+            this.btn_navigation_calculations.UseVisualStyleBackColor = true;
+            this.btn_navigation_calculations.Click += new System.EventHandler(this.btn_navigation_calculations_Click);
             // 
             // panel6
             // 
@@ -5196,7 +5196,7 @@ namespace myFlightInfo
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Button btn_settings_add_aircraft;
         private System.Windows.Forms.Button btn_settings_delete_aircraft;
-        private System.Windows.Forms.Button btn_calculate_altimiter;
+        private System.Windows.Forms.Button btn_navigation_calculations;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
         private System.Windows.Forms.Button btn_settings_update_aircraft;
