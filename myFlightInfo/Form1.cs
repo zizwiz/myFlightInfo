@@ -120,6 +120,9 @@ namespace myFlightInfo
             await webView_gransden_lodge_weather.EnsureCoreWebView2Async();
             await webView_weather_windy.EnsureCoreWebView2Async();
 
+            await webView_navFromChart.EnsureCoreWebView2Async();
+            await webView_navToChart.EnsureCoreWebView2Async();
+
             webView_notams.CoreWebView2.Navigate("https://www.notaminfo.com/ukmap?destination=node%2F39");
 
             SetMetarPages();
@@ -306,6 +309,8 @@ namespace myFlightInfo
         {
             if ((tabcnt_toplevel.SelectedTab == tab_utils) && (tabcnt_utils.SelectedTab == tab_navigation))
             {
+                
+
                 grpbx_towns.Visible = false;
 
                 int year = NavigationDateTimePicker.Value.Year;
@@ -326,7 +331,15 @@ namespace myFlightInfo
 
                     if (noInfoFlag)
                     {
+                        string[] data = airport_data.GetAirportInfo(cmbobx_airport_info.Text);
+                        double lat = double.Parse(data[4]);
+                        double lng = double.Parse(data[6]);
+
                         Navigate.SolarInfo(cmbobx_airport_info.Text, lstbx_navigation_from, year, month, day);
+
+                        webView_navFromChart.CoreWebView2.Navigate("https://www.openstreetmap.org/?minlat" +
+                            lat + "&minlon=" + lng + "#map=14/" + lat + "/" + lng);
+
                         fromDataOK = true;
                     }
                 }
@@ -337,7 +350,15 @@ namespace myFlightInfo
 
                     if ((noInfoFlag) && (fromDataOK))
                     {
+                        string[] data = airport_data.GetAirportInfo(cmbobx_airport_info.Text);
+                        double lat = double.Parse(data[4]);
+                        double lng = double.Parse(data[6]);
+
                         Navigate.SolarInfo(cmbobx_airport_info.Text, lstbx_navigation_to, year, month, day);
+
+                        webView_navToChart.CoreWebView2.Navigate("https://www.openstreetmap.org/?minlat" +
+                                                                   lat + "&minlon=" + lng + "#map=14/" + lat + "/" + lng);
+                       
                         btn_navigation_calculations.Visible = true; //Now show button to calculate
                     }
 
