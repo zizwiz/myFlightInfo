@@ -95,6 +95,7 @@ namespace myFlightInfo
             grpbx_towns.Visible = false;
             grpbx_browser_navigation.Visible = false;
             cmbobx_airport_info.Visible = false;
+            NavigationDateTimePicker.Visible = false;
             cmbobx_gransden_lodge.Visible = false;
             grpbx_altimeter.Visible = false;
             btn_navigation_calculations.Visible = false;
@@ -222,6 +223,10 @@ namespace myFlightInfo
 
                 lstbx_navigation_from.Items.Clear();
                 lstbx_navigation_to.Items.Clear();
+
+                webView_navFromChart.CoreWebView2.Navigate("about:blank");
+                webView_navToChart.CoreWebView2.Navigate("about:blank");
+                btn_navigation_calculations.Visible = false;
             }
             else if ((tabcnt_toplevel.SelectedTab == tab_utils) && (tabcnt_utils.SelectedTab == tab_browser))
             {
@@ -559,6 +564,19 @@ namespace myFlightInfo
             }
         }
 
-       
+        //private void tabcnt_utils_Leave(object sender, EventArgs e)
+        //{
+        //    btn_navigation_calculations.Visible = false;
+        //}
+
+        //private void tabcnt_utils_Enter(object sender, EventArgs e)
+        //{
+        //    if ((lbl_d_airport_name.Text != "..")|| (lbl_d_airport_name.Text != ""))
+        //    {
+        //        btn_navigation_calculations.Visible = true;
+        //    }
+        //}
+
+        
     }
 }

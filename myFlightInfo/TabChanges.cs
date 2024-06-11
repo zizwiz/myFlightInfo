@@ -57,6 +57,7 @@ namespace myFlightInfo
         private void tabcnt_toplevel_SelectedIndexChanged(object sender, EventArgs e)
         {
             cmbobx_airport_info.Visible = false;
+            NavigationDateTimePicker.Visible = false;
             cmbobx_gransden_lodge.Visible = false;
             grpbx_towns.Visible = true;
             btn_school.Visible = true;
@@ -70,6 +71,7 @@ namespace myFlightInfo
                 tabcnt_utils.SelectedTab = tab_browser;
                 cmbobx_airport_info.SelectedIndex = 0;
                 cmbobx_airport_info.Visible = true;
+                NavigationDateTimePicker.Visible = false;
                 grpbx_browser_navigation.Visible = true;
                 btn_school.Visible = false;
                 grpbx_towns.Visible = false;
@@ -185,22 +187,29 @@ namespace myFlightInfo
         private void tabcnt_utils_SelectedIndexChanged(object sender, EventArgs e)
         {
             cmbobx_airport_info.Visible = false;
-            grpbx_altimeter.Visible = false;
+            NavigationDateTimePicker.Visible = false;
+                grpbx_altimeter.Visible = false;
             grpbx_browser_navigation.Visible = false;
             
             if (tabcnt_utils.SelectedTab == tab_navigation)
             {
                 //cmbobx_airport_info.SelectedIndex = 0;
                 cmbobx_airport_info.Visible = true;
+                NavigationDateTimePicker.Visible = true;
                 grpbx_altimeter.Visible = true;
-                grpbx_browser_navigation.Visible = false;
+                grpbx_browser_navigation.Visible = true;
+                btn_navigate_to.Visible = false;
+                txtbx_navigate_to_url.Visible = false;
             }
             else if (tabcnt_utils.SelectedTab == tab_browser)
             {
                 cmbobx_airport_info.SelectedIndex = 0;
                 cmbobx_airport_info.Visible = true;
+                NavigationDateTimePicker.Visible = false;
                 grpbx_altimeter.Visible = false;
                 grpbx_browser_navigation.Visible = true;
+                btn_navigate_to.Visible = true;
+                txtbx_navigate_to_url.Visible = true;
             }
             
             SetMetarPages();
