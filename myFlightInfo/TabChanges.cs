@@ -190,16 +190,23 @@ namespace myFlightInfo
             NavigationDateTimePicker.Visible = false;
                 grpbx_altimeter.Visible = false;
             grpbx_browser_navigation.Visible = false;
-            
+            btn_navigation_calculations.Visible = false;
+
             if (tabcnt_utils.SelectedTab == tab_navigation)
             {
-                //cmbobx_airport_info.SelectedIndex = 0;
-                cmbobx_airport_info.Visible = true;
+                btn_navigation_calculations.Visible = false;
+               cmbobx_airport_info.Visible = true;
                 NavigationDateTimePicker.Visible = true;
                 grpbx_altimeter.Visible = true;
                 grpbx_browser_navigation.Visible = true;
                 btn_navigate_to.Visible = false;
                 txtbx_navigate_to_url.Visible = false;
+
+                if ((lbl_d_airport_name.Text != "..") && (lbl_d_airport_name.Text != ""))
+                {
+                    btn_navigation_calculations.Visible = true;
+                }
+
             }
             else if (tabcnt_utils.SelectedTab == tab_browser)
             {

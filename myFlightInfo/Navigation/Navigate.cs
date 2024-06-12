@@ -102,7 +102,7 @@ namespace myFlightInfo.Navigation
         }
 
         public static bool AirfieldCoOrdinates(bool flag, string airfield, ListBox myListBox, Label lblPressure, Label lblAirportName,
-            TextBox txtbxAltitude, TextBox txtbxPressure)
+            Label lblAltitude, TextBox txtbxPressure)
         {
             bool infoFlag = false;
             
@@ -128,7 +128,7 @@ namespace myFlightInfo.Navigation
                     myListBox.Items.Clear();
 
                     lblAirportName.Text = data[2];
-                    txtbxAltitude.Text = data[8];
+                    lblAltitude.Text = data[8] + "m";
                     if (flag) txtbxPressure.Text = "0"; //only do if from airfield
 
                     myListBox.Items.Add("ICAO Code = \t" + data[1]);

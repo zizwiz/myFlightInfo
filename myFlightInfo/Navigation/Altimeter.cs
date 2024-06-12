@@ -19,7 +19,7 @@ namespace myFlightInfo.Navigation
             if (CheckDataCorrect(present_pressure, present_altitude, to_altitude))
             {
                 string QNH = "QNH = \t" + Math.Round(
-                    (float.Parse(present_pressure) + (float.Parse(present_altitude) / 30)), 2).ToString() + " mb";
+                    (float.Parse(present_pressure) + (float.Parse(present_altitude.Substring(0, present_altitude.Length - 1)) / 30)), 2) + " mb";
 
                 if (myListboxFrom.Items.Count >= 13)
                 {
@@ -38,9 +38,8 @@ namespace myFlightInfo.Navigation
 
                 //To Airfield
                 lbl_to_pressure.Text = Math.Round(
-                        (float.Parse(present_pressure) + ((float.Parse(present_altitude) -
-                                                           float.Parse(to_altitude)) / 30)), 2)
-                    .ToString();
+                        (float.Parse(present_pressure) + ((float.Parse(present_altitude.Substring(0,present_altitude.Length-1)) -
+                                                           float.Parse(to_altitude.Substring(0,to_altitude.Length-1))) / 30)), 2) +"hPa";
                 myListboxto.Items.Add("");
                 myListboxto.Items.Add("");
                 //We do not put in QNH as the distance between the two airports may be great and
@@ -77,15 +76,15 @@ namespace myFlightInfo.Navigation
                     result = false;
                 }
 
-                if (!int.TryParse(present_altitude, out parsedValue))
+                if (!int.TryParse(present_altitude.Substring(0, present_altitude.Length - 1), out parsedValue))
                 {
-                    MsgBox.Show("Present QFE pressure must contain only numbers", "Check Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MsgBox.Show("Present altitude must contain only numbers", "Check Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     result = false;
                 }
 
-                if (!int.TryParse(to_altitude, out parsedValue))
+                if (!int.TryParse(to_altitude.Substring(0,to_altitude.Length-1), out parsedValue))
                 {
-                    MsgBox.Show("Destination QFE pressure must contain only numbers", "Check Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MsgBox.Show("Destination altitude must contain only numbers", "Check Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     result = false;
                 }
             }

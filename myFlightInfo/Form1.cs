@@ -213,8 +213,8 @@ namespace myFlightInfo
                 rdobtn_present.Checked = true;
 
                 txtbx_present_pressure.Text = "0";
-                txtbx_present_altitude.Text = "";
-                txtbx_to_altitude.Text = "";
+                lbl_present_altitude.Text = "";
+                lbl_to_altitude.Text = "";
                 lbl_p_airport_name.Text = "";
                 lbl_d_airport_name.Text = "";
                 lbl_to_pressure.Text = "";
@@ -260,8 +260,8 @@ namespace myFlightInfo
             int minute = DateTime.Now.Minute;
             int second = DateTime.Now.Second;
 
-            if (altimeter.Calculate_altimeter(txtbx_present_pressure.Text, txtbx_present_altitude.Text,
-                    txtbx_to_altitude.Text, lstbx_navigation_from, lstbx_navigation_to, lbl_to_pressure))
+            if (altimeter.Calculate_altimeter(txtbx_present_pressure.Text, lbl_present_altitude.Text,
+                    lbl_to_altitude.Text, lstbx_navigation_from, lstbx_navigation_to, lbl_to_pressure))
             {
                 // Get bearing and distance display in listbox for both airfields
                 Navigate.BearingAndDistance(lbl_p_airport_name.Text, lbl_d_airport_name.Text, year, month, day, hour,
@@ -332,7 +332,7 @@ namespace myFlightInfo
                     fromDataOK = false;
 
                     noInfoFlag = Navigate.AirfieldCoOrdinates(true, cmbobx_airport_info.Text, lstbx_navigation_from,
-                        lbl_to_pressure, lbl_p_airport_name, txtbx_present_altitude, txtbx_present_pressure);
+                        lbl_to_pressure, lbl_p_airport_name, lbl_present_altitude, txtbx_present_pressure);
 
                     if (noInfoFlag)
                     {
@@ -351,7 +351,7 @@ namespace myFlightInfo
                 else
                 {
                     noInfoFlag = Navigate.AirfieldCoOrdinates(false, cmbobx_airport_info.Text, lstbx_navigation_to,
-                        lbl_to_pressure, lbl_d_airport_name, txtbx_to_altitude, txtbx_present_pressure);
+                        lbl_to_pressure, lbl_d_airport_name, lbl_to_altitude, txtbx_present_pressure);
 
                     if ((noInfoFlag) && (fromDataOK))
                     {
@@ -577,6 +577,6 @@ namespace myFlightInfo
         //    }
         //}
 
-        
+
     }
 }
