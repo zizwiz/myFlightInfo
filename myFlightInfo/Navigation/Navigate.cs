@@ -128,7 +128,7 @@ namespace myFlightInfo.Navigation
                     myListBox.Items.Clear();
 
                     lblAirportName.Text = data[2];
-                    lblAltitude.Text = data[8] + "m";
+                    lblAltitude.Text = data[8] + "ft";
                     if (flag) txtbxPressure.Text = "0"; //only do if from airfield
 
                     myListBox.Items.Add("ICAO Code = \t" + data[1]);
@@ -143,6 +143,7 @@ namespace myFlightInfo.Navigation
 
                     myListBox.Items.Add("");
                     myListBox.Items.Add("Elevation = \t" + data[7] + "m");
+                    //myListBox.Items.Add("Elevation = \t" + data[8] + "ft");
 
                     myListBox.TopIndex = myListBox.Items.Count - 1;
                     infoFlag = true;

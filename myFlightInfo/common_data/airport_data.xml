@@ -20316,18 +20316,12 @@
 	<airport_info>
 		<icao_code>GB-0327</icao_code>
 		<airport_name>Benington Airfield</airport_name>
-		<latitude_deg>
-		</latitude_deg>
-		<latitude_dec>
-		</latitude_dec>
-		<longitude_deg>
-		</longitude_deg>
-		<longitude_dec>
-		</longitude_dec>
-		<elevation_m>
-		</elevation_m>
-		<elevation_ft>
-		</elevation_ft>
+		<latitude_deg>51°53'00"N</latitude_deg>
+		<latitude_dec>51.88290</latitude_dec>
+		<longitude_deg>008°07'00"W</longitude_deg>
+		<longitude_dec>-0.12354</longitude_dec>
+		<elevation_m>112</elevation_m>
+		<elevation_ft>367</elevation_ft>
 		<iata_code>
 		</iata_code>
 		<alternate_name>
