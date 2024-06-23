@@ -212,13 +212,11 @@ namespace myFlightInfo
                 cmbobx_airport_info.SelectedIndex = 0;
                 rdobtn_present.Checked = true;
 
-                txtbx_present_pressure.Text = "0";
                 lbl_present_altitude.Text = "";
                 lbl_to_altitude.Text = "";
                 lbl_p_airport_name.Text = "";
                 lbl_d_airport_name.Text = "";
-                lbl_to_pressure.Text = "";
-
+                
                 NavigationDateTimePicker.Value = DateTime.Now;
 
                 lstbx_navigation_from.Items.Clear();
@@ -260,8 +258,8 @@ namespace myFlightInfo
             int minute = DateTime.Now.Minute;
             int second = DateTime.Now.Second;
 
-            if (altimeter.Calculate_altimeter(txtbx_present_pressure.Text, lbl_present_altitude.Text,
-                    lbl_to_altitude.Text, lstbx_navigation_from, lstbx_navigation_to, lbl_to_pressure))
+            if (altimeter.Calculate_altimeter(lbl_present_altitude.Text,
+                    lbl_to_altitude.Text, lstbx_navigation_from, lstbx_navigation_to))
             {
                 // Get bearing and distance display in listbox for both airfields
                 Navigate.BearingAndDistance(lbl_p_airport_name.Text, lbl_d_airport_name.Text, year, month, day, hour,
@@ -332,7 +330,7 @@ namespace myFlightInfo
                     fromDataOK = false;
 
                     noInfoFlag = Navigate.AirfieldCoOrdinates(true, cmbobx_airport_info.Text, lstbx_navigation_from,
-                        lbl_to_pressure, lbl_p_airport_name, lbl_present_altitude, txtbx_present_pressure);
+                        lbl_p_airport_name, lbl_present_altitude);
 
                     if (noInfoFlag)
                     {
@@ -351,7 +349,7 @@ namespace myFlightInfo
                 else
                 {
                     noInfoFlag = Navigate.AirfieldCoOrdinates(false, cmbobx_airport_info.Text, lstbx_navigation_to,
-                        lbl_to_pressure, lbl_d_airport_name, lbl_to_altitude, txtbx_present_pressure);
+                         lbl_d_airport_name, lbl_to_altitude);
 
                     if ((noInfoFlag) && (fromDataOK))
                     {
@@ -562,6 +560,11 @@ namespace myFlightInfo
                 webView_gransden_lodge_weather.CoreWebView2.Navigate(
                     "https://members.camgliding.uk/volatile/camwest.jpg");
             }
+        }
+
+        private void tableLayoutPanel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         //private void tabcnt_utils_Leave(object sender, EventArgs e)

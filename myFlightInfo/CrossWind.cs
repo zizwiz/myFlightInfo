@@ -45,7 +45,7 @@ namespace myFlightInfo
 
             //We will not write and draw figures to screen
             bool StarboardFlag = false;
-            bool RunwayFlag = true;
+           // bool RunwayFlag = true;
 
             string RunwayToUse = "";
 
@@ -189,7 +189,7 @@ namespace myFlightInfo
 
                 lbl_RunwayToUse.Text =
                     "Not safe to take off.\rCrosswind component is above maximumum allowed for safe takeoff.";
-                RunwayFlag = false;
+                //RunwayFlag = false;
             }
             else // Crosswind OK. We can write runway to use to UI. 
             {
