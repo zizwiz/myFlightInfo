@@ -286,5 +286,14 @@ namespace myFlightInfo.Properties {
                 this["MaxCrossWind"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("6371000")]
+        public double EarthsRadius {
+            get {
+                return ((double)(this["EarthsRadius"]));
+            }
+        }
     }
 }

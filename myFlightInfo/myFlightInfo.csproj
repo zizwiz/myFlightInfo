@@ -80,6 +80,8 @@
     <Compile Include="KeyDowns.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="libraries\GreatCircle.cs" />
+    <Compile Include="libraries\RhumbLines.cs" />
     <Compile Include="Navigation\Altimeter.cs" />
     <Compile Include="common_data\airport_data.cs" />
     <Compile Include="common_data\verification.cs" />
@@ -112,6 +114,7 @@
     </Compile>
     <Compile Include="utils\CheckData.cs" />
     <Compile Include="utils\Convert.cs" />
+    <Compile Include="utils\HelpfulFunctions.cs" />
     <Compile Include="WeightsBalance.cs">
       <SubType>Form</SubType>
     </Compile>
