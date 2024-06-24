@@ -3,7 +3,6 @@ using System.Windows.Forms;
 using CenteredMessagebox;
 using myFlightInfo.Properties;
 //using myFlightInfo.Utils;
-using myFlightInfo.Properties;
 using myFlightInfo.utils;
 
 namespace myFlightInfo.libraries

@@ -258,8 +258,8 @@ namespace myFlightInfo
             int minute = DateTime.Now.Minute;
             int second = DateTime.Now.Second;
 
-            if (altimeter.Calculate_altimeter(lbl_present_altitude.Text,
-                    lbl_to_altitude.Text, lstbx_navigation_from, lstbx_navigation_to))
+            if ((altimeter.Calculate_altimeter(lbl_present_altitude.Text, lstbx_navigation_from))&&
+                (altimeter.Calculate_altimeter(lbl_to_altitude.Text, lstbx_navigation_to)))
             {
                 // Get bearing and distance display in listbox for both airfields
                 Navigate.BearingAndDistance(lbl_p_airport_name.Text, lbl_d_airport_name.Text, year, month, day, hour,
