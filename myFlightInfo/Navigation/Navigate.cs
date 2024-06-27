@@ -4,7 +4,10 @@ using System.Windows.Forms;
 using CenteredMessagebox;
 using CoordinateSharp;
 using CoordinateSharp.Magnetic;
+//using CoordinateSharp;
+//using CoordinateSharp.Magnetic;
 using myFlightInfo.common_data;
+using myFlightInfo.libraries;
 using myFlightInfo.utils;
 
 /*
@@ -183,51 +186,47 @@ namespace myFlightInfo.Navigation
                 }
 
                 string[] from_data = airport_data.GetAirportInfo(fromAirfieldName);
-                double from_lat = double.Parse(from_data[4]);
-                double from_lng = double.Parse(from_data[6]);
-
-
-
-                Coordinate fc = new Coordinate(from_lat, from_lng, new DateTime(year, month, day, hour, minute, second),
-                    new EagerLoad(false));
-
-
-                fc.FormatOptions.Format = CoordinateFormatType.Degree_Minutes_Seconds;
-                fc.FormatOptions.Display_Leading_Zeros = true;
-                fc.FormatOptions.Round = 3;
-
-                Magnetic m = new Magnetic(fc, DataModel.WMM2020);
-
-                myListBox.Items.Add("");
-                myListBox.Items.Add("Decimal Degrees for " + fromAirfieldName);
-                myListBox.Items.Add("Declination: \t" + Math.Round(m.MagneticFieldElements.Declination, 2));
-                myListBox.Items.Add("Variation: \t" + Math.Round(m.SecularVariations.Declination, 2));
-                myListBox.Items.Add("Uncertainty: \t" + Math.Round(m.Uncertainty.Declination, 2));
-
-                myListBox.Items.Add("");
-                myListBox.Items.Add("Degrees, minutes and seconds for " + fromAirfieldName);
-                myListBox.Items.Add("Declination: \t" +
-                                    Converts.DecimalToDegrees(m.MagneticFieldElements.Declination));
-                myListBox.Items.Add("Variation: \t" + Converts.DecimalToDegrees(m.SecularVariations.Declination));
-                myListBox.Items.Add("Uncertainty: \t" + Converts.DecimalToDegrees(m.Uncertainty.Declination));
+                string originLongitude = from_data[4];
+                string originLatitude = from_data[6];
 
                 string[] to_data = airport_data.GetAirportInfo(toAirfieldName);
-                double to_lat = double.Parse(to_data[4]);
-                double to_lng = double.Parse(to_data[6]);
+                string destinationLatitude = to_data[4];
+                string destinationLongitude = to_data[6];
 
                 myListBox.Items.Add("");
-                Coordinate tc = new Coordinate(to_lat, to_lng, new DateTime(year, month, day, hour, minute, second));
-                Distance d = new Distance(fc, tc, Shape.Ellipsoid);
+                
+                var results = GreatCircle.InitialBearing(originLongitude, originLatitude,
+                    destinationLongitude, destinationLatitude);
 
-                myListBox.ClearSelected();
-                myListBox.Font = new Font("Ariel", 18, FontStyle.Underline);
+                myListBox.Items.Add("Flying from " + fromAirfieldName + " to " + toAirfieldName);
+               
+                if (myListBox.Name == "lstbx_navigation_from")
+                {
+                    //  myListBox.Items.Add("Forward bearing decimal = " + Math.Round(results.Item1, 4) + "° " + results.Item2);
+                    myListBox.Items.Add("\rBearing = " +
+                                        Converts.toDegreesMinutesSecondsFromDecimalDegrees(results.Item1.ToString()) +
+                                        " " + results.Item2 + "\r");
+                }
+                else
+                {
+                    //  myListBox.Items.Add("\rReverse bearing decimal = " + HelpfulFunctions.UnWrap360(Math.Round(results.Item3, 4)) + "° " + results.Item4);
+                    myListBox.Items.Add("\rBearing = " +
+                                        Converts.toDegreesMinutesSecondsFromDecimalDegrees(HelpfulFunctions
+                                            .UnWrap360(Math.Round(results.Item3, 4)).ToString()) + " " + results.Item4 +
+                                        "\r");
+                }
 
-                myListBox.Items.Add("Flying from " + fromAirfieldName + " to " +
-                                    toAirfieldName);
+                Double result = GreatCircle.Distance(originLongitude, originLatitude,
+                    destinationLongitude, destinationLatitude);
+                myListBox.Items.Add("\r");
+                myListBox.Items.Add("\rDistance\r");
 
-                myListBox.Font = new Font("Ariel", 8, FontStyle.Regular);
-                myListBox.Items.Add("Distance = \t" + Math.Round(d.NauticalMiles, 2) + "nm");
-                myListBox.Items.Add("Bearing = \t" + Math.Round(d.Bearing, 2) + "°");
+               // myListBox.Items.Add("Distance = \r");
+                myListBox.Items.Add(Math.Round(result, 4) + "m\r");
+                myListBox.Items.Add(Math.Round(result / 1000, 4) + "km\r");
+                myListBox.Items.Add(Math.Round(Converts.toMilesFromMetres(result), 4) + " miles\r");
+                myListBox.Items.Add(Math.Round(Converts.toNauticalMilesFromMetres(result), 4) + " nautical miles\r");
+
 
                 myListBox.TopIndex = myListBox.Items.Count - 1;
                 myListBox.SelectedIndex = -1; //removes the blue line
