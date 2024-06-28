@@ -38,12 +38,6 @@
     <ApplicationIcon>CrystalBall.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CoordinateSharp, Version=2.21.1.1, Culture=neutral, PublicKeyToken=f45e02df057b7725, processorArchitecture=MSIL">
-      <HintPath>..\packages\CoordinateSharp.2.21.1.1\lib\net40\CoordinateSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="CoordinateSharp.Magnetic, Version=1.1.11.0, Culture=neutral, PublicKeyToken=f45e02df057b7725, processorArchitecture=MSIL">
-      <HintPath>..\packages\CoordinateSharp.Magnetic.1.1.11\lib\net40\CoordinateSharp.Magnetic.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.2210.55, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.WebView2.1.0.2210.55\lib\net45\Microsoft.Web.WebView2.Core.dll</HintPath>
     </Reference>

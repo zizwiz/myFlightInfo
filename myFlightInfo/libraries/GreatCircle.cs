@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Windows.Forms;
-using CenteredMessagebox;
 using myFlightInfo.Properties;
-//using myFlightInfo.Utils;
 using myFlightInfo.utils;
 
 namespace myFlightInfo.libraries

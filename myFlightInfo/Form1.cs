@@ -1,21 +1,14 @@
 ﻿using System;
-using System.Diagnostics.Eventing.Reader;
-using System.Drawing;
-using System.Drawing.Drawing2D;
 using System.IO;
-using System.Linq;
 using System.Reflection;
 using System.Threading;
 using System.Windows.Forms;
 using System.Xml;
-using System.Xml.Linq;
 using CenteredMessagebox;
 using myFlightInfo.Navigation;
 using myFlightInfo.common_data;
-using myFlightInfo.crosswind;
 using myFlightInfo.browsing;
 using myFlightInfo.Properties;
-using xmlFactory;
 
 //using myFlightInfo.compliance_data;
 
@@ -32,9 +25,6 @@ namespace myFlightInfo
             //write the dlls before initialising.
             File.WriteAllBytes("Microsoft.Web.WebView2.Core.dll", Resources.Microsoft_Web_WebView2_Core);
             File.WriteAllBytes("Microsoft.Web.WebView2.WinForms.dll", Resources.Microsoft_Web_WebView2_WinForms);
-
-            File.WriteAllBytes("CoordinateSharp.Magnetic.dll", Resources.CoordinateSharp_Magnetic);
-            File.WriteAllBytes("CoordinateSharp.dll", Resources.CoordinateSharp);
 
             string arcitectureProcessArchitecture =
                 System.Runtime.InteropServices.RuntimeInformation.ProcessArchitecture.ToString();
@@ -265,7 +255,7 @@ namespace myFlightInfo
                 Navigate.BearingAndDistance(lbl_p_airport_name.Text, lbl_d_airport_name.Text, year, month, day, hour,
                     minute, second, lstbx_navigation_from);
 
-                Navigate.BearingAndDistance(lbl_d_airport_name.Text, lbl_p_airport_name.Text, year, month, day, hour,
+                Navigate.BearingAndDistance(lbl_p_airport_name.Text, lbl_d_airport_name.Text, year, month, day, hour,
                     minute, second, lstbx_navigation_to);
             }
             else
