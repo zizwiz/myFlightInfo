@@ -71,7 +71,12 @@ namespace myFlightInfo
             //Runway 1 data - runway Chosen by user
             // Set colours we will write labels with
             if (crossWind1 > MaxCrossWindAllowed) //Cross wind exceeds max allowed for aircraft
-
+            {
+                lbl_runway_heading1.ForeColor = Color.Red;
+                lbl_crosswind_1.ForeColor = Color.Red;
+                lbl_headwind_1.ForeColor = Color.Red;
+            }
+            else if ((crossWind1 < 0)&& (crossWind1*-1 > MaxCrossWindAllowed)) //Cross wind exceeds max allowed for aircraft
             {
                 lbl_runway_heading1.ForeColor = Color.Red;
                 lbl_crosswind_1.ForeColor = Color.Red;
@@ -130,6 +135,12 @@ namespace myFlightInfo
             // Set colours we will write labels with
 
             if (crossWind2 > MaxCrossWindAllowed) //Cross wind exceeds max allowed for aircraft
+            {
+                lbl_runway_heading2.ForeColor = Color.Red;
+                lbl_crosswind_2.ForeColor = Color.Red;
+                lbl_headwind_2.ForeColor = Color.Red;
+            }
+            else if ((crossWind2 < 0) && (crossWind2 * -1 > MaxCrossWindAllowed)) //Cross wind exceeds max allowed for aircraft
             {
                 lbl_runway_heading2.ForeColor = Color.Red;
                 lbl_crosswind_2.ForeColor = Color.Red;
@@ -260,10 +271,23 @@ namespace myFlightInfo
             }
             else // Crosswind OK. We can write runway to use to UI. 
             {
+
+                
+
+                string RunwayHeading1x = RunwayHeading1.ToString();
+                string RunwayHeading2x = RunwayHeading2.ToString();
+
+                if (RunwayToUse.Length == 1) RunwayToUse = "0" + RunwayToUse;
+                if (RunwayHeading1x.Length == 1) RunwayHeading1x = "0" + RunwayHeading1;
+                if (RunwayHeading2x.Length == 1) RunwayHeading2x = "0" + RunwayHeading2;
+
                 if (crosswind3 == 0 && headwind3 == 0) // no wind use any runway.
                 {
+                    if (crossWind1 > crossWind2) crosswind3 = crossWind1;
+                    if (crossWind2 > crossWind1) crosswind3 = crossWind2; 
+
                     // Paint Runway marking
-                    RunwayGraphic.DrawString(RunwayHeading1 + "/" + RunwayHeading2, new Font("Arial", 50),
+                    RunwayGraphic.DrawString(RunwayHeading1x + "/" + RunwayHeading2x, new Font("Arial", 50),
                         new SolidBrush(Color.White),
                         new Point(0, 120));
 
@@ -312,6 +336,7 @@ namespace myFlightInfo
                     // Paint Runway marking
                     RunwayGraphic.DrawString(RunwayToUse, new Font("Arial", 50), new SolidBrush(Color.White), new Point(50, 120));
 
+                   
                     //Draw the crosswind and headwind arrows
                     if (StarboardFlag) //starboard side
                     {
@@ -454,14 +479,6 @@ namespace myFlightInfo
             }
 
             return true;
-
-
         }
-
-
-
-
-
-
     }
 }

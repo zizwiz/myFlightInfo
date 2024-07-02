@@ -103,6 +103,7 @@ namespace myFlightInfo
             if (settings.school != "Rochester") grpbx_towns.Visible = true;
             btn_school.Visible = true;
             cmbobx_gransden_lodge.Visible = true;
+            btn_gransden_lodge_photo_update.Visible = false;
 
             if (tabcnt_weather.SelectedTab == tab_gransden_lodge)
             {

@@ -48,7 +48,6 @@ namespace myFlightInfo.Navigation
             }
             else
             {
-
                 return false;
             }
         }
