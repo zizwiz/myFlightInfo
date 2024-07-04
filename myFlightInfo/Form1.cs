@@ -224,7 +224,7 @@ namespace myFlightInfo
             }
             else if ((tabcnt_toplevel.SelectedTab == tab_utils) && (tabcnt_utils.SelectedTab == tab_crosswind))
             {
-                //Need to add in reset items
+                ResetCrossWind();
             }
         }
 
@@ -552,10 +552,10 @@ namespace myFlightInfo
             }
         }
 
-        private void tableLayoutPanel4_Paint(object sender, PaintEventArgs e)
-        {
+       
 
-        }
+
+
 
         //private void tabcnt_utils_Leave(object sender, EventArgs e)
         //{

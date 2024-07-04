@@ -146,25 +146,32 @@ namespace myFlightInfo
             this.label1 = new System.Windows.Forms.Label();
             this.tab_crosswind = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
             this.picbx_crosswind = new System.Windows.Forms.PictureBox();
-            this.btn_calc_wind = new System.Windows.Forms.Button();
-            this.btn_crosswind_reset = new System.Windows.Forms.Button();
+            this.tableLayoutPanel20 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel21 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.txtbx_magnitude = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.panel14 = new System.Windows.Forms.Panel();
             this.txtbx_direction = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.panel20 = new System.Windows.Forms.Panel();
             this.txtbx_runway_heading = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.lbl_RunwayToUse = new System.Windows.Forms.Label();
-            this.lbl_runway_heading1 = new System.Windows.Forms.Label();
-            this.lbl_crosswind_1 = new System.Windows.Forms.Label();
-            this.lbl_headwind_1 = new System.Windows.Forms.Label();
-            this.lbl_runway_heading2 = new System.Windows.Forms.Label();
-            this.lbl_crosswind_2 = new System.Windows.Forms.Label();
-            this.lbl_headwind_2 = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel22 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.panel146 = new System.Windows.Forms.Panel();
+            this.btn_calc_wind = new System.Windows.Forms.Button();
+            this.rchtxtbx_crosswind_output = new System.Windows.Forms.RichTextBox();
             this.tab_weight_balance = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.panel90 = new System.Windows.Forms.Panel();
@@ -384,23 +391,6 @@ namespace myFlightInfo
             this.panel87 = new System.Windows.Forms.Panel();
             this.panel88 = new System.Windows.Forms.Panel();
             this.panel89 = new System.Windows.Forms.Panel();
-            this.panel153 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel20 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel21 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel22 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.panel25 = new System.Windows.Forms.Panel();
-            this.panel146 = new System.Windows.Forms.Panel();
-            this.rchtxtbx_crosswind_output = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.panel31.SuspendLayout();
@@ -490,8 +480,20 @@ namespace myFlightInfo
             this.panel24.SuspendLayout();
             this.tab_crosswind.SuspendLayout();
             this.tableLayoutPanel17.SuspendLayout();
-            this.tableLayoutPanel18.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel19.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbx_crosswind)).BeginInit();
+            this.tableLayoutPanel20.SuspendLayout();
+            this.tableLayoutPanel21.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.panel20.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.tableLayoutPanel22.SuspendLayout();
+            this.panel146.SuspendLayout();
             this.tab_weight_balance.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.panel90.SuspendLayout();
@@ -598,21 +600,6 @@ namespace myFlightInfo
             this.tableLayoutPanel16.SuspendLayout();
             this.panel85.SuspendLayout();
             this.panel86.SuspendLayout();
-            this.panel153.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
-            this.tableLayoutPanel19.SuspendLayout();
-            this.tableLayoutPanel20.SuspendLayout();
-            this.tableLayoutPanel21.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel11.SuspendLayout();
-            this.panel13.SuspendLayout();
-            this.panel14.SuspendLayout();
-            this.panel20.SuspendLayout();
-            this.panel12.SuspendLayout();
-            this.tableLayoutPanel22.SuspendLayout();
-            this.panel23.SuspendLayout();
-            this.panel146.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -1650,7 +1637,6 @@ namespace myFlightInfo
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(429, 292);
             this.tableLayoutPanel4.TabIndex = 17;
-            this.tableLayoutPanel4.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel4_Paint);
             // 
             // panel152
             // 
@@ -1960,7 +1946,6 @@ namespace myFlightInfo
             this.tableLayoutPanel17.ColumnCount = 2;
             this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel17.Controls.Add(this.tableLayoutPanel18, 1, 0);
             this.tableLayoutPanel17.Controls.Add(this.tableLayoutPanel5, 0, 0);
             this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel17.Location = new System.Drawing.Point(0, 0);
@@ -1970,22 +1955,37 @@ namespace myFlightInfo
             this.tableLayoutPanel17.Size = new System.Drawing.Size(1391, 692);
             this.tableLayoutPanel17.TabIndex = 17;
             // 
-            // tableLayoutPanel18
+            // tableLayoutPanel5
             // 
-            this.tableLayoutPanel18.ColumnCount = 3;
-            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 300F));
-            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel18.Controls.Add(this.panel153, 2, 1);
-            this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel18.Location = new System.Drawing.Point(698, 3);
-            this.tableLayoutPanel18.Name = "tableLayoutPanel18";
-            this.tableLayoutPanel18.RowCount = 3;
-            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 600F));
-            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel18.Size = new System.Drawing.Size(690, 686);
-            this.tableLayoutPanel18.TabIndex = 0;
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel19, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel20, 0, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(689, 686);
+            this.tableLayoutPanel5.TabIndex = 1;
+            // 
+            // tableLayoutPanel19
+            // 
+            this.tableLayoutPanel19.ColumnCount = 3;
+            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 300F));
+            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel19.Controls.Add(this.picbx_crosswind, 1, 1);
+            this.tableLayoutPanel19.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel19.Location = new System.Drawing.Point(347, 3);
+            this.tableLayoutPanel19.Name = "tableLayoutPanel19";
+            this.tableLayoutPanel19.RowCount = 3;
+            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 600F));
+            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel19.Size = new System.Drawing.Size(339, 680);
+            this.tableLayoutPanel19.TabIndex = 0;
             // 
             // picbx_crosswind
             // 
@@ -1998,27 +1998,112 @@ namespace myFlightInfo
             this.picbx_crosswind.TabIndex = 0;
             this.picbx_crosswind.TabStop = false;
             // 
-            // btn_calc_wind
+            // tableLayoutPanel20
             // 
-            this.btn_calc_wind.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_calc_wind.Location = new System.Drawing.Point(0, 0);
-            this.btn_calc_wind.Name = "btn_calc_wind";
-            this.btn_calc_wind.Size = new System.Drawing.Size(100, 48);
-            this.btn_calc_wind.TabIndex = 14;
-            this.btn_calc_wind.Text = "Calculate";
-            this.btn_calc_wind.UseVisualStyleBackColor = true;
-            this.btn_calc_wind.Click += new System.EventHandler(this.btn_calc_wind_Click);
+            this.tableLayoutPanel20.ColumnCount = 1;
+            this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel20.Controls.Add(this.tableLayoutPanel21, 0, 0);
+            this.tableLayoutPanel20.Controls.Add(this.rchtxtbx_crosswind_output, 0, 1);
+            this.tableLayoutPanel20.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel20.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel20.Name = "tableLayoutPanel20";
+            this.tableLayoutPanel20.RowCount = 2;
+            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 205F));
+            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel20.Size = new System.Drawing.Size(338, 680);
+            this.tableLayoutPanel20.TabIndex = 1;
             // 
-            // btn_crosswind_reset
+            // tableLayoutPanel21
             // 
-            this.btn_crosswind_reset.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_crosswind_reset.Location = new System.Drawing.Point(0, 0);
-            this.btn_crosswind_reset.Name = "btn_crosswind_reset";
-            this.btn_crosswind_reset.Size = new System.Drawing.Size(99, 48);
-            this.btn_crosswind_reset.TabIndex = 15;
-            this.btn_crosswind_reset.Text = "Reset";
-            this.btn_crosswind_reset.UseVisualStyleBackColor = true;
-            this.btn_crosswind_reset.Click += new System.EventHandler(this.btn_crosswind_reset_Click);
+            this.tableLayoutPanel21.ColumnCount = 2;
+            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 145F));
+            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel21.Controls.Add(this.panel7, 0, 1);
+            this.tableLayoutPanel21.Controls.Add(this.panel8, 0, 3);
+            this.tableLayoutPanel21.Controls.Add(this.panel11, 0, 5);
+            this.tableLayoutPanel21.Controls.Add(this.panel13, 1, 1);
+            this.tableLayoutPanel21.Controls.Add(this.panel14, 1, 3);
+            this.tableLayoutPanel21.Controls.Add(this.panel20, 1, 5);
+            this.tableLayoutPanel21.Controls.Add(this.panel12, 0, 7);
+            this.tableLayoutPanel21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel21.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel21.Name = "tableLayoutPanel21";
+            this.tableLayoutPanel21.RowCount = 9;
+            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel21.Size = new System.Drawing.Size(332, 199);
+            this.tableLayoutPanel21.TabIndex = 0;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.label7);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(3, 8);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(139, 34);
+            this.panel7.TabIndex = 0;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(3, 7);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(89, 20);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Windspeed";
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.label8);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Location = new System.Drawing.Point(3, 53);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(139, 34);
+            this.panel8.TabIndex = 1;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(3, 7);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(72, 20);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Direction";
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.label11);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel11.Location = new System.Drawing.Point(3, 98);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(139, 34);
+            this.panel11.TabIndex = 2;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(3, 7);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(66, 20);
+            this.label11.TabIndex = 7;
+            this.label11.Text = "Runway";
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.txtbx_magnitude);
+            this.panel13.Controls.Add(this.label9);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel13.Location = new System.Drawing.Point(148, 8);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(181, 34);
+            this.panel13.TabIndex = 4;
             // 
             // txtbx_magnitude
             // 
@@ -2038,6 +2123,16 @@ namespace myFlightInfo
             this.label9.TabIndex = 4;
             this.label9.Text = "kts";
             // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.txtbx_direction);
+            this.panel14.Controls.Add(this.label10);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel14.Location = new System.Drawing.Point(148, 53);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(181, 34);
+            this.panel14.TabIndex = 5;
+            // 
             // txtbx_direction
             // 
             this.txtbx_direction.Location = new System.Drawing.Point(4, 4);
@@ -2056,6 +2151,15 @@ namespace myFlightInfo
             this.label10.TabIndex = 5;
             this.label10.Text = "°";
             // 
+            // panel20
+            // 
+            this.panel20.Controls.Add(this.txtbx_runway_heading);
+            this.panel20.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel20.Location = new System.Drawing.Point(148, 98);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(181, 34);
+            this.panel20.TabIndex = 6;
+            // 
             // txtbx_runway_heading
             // 
             this.txtbx_runway_heading.Location = new System.Drawing.Point(4, 4);
@@ -2065,95 +2169,79 @@ namespace myFlightInfo
             this.txtbx_runway_heading.TabIndex = 6;
             this.txtbx_runway_heading.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Crosswind_Keydown);
             // 
-            // label7
+            // panel12
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 7);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 20);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Windspeed";
+            this.tableLayoutPanel21.SetColumnSpan(this.panel12, 2);
+            this.panel12.Controls.Add(this.tableLayoutPanel22);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel12.Location = new System.Drawing.Point(3, 143);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(326, 54);
+            this.panel12.TabIndex = 7;
             // 
-            // label8
+            // tableLayoutPanel22
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 7);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(72, 20);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "Direction";
+            this.tableLayoutPanel22.ColumnCount = 5;
+            this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel22.Controls.Add(this.panel23, 0, 0);
+            this.tableLayoutPanel22.Controls.Add(this.panel25, 2, 0);
+            this.tableLayoutPanel22.Controls.Add(this.panel146, 4, 0);
+            this.tableLayoutPanel22.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel22.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel22.Name = "tableLayoutPanel22";
+            this.tableLayoutPanel22.RowCount = 1;
+            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel22.Size = new System.Drawing.Size(326, 54);
+            this.tableLayoutPanel22.TabIndex = 0;
             // 
-            // label11
+            // panel23
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(3, 7);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(66, 20);
-            this.label11.TabIndex = 7;
-            this.label11.Text = "Runway";
+            this.panel23.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel23.Location = new System.Drawing.Point(3, 3);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(99, 48);
+            this.panel23.TabIndex = 0;
             // 
-            // lbl_RunwayToUse
+            // panel25
             // 
-            this.lbl_RunwayToUse.AutoSize = true;
-            this.lbl_RunwayToUse.Location = new System.Drawing.Point(31, 200);
-            this.lbl_RunwayToUse.Name = "lbl_RunwayToUse";
-            this.lbl_RunwayToUse.Size = new System.Drawing.Size(60, 20);
-            this.lbl_RunwayToUse.TabIndex = 16;
-            this.lbl_RunwayToUse.Text = "label12";
+            this.panel25.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel25.Location = new System.Drawing.Point(113, 3);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(99, 48);
+            this.panel25.TabIndex = 1;
             // 
-            // lbl_runway_heading1
+            // panel146
             // 
-            this.lbl_runway_heading1.AutoSize = true;
-            this.lbl_runway_heading1.Location = new System.Drawing.Point(31, 268);
-            this.lbl_runway_heading1.Name = "lbl_runway_heading1";
-            this.lbl_runway_heading1.Size = new System.Drawing.Size(60, 20);
-            this.lbl_runway_heading1.TabIndex = 10;
-            this.lbl_runway_heading1.Text = "label12";
+            this.panel146.Controls.Add(this.btn_calc_wind);
+            this.panel146.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel146.Location = new System.Drawing.Point(223, 3);
+            this.panel146.Name = "panel146";
+            this.panel146.Size = new System.Drawing.Size(100, 48);
+            this.panel146.TabIndex = 2;
             // 
-            // lbl_crosswind_1
+            // btn_calc_wind
             // 
-            this.lbl_crosswind_1.AutoSize = true;
-            this.lbl_crosswind_1.Location = new System.Drawing.Point(31, 302);
-            this.lbl_crosswind_1.Name = "lbl_crosswind_1";
-            this.lbl_crosswind_1.Size = new System.Drawing.Size(60, 20);
-            this.lbl_crosswind_1.TabIndex = 8;
-            this.lbl_crosswind_1.Text = "label12";
+            this.btn_calc_wind.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_calc_wind.Location = new System.Drawing.Point(0, 0);
+            this.btn_calc_wind.Name = "btn_calc_wind";
+            this.btn_calc_wind.Size = new System.Drawing.Size(100, 48);
+            this.btn_calc_wind.TabIndex = 14;
+            this.btn_calc_wind.Text = "Calculate";
+            this.btn_calc_wind.UseVisualStyleBackColor = true;
+            this.btn_calc_wind.Click += new System.EventHandler(this.btn_calc_wind_Click);
             // 
-            // lbl_headwind_1
+            // rchtxtbx_crosswind_output
             // 
-            this.lbl_headwind_1.AutoSize = true;
-            this.lbl_headwind_1.Location = new System.Drawing.Point(31, 332);
-            this.lbl_headwind_1.Name = "lbl_headwind_1";
-            this.lbl_headwind_1.Size = new System.Drawing.Size(60, 20);
-            this.lbl_headwind_1.TabIndex = 9;
-            this.lbl_headwind_1.Text = "label12";
-            // 
-            // lbl_runway_heading2
-            // 
-            this.lbl_runway_heading2.AutoSize = true;
-            this.lbl_runway_heading2.Location = new System.Drawing.Point(31, 409);
-            this.lbl_runway_heading2.Name = "lbl_runway_heading2";
-            this.lbl_runway_heading2.Size = new System.Drawing.Size(60, 20);
-            this.lbl_runway_heading2.TabIndex = 13;
-            this.lbl_runway_heading2.Text = "label12";
-            // 
-            // lbl_crosswind_2
-            // 
-            this.lbl_crosswind_2.AutoSize = true;
-            this.lbl_crosswind_2.Location = new System.Drawing.Point(31, 439);
-            this.lbl_crosswind_2.Name = "lbl_crosswind_2";
-            this.lbl_crosswind_2.Size = new System.Drawing.Size(60, 20);
-            this.lbl_crosswind_2.TabIndex = 11;
-            this.lbl_crosswind_2.Text = "label12";
-            // 
-            // lbl_headwind_2
-            // 
-            this.lbl_headwind_2.AutoSize = true;
-            this.lbl_headwind_2.Location = new System.Drawing.Point(31, 474);
-            this.lbl_headwind_2.Name = "lbl_headwind_2";
-            this.lbl_headwind_2.Size = new System.Drawing.Size(60, 20);
-            this.lbl_headwind_2.TabIndex = 12;
-            this.lbl_headwind_2.Text = "label12";
+            this.rchtxtbx_crosswind_output.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rchtxtbx_crosswind_output.Location = new System.Drawing.Point(3, 208);
+            this.rchtxtbx_crosswind_output.Name = "rchtxtbx_crosswind_output";
+            this.rchtxtbx_crosswind_output.Size = new System.Drawing.Size(332, 469);
+            this.rchtxtbx_crosswind_output.TabIndex = 1;
+            this.rchtxtbx_crosswind_output.Text = "";
             // 
             // tab_weight_balance
             // 
@@ -4428,216 +4516,6 @@ namespace myFlightInfo
             this.panel89.Size = new System.Drawing.Size(315, 43);
             this.panel89.TabIndex = 60;
             // 
-            // panel153
-            // 
-            this.panel153.Controls.Add(this.lbl_headwind_2);
-            this.panel153.Controls.Add(this.lbl_crosswind_2);
-            this.panel153.Controls.Add(this.lbl_runway_heading2);
-            this.panel153.Controls.Add(this.lbl_headwind_1);
-            this.panel153.Controls.Add(this.lbl_crosswind_1);
-            this.panel153.Controls.Add(this.lbl_runway_heading1);
-            this.panel153.Controls.Add(this.lbl_RunwayToUse);
-            this.panel153.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel153.Location = new System.Drawing.Point(353, 46);
-            this.panel153.Name = "panel153";
-            this.panel153.Size = new System.Drawing.Size(334, 594);
-            this.panel153.TabIndex = 1;
-            // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.ColumnCount = 2;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel19, 1, 0);
-            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel20, 0, 0);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(689, 686);
-            this.tableLayoutPanel5.TabIndex = 1;
-            // 
-            // tableLayoutPanel19
-            // 
-            this.tableLayoutPanel19.ColumnCount = 3;
-            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 300F));
-            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel19.Controls.Add(this.picbx_crosswind, 1, 1);
-            this.tableLayoutPanel19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel19.Location = new System.Drawing.Point(347, 3);
-            this.tableLayoutPanel19.Name = "tableLayoutPanel19";
-            this.tableLayoutPanel19.RowCount = 3;
-            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 600F));
-            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel19.Size = new System.Drawing.Size(339, 680);
-            this.tableLayoutPanel19.TabIndex = 0;
-            // 
-            // tableLayoutPanel20
-            // 
-            this.tableLayoutPanel20.ColumnCount = 1;
-            this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel20.Controls.Add(this.tableLayoutPanel21, 0, 0);
-            this.tableLayoutPanel20.Controls.Add(this.rchtxtbx_crosswind_output, 0, 1);
-            this.tableLayoutPanel20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel20.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel20.Name = "tableLayoutPanel20";
-            this.tableLayoutPanel20.RowCount = 2;
-            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 205F));
-            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel20.Size = new System.Drawing.Size(338, 680);
-            this.tableLayoutPanel20.TabIndex = 1;
-            // 
-            // tableLayoutPanel21
-            // 
-            this.tableLayoutPanel21.ColumnCount = 2;
-            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 145F));
-            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel21.Controls.Add(this.panel7, 0, 1);
-            this.tableLayoutPanel21.Controls.Add(this.panel8, 0, 3);
-            this.tableLayoutPanel21.Controls.Add(this.panel11, 0, 5);
-            this.tableLayoutPanel21.Controls.Add(this.panel13, 1, 1);
-            this.tableLayoutPanel21.Controls.Add(this.panel14, 1, 3);
-            this.tableLayoutPanel21.Controls.Add(this.panel20, 1, 5);
-            this.tableLayoutPanel21.Controls.Add(this.panel12, 0, 7);
-            this.tableLayoutPanel21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel21.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel21.Name = "tableLayoutPanel21";
-            this.tableLayoutPanel21.RowCount = 9;
-            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
-            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
-            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
-            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
-            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
-            this.tableLayoutPanel21.Size = new System.Drawing.Size(332, 199);
-            this.tableLayoutPanel21.TabIndex = 0;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.label7);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(3, 8);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(139, 34);
-            this.panel7.TabIndex = 0;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.label8);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(3, 53);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(139, 34);
-            this.panel8.TabIndex = 1;
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.label11);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(3, 98);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(139, 34);
-            this.panel11.TabIndex = 2;
-            // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.txtbx_magnitude);
-            this.panel13.Controls.Add(this.label9);
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel13.Location = new System.Drawing.Point(148, 8);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(181, 34);
-            this.panel13.TabIndex = 4;
-            // 
-            // panel14
-            // 
-            this.panel14.Controls.Add(this.txtbx_direction);
-            this.panel14.Controls.Add(this.label10);
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel14.Location = new System.Drawing.Point(148, 53);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(181, 34);
-            this.panel14.TabIndex = 5;
-            // 
-            // panel20
-            // 
-            this.panel20.Controls.Add(this.txtbx_runway_heading);
-            this.panel20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel20.Location = new System.Drawing.Point(148, 98);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(181, 34);
-            this.panel20.TabIndex = 6;
-            // 
-            // panel12
-            // 
-            this.tableLayoutPanel21.SetColumnSpan(this.panel12, 2);
-            this.panel12.Controls.Add(this.tableLayoutPanel22);
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(3, 143);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(326, 54);
-            this.panel12.TabIndex = 7;
-            // 
-            // tableLayoutPanel22
-            // 
-            this.tableLayoutPanel22.ColumnCount = 5;
-            this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
-            this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
-            this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel22.Controls.Add(this.panel23, 0, 0);
-            this.tableLayoutPanel22.Controls.Add(this.panel25, 2, 0);
-            this.tableLayoutPanel22.Controls.Add(this.panel146, 4, 0);
-            this.tableLayoutPanel22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel22.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel22.Name = "tableLayoutPanel22";
-            this.tableLayoutPanel22.RowCount = 1;
-            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel22.Size = new System.Drawing.Size(326, 54);
-            this.tableLayoutPanel22.TabIndex = 0;
-            // 
-            // panel23
-            // 
-            this.panel23.Controls.Add(this.btn_crosswind_reset);
-            this.panel23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel23.Location = new System.Drawing.Point(3, 3);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(99, 48);
-            this.panel23.TabIndex = 0;
-            // 
-            // panel25
-            // 
-            this.panel25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel25.Location = new System.Drawing.Point(113, 3);
-            this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(99, 48);
-            this.panel25.TabIndex = 1;
-            // 
-            // panel146
-            // 
-            this.panel146.Controls.Add(this.btn_calc_wind);
-            this.panel146.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel146.Location = new System.Drawing.Point(223, 3);
-            this.panel146.Name = "panel146";
-            this.panel146.Size = new System.Drawing.Size(100, 48);
-            this.panel146.TabIndex = 2;
-            // 
-            // rchtxtbx_crosswind_output
-            // 
-            this.rchtxtbx_crosswind_output.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rchtxtbx_crosswind_output.Location = new System.Drawing.Point(3, 208);
-            this.rchtxtbx_crosswind_output.Name = "rchtxtbx_crosswind_output";
-            this.rchtxtbx_crosswind_output.Size = new System.Drawing.Size(332, 469);
-            this.rchtxtbx_crosswind_output.TabIndex = 1;
-            this.rchtxtbx_crosswind_output.Text = "";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -4755,8 +4633,26 @@ namespace myFlightInfo
             this.panel24.PerformLayout();
             this.tab_crosswind.ResumeLayout(false);
             this.tableLayoutPanel17.ResumeLayout(false);
-            this.tableLayoutPanel18.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel19.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picbx_crosswind)).EndInit();
+            this.tableLayoutPanel20.ResumeLayout(false);
+            this.tableLayoutPanel21.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
+            this.panel20.ResumeLayout(false);
+            this.panel20.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.tableLayoutPanel22.ResumeLayout(false);
+            this.panel146.ResumeLayout(false);
             this.tab_weight_balance.ResumeLayout(false);
             this.tableLayoutPanel10.ResumeLayout(false);
             this.panel90.ResumeLayout(false);
@@ -4948,28 +4844,6 @@ namespace myFlightInfo
             this.panel85.PerformLayout();
             this.panel86.ResumeLayout(false);
             this.panel86.PerformLayout();
-            this.panel153.ResumeLayout(false);
-            this.panel153.PerformLayout();
-            this.tableLayoutPanel5.ResumeLayout(false);
-            this.tableLayoutPanel19.ResumeLayout(false);
-            this.tableLayoutPanel20.ResumeLayout(false);
-            this.tableLayoutPanel21.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
-            this.panel14.ResumeLayout(false);
-            this.panel14.PerformLayout();
-            this.panel20.ResumeLayout(false);
-            this.panel20.PerformLayout();
-            this.panel12.ResumeLayout(false);
-            this.tableLayoutPanel22.ResumeLayout(false);
-            this.panel23.ResumeLayout(false);
-            this.panel146.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -5031,12 +4905,6 @@ namespace myFlightInfo
         private System.Windows.Forms.Panel panel36;
         private System.Windows.Forms.Button btn_navigate_to;
         private System.Windows.Forms.Button btn_calc_wind;
-        private System.Windows.Forms.Label lbl_runway_heading2;
-        private System.Windows.Forms.Label lbl_headwind_2;
-        private System.Windows.Forms.Label lbl_crosswind_2;
-        private System.Windows.Forms.Label lbl_runway_heading1;
-        private System.Windows.Forms.Label lbl_headwind_1;
-        private System.Windows.Forms.Label lbl_crosswind_1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtbx_runway_heading;
         private System.Windows.Forms.Label label10;
@@ -5291,11 +5159,8 @@ namespace myFlightInfo
         private System.Windows.Forms.Panel panel108;
         private System.Windows.Forms.Button btn_reset_compliance_xml;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
-        private System.Windows.Forms.Label lbl_RunwayToUse;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel17;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel18;
         private System.Windows.Forms.PictureBox picbx_crosswind;
-        private System.Windows.Forms.Button btn_crosswind_reset;
         private System.Windows.Forms.TabPage tab_netweather;
         private Microsoft.Web.WebView2.WinForms.WebView2 webView_weather_netweather;
         private System.Windows.Forms.ListBox lstbx_navigation_to;
@@ -5330,7 +5195,6 @@ namespace myFlightInfo
         private System.Windows.Forms.Label lbl_to_altitude;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Panel panel153;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel19;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel20;

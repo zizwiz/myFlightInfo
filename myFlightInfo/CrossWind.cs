@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Drawing.Printing;
 using System.Windows.Forms;
 using CenteredMessagebox;
 using myFlightInfo.crosswind;
@@ -22,6 +23,7 @@ namespace myFlightInfo
 
             //if data OK then we reset Graphics just in case already set
             ResetCrosswindGraphics();
+            rchtxtbx_crosswind_output.Text = "";
 
             //Get cross wind figures. Returns results which is a mixed array of items.
             /*
@@ -45,7 +47,7 @@ namespace myFlightInfo
 
             //We will not write and draw figures to screen
             bool StarboardFlag = false;
-           // bool RunwayFlag = true;
+            // bool RunwayFlag = true;
 
             string RunwayToUse = "";
 
@@ -67,68 +69,93 @@ namespace myFlightInfo
             float HeadwindMultiplier;
             float CrosswindMultiplier;
 
+            Color runway_heading1 = Color.Transparent;
+            Color crosswind_1 = Color.Transparent;
+            Color headwind_1 = Color.Transparent;
+
+            Color runway_heading2 = Color.Transparent;
+            Color crosswind_2 = Color.Transparent;
+            Color headwind_2 = Color.Transparent;
+
 
             //Runway 1 data - runway Chosen by user
             // Set colours we will write labels with
             if (crossWind1 > MaxCrossWindAllowed) //Cross wind exceeds max allowed for aircraft
             {
-                lbl_runway_heading1.ForeColor = Color.Red;
-                lbl_crosswind_1.ForeColor = Color.Red;
-                lbl_headwind_1.ForeColor = Color.Red;
+                runway_heading1 = Color.Red;
+                crosswind_1 = Color.Red;
+                headwind_1 = Color.Red;
             }
-            else if ((crossWind1 < 0)&& (crossWind1*-1 > MaxCrossWindAllowed)) //Cross wind exceeds max allowed for aircraft
+            else if ((crossWind1 < 0) && (crossWind1 * -1 > MaxCrossWindAllowed)) //Cross wind exceeds max allowed for aircraft
             {
-                lbl_runway_heading1.ForeColor = Color.Red;
-                lbl_crosswind_1.ForeColor = Color.Red;
-                lbl_headwind_1.ForeColor = Color.Red;
+                runway_heading1 = Color.Red;
+                crosswind_1 = Color.Red;
+                headwind_1 = Color.Red;
             }
             else if (headwind1 < 0) //a minus headwind means tailwind. We take off into headwind only. crosswind within limits 
             {
-                lbl_runway_heading1.ForeColor = Color.Red;
-                lbl_crosswind_1.ForeColor = Color.Red;
-                lbl_headwind_1.ForeColor = Color.Red;
+                runway_heading1 = Color.Red;
+                crosswind_1 = Color.Red;
+                headwind_1 = Color.Red;
             }
             else //headwind and crosswind within limits so good to takeoff
             {
-                lbl_runway_heading1.ForeColor = Color.Green;
-                lbl_crosswind_1.ForeColor = Color.Green;
-                lbl_headwind_1.ForeColor = Color.Green;
+                runway_heading1 = Color.Green;
+                crosswind_1 = Color.Green;
+                headwind_1 = Color.Green;
             }
 
             //write text to UI
-            lbl_runway_heading1.Text = "Runway " + RunwayHeading1;
+            rchtxtbx_crosswind_output.SelectionColor = runway_heading1;
+            rchtxtbx_crosswind_output.SelectionFont = new Font("Ariel", 12, FontStyle.Underline);
+            rchtxtbx_crosswind_output.AppendText("Runway " + RunwayHeading1);
+
+
 
             if (crossWind1 > 0) //Starboard crosswind on RunwayHeading1
             {
-                lbl_crosswind_1.Text = "Crosswind = " + crossWind1 + "kts from Starboard side";
+                rchtxtbx_crosswind_output.SelectionColor = crosswind_1;
+                rchtxtbx_crosswind_output.SelectionFont = new Font("Ariel", 12);
+                rchtxtbx_crosswind_output.AppendText("\rCrosswind = " + crossWind1 + "kts from Starboard side");
                 StarboardFlag = true;
             }
             else if (crossWind1 < 0) //Port side crosswind on RunwayHeading1
             {
-                lbl_crosswind_1.Text = "Crosswind = " + (crossWind1 * -1) + "kts from Port side";
+                rchtxtbx_crosswind_output.SelectionColor = crosswind_1;
+                rchtxtbx_crosswind_output.SelectionFont = new Font("Ariel", 12);
+                rchtxtbx_crosswind_output.AppendText("\rCrosswind = " + (crossWind1 * -1) + "kts from Port side");
             }
             else //No crosswind across RunwayHeading1
             {
-                lbl_crosswind_1.Text = "No crosswind detected";
+                rchtxtbx_crosswind_output.SelectionColor = crosswind_1;
+                rchtxtbx_crosswind_output.SelectionFont = new Font("Ariel", 12);
+                rchtxtbx_crosswind_output.AppendText("\rNo crosswind detected");
             }
 
 
             if (headwind1 > 0) //Headwind on RunwayHeading1
             {
-                lbl_headwind_1.Text = "Headwind = " + headwind1 + "kts";
+                rchtxtbx_crosswind_output.SelectionColor = headwind_1;
+                rchtxtbx_crosswind_output.SelectionFont = new Font("Ariel", 12);
+                rchtxtbx_crosswind_output.AppendText("\rHeadwind = " + headwind1 + "kts");
+
                 RunwayToUse = RunwayHeading1.ToString(); //This is headwind so use RunwayHeading1
                 crosswind3 = (crossWind1 > 0) ? crossWind1 : (crossWind1 * -1); //Make crosswind1 positive figure
                 headwind3 = headwind1; //Use headwind1 as the headwind
             }
             else if (headwind1 < 0) //Tailwind on RunwayHeading1
             {
-
-                lbl_headwind_1.Text = "Tailwind = " + (headwind1 * -1) + "kts";
+                rchtxtbx_crosswind_output.SelectionColor = headwind_1;
+                rchtxtbx_crosswind_output.SelectionFont = new Font("Ariel", 12);
+                rchtxtbx_crosswind_output.AppendText("\rTailwind = " + (headwind1 * -1) + "kts");
             }
             else //No Headwind or Tailwind on RunwayHeading1
             {
+                rchtxtbx_crosswind_output.SelectionColor = headwind_1;
+                rchtxtbx_crosswind_output.SelectionFont = new Font("Ariel", 12);
+                rchtxtbx_crosswind_output.AppendText("\rNo wind detected");
+
                 RunwayToUse = RunwayHeading1.ToString();
-                lbl_headwind_1.Text = "No wind detected";
             }
 
 
@@ -137,94 +164,81 @@ namespace myFlightInfo
 
             if (crossWind2 > MaxCrossWindAllowed) //Cross wind exceeds max allowed for aircraft
             {
-                lbl_runway_heading2.ForeColor = Color.Red;
-                lbl_crosswind_2.ForeColor = Color.Red;
-                lbl_headwind_2.ForeColor = Color.Red;
+                runway_heading2 = Color.Red;
+                crosswind_2 = Color.Red;
+                headwind_2 = Color.Red;
             }
             else if ((crossWind2 < 0) && (crossWind2 * -1 > MaxCrossWindAllowed)) //Cross wind exceeds max allowed for aircraft
             {
-                lbl_runway_heading2.ForeColor = Color.Red;
-                lbl_crosswind_2.ForeColor = Color.Red;
-                lbl_headwind_2.ForeColor = Color.Red;
+                runway_heading2 = Color.Red;
+                crosswind_2 = Color.Red;
+                headwind_2 = Color.Red;
             }
             else if (headwind2 < 0) //a minus headwind means tailwind. We take off into headwind only. crosswind within limits 
             {
-                lbl_runway_heading2.ForeColor = Color.Red;
-                lbl_crosswind_2.ForeColor = Color.Red;
-                lbl_headwind_2.ForeColor = Color.Red;
+                runway_heading2 = Color.Red;
+                crosswind_2 = Color.Red;
+                headwind_2 = Color.Red;
             }
             else //headwind and crosswind within limits so good to takeoff
             {
-                lbl_runway_heading2.ForeColor = Color.Green;
-                lbl_crosswind_2.ForeColor = Color.Green;
-                lbl_headwind_2.ForeColor = Color.Green;
+                runway_heading2 = Color.Green;
+                crosswind_2 = Color.Green;
+                headwind_2 = Color.Green;
             }
 
             //write text to UI
-            lbl_runway_heading2.Text = "Runway " + RunwayHeading2;
-            rchtxtbx_crosswind_output.AppendText("Runway " + RunwayHeading2 + "\r\r");
+            rchtxtbx_crosswind_output.SelectionColor = runway_heading2;
+            rchtxtbx_crosswind_output.SelectionFont = new Font("Ariel", 12, FontStyle.Underline);
+            rchtxtbx_crosswind_output.AppendText("\r\rRunway " + RunwayHeading2);
 
             if (crossWind2 > 0) //Starboard crosswind on reciprocal runway
             {
-                lbl_crosswind_2.Text = "Crosswind = " + crossWind2 + "kts from Starboard side";
+                rchtxtbx_crosswind_output.SelectionColor = crosswind_2;
+                rchtxtbx_crosswind_output.SelectionFont = new Font("Ariel", 12);
+                rchtxtbx_crosswind_output.AppendText("\rCrosswind = " + crossWind2 + "kts from Starboard side");
                 StarboardFlag = true;
             }
             else if (crossWind2 < 0) //Port side crosswind on reciprocal runway
             {
-                lbl_crosswind_2.Text = "Crosswind = " + (crossWind2 * -1) + "kts from Port side";
+                rchtxtbx_crosswind_output.SelectionColor = crosswind_2;
+                rchtxtbx_crosswind_output.SelectionFont = new Font("Ariel", 12);
+                rchtxtbx_crosswind_output.AppendText("\rCrosswind = " + (crossWind2 * -1) + "kts from Port side");
                 StarboardFlag = false;
             }
-            else //No Headwind or Tailwind on reciprocal runway
+            else //No Crosswind on reciprocal runway
             {
-                RunwayToUse += " or " + RunwayHeading2.ToString();
-                lbl_crosswind_2.Text = "No crosswind detected";
+                rchtxtbx_crosswind_output.SelectionColor = crosswind_2;
+                rchtxtbx_crosswind_output.SelectionFont = new Font("Ariel", 12);
+                rchtxtbx_crosswind_output.AppendText("\rNo crosswind detected");
+
+             //   RunwayToUse += " or " + RunwayHeading2.ToString();
             }
 
             if (headwind2 > 0) //Headwind on reciprocal runway
             {
-                lbl_headwind_2.Text = "Headwind = " + headwind2 + "kts";
+                rchtxtbx_crosswind_output.SelectionColor = headwind_2;
+                rchtxtbx_crosswind_output.SelectionFont = new Font("Ariel", 12);
+                rchtxtbx_crosswind_output.AppendText("\rHeadwind = " + headwind2 + "kts");
+
                 RunwayToUse = RunwayHeading2.ToString(); //This is headwind so use RunwayHeading2
                 crosswind3 = (crossWind2 > 0) ? crossWind2 : (crossWind2 * -1); //Make crosswind2 positive figure
                 headwind3 = headwind2; //Use headwind2 as the headwind
             }
             else if (headwind2 < 0) //Tailwind on reciprocal runway
             {
-                lbl_headwind_2.Text = "Tailwind = " + (headwind2 * -1) + "kts";
+                rchtxtbx_crosswind_output.SelectionColor = headwind_2;
+                rchtxtbx_crosswind_output.SelectionFont = new Font("Ariel", 12);
+                rchtxtbx_crosswind_output.AppendText("\rTailwind = " + (headwind2 * -1) + "kts");
             }
             else
             {
-                lbl_headwind_2.Text = "No wind detected"; //No Headwind or Tailwind on reciprocal runway
+                rchtxtbx_crosswind_output.SelectionColor = headwind_2;
+                rchtxtbx_crosswind_output.SelectionFont = new Font("Ariel", 12);
+                rchtxtbx_crosswind_output.AppendText("\rNo wind detected");//No Headwind or Tailwind on reciprocal runway
             }
 
-            // Check if crosswind within limits if not advise via UI that runway is closed so do not take-off
-            if (crosswind3 > MaxCrossWindAllowed)
-            {
-                lbl_RunwayToUse.ForeColor = Color.Red;
-
-                lbl_RunwayToUse.Text =
-                    "Not safe to take off.\rCrosswind component is above maximumum allowed for safe takeoff.";
-                //RunwayFlag = false;
-            }
-            else // Crosswind OK. We can write runway to use to UI. 
-            {
-                lbl_RunwayToUse.ForeColor = Color.Green;
-
-                //if (RunwayToUse == "")
-                //{
-                //    lbl_RunwayToUse.Text = "Runway to use = " + (double.Parse(txtbx_runway_heading.Text));
-                //}
-                //else
-                //{
-                    lbl_RunwayToUse.Text = "Runway to use = " + RunwayToUse;
-                //}
-
-                 rchtxtbx_crosswind_output.SelectionColor = Color.Green;
-                 rchtxtbx_crosswind_output.SelectionFont = new Font("Ariel", 12, FontStyle.Underline);
-                // rchtxtbx_crosswind_output.SelectionAlignment = HorizontalAlignment.Center;
-
-                rchtxtbx_crosswind_output.AppendText("Runway to use = " + RunwayToUse + "\r");
-            }
-
+           
             //////////////////////////////////////////////////////////////////////////
             // Now we know the runway, headwind and crosswind we draw the graphics
             //////////////////////////////////////////////////////////////////////////
@@ -276,13 +290,15 @@ namespace myFlightInfo
 
             if (crosswind3 > MaxCrossWindAllowed) // crosswind exceeds limits
             {
+                //Write to richtextbox
+                rchtxtbx_crosswind_output.SelectionColor = Color.Red;
+                rchtxtbx_crosswind_output.SelectionFont = new Font("Ariel", 12);
+                rchtxtbx_crosswind_output.AppendText("\rNot safe to take off.\rCrosswind component is above maximum allowed for safe takeoff.");
+
                 RunwayGraphic.DrawString("X", new Font("Arial", 50), new SolidBrush(Color.White), new Point(60, 120));
             }
             else // Crosswind OK. We can write runway to use to UI. 
             {
-
-                
-
                 string RunwayHeading1x = RunwayHeading1.ToString();
                 string RunwayHeading2x = RunwayHeading2.ToString();
 
@@ -293,12 +309,17 @@ namespace myFlightInfo
                 if (crosswind3 == 0 && headwind3 == 0) // no wind use any runway.
                 {
                     if (crossWind1 > crossWind2) crosswind3 = crossWind1;
-                    if (crossWind2 > crossWind1) crosswind3 = crossWind2; 
+                    if (crossWind2 > crossWind1) crosswind3 = crossWind2;
 
                     // Paint Runway marking
                     RunwayGraphic.DrawString(RunwayHeading1x + "/" + RunwayHeading2x, new Font("Arial", 50),
                         new SolidBrush(Color.White),
                         new Point(0, 120));
+
+                    //Write to richtextbox
+                    rchtxtbx_crosswind_output.SelectionColor = Color.Green;
+                    rchtxtbx_crosswind_output.SelectionFont = new Font("Ariel", 12, FontStyle.Bold);
+                    rchtxtbx_crosswind_output.AppendText("\r\rRunway to use = " + RunwayHeading1x + "/" + RunwayHeading2x);
 
                     // Draw both wind arrows. only write crosswind number once
                     PaintDataOnToRunwayGraphics(1, 180, 20, 130, 20,
@@ -321,6 +342,11 @@ namespace myFlightInfo
                 {
                     // Paint Runway marking
                     RunwayGraphic.DrawString(RunwayToUse, new Font("Arial", 50), new SolidBrush(Color.White), new Point(50, 120));
+
+                    //Write to richtextbox
+                    rchtxtbx_crosswind_output.SelectionColor = Color.Green;
+                    rchtxtbx_crosswind_output.SelectionFont = new Font("Ariel", 12, FontStyle.Bold);
+                    rchtxtbx_crosswind_output.AppendText("\r\rRunway to use = " + RunwayToUse);
 
                     // Draw both wind arrows. only write crosswind number once
                     //crosswind multiplier = 1 headwind multiplier = 2
@@ -345,7 +371,11 @@ namespace myFlightInfo
                     // Paint Runway marking
                     RunwayGraphic.DrawString(RunwayToUse, new Font("Arial", 50), new SolidBrush(Color.White), new Point(50, 120));
 
-                   
+                    //Write to richtextbox
+                    rchtxtbx_crosswind_output.SelectionColor = Color.Green;
+                    rchtxtbx_crosswind_output.SelectionFont = new Font("Ariel", 12, FontStyle.Bold);
+                    rchtxtbx_crosswind_output.AppendText("\r\rRunway to use = " + RunwayToUse);
+
                     //Draw the crosswind and headwind arrows
                     if (StarboardFlag) //starboard side
                     {
@@ -402,19 +432,11 @@ namespace myFlightInfo
 
         }
 
-        private void btn_crosswind_reset_Click(object sender, EventArgs e)
+        private void ResetCrossWind()
         {
             txtbx_magnitude.Text = "";
             txtbx_direction.Text = "";
             txtbx_runway_heading.Text = "";
-            lbl_runway_heading1.Text = "";
-            lbl_crosswind_1.Text = "";
-            lbl_headwind_1.Text = "";
-            lbl_runway_heading2.Text = "";
-            lbl_crosswind_2.Text = "";
-            lbl_headwind_2.Text = "";
-            lbl_RunwayToUse.Text = "";
-
             rchtxtbx_crosswind_output.Text = "";
             ResetCrosswindGraphics();
         }
@@ -424,7 +446,7 @@ namespace myFlightInfo
             //reset graphics
             picbx_crosswind.Image = null;
             picbx_crosswind.Invalidate();
-            picbx_crosswind.Image = Properties.Resources.crosswind_runway;
+            picbx_crosswind.Image = Resources.crosswind_runway;
         }
 
 
