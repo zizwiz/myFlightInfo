@@ -127,6 +127,7 @@ namespace myFlightInfo
             }
             else //No Headwind or Tailwind on RunwayHeading1
             {
+                RunwayToUse = RunwayHeading1.ToString();
                 lbl_headwind_1.Text = "No wind detected";
             }
 
@@ -161,6 +162,7 @@ namespace myFlightInfo
 
             //write text to UI
             lbl_runway_heading2.Text = "Runway " + RunwayHeading2;
+            rchtxtbx_crosswind_output.AppendText("Runway " + RunwayHeading2 + "\r\r");
 
             if (crossWind2 > 0) //Starboard crosswind on reciprocal runway
             {
@@ -174,6 +176,7 @@ namespace myFlightInfo
             }
             else //No Headwind or Tailwind on reciprocal runway
             {
+                RunwayToUse += " or " + RunwayHeading2.ToString();
                 lbl_crosswind_2.Text = "No crosswind detected";
             }
 
@@ -206,14 +209,20 @@ namespace myFlightInfo
             {
                 lbl_RunwayToUse.ForeColor = Color.Green;
 
-                if (RunwayToUse == "")
-                {
-                    lbl_RunwayToUse.Text = "Runway to use = " + (double.Parse(txtbx_runway_heading.Text));
-                }
-                else
-                {
+                //if (RunwayToUse == "")
+                //{
+                //    lbl_RunwayToUse.Text = "Runway to use = " + (double.Parse(txtbx_runway_heading.Text));
+                //}
+                //else
+                //{
                     lbl_RunwayToUse.Text = "Runway to use = " + RunwayToUse;
-                }
+                //}
+
+                 rchtxtbx_crosswind_output.SelectionColor = Color.Green;
+                 rchtxtbx_crosswind_output.SelectionFont = new Font("Ariel", 12, FontStyle.Underline);
+                // rchtxtbx_crosswind_output.SelectionAlignment = HorizontalAlignment.Center;
+
+                rchtxtbx_crosswind_output.AppendText("Runway to use = " + RunwayToUse + "\r");
             }
 
             //////////////////////////////////////////////////////////////////////////
@@ -405,6 +414,8 @@ namespace myFlightInfo
             lbl_crosswind_2.Text = "";
             lbl_headwind_2.Text = "";
             lbl_RunwayToUse.Text = "";
+
+            rchtxtbx_crosswind_output.Text = "";
             ResetCrosswindGraphics();
         }
 
