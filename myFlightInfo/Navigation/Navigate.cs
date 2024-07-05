@@ -193,7 +193,16 @@ namespace myFlightInfo.Navigation
                 var results = GreatCircle.InitialBearing(originLongitude, originLatitude,
                     destinationLongitude, destinationLatitude);
 
-                myListBox.Items.Add("Flying from " + fromAirfieldName + " to " + toAirfieldName);
+                if (myListBox.Name == "lstbx_navigation_from")
+                {
+                    myListBox.Items.Add("Flying from " + fromAirfieldName + " to " + toAirfieldName);
+                }
+                else
+                {
+                    myListBox.Items.Add("Flying from " + toAirfieldName + " to " + fromAirfieldName);
+                }
+
+
                 myListBox.Items.Add("¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯");
                 
                 if (myListBox.Name == "lstbx_navigation_from")

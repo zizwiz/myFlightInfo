@@ -132,7 +132,6 @@ namespace myFlightInfo
             this.panel15 = new System.Windows.Forms.Panel();
             this.lbl_d_airport_name = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
             this.lbl_to_altitude = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
@@ -391,6 +390,7 @@ namespace myFlightInfo
             this.panel87 = new System.Windows.Forms.Panel();
             this.panel88 = new System.Windows.Forms.Panel();
             this.panel89 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.panel31.SuspendLayout();
@@ -1803,17 +1803,6 @@ namespace myFlightInfo
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(79, 24);
             this.panel16.TabIndex = 2;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label12.Location = new System.Drawing.Point(0, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(76, 20);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Altitude =";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // panel17
             // 
@@ -4517,6 +4506,17 @@ namespace myFlightInfo
             this.panel89.Size = new System.Drawing.Size(315, 43);
             this.panel89.TabIndex = 60;
             // 
+            // label12
+            // 
+            this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label12.Location = new System.Drawing.Point(0, 0);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(79, 24);
+            this.label12.TabIndex = 25;
+            this.label12.Text = "Altitude =";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -4621,7 +4621,6 @@ namespace myFlightInfo
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
             this.panel16.ResumeLayout(false);
-            this.panel16.PerformLayout();
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
             this.panel18.ResumeLayout(false);
@@ -5195,7 +5194,6 @@ namespace myFlightInfo
         private System.Windows.Forms.Label lbl_present_altitude;
         private System.Windows.Forms.Label lbl_to_altitude;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel19;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel20;
@@ -5212,6 +5210,7 @@ namespace myFlightInfo
         private System.Windows.Forms.Panel panel25;
         private System.Windows.Forms.Panel panel146;
         private System.Windows.Forms.RichTextBox rchtxtbx_crosswind_output;
+        private System.Windows.Forms.Label label12;
     }
 }
 
