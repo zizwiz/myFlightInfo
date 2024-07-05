@@ -2239,6 +2239,7 @@ namespace myFlightInfo
             this.rchtxtbx_crosswind_output.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rchtxtbx_crosswind_output.Location = new System.Drawing.Point(3, 208);
             this.rchtxtbx_crosswind_output.Name = "rchtxtbx_crosswind_output";
+            this.rchtxtbx_crosswind_output.ReadOnly = true;
             this.rchtxtbx_crosswind_output.Size = new System.Drawing.Size(332, 469);
             this.rchtxtbx_crosswind_output.TabIndex = 1;
             this.rchtxtbx_crosswind_output.Text = "";
