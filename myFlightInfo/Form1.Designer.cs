@@ -391,6 +391,53 @@ namespace myFlightInfo
             this.panel88 = new System.Windows.Forms.Panel();
             this.panel89 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
+            this.rchtxbx_speed_time_fuel_output = new System.Windows.Forms.RichTextBox();
+            this.tableLayoutPanel24 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel147 = new System.Windows.Forms.Panel();
+            this.label55 = new System.Windows.Forms.Label();
+            this.panel148 = new System.Windows.Forms.Panel();
+            this.label56 = new System.Windows.Forms.Label();
+            this.panel149 = new System.Windows.Forms.Panel();
+            this.label57 = new System.Windows.Forms.Label();
+            this.panel153 = new System.Windows.Forms.Panel();
+            this.label58 = new System.Windows.Forms.Label();
+            this.panel154 = new System.Windows.Forms.Panel();
+            this.label59 = new System.Windows.Forms.Label();
+            this.panel155 = new System.Windows.Forms.Panel();
+            this.label60 = new System.Windows.Forms.Label();
+            this.panel156 = new System.Windows.Forms.Panel();
+            this.label61 = new System.Windows.Forms.Label();
+            this.panel157 = new System.Windows.Forms.Panel();
+            this.label62 = new System.Windows.Forms.Label();
+            this.panel158 = new System.Windows.Forms.Panel();
+            this.label63 = new System.Windows.Forms.Label();
+            this.txtbx_speed_course = new System.Windows.Forms.TextBox();
+            this.panel159 = new System.Windows.Forms.Panel();
+            this.label64 = new System.Windows.Forms.Label();
+            this.txtbx_speed_true_airspeed = new System.Windows.Forms.TextBox();
+            this.panel160 = new System.Windows.Forms.Panel();
+            this.panel161 = new System.Windows.Forms.Panel();
+            this.panel162 = new System.Windows.Forms.Panel();
+            this.panel163 = new System.Windows.Forms.Panel();
+            this.panel164 = new System.Windows.Forms.Panel();
+            this.panel165 = new System.Windows.Forms.Panel();
+            this.panel166 = new System.Windows.Forms.Panel();
+            this.panel167 = new System.Windows.Forms.Panel();
+            this.label65 = new System.Windows.Forms.Label();
+            this.label66 = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
+            this.txtbx_speed_wind_direction = new System.Windows.Forms.TextBox();
+            this.label68 = new System.Windows.Forms.Label();
+            this.txtbx_speed_wind_speed = new System.Windows.Forms.TextBox();
+            this.label69 = new System.Windows.Forms.Label();
+            this.txtbx_speed_distance = new System.Windows.Forms.TextBox();
+            this.txtbx_speed_fuel_consumption = new System.Windows.Forms.TextBox();
+            this.label70 = new System.Windows.Forms.Label();
+            this.txtbx_min_landing_fuel = new System.Windows.Forms.TextBox();
+            this.label71 = new System.Windows.Forms.Label();
+            this.txtbx_speed_fuel_specific_gravity = new System.Windows.Forms.TextBox();
+            this.label72 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.panel31.SuspendLayout();
@@ -600,6 +647,26 @@ namespace myFlightInfo
             this.tableLayoutPanel16.SuspendLayout();
             this.panel85.SuspendLayout();
             this.panel86.SuspendLayout();
+            this.tableLayoutPanel18.SuspendLayout();
+            this.tableLayoutPanel24.SuspendLayout();
+            this.panel147.SuspendLayout();
+            this.panel148.SuspendLayout();
+            this.panel149.SuspendLayout();
+            this.panel153.SuspendLayout();
+            this.panel154.SuspendLayout();
+            this.panel155.SuspendLayout();
+            this.panel156.SuspendLayout();
+            this.panel157.SuspendLayout();
+            this.panel158.SuspendLayout();
+            this.panel159.SuspendLayout();
+            this.panel160.SuspendLayout();
+            this.panel161.SuspendLayout();
+            this.panel162.SuspendLayout();
+            this.panel163.SuspendLayout();
+            this.panel164.SuspendLayout();
+            this.panel165.SuspendLayout();
+            this.panel166.SuspendLayout();
+            this.panel167.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -1927,7 +1994,7 @@ namespace myFlightInfo
             this.tab_crosswind.Name = "tab_crosswind";
             this.tab_crosswind.Size = new System.Drawing.Size(1391, 692);
             this.tab_crosswind.TabIndex = 2;
-            this.tab_crosswind.Text = "Crosswind";
+            this.tab_crosswind.Text = "Crosswind, Speed, Time, Fuel";
             this.tab_crosswind.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel17
@@ -1935,12 +2002,16 @@ namespace myFlightInfo
             this.tableLayoutPanel17.ColumnCount = 2;
             this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel17.Controls.Add(this.tableLayoutPanel5, 0, 0);
+            this.tableLayoutPanel17.Controls.Add(this.tableLayoutPanel5, 0, 1);
+            this.tableLayoutPanel17.Controls.Add(this.tableLayoutPanel18, 1, 1);
+            this.tableLayoutPanel17.Controls.Add(this.panel166, 0, 0);
+            this.tableLayoutPanel17.Controls.Add(this.panel167, 1, 0);
             this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel17.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel17.Name = "tableLayoutPanel17";
-            this.tableLayoutPanel17.RowCount = 1;
-            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel17.RowCount = 2;
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel17.Size = new System.Drawing.Size(1391, 692);
             this.tableLayoutPanel17.TabIndex = 17;
             // 
@@ -1952,19 +2023,20 @@ namespace myFlightInfo
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel19, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel20, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 43);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(689, 686);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(689, 646);
             this.tableLayoutPanel5.TabIndex = 1;
             // 
             // tableLayoutPanel19
             // 
+            this.tableLayoutPanel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.tableLayoutPanel19.ColumnCount = 3;
-            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 300F));
-            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel19.Controls.Add(this.picbx_crosswind, 1, 1);
             this.tableLayoutPanel19.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel19.Location = new System.Drawing.Point(347, 3);
@@ -1973,14 +2045,14 @@ namespace myFlightInfo
             this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 600F));
             this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel19.Size = new System.Drawing.Size(339, 680);
+            this.tableLayoutPanel19.Size = new System.Drawing.Size(339, 640);
             this.tableLayoutPanel19.TabIndex = 0;
             // 
             // picbx_crosswind
             // 
             this.picbx_crosswind.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picbx_crosswind.Image = global::myFlightInfo.Properties.Resources.crosswind_runway;
-            this.picbx_crosswind.Location = new System.Drawing.Point(23, 43);
+            this.picbx_crosswind.Location = new System.Drawing.Point(22, 23);
             this.picbx_crosswind.Name = "picbx_crosswind";
             this.picbx_crosswind.Size = new System.Drawing.Size(294, 594);
             this.picbx_crosswind.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1989,6 +2061,7 @@ namespace myFlightInfo
             // 
             // tableLayoutPanel20
             // 
+            this.tableLayoutPanel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.tableLayoutPanel20.ColumnCount = 1;
             this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel20.Controls.Add(this.tableLayoutPanel21, 0, 0);
@@ -1999,7 +2072,7 @@ namespace myFlightInfo
             this.tableLayoutPanel20.RowCount = 2;
             this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 205F));
             this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel20.Size = new System.Drawing.Size(338, 680);
+            this.tableLayoutPanel20.Size = new System.Drawing.Size(338, 640);
             this.tableLayoutPanel20.TabIndex = 1;
             // 
             // tableLayoutPanel21
@@ -2042,9 +2115,10 @@ namespace myFlightInfo
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(3, 7);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 20);
+            this.label7.Size = new System.Drawing.Size(112, 25);
             this.label7.TabIndex = 2;
             this.label7.Text = "Windspeed";
             // 
@@ -2060,9 +2134,10 @@ namespace myFlightInfo
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(3, 7);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(72, 20);
+            this.label8.Size = new System.Drawing.Size(88, 25);
             this.label8.TabIndex = 3;
             this.label8.Text = "Direction";
             // 
@@ -2078,9 +2153,10 @@ namespace myFlightInfo
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(3, 7);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(66, 20);
+            this.label11.Size = new System.Drawing.Size(82, 25);
             this.label11.TabIndex = 7;
             this.label11.Text = "Runway";
             // 
@@ -2096,19 +2172,21 @@ namespace myFlightInfo
             // 
             // txtbx_magnitude
             // 
+            this.txtbx_magnitude.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbx_magnitude.Location = new System.Drawing.Point(4, 4);
             this.txtbx_magnitude.MaxLength = 3;
             this.txtbx_magnitude.Name = "txtbx_magnitude";
-            this.txtbx_magnitude.Size = new System.Drawing.Size(135, 26);
+            this.txtbx_magnitude.Size = new System.Drawing.Size(135, 30);
             this.txtbx_magnitude.TabIndex = 0;
             this.txtbx_magnitude.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Crosswind_Keydown);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(145, 7);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(30, 20);
+            this.label9.Size = new System.Drawing.Size(37, 25);
             this.label9.TabIndex = 4;
             this.label9.Text = "kts";
             // 
@@ -2124,19 +2202,21 @@ namespace myFlightInfo
             // 
             // txtbx_direction
             // 
+            this.txtbx_direction.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbx_direction.Location = new System.Drawing.Point(4, 4);
             this.txtbx_direction.MaxLength = 3;
             this.txtbx_direction.Name = "txtbx_direction";
-            this.txtbx_direction.Size = new System.Drawing.Size(135, 26);
+            this.txtbx_direction.Size = new System.Drawing.Size(135, 30);
             this.txtbx_direction.TabIndex = 1;
             this.txtbx_direction.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Crosswind_Keydown);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(145, 7);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(14, 20);
+            this.label10.Size = new System.Drawing.Size(20, 25);
             this.label10.TabIndex = 5;
             this.label10.Text = "°";
             // 
@@ -2151,10 +2231,11 @@ namespace myFlightInfo
             // 
             // txtbx_runway_heading
             // 
+            this.txtbx_runway_heading.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbx_runway_heading.Location = new System.Drawing.Point(4, 4);
             this.txtbx_runway_heading.MaxLength = 2;
             this.txtbx_runway_heading.Name = "txtbx_runway_heading";
-            this.txtbx_runway_heading.Size = new System.Drawing.Size(75, 26);
+            this.txtbx_runway_heading.Size = new System.Drawing.Size(75, 30);
             this.txtbx_runway_heading.TabIndex = 6;
             this.txtbx_runway_heading.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Crosswind_Keydown);
             // 
@@ -2229,7 +2310,7 @@ namespace myFlightInfo
             this.rchtxtbx_crosswind_output.Location = new System.Drawing.Point(3, 208);
             this.rchtxtbx_crosswind_output.Name = "rchtxtbx_crosswind_output";
             this.rchtxtbx_crosswind_output.ReadOnly = true;
-            this.rchtxtbx_crosswind_output.Size = new System.Drawing.Size(332, 469);
+            this.rchtxtbx_crosswind_output.Size = new System.Drawing.Size(332, 429);
             this.rchtxtbx_crosswind_output.TabIndex = 1;
             this.rchtxtbx_crosswind_output.Text = "";
             // 
@@ -4517,6 +4598,515 @@ namespace myFlightInfo
             this.label12.Text = "Altitude =";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // tableLayoutPanel18
+            // 
+            this.tableLayoutPanel18.ColumnCount = 2;
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55F));
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
+            this.tableLayoutPanel18.Controls.Add(this.rchtxbx_speed_time_fuel_output, 1, 0);
+            this.tableLayoutPanel18.Controls.Add(this.tableLayoutPanel24, 0, 0);
+            this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel18.Location = new System.Drawing.Point(698, 43);
+            this.tableLayoutPanel18.Name = "tableLayoutPanel18";
+            this.tableLayoutPanel18.RowCount = 1;
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel18.Size = new System.Drawing.Size(690, 646);
+            this.tableLayoutPanel18.TabIndex = 2;
+            // 
+            // rchtxbx_speed_time_fuel_output
+            // 
+            this.rchtxbx_speed_time_fuel_output.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rchtxbx_speed_time_fuel_output.Location = new System.Drawing.Point(382, 3);
+            this.rchtxbx_speed_time_fuel_output.Name = "rchtxbx_speed_time_fuel_output";
+            this.rchtxbx_speed_time_fuel_output.ReadOnly = true;
+            this.rchtxbx_speed_time_fuel_output.Size = new System.Drawing.Size(305, 640);
+            this.rchtxbx_speed_time_fuel_output.TabIndex = 0;
+            this.rchtxbx_speed_time_fuel_output.Text = "";
+            // 
+            // tableLayoutPanel24
+            // 
+            this.tableLayoutPanel24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.tableLayoutPanel24.ColumnCount = 2;
+            this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 245F));
+            this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel24.Controls.Add(this.panel147, 0, 1);
+            this.tableLayoutPanel24.Controls.Add(this.panel148, 0, 3);
+            this.tableLayoutPanel24.Controls.Add(this.panel149, 0, 5);
+            this.tableLayoutPanel24.Controls.Add(this.panel153, 0, 7);
+            this.tableLayoutPanel24.Controls.Add(this.panel154, 0, 9);
+            this.tableLayoutPanel24.Controls.Add(this.panel155, 0, 11);
+            this.tableLayoutPanel24.Controls.Add(this.panel156, 0, 13);
+            this.tableLayoutPanel24.Controls.Add(this.panel157, 0, 15);
+            this.tableLayoutPanel24.Controls.Add(this.panel158, 1, 1);
+            this.tableLayoutPanel24.Controls.Add(this.panel159, 1, 3);
+            this.tableLayoutPanel24.Controls.Add(this.panel160, 1, 5);
+            this.tableLayoutPanel24.Controls.Add(this.panel161, 1, 7);
+            this.tableLayoutPanel24.Controls.Add(this.panel162, 1, 9);
+            this.tableLayoutPanel24.Controls.Add(this.panel163, 1, 11);
+            this.tableLayoutPanel24.Controls.Add(this.panel164, 1, 13);
+            this.tableLayoutPanel24.Controls.Add(this.panel165, 1, 15);
+            this.tableLayoutPanel24.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel24.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel24.Name = "tableLayoutPanel24";
+            this.tableLayoutPanel24.RowCount = 18;
+            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel24.Size = new System.Drawing.Size(373, 640);
+            this.tableLayoutPanel24.TabIndex = 1;
+            // 
+            // panel147
+            // 
+            this.panel147.Controls.Add(this.label55);
+            this.panel147.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel147.Location = new System.Drawing.Point(3, 8);
+            this.panel147.Name = "panel147";
+            this.panel147.Size = new System.Drawing.Size(239, 34);
+            this.panel147.TabIndex = 0;
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.Location = new System.Drawing.Point(3, 7);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(76, 25);
+            this.label55.TabIndex = 5;
+            this.label55.Text = "Course";
+            // 
+            // panel148
+            // 
+            this.panel148.Controls.Add(this.label56);
+            this.panel148.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel148.Location = new System.Drawing.Point(3, 53);
+            this.panel148.Name = "panel148";
+            this.panel148.Size = new System.Drawing.Size(239, 34);
+            this.panel148.TabIndex = 1;
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label56.Location = new System.Drawing.Point(3, 7);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(136, 25);
+            this.label56.TabIndex = 6;
+            this.label56.Text = "True Airspeed";
+            // 
+            // panel149
+            // 
+            this.panel149.Controls.Add(this.label57);
+            this.panel149.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel149.Location = new System.Drawing.Point(3, 98);
+            this.panel149.Name = "panel149";
+            this.panel149.Size = new System.Drawing.Size(239, 34);
+            this.panel149.TabIndex = 2;
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.Location = new System.Drawing.Point(3, 7);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(139, 25);
+            this.label57.TabIndex = 7;
+            this.label57.Text = "Wind Direction";
+            // 
+            // panel153
+            // 
+            this.panel153.Controls.Add(this.label58);
+            this.panel153.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel153.Location = new System.Drawing.Point(3, 143);
+            this.panel153.Name = "panel153";
+            this.panel153.Size = new System.Drawing.Size(239, 34);
+            this.panel153.TabIndex = 3;
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.Location = new System.Drawing.Point(3, 6);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(121, 25);
+            this.label58.TabIndex = 8;
+            this.label58.Text = "Wind Speed";
+            // 
+            // panel154
+            // 
+            this.panel154.Controls.Add(this.label59);
+            this.panel154.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel154.Location = new System.Drawing.Point(3, 223);
+            this.panel154.Name = "panel154";
+            this.panel154.Size = new System.Drawing.Size(239, 34);
+            this.panel154.TabIndex = 4;
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.Location = new System.Drawing.Point(3, 7);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(88, 25);
+            this.label59.TabIndex = 12;
+            this.label59.Text = "Distance";
+            // 
+            // panel155
+            // 
+            this.panel155.Controls.Add(this.label60);
+            this.panel155.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel155.Location = new System.Drawing.Point(3, 303);
+            this.panel155.Name = "panel155";
+            this.panel155.Size = new System.Drawing.Size(239, 34);
+            this.panel155.TabIndex = 5;
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label60.Location = new System.Drawing.Point(3, 7);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(232, 25);
+            this.label60.TabIndex = 14;
+            this.label60.Text = "Hourly Fuel Consumption";
+            // 
+            // panel156
+            // 
+            this.panel156.Controls.Add(this.label61);
+            this.panel156.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel156.Location = new System.Drawing.Point(3, 348);
+            this.panel156.Name = "panel156";
+            this.panel156.Size = new System.Drawing.Size(239, 34);
+            this.panel156.TabIndex = 6;
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label61.Location = new System.Drawing.Point(4, 7);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(162, 25);
+            this.label61.TabIndex = 16;
+            this.label61.Text = "Min Landing Fuel";
+            // 
+            // panel157
+            // 
+            this.panel157.Controls.Add(this.label62);
+            this.panel157.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel157.Location = new System.Drawing.Point(3, 393);
+            this.panel157.Name = "panel157";
+            this.panel157.Size = new System.Drawing.Size(239, 34);
+            this.panel157.TabIndex = 7;
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label62.Location = new System.Drawing.Point(4, 7);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(211, 25);
+            this.label62.TabIndex = 18;
+            this.label62.Text = "Specific Gravity of Fuel";
+            // 
+            // panel158
+            // 
+            this.panel158.Controls.Add(this.label63);
+            this.panel158.Controls.Add(this.txtbx_speed_course);
+            this.panel158.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel158.Location = new System.Drawing.Point(248, 8);
+            this.panel158.Name = "panel158";
+            this.panel158.Size = new System.Drawing.Size(122, 34);
+            this.panel158.TabIndex = 8;
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label63.Location = new System.Drawing.Point(65, 7);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(20, 25);
+            this.label63.TabIndex = 20;
+            this.label63.Text = "°";
+            // 
+            // txtbx_speed_course
+            // 
+            this.txtbx_speed_course.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbx_speed_course.Location = new System.Drawing.Point(3, 4);
+            this.txtbx_speed_course.MaxLength = 3;
+            this.txtbx_speed_course.Name = "txtbx_speed_course";
+            this.txtbx_speed_course.Size = new System.Drawing.Size(56, 30);
+            this.txtbx_speed_course.TabIndex = 19;
+            this.txtbx_speed_course.Text = "270";
+            // 
+            // panel159
+            // 
+            this.panel159.Controls.Add(this.label64);
+            this.panel159.Controls.Add(this.txtbx_speed_true_airspeed);
+            this.panel159.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel159.Location = new System.Drawing.Point(248, 53);
+            this.panel159.Name = "panel159";
+            this.panel159.Size = new System.Drawing.Size(122, 34);
+            this.panel159.TabIndex = 9;
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label64.Location = new System.Drawing.Point(65, 7);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(37, 25);
+            this.label64.TabIndex = 23;
+            this.label64.Text = "kts";
+            // 
+            // txtbx_speed_true_airspeed
+            // 
+            this.txtbx_speed_true_airspeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbx_speed_true_airspeed.Location = new System.Drawing.Point(3, 4);
+            this.txtbx_speed_true_airspeed.MaxLength = 3;
+            this.txtbx_speed_true_airspeed.Name = "txtbx_speed_true_airspeed";
+            this.txtbx_speed_true_airspeed.Size = new System.Drawing.Size(56, 30);
+            this.txtbx_speed_true_airspeed.TabIndex = 22;
+            this.txtbx_speed_true_airspeed.Text = "100";
+            // 
+            // panel160
+            // 
+            this.panel160.Controls.Add(this.label67);
+            this.panel160.Controls.Add(this.txtbx_speed_wind_direction);
+            this.panel160.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel160.Location = new System.Drawing.Point(248, 98);
+            this.panel160.Name = "panel160";
+            this.panel160.Size = new System.Drawing.Size(122, 34);
+            this.panel160.TabIndex = 10;
+            // 
+            // panel161
+            // 
+            this.panel161.Controls.Add(this.label68);
+            this.panel161.Controls.Add(this.txtbx_speed_wind_speed);
+            this.panel161.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel161.Location = new System.Drawing.Point(248, 143);
+            this.panel161.Name = "panel161";
+            this.panel161.Size = new System.Drawing.Size(122, 34);
+            this.panel161.TabIndex = 11;
+            // 
+            // panel162
+            // 
+            this.panel162.Controls.Add(this.label69);
+            this.panel162.Controls.Add(this.txtbx_speed_distance);
+            this.panel162.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel162.Location = new System.Drawing.Point(248, 223);
+            this.panel162.Name = "panel162";
+            this.panel162.Size = new System.Drawing.Size(122, 34);
+            this.panel162.TabIndex = 12;
+            // 
+            // panel163
+            // 
+            this.panel163.Controls.Add(this.label70);
+            this.panel163.Controls.Add(this.txtbx_speed_fuel_consumption);
+            this.panel163.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel163.Location = new System.Drawing.Point(248, 303);
+            this.panel163.Name = "panel163";
+            this.panel163.Size = new System.Drawing.Size(122, 34);
+            this.panel163.TabIndex = 13;
+            // 
+            // panel164
+            // 
+            this.panel164.Controls.Add(this.label71);
+            this.panel164.Controls.Add(this.txtbx_min_landing_fuel);
+            this.panel164.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel164.Location = new System.Drawing.Point(248, 348);
+            this.panel164.Name = "panel164";
+            this.panel164.Size = new System.Drawing.Size(122, 34);
+            this.panel164.TabIndex = 14;
+            // 
+            // panel165
+            // 
+            this.panel165.Controls.Add(this.label72);
+            this.panel165.Controls.Add(this.txtbx_speed_fuel_specific_gravity);
+            this.panel165.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel165.Location = new System.Drawing.Point(248, 393);
+            this.panel165.Name = "panel165";
+            this.panel165.Size = new System.Drawing.Size(122, 34);
+            this.panel165.TabIndex = 15;
+            // 
+            // panel166
+            // 
+            this.panel166.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel166.Controls.Add(this.label65);
+            this.panel166.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel166.Location = new System.Drawing.Point(3, 3);
+            this.panel166.Name = "panel166";
+            this.panel166.Size = new System.Drawing.Size(689, 34);
+            this.panel166.TabIndex = 3;
+            // 
+            // panel167
+            // 
+            this.panel167.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel167.Controls.Add(this.label66);
+            this.panel167.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel167.Location = new System.Drawing.Point(698, 3);
+            this.panel167.Name = "panel167";
+            this.panel167.Size = new System.Drawing.Size(690, 34);
+            this.panel167.TabIndex = 4;
+            // 
+            // label65
+            // 
+            this.label65.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label65.AutoSize = true;
+            this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label65.Location = new System.Drawing.Point(276, 3);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(136, 29);
+            this.label65.TabIndex = 0;
+            this.label65.Text = "Crosswind";
+            // 
+            // label66
+            // 
+            this.label66.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label66.AutoSize = true;
+            this.label66.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label66.Location = new System.Drawing.Point(209, 3);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(273, 29);
+            this.label66.TabIndex = 0;
+            this.label66.Text = "Speed, Time and Fuel";
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label67.Location = new System.Drawing.Point(65, 7);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(20, 25);
+            this.label67.TabIndex = 24;
+            this.label67.Text = "°";
+            // 
+            // txtbx_speed_wind_direction
+            // 
+            this.txtbx_speed_wind_direction.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbx_speed_wind_direction.Location = new System.Drawing.Point(3, 4);
+            this.txtbx_speed_wind_direction.MaxLength = 3;
+            this.txtbx_speed_wind_direction.Name = "txtbx_speed_wind_direction";
+            this.txtbx_speed_wind_direction.Size = new System.Drawing.Size(56, 30);
+            this.txtbx_speed_wind_direction.TabIndex = 23;
+            this.txtbx_speed_wind_direction.Text = "300";
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label68.Location = new System.Drawing.Point(65, 7);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(37, 25);
+            this.label68.TabIndex = 22;
+            this.label68.Text = "kts";
+            // 
+            // txtbx_speed_wind_speed
+            // 
+            this.txtbx_speed_wind_speed.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbx_speed_wind_speed.Location = new System.Drawing.Point(3, 4);
+            this.txtbx_speed_wind_speed.MaxLength = 2;
+            this.txtbx_speed_wind_speed.Name = "txtbx_speed_wind_speed";
+            this.txtbx_speed_wind_speed.Size = new System.Drawing.Size(56, 30);
+            this.txtbx_speed_wind_speed.TabIndex = 21;
+            this.txtbx_speed_wind_speed.Text = "10";
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label69.Location = new System.Drawing.Point(65, 5);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(43, 25);
+            this.label69.TabIndex = 21;
+            this.label69.Text = "NM";
+            // 
+            // txtbx_speed_distance
+            // 
+            this.txtbx_speed_distance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbx_speed_distance.Location = new System.Drawing.Point(3, 2);
+            this.txtbx_speed_distance.MaxLength = 3;
+            this.txtbx_speed_distance.Name = "txtbx_speed_distance";
+            this.txtbx_speed_distance.Size = new System.Drawing.Size(56, 30);
+            this.txtbx_speed_distance.TabIndex = 20;
+            this.txtbx_speed_distance.Text = "34";
+            // 
+            // txtbx_speed_fuel_consumption
+            // 
+            this.txtbx_speed_fuel_consumption.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbx_speed_fuel_consumption.Location = new System.Drawing.Point(3, 4);
+            this.txtbx_speed_fuel_consumption.MaxLength = 2;
+            this.txtbx_speed_fuel_consumption.Name = "txtbx_speed_fuel_consumption";
+            this.txtbx_speed_fuel_consumption.Size = new System.Drawing.Size(56, 30);
+            this.txtbx_speed_fuel_consumption.TabIndex = 13;
+            this.txtbx_speed_fuel_consumption.Text = "12";
+            // 
+            // label70
+            // 
+            this.label70.AutoSize = true;
+            this.label70.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label70.Location = new System.Drawing.Point(65, 7);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(47, 25);
+            this.label70.TabIndex = 27;
+            this.label70.Text = "ℓh-1";
+            // 
+            // txtbx_min_landing_fuel
+            // 
+            this.txtbx_min_landing_fuel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbx_min_landing_fuel.Location = new System.Drawing.Point(3, 4);
+            this.txtbx_min_landing_fuel.MaxLength = 2;
+            this.txtbx_min_landing_fuel.Name = "txtbx_min_landing_fuel";
+            this.txtbx_min_landing_fuel.Size = new System.Drawing.Size(56, 30);
+            this.txtbx_min_landing_fuel.TabIndex = 15;
+            this.txtbx_min_landing_fuel.Text = "10";
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label71.Location = new System.Drawing.Point(65, 7);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(18, 25);
+            this.label71.TabIndex = 26;
+            this.label71.Text = "ℓ";
+            // 
+            // txtbx_speed_fuel_specific_gravity
+            // 
+            this.txtbx_speed_fuel_specific_gravity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbx_speed_fuel_specific_gravity.Location = new System.Drawing.Point(3, 2);
+            this.txtbx_speed_fuel_specific_gravity.MaxLength = 4;
+            this.txtbx_speed_fuel_specific_gravity.Name = "txtbx_speed_fuel_specific_gravity";
+            this.txtbx_speed_fuel_specific_gravity.Size = new System.Drawing.Size(56, 30);
+            this.txtbx_speed_fuel_specific_gravity.TabIndex = 17;
+            this.txtbx_speed_fuel_specific_gravity.Text = "0.72";
+            // 
+            // label72
+            // 
+            this.label72.AutoSize = true;
+            this.label72.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label72.Location = new System.Drawing.Point(58, 5);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(67, 25);
+            this.label72.TabIndex = 25;
+            this.label72.Text = "kgm-3";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -4844,6 +5434,44 @@ namespace myFlightInfo
             this.panel85.PerformLayout();
             this.panel86.ResumeLayout(false);
             this.panel86.PerformLayout();
+            this.tableLayoutPanel18.ResumeLayout(false);
+            this.tableLayoutPanel24.ResumeLayout(false);
+            this.panel147.ResumeLayout(false);
+            this.panel147.PerformLayout();
+            this.panel148.ResumeLayout(false);
+            this.panel148.PerformLayout();
+            this.panel149.ResumeLayout(false);
+            this.panel149.PerformLayout();
+            this.panel153.ResumeLayout(false);
+            this.panel153.PerformLayout();
+            this.panel154.ResumeLayout(false);
+            this.panel154.PerformLayout();
+            this.panel155.ResumeLayout(false);
+            this.panel155.PerformLayout();
+            this.panel156.ResumeLayout(false);
+            this.panel156.PerformLayout();
+            this.panel157.ResumeLayout(false);
+            this.panel157.PerformLayout();
+            this.panel158.ResumeLayout(false);
+            this.panel158.PerformLayout();
+            this.panel159.ResumeLayout(false);
+            this.panel159.PerformLayout();
+            this.panel160.ResumeLayout(false);
+            this.panel160.PerformLayout();
+            this.panel161.ResumeLayout(false);
+            this.panel161.PerformLayout();
+            this.panel162.ResumeLayout(false);
+            this.panel162.PerformLayout();
+            this.panel163.ResumeLayout(false);
+            this.panel163.PerformLayout();
+            this.panel164.ResumeLayout(false);
+            this.panel164.PerformLayout();
+            this.panel165.ResumeLayout(false);
+            this.panel165.PerformLayout();
+            this.panel166.ResumeLayout(false);
+            this.panel166.PerformLayout();
+            this.panel167.ResumeLayout(false);
+            this.panel167.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -5211,6 +5839,53 @@ namespace myFlightInfo
         private System.Windows.Forms.Panel panel146;
         private System.Windows.Forms.RichTextBox rchtxtbx_crosswind_output;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel18;
+        private System.Windows.Forms.RichTextBox rchtxbx_speed_time_fuel_output;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel24;
+        private System.Windows.Forms.Panel panel147;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Panel panel148;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Panel panel149;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Panel panel153;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Panel panel154;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Panel panel155;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.Panel panel156;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Panel panel157;
+        private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.Panel panel158;
+        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.TextBox txtbx_speed_course;
+        private System.Windows.Forms.Panel panel159;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.TextBox txtbx_speed_true_airspeed;
+        private System.Windows.Forms.Panel panel160;
+        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.TextBox txtbx_speed_wind_direction;
+        private System.Windows.Forms.Panel panel161;
+        private System.Windows.Forms.Label label68;
+        private System.Windows.Forms.TextBox txtbx_speed_wind_speed;
+        private System.Windows.Forms.Panel panel162;
+        private System.Windows.Forms.Panel panel163;
+        private System.Windows.Forms.Panel panel164;
+        private System.Windows.Forms.Panel panel165;
+        private System.Windows.Forms.Panel panel166;
+        private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.Panel panel167;
+        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.TextBox txtbx_speed_distance;
+        private System.Windows.Forms.Label label70;
+        private System.Windows.Forms.TextBox txtbx_speed_fuel_consumption;
+        private System.Windows.Forms.Label label71;
+        private System.Windows.Forms.TextBox txtbx_min_landing_fuel;
+        private System.Windows.Forms.Label label72;
+        private System.Windows.Forms.TextBox txtbx_speed_fuel_specific_gravity;
     }
 }
 
