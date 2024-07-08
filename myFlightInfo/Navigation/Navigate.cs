@@ -165,13 +165,13 @@ namespace myFlightInfo.Navigation
                 //Clear the area if it is already written
                 int NumItems = myListBox.Items.Count;
 
-                if (NumItems > 14)
+                if (NumItems > 15)
                 {
-                    for (int i = 15; i < NumItems + 3; i++)
+                    for (int i = 16; i < NumItems + 3; i++)
                     {
                         try
                         {
-                            myListBox.Items.RemoveAt(14);
+                            myListBox.Items.RemoveAt(15);
                         }
                         catch (Exception e)
                         {

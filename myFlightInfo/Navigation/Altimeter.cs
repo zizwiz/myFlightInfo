@@ -18,15 +18,20 @@ namespace myFlightInfo.Navigation
         {
             if (CheckDataCorrect(myAltitude))
             {
-                string myText = "QFE to QNH = \t"; //Airfield is above sea level
+                string myQNHText = "QFE to QNH = \t"; //Airfield is above sea level
+                string myQFEText = "QNH to QFE = \t-";
+
+                Double Pressure = Math.Round(
+                    (float.Parse(myAltitude.Substring(0, myAltitude.Length - 2)) / 30), 0);
 
                 if (float.Parse(myAltitude.Substring(0, myAltitude.Length - 2)) < 0)
                 {
-                    myText = "QFE to QNH = \t-"; //Airfield is below sea level
+                    myQNHText = "QFE to QNH = \t-"; //Airfield is below sea level
+                    myQFEText = "QNH to QFE = \t";
                 }
 
-                string QNH = myText + Math.Round(
-                    (float.Parse(myAltitude.Substring(0, myAltitude.Length - 2)) / 30), 0) + " hPa";
+                string QNH = myQNHText + Pressure + " hPa";
+                string QFE = myQFEText + Pressure + " hPa"; ;
 
                 if (myListbox.Items.Count >= 13)
                 {
@@ -34,6 +39,8 @@ namespace myFlightInfo.Navigation
                     //From Airfield
                     myListbox.Items.RemoveAt(13);
                     myListbox.Items.Insert(13, QNH);
+                    myListbox.Items.RemoveAt(14);
+                    myListbox.Items.Insert(14, QFE);
                 }
                 else
                 {
@@ -41,6 +48,7 @@ namespace myFlightInfo.Navigation
                     //From Airfield
                     myListbox.Items.Add("");
                     myListbox.Items.Add(QNH);
+                    myListbox.Items.Add(QFE);
                 }
 
                 
