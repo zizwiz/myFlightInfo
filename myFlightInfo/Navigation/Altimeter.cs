@@ -18,7 +18,7 @@ namespace myFlightInfo.Navigation
         {
             if (CheckDataCorrect(myAltitude))
             {
-                string myQNHText = "QFE to QNH = \t"; //Airfield is above sea level
+                string myQNHText = "QFE to QNH = \t+"; //Airfield is above sea level
                 string myQFEText = "QNH to QFE = \t-";
 
                 Double Pressure = Math.Round(
@@ -27,7 +27,7 @@ namespace myFlightInfo.Navigation
                 if (float.Parse(myAltitude.Substring(0, myAltitude.Length - 2)) < 0)
                 {
                     myQNHText = "QFE to QNH = \t-"; //Airfield is below sea level
-                    myQFEText = "QNH to QFE = \t";
+                    myQFEText = "QNH to QFE = \t+";
                 }
 
                 string QNH = myQNHText + Pressure + " hPa";
