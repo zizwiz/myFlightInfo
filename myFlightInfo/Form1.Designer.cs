@@ -2326,6 +2326,7 @@ namespace myFlightInfo
             // 
             // rchtxtbx_crosswind_output
             // 
+            this.rchtxtbx_crosswind_output.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.rchtxtbx_crosswind_output.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rchtxtbx_crosswind_output.Location = new System.Drawing.Point(3, 208);
             this.rchtxtbx_crosswind_output.Name = "rchtxtbx_crosswind_output";
@@ -2352,6 +2353,7 @@ namespace myFlightInfo
             // 
             // rchtxbx_speed_time_fuel_output
             // 
+            this.rchtxbx_speed_time_fuel_output.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.rchtxbx_speed_time_fuel_output.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rchtxbx_speed_time_fuel_output.Location = new System.Drawing.Point(382, 3);
             this.rchtxbx_speed_time_fuel_output.Name = "rchtxbx_speed_time_fuel_output";

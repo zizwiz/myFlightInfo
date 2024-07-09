@@ -9,7 +9,7 @@ namespace myFlightInfo.crosswind
 
         public static (Double, Double, Double, Double, Double) Calculate_Speed_Time_fuel(TextBox myTrueAirSpeed, TextBox myWindSpeed,
             TextBox myCourse, TextBox myWindDirection, TextBox myDistance, TextBox myFuelConsumption,
-            TextBox myMinLandingFuel, TextBox myFuelSpecificGravity)
+            TextBox myMinLandingFuel)
         {
             /*
              * In aviation, the ground speed formula is as follows: vg = √(va2 + vw2 - (2vavw cos(δ - ω + ⍺))
@@ -50,24 +50,14 @@ namespace myFlightInfo.crosswind
             //Convert all Degrees into Radians
             double GroundSpeed = Math.Round(Math.Sqrt((Math.Pow(TrueAirspeed, 2.0) + Math.Pow(WindSpeed, 2.0)) -
                                                       (2 * TrueAirspeed * WindSpeed * Math.Cos(Converts.DegreeToRadian(Course - WindDirection + WindCorrection)))), 0);
-
-            //myRichTextBox.AppendText("Wind Correction = " + WindCorrection + "°\r");
-            //myRichTextBox.AppendText("Heading = " + (Course + WindCorrection) + "°\r");
-            //myRichTextBox.AppendText("Ground Speed = " + GroundSpeed + "kts\r");
-
             //FlightTime = Distance in nautical miles / speed in knots
             Double FlightTime = Double.Parse(myDistance.Text) / GroundSpeed;
-            //myRichTextBox.AppendText("\rFlight Time = " + TimeSpan.FromHours(FlightTime).ToString("h\\:mm\\:ss") + "\r");
-
+           
             //Fuel Consumption = Flight Time * Hourly consumption rate
             Double JourneyFuelLoad = Math.Ceiling(FlightTime * Double.Parse(myFuelConsumption.Text));
-            //myRichTextBox.AppendText("\rMin journey fuel consumption = " + JourneyFuelLoad + "ℓ");
-
+            
             Double FuelLoad = JourneyFuelLoad + Double.Parse(myMinLandingFuel.Text);
-            //myRichTextBox.AppendText("\rMin takeoff fuel load = " + FuelLoad + "ℓ");
-
-            //myRichTextBox.AppendText("\rFuel weight at takeoff= " + FuelLoad * Double.Parse(myFuelSpecificGravity.Text) + "kg");
-
+            
             return (WindCorrection, GroundSpeed, FlightTime, JourneyFuelLoad, FuelLoad);
         }
 
