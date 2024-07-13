@@ -9,7 +9,7 @@ namespace myFlightInfo.crosswind
 
         public static (Double, Double, Double, Double, Double) Calculate_Speed_Time_fuel(TextBox myTrueAirSpeed, TextBox myWindSpeed,
             TextBox myCourse, TextBox myWindDirection, TextBox myDistance, TextBox myFuelConsumption,
-            TextBox myMinLandingFuel)
+            TextBox myMinLandingFuel, bool myFlag)
         {
             /*
              * In aviation, the ground speed formula is as follows: vg = √(va2 + vw2 - (2vavw cos(δ - ω + ⍺))
@@ -50,15 +50,23 @@ namespace myFlightInfo.crosswind
             //Convert all Degrees into Radians
             double GroundSpeed = Math.Round(Math.Sqrt((Math.Pow(TrueAirspeed, 2.0) + Math.Pow(WindSpeed, 2.0)) -
                                                       (2 * TrueAirspeed * WindSpeed * Math.Cos(Converts.DegreeToRadian(Course - WindDirection + WindCorrection)))), 0);
-            //FlightTime = Distance in nautical miles / speed in knots
-            Double FlightTime = Double.Parse(myDistance.Text) / GroundSpeed;
+
+            if (myFlag)
+            {
+                //FlightTime = Distance in nautical miles / speed in knots
+                Double FlightTime = Double.Parse(myDistance.Text) / GroundSpeed;
+
+                //Fuel Consumption = Flight Time * Hourly consumption rate
+                Double JourneyFuelLoad = Math.Ceiling(FlightTime * Double.Parse(myFuelConsumption.Text));
+
+                Double FuelLoad = JourneyFuelLoad + Double.Parse(myMinLandingFuel.Text);
+                return (WindCorrection, GroundSpeed, FlightTime, JourneyFuelLoad, FuelLoad);
+            }
+            else
+            {
+                return (WindCorrection, GroundSpeed, 999, 999, 999);
+            }
            
-            //Fuel Consumption = Flight Time * Hourly consumption rate
-            Double JourneyFuelLoad = Math.Ceiling(FlightTime * Double.Parse(myFuelConsumption.Text));
-            
-            Double FuelLoad = JourneyFuelLoad + Double.Parse(myMinLandingFuel.Text);
-            
-            return (WindCorrection, GroundSpeed, FlightTime, JourneyFuelLoad, FuelLoad);
         }
 
 

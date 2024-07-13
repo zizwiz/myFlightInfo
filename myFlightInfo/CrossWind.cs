@@ -468,7 +468,9 @@ namespace myFlightInfo
             //Check data is in fact doubles.
             if (!CheckData.IsItADouble(myWindStrength))
             {
-
+                MsgBox.Show("Check Wind speed is a valid number.", "Incorrect Data", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return false;
             }
             else if (double.Parse(myWindStrength) < 0)
             {
