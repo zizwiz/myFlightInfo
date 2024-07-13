@@ -12,28 +12,22 @@ namespace myFlightInfo
 
         private void btn_calc_speed_time_fuel_Click(object sender, EventArgs e)
         {
-            bool TimeFuelFlag = true;
+            rchtxbx_speed_time_fuel_output.Text = "";
 
             try
             {
-                if ((txtbx_speed_distance.Text == "")||(txtbx_speed_fuel_consumption.Text == "")||
-                    (txtbx_min_landing_fuel.Text == "") || (txtbx_speed_fuel_specific_gravity.Text == ""))
-                    
-                    //&& TimeFuelCheck(txtbx_speed_fuel_consumption.Text,txtbx_min_landing_fuel.Text, txtbx_speed_fuel_specific_gravity.Text))
-                {
-                    TimeFuelFlag = false;
-                }
-
-
                 if (SpeedDataCheck(txtbx_speed_wind_speed.Text, txtbx_speed_wind_direction.Text,
-                        txtbx_speed_course.Text, txtbx_speed_true_airspeed.Text))
+                         txtbx_speed_course.Text, txtbx_speed_true_airspeed.Text))
                 {
+                    bool TimeFuelFlag = TimeFuelCheck(txtbx_speed_distance.Text, txtbx_speed_fuel_consumption.Text,
+                         txtbx_min_landing_fuel.Text, txtbx_speed_fuel_specific_gravity.Text);
+
                     var results = Speed_Time_Fuel.Calculate_Speed_Time_fuel(txtbx_speed_true_airspeed,
                             txtbx_speed_wind_speed,
                             txtbx_speed_course, txtbx_speed_wind_direction, txtbx_speed_distance,
                             txtbx_speed_fuel_consumption,
                             txtbx_min_landing_fuel, TimeFuelFlag);
-                    
+
 
                     //results = WindCorrection, GroundSpeed, FlightTime, JourneyFuelLoad, FuelLoad
 
@@ -70,13 +64,6 @@ namespace myFlightInfo
                                                                   Double.Parse(txtbx_speed_fuel_specific_gravity.Text) +
                                                                   "kg");
                     }
-
-                }
-                else
-                {
-                    //It did not work instead of crashing just put up hint and return gracefully
-                    MsgBox.Show("Something has gone wrong.\rPlease check data and try again", "Something is Wrong",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch
@@ -91,12 +78,34 @@ namespace myFlightInfo
         private bool SpeedDataCheck(string myWindStrength, string myDirection, string myCourse, string myAirspeed)
         {
             //catch for incomplete data
-            if ((myWindStrength == "") || (myDirection == "") || (myCourse == "") || (myAirspeed == ""))
+            if (myCourse == "")
             {
-                MsgBox.Show("Please fill in all the data", "Incomplete Data", MessageBoxButtons.OK,
+                MsgBox.Show("Please check Course has correct data", "Incomplete Course Data", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
                 return false;
             }
+
+            if (myAirspeed == "")
+            {
+                MsgBox.Show("Please check True Airspeed has correct data", "Incomplete True Airspeed Data", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (myDirection == "")
+            {
+                MsgBox.Show("Please check Wind Direction has correct data", "Incomplete Wind Direction Data", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (myWindStrength == "")
+            {
+                MsgBox.Show("Please check Wind Speed has correct data", "Incomplete Wind Speed Data", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return false;
+            }
+
 
             //Check data is in fact doubles.
             if (!CheckData.IsItADouble(myWindStrength))
@@ -105,14 +114,14 @@ namespace myFlightInfo
                     MessageBoxIcon.Error);
                 return false;
             }
-            
+
             if (double.Parse(myWindStrength) < 0)
             {
                 MsgBox.Show("Check Wind speed is valid number (0 - 999)", "Data out of scope", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
                 return false;
             }
-            
+
             if (double.Parse(myWindStrength) > 253)
             {
                 if (MsgBox.Show("Are you really sure that is the wind speed?", "New World Record for Wind Speed",
@@ -154,37 +163,77 @@ namespace myFlightInfo
             }
             else if ((double.Parse(myAirspeed) < 0) || (double.Parse(myAirspeed) > 999))
             {
-                MsgBox.Show("Check True Air Speed Data is a valid number)", "Data out of scope",
+                MsgBox.Show("Check True Air Speed Data is a valid number >0 and <999)", "Data out of scope",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-
-
-
 
             return true;
         }
 
 
-       
-
-
-        private bool TimeFuelCheck(string myFuelConsumption, string myMinLandingFuel, string myFuelSpecificGravity)
+        private bool TimeFuelCheck(string myDistance, string myFuelConsumption, string myMinLandingFuel, string myFuelSpecificGravity)
         {
             //catch for incomplete data
-            if ((myFuelConsumption == "") || (myMinLandingFuel == "") || (myFuelSpecificGravity == ""))
+            if (myDistance == "")
             {
-                MsgBox.Show("Please data is correct for Fuel Consumption, Min Landing Fuel and Fuel Specific Gravity", "Incomplete Data", MessageBoxButtons.OK,
+                MsgBox.Show("Please add Distance and try again if you want Time and Fuel Calculations", "Incomplete Distance Data", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (myFuelConsumption == "")
+            {
+                MsgBox.Show("Please check data is correct for Fuel Consumption", "Incomplete Fuel Consumption Data", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (myMinLandingFuel == "")
+            {
+                MsgBox.Show("Please check data is correct for Min Landing Fuel", "Incomplete Min Landing Fuel Data", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (myFuelSpecificGravity == "")
+            {
+                MsgBox.Show("Please check data is correct for Fuel Specific Gravity", "Incomplete Fuel Specific Gravity Data", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
                 return false;
             }
 
 
+            //Check data is in fact doubles.
+            if (!CheckData.IsItADouble(myDistance))
+            {
+                MsgBox.Show("Check Distance is a valid number.", "Incorrect Data", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return false;
+            }
 
+            if (!CheckData.IsItADouble(myFuelConsumption))
+            {
+                MsgBox.Show("Check Fuel Consumption is a valid number.", "Incorrect Data", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (!CheckData.IsItADouble(myMinLandingFuel))
+            {
+                MsgBox.Show("Check Minimum Landing Fuel is a valid number.", "Incorrect Data", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (!CheckData.IsItADouble(myFuelSpecificGravity))
+            {
+                MsgBox.Show("Check Specific Gravity of Fuel is a valid number.", "Incorrect Data", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return false;
+            }
 
             return true;
         }
-
-
     }
 }

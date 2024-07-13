@@ -2256,7 +2256,7 @@ namespace myFlightInfo
             this.txtbx_runway_heading.MaxLength = 2;
             this.txtbx_runway_heading.Name = "txtbx_runway_heading";
             this.txtbx_runway_heading.Size = new System.Drawing.Size(75, 30);
-            this.txtbx_runway_heading.TabIndex = 6;
+            this.txtbx_runway_heading.TabIndex = 3;
             this.txtbx_runway_heading.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Crosswind_Keydown);
             // 
             // panel12
@@ -2319,7 +2319,7 @@ namespace myFlightInfo
             this.btn_calc_wind.Location = new System.Drawing.Point(0, 0);
             this.btn_calc_wind.Name = "btn_calc_wind";
             this.btn_calc_wind.Size = new System.Drawing.Size(100, 48);
-            this.btn_calc_wind.TabIndex = 14;
+            this.btn_calc_wind.TabIndex = 4;
             this.btn_calc_wind.Text = "Calculate";
             this.btn_calc_wind.UseVisualStyleBackColor = true;
             this.btn_calc_wind.Click += new System.EventHandler(this.btn_calc_wind_Click);
@@ -2591,8 +2591,8 @@ namespace myFlightInfo
             this.txtbx_speed_course.MaxLength = 3;
             this.txtbx_speed_course.Name = "txtbx_speed_course";
             this.txtbx_speed_course.Size = new System.Drawing.Size(56, 30);
-            this.txtbx_speed_course.TabIndex = 19;
-            this.txtbx_speed_course.Text = "270";
+            this.txtbx_speed_course.TabIndex = 5;
+            this.txtbx_speed_course.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SpeedTimeFuel_Keydown);
             // 
             // panel159
             // 
@@ -2621,8 +2621,8 @@ namespace myFlightInfo
             this.txtbx_speed_true_airspeed.MaxLength = 3;
             this.txtbx_speed_true_airspeed.Name = "txtbx_speed_true_airspeed";
             this.txtbx_speed_true_airspeed.Size = new System.Drawing.Size(56, 30);
-            this.txtbx_speed_true_airspeed.TabIndex = 22;
-            this.txtbx_speed_true_airspeed.Text = "100";
+            this.txtbx_speed_true_airspeed.TabIndex = 6;
+            this.txtbx_speed_true_airspeed.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SpeedTimeFuel_Keydown);
             // 
             // panel160
             // 
@@ -2651,8 +2651,8 @@ namespace myFlightInfo
             this.txtbx_speed_wind_direction.MaxLength = 3;
             this.txtbx_speed_wind_direction.Name = "txtbx_speed_wind_direction";
             this.txtbx_speed_wind_direction.Size = new System.Drawing.Size(56, 30);
-            this.txtbx_speed_wind_direction.TabIndex = 23;
-            this.txtbx_speed_wind_direction.Text = "300";
+            this.txtbx_speed_wind_direction.TabIndex = 7;
+            this.txtbx_speed_wind_direction.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SpeedTimeFuel_Keydown);
             // 
             // panel161
             // 
@@ -2681,8 +2681,8 @@ namespace myFlightInfo
             this.txtbx_speed_wind_speed.MaxLength = 2;
             this.txtbx_speed_wind_speed.Name = "txtbx_speed_wind_speed";
             this.txtbx_speed_wind_speed.Size = new System.Drawing.Size(56, 30);
-            this.txtbx_speed_wind_speed.TabIndex = 21;
-            this.txtbx_speed_wind_speed.Text = "10";
+            this.txtbx_speed_wind_speed.TabIndex = 8;
+            this.txtbx_speed_wind_speed.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SpeedTimeFuel_Keydown);
             // 
             // panel162
             // 
@@ -2711,8 +2711,8 @@ namespace myFlightInfo
             this.txtbx_speed_distance.MaxLength = 3;
             this.txtbx_speed_distance.Name = "txtbx_speed_distance";
             this.txtbx_speed_distance.Size = new System.Drawing.Size(56, 30);
-            this.txtbx_speed_distance.TabIndex = 20;
-            this.txtbx_speed_distance.Text = "34";
+            this.txtbx_speed_distance.TabIndex = 9;
+            this.txtbx_speed_distance.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SpeedTimeFuel_Keydown);
             // 
             // panel163
             // 
@@ -2741,8 +2741,9 @@ namespace myFlightInfo
             this.txtbx_speed_fuel_consumption.MaxLength = 2;
             this.txtbx_speed_fuel_consumption.Name = "txtbx_speed_fuel_consumption";
             this.txtbx_speed_fuel_consumption.Size = new System.Drawing.Size(56, 30);
-            this.txtbx_speed_fuel_consumption.TabIndex = 13;
+            this.txtbx_speed_fuel_consumption.TabIndex = 10;
             this.txtbx_speed_fuel_consumption.Text = "12";
+            this.txtbx_speed_fuel_consumption.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SpeedTimeFuel_Keydown);
             // 
             // panel164
             // 
@@ -2771,8 +2772,9 @@ namespace myFlightInfo
             this.txtbx_min_landing_fuel.MaxLength = 2;
             this.txtbx_min_landing_fuel.Name = "txtbx_min_landing_fuel";
             this.txtbx_min_landing_fuel.Size = new System.Drawing.Size(56, 30);
-            this.txtbx_min_landing_fuel.TabIndex = 15;
+            this.txtbx_min_landing_fuel.TabIndex = 11;
             this.txtbx_min_landing_fuel.Text = "10";
+            this.txtbx_min_landing_fuel.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SpeedTimeFuel_Keydown);
             // 
             // panel165
             // 
@@ -2801,8 +2803,9 @@ namespace myFlightInfo
             this.txtbx_speed_fuel_specific_gravity.MaxLength = 4;
             this.txtbx_speed_fuel_specific_gravity.Name = "txtbx_speed_fuel_specific_gravity";
             this.txtbx_speed_fuel_specific_gravity.Size = new System.Drawing.Size(56, 30);
-            this.txtbx_speed_fuel_specific_gravity.TabIndex = 17;
+            this.txtbx_speed_fuel_specific_gravity.TabIndex = 12;
             this.txtbx_speed_fuel_specific_gravity.Text = "0.72";
+            this.txtbx_speed_fuel_specific_gravity.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SpeedTimeFuel_Keydown);
             // 
             // panel168
             // 
@@ -2864,7 +2867,7 @@ namespace myFlightInfo
             this.btn_calc_speed_time_fuel.Location = new System.Drawing.Point(0, 0);
             this.btn_calc_speed_time_fuel.Name = "btn_calc_speed_time_fuel";
             this.btn_calc_speed_time_fuel.Size = new System.Drawing.Size(113, 48);
-            this.btn_calc_speed_time_fuel.TabIndex = 14;
+            this.btn_calc_speed_time_fuel.TabIndex = 13;
             this.btn_calc_speed_time_fuel.Text = "Calculate";
             this.btn_calc_speed_time_fuel.UseVisualStyleBackColor = true;
             this.btn_calc_speed_time_fuel.Click += new System.EventHandler(this.btn_calc_speed_time_fuel_Click);

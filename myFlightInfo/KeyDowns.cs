@@ -33,6 +33,14 @@ namespace myFlightInfo
             }
         }
 
+        private void SpeedTimeFuel_Keydown(object sender, KeyEventArgs e)
+        {
+            if ((e.KeyCode == Keys.Enter) && ((tabcnt_toplevel.SelectedTab == tab_utils) && (tabcnt_utils.SelectedTab == tab_crosswind)))
+            {
+                btn_calc_speed_time_fuel.PerformClick();
+            }
+        }
+
         private void txtbx_navigate_to_url_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)13)
