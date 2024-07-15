@@ -286,13 +286,15 @@ namespace myFlightInfo
                 HeadwindMultiplier = 1;
             }
 
+            if (crossWind1 > crossWind2) crosswind3 = crossWind1;
+            if (crossWind2 > crossWind1) crosswind3 = crossWind2;
 
             if (crosswind3 > MaxCrossWindAllowed) // crosswind exceeds limits
             {
                 //Write to richtextbox
                 rchtxtbx_crosswind_output.SelectionColor = Color.Red;
                 rchtxtbx_crosswind_output.SelectionFont = new Font("Ariel", 12);
-                rchtxtbx_crosswind_output.AppendText("\rNot safe to take off.\rCrosswind component is above maximum allowed for safe takeoff.");
+                rchtxtbx_crosswind_output.AppendText("\r\rNot safe to take off.\rCrosswind component is above maximum allowed for safe takeoff.");
 
                 RunwayGraphic.DrawString("X", new Font("Arial", 50), new SolidBrush(Color.White), new Point(60, 120));
             }
@@ -307,8 +309,8 @@ namespace myFlightInfo
 
                 if (crosswind3 == 0 && headwind3 == 0) // no wind use any runway.
                 {
-                    if (crossWind1 > crossWind2) crosswind3 = crossWind1;
-                    if (crossWind2 > crossWind1) crosswind3 = crossWind2;
+                    //if (crossWind1 > crossWind2) crosswind3 = crossWind1;
+                    //if (crossWind2 > crossWind1) crosswind3 = crossWind2;
 
                     // Paint Runway marking
                     RunwayGraphic.DrawString(RunwayHeading1x + "/" + RunwayHeading2x, new Font("Arial", 50),
