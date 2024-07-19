@@ -34,10 +34,16 @@ namespace myFlightInfo
                     rchtxbx_speed_time_fuel_output.Text = "";
                     rchtxbx_speed_time_fuel_output.SelectionFont = new Font("Ariel", 12);
                     rchtxbx_speed_time_fuel_output.AppendText("Wind Correction = " + results.Item1 + "°\r");
+
                     rchtxbx_speed_time_fuel_output.SelectionFont = new Font("Ariel", 12);
-                    rchtxbx_speed_time_fuel_output.AppendText("Heading = " +
-                                                              (Double.Parse(txtbx_speed_course.Text) + results.Item1) +
-                                                              "°\r");
+
+                    double headingResult = Double.Parse(txtbx_speed_course.Text) + results.Item1;
+                    
+                    if (results.Item1 <= 0) headingResult += 360;
+                    if (headingResult > 360) headingResult -= 360;
+
+                    rchtxbx_speed_time_fuel_output.AppendText("Heading = " + headingResult + "°\r"); 
+                    
                     rchtxbx_speed_time_fuel_output.SelectionFont = new Font("Ariel", 12);
                     rchtxbx_speed_time_fuel_output.AppendText("Ground Speed = " + results.Item2 + "kts\r");
 
