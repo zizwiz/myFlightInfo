@@ -9,7 +9,7 @@ namespace myFlightInfo.crosswind
 
         public static (Double, Double, Double, Double, Double) Calculate_Speed_Time_fuel(TextBox myTrueAirSpeed, TextBox myWindSpeed,
             TextBox myCourse, TextBox myWindDirection, TextBox myDistance, TextBox myFuelConsumption,
-            TextBox myMinLandingFuel, bool myFlag)
+            TextBox myMinLandingFuel, bool myFlag, bool myReturnLeg)
         {
             /*
              * In aviation, the ground speed formula is as follows: vg = √(va2 + vw2 - (2vavw cos(δ - ω + ⍺))
@@ -39,6 +39,8 @@ namespace myFlightInfo.crosswind
             double TrueAirspeed = Double.Parse(myTrueAirSpeed.Text);
             double WindSpeed = Double.Parse(myWindSpeed.Text);
             double Course = Double.Parse(myCourse.Text);
+            if (myReturnLeg) Course += 180;
+            if (Course > 360) Course -= 360;
             double WindDirection = Double.Parse(myWindDirection.Text);
 
             //Get the wind correction but here we need to convert degrees to radian do the inverse
@@ -60,6 +62,10 @@ namespace myFlightInfo.crosswind
                 Double JourneyFuelLoad = Math.Ceiling(FlightTime * Double.Parse(myFuelConsumption.Text));
 
                 Double FuelLoad = JourneyFuelLoad + Double.Parse(myMinLandingFuel.Text);
+               
+                if (myReturnLeg) FuelLoad = JourneyFuelLoad; // do not add min landing  fuel again
+                
+                
                 return (WindCorrection, GroundSpeed, FlightTime, JourneyFuelLoad, FuelLoad);
             }
             else
