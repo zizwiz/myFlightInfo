@@ -57,15 +57,15 @@ namespace myFlightInfo
                     rchtxbx_speed_time_fuel_output.SelectionFont = new Font("Ariel", 12);
                     rchtxbx_speed_time_fuel_output.AppendText("Ground Speed = " + resultsOutbound.Item2 + "kts\r");
 
+                    //FlightTime = Distance in nautical miles / speed in knots
+                    rchtxbx_speed_time_fuel_output.SelectionFont = new Font("Ariel", 12);
+                    rchtxbx_speed_time_fuel_output.AppendText("\rFlight Time = " +
+                                                              TimeSpan.FromHours(resultsOutbound.Item3)
+                                                                  .ToString("h\\:mm\\:ss") +
+                                                              "\r");
+
                     if ((resultsOutbound.Item3 != 999)&& (!chkbx_speed_return.Checked))
                     {
-                        //FlightTime = Distance in nautical miles / speed in knots
-                        rchtxbx_speed_time_fuel_output.SelectionFont = new Font("Ariel", 12);
-                        rchtxbx_speed_time_fuel_output.AppendText("\rFlight Time = " +
-                                                                  TimeSpan.FromHours(resultsOutbound.Item3)
-                                                                      .ToString("h\\:mm\\:ss") +
-                                                                  "\r");
-
                         //Fuel Consumption = Flight Time * Hourly consumption rate
                         rchtxbx_speed_time_fuel_output.SelectionFont = new Font("Ariel", 12);
                         rchtxbx_speed_time_fuel_output.AppendText("\rMin journey fuel consumption = " + resultsOutbound.Item4 +
@@ -83,7 +83,7 @@ namespace myFlightInfo
 
                     if ((resultsOutbound.Item3 != 999) && (chkbx_speed_return.Checked) && (resultsInbound.Item3 != 999))
                     {
-                        rchtxbx_speed_time_fuel_output.AppendText("\r");
+                        rchtxbx_speed_time_fuel_output.AppendText("\r\r");
                         rchtxbx_speed_time_fuel_output.SelectionFont = new Font("Ariel", 16, FontStyle.Underline);
                         rchtxbx_speed_time_fuel_output.AppendText("Inbound Journey\r");
 
@@ -99,10 +99,15 @@ namespace myFlightInfo
                         rchtxbx_speed_time_fuel_output.SelectionFont = new Font("Ariel", 12);
                         rchtxbx_speed_time_fuel_output.AppendText("Ground Speed = " + resultsInbound.Item2 + "kts\r");
 
+                        rchtxbx_speed_time_fuel_output.SelectionFont = new Font("Ariel", 12);
+                        rchtxbx_speed_time_fuel_output.AppendText("\rFlight Time = " +
+                                                                  TimeSpan.FromHours(resultsInbound.Item3)
+                                                                  .ToString("h\\:mm\\:ss") +
+                                                                  "\r");
 
-                        rchtxbx_speed_time_fuel_output.AppendText("\r");
+                        rchtxbx_speed_time_fuel_output.AppendText("\r\r");
                         rchtxbx_speed_time_fuel_output.SelectionFont = new Font("Ariel", 16, FontStyle.Underline);
-                        rchtxbx_speed_time_fuel_output.AppendText("                            \r");
+                        rchtxbx_speed_time_fuel_output.AppendText("Totals for Return Flight");
 
                         //FlightTime = Distance in nautical miles / speed in knots
                         rchtxbx_speed_time_fuel_output.SelectionFont = new Font("Ariel", 12);
