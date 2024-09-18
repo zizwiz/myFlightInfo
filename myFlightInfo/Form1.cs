@@ -110,12 +110,13 @@ namespace myFlightInfo
             await webView_synoptic.EnsureCoreWebView2Async();
             await webView_gransden_lodge_weather.EnsureCoreWebView2Async();
             await webView_weather_windy.EnsureCoreWebView2Async();
+            await webView_nasa_satellite.EnsureCoreWebView2Async();
 
             await webView_navFromChart.EnsureCoreWebView2Async();
             await webView_navToChart.EnsureCoreWebView2Async();
 
             webView_notams.CoreWebView2.Navigate("https://www.notaminfo.com/ukmap?destination=node%2F39");
-
+            
             SetMetarPages();
             SetWeatherPages();
 
@@ -457,6 +458,7 @@ namespace myFlightInfo
                     "https://metoffice.gov.uk/weather/maps-and-charts/surface-pressure");
                 webView_weather_windy.CoreWebView2.Navigate(
                     "https://www.windy.com/51.352/0.505/airgram?iconD2,temp,51.344,0.508,13");
+                webView_nasa_satellite.CoreWebView2.Navigate("https://worldview.earthdata.nasa.gov/?v=-102.69792073327362,-6.560486491860303,31.10441711257043,74.21716114996451&t=" + DateTime.Now.AddDays(-1).ToString("yyyy-MM-dd") + "-T00%3A35%3A36Z");
             }
             else
             {
@@ -492,6 +494,7 @@ namespace myFlightInfo
                     "https://members.camgliding.uk/members/GRLweather.aspx");
                 webView_weather_windy.CoreWebView2.Navigate(
                     "https://www.windy.com/52.166/-0.154/airgram?iconD2,temp,52.164,-0.156,15");
+                webView_nasa_satellite.CoreWebView2.Navigate("https://worldview.earthdata.nasa.gov/?v=-102.69792073327362,-6.560486491860303,31.10441711257043,74.21716114996451&t=" + DateTime.Now.AddDays(-1).ToString("yyyy-MM-dd") + "-T00%3A35%3A36Z");
             }
 
         }

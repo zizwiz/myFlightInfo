@@ -77,6 +77,8 @@ namespace myFlightInfo
             this.webView_synoptic = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.tab_gransden_lodge = new System.Windows.Forms.TabPage();
             this.webView_gransden_lodge_weather = new Microsoft.Web.WebView2.WinForms.WebView2();
+            this.tab_nasa_satellite = new System.Windows.Forms.TabPage();
+            this.webView_nasa_satellite = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.tab_metar = new System.Windows.Forms.TabPage();
             this.tabCnt_airfields = new System.Windows.Forms.TabControl();
             this.tab_lt_gransden = new System.Windows.Forms.TabPage();
@@ -221,6 +223,10 @@ namespace myFlightInfo
             this.panel170 = new System.Windows.Forms.Panel();
             this.panel171 = new System.Windows.Forms.Panel();
             this.btn_calc_speed_time_fuel = new System.Windows.Forms.Button();
+            this.panel172 = new System.Windows.Forms.Panel();
+            this.chkbx_speed_return = new System.Windows.Forms.CheckBox();
+            this.panel173 = new System.Windows.Forms.Panel();
+            this.label73 = new System.Windows.Forms.Label();
             this.panel166 = new System.Windows.Forms.Panel();
             this.label65 = new System.Windows.Forms.Label();
             this.panel167 = new System.Windows.Forms.Panel();
@@ -444,10 +450,6 @@ namespace myFlightInfo
             this.panel87 = new System.Windows.Forms.Panel();
             this.panel88 = new System.Windows.Forms.Panel();
             this.panel89 = new System.Windows.Forms.Panel();
-            this.chkbx_speed_return = new System.Windows.Forms.CheckBox();
-            this.panel172 = new System.Windows.Forms.Panel();
-            this.panel173 = new System.Windows.Forms.Panel();
-            this.label73 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.panel31.SuspendLayout();
@@ -481,6 +483,8 @@ namespace myFlightInfo
             ((System.ComponentModel.ISupportInitialize)(this.webView_synoptic)).BeginInit();
             this.tab_gransden_lodge.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.webView_gransden_lodge_weather)).BeginInit();
+            this.tab_nasa_satellite.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.webView_nasa_satellite)).BeginInit();
             this.tab_metar.SuspendLayout();
             this.tabCnt_airfields.SuspendLayout();
             this.tab_lt_gransden.SuspendLayout();
@@ -572,6 +576,8 @@ namespace myFlightInfo
             this.panel168.SuspendLayout();
             this.tableLayoutPanel25.SuspendLayout();
             this.panel171.SuspendLayout();
+            this.panel172.SuspendLayout();
+            this.panel173.SuspendLayout();
             this.panel166.SuspendLayout();
             this.panel167.SuspendLayout();
             this.tab_weight_balance.SuspendLayout();
@@ -680,8 +686,6 @@ namespace myFlightInfo
             this.tableLayoutPanel16.SuspendLayout();
             this.panel85.SuspendLayout();
             this.panel86.SuspendLayout();
-            this.panel172.SuspendLayout();
-            this.panel173.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -822,7 +826,7 @@ namespace myFlightInfo
             // cmbobx_airport_info
             // 
             this.cmbobx_airport_info.FormattingEnabled = true;
-            this.cmbobx_airport_info.Location = new System.Drawing.Point(6, 32);
+            this.cmbobx_airport_info.Location = new System.Drawing.Point(6, 34);
             this.cmbobx_airport_info.Name = "cmbobx_airport_info";
             this.cmbobx_airport_info.Size = new System.Drawing.Size(318, 28);
             this.cmbobx_airport_info.Sorted = true;
@@ -1089,6 +1093,7 @@ namespace myFlightInfo
             this.tabcnt_weather.Controls.Add(this.tab_windy);
             this.tabcnt_weather.Controls.Add(this.tab_synoptic);
             this.tabcnt_weather.Controls.Add(this.tab_gransden_lodge);
+            this.tabcnt_weather.Controls.Add(this.tab_nasa_satellite);
             this.tabcnt_weather.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabcnt_weather.Location = new System.Drawing.Point(0, 0);
             this.tabcnt_weather.Multiline = true;
@@ -1231,6 +1236,29 @@ namespace myFlightInfo
             this.webView_gransden_lodge_weather.Size = new System.Drawing.Size(1391, 692);
             this.webView_gransden_lodge_weather.TabIndex = 2;
             this.webView_gransden_lodge_weather.ZoomFactor = 1D;
+            // 
+            // tab_nasa_satellite
+            // 
+            this.tab_nasa_satellite.Controls.Add(this.webView_nasa_satellite);
+            this.tab_nasa_satellite.Location = new System.Drawing.Point(28, 4);
+            this.tab_nasa_satellite.Name = "tab_nasa_satellite";
+            this.tab_nasa_satellite.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_nasa_satellite.Size = new System.Drawing.Size(1391, 692);
+            this.tab_nasa_satellite.TabIndex = 6;
+            this.tab_nasa_satellite.Text = "Nasa Satellite";
+            this.tab_nasa_satellite.UseVisualStyleBackColor = true;
+            // 
+            // webView_nasa_satellite
+            // 
+            this.webView_nasa_satellite.AllowExternalDrop = true;
+            this.webView_nasa_satellite.CreationProperties = null;
+            this.webView_nasa_satellite.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.webView_nasa_satellite.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webView_nasa_satellite.Location = new System.Drawing.Point(3, 3);
+            this.webView_nasa_satellite.Name = "webView_nasa_satellite";
+            this.webView_nasa_satellite.Size = new System.Drawing.Size(1385, 686);
+            this.webView_nasa_satellite.TabIndex = 2;
+            this.webView_nasa_satellite.ZoomFactor = 1D;
             // 
             // tab_metar
             // 
@@ -2885,6 +2913,43 @@ namespace myFlightInfo
             this.btn_calc_speed_time_fuel.Text = "Calculate";
             this.btn_calc_speed_time_fuel.UseVisualStyleBackColor = true;
             this.btn_calc_speed_time_fuel.Click += new System.EventHandler(this.btn_calc_speed_time_fuel_Click);
+            // 
+            // panel172
+            // 
+            this.panel172.Controls.Add(this.chkbx_speed_return);
+            this.panel172.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel172.Location = new System.Drawing.Point(248, 483);
+            this.panel172.Name = "panel172";
+            this.panel172.Size = new System.Drawing.Size(122, 34);
+            this.panel172.TabIndex = 17;
+            // 
+            // chkbx_speed_return
+            // 
+            this.chkbx_speed_return.AutoSize = true;
+            this.chkbx_speed_return.Location = new System.Drawing.Point(50, 7);
+            this.chkbx_speed_return.Name = "chkbx_speed_return";
+            this.chkbx_speed_return.Size = new System.Drawing.Size(22, 21);
+            this.chkbx_speed_return.TabIndex = 0;
+            this.chkbx_speed_return.UseVisualStyleBackColor = true;
+            // 
+            // panel173
+            // 
+            this.panel173.Controls.Add(this.label73);
+            this.panel173.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel173.Location = new System.Drawing.Point(3, 483);
+            this.panel173.Name = "panel173";
+            this.panel173.Size = new System.Drawing.Size(239, 34);
+            this.panel173.TabIndex = 18;
+            // 
+            // label73
+            // 
+            this.label73.AutoSize = true;
+            this.label73.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label73.Location = new System.Drawing.Point(3, 5);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(191, 25);
+            this.label73.TabIndex = 19;
+            this.label73.Text = "Include a Return Leg";
             // 
             // panel166
             // 
@@ -5203,43 +5268,6 @@ namespace myFlightInfo
             this.panel89.Size = new System.Drawing.Size(315, 43);
             this.panel89.TabIndex = 60;
             // 
-            // chkbx_speed_return
-            // 
-            this.chkbx_speed_return.AutoSize = true;
-            this.chkbx_speed_return.Location = new System.Drawing.Point(50, 7);
-            this.chkbx_speed_return.Name = "chkbx_speed_return";
-            this.chkbx_speed_return.Size = new System.Drawing.Size(22, 21);
-            this.chkbx_speed_return.TabIndex = 0;
-            this.chkbx_speed_return.UseVisualStyleBackColor = true;
-            // 
-            // panel172
-            // 
-            this.panel172.Controls.Add(this.chkbx_speed_return);
-            this.panel172.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel172.Location = new System.Drawing.Point(248, 483);
-            this.panel172.Name = "panel172";
-            this.panel172.Size = new System.Drawing.Size(122, 34);
-            this.panel172.TabIndex = 17;
-            // 
-            // panel173
-            // 
-            this.panel173.Controls.Add(this.label73);
-            this.panel173.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel173.Location = new System.Drawing.Point(3, 483);
-            this.panel173.Name = "panel173";
-            this.panel173.Size = new System.Drawing.Size(239, 34);
-            this.panel173.TabIndex = 18;
-            // 
-            // label73
-            // 
-            this.label73.AutoSize = true;
-            this.label73.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label73.Location = new System.Drawing.Point(3, 5);
-            this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(191, 25);
-            this.label73.TabIndex = 19;
-            this.label73.Text = "Include a Return Leg";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -5291,6 +5319,8 @@ namespace myFlightInfo
             ((System.ComponentModel.ISupportInitialize)(this.webView_synoptic)).EndInit();
             this.tab_gransden_lodge.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.webView_gransden_lodge_weather)).EndInit();
+            this.tab_nasa_satellite.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.webView_nasa_satellite)).EndInit();
             this.tab_metar.ResumeLayout(false);
             this.tabCnt_airfields.ResumeLayout(false);
             this.tab_lt_gransden.ResumeLayout(false);
@@ -5413,6 +5443,10 @@ namespace myFlightInfo
             this.panel168.ResumeLayout(false);
             this.tableLayoutPanel25.ResumeLayout(false);
             this.panel171.ResumeLayout(false);
+            this.panel172.ResumeLayout(false);
+            this.panel172.PerformLayout();
+            this.panel173.ResumeLayout(false);
+            this.panel173.PerformLayout();
             this.panel166.ResumeLayout(false);
             this.panel166.PerformLayout();
             this.panel167.ResumeLayout(false);
@@ -5608,10 +5642,6 @@ namespace myFlightInfo
             this.panel85.PerformLayout();
             this.panel86.ResumeLayout(false);
             this.panel86.PerformLayout();
-            this.panel172.ResumeLayout(false);
-            this.panel172.PerformLayout();
-            this.panel173.ResumeLayout(false);
-            this.panel173.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -6036,6 +6066,8 @@ namespace myFlightInfo
         private System.Windows.Forms.Panel panel172;
         private System.Windows.Forms.Panel panel173;
         private System.Windows.Forms.Label label73;
+        private System.Windows.Forms.TabPage tab_nasa_satellite;
+        private Microsoft.Web.WebView2.WinForms.WebView2 webView_nasa_satellite;
     }
 }
 

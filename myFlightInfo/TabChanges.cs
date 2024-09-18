@@ -175,6 +175,13 @@ namespace myFlightInfo
                 grpbx_towns.Visible = false;
                 btn_school.Visible = false;
             }
+            else if (tabcnt_weather.SelectedTab == tab_nasa_satellite)
+            {
+                cmbobx_gransden_lodge.Visible = false;
+
+                grpbx_towns.Visible = false;
+                btn_school.Visible = false;
+            }
         }
 
 

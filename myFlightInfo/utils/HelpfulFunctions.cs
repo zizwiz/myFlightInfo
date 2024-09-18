@@ -57,5 +57,15 @@ namespace myFlightInfo.utils
 
             return cardinal;
         }
+
+        /// <summary>
+        /// Gets yesterdays date.
+        /// </summary>
+        /// <param></param>
+        /// <returns>Yesetrdays date as yyyy-mm-dd</returns>
+        public static string getYesterday()
+        {
+            return DateTime.Now.AddDays(-1).ToString("yyyy-MM-dd");
+        }
     }
 }
