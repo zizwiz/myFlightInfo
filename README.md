@@ -70,9 +70,10 @@ Tags are incremental and applied to the releases.
 
 ## License
 
-This project is licensed under GNU GENERAL PUBLIC LICENSE Version 3 - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under GNU GENERAL PUBLIC LICENSE Version 3 - see the [LICENSE.md](https://github.com/zizwiz/myFlightInfo/blob/main/LICENSE) file for details
 
 ## Acknowledgments
 
-* To the folks at Jetbrains for providing me with a Software licence, Jetbrains products make software creation easy for me. 
+* To the folks at Jetbrains for providing me with a Software licence, Jetbrains products make software creation easy. 
+* To everyone who has helped me with code when I have got stuck. Such a wonderful community of mutual help.
 * To all those that have helped and taught me to understand how to fly, plan a flight, and read the weather.
