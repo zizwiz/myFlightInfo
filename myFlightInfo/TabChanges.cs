@@ -196,14 +196,14 @@ namespace myFlightInfo
         {
             cmbobx_airport_info.Visible = false;
             NavigationDateTimePicker.Visible = false;
-                grpbx_altimeter.Visible = false;
+            grpbx_altimeter.Visible = false;
             grpbx_browser_navigation.Visible = false;
             btn_navigation_calculations.Visible = false;
 
             if (tabcnt_utils.SelectedTab == tab_navigation)
             {
                 btn_navigation_calculations.Visible = false;
-               cmbobx_airport_info.Visible = true;
+                cmbobx_airport_info.Visible = true;
                 NavigationDateTimePicker.Visible = true;
                 grpbx_altimeter.Visible = true;
                 grpbx_browser_navigation.Visible = true;
@@ -226,7 +226,7 @@ namespace myFlightInfo
                 btn_navigate_to.Visible = true;
                 txtbx_navigate_to_url.Visible = true;
             }
-            
+
             SetMetarPages();
             SetWeatherPages();
 
