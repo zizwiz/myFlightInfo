@@ -31,6 +31,8 @@ namespace myFlightInfo
                     
                     if (chkbx_speed_return.Checked) //only do if we have a return journey
                     {
+
+
                         resultsInbound = Speed_Time_Fuel.Calculate_Speed_Time_fuel(txtbx_speed_true_airspeed,
                             txtbx_speed_wind_speed,
                             txtbx_speed_course, txtbx_speed_wind_direction, txtbx_speed_distance,
@@ -300,6 +302,24 @@ namespace myFlightInfo
             }
 
             return true;
+        }
+
+        private void chkbx_speed_return_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkbx_speed_return.Checked)
+            {
+                lbl_return_pre_flight_running.Visible = true;
+                txtbx_speed_wind_return_pre_flight_running.Visible = true;
+                txtbx_speed_wind_return_pre_flight_running.Text = "20";
+                lbl_return_pre_flight_running_min.Visible = true;
+            }
+            else
+            {
+                lbl_return_pre_flight_running.Visible = false;
+                txtbx_speed_wind_return_pre_flight_running.Visible = false;
+                txtbx_speed_wind_return_pre_flight_running.Text = "0";
+                lbl_return_pre_flight_running_min.Visible = false;
+            }
         }
     }
 }

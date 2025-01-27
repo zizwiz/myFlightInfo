@@ -231,12 +231,12 @@ namespace myFlightInfo
             this.label75 = new System.Windows.Forms.Label();
             this.txtbx_speed_wind_pre_flight_running = new System.Windows.Forms.TextBox();
             this.panel175 = new System.Windows.Forms.Panel();
-            this.label74 = new System.Windows.Forms.Label();
+            this.lbl_return_pre_flight_running_min = new System.Windows.Forms.Label();
             this.txtbx_speed_wind_return_pre_flight_running = new System.Windows.Forms.TextBox();
             this.panel176 = new System.Windows.Forms.Panel();
             this.label76 = new System.Windows.Forms.Label();
             this.panel177 = new System.Windows.Forms.Panel();
-            this.label77 = new System.Windows.Forms.Label();
+            this.lbl_return_pre_flight_running = new System.Windows.Forms.Label();
             this.panel166 = new System.Windows.Forms.Panel();
             this.label65 = new System.Windows.Forms.Label();
             this.panel167 = new System.Windows.Forms.Panel();
@@ -2949,6 +2949,7 @@ namespace myFlightInfo
             this.chkbx_speed_return.Size = new System.Drawing.Size(22, 21);
             this.chkbx_speed_return.TabIndex = 0;
             this.chkbx_speed_return.UseVisualStyleBackColor = true;
+            this.chkbx_speed_return.CheckedChanged += new System.EventHandler(this.chkbx_speed_return_CheckedChanged);
             // 
             // panel173
             // 
@@ -3001,7 +3002,7 @@ namespace myFlightInfo
             // 
             // panel175
             // 
-            this.panel175.Controls.Add(this.label74);
+            this.panel175.Controls.Add(this.lbl_return_pre_flight_running_min);
             this.panel175.Controls.Add(this.txtbx_speed_wind_return_pre_flight_running);
             this.panel175.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel175.Location = new System.Drawing.Point(248, 528);
@@ -3009,15 +3010,15 @@ namespace myFlightInfo
             this.panel175.Size = new System.Drawing.Size(122, 34);
             this.panel175.TabIndex = 20;
             // 
-            // label74
+            // lbl_return_pre_flight_running_min
             // 
-            this.label74.AutoSize = true;
-            this.label74.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label74.Location = new System.Drawing.Point(65, 6);
-            this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(43, 25);
-            this.label74.TabIndex = 28;
-            this.label74.Text = "min";
+            this.lbl_return_pre_flight_running_min.AutoSize = true;
+            this.lbl_return_pre_flight_running_min.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_return_pre_flight_running_min.Location = new System.Drawing.Point(65, 6);
+            this.lbl_return_pre_flight_running_min.Name = "lbl_return_pre_flight_running_min";
+            this.lbl_return_pre_flight_running_min.Size = new System.Drawing.Size(43, 25);
+            this.lbl_return_pre_flight_running_min.TabIndex = 28;
+            this.lbl_return_pre_flight_running_min.Text = "min";
             // 
             // txtbx_speed_wind_return_pre_flight_running
             // 
@@ -3050,22 +3051,22 @@ namespace myFlightInfo
             // 
             // panel177
             // 
-            this.panel177.Controls.Add(this.label77);
+            this.panel177.Controls.Add(this.lbl_return_pre_flight_running);
             this.panel177.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel177.Location = new System.Drawing.Point(3, 528);
             this.panel177.Name = "panel177";
             this.panel177.Size = new System.Drawing.Size(239, 34);
             this.panel177.TabIndex = 22;
             // 
-            // label77
+            // lbl_return_pre_flight_running
             // 
-            this.label77.AutoSize = true;
-            this.label77.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label77.Location = new System.Drawing.Point(4, 3);
-            this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(171, 25);
-            this.label77.TabIndex = 10;
-            this.label77.Text = "Pre-Flight running ";
+            this.lbl_return_pre_flight_running.AutoSize = true;
+            this.lbl_return_pre_flight_running.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_return_pre_flight_running.Location = new System.Drawing.Point(4, 3);
+            this.lbl_return_pre_flight_running.Name = "lbl_return_pre_flight_running";
+            this.lbl_return_pre_flight_running.Size = new System.Drawing.Size(171, 25);
+            this.lbl_return_pre_flight_running.TabIndex = 10;
+            this.lbl_return_pre_flight_running.Text = "Pre-Flight running ";
             // 
             // panel166
             // 
@@ -6196,12 +6197,12 @@ namespace myFlightInfo
         private System.Windows.Forms.Label label75;
         private System.Windows.Forms.TextBox txtbx_speed_wind_pre_flight_running;
         private System.Windows.Forms.Panel panel175;
-        private System.Windows.Forms.Label label74;
+        private System.Windows.Forms.Label lbl_return_pre_flight_running_min;
         private System.Windows.Forms.TextBox txtbx_speed_wind_return_pre_flight_running;
         private System.Windows.Forms.Panel panel176;
         private System.Windows.Forms.Label label76;
         private System.Windows.Forms.Panel panel177;
-        private System.Windows.Forms.Label label77;
+        private System.Windows.Forms.Label lbl_return_pre_flight_running;
     }
 }
 

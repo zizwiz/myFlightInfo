@@ -237,11 +237,20 @@ namespace myFlightInfo
             if (tabcnt_utils.SelectedTab == tab_crosswind)
             {
                 txtbx_magnitude.Select(); // Put cursor into Wind Magnitude Textbox"
+
+                if (chkbx_speed_return.Checked == false)
+                {
+                    lbl_return_pre_flight_running.Visible = false;
+                    txtbx_speed_wind_return_pre_flight_running.Visible = false;
+                    txtbx_speed_wind_return_pre_flight_running.Text = "0";
+                    lbl_return_pre_flight_running_min.Visible = false;
+                }
             }
             else if (tabcnt_utils.SelectedTab == tab_weight_balance)
             {
                 txtbx_cog_pilot_weight.Select(); // Put cursor into pilots weight Textbox"
             }
+            
         }
     }
 }
