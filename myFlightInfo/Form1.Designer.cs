@@ -1085,7 +1085,7 @@ namespace myFlightInfo
             this.tabcnt_toplevel.Name = "tabcnt_toplevel";
             this.tabcnt_toplevel.SelectedIndex = 0;
             this.tabcnt_toplevel.Size = new System.Drawing.Size(1431, 733);
-            this.tabcnt_toplevel.TabIndex = 1;
+            this.tabcnt_toplevel.TabIndex = 0;
             this.tabcnt_toplevel.SelectedIndexChanged += new System.EventHandler(this.tabcnt_toplevel_SelectedIndexChanged);
             // 
             // tab_weather
@@ -2187,7 +2187,7 @@ namespace myFlightInfo
             this.label7.Location = new System.Drawing.Point(3, 7);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(112, 25);
-            this.label7.TabIndex = 2;
+            this.label7.TabIndex = 0;
             this.label7.Text = "Windspeed";
             // 
             // panel8
@@ -2206,7 +2206,7 @@ namespace myFlightInfo
             this.label8.Location = new System.Drawing.Point(3, 7);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(88, 25);
-            this.label8.TabIndex = 3;
+            this.label8.TabIndex = 0;
             this.label8.Text = "Direction";
             // 
             // panel11
@@ -2225,7 +2225,7 @@ namespace myFlightInfo
             this.label11.Location = new System.Drawing.Point(3, 7);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(82, 25);
-            this.label11.TabIndex = 7;
+            this.label11.TabIndex = 0;
             this.label11.Text = "Runway";
             // 
             // panel13
@@ -2350,7 +2350,7 @@ namespace myFlightInfo
             this.panel25.Location = new System.Drawing.Point(113, 3);
             this.panel25.Name = "panel25";
             this.panel25.Size = new System.Drawing.Size(99, 48);
-            this.panel25.TabIndex = 1;
+            this.panel25.TabIndex = 0;
             // 
             // panel146
             // 
@@ -2380,7 +2380,7 @@ namespace myFlightInfo
             this.rchtxtbx_crosswind_output.Name = "rchtxtbx_crosswind_output";
             this.rchtxtbx_crosswind_output.ReadOnly = true;
             this.rchtxtbx_crosswind_output.Size = new System.Drawing.Size(332, 429);
-            this.rchtxtbx_crosswind_output.TabIndex = 1;
+            this.rchtxtbx_crosswind_output.TabIndex = 0;
             this.rchtxtbx_crosswind_output.Text = "";
             // 
             // tableLayoutPanel18
@@ -2488,7 +2488,7 @@ namespace myFlightInfo
             this.label55.Location = new System.Drawing.Point(3, 7);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(76, 25);
-            this.label55.TabIndex = 5;
+            this.label55.TabIndex = 0;
             this.label55.Text = "Course";
             // 
             // panel148
@@ -2507,7 +2507,7 @@ namespace myFlightInfo
             this.label56.Location = new System.Drawing.Point(3, 7);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(136, 25);
-            this.label56.TabIndex = 6;
+            this.label56.TabIndex = 0;
             this.label56.Text = "True Airspeed";
             // 
             // panel149
@@ -2526,7 +2526,7 @@ namespace myFlightInfo
             this.label57.Location = new System.Drawing.Point(3, 7);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(139, 25);
-            this.label57.TabIndex = 7;
+            this.label57.TabIndex = 0;
             this.label57.Text = "Wind Direction";
             // 
             // panel153
@@ -2545,7 +2545,7 @@ namespace myFlightInfo
             this.label58.Location = new System.Drawing.Point(3, 6);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(121, 25);
-            this.label58.TabIndex = 8;
+            this.label58.TabIndex = 0;
             this.label58.Text = "Wind Speed";
             // 
             // panel154
@@ -2564,7 +2564,7 @@ namespace myFlightInfo
             this.label59.Location = new System.Drawing.Point(3, 7);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(88, 25);
-            this.label59.TabIndex = 12;
+            this.label59.TabIndex = 0;
             this.label59.Text = "Distance";
             // 
             // panel155
@@ -2583,7 +2583,7 @@ namespace myFlightInfo
             this.label60.Location = new System.Drawing.Point(3, 7);
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(232, 25);
-            this.label60.TabIndex = 14;
+            this.label60.TabIndex = 0;
             this.label60.Text = "Hourly Fuel Consumption";
             // 
             // panel156
@@ -2602,7 +2602,7 @@ namespace myFlightInfo
             this.label61.Location = new System.Drawing.Point(4, 7);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(162, 25);
-            this.label61.TabIndex = 16;
+            this.label61.TabIndex = 0;
             this.label61.Text = "Min Landing Fuel";
             // 
             // panel157
@@ -2621,7 +2621,7 @@ namespace myFlightInfo
             this.label62.Location = new System.Drawing.Point(4, 7);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(211, 25);
-            this.label62.TabIndex = 18;
+            this.label62.TabIndex = 0;
             this.label62.Text = "Specific Gravity of Fuel";
             // 
             // panel158
@@ -2731,7 +2731,7 @@ namespace myFlightInfo
             this.label68.Location = new System.Drawing.Point(65, 7);
             this.label68.Name = "label68";
             this.label68.Size = new System.Drawing.Size(37, 25);
-            this.label68.TabIndex = 22;
+            this.label68.TabIndex = 0;
             this.label68.Text = "kts";
             // 
             // txtbx_speed_wind_speed
@@ -2761,7 +2761,7 @@ namespace myFlightInfo
             this.label69.Location = new System.Drawing.Point(65, 5);
             this.label69.Name = "label69";
             this.label69.Size = new System.Drawing.Size(43, 25);
-            this.label69.TabIndex = 21;
+            this.label69.TabIndex = 0;
             this.label69.Text = "NM";
             // 
             // txtbx_speed_distance
@@ -2771,7 +2771,7 @@ namespace myFlightInfo
             this.txtbx_speed_distance.MaxLength = 3;
             this.txtbx_speed_distance.Name = "txtbx_speed_distance";
             this.txtbx_speed_distance.Size = new System.Drawing.Size(56, 30);
-            this.txtbx_speed_distance.TabIndex = 9;
+            this.txtbx_speed_distance.TabIndex = 10;
             this.txtbx_speed_distance.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SpeedTimeFuel_Keydown);
             // 
             // panel163
@@ -2791,7 +2791,7 @@ namespace myFlightInfo
             this.label70.Location = new System.Drawing.Point(65, 7);
             this.label70.Name = "label70";
             this.label70.Size = new System.Drawing.Size(47, 25);
-            this.label70.TabIndex = 27;
+            this.label70.TabIndex = 0;
             this.label70.Text = "ℓh-1";
             // 
             // txtbx_speed_fuel_consumption
@@ -2801,7 +2801,7 @@ namespace myFlightInfo
             this.txtbx_speed_fuel_consumption.MaxLength = 2;
             this.txtbx_speed_fuel_consumption.Name = "txtbx_speed_fuel_consumption";
             this.txtbx_speed_fuel_consumption.Size = new System.Drawing.Size(56, 30);
-            this.txtbx_speed_fuel_consumption.TabIndex = 10;
+            this.txtbx_speed_fuel_consumption.TabIndex = 11;
             this.txtbx_speed_fuel_consumption.Text = "12";
             this.txtbx_speed_fuel_consumption.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SpeedTimeFuel_Keydown);
             // 
@@ -2822,7 +2822,7 @@ namespace myFlightInfo
             this.label71.Location = new System.Drawing.Point(65, 7);
             this.label71.Name = "label71";
             this.label71.Size = new System.Drawing.Size(18, 25);
-            this.label71.TabIndex = 26;
+            this.label71.TabIndex = 0;
             this.label71.Text = "ℓ";
             // 
             // txtbx_min_landing_fuel
@@ -2832,7 +2832,7 @@ namespace myFlightInfo
             this.txtbx_min_landing_fuel.MaxLength = 2;
             this.txtbx_min_landing_fuel.Name = "txtbx_min_landing_fuel";
             this.txtbx_min_landing_fuel.Size = new System.Drawing.Size(56, 30);
-            this.txtbx_min_landing_fuel.TabIndex = 11;
+            this.txtbx_min_landing_fuel.TabIndex = 12;
             this.txtbx_min_landing_fuel.Text = "10";
             this.txtbx_min_landing_fuel.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SpeedTimeFuel_Keydown);
             // 
@@ -2853,7 +2853,7 @@ namespace myFlightInfo
             this.label72.Location = new System.Drawing.Point(58, 5);
             this.label72.Name = "label72";
             this.label72.Size = new System.Drawing.Size(67, 25);
-            this.label72.TabIndex = 25;
+            this.label72.TabIndex = 0;
             this.label72.Text = "kgm-3";
             // 
             // txtbx_speed_fuel_specific_gravity
@@ -2863,7 +2863,7 @@ namespace myFlightInfo
             this.txtbx_speed_fuel_specific_gravity.MaxLength = 4;
             this.txtbx_speed_fuel_specific_gravity.Name = "txtbx_speed_fuel_specific_gravity";
             this.txtbx_speed_fuel_specific_gravity.Size = new System.Drawing.Size(56, 30);
-            this.txtbx_speed_fuel_specific_gravity.TabIndex = 12;
+            this.txtbx_speed_fuel_specific_gravity.TabIndex = 13;
             this.txtbx_speed_fuel_specific_gravity.Text = "0.72";
             this.txtbx_speed_fuel_specific_gravity.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SpeedTimeFuel_Keydown);
             // 
@@ -2927,7 +2927,7 @@ namespace myFlightInfo
             this.btn_calc_speed_time_fuel.Location = new System.Drawing.Point(0, 0);
             this.btn_calc_speed_time_fuel.Name = "btn_calc_speed_time_fuel";
             this.btn_calc_speed_time_fuel.Size = new System.Drawing.Size(113, 48);
-            this.btn_calc_speed_time_fuel.TabIndex = 13;
+            this.btn_calc_speed_time_fuel.TabIndex = 16;
             this.btn_calc_speed_time_fuel.Text = "Calculate";
             this.btn_calc_speed_time_fuel.UseVisualStyleBackColor = true;
             this.btn_calc_speed_time_fuel.Click += new System.EventHandler(this.btn_calc_speed_time_fuel_Click);
@@ -2947,7 +2947,7 @@ namespace myFlightInfo
             this.chkbx_speed_return.Location = new System.Drawing.Point(50, 7);
             this.chkbx_speed_return.Name = "chkbx_speed_return";
             this.chkbx_speed_return.Size = new System.Drawing.Size(22, 21);
-            this.chkbx_speed_return.TabIndex = 0;
+            this.chkbx_speed_return.TabIndex = 14;
             this.chkbx_speed_return.UseVisualStyleBackColor = true;
             this.chkbx_speed_return.CheckedChanged += new System.EventHandler(this.chkbx_speed_return_CheckedChanged);
             // 
@@ -2967,7 +2967,7 @@ namespace myFlightInfo
             this.label73.Location = new System.Drawing.Point(3, 5);
             this.label73.Name = "label73";
             this.label73.Size = new System.Drawing.Size(191, 25);
-            this.label73.TabIndex = 19;
+            this.label73.TabIndex = 0;
             this.label73.Text = "Include a Return Leg";
             // 
             // panel174
@@ -2987,17 +2987,17 @@ namespace myFlightInfo
             this.label75.Location = new System.Drawing.Point(62, 4);
             this.label75.Name = "label75";
             this.label75.Size = new System.Drawing.Size(43, 25);
-            this.label75.TabIndex = 28;
+            this.label75.TabIndex = 0;
             this.label75.Text = "min";
             // 
             // txtbx_speed_wind_pre_flight_running
             // 
             this.txtbx_speed_wind_pre_flight_running.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbx_speed_wind_pre_flight_running.Location = new System.Drawing.Point(0, 1);
+            this.txtbx_speed_wind_pre_flight_running.Location = new System.Drawing.Point(3, 1);
             this.txtbx_speed_wind_pre_flight_running.MaxLength = 2;
             this.txtbx_speed_wind_pre_flight_running.Name = "txtbx_speed_wind_pre_flight_running";
             this.txtbx_speed_wind_pre_flight_running.Size = new System.Drawing.Size(56, 30);
-            this.txtbx_speed_wind_pre_flight_running.TabIndex = 27;
+            this.txtbx_speed_wind_pre_flight_running.TabIndex = 12;
             this.txtbx_speed_wind_pre_flight_running.Text = "30";
             // 
             // panel175
@@ -3023,11 +3023,11 @@ namespace myFlightInfo
             // txtbx_speed_wind_return_pre_flight_running
             // 
             this.txtbx_speed_wind_return_pre_flight_running.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbx_speed_wind_return_pre_flight_running.Location = new System.Drawing.Point(3, 3);
+            this.txtbx_speed_wind_return_pre_flight_running.Location = new System.Drawing.Point(3, 4);
             this.txtbx_speed_wind_return_pre_flight_running.MaxLength = 2;
             this.txtbx_speed_wind_return_pre_flight_running.Name = "txtbx_speed_wind_return_pre_flight_running";
             this.txtbx_speed_wind_return_pre_flight_running.Size = new System.Drawing.Size(56, 30);
-            this.txtbx_speed_wind_return_pre_flight_running.TabIndex = 27;
+            this.txtbx_speed_wind_return_pre_flight_running.TabIndex = 15;
             this.txtbx_speed_wind_return_pre_flight_running.Text = "0";
             // 
             // panel176
@@ -3046,7 +3046,7 @@ namespace myFlightInfo
             this.label76.Location = new System.Drawing.Point(4, 4);
             this.label76.Name = "label76";
             this.label76.Size = new System.Drawing.Size(171, 25);
-            this.label76.TabIndex = 9;
+            this.label76.TabIndex = 0;
             this.label76.Text = "Pre-Flight running ";
             // 
             // panel177
@@ -3065,7 +3065,7 @@ namespace myFlightInfo
             this.lbl_return_pre_flight_running.Location = new System.Drawing.Point(4, 3);
             this.lbl_return_pre_flight_running.Name = "lbl_return_pre_flight_running";
             this.lbl_return_pre_flight_running.Size = new System.Drawing.Size(171, 25);
-            this.lbl_return_pre_flight_running.TabIndex = 10;
+            this.lbl_return_pre_flight_running.TabIndex = 0;
             this.lbl_return_pre_flight_running.Text = "Pre-Flight running ";
             // 
             // panel166

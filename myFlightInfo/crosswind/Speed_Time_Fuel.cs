@@ -7,9 +7,10 @@ namespace myFlightInfo.crosswind
     class Speed_Time_Fuel
     {
 
-        public static (Double, Double, Double, Double, Double) Calculate_Speed_Time_fuel(TextBox myTrueAirSpeed, TextBox myWindSpeed,
+        public static (Double, Double, Double, Double, Double, Double, Double) Calculate_Speed_Time_fuel(TextBox myTrueAirSpeed, TextBox myWindSpeed,
             TextBox myCourse, TextBox myWindDirection, TextBox myDistance, TextBox myFuelConsumption,
-            TextBox myMinLandingFuel, bool myFlag, bool myReturnLeg)
+            TextBox myMinLandingFuel, bool myFlag, bool myReturnLeg, TextBox myPreFlightGroundRunningFuelTime,
+            TextBox myReturnFlightGroundRunningFuelTime)
         {
             /*
              * In aviation, the ground speed formula is as follows: vg = √(va2 + vw2 - (2vavw cos(δ - ω + ⍺))
@@ -36,7 +37,12 @@ namespace myFlightInfo.crosswind
              * follows: ѱ = δ + ⍺
              */
 
-            double TrueAirspeed = Double.Parse(myTrueAirSpeed.Text);
+            if (!Double.TryParse(myTrueAirSpeed.Text, out double TrueAirspeed))
+            {
+                return (999, 999, 999, 999, 999, 999, 999);
+            }
+
+            //double TrueAirspeed = Double.Parse(myTrueAirSpeed.Text);
             double WindSpeed = Double.Parse(myWindSpeed.Text);
             double Course = Double.Parse(myCourse.Text);
             if (myReturnLeg) Course += 180;
@@ -55,22 +61,28 @@ namespace myFlightInfo.crosswind
 
             if (myFlag)
             {
+
+                Double OutwardPreflightFuel = Math.Ceiling((Double.Parse(myPreFlightGroundRunningFuelTime.Text)/60) * 12);
+
+                Double ReturnPreflightFuel = Math.Ceiling((Double.Parse(myReturnFlightGroundRunningFuelTime.Text) / 60) * 12);
+
                 //FlightTime = Distance in nautical miles / speed in knots
                 Double FlightTime = Double.Parse(myDistance.Text) / GroundSpeed;
 
                 //Fuel Consumption = Flight Time * Hourly consumption rate
                 Double JourneyFuelLoad = Math.Ceiling(FlightTime * Double.Parse(myFuelConsumption.Text));
 
-                Double FuelLoad = JourneyFuelLoad + Double.Parse(myMinLandingFuel.Text);
-               
-                if (myReturnLeg) FuelLoad = JourneyFuelLoad; // do not add min landing  fuel again
+                Double FuelLoad = JourneyFuelLoad + Double.Parse(myMinLandingFuel.Text) + OutwardPreflightFuel;
+
+                // do not add min landing fuel or OutwardPreFlightFuel again
+                if (myReturnLeg) FuelLoad = JourneyFuelLoad + ReturnPreflightFuel; 
                 
                 
-                return (WindCorrection, GroundSpeed, FlightTime, JourneyFuelLoad, FuelLoad);
+                return (WindCorrection, GroundSpeed, FlightTime, JourneyFuelLoad, FuelLoad, OutwardPreflightFuel, ReturnPreflightFuel);
             }
             else
             {
-                return (WindCorrection, GroundSpeed, 999, 999, 999);
+                return (WindCorrection, GroundSpeed, 999, 999, 999, 999, 999);
             }
            
         }

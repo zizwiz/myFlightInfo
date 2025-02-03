@@ -13,7 +13,7 @@ namespace myFlightInfo
         private void btn_calc_speed_time_fuel_Click(object sender, EventArgs e)
         {
             rchtxbx_speed_time_fuel_output.Text = "";
-            var resultsInbound = (0.0,0.0,0.0,0.0,0.0);
+            var resultsInbound = (0.0,0.0,0.0,0.0,0.0,0.0,0.0);
 
             try
             {
@@ -27,8 +27,9 @@ namespace myFlightInfo
                             txtbx_speed_wind_speed,
                             txtbx_speed_course, txtbx_speed_wind_direction, txtbx_speed_distance,
                             txtbx_speed_fuel_consumption,
-                            txtbx_min_landing_fuel, TimeFuelFlag, false);
-                    
+                            txtbx_min_landing_fuel, TimeFuelFlag, false, txtbx_speed_wind_pre_flight_running, 
+                            txtbx_speed_wind_return_pre_flight_running);
+
                     if (chkbx_speed_return.Checked) //only do if we have a return journey
                     {
 
@@ -37,10 +38,11 @@ namespace myFlightInfo
                             txtbx_speed_wind_speed,
                             txtbx_speed_course, txtbx_speed_wind_direction, txtbx_speed_distance,
                             txtbx_speed_fuel_consumption,
-                            txtbx_min_landing_fuel, TimeFuelFlag, true);
+                            txtbx_min_landing_fuel, TimeFuelFlag, true, txtbx_speed_wind_pre_flight_running, 
+                            txtbx_speed_wind_return_pre_flight_running);
                     }
 
-                    //results = WindCorrection, GroundSpeed, FlightTime, JourneyFuelLoad, FuelLoad
+                    //results = WindCorrection, GroundSpeed, FlightTime, JourneyFuelLoad, FuelLoad, OutwardPreflightFuel, ReturnPreflightFuel
 
                     rchtxbx_speed_time_fuel_output.Text = "";
 
@@ -59,13 +61,20 @@ namespace myFlightInfo
                     rchtxbx_speed_time_fuel_output.SelectionFont = new Font("Ariel", 12);
                     rchtxbx_speed_time_fuel_output.AppendText("Ground Speed = " + resultsOutbound.Item2 + "kts\r");
 
+                    if (!chkbx_speed_return.Checked)
+                    {
+                        rchtxbx_speed_time_fuel_output.AppendText("\r");
+                        rchtxbx_speed_time_fuel_output.SelectionFont = new Font("Ariel", 16, FontStyle.Underline);
+                        rchtxbx_speed_time_fuel_output.AppendText("Totals for Scheduled Flight");
+                    }
+
                     //FlightTime = Distance in nautical miles / speed in knots
                     rchtxbx_speed_time_fuel_output.SelectionFont = new Font("Ariel", 12);
                     rchtxbx_speed_time_fuel_output.AppendText("\rFlight Time = " +
                                                               TimeSpan.FromHours(resultsOutbound.Item3)
                                                                   .ToString("h\\:mm\\:ss") +
                                                               "\r");
-
+                    //Single Journey
                     if ((resultsOutbound.Item3 != 999)&& (!chkbx_speed_return.Checked))
                     {
                         //Fuel Consumption = Flight Time * Hourly consumption rate
@@ -74,7 +83,15 @@ namespace myFlightInfo
                                                                   "ℓ");
 
                         rchtxbx_speed_time_fuel_output.SelectionFont = new Font("Ariel", 12);
-                        rchtxbx_speed_time_fuel_output.AppendText("\rMin takeoff fuel load = " + resultsOutbound.Item5 + "ℓ");
+                        rchtxbx_speed_time_fuel_output.AppendText("\rPreflight fuel consumption = " + resultsOutbound.Item6 +
+                                                                  "ℓ");
+
+                        rchtxbx_speed_time_fuel_output.SelectionFont = new Font("Ariel", 12);
+                        rchtxbx_speed_time_fuel_output.AppendText("\rMin landing fuel = " + txtbx_min_landing_fuel.Text +
+                                                                  "ℓ\r");
+
+                        rchtxbx_speed_time_fuel_output.SelectionFont = new Font("Ariel", 12);
+                        rchtxbx_speed_time_fuel_output.AppendText("\rTotal Min takeoff fuel load = " + resultsOutbound.Item5 + "ℓ\r");
 
                         rchtxbx_speed_time_fuel_output.SelectionFont = new Font("Ariel", 12);
                         rchtxbx_speed_time_fuel_output.AppendText("\rFuel weight at takeoff= " +
@@ -83,6 +100,7 @@ namespace myFlightInfo
                                                                   "kg");
                     }
 
+                    //Return Journey
                     if ((resultsOutbound.Item3 != 999) && (chkbx_speed_return.Checked) && (resultsInbound.Item3 != 999))
                     {
                         rchtxbx_speed_time_fuel_output.AppendText("\r\r");
@@ -109,7 +127,7 @@ namespace myFlightInfo
 
                         rchtxbx_speed_time_fuel_output.AppendText("\r\r");
                         rchtxbx_speed_time_fuel_output.SelectionFont = new Font("Ariel", 16, FontStyle.Underline);
-                        rchtxbx_speed_time_fuel_output.AppendText("Totals for Return Flight");
+                        rchtxbx_speed_time_fuel_output.AppendText("Totals for Scheduled Flight");
 
                         //FlightTime = Distance in nautical miles / speed in knots
                         rchtxbx_speed_time_fuel_output.SelectionFont = new Font("Ariel", 12);
@@ -120,11 +138,28 @@ namespace myFlightInfo
 
                         //Fuel Consumption = Flight Time * Hourly consumption rate
                         rchtxbx_speed_time_fuel_output.SelectionFont = new Font("Ariel", 12);
-                        rchtxbx_speed_time_fuel_output.AppendText("\rMin journey fuel consumption = " + (resultsOutbound.Item4 + resultsInbound.Item4) +
+                        rchtxbx_speed_time_fuel_output.AppendText("\rMin Outward fuel consumption = " + resultsOutbound.Item4 +
                                                                   "ℓ");
 
                         rchtxbx_speed_time_fuel_output.SelectionFont = new Font("Ariel", 12);
-                        rchtxbx_speed_time_fuel_output.AppendText("\rMin takeoff fuel load = " + (resultsOutbound.Item5 + resultsInbound.Item5) + "ℓ");
+                        rchtxbx_speed_time_fuel_output.AppendText("\rOutward Preflight fuel consumption = " + resultsOutbound.Item6 +
+                                                                  "ℓ");
+
+                        rchtxbx_speed_time_fuel_output.SelectionFont = new Font("Ariel", 12);
+                        rchtxbx_speed_time_fuel_output.AppendText("\rMin Return fuel consumption = " + resultsInbound.Item4 +
+                                                                  "ℓ");
+
+                        rchtxbx_speed_time_fuel_output.SelectionFont = new Font("Ariel", 12);
+                        rchtxbx_speed_time_fuel_output.AppendText("\rReturn Preflight fuel consumption = " + resultsInbound.Item7 +
+                                                                  "ℓ");
+
+                        rchtxbx_speed_time_fuel_output.SelectionFont = new Font("Ariel", 12);
+                        rchtxbx_speed_time_fuel_output.AppendText("\rMin landing fuel = " + txtbx_min_landing_fuel.Text +
+                                                                  "ℓ\r");
+
+
+                        rchtxbx_speed_time_fuel_output.SelectionFont = new Font("Ariel", 12);
+                        rchtxbx_speed_time_fuel_output.AppendText("\rTotal Min takeoff fuel load = " + (resultsOutbound.Item5 + resultsInbound.Item5) + "ℓ\r");
 
                         rchtxbx_speed_time_fuel_output.SelectionFont = new Font("Ariel", 12);
                         rchtxbx_speed_time_fuel_output.AppendText("\rFuel weight at takeoff= " +
