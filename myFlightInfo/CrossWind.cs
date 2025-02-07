@@ -52,13 +52,13 @@ namespace myFlightInfo
 
             //from UI data
             double RunwayHeading1 = double.Parse(results.Item1);
-            double crossWind1 = Math.Ceiling(double.Parse(results.Item2));
-            double headwind1 = Math.Ceiling(double.Parse(results.Item3));
+            double crossWind1 = Math.Round(double.Parse(results.Item2),0);
+            double headwind1 = Math.Round(double.Parse(results.Item3),0);
 
             //from reciprocal to UI data
             double RunwayHeading2 = double.Parse(results.Item4);
-            double crossWind2 = Math.Ceiling(double.Parse(results.Item5));
-            double headwind2 = Math.Ceiling(double.Parse(results.Item6));
+            double crossWind2 = Math.Round(double.Parse(results.Item5),0);
+            double headwind2 = Math.Round(double.Parse(results.Item6),0);
 
             double crosswind3 = 0;
             double headwind3 = 0;

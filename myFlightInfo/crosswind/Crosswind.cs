@@ -7,7 +7,7 @@ namespace myFlightInfo.crosswind
         public static (string, string, string, string, string, string) CalculateWind(string magnitude, string direction, string runway_heading)
         {
            string crosswind1 = Math.Round((Double.Parse(magnitude)* 
-                                            Math.Sin(Math.PI * (Double.Parse(direction) - Double.Parse(runway_heading)*10)/180)),2).ToString();
+                                            Math.Sin(Math.PI * (Double.Parse(direction) - Double.Parse(runway_heading)*10)/180)), 2).ToString();
            string headwind1 = Math.Round((Double.Parse(magnitude) *
                                            Math.Cos(Math.PI * (Double.Parse(direction) - Double.Parse(runway_heading)*10) / 180)), 2).ToString();
 
