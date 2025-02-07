@@ -37,12 +37,12 @@ namespace myFlightInfo.crosswind
              * follows: ѱ = δ + ⍺
              */
 
-            if (!Double.TryParse(myTrueAirSpeed.Text, out double TrueAirspeed))
-            {
-                return (999, 999, 999, 999, 999, 999, 999);
-            }
+            //if (!double.TryParse(myTrueAirSpeed.Text, out double TrueAirspeed))
+            //{
+            //    return (999, 999, 999, 999, 999, 999, 999);
+            //}
 
-            //double TrueAirspeed = Double.Parse(myTrueAirSpeed.Text);
+            double TrueAirspeed = Double.Parse(myTrueAirSpeed.Text);
             double WindSpeed = Double.Parse(myWindSpeed.Text);
             double Course = Double.Parse(myCourse.Text);
             if (myReturnLeg) Course += 180;

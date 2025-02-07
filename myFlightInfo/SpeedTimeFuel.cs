@@ -18,7 +18,8 @@ namespace myFlightInfo
             try
             {
                 if (SpeedDataCheck(txtbx_speed_wind_speed.Text, txtbx_speed_wind_direction.Text,
-                         txtbx_speed_course.Text, txtbx_speed_true_airspeed.Text))
+                         txtbx_speed_course.Text, txtbx_speed_true_airspeed.Text, 
+                         txtbx_speed_wind_pre_flight_running.Text, txtbx_speed_wind_return_pre_flight_running.Text))
                 {
                     bool TimeFuelFlag = TimeFuelCheck(txtbx_speed_distance.Text, txtbx_speed_fuel_consumption.Text,
                          txtbx_min_landing_fuel.Text, txtbx_speed_fuel_specific_gravity.Text);
@@ -178,7 +179,8 @@ namespace myFlightInfo
         }
 
 
-        private bool SpeedDataCheck(string myWindStrength, string myDirection, string myCourse, string myAirspeed)
+        private bool SpeedDataCheck(string myWindStrength, string myDirection, string myCourse, string myAirspeed,
+        string mySpeed_wind_pre_flight_running, string mySpeed_wind_return_pre_flight_running)
         {
             //catch for incomplete data
             if (myCourse == "")
@@ -267,6 +269,25 @@ namespace myFlightInfo
             else if ((double.Parse(myAirspeed) < 0) || (double.Parse(myAirspeed) > 999))
             {
                 MsgBox.Show("Check True Air Speed Data is a valid number >0 and <999)", "Data out of scope",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if ((double.Parse(mySpeed_wind_pre_flight_running) < 0) || (double.Parse(mySpeed_wind_pre_flight_running) > 999))
+            {
+                MsgBox.Show("Check Pre-flight running Data is a valid number >0 and <999)", "Data out of scope",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if ((double.Parse(mySpeed_wind_return_pre_flight_running) < 0) || (double.Parse(mySpeed_wind_return_pre_flight_running) > 999))
+            {
+                MsgBox.Show("Check Return Pre-flight running Data is a valid number >0 and <999)", "Data out of scope",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (double.Parse(myAirspeed) < double.Parse(myWindStrength))
+            {
+                MsgBox.Show("Flying into a wind that is faster than your airspeed means you fly backwards, not advisable, best stay at home.", "Stay at Home",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
