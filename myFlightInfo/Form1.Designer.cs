@@ -241,6 +241,7 @@ namespace myFlightInfo
             this.label65 = new System.Windows.Forms.Label();
             this.panel167 = new System.Windows.Forms.Panel();
             this.label66 = new System.Windows.Forms.Label();
+            this.tab_takeoff_landing = new System.Windows.Forms.TabPage();
             this.tab_weight_balance = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.panel90 = new System.Windows.Forms.Panel();
@@ -460,6 +461,36 @@ namespace myFlightInfo
             this.panel87 = new System.Windows.Forms.Panel();
             this.panel88 = new System.Windows.Forms.Panel();
             this.panel89 = new System.Windows.Forms.Panel();
+            this.panel178 = new System.Windows.Forms.Panel();
+            this.btn_get_factor = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label74 = new System.Windows.Forms.Label();
+            this.txtbx_aircraft_laden_weight = new System.Windows.Forms.TextBox();
+            this.lbl_weight_type = new System.Windows.Forms.Label();
+            this.rdobtn_landing = new System.Windows.Forms.RadioButton();
+            this.rdobtn_take_off = new System.Windows.Forms.RadioButton();
+            this.label77 = new System.Windows.Forms.Label();
+            this.chkbx_soft_snow = new System.Windows.Forms.CheckBox();
+            this.label78 = new System.Windows.Forms.Label();
+            this.cmbobox_runway_surface = new System.Windows.Forms.ComboBox();
+            this.label79 = new System.Windows.Forms.Label();
+            this.label80 = new System.Windows.Forms.Label();
+            this.txtbx_runway_slope_angle = new System.Windows.Forms.TextBox();
+            this.lbl_runway_slope = new System.Windows.Forms.Label();
+            this.label81 = new System.Windows.Forms.Label();
+            this.txtbx_tailwind_component = new System.Windows.Forms.TextBox();
+            this.label82 = new System.Windows.Forms.Label();
+            this.label83 = new System.Windows.Forms.Label();
+            this.txtbx_ambeint_temperature = new System.Windows.Forms.TextBox();
+            this.label84 = new System.Windows.Forms.Label();
+            this.label85 = new System.Windows.Forms.Label();
+            this.txtbx_aerodrome_elevation = new System.Windows.Forms.TextBox();
+            this.label86 = new System.Windows.Forms.Label();
+            this.label87 = new System.Windows.Forms.Label();
+            this.txtbx_aircraft_base_weight = new System.Windows.Forms.TextBox();
+            this.label88 = new System.Windows.Forms.Label();
+            this.rchtxtbx_data = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.panel31.SuspendLayout();
@@ -594,6 +625,7 @@ namespace myFlightInfo
             this.panel177.SuspendLayout();
             this.panel166.SuspendLayout();
             this.panel167.SuspendLayout();
+            this.tab_takeoff_landing.SuspendLayout();
             this.tab_weight_balance.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.panel90.SuspendLayout();
@@ -700,6 +732,8 @@ namespace myFlightInfo
             this.tableLayoutPanel16.SuspendLayout();
             this.panel85.SuspendLayout();
             this.panel86.SuspendLayout();
+            this.panel178.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -1611,6 +1645,7 @@ namespace myFlightInfo
             this.tabcnt_utils.Controls.Add(this.tab_browser);
             this.tabcnt_utils.Controls.Add(this.tab_navigation);
             this.tabcnt_utils.Controls.Add(this.tab_crosswind);
+            this.tabcnt_utils.Controls.Add(this.tab_takeoff_landing);
             this.tabcnt_utils.Controls.Add(this.tab_weight_balance);
             this.tabcnt_utils.Controls.Add(this.tab_compliance_data);
             this.tabcnt_utils.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1625,10 +1660,10 @@ namespace myFlightInfo
             // tab_browser
             // 
             this.tab_browser.Controls.Add(this.webView_browser);
-            this.tab_browser.Location = new System.Drawing.Point(28, 4);
+            this.tab_browser.Location = new System.Drawing.Point(52, 4);
             this.tab_browser.Name = "tab_browser";
             this.tab_browser.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_browser.Size = new System.Drawing.Size(1391, 692);
+            this.tab_browser.Size = new System.Drawing.Size(1367, 692);
             this.tab_browser.TabIndex = 0;
             this.tab_browser.Text = "Browser";
             this.tab_browser.UseVisualStyleBackColor = true;
@@ -1641,17 +1676,17 @@ namespace myFlightInfo
             this.webView_browser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.webView_browser.Location = new System.Drawing.Point(3, 3);
             this.webView_browser.Name = "webView_browser";
-            this.webView_browser.Size = new System.Drawing.Size(1385, 686);
+            this.webView_browser.Size = new System.Drawing.Size(1361, 686);
             this.webView_browser.TabIndex = 1;
             this.webView_browser.ZoomFactor = 1D;
             // 
             // tab_navigation
             // 
             this.tab_navigation.Controls.Add(this.tableLayoutPanel23);
-            this.tab_navigation.Location = new System.Drawing.Point(28, 4);
+            this.tab_navigation.Location = new System.Drawing.Point(52, 4);
             this.tab_navigation.Name = "tab_navigation";
             this.tab_navigation.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_navigation.Size = new System.Drawing.Size(1391, 692);
+            this.tab_navigation.Size = new System.Drawing.Size(1367, 692);
             this.tab_navigation.TabIndex = 1;
             this.tab_navigation.Text = "Navigation";
             this.tab_navigation.UseVisualStyleBackColor = true;
@@ -1684,7 +1719,7 @@ namespace myFlightInfo
             this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel23.Size = new System.Drawing.Size(1385, 686);
+            this.tableLayoutPanel23.Size = new System.Drawing.Size(1361, 686);
             this.tableLayoutPanel23.TabIndex = 28;
             // 
             // panel6
@@ -1694,7 +1729,7 @@ namespace myFlightInfo
             this.panel6.Location = new System.Drawing.Point(23, 33);
             this.panel6.Name = "panel6";
             this.tableLayoutPanel23.SetRowSpan(this.panel6, 3);
-            this.panel6.Size = new System.Drawing.Size(429, 620);
+            this.panel6.Size = new System.Drawing.Size(421, 620);
             this.panel6.TabIndex = 0;
             // 
             // webView_navFromChart
@@ -1706,7 +1741,7 @@ namespace myFlightInfo
             this.webView_navFromChart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.webView_navFromChart.Location = new System.Drawing.Point(0, 0);
             this.webView_navFromChart.Name = "webView_navFromChart";
-            this.webView_navFromChart.Size = new System.Drawing.Size(429, 620);
+            this.webView_navFromChart.Size = new System.Drawing.Size(421, 620);
             this.webView_navFromChart.TabIndex = 2;
             this.webView_navFromChart.ZoomFactor = 1D;
             // 
@@ -1714,10 +1749,10 @@ namespace myFlightInfo
             // 
             this.panel19.Controls.Add(this.webView_navToChart);
             this.panel19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel19.Location = new System.Drawing.Point(933, 33);
+            this.panel19.Location = new System.Drawing.Point(917, 33);
             this.panel19.Name = "panel19";
             this.tableLayoutPanel23.SetRowSpan(this.panel19, 3);
-            this.panel19.Size = new System.Drawing.Size(429, 620);
+            this.panel19.Size = new System.Drawing.Size(421, 620);
             this.panel19.TabIndex = 1;
             // 
             // webView_navToChart
@@ -1729,7 +1764,7 @@ namespace myFlightInfo
             this.webView_navToChart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.webView_navToChart.Location = new System.Drawing.Point(0, 0);
             this.webView_navToChart.Name = "webView_navToChart";
-            this.webView_navToChart.Size = new System.Drawing.Size(429, 620);
+            this.webView_navToChart.Size = new System.Drawing.Size(421, 620);
             this.webView_navToChart.TabIndex = 3;
             this.webView_navToChart.ZoomFactor = 1D;
             // 
@@ -1737,9 +1772,9 @@ namespace myFlightInfo
             // 
             this.panel150.Controls.Add(this.tableLayoutPanel4);
             this.panel150.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel150.Location = new System.Drawing.Point(478, 33);
+            this.panel150.Location = new System.Drawing.Point(470, 33);
             this.panel150.Name = "panel150";
-            this.panel150.Size = new System.Drawing.Size(429, 292);
+            this.panel150.Size = new System.Drawing.Size(421, 292);
             this.panel150.TabIndex = 2;
             // 
             // tableLayoutPanel4
@@ -1759,7 +1794,7 @@ namespace myFlightInfo
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(429, 292);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(421, 292);
             this.tableLayoutPanel4.TabIndex = 17;
             // 
             // panel152
@@ -1767,9 +1802,9 @@ namespace myFlightInfo
             this.panel152.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel152.Controls.Add(this.lbl_present_altitude);
             this.panel152.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel152.Location = new System.Drawing.Point(345, 3);
+            this.panel152.Location = new System.Drawing.Point(339, 3);
             this.panel152.Name = "panel152";
-            this.panel152.Size = new System.Drawing.Size(81, 24);
+            this.panel152.Size = new System.Drawing.Size(79, 24);
             this.panel152.TabIndex = 3;
             // 
             // lbl_present_altitude
@@ -1790,7 +1825,7 @@ namespace myFlightInfo
             this.panel30.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel30.Location = new System.Drawing.Point(3, 33);
             this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(423, 236);
+            this.panel30.Size = new System.Drawing.Size(415, 236);
             this.panel30.TabIndex = 0;
             // 
             // lstbx_navigation_from
@@ -1802,7 +1837,7 @@ namespace myFlightInfo
             this.lstbx_navigation_from.ItemHeight = 20;
             this.lstbx_navigation_from.Location = new System.Drawing.Point(0, 0);
             this.lstbx_navigation_from.Name = "lstbx_navigation_from";
-            this.lstbx_navigation_from.Size = new System.Drawing.Size(423, 236);
+            this.lstbx_navigation_from.Size = new System.Drawing.Size(415, 236);
             this.lstbx_navigation_from.TabIndex = 0;
             // 
             // panel37
@@ -1812,7 +1847,7 @@ namespace myFlightInfo
             this.panel37.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel37.Location = new System.Drawing.Point(3, 3);
             this.panel37.Name = "panel37";
-            this.panel37.Size = new System.Drawing.Size(251, 24);
+            this.panel37.Size = new System.Drawing.Size(246, 24);
             this.panel37.TabIndex = 1;
             // 
             // lbl_p_airport_name
@@ -1831,9 +1866,9 @@ namespace myFlightInfo
             this.panel151.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel151.Controls.Add(this.label6);
             this.panel151.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel151.Location = new System.Drawing.Point(260, 3);
+            this.panel151.Location = new System.Drawing.Point(255, 3);
             this.panel151.Name = "panel151";
-            this.panel151.Size = new System.Drawing.Size(79, 24);
+            this.panel151.Size = new System.Drawing.Size(78, 24);
             this.panel151.TabIndex = 2;
             // 
             // label6
@@ -1842,7 +1877,7 @@ namespace myFlightInfo
             this.label6.Location = new System.Drawing.Point(0, 0);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 24);
+            this.label6.Size = new System.Drawing.Size(78, 24);
             this.label6.TabIndex = 24;
             this.label6.Text = "Altitude =";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1851,9 +1886,9 @@ namespace myFlightInfo
             // 
             this.panel10.Controls.Add(this.tableLayoutPanel3);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(478, 361);
+            this.panel10.Location = new System.Drawing.Point(470, 361);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(429, 292);
+            this.panel10.Size = new System.Drawing.Size(421, 292);
             this.panel10.TabIndex = 3;
             // 
             // tableLayoutPanel3
@@ -1872,7 +1907,7 @@ namespace myFlightInfo
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(429, 292);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(421, 292);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // panel9
@@ -1882,7 +1917,7 @@ namespace myFlightInfo
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(3, 33);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(423, 256);
+            this.panel9.Size = new System.Drawing.Size(415, 256);
             this.panel9.TabIndex = 0;
             // 
             // lstbx_navigation_to
@@ -1894,7 +1929,7 @@ namespace myFlightInfo
             this.lstbx_navigation_to.ItemHeight = 20;
             this.lstbx_navigation_to.Location = new System.Drawing.Point(0, 0);
             this.lstbx_navigation_to.Name = "lstbx_navigation_to";
-            this.lstbx_navigation_to.Size = new System.Drawing.Size(423, 256);
+            this.lstbx_navigation_to.Size = new System.Drawing.Size(415, 256);
             this.lstbx_navigation_to.TabIndex = 0;
             // 
             // panel15
@@ -1904,7 +1939,7 @@ namespace myFlightInfo
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel15.Location = new System.Drawing.Point(3, 3);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(251, 24);
+            this.panel15.Size = new System.Drawing.Size(246, 24);
             this.panel15.TabIndex = 1;
             // 
             // lbl_d_airport_name
@@ -1923,9 +1958,9 @@ namespace myFlightInfo
             this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel16.Controls.Add(this.label12);
             this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel16.Location = new System.Drawing.Point(260, 3);
+            this.panel16.Location = new System.Drawing.Point(255, 3);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(79, 24);
+            this.panel16.Size = new System.Drawing.Size(78, 24);
             this.panel16.TabIndex = 2;
             // 
             // label12
@@ -1934,7 +1969,7 @@ namespace myFlightInfo
             this.label12.Location = new System.Drawing.Point(0, 0);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(79, 24);
+            this.label12.Size = new System.Drawing.Size(78, 24);
             this.label12.TabIndex = 25;
             this.label12.Text = "Altitude =";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1944,9 +1979,9 @@ namespace myFlightInfo
             this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel17.Controls.Add(this.lbl_to_altitude);
             this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel17.Location = new System.Drawing.Point(345, 3);
+            this.panel17.Location = new System.Drawing.Point(339, 3);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(81, 24);
+            this.panel17.Size = new System.Drawing.Size(79, 24);
             this.panel17.TabIndex = 3;
             // 
             // lbl_to_altitude
@@ -1967,7 +2002,7 @@ namespace myFlightInfo
             this.panel18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel18.Location = new System.Drawing.Point(23, 3);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(429, 24);
+            this.panel18.Size = new System.Drawing.Size(421, 24);
             this.panel18.TabIndex = 4;
             // 
             // label2
@@ -1988,9 +2023,9 @@ namespace myFlightInfo
             this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel21.Controls.Add(this.label4);
             this.panel21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel21.Location = new System.Drawing.Point(478, 3);
+            this.panel21.Location = new System.Drawing.Point(470, 3);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(429, 24);
+            this.panel21.Size = new System.Drawing.Size(421, 24);
             this.panel21.TabIndex = 5;
             // 
             // label4
@@ -2009,9 +2044,9 @@ namespace myFlightInfo
             this.panel22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel22.Controls.Add(this.label5);
             this.panel22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel22.Location = new System.Drawing.Point(478, 331);
+            this.panel22.Location = new System.Drawing.Point(470, 331);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(429, 24);
+            this.panel22.Size = new System.Drawing.Size(421, 24);
             this.panel22.TabIndex = 6;
             // 
             // label5
@@ -2030,9 +2065,9 @@ namespace myFlightInfo
             this.panel24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel24.Controls.Add(this.label3);
             this.panel24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel24.Location = new System.Drawing.Point(933, 3);
+            this.panel24.Location = new System.Drawing.Point(917, 3);
             this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(429, 24);
+            this.panel24.Size = new System.Drawing.Size(421, 24);
             this.panel24.TabIndex = 7;
             // 
             // label3
@@ -2058,9 +2093,9 @@ namespace myFlightInfo
             // tab_crosswind
             // 
             this.tab_crosswind.Controls.Add(this.tableLayoutPanel17);
-            this.tab_crosswind.Location = new System.Drawing.Point(28, 4);
+            this.tab_crosswind.Location = new System.Drawing.Point(52, 4);
             this.tab_crosswind.Name = "tab_crosswind";
-            this.tab_crosswind.Size = new System.Drawing.Size(1391, 692);
+            this.tab_crosswind.Size = new System.Drawing.Size(1367, 692);
             this.tab_crosswind.TabIndex = 2;
             this.tab_crosswind.Text = "Crosswind, Speed, Time, Fuel";
             this.tab_crosswind.UseVisualStyleBackColor = true;
@@ -2080,7 +2115,7 @@ namespace myFlightInfo
             this.tableLayoutPanel17.RowCount = 2;
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel17.Size = new System.Drawing.Size(1391, 692);
+            this.tableLayoutPanel17.Size = new System.Drawing.Size(1367, 692);
             this.tableLayoutPanel17.TabIndex = 17;
             // 
             // tableLayoutPanel5
@@ -2095,7 +2130,7 @@ namespace myFlightInfo
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(689, 646);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(677, 646);
             this.tableLayoutPanel5.TabIndex = 1;
             // 
             // tableLayoutPanel19
@@ -2107,20 +2142,20 @@ namespace myFlightInfo
             this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel19.Controls.Add(this.picbx_crosswind, 1, 1);
             this.tableLayoutPanel19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel19.Location = new System.Drawing.Point(347, 3);
+            this.tableLayoutPanel19.Location = new System.Drawing.Point(341, 3);
             this.tableLayoutPanel19.Name = "tableLayoutPanel19";
             this.tableLayoutPanel19.RowCount = 3;
             this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 600F));
             this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel19.Size = new System.Drawing.Size(339, 640);
+            this.tableLayoutPanel19.Size = new System.Drawing.Size(333, 640);
             this.tableLayoutPanel19.TabIndex = 0;
             // 
             // picbx_crosswind
             // 
             this.picbx_crosswind.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picbx_crosswind.Image = global::myFlightInfo.Properties.Resources.crosswind_runway;
-            this.picbx_crosswind.Location = new System.Drawing.Point(22, 23);
+            this.picbx_crosswind.Location = new System.Drawing.Point(19, 23);
             this.picbx_crosswind.Name = "picbx_crosswind";
             this.picbx_crosswind.Size = new System.Drawing.Size(294, 594);
             this.picbx_crosswind.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -2140,7 +2175,7 @@ namespace myFlightInfo
             this.tableLayoutPanel20.RowCount = 2;
             this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 205F));
             this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel20.Size = new System.Drawing.Size(338, 640);
+            this.tableLayoutPanel20.Size = new System.Drawing.Size(332, 640);
             this.tableLayoutPanel20.TabIndex = 1;
             // 
             // tableLayoutPanel21
@@ -2168,7 +2203,7 @@ namespace myFlightInfo
             this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
             this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
-            this.tableLayoutPanel21.Size = new System.Drawing.Size(332, 199);
+            this.tableLayoutPanel21.Size = new System.Drawing.Size(326, 199);
             this.tableLayoutPanel21.TabIndex = 0;
             // 
             // panel7
@@ -2235,7 +2270,7 @@ namespace myFlightInfo
             this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel13.Location = new System.Drawing.Point(148, 8);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(181, 34);
+            this.panel13.Size = new System.Drawing.Size(175, 34);
             this.panel13.TabIndex = 4;
             // 
             // txtbx_magnitude
@@ -2265,7 +2300,7 @@ namespace myFlightInfo
             this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel14.Location = new System.Drawing.Point(148, 53);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(181, 34);
+            this.panel14.Size = new System.Drawing.Size(175, 34);
             this.panel14.TabIndex = 5;
             // 
             // txtbx_direction
@@ -2294,7 +2329,7 @@ namespace myFlightInfo
             this.panel20.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel20.Location = new System.Drawing.Point(148, 98);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(181, 34);
+            this.panel20.Size = new System.Drawing.Size(175, 34);
             this.panel20.TabIndex = 6;
             // 
             // txtbx_runway_heading
@@ -2314,7 +2349,7 @@ namespace myFlightInfo
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel12.Location = new System.Drawing.Point(3, 143);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(326, 54);
+            this.panel12.Size = new System.Drawing.Size(320, 54);
             this.panel12.TabIndex = 7;
             // 
             // tableLayoutPanel22
@@ -2333,7 +2368,7 @@ namespace myFlightInfo
             this.tableLayoutPanel22.Name = "tableLayoutPanel22";
             this.tableLayoutPanel22.RowCount = 1;
             this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel22.Size = new System.Drawing.Size(326, 54);
+            this.tableLayoutPanel22.Size = new System.Drawing.Size(320, 54);
             this.tableLayoutPanel22.TabIndex = 0;
             // 
             // panel23
@@ -2341,24 +2376,24 @@ namespace myFlightInfo
             this.panel23.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel23.Location = new System.Drawing.Point(3, 3);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(99, 48);
+            this.panel23.Size = new System.Drawing.Size(97, 48);
             this.panel23.TabIndex = 0;
             // 
             // panel25
             // 
             this.panel25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel25.Location = new System.Drawing.Point(113, 3);
+            this.panel25.Location = new System.Drawing.Point(111, 3);
             this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(99, 48);
+            this.panel25.Size = new System.Drawing.Size(97, 48);
             this.panel25.TabIndex = 0;
             // 
             // panel146
             // 
             this.panel146.Controls.Add(this.btn_calc_wind);
             this.panel146.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel146.Location = new System.Drawing.Point(223, 3);
+            this.panel146.Location = new System.Drawing.Point(219, 3);
             this.panel146.Name = "panel146";
-            this.panel146.Size = new System.Drawing.Size(100, 48);
+            this.panel146.Size = new System.Drawing.Size(98, 48);
             this.panel146.TabIndex = 2;
             // 
             // btn_calc_wind
@@ -2366,7 +2401,7 @@ namespace myFlightInfo
             this.btn_calc_wind.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_calc_wind.Location = new System.Drawing.Point(0, 0);
             this.btn_calc_wind.Name = "btn_calc_wind";
-            this.btn_calc_wind.Size = new System.Drawing.Size(100, 48);
+            this.btn_calc_wind.Size = new System.Drawing.Size(98, 48);
             this.btn_calc_wind.TabIndex = 4;
             this.btn_calc_wind.Text = "Calculate";
             this.btn_calc_wind.UseVisualStyleBackColor = true;
@@ -2379,7 +2414,7 @@ namespace myFlightInfo
             this.rchtxtbx_crosswind_output.Location = new System.Drawing.Point(3, 208);
             this.rchtxtbx_crosswind_output.Name = "rchtxtbx_crosswind_output";
             this.rchtxtbx_crosswind_output.ReadOnly = true;
-            this.rchtxtbx_crosswind_output.Size = new System.Drawing.Size(332, 429);
+            this.rchtxtbx_crosswind_output.Size = new System.Drawing.Size(326, 429);
             this.rchtxtbx_crosswind_output.TabIndex = 0;
             this.rchtxtbx_crosswind_output.Text = "";
             // 
@@ -2391,22 +2426,22 @@ namespace myFlightInfo
             this.tableLayoutPanel18.Controls.Add(this.rchtxbx_speed_time_fuel_output, 1, 0);
             this.tableLayoutPanel18.Controls.Add(this.tableLayoutPanel24, 0, 0);
             this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel18.Location = new System.Drawing.Point(698, 43);
+            this.tableLayoutPanel18.Location = new System.Drawing.Point(686, 43);
             this.tableLayoutPanel18.Name = "tableLayoutPanel18";
             this.tableLayoutPanel18.RowCount = 1;
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 646F));
-            this.tableLayoutPanel18.Size = new System.Drawing.Size(690, 646);
+            this.tableLayoutPanel18.Size = new System.Drawing.Size(678, 646);
             this.tableLayoutPanel18.TabIndex = 2;
             // 
             // rchtxbx_speed_time_fuel_output
             // 
             this.rchtxbx_speed_time_fuel_output.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.rchtxbx_speed_time_fuel_output.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rchtxbx_speed_time_fuel_output.Location = new System.Drawing.Point(382, 3);
+            this.rchtxbx_speed_time_fuel_output.Location = new System.Drawing.Point(375, 3);
             this.rchtxbx_speed_time_fuel_output.Name = "rchtxbx_speed_time_fuel_output";
             this.rchtxbx_speed_time_fuel_output.ReadOnly = true;
-            this.rchtxbx_speed_time_fuel_output.Size = new System.Drawing.Size(305, 640);
+            this.rchtxbx_speed_time_fuel_output.Size = new System.Drawing.Size(300, 640);
             this.rchtxbx_speed_time_fuel_output.TabIndex = 0;
             this.rchtxbx_speed_time_fuel_output.Text = "";
             // 
@@ -2469,7 +2504,7 @@ namespace myFlightInfo
             this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
             this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel24.Size = new System.Drawing.Size(373, 640);
+            this.tableLayoutPanel24.Size = new System.Drawing.Size(366, 640);
             this.tableLayoutPanel24.TabIndex = 1;
             // 
             // panel147
@@ -2631,7 +2666,7 @@ namespace myFlightInfo
             this.panel158.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel158.Location = new System.Drawing.Point(248, 8);
             this.panel158.Name = "panel158";
-            this.panel158.Size = new System.Drawing.Size(122, 34);
+            this.panel158.Size = new System.Drawing.Size(115, 34);
             this.panel158.TabIndex = 8;
             // 
             // label63
@@ -2661,7 +2696,7 @@ namespace myFlightInfo
             this.panel159.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel159.Location = new System.Drawing.Point(248, 53);
             this.panel159.Name = "panel159";
-            this.panel159.Size = new System.Drawing.Size(122, 34);
+            this.panel159.Size = new System.Drawing.Size(115, 34);
             this.panel159.TabIndex = 9;
             // 
             // label64
@@ -2691,7 +2726,7 @@ namespace myFlightInfo
             this.panel160.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel160.Location = new System.Drawing.Point(248, 98);
             this.panel160.Name = "panel160";
-            this.panel160.Size = new System.Drawing.Size(122, 34);
+            this.panel160.Size = new System.Drawing.Size(115, 34);
             this.panel160.TabIndex = 10;
             // 
             // label67
@@ -2721,7 +2756,7 @@ namespace myFlightInfo
             this.panel161.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel161.Location = new System.Drawing.Point(248, 143);
             this.panel161.Name = "panel161";
-            this.panel161.Size = new System.Drawing.Size(122, 34);
+            this.panel161.Size = new System.Drawing.Size(115, 34);
             this.panel161.TabIndex = 11;
             // 
             // label68
@@ -2751,7 +2786,7 @@ namespace myFlightInfo
             this.panel162.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel162.Location = new System.Drawing.Point(248, 223);
             this.panel162.Name = "panel162";
-            this.panel162.Size = new System.Drawing.Size(122, 34);
+            this.panel162.Size = new System.Drawing.Size(115, 34);
             this.panel162.TabIndex = 12;
             // 
             // label69
@@ -2781,7 +2816,7 @@ namespace myFlightInfo
             this.panel163.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel163.Location = new System.Drawing.Point(248, 303);
             this.panel163.Name = "panel163";
-            this.panel163.Size = new System.Drawing.Size(122, 34);
+            this.panel163.Size = new System.Drawing.Size(115, 34);
             this.panel163.TabIndex = 13;
             // 
             // label70
@@ -2812,7 +2847,7 @@ namespace myFlightInfo
             this.panel164.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel164.Location = new System.Drawing.Point(248, 348);
             this.panel164.Name = "panel164";
-            this.panel164.Size = new System.Drawing.Size(122, 34);
+            this.panel164.Size = new System.Drawing.Size(115, 34);
             this.panel164.TabIndex = 14;
             // 
             // label71
@@ -2843,7 +2878,7 @@ namespace myFlightInfo
             this.panel165.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel165.Location = new System.Drawing.Point(248, 393);
             this.panel165.Name = "panel165";
-            this.panel165.Size = new System.Drawing.Size(122, 34);
+            this.panel165.Size = new System.Drawing.Size(115, 34);
             this.panel165.TabIndex = 15;
             // 
             // label72
@@ -2874,7 +2909,7 @@ namespace myFlightInfo
             this.panel168.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel168.Location = new System.Drawing.Point(3, 573);
             this.panel168.Name = "panel168";
-            this.panel168.Size = new System.Drawing.Size(367, 54);
+            this.panel168.Size = new System.Drawing.Size(360, 54);
             this.panel168.TabIndex = 16;
             // 
             // tableLayoutPanel25
@@ -2893,7 +2928,7 @@ namespace myFlightInfo
             this.tableLayoutPanel25.Name = "tableLayoutPanel25";
             this.tableLayoutPanel25.RowCount = 1;
             this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel25.Size = new System.Drawing.Size(367, 54);
+            this.tableLayoutPanel25.Size = new System.Drawing.Size(360, 54);
             this.tableLayoutPanel25.TabIndex = 1;
             // 
             // panel169
@@ -2901,24 +2936,24 @@ namespace myFlightInfo
             this.panel169.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel169.Location = new System.Drawing.Point(3, 3);
             this.panel169.Name = "panel169";
-            this.panel169.Size = new System.Drawing.Size(113, 48);
+            this.panel169.Size = new System.Drawing.Size(110, 48);
             this.panel169.TabIndex = 0;
             // 
             // panel170
             // 
             this.panel170.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel170.Location = new System.Drawing.Point(127, 3);
+            this.panel170.Location = new System.Drawing.Point(124, 3);
             this.panel170.Name = "panel170";
-            this.panel170.Size = new System.Drawing.Size(113, 48);
+            this.panel170.Size = new System.Drawing.Size(110, 48);
             this.panel170.TabIndex = 1;
             // 
             // panel171
             // 
             this.panel171.Controls.Add(this.btn_calc_speed_time_fuel);
             this.panel171.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel171.Location = new System.Drawing.Point(251, 3);
+            this.panel171.Location = new System.Drawing.Point(245, 3);
             this.panel171.Name = "panel171";
-            this.panel171.Size = new System.Drawing.Size(113, 48);
+            this.panel171.Size = new System.Drawing.Size(112, 48);
             this.panel171.TabIndex = 2;
             // 
             // btn_calc_speed_time_fuel
@@ -2926,7 +2961,7 @@ namespace myFlightInfo
             this.btn_calc_speed_time_fuel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_calc_speed_time_fuel.Location = new System.Drawing.Point(0, 0);
             this.btn_calc_speed_time_fuel.Name = "btn_calc_speed_time_fuel";
-            this.btn_calc_speed_time_fuel.Size = new System.Drawing.Size(113, 48);
+            this.btn_calc_speed_time_fuel.Size = new System.Drawing.Size(112, 48);
             this.btn_calc_speed_time_fuel.TabIndex = 16;
             this.btn_calc_speed_time_fuel.Text = "Calculate";
             this.btn_calc_speed_time_fuel.UseVisualStyleBackColor = true;
@@ -2938,7 +2973,7 @@ namespace myFlightInfo
             this.panel172.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel172.Location = new System.Drawing.Point(248, 483);
             this.panel172.Name = "panel172";
-            this.panel172.Size = new System.Drawing.Size(122, 34);
+            this.panel172.Size = new System.Drawing.Size(115, 34);
             this.panel172.TabIndex = 17;
             // 
             // chkbx_speed_return
@@ -2977,7 +3012,7 @@ namespace myFlightInfo
             this.panel174.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel174.Location = new System.Drawing.Point(248, 183);
             this.panel174.Name = "panel174";
-            this.panel174.Size = new System.Drawing.Size(122, 34);
+            this.panel174.Size = new System.Drawing.Size(115, 34);
             this.panel174.TabIndex = 19;
             // 
             // label75
@@ -3007,7 +3042,7 @@ namespace myFlightInfo
             this.panel175.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel175.Location = new System.Drawing.Point(248, 528);
             this.panel175.Name = "panel175";
-            this.panel175.Size = new System.Drawing.Size(122, 34);
+            this.panel175.Size = new System.Drawing.Size(115, 34);
             this.panel175.TabIndex = 20;
             // 
             // lbl_return_pre_flight_running_min
@@ -3075,7 +3110,7 @@ namespace myFlightInfo
             this.panel166.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel166.Location = new System.Drawing.Point(3, 3);
             this.panel166.Name = "panel166";
-            this.panel166.Size = new System.Drawing.Size(689, 34);
+            this.panel166.Size = new System.Drawing.Size(677, 34);
             this.panel166.TabIndex = 3;
             // 
             // label65
@@ -3095,9 +3130,9 @@ namespace myFlightInfo
             this.panel167.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel167.Controls.Add(this.label66);
             this.panel167.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel167.Location = new System.Drawing.Point(698, 3);
+            this.panel167.Location = new System.Drawing.Point(686, 3);
             this.panel167.Name = "panel167";
-            this.panel167.Size = new System.Drawing.Size(690, 34);
+            this.panel167.Size = new System.Drawing.Size(678, 34);
             this.panel167.TabIndex = 4;
             // 
             // label66
@@ -3112,13 +3147,23 @@ namespace myFlightInfo
             this.label66.TabIndex = 0;
             this.label66.Text = "Speed, Time and Fuel";
             // 
+            // tab_takeoff_landing
+            // 
+            this.tab_takeoff_landing.Controls.Add(this.panel178);
+            this.tab_takeoff_landing.Location = new System.Drawing.Point(52, 4);
+            this.tab_takeoff_landing.Name = "tab_takeoff_landing";
+            this.tab_takeoff_landing.Size = new System.Drawing.Size(1367, 692);
+            this.tab_takeoff_landing.TabIndex = 5;
+            this.tab_takeoff_landing.Text = "Take-Off and Landing";
+            this.tab_takeoff_landing.UseVisualStyleBackColor = true;
+            // 
             // tab_weight_balance
             // 
             this.tab_weight_balance.Controls.Add(this.tableLayoutPanel10);
-            this.tab_weight_balance.Location = new System.Drawing.Point(28, 4);
+            this.tab_weight_balance.Location = new System.Drawing.Point(52, 4);
             this.tab_weight_balance.Name = "tab_weight_balance";
             this.tab_weight_balance.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_weight_balance.Size = new System.Drawing.Size(1391, 692);
+            this.tab_weight_balance.Size = new System.Drawing.Size(1367, 692);
             this.tab_weight_balance.TabIndex = 3;
             this.tab_weight_balance.Text = "Weights and Balance";
             this.tab_weight_balance.UseVisualStyleBackColor = true;
@@ -3143,16 +3188,16 @@ namespace myFlightInfo
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(1385, 686);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(1361, 686);
             this.tableLayoutPanel10.TabIndex = 48;
             // 
             // panel90
             // 
             this.panel90.Controls.Add(this.tableLayoutPanel12);
             this.panel90.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel90.Location = new System.Drawing.Point(654, 3);
+            this.panel90.Location = new System.Drawing.Point(642, 3);
             this.panel90.Name = "panel90";
-            this.panel90.Size = new System.Drawing.Size(157, 448);
+            this.panel90.Size = new System.Drawing.Size(155, 448);
             this.panel90.TabIndex = 0;
             // 
             // tableLayoutPanel12
@@ -3191,7 +3236,7 @@ namespace myFlightInfo
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 2F));
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel12.Size = new System.Drawing.Size(157, 448);
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(155, 448);
             this.tableLayoutPanel12.TabIndex = 0;
             // 
             // panel95
@@ -3201,7 +3246,7 @@ namespace myFlightInfo
             this.panel95.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel95.Location = new System.Drawing.Point(3, 3);
             this.panel95.Name = "panel95";
-            this.panel95.Size = new System.Drawing.Size(151, 42);
+            this.panel95.Size = new System.Drawing.Size(149, 42);
             this.panel95.TabIndex = 0;
             // 
             // label51
@@ -3221,7 +3266,7 @@ namespace myFlightInfo
             this.panel96.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel96.Location = new System.Drawing.Point(3, 53);
             this.panel96.Name = "panel96";
-            this.panel96.Size = new System.Drawing.Size(151, 42);
+            this.panel96.Size = new System.Drawing.Size(149, 42);
             this.panel96.TabIndex = 1;
             // 
             // label24
@@ -3229,7 +3274,7 @@ namespace myFlightInfo
             this.label24.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(40, 22);
+            this.label24.Location = new System.Drawing.Point(39, 22);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(68, 20);
             this.label24.TabIndex = 29;
@@ -3241,7 +3286,7 @@ namespace myFlightInfo
             this.panel97.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel97.Location = new System.Drawing.Point(3, 101);
             this.panel97.Name = "panel97";
-            this.panel97.Size = new System.Drawing.Size(91, 42);
+            this.panel97.Size = new System.Drawing.Size(89, 42);
             this.panel97.TabIndex = 2;
             // 
             // txtbx_cog_takeoff_fuel
@@ -3251,7 +3296,7 @@ namespace myFlightInfo
             this.txtbx_cog_takeoff_fuel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtbx_cog_takeoff_fuel.Location = new System.Drawing.Point(0, 0);
             this.txtbx_cog_takeoff_fuel.Name = "txtbx_cog_takeoff_fuel";
-            this.txtbx_cog_takeoff_fuel.Size = new System.Drawing.Size(91, 26);
+            this.txtbx_cog_takeoff_fuel.Size = new System.Drawing.Size(89, 26);
             this.txtbx_cog_takeoff_fuel.TabIndex = 23;
             this.txtbx_cog_takeoff_fuel.Text = "0";
             this.txtbx_cog_takeoff_fuel.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -3260,7 +3305,7 @@ namespace myFlightInfo
             // 
             this.panel98.Controls.Add(this.label28);
             this.panel98.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel98.Location = new System.Drawing.Point(100, 101);
+            this.panel98.Location = new System.Drawing.Point(98, 101);
             this.panel98.Name = "panel98";
             this.panel98.Size = new System.Drawing.Size(54, 42);
             this.panel98.TabIndex = 3;
@@ -3283,7 +3328,7 @@ namespace myFlightInfo
             this.panel99.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel99.Location = new System.Drawing.Point(3, 151);
             this.panel99.Name = "panel99";
-            this.panel99.Size = new System.Drawing.Size(151, 42);
+            this.panel99.Size = new System.Drawing.Size(149, 42);
             this.panel99.TabIndex = 4;
             // 
             // label22
@@ -3302,7 +3347,7 @@ namespace myFlightInfo
             this.panel100.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel100.Location = new System.Drawing.Point(3, 199);
             this.panel100.Name = "panel100";
-            this.panel100.Size = new System.Drawing.Size(91, 42);
+            this.panel100.Size = new System.Drawing.Size(89, 42);
             this.panel100.TabIndex = 5;
             // 
             // txtbx_cog_landing_fuel
@@ -3312,7 +3357,7 @@ namespace myFlightInfo
             this.txtbx_cog_landing_fuel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtbx_cog_landing_fuel.Location = new System.Drawing.Point(0, 0);
             this.txtbx_cog_landing_fuel.Name = "txtbx_cog_landing_fuel";
-            this.txtbx_cog_landing_fuel.Size = new System.Drawing.Size(91, 26);
+            this.txtbx_cog_landing_fuel.Size = new System.Drawing.Size(89, 26);
             this.txtbx_cog_landing_fuel.TabIndex = 36;
             this.txtbx_cog_landing_fuel.Text = "10";
             this.txtbx_cog_landing_fuel.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -3324,7 +3369,7 @@ namespace myFlightInfo
             this.panel101.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel101.Location = new System.Drawing.Point(3, 249);
             this.panel101.Name = "panel101";
-            this.panel101.Size = new System.Drawing.Size(151, 42);
+            this.panel101.Size = new System.Drawing.Size(149, 42);
             this.panel101.TabIndex = 6;
             // 
             // label23
@@ -3343,7 +3388,7 @@ namespace myFlightInfo
             this.panel102.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel102.Location = new System.Drawing.Point(3, 297);
             this.panel102.Name = "panel102";
-            this.panel102.Size = new System.Drawing.Size(91, 42);
+            this.panel102.Size = new System.Drawing.Size(89, 42);
             this.panel102.TabIndex = 7;
             // 
             // txtbx_cog_zero_fuel
@@ -3353,7 +3398,7 @@ namespace myFlightInfo
             this.txtbx_cog_zero_fuel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtbx_cog_zero_fuel.Location = new System.Drawing.Point(0, 0);
             this.txtbx_cog_zero_fuel.Name = "txtbx_cog_zero_fuel";
-            this.txtbx_cog_zero_fuel.Size = new System.Drawing.Size(91, 26);
+            this.txtbx_cog_zero_fuel.Size = new System.Drawing.Size(89, 26);
             this.txtbx_cog_zero_fuel.TabIndex = 38;
             this.txtbx_cog_zero_fuel.Text = "0";
             this.txtbx_cog_zero_fuel.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -3365,7 +3410,7 @@ namespace myFlightInfo
             this.panel103.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel103.Location = new System.Drawing.Point(3, 347);
             this.panel103.Name = "panel103";
-            this.panel103.Size = new System.Drawing.Size(151, 42);
+            this.panel103.Size = new System.Drawing.Size(149, 42);
             this.panel103.TabIndex = 8;
             // 
             // label25
@@ -3384,7 +3429,7 @@ namespace myFlightInfo
             this.panel104.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel104.Location = new System.Drawing.Point(3, 395);
             this.panel104.Name = "panel104";
-            this.panel104.Size = new System.Drawing.Size(91, 50);
+            this.panel104.Size = new System.Drawing.Size(89, 50);
             this.panel104.TabIndex = 9;
             // 
             // txtbx_specific_gravity
@@ -3394,7 +3439,7 @@ namespace myFlightInfo
             this.txtbx_specific_gravity.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtbx_specific_gravity.Location = new System.Drawing.Point(0, 0);
             this.txtbx_specific_gravity.Name = "txtbx_specific_gravity";
-            this.txtbx_specific_gravity.Size = new System.Drawing.Size(91, 26);
+            this.txtbx_specific_gravity.Size = new System.Drawing.Size(89, 26);
             this.txtbx_specific_gravity.TabIndex = 40;
             this.txtbx_specific_gravity.Text = "0.72";
             this.txtbx_specific_gravity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -3403,7 +3448,7 @@ namespace myFlightInfo
             // 
             this.panel105.Controls.Add(this.label26);
             this.panel105.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel105.Location = new System.Drawing.Point(100, 395);
+            this.panel105.Location = new System.Drawing.Point(98, 395);
             this.panel105.Name = "panel105";
             this.panel105.Size = new System.Drawing.Size(54, 50);
             this.panel105.TabIndex = 10;
@@ -3423,7 +3468,7 @@ namespace myFlightInfo
             // 
             this.panel106.Controls.Add(this.label30);
             this.panel106.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel106.Location = new System.Drawing.Point(100, 297);
+            this.panel106.Location = new System.Drawing.Point(98, 297);
             this.panel106.Name = "panel106";
             this.panel106.Size = new System.Drawing.Size(54, 42);
             this.panel106.TabIndex = 11;
@@ -3443,7 +3488,7 @@ namespace myFlightInfo
             // 
             this.panel107.Controls.Add(this.label29);
             this.panel107.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel107.Location = new System.Drawing.Point(100, 199);
+            this.panel107.Location = new System.Drawing.Point(98, 199);
             this.panel107.Name = "panel107";
             this.panel107.Size = new System.Drawing.Size(54, 42);
             this.panel107.TabIndex = 12;
@@ -3465,7 +3510,7 @@ namespace myFlightInfo
             this.panel91.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel91.Location = new System.Drawing.Point(3, 3);
             this.panel91.Name = "panel91";
-            this.panel91.Size = new System.Drawing.Size(636, 448);
+            this.panel91.Size = new System.Drawing.Size(624, 448);
             this.panel91.TabIndex = 1;
             // 
             // tableLayoutPanel13
@@ -3541,7 +3586,7 @@ namespace myFlightInfo
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.999999F));
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel13.Size = new System.Drawing.Size(636, 448);
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(624, 448);
             this.tableLayoutPanel13.TabIndex = 0;
             // 
             // panel108
@@ -3551,7 +3596,7 @@ namespace myFlightInfo
             this.panel108.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel108.Location = new System.Drawing.Point(3, 3);
             this.panel108.Name = "panel108";
-            this.panel108.Size = new System.Drawing.Size(630, 36);
+            this.panel108.Size = new System.Drawing.Size(618, 36);
             this.panel108.TabIndex = 0;
             // 
             // label52
@@ -3570,7 +3615,7 @@ namespace myFlightInfo
             this.panel109.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel109.Location = new System.Drawing.Point(3, 47);
             this.panel109.Name = "panel109";
-            this.panel109.Size = new System.Drawing.Size(151, 36);
+            this.panel109.Size = new System.Drawing.Size(148, 36);
             this.panel109.TabIndex = 1;
             // 
             // label13
@@ -3587,9 +3632,9 @@ namespace myFlightInfo
             // 
             this.panel110.Controls.Add(this.label14);
             this.panel110.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel110.Location = new System.Drawing.Point(162, 47);
+            this.panel110.Location = new System.Drawing.Point(159, 47);
             this.panel110.Name = "panel110";
-            this.panel110.Size = new System.Drawing.Size(151, 36);
+            this.panel110.Size = new System.Drawing.Size(148, 36);
             this.panel110.TabIndex = 2;
             // 
             // label14
@@ -3606,9 +3651,9 @@ namespace myFlightInfo
             // 
             this.panel111.Controls.Add(this.label15);
             this.panel111.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel111.Location = new System.Drawing.Point(321, 47);
+            this.panel111.Location = new System.Drawing.Point(315, 47);
             this.panel111.Name = "panel111";
-            this.panel111.Size = new System.Drawing.Size(151, 36);
+            this.panel111.Size = new System.Drawing.Size(148, 36);
             this.panel111.TabIndex = 3;
             // 
             // label15
@@ -3625,9 +3670,9 @@ namespace myFlightInfo
             // 
             this.panel112.Controls.Add(this.label16);
             this.panel112.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel112.Location = new System.Drawing.Point(480, 47);
+            this.panel112.Location = new System.Drawing.Point(471, 47);
             this.panel112.Name = "panel112";
-            this.panel112.Size = new System.Drawing.Size(153, 36);
+            this.panel112.Size = new System.Drawing.Size(150, 36);
             this.panel112.TabIndex = 4;
             // 
             // label16
@@ -3646,7 +3691,7 @@ namespace myFlightInfo
             this.panel113.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel113.Location = new System.Drawing.Point(3, 91);
             this.panel113.Name = "panel113";
-            this.panel113.Size = new System.Drawing.Size(151, 36);
+            this.panel113.Size = new System.Drawing.Size(148, 36);
             this.panel113.TabIndex = 5;
             // 
             // label17
@@ -3664,7 +3709,7 @@ namespace myFlightInfo
             this.panel114.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel114.Location = new System.Drawing.Point(3, 135);
             this.panel114.Name = "panel114";
-            this.panel114.Size = new System.Drawing.Size(151, 36);
+            this.panel114.Size = new System.Drawing.Size(148, 36);
             this.panel114.TabIndex = 6;
             // 
             // label18
@@ -3682,7 +3727,7 @@ namespace myFlightInfo
             this.panel115.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel115.Location = new System.Drawing.Point(3, 179);
             this.panel115.Name = "panel115";
-            this.panel115.Size = new System.Drawing.Size(151, 36);
+            this.panel115.Size = new System.Drawing.Size(148, 36);
             this.panel115.TabIndex = 7;
             // 
             // label19
@@ -3700,7 +3745,7 @@ namespace myFlightInfo
             this.panel116.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel116.Location = new System.Drawing.Point(3, 223);
             this.panel116.Name = "panel116";
-            this.panel116.Size = new System.Drawing.Size(151, 36);
+            this.panel116.Size = new System.Drawing.Size(148, 36);
             this.panel116.TabIndex = 8;
             // 
             // label20
@@ -3718,7 +3763,7 @@ namespace myFlightInfo
             this.panel117.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel117.Location = new System.Drawing.Point(3, 267);
             this.panel117.Name = "panel117";
-            this.panel117.Size = new System.Drawing.Size(151, 36);
+            this.panel117.Size = new System.Drawing.Size(148, 36);
             this.panel117.TabIndex = 9;
             // 
             // label32
@@ -3736,7 +3781,7 @@ namespace myFlightInfo
             this.panel118.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel118.Location = new System.Drawing.Point(3, 311);
             this.panel118.Name = "panel118";
-            this.panel118.Size = new System.Drawing.Size(151, 36);
+            this.panel118.Size = new System.Drawing.Size(148, 36);
             this.panel118.TabIndex = 10;
             // 
             // label21
@@ -3753,7 +3798,7 @@ namespace myFlightInfo
             this.panel119.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel119.Location = new System.Drawing.Point(3, 355);
             this.panel119.Name = "panel119";
-            this.panel119.Size = new System.Drawing.Size(151, 36);
+            this.panel119.Size = new System.Drawing.Size(148, 36);
             this.panel119.TabIndex = 11;
             // 
             // panel120
@@ -3762,7 +3807,7 @@ namespace myFlightInfo
             this.panel120.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel120.Location = new System.Drawing.Point(3, 399);
             this.panel120.Name = "panel120";
-            this.panel120.Size = new System.Drawing.Size(151, 46);
+            this.panel120.Size = new System.Drawing.Size(148, 46);
             this.panel120.TabIndex = 12;
             // 
             // label27
@@ -3779,9 +3824,9 @@ namespace myFlightInfo
             // 
             this.panel121.Controls.Add(this.txtbx_cog_pilot_weight);
             this.panel121.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel121.Location = new System.Drawing.Point(162, 91);
+            this.panel121.Location = new System.Drawing.Point(159, 91);
             this.panel121.Name = "panel121";
-            this.panel121.Size = new System.Drawing.Size(151, 36);
+            this.panel121.Size = new System.Drawing.Size(148, 36);
             this.panel121.TabIndex = 13;
             // 
             // txtbx_cog_pilot_weight
@@ -3791,7 +3836,7 @@ namespace myFlightInfo
             this.txtbx_cog_pilot_weight.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtbx_cog_pilot_weight.Location = new System.Drawing.Point(0, 0);
             this.txtbx_cog_pilot_weight.Name = "txtbx_cog_pilot_weight";
-            this.txtbx_cog_pilot_weight.Size = new System.Drawing.Size(151, 26);
+            this.txtbx_cog_pilot_weight.Size = new System.Drawing.Size(148, 26);
             this.txtbx_cog_pilot_weight.TabIndex = 0;
             this.txtbx_cog_pilot_weight.Text = "0";
             this.txtbx_cog_pilot_weight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -3800,9 +3845,9 @@ namespace myFlightInfo
             // 
             this.panel122.Controls.Add(this.txtbx_cog_pilot_arm);
             this.panel122.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel122.Location = new System.Drawing.Point(321, 91);
+            this.panel122.Location = new System.Drawing.Point(315, 91);
             this.panel122.Name = "panel122";
-            this.panel122.Size = new System.Drawing.Size(151, 36);
+            this.panel122.Size = new System.Drawing.Size(148, 36);
             this.panel122.TabIndex = 14;
             // 
             // txtbx_cog_pilot_arm
@@ -3812,7 +3857,7 @@ namespace myFlightInfo
             this.txtbx_cog_pilot_arm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtbx_cog_pilot_arm.Location = new System.Drawing.Point(0, 0);
             this.txtbx_cog_pilot_arm.Name = "txtbx_cog_pilot_arm";
-            this.txtbx_cog_pilot_arm.Size = new System.Drawing.Size(151, 26);
+            this.txtbx_cog_pilot_arm.Size = new System.Drawing.Size(148, 26);
             this.txtbx_cog_pilot_arm.TabIndex = 9;
             this.txtbx_cog_pilot_arm.Text = "400";
             this.txtbx_cog_pilot_arm.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -3821,9 +3866,9 @@ namespace myFlightInfo
             // 
             this.panel123.Controls.Add(this.txtbx_cog_pilot);
             this.panel123.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel123.Location = new System.Drawing.Point(480, 91);
+            this.panel123.Location = new System.Drawing.Point(471, 91);
             this.panel123.Name = "panel123";
-            this.panel123.Size = new System.Drawing.Size(153, 36);
+            this.panel123.Size = new System.Drawing.Size(150, 36);
             this.panel123.TabIndex = 15;
             // 
             // txtbx_cog_pilot
@@ -3834,7 +3879,7 @@ namespace myFlightInfo
             this.txtbx_cog_pilot.Location = new System.Drawing.Point(0, 0);
             this.txtbx_cog_pilot.Name = "txtbx_cog_pilot";
             this.txtbx_cog_pilot.ReadOnly = true;
-            this.txtbx_cog_pilot.Size = new System.Drawing.Size(153, 19);
+            this.txtbx_cog_pilot.Size = new System.Drawing.Size(150, 19);
             this.txtbx_cog_pilot.TabIndex = 2;
             this.txtbx_cog_pilot.Text = "0";
             this.txtbx_cog_pilot.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -3843,9 +3888,9 @@ namespace myFlightInfo
             // 
             this.panel124.Controls.Add(this.txtbx_cog_passenger_weight);
             this.panel124.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel124.Location = new System.Drawing.Point(162, 135);
+            this.panel124.Location = new System.Drawing.Point(159, 135);
             this.panel124.Name = "panel124";
-            this.panel124.Size = new System.Drawing.Size(151, 36);
+            this.panel124.Size = new System.Drawing.Size(148, 36);
             this.panel124.TabIndex = 16;
             // 
             // txtbx_cog_passenger_weight
@@ -3855,7 +3900,7 @@ namespace myFlightInfo
             this.txtbx_cog_passenger_weight.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtbx_cog_passenger_weight.Location = new System.Drawing.Point(0, 0);
             this.txtbx_cog_passenger_weight.Name = "txtbx_cog_passenger_weight";
-            this.txtbx_cog_passenger_weight.Size = new System.Drawing.Size(151, 26);
+            this.txtbx_cog_passenger_weight.Size = new System.Drawing.Size(148, 26);
             this.txtbx_cog_passenger_weight.TabIndex = 20;
             this.txtbx_cog_passenger_weight.Text = "0";
             this.txtbx_cog_passenger_weight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -3864,9 +3909,9 @@ namespace myFlightInfo
             // 
             this.panel125.Controls.Add(this.txtbx_cog_passenger_arm);
             this.panel125.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel125.Location = new System.Drawing.Point(321, 135);
+            this.panel125.Location = new System.Drawing.Point(315, 135);
             this.panel125.Name = "panel125";
-            this.panel125.Size = new System.Drawing.Size(151, 36);
+            this.panel125.Size = new System.Drawing.Size(148, 36);
             this.panel125.TabIndex = 17;
             // 
             // txtbx_cog_passenger_arm
@@ -3876,7 +3921,7 @@ namespace myFlightInfo
             this.txtbx_cog_passenger_arm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtbx_cog_passenger_arm.Location = new System.Drawing.Point(0, 0);
             this.txtbx_cog_passenger_arm.Name = "txtbx_cog_passenger_arm";
-            this.txtbx_cog_passenger_arm.Size = new System.Drawing.Size(151, 26);
+            this.txtbx_cog_passenger_arm.Size = new System.Drawing.Size(148, 26);
             this.txtbx_cog_passenger_arm.TabIndex = 10;
             this.txtbx_cog_passenger_arm.Text = "400";
             this.txtbx_cog_passenger_arm.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -3885,9 +3930,9 @@ namespace myFlightInfo
             // 
             this.panel126.Controls.Add(this.txtbx_cog_passenger);
             this.panel126.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel126.Location = new System.Drawing.Point(480, 135);
+            this.panel126.Location = new System.Drawing.Point(471, 135);
             this.panel126.Name = "panel126";
-            this.panel126.Size = new System.Drawing.Size(153, 36);
+            this.panel126.Size = new System.Drawing.Size(150, 36);
             this.panel126.TabIndex = 18;
             // 
             // txtbx_cog_passenger
@@ -3898,7 +3943,7 @@ namespace myFlightInfo
             this.txtbx_cog_passenger.Location = new System.Drawing.Point(0, 0);
             this.txtbx_cog_passenger.Name = "txtbx_cog_passenger";
             this.txtbx_cog_passenger.ReadOnly = true;
-            this.txtbx_cog_passenger.Size = new System.Drawing.Size(153, 19);
+            this.txtbx_cog_passenger.Size = new System.Drawing.Size(150, 19);
             this.txtbx_cog_passenger.TabIndex = 3;
             this.txtbx_cog_passenger.Text = "0";
             this.txtbx_cog_passenger.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -3907,9 +3952,9 @@ namespace myFlightInfo
             // 
             this.panel127.Controls.Add(this.txtbx_cog_cabin_bag_weight);
             this.panel127.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel127.Location = new System.Drawing.Point(162, 179);
+            this.panel127.Location = new System.Drawing.Point(159, 179);
             this.panel127.Name = "panel127";
-            this.panel127.Size = new System.Drawing.Size(151, 36);
+            this.panel127.Size = new System.Drawing.Size(148, 36);
             this.panel127.TabIndex = 19;
             // 
             // txtbx_cog_cabin_bag_weight
@@ -3919,7 +3964,7 @@ namespace myFlightInfo
             this.txtbx_cog_cabin_bag_weight.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtbx_cog_cabin_bag_weight.Location = new System.Drawing.Point(0, 0);
             this.txtbx_cog_cabin_bag_weight.Name = "txtbx_cog_cabin_bag_weight";
-            this.txtbx_cog_cabin_bag_weight.Size = new System.Drawing.Size(151, 26);
+            this.txtbx_cog_cabin_bag_weight.Size = new System.Drawing.Size(148, 26);
             this.txtbx_cog_cabin_bag_weight.TabIndex = 21;
             this.txtbx_cog_cabin_bag_weight.Text = "0";
             this.txtbx_cog_cabin_bag_weight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -3928,9 +3973,9 @@ namespace myFlightInfo
             // 
             this.panel128.Controls.Add(this.txtbx_cog_cabin_bag_arm);
             this.panel128.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel128.Location = new System.Drawing.Point(321, 179);
+            this.panel128.Location = new System.Drawing.Point(315, 179);
             this.panel128.Name = "panel128";
-            this.panel128.Size = new System.Drawing.Size(151, 36);
+            this.panel128.Size = new System.Drawing.Size(148, 36);
             this.panel128.TabIndex = 20;
             // 
             // txtbx_cog_cabin_bag_arm
@@ -3940,7 +3985,7 @@ namespace myFlightInfo
             this.txtbx_cog_cabin_bag_arm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtbx_cog_cabin_bag_arm.Location = new System.Drawing.Point(0, 0);
             this.txtbx_cog_cabin_bag_arm.Name = "txtbx_cog_cabin_bag_arm";
-            this.txtbx_cog_cabin_bag_arm.Size = new System.Drawing.Size(151, 26);
+            this.txtbx_cog_cabin_bag_arm.Size = new System.Drawing.Size(148, 26);
             this.txtbx_cog_cabin_bag_arm.TabIndex = 11;
             this.txtbx_cog_cabin_bag_arm.Text = "400";
             this.txtbx_cog_cabin_bag_arm.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -3949,9 +3994,9 @@ namespace myFlightInfo
             // 
             this.panel129.Controls.Add(this.txtbx_cog_cabin_baggage);
             this.panel129.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel129.Location = new System.Drawing.Point(480, 179);
+            this.panel129.Location = new System.Drawing.Point(471, 179);
             this.panel129.Name = "panel129";
-            this.panel129.Size = new System.Drawing.Size(153, 36);
+            this.panel129.Size = new System.Drawing.Size(150, 36);
             this.panel129.TabIndex = 21;
             // 
             // txtbx_cog_cabin_baggage
@@ -3962,7 +4007,7 @@ namespace myFlightInfo
             this.txtbx_cog_cabin_baggage.Location = new System.Drawing.Point(0, 0);
             this.txtbx_cog_cabin_baggage.Name = "txtbx_cog_cabin_baggage";
             this.txtbx_cog_cabin_baggage.ReadOnly = true;
-            this.txtbx_cog_cabin_baggage.Size = new System.Drawing.Size(153, 19);
+            this.txtbx_cog_cabin_baggage.Size = new System.Drawing.Size(150, 19);
             this.txtbx_cog_cabin_baggage.TabIndex = 4;
             this.txtbx_cog_cabin_baggage.Text = "0";
             this.txtbx_cog_cabin_baggage.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -3971,9 +4016,9 @@ namespace myFlightInfo
             // 
             this.panel130.Controls.Add(this.txtbx_cog_hold_bag_weight);
             this.panel130.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel130.Location = new System.Drawing.Point(162, 223);
+            this.panel130.Location = new System.Drawing.Point(159, 223);
             this.panel130.Name = "panel130";
-            this.panel130.Size = new System.Drawing.Size(151, 36);
+            this.panel130.Size = new System.Drawing.Size(148, 36);
             this.panel130.TabIndex = 22;
             // 
             // txtbx_cog_hold_bag_weight
@@ -3983,7 +4028,7 @@ namespace myFlightInfo
             this.txtbx_cog_hold_bag_weight.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtbx_cog_hold_bag_weight.Location = new System.Drawing.Point(0, 0);
             this.txtbx_cog_hold_bag_weight.Name = "txtbx_cog_hold_bag_weight";
-            this.txtbx_cog_hold_bag_weight.Size = new System.Drawing.Size(151, 26);
+            this.txtbx_cog_hold_bag_weight.Size = new System.Drawing.Size(148, 26);
             this.txtbx_cog_hold_bag_weight.TabIndex = 22;
             this.txtbx_cog_hold_bag_weight.Text = "0";
             this.txtbx_cog_hold_bag_weight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -3992,9 +4037,9 @@ namespace myFlightInfo
             // 
             this.panel131.Controls.Add(this.txtbx_cog_hold_bag_arm);
             this.panel131.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel131.Location = new System.Drawing.Point(321, 223);
+            this.panel131.Location = new System.Drawing.Point(315, 223);
             this.panel131.Name = "panel131";
-            this.panel131.Size = new System.Drawing.Size(151, 36);
+            this.panel131.Size = new System.Drawing.Size(148, 36);
             this.panel131.TabIndex = 23;
             // 
             // txtbx_cog_hold_bag_arm
@@ -4004,7 +4049,7 @@ namespace myFlightInfo
             this.txtbx_cog_hold_bag_arm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtbx_cog_hold_bag_arm.Location = new System.Drawing.Point(0, 0);
             this.txtbx_cog_hold_bag_arm.Name = "txtbx_cog_hold_bag_arm";
-            this.txtbx_cog_hold_bag_arm.Size = new System.Drawing.Size(151, 26);
+            this.txtbx_cog_hold_bag_arm.Size = new System.Drawing.Size(148, 26);
             this.txtbx_cog_hold_bag_arm.TabIndex = 12;
             this.txtbx_cog_hold_bag_arm.Text = "950";
             this.txtbx_cog_hold_bag_arm.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -4013,9 +4058,9 @@ namespace myFlightInfo
             // 
             this.panel132.Controls.Add(this.txtbx_cog_hold_baggage);
             this.panel132.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel132.Location = new System.Drawing.Point(480, 223);
+            this.panel132.Location = new System.Drawing.Point(471, 223);
             this.panel132.Name = "panel132";
-            this.panel132.Size = new System.Drawing.Size(153, 36);
+            this.panel132.Size = new System.Drawing.Size(150, 36);
             this.panel132.TabIndex = 24;
             // 
             // txtbx_cog_hold_baggage
@@ -4026,7 +4071,7 @@ namespace myFlightInfo
             this.txtbx_cog_hold_baggage.Location = new System.Drawing.Point(0, 0);
             this.txtbx_cog_hold_baggage.Name = "txtbx_cog_hold_baggage";
             this.txtbx_cog_hold_baggage.ReadOnly = true;
-            this.txtbx_cog_hold_baggage.Size = new System.Drawing.Size(153, 19);
+            this.txtbx_cog_hold_baggage.Size = new System.Drawing.Size(150, 19);
             this.txtbx_cog_hold_baggage.TabIndex = 5;
             this.txtbx_cog_hold_baggage.Text = "0";
             this.txtbx_cog_hold_baggage.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -4035,9 +4080,9 @@ namespace myFlightInfo
             // 
             this.panel133.Controls.Add(this.txtbx_cog_accessories_weight);
             this.panel133.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel133.Location = new System.Drawing.Point(162, 267);
+            this.panel133.Location = new System.Drawing.Point(159, 267);
             this.panel133.Name = "panel133";
-            this.panel133.Size = new System.Drawing.Size(151, 36);
+            this.panel133.Size = new System.Drawing.Size(148, 36);
             this.panel133.TabIndex = 25;
             // 
             // txtbx_cog_accessories_weight
@@ -4047,7 +4092,7 @@ namespace myFlightInfo
             this.txtbx_cog_accessories_weight.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtbx_cog_accessories_weight.Location = new System.Drawing.Point(0, 0);
             this.txtbx_cog_accessories_weight.Name = "txtbx_cog_accessories_weight";
-            this.txtbx_cog_accessories_weight.Size = new System.Drawing.Size(151, 26);
+            this.txtbx_cog_accessories_weight.Size = new System.Drawing.Size(148, 26);
             this.txtbx_cog_accessories_weight.TabIndex = 39;
             this.txtbx_cog_accessories_weight.Text = "0";
             this.txtbx_cog_accessories_weight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -4056,9 +4101,9 @@ namespace myFlightInfo
             // 
             this.panel134.Controls.Add(this.txtbx_fuel_weight);
             this.panel134.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel134.Location = new System.Drawing.Point(162, 311);
+            this.panel134.Location = new System.Drawing.Point(159, 311);
             this.panel134.Name = "panel134";
-            this.panel134.Size = new System.Drawing.Size(151, 36);
+            this.panel134.Size = new System.Drawing.Size(148, 36);
             this.panel134.TabIndex = 26;
             // 
             // txtbx_fuel_weight
@@ -4069,7 +4114,7 @@ namespace myFlightInfo
             this.txtbx_fuel_weight.Location = new System.Drawing.Point(0, 0);
             this.txtbx_fuel_weight.Name = "txtbx_fuel_weight";
             this.txtbx_fuel_weight.ReadOnly = true;
-            this.txtbx_fuel_weight.Size = new System.Drawing.Size(151, 19);
+            this.txtbx_fuel_weight.Size = new System.Drawing.Size(148, 19);
             this.txtbx_fuel_weight.TabIndex = 1;
             this.txtbx_fuel_weight.Text = "0";
             this.txtbx_fuel_weight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -4077,18 +4122,18 @@ namespace myFlightInfo
             // panel135
             // 
             this.panel135.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel135.Location = new System.Drawing.Point(162, 355);
+            this.panel135.Location = new System.Drawing.Point(159, 355);
             this.panel135.Name = "panel135";
-            this.panel135.Size = new System.Drawing.Size(151, 36);
+            this.panel135.Size = new System.Drawing.Size(148, 36);
             this.panel135.TabIndex = 27;
             // 
             // panel136
             // 
             this.panel136.Controls.Add(this.txtbx_cog_total_weight);
             this.panel136.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel136.Location = new System.Drawing.Point(162, 399);
+            this.panel136.Location = new System.Drawing.Point(159, 399);
             this.panel136.Name = "panel136";
-            this.panel136.Size = new System.Drawing.Size(151, 46);
+            this.panel136.Size = new System.Drawing.Size(148, 46);
             this.panel136.TabIndex = 28;
             // 
             // txtbx_cog_total_weight
@@ -4099,7 +4144,7 @@ namespace myFlightInfo
             this.txtbx_cog_total_weight.Location = new System.Drawing.Point(0, 0);
             this.txtbx_cog_total_weight.Name = "txtbx_cog_total_weight";
             this.txtbx_cog_total_weight.ReadOnly = true;
-            this.txtbx_cog_total_weight.Size = new System.Drawing.Size(151, 19);
+            this.txtbx_cog_total_weight.Size = new System.Drawing.Size(148, 19);
             this.txtbx_cog_total_weight.TabIndex = 0;
             this.txtbx_cog_total_weight.Text = "0";
             this.txtbx_cog_total_weight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -4108,9 +4153,9 @@ namespace myFlightInfo
             // 
             this.panel137.Controls.Add(this.txtbx_cog_accessories_arm);
             this.panel137.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel137.Location = new System.Drawing.Point(321, 267);
+            this.panel137.Location = new System.Drawing.Point(315, 267);
             this.panel137.Name = "panel137";
-            this.panel137.Size = new System.Drawing.Size(151, 36);
+            this.panel137.Size = new System.Drawing.Size(148, 36);
             this.panel137.TabIndex = 29;
             // 
             // txtbx_cog_accessories_arm
@@ -4120,7 +4165,7 @@ namespace myFlightInfo
             this.txtbx_cog_accessories_arm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtbx_cog_accessories_arm.Location = new System.Drawing.Point(0, 0);
             this.txtbx_cog_accessories_arm.Name = "txtbx_cog_accessories_arm";
-            this.txtbx_cog_accessories_arm.Size = new System.Drawing.Size(151, 26);
+            this.txtbx_cog_accessories_arm.Size = new System.Drawing.Size(148, 26);
             this.txtbx_cog_accessories_arm.TabIndex = 37;
             this.txtbx_cog_accessories_arm.Text = "0";
             this.txtbx_cog_accessories_arm.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -4129,9 +4174,9 @@ namespace myFlightInfo
             // 
             this.panel138.Controls.Add(this.txtbx_cog_accessories);
             this.panel138.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel138.Location = new System.Drawing.Point(480, 267);
+            this.panel138.Location = new System.Drawing.Point(471, 267);
             this.panel138.Name = "panel138";
-            this.panel138.Size = new System.Drawing.Size(153, 36);
+            this.panel138.Size = new System.Drawing.Size(150, 36);
             this.panel138.TabIndex = 30;
             // 
             // txtbx_cog_accessories
@@ -4142,7 +4187,7 @@ namespace myFlightInfo
             this.txtbx_cog_accessories.Location = new System.Drawing.Point(0, 0);
             this.txtbx_cog_accessories.Name = "txtbx_cog_accessories";
             this.txtbx_cog_accessories.ReadOnly = true;
-            this.txtbx_cog_accessories.Size = new System.Drawing.Size(153, 19);
+            this.txtbx_cog_accessories.Size = new System.Drawing.Size(150, 19);
             this.txtbx_cog_accessories.TabIndex = 6;
             this.txtbx_cog_accessories.Text = "0";
             this.txtbx_cog_accessories.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -4151,9 +4196,9 @@ namespace myFlightInfo
             // 
             this.panel139.Controls.Add(this.txtbx_cog_fuel_arm);
             this.panel139.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel139.Location = new System.Drawing.Point(321, 311);
+            this.panel139.Location = new System.Drawing.Point(315, 311);
             this.panel139.Name = "panel139";
-            this.panel139.Size = new System.Drawing.Size(151, 36);
+            this.panel139.Size = new System.Drawing.Size(148, 36);
             this.panel139.TabIndex = 31;
             // 
             // txtbx_cog_fuel_arm
@@ -4163,7 +4208,7 @@ namespace myFlightInfo
             this.txtbx_cog_fuel_arm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtbx_cog_fuel_arm.Location = new System.Drawing.Point(0, 0);
             this.txtbx_cog_fuel_arm.Name = "txtbx_cog_fuel_arm";
-            this.txtbx_cog_fuel_arm.Size = new System.Drawing.Size(151, 26);
+            this.txtbx_cog_fuel_arm.Size = new System.Drawing.Size(148, 26);
             this.txtbx_cog_fuel_arm.TabIndex = 13;
             this.txtbx_cog_fuel_arm.Text = "950";
             this.txtbx_cog_fuel_arm.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -4172,9 +4217,9 @@ namespace myFlightInfo
             // 
             this.panel140.Controls.Add(this.txtbx_cog_fuel);
             this.panel140.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel140.Location = new System.Drawing.Point(480, 311);
+            this.panel140.Location = new System.Drawing.Point(471, 311);
             this.panel140.Name = "panel140";
-            this.panel140.Size = new System.Drawing.Size(153, 36);
+            this.panel140.Size = new System.Drawing.Size(150, 36);
             this.panel140.TabIndex = 32;
             // 
             // txtbx_cog_fuel
@@ -4185,7 +4230,7 @@ namespace myFlightInfo
             this.txtbx_cog_fuel.Location = new System.Drawing.Point(0, 0);
             this.txtbx_cog_fuel.Name = "txtbx_cog_fuel";
             this.txtbx_cog_fuel.ReadOnly = true;
-            this.txtbx_cog_fuel.Size = new System.Drawing.Size(153, 19);
+            this.txtbx_cog_fuel.Size = new System.Drawing.Size(150, 19);
             this.txtbx_cog_fuel.TabIndex = 7;
             this.txtbx_cog_fuel.Text = "0";
             this.txtbx_cog_fuel.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -4193,34 +4238,34 @@ namespace myFlightInfo
             // panel141
             // 
             this.panel141.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel141.Location = new System.Drawing.Point(321, 355);
+            this.panel141.Location = new System.Drawing.Point(315, 355);
             this.panel141.Name = "panel141";
-            this.panel141.Size = new System.Drawing.Size(151, 36);
+            this.panel141.Size = new System.Drawing.Size(148, 36);
             this.panel141.TabIndex = 33;
             // 
             // panel142
             // 
             this.panel142.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel142.Location = new System.Drawing.Point(480, 355);
+            this.panel142.Location = new System.Drawing.Point(471, 355);
             this.panel142.Name = "panel142";
-            this.panel142.Size = new System.Drawing.Size(153, 36);
+            this.panel142.Size = new System.Drawing.Size(150, 36);
             this.panel142.TabIndex = 34;
             // 
             // panel143
             // 
             this.panel143.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel143.Location = new System.Drawing.Point(321, 399);
+            this.panel143.Location = new System.Drawing.Point(315, 399);
             this.panel143.Name = "panel143";
-            this.panel143.Size = new System.Drawing.Size(151, 46);
+            this.panel143.Size = new System.Drawing.Size(148, 46);
             this.panel143.TabIndex = 35;
             // 
             // panel144
             // 
             this.panel144.Controls.Add(this.txtbx_cog_total_moment);
             this.panel144.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel144.Location = new System.Drawing.Point(480, 399);
+            this.panel144.Location = new System.Drawing.Point(471, 399);
             this.panel144.Name = "panel144";
-            this.panel144.Size = new System.Drawing.Size(153, 46);
+            this.panel144.Size = new System.Drawing.Size(150, 46);
             this.panel144.TabIndex = 36;
             // 
             // txtbx_cog_total_moment
@@ -4231,7 +4276,7 @@ namespace myFlightInfo
             this.txtbx_cog_total_moment.Location = new System.Drawing.Point(0, 0);
             this.txtbx_cog_total_moment.Name = "txtbx_cog_total_moment";
             this.txtbx_cog_total_moment.ReadOnly = true;
-            this.txtbx_cog_total_moment.Size = new System.Drawing.Size(153, 19);
+            this.txtbx_cog_total_moment.Size = new System.Drawing.Size(150, 19);
             this.txtbx_cog_total_moment.TabIndex = 1;
             this.txtbx_cog_total_moment.Text = "0";
             this.txtbx_cog_total_moment.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -4244,7 +4289,7 @@ namespace myFlightInfo
             this.panel92.Location = new System.Drawing.Point(3, 457);
             this.panel92.Name = "panel92";
             this.tableLayoutPanel10.SetRowSpan(this.panel92, 2);
-            this.panel92.Size = new System.Drawing.Size(808, 226);
+            this.panel92.Size = new System.Drawing.Size(794, 226);
             this.panel92.TabIndex = 2;
             // 
             // tableLayoutPanel14
@@ -4262,14 +4307,14 @@ namespace myFlightInfo
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 200F));
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel14.Size = new System.Drawing.Size(808, 226);
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(794, 226);
             this.tableLayoutPanel14.TabIndex = 0;
             // 
             // picbx_cog_limits
             // 
             this.picbx_cog_limits.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picbx_cog_limits.Image = global::myFlightInfo.Properties.Resources.c42_sideview;
-            this.picbx_cog_limits.Location = new System.Drawing.Point(142, 33);
+            this.picbx_cog_limits.Location = new System.Drawing.Point(135, 33);
             this.picbx_cog_limits.Name = "picbx_cog_limits";
             this.picbx_cog_limits.Size = new System.Drawing.Size(523, 194);
             this.picbx_cog_limits.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -4280,7 +4325,7 @@ namespace myFlightInfo
             // 
             this.panel145.Controls.Add(this.label53);
             this.panel145.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel145.Location = new System.Drawing.Point(142, 3);
+            this.panel145.Location = new System.Drawing.Point(135, 3);
             this.panel145.Name = "panel145";
             this.panel145.Size = new System.Drawing.Size(523, 24);
             this.panel145.TabIndex = 1;
@@ -4298,10 +4343,10 @@ namespace myFlightInfo
             // 
             this.panel93.Controls.Add(this.rchtxtbx_cog_report);
             this.panel93.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel93.Location = new System.Drawing.Point(826, 3);
+            this.panel93.Location = new System.Drawing.Point(812, 3);
             this.panel93.Name = "panel93";
             this.tableLayoutPanel10.SetRowSpan(this.panel93, 2);
-            this.panel93.Size = new System.Drawing.Size(556, 599);
+            this.panel93.Size = new System.Drawing.Size(546, 599);
             this.panel93.TabIndex = 3;
             // 
             // rchtxtbx_cog_report
@@ -4309,7 +4354,7 @@ namespace myFlightInfo
             this.rchtxtbx_cog_report.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rchtxtbx_cog_report.Location = new System.Drawing.Point(0, 0);
             this.rchtxtbx_cog_report.Name = "rchtxtbx_cog_report";
-            this.rchtxtbx_cog_report.Size = new System.Drawing.Size(556, 599);
+            this.rchtxtbx_cog_report.Size = new System.Drawing.Size(546, 599);
             this.rchtxtbx_cog_report.TabIndex = 45;
             this.rchtxtbx_cog_report.Text = "";
             // 
@@ -4317,9 +4362,9 @@ namespace myFlightInfo
             // 
             this.panel94.Controls.Add(this.tableLayoutPanel11);
             this.panel94.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel94.Location = new System.Drawing.Point(826, 608);
+            this.panel94.Location = new System.Drawing.Point(812, 608);
             this.panel94.Name = "panel94";
-            this.panel94.Size = new System.Drawing.Size(556, 75);
+            this.panel94.Size = new System.Drawing.Size(546, 75);
             this.panel94.TabIndex = 4;
             // 
             // tableLayoutPanel11
@@ -4337,15 +4382,15 @@ namespace myFlightInfo
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 1;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(556, 75);
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(546, 75);
             this.tableLayoutPanel11.TabIndex = 0;
             // 
             // btn_calc_cog
             // 
             this.btn_calc_cog.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_calc_cog.Location = new System.Drawing.Point(420, 3);
+            this.btn_calc_cog.Location = new System.Drawing.Point(411, 3);
             this.btn_calc_cog.Name = "btn_calc_cog";
-            this.btn_calc_cog.Size = new System.Drawing.Size(133, 69);
+            this.btn_calc_cog.Size = new System.Drawing.Size(132, 69);
             this.btn_calc_cog.TabIndex = 32;
             this.btn_calc_cog.Text = "Calculate";
             this.btn_calc_cog.UseVisualStyleBackColor = true;
@@ -4354,9 +4399,9 @@ namespace myFlightInfo
             // btn_cog_print_report
             // 
             this.btn_cog_print_report.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_cog_print_report.Location = new System.Drawing.Point(281, 3);
+            this.btn_cog_print_report.Location = new System.Drawing.Point(275, 3);
             this.btn_cog_print_report.Name = "btn_cog_print_report";
-            this.btn_cog_print_report.Size = new System.Drawing.Size(133, 69);
+            this.btn_cog_print_report.Size = new System.Drawing.Size(130, 69);
             this.btn_cog_print_report.TabIndex = 47;
             this.btn_cog_print_report.Text = "Print Report";
             this.btn_cog_print_report.UseVisualStyleBackColor = true;
@@ -4364,9 +4409,9 @@ namespace myFlightInfo
             // btn_cog_clear_report
             // 
             this.btn_cog_clear_report.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_cog_clear_report.Location = new System.Drawing.Point(142, 3);
+            this.btn_cog_clear_report.Location = new System.Drawing.Point(139, 3);
             this.btn_cog_clear_report.Name = "btn_cog_clear_report";
-            this.btn_cog_clear_report.Size = new System.Drawing.Size(133, 69);
+            this.btn_cog_clear_report.Size = new System.Drawing.Size(130, 69);
             this.btn_cog_clear_report.TabIndex = 46;
             this.btn_cog_clear_report.Text = "Reset";
             this.btn_cog_clear_report.UseVisualStyleBackColor = true;
@@ -4375,10 +4420,10 @@ namespace myFlightInfo
             // tab_compliance_data
             // 
             this.tab_compliance_data.Controls.Add(this.tableLayoutPanel9);
-            this.tab_compliance_data.Location = new System.Drawing.Point(28, 4);
+            this.tab_compliance_data.Location = new System.Drawing.Point(52, 4);
             this.tab_compliance_data.Name = "tab_compliance_data";
             this.tab_compliance_data.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_compliance_data.Size = new System.Drawing.Size(1391, 692);
+            this.tab_compliance_data.Size = new System.Drawing.Size(1367, 692);
             this.tab_compliance_data.TabIndex = 4;
             this.tab_compliance_data.Text = "Compliance Data";
             this.tab_compliance_data.UseVisualStyleBackColor = true;
@@ -4469,16 +4514,16 @@ namespace myFlightInfo
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.14301F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.14301F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.140868F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(1385, 686);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(1361, 686);
             this.tableLayoutPanel9.TabIndex = 0;
             // 
             // panel43
             // 
             this.panel43.Controls.Add(this.txtbx_settings_vne);
             this.panel43.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel43.Location = new System.Drawing.Point(1039, 3);
+            this.panel43.Location = new System.Drawing.Point(1021, 3);
             this.panel43.Name = "panel43";
-            this.panel43.Size = new System.Drawing.Size(315, 43);
+            this.panel43.Size = new System.Drawing.Size(309, 43);
             this.panel43.TabIndex = 7;
             // 
             // txtbx_settings_vne
@@ -4492,9 +4537,9 @@ namespace myFlightInfo
             // 
             this.panel41.Controls.Add(this.label40);
             this.panel41.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel41.Location = new System.Drawing.Point(708, 3);
+            this.panel41.Location = new System.Drawing.Point(696, 3);
             this.panel41.Name = "panel41";
-            this.panel41.Size = new System.Drawing.Size(315, 43);
+            this.panel41.Size = new System.Drawing.Size(309, 43);
             this.panel41.TabIndex = 5;
             // 
             // label40
@@ -4510,9 +4555,9 @@ namespace myFlightInfo
             // 
             this.panel38.Controls.Add(this.cmbobx_aircraftName);
             this.panel38.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel38.Location = new System.Drawing.Point(360, 3);
+            this.panel38.Location = new System.Drawing.Point(354, 3);
             this.panel38.Name = "panel38";
-            this.panel38.Size = new System.Drawing.Size(315, 43);
+            this.panel38.Size = new System.Drawing.Size(309, 43);
             this.panel38.TabIndex = 3;
             // 
             // cmbobx_aircraftName
@@ -4521,7 +4566,7 @@ namespace myFlightInfo
             this.cmbobx_aircraftName.FormattingEnabled = true;
             this.cmbobx_aircraftName.Location = new System.Drawing.Point(0, 0);
             this.cmbobx_aircraftName.Name = "cmbobx_aircraftName";
-            this.cmbobx_aircraftName.Size = new System.Drawing.Size(315, 28);
+            this.cmbobx_aircraftName.Size = new System.Drawing.Size(309, 28);
             this.cmbobx_aircraftName.TabIndex = 0;
             this.cmbobx_aircraftName.SelectedValueChanged += new System.EventHandler(this.cmbobx_aircraftName_SelectedValueChanged);
             // 
@@ -4531,7 +4576,7 @@ namespace myFlightInfo
             this.panel26.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel26.Location = new System.Drawing.Point(29, 3);
             this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(315, 43);
+            this.panel26.Size = new System.Drawing.Size(309, 43);
             this.panel26.TabIndex = 0;
             // 
             // label54
@@ -4548,15 +4593,15 @@ namespace myFlightInfo
             this.panel45.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel45.Location = new System.Drawing.Point(29, 52);
             this.panel45.Name = "panel45";
-            this.panel45.Size = new System.Drawing.Size(315, 43);
+            this.panel45.Size = new System.Drawing.Size(309, 43);
             this.panel45.TabIndex = 9;
             // 
             // panel46
             // 
             this.panel46.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel46.Location = new System.Drawing.Point(360, 52);
+            this.panel46.Location = new System.Drawing.Point(354, 52);
             this.panel46.Name = "panel46";
-            this.panel46.Size = new System.Drawing.Size(315, 43);
+            this.panel46.Size = new System.Drawing.Size(309, 43);
             this.panel46.TabIndex = 10;
             // 
             // panel47
@@ -4565,7 +4610,7 @@ namespace myFlightInfo
             this.panel47.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel47.Location = new System.Drawing.Point(29, 101);
             this.panel47.Name = "panel47";
-            this.panel47.Size = new System.Drawing.Size(315, 43);
+            this.panel47.Size = new System.Drawing.Size(309, 43);
             this.panel47.TabIndex = 11;
             // 
             // label31
@@ -4583,7 +4628,7 @@ namespace myFlightInfo
             this.panel48.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel48.Location = new System.Drawing.Point(29, 150);
             this.panel48.Name = "panel48";
-            this.panel48.Size = new System.Drawing.Size(315, 43);
+            this.panel48.Size = new System.Drawing.Size(309, 43);
             this.panel48.TabIndex = 12;
             // 
             // label33
@@ -4601,7 +4646,7 @@ namespace myFlightInfo
             this.panel27.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel27.Location = new System.Drawing.Point(29, 199);
             this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(315, 43);
+            this.panel27.Size = new System.Drawing.Size(309, 43);
             this.panel27.TabIndex = 13;
             // 
             // label34
@@ -4619,7 +4664,7 @@ namespace myFlightInfo
             this.panel28.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel28.Location = new System.Drawing.Point(29, 248);
             this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(315, 43);
+            this.panel28.Size = new System.Drawing.Size(309, 43);
             this.panel28.TabIndex = 14;
             // 
             // label35
@@ -4637,7 +4682,7 @@ namespace myFlightInfo
             this.panel29.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel29.Location = new System.Drawing.Point(29, 297);
             this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(315, 43);
+            this.panel29.Size = new System.Drawing.Size(309, 43);
             this.panel29.TabIndex = 15;
             // 
             // label36
@@ -4655,7 +4700,7 @@ namespace myFlightInfo
             this.panel39.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel39.Location = new System.Drawing.Point(29, 346);
             this.panel39.Name = "panel39";
-            this.panel39.Size = new System.Drawing.Size(315, 43);
+            this.panel39.Size = new System.Drawing.Size(309, 43);
             this.panel39.TabIndex = 16;
             // 
             // label37
@@ -4673,7 +4718,7 @@ namespace myFlightInfo
             this.panel40.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel40.Location = new System.Drawing.Point(29, 395);
             this.panel40.Name = "panel40";
-            this.panel40.Size = new System.Drawing.Size(315, 43);
+            this.panel40.Size = new System.Drawing.Size(309, 43);
             this.panel40.TabIndex = 17;
             // 
             // label38
@@ -4691,7 +4736,7 @@ namespace myFlightInfo
             this.panel42.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel42.Location = new System.Drawing.Point(29, 444);
             this.panel42.Name = "panel42";
-            this.panel42.Size = new System.Drawing.Size(315, 43);
+            this.panel42.Size = new System.Drawing.Size(309, 43);
             this.panel42.TabIndex = 18;
             // 
             // label39
@@ -4708,7 +4753,7 @@ namespace myFlightInfo
             this.panel44.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel44.Location = new System.Drawing.Point(29, 493);
             this.panel44.Name = "panel44";
-            this.panel44.Size = new System.Drawing.Size(315, 43);
+            this.panel44.Size = new System.Drawing.Size(309, 43);
             this.panel44.TabIndex = 19;
             // 
             // panel49
@@ -4717,7 +4762,7 @@ namespace myFlightInfo
             this.panel49.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel49.Location = new System.Drawing.Point(29, 542);
             this.panel49.Name = "panel49";
-            this.panel49.Size = new System.Drawing.Size(315, 43);
+            this.panel49.Size = new System.Drawing.Size(309, 43);
             this.panel49.TabIndex = 20;
             // 
             // label49
@@ -4735,7 +4780,7 @@ namespace myFlightInfo
             this.panel50.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel50.Location = new System.Drawing.Point(29, 591);
             this.panel50.Name = "panel50";
-            this.panel50.Size = new System.Drawing.Size(315, 43);
+            this.panel50.Size = new System.Drawing.Size(309, 43);
             this.panel50.TabIndex = 21;
             // 
             // label50
@@ -4753,7 +4798,7 @@ namespace myFlightInfo
             this.panel51.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel51.Location = new System.Drawing.Point(29, 640);
             this.panel51.Name = "panel51";
-            this.panel51.Size = new System.Drawing.Size(315, 43);
+            this.panel51.Size = new System.Drawing.Size(309, 43);
             this.panel51.TabIndex = 22;
             // 
             // tableLayoutPanel6
@@ -4768,15 +4813,15 @@ namespace myFlightInfo
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(315, 43);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(309, 43);
             this.tableLayoutPanel6.TabIndex = 0;
             // 
             // btn_settings_delete_aircraft
             // 
             this.btn_settings_delete_aircraft.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_settings_delete_aircraft.Location = new System.Drawing.Point(160, 3);
+            this.btn_settings_delete_aircraft.Location = new System.Drawing.Point(157, 3);
             this.btn_settings_delete_aircraft.Name = "btn_settings_delete_aircraft";
-            this.btn_settings_delete_aircraft.Size = new System.Drawing.Size(152, 37);
+            this.btn_settings_delete_aircraft.Size = new System.Drawing.Size(149, 37);
             this.btn_settings_delete_aircraft.TabIndex = 1;
             this.btn_settings_delete_aircraft.Text = "Delete Aircraft";
             this.btn_settings_delete_aircraft.UseVisualStyleBackColor = true;
@@ -4787,7 +4832,7 @@ namespace myFlightInfo
             this.btn_settings_add_aircraft.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_settings_add_aircraft.Location = new System.Drawing.Point(3, 3);
             this.btn_settings_add_aircraft.Name = "btn_settings_add_aircraft";
-            this.btn_settings_add_aircraft.Size = new System.Drawing.Size(151, 37);
+            this.btn_settings_add_aircraft.Size = new System.Drawing.Size(148, 37);
             this.btn_settings_add_aircraft.TabIndex = 1;
             this.btn_settings_add_aircraft.Text = "Add Aircraft";
             this.btn_settings_add_aircraft.UseVisualStyleBackColor = true;
@@ -4797,9 +4842,9 @@ namespace myFlightInfo
             // 
             this.panel52.Controls.Add(this.txtbx_settings_mtow);
             this.panel52.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel52.Location = new System.Drawing.Point(360, 101);
+            this.panel52.Location = new System.Drawing.Point(354, 101);
             this.panel52.Name = "panel52";
-            this.panel52.Size = new System.Drawing.Size(315, 43);
+            this.panel52.Size = new System.Drawing.Size(309, 43);
             this.panel52.TabIndex = 23;
             // 
             // txtbx_settings_mtow
@@ -4813,9 +4858,9 @@ namespace myFlightInfo
             // 
             this.panel53.Controls.Add(this.txtbx_settings_empty_weight);
             this.panel53.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel53.Location = new System.Drawing.Point(360, 150);
+            this.panel53.Location = new System.Drawing.Point(354, 150);
             this.panel53.Name = "panel53";
-            this.panel53.Size = new System.Drawing.Size(315, 43);
+            this.panel53.Size = new System.Drawing.Size(309, 43);
             this.panel53.TabIndex = 24;
             // 
             // txtbx_settings_empty_weight
@@ -4829,9 +4874,9 @@ namespace myFlightInfo
             // 
             this.panel54.Controls.Add(this.txtbx_settings_min_pilot_weight);
             this.panel54.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel54.Location = new System.Drawing.Point(360, 199);
+            this.panel54.Location = new System.Drawing.Point(354, 199);
             this.panel54.Name = "panel54";
-            this.panel54.Size = new System.Drawing.Size(315, 43);
+            this.panel54.Size = new System.Drawing.Size(309, 43);
             this.panel54.TabIndex = 25;
             // 
             // txtbx_settings_min_pilot_weight
@@ -4845,9 +4890,9 @@ namespace myFlightInfo
             // 
             this.panel55.Controls.Add(this.txtbx_settings_max_per_crew_weight);
             this.panel55.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel55.Location = new System.Drawing.Point(360, 248);
+            this.panel55.Location = new System.Drawing.Point(354, 248);
             this.panel55.Name = "panel55";
-            this.panel55.Size = new System.Drawing.Size(315, 43);
+            this.panel55.Size = new System.Drawing.Size(309, 43);
             this.panel55.TabIndex = 26;
             // 
             // txtbx_settings_max_per_crew_weight
@@ -4861,9 +4906,9 @@ namespace myFlightInfo
             // 
             this.panel56.Controls.Add(this.txtbx_settings_max_cockpit_weight);
             this.panel56.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel56.Location = new System.Drawing.Point(360, 297);
+            this.panel56.Location = new System.Drawing.Point(354, 297);
             this.panel56.Name = "panel56";
-            this.panel56.Size = new System.Drawing.Size(315, 43);
+            this.panel56.Size = new System.Drawing.Size(309, 43);
             this.panel56.TabIndex = 27;
             // 
             // txtbx_settings_max_cockpit_weight
@@ -4877,9 +4922,9 @@ namespace myFlightInfo
             // 
             this.panel57.Controls.Add(this.txtbx_settings_min_cockpit_weight);
             this.panel57.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel57.Location = new System.Drawing.Point(360, 346);
+            this.panel57.Location = new System.Drawing.Point(354, 346);
             this.panel57.Name = "panel57";
-            this.panel57.Size = new System.Drawing.Size(315, 43);
+            this.panel57.Size = new System.Drawing.Size(309, 43);
             this.panel57.TabIndex = 28;
             // 
             // txtbx_settings_min_cockpit_weight
@@ -4893,9 +4938,9 @@ namespace myFlightInfo
             // 
             this.panel58.Controls.Add(this.txtbx_settings_max_weight_per_seat);
             this.panel58.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel58.Location = new System.Drawing.Point(360, 395);
+            this.panel58.Location = new System.Drawing.Point(354, 395);
             this.panel58.Name = "panel58";
-            this.panel58.Size = new System.Drawing.Size(315, 43);
+            this.panel58.Size = new System.Drawing.Size(309, 43);
             this.panel58.TabIndex = 29;
             // 
             // txtbx_settings_max_weight_per_seat
@@ -4909,9 +4954,9 @@ namespace myFlightInfo
             // 
             this.panel59.Controls.Add(this.txtbx_settings_max_hold_bag_weight);
             this.panel59.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel59.Location = new System.Drawing.Point(360, 444);
+            this.panel59.Location = new System.Drawing.Point(354, 444);
             this.panel59.Name = "panel59";
-            this.panel59.Size = new System.Drawing.Size(315, 43);
+            this.panel59.Size = new System.Drawing.Size(309, 43);
             this.panel59.TabIndex = 30;
             // 
             // txtbx_settings_max_hold_bag_weight
@@ -4924,18 +4969,18 @@ namespace myFlightInfo
             // panel60
             // 
             this.panel60.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel60.Location = new System.Drawing.Point(360, 493);
+            this.panel60.Location = new System.Drawing.Point(354, 493);
             this.panel60.Name = "panel60";
-            this.panel60.Size = new System.Drawing.Size(315, 43);
+            this.panel60.Size = new System.Drawing.Size(309, 43);
             this.panel60.TabIndex = 31;
             // 
             // panel61
             // 
             this.panel61.Controls.Add(this.txtbx_settings_max_fuel_vol);
             this.panel61.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel61.Location = new System.Drawing.Point(360, 542);
+            this.panel61.Location = new System.Drawing.Point(354, 542);
             this.panel61.Name = "panel61";
-            this.panel61.Size = new System.Drawing.Size(315, 43);
+            this.panel61.Size = new System.Drawing.Size(309, 43);
             this.panel61.TabIndex = 32;
             // 
             // txtbx_settings_max_fuel_vol
@@ -4949,9 +4994,9 @@ namespace myFlightInfo
             // 
             this.panel62.Controls.Add(this.txtbx_settings_min_fuel_vol);
             this.panel62.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel62.Location = new System.Drawing.Point(360, 591);
+            this.panel62.Location = new System.Drawing.Point(354, 591);
             this.panel62.Name = "panel62";
-            this.panel62.Size = new System.Drawing.Size(315, 43);
+            this.panel62.Size = new System.Drawing.Size(309, 43);
             this.panel62.TabIndex = 33;
             // 
             // txtbx_settings_min_fuel_vol
@@ -4965,9 +5010,9 @@ namespace myFlightInfo
             // 
             this.panel63.Controls.Add(this.tableLayoutPanel15);
             this.panel63.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel63.Location = new System.Drawing.Point(360, 640);
+            this.panel63.Location = new System.Drawing.Point(354, 640);
             this.panel63.Name = "panel63";
-            this.panel63.Size = new System.Drawing.Size(315, 43);
+            this.panel63.Size = new System.Drawing.Size(309, 43);
             this.panel63.TabIndex = 34;
             // 
             // tableLayoutPanel15
@@ -4981,7 +5026,7 @@ namespace myFlightInfo
             this.tableLayoutPanel15.Name = "tableLayoutPanel15";
             this.tableLayoutPanel15.RowCount = 1;
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel15.Size = new System.Drawing.Size(315, 43);
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(309, 43);
             this.tableLayoutPanel15.TabIndex = 0;
             // 
             // btn_settings_update_aircraft
@@ -4989,7 +5034,7 @@ namespace myFlightInfo
             this.btn_settings_update_aircraft.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_settings_update_aircraft.Location = new System.Drawing.Point(3, 3);
             this.btn_settings_update_aircraft.Name = "btn_settings_update_aircraft";
-            this.btn_settings_update_aircraft.Size = new System.Drawing.Size(151, 37);
+            this.btn_settings_update_aircraft.Size = new System.Drawing.Size(148, 37);
             this.btn_settings_update_aircraft.TabIndex = 0;
             this.btn_settings_update_aircraft.Text = "Update Aircraft";
             this.btn_settings_update_aircraft.UseVisualStyleBackColor = true;
@@ -4999,9 +5044,9 @@ namespace myFlightInfo
             // 
             this.panel64.Controls.Add(this.label41);
             this.panel64.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel64.Location = new System.Drawing.Point(708, 52);
+            this.panel64.Location = new System.Drawing.Point(696, 52);
             this.panel64.Name = "panel64";
-            this.panel64.Size = new System.Drawing.Size(315, 43);
+            this.panel64.Size = new System.Drawing.Size(309, 43);
             this.panel64.TabIndex = 35;
             // 
             // label41
@@ -5017,9 +5062,9 @@ namespace myFlightInfo
             // 
             this.panel65.Controls.Add(this.txtbx_settings_va);
             this.panel65.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel65.Location = new System.Drawing.Point(1039, 52);
+            this.panel65.Location = new System.Drawing.Point(1021, 52);
             this.panel65.Name = "panel65";
-            this.panel65.Size = new System.Drawing.Size(315, 43);
+            this.panel65.Size = new System.Drawing.Size(309, 43);
             this.panel65.TabIndex = 36;
             // 
             // txtbx_settings_va
@@ -5033,9 +5078,9 @@ namespace myFlightInfo
             // 
             this.panel66.Controls.Add(this.label42);
             this.panel66.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel66.Location = new System.Drawing.Point(708, 101);
+            this.panel66.Location = new System.Drawing.Point(696, 101);
             this.panel66.Name = "panel66";
-            this.panel66.Size = new System.Drawing.Size(315, 43);
+            this.panel66.Size = new System.Drawing.Size(309, 43);
             this.panel66.TabIndex = 37;
             // 
             // label42
@@ -5051,9 +5096,9 @@ namespace myFlightInfo
             // 
             this.panel67.Controls.Add(this.txtbx_settings_vs0);
             this.panel67.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel67.Location = new System.Drawing.Point(1039, 101);
+            this.panel67.Location = new System.Drawing.Point(1021, 101);
             this.panel67.Name = "panel67";
-            this.panel67.Size = new System.Drawing.Size(315, 43);
+            this.panel67.Size = new System.Drawing.Size(309, 43);
             this.panel67.TabIndex = 38;
             // 
             // txtbx_settings_vs0
@@ -5067,9 +5112,9 @@ namespace myFlightInfo
             // 
             this.panel68.Controls.Add(this.label43);
             this.panel68.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel68.Location = new System.Drawing.Point(708, 150);
+            this.panel68.Location = new System.Drawing.Point(696, 150);
             this.panel68.Name = "panel68";
-            this.panel68.Size = new System.Drawing.Size(315, 43);
+            this.panel68.Size = new System.Drawing.Size(309, 43);
             this.panel68.TabIndex = 39;
             // 
             // label43
@@ -5085,9 +5130,9 @@ namespace myFlightInfo
             // 
             this.panel69.Controls.Add(this.txtbx_settings_vs1);
             this.panel69.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel69.Location = new System.Drawing.Point(1039, 150);
+            this.panel69.Location = new System.Drawing.Point(1021, 150);
             this.panel69.Name = "panel69";
-            this.panel69.Size = new System.Drawing.Size(315, 43);
+            this.panel69.Size = new System.Drawing.Size(309, 43);
             this.panel69.TabIndex = 40;
             // 
             // txtbx_settings_vs1
@@ -5101,9 +5146,9 @@ namespace myFlightInfo
             // 
             this.panel70.Controls.Add(this.label44);
             this.panel70.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel70.Location = new System.Drawing.Point(708, 199);
+            this.panel70.Location = new System.Drawing.Point(696, 199);
             this.panel70.Name = "panel70";
-            this.panel70.Size = new System.Drawing.Size(315, 43);
+            this.panel70.Size = new System.Drawing.Size(309, 43);
             this.panel70.TabIndex = 41;
             // 
             // label44
@@ -5119,9 +5164,9 @@ namespace myFlightInfo
             // 
             this.panel71.Controls.Add(this.txtbx_settings_vfe);
             this.panel71.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel71.Location = new System.Drawing.Point(1039, 199);
+            this.panel71.Location = new System.Drawing.Point(1021, 199);
             this.panel71.Name = "panel71";
-            this.panel71.Size = new System.Drawing.Size(315, 43);
+            this.panel71.Size = new System.Drawing.Size(309, 43);
             this.panel71.TabIndex = 42;
             // 
             // txtbx_settings_vfe
@@ -5134,26 +5179,26 @@ namespace myFlightInfo
             // panel72
             // 
             this.panel72.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel72.Location = new System.Drawing.Point(708, 248);
+            this.panel72.Location = new System.Drawing.Point(696, 248);
             this.panel72.Name = "panel72";
-            this.panel72.Size = new System.Drawing.Size(315, 43);
+            this.panel72.Size = new System.Drawing.Size(309, 43);
             this.panel72.TabIndex = 43;
             // 
             // panel73
             // 
             this.panel73.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel73.Location = new System.Drawing.Point(1039, 248);
+            this.panel73.Location = new System.Drawing.Point(1021, 248);
             this.panel73.Name = "panel73";
-            this.panel73.Size = new System.Drawing.Size(315, 43);
+            this.panel73.Size = new System.Drawing.Size(309, 43);
             this.panel73.TabIndex = 44;
             // 
             // panel74
             // 
             this.panel74.Controls.Add(this.label45);
             this.panel74.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel74.Location = new System.Drawing.Point(708, 297);
+            this.panel74.Location = new System.Drawing.Point(696, 297);
             this.panel74.Name = "panel74";
-            this.panel74.Size = new System.Drawing.Size(315, 43);
+            this.panel74.Size = new System.Drawing.Size(309, 43);
             this.panel74.TabIndex = 45;
             // 
             // label45
@@ -5169,9 +5214,9 @@ namespace myFlightInfo
             // 
             this.panel75.Controls.Add(this.txtbx_settings_hold_arm);
             this.panel75.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel75.Location = new System.Drawing.Point(1039, 297);
+            this.panel75.Location = new System.Drawing.Point(1021, 297);
             this.panel75.Name = "panel75";
-            this.panel75.Size = new System.Drawing.Size(315, 43);
+            this.panel75.Size = new System.Drawing.Size(309, 43);
             this.panel75.TabIndex = 46;
             // 
             // txtbx_settings_hold_arm
@@ -5185,9 +5230,9 @@ namespace myFlightInfo
             // 
             this.panel76.Controls.Add(this.label46);
             this.panel76.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel76.Location = new System.Drawing.Point(708, 346);
+            this.panel76.Location = new System.Drawing.Point(696, 346);
             this.panel76.Name = "panel76";
-            this.panel76.Size = new System.Drawing.Size(315, 43);
+            this.panel76.Size = new System.Drawing.Size(309, 43);
             this.panel76.TabIndex = 47;
             // 
             // label46
@@ -5203,9 +5248,9 @@ namespace myFlightInfo
             // 
             this.panel77.Controls.Add(this.txtbx_settings_cabin_arm);
             this.panel77.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel77.Location = new System.Drawing.Point(1039, 346);
+            this.panel77.Location = new System.Drawing.Point(1021, 346);
             this.panel77.Name = "panel77";
-            this.panel77.Size = new System.Drawing.Size(315, 43);
+            this.panel77.Size = new System.Drawing.Size(309, 43);
             this.panel77.TabIndex = 48;
             // 
             // txtbx_settings_cabin_arm
@@ -5218,18 +5263,18 @@ namespace myFlightInfo
             // panel78
             // 
             this.panel78.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel78.Location = new System.Drawing.Point(708, 395);
+            this.panel78.Location = new System.Drawing.Point(696, 395);
             this.panel78.Name = "panel78";
-            this.panel78.Size = new System.Drawing.Size(315, 43);
+            this.panel78.Size = new System.Drawing.Size(309, 43);
             this.panel78.TabIndex = 49;
             // 
             // panel79
             // 
             this.panel79.Controls.Add(this.label47);
             this.panel79.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel79.Location = new System.Drawing.Point(708, 444);
+            this.panel79.Location = new System.Drawing.Point(696, 444);
             this.panel79.Name = "panel79";
-            this.panel79.Size = new System.Drawing.Size(315, 43);
+            this.panel79.Size = new System.Drawing.Size(309, 43);
             this.panel79.TabIndex = 50;
             // 
             // label47
@@ -5245,9 +5290,9 @@ namespace myFlightInfo
             // 
             this.panel80.Controls.Add(this.label48);
             this.panel80.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel80.Location = new System.Drawing.Point(708, 493);
+            this.panel80.Location = new System.Drawing.Point(696, 493);
             this.panel80.Name = "panel80";
-            this.panel80.Size = new System.Drawing.Size(315, 43);
+            this.panel80.Size = new System.Drawing.Size(309, 43);
             this.panel80.TabIndex = 51;
             // 
             // label48
@@ -5262,26 +5307,26 @@ namespace myFlightInfo
             // panel81
             // 
             this.panel81.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel81.Location = new System.Drawing.Point(708, 542);
+            this.panel81.Location = new System.Drawing.Point(696, 542);
             this.panel81.Name = "panel81";
-            this.panel81.Size = new System.Drawing.Size(315, 43);
+            this.panel81.Size = new System.Drawing.Size(309, 43);
             this.panel81.TabIndex = 52;
             // 
             // panel82
             // 
             this.panel82.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel82.Location = new System.Drawing.Point(708, 591);
+            this.panel82.Location = new System.Drawing.Point(696, 591);
             this.panel82.Name = "panel82";
-            this.panel82.Size = new System.Drawing.Size(315, 43);
+            this.panel82.Size = new System.Drawing.Size(309, 43);
             this.panel82.TabIndex = 53;
             // 
             // panel83
             // 
             this.panel83.Controls.Add(this.tableLayoutPanel16);
             this.panel83.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel83.Location = new System.Drawing.Point(708, 640);
+            this.panel83.Location = new System.Drawing.Point(696, 640);
             this.panel83.Name = "panel83";
-            this.panel83.Size = new System.Drawing.Size(315, 43);
+            this.panel83.Size = new System.Drawing.Size(309, 43);
             this.panel83.TabIndex = 54;
             // 
             // tableLayoutPanel16
@@ -5296,7 +5341,7 @@ namespace myFlightInfo
             this.tableLayoutPanel16.Name = "tableLayoutPanel16";
             this.tableLayoutPanel16.RowCount = 1;
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel16.Size = new System.Drawing.Size(315, 43);
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(309, 43);
             this.tableLayoutPanel16.TabIndex = 0;
             // 
             // btn_settings_defaults
@@ -5304,7 +5349,7 @@ namespace myFlightInfo
             this.btn_settings_defaults.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_settings_defaults.Location = new System.Drawing.Point(3, 3);
             this.btn_settings_defaults.Name = "btn_settings_defaults";
-            this.btn_settings_defaults.Size = new System.Drawing.Size(151, 37);
+            this.btn_settings_defaults.Size = new System.Drawing.Size(148, 37);
             this.btn_settings_defaults.TabIndex = 0;
             this.btn_settings_defaults.Text = "Default Settings";
             this.btn_settings_defaults.UseVisualStyleBackColor = true;
@@ -5313,9 +5358,9 @@ namespace myFlightInfo
             // btn_reset_compliance_xml
             // 
             this.btn_reset_compliance_xml.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_reset_compliance_xml.Location = new System.Drawing.Point(160, 3);
+            this.btn_reset_compliance_xml.Location = new System.Drawing.Point(157, 3);
             this.btn_reset_compliance_xml.Name = "btn_reset_compliance_xml";
-            this.btn_reset_compliance_xml.Size = new System.Drawing.Size(152, 37);
+            this.btn_reset_compliance_xml.Size = new System.Drawing.Size(149, 37);
             this.btn_reset_compliance_xml.TabIndex = 1;
             this.btn_reset_compliance_xml.Text = "Reset XML";
             this.btn_reset_compliance_xml.UseVisualStyleBackColor = true;
@@ -5324,18 +5369,18 @@ namespace myFlightInfo
             // panel84
             // 
             this.panel84.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel84.Location = new System.Drawing.Point(1039, 395);
+            this.panel84.Location = new System.Drawing.Point(1021, 395);
             this.panel84.Name = "panel84";
-            this.panel84.Size = new System.Drawing.Size(315, 43);
+            this.panel84.Size = new System.Drawing.Size(309, 43);
             this.panel84.TabIndex = 55;
             // 
             // panel85
             // 
             this.panel85.Controls.Add(this.txtbx_settings_aft_cg_limit);
             this.panel85.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel85.Location = new System.Drawing.Point(1039, 444);
+            this.panel85.Location = new System.Drawing.Point(1021, 444);
             this.panel85.Name = "panel85";
-            this.panel85.Size = new System.Drawing.Size(315, 43);
+            this.panel85.Size = new System.Drawing.Size(309, 43);
             this.panel85.TabIndex = 56;
             // 
             // txtbx_settings_aft_cg_limit
@@ -5349,9 +5394,9 @@ namespace myFlightInfo
             // 
             this.panel86.Controls.Add(this.txtbx_settings_fwd_cg_limit);
             this.panel86.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel86.Location = new System.Drawing.Point(1039, 493);
+            this.panel86.Location = new System.Drawing.Point(1021, 493);
             this.panel86.Name = "panel86";
-            this.panel86.Size = new System.Drawing.Size(315, 43);
+            this.panel86.Size = new System.Drawing.Size(309, 43);
             this.panel86.TabIndex = 57;
             // 
             // txtbx_settings_fwd_cg_limit
@@ -5364,26 +5409,323 @@ namespace myFlightInfo
             // panel87
             // 
             this.panel87.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel87.Location = new System.Drawing.Point(1039, 542);
+            this.panel87.Location = new System.Drawing.Point(1021, 542);
             this.panel87.Name = "panel87";
-            this.panel87.Size = new System.Drawing.Size(315, 43);
+            this.panel87.Size = new System.Drawing.Size(309, 43);
             this.panel87.TabIndex = 58;
             // 
             // panel88
             // 
             this.panel88.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel88.Location = new System.Drawing.Point(1039, 591);
+            this.panel88.Location = new System.Drawing.Point(1021, 591);
             this.panel88.Name = "panel88";
-            this.panel88.Size = new System.Drawing.Size(315, 43);
+            this.panel88.Size = new System.Drawing.Size(309, 43);
             this.panel88.TabIndex = 59;
             // 
             // panel89
             // 
             this.panel89.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel89.Location = new System.Drawing.Point(1039, 640);
+            this.panel89.Location = new System.Drawing.Point(1021, 640);
             this.panel89.Name = "panel89";
-            this.panel89.Size = new System.Drawing.Size(315, 43);
+            this.panel89.Size = new System.Drawing.Size(309, 43);
             this.panel89.TabIndex = 60;
+            // 
+            // panel178
+            // 
+            this.panel178.Controls.Add(this.btn_get_factor);
+            this.panel178.Controls.Add(this.button1);
+            this.panel178.Controls.Add(this.groupBox1);
+            this.panel178.Controls.Add(this.rchtxtbx_data);
+            this.panel178.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel178.Location = new System.Drawing.Point(0, 0);
+            this.panel178.Name = "panel178";
+            this.panel178.Size = new System.Drawing.Size(1367, 692);
+            this.panel178.TabIndex = 0;
+            // 
+            // btn_get_factor
+            // 
+            this.btn_get_factor.Location = new System.Drawing.Point(577, 600);
+            this.btn_get_factor.Name = "btn_get_factor";
+            this.btn_get_factor.Size = new System.Drawing.Size(120, 78);
+            this.btn_get_factor.TabIndex = 34;
+            this.btn_get_factor.Text = "Get Factor";
+            this.btn_get_factor.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1191, 600);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 78);
+            this.button1.TabIndex = 33;
+            this.button1.Text = "Close";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label74);
+            this.groupBox1.Controls.Add(this.txtbx_aircraft_laden_weight);
+            this.groupBox1.Controls.Add(this.lbl_weight_type);
+            this.groupBox1.Controls.Add(this.rdobtn_landing);
+            this.groupBox1.Controls.Add(this.rdobtn_take_off);
+            this.groupBox1.Controls.Add(this.label77);
+            this.groupBox1.Controls.Add(this.chkbx_soft_snow);
+            this.groupBox1.Controls.Add(this.label78);
+            this.groupBox1.Controls.Add(this.cmbobox_runway_surface);
+            this.groupBox1.Controls.Add(this.label79);
+            this.groupBox1.Controls.Add(this.label80);
+            this.groupBox1.Controls.Add(this.txtbx_runway_slope_angle);
+            this.groupBox1.Controls.Add(this.lbl_runway_slope);
+            this.groupBox1.Controls.Add(this.label81);
+            this.groupBox1.Controls.Add(this.txtbx_tailwind_component);
+            this.groupBox1.Controls.Add(this.label82);
+            this.groupBox1.Controls.Add(this.label83);
+            this.groupBox1.Controls.Add(this.txtbx_ambeint_temperature);
+            this.groupBox1.Controls.Add(this.label84);
+            this.groupBox1.Controls.Add(this.label85);
+            this.groupBox1.Controls.Add(this.txtbx_aerodrome_elevation);
+            this.groupBox1.Controls.Add(this.label86);
+            this.groupBox1.Controls.Add(this.label87);
+            this.groupBox1.Controls.Add(this.txtbx_aircraft_base_weight);
+            this.groupBox1.Controls.Add(this.label88);
+            this.groupBox1.Location = new System.Drawing.Point(55, 15);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(450, 460);
+            this.groupBox1.TabIndex = 32;
+            this.groupBox1.TabStop = false;
+            // 
+            // label74
+            // 
+            this.label74.AutoSize = true;
+            this.label74.Location = new System.Drawing.Point(364, 100);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(26, 20);
+            this.label74.TabIndex = 30;
+            this.label74.Text = "kg";
+            // 
+            // txtbx_aircraft_laden_weight
+            // 
+            this.txtbx_aircraft_laden_weight.Location = new System.Drawing.Point(258, 97);
+            this.txtbx_aircraft_laden_weight.Name = "txtbx_aircraft_laden_weight";
+            this.txtbx_aircraft_laden_weight.Size = new System.Drawing.Size(100, 26);
+            this.txtbx_aircraft_laden_weight.TabIndex = 29;
+            this.txtbx_aircraft_laden_weight.Text = "0";
+            // 
+            // lbl_weight_type
+            // 
+            this.lbl_weight_type.AutoSize = true;
+            this.lbl_weight_type.Location = new System.Drawing.Point(35, 100);
+            this.lbl_weight_type.Name = "lbl_weight_type";
+            this.lbl_weight_type.Size = new System.Drawing.Size(83, 20);
+            this.lbl_weight_type.TabIndex = 28;
+            this.lbl_weight_type.Text = "..... Weight";
+            // 
+            // rdobtn_landing
+            // 
+            this.rdobtn_landing.AutoSize = true;
+            this.rdobtn_landing.Location = new System.Drawing.Point(238, 20);
+            this.rdobtn_landing.Name = "rdobtn_landing";
+            this.rdobtn_landing.Size = new System.Drawing.Size(91, 24);
+            this.rdobtn_landing.TabIndex = 27;
+            this.rdobtn_landing.Text = "Landing";
+            this.rdobtn_landing.UseVisualStyleBackColor = true;
+            // 
+            // rdobtn_take_off
+            // 
+            this.rdobtn_take_off.AutoSize = true;
+            this.rdobtn_take_off.Checked = true;
+            this.rdobtn_take_off.Location = new System.Drawing.Point(137, 20);
+            this.rdobtn_take_off.Name = "rdobtn_take_off";
+            this.rdobtn_take_off.Size = new System.Drawing.Size(96, 24);
+            this.rdobtn_take_off.TabIndex = 26;
+            this.rdobtn_take_off.TabStop = true;
+            this.rdobtn_take_off.Text = "Take-Off";
+            this.rdobtn_take_off.UseVisualStyleBackColor = true;
+            // 
+            // label77
+            // 
+            this.label77.AutoSize = true;
+            this.label77.Location = new System.Drawing.Point(35, 22);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(79, 20);
+            this.label77.TabIndex = 25;
+            this.label77.Text = "Operation";
+            // 
+            // chkbx_soft_snow
+            // 
+            this.chkbx_soft_snow.AutoSize = true;
+            this.chkbx_soft_snow.Location = new System.Drawing.Point(258, 330);
+            this.chkbx_soft_snow.Name = "chkbx_soft_snow";
+            this.chkbx_soft_snow.Size = new System.Drawing.Size(22, 21);
+            this.chkbx_soft_snow.TabIndex = 24;
+            this.chkbx_soft_snow.UseVisualStyleBackColor = true;
+            // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.Location = new System.Drawing.Point(35, 329);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(101, 20);
+            this.label78.TabIndex = 23;
+            this.label78.Text = "Soft or Snow";
+            // 
+            // cmbobox_runway_surface
+            // 
+            this.cmbobox_runway_surface.FormattingEnabled = true;
+            this.cmbobox_runway_surface.Items.AddRange(new object[] {
+            "Dry Grass",
+            "Wet Grass",
+            "Wet Paved"});
+            this.cmbobox_runway_surface.Location = new System.Drawing.Point(258, 292);
+            this.cmbobox_runway_surface.Name = "cmbobox_runway_surface";
+            this.cmbobox_runway_surface.Size = new System.Drawing.Size(136, 28);
+            this.cmbobox_runway_surface.TabIndex = 22;
+            // 
+            // label79
+            // 
+            this.label79.AutoSize = true;
+            this.label79.Location = new System.Drawing.Point(35, 289);
+            this.label79.Name = "label79";
+            this.label79.Size = new System.Drawing.Size(126, 20);
+            this.label79.TabIndex = 21;
+            this.label79.Text = "Runway Surface";
+            // 
+            // label80
+            // 
+            this.label80.AutoSize = true;
+            this.label80.Location = new System.Drawing.Point(364, 257);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(23, 20);
+            this.label80.TabIndex = 17;
+            this.label80.Text = "%";
+            // 
+            // txtbx_runway_slope_angle
+            // 
+            this.txtbx_runway_slope_angle.Location = new System.Drawing.Point(258, 254);
+            this.txtbx_runway_slope_angle.Name = "txtbx_runway_slope_angle";
+            this.txtbx_runway_slope_angle.Size = new System.Drawing.Size(100, 26);
+            this.txtbx_runway_slope_angle.TabIndex = 16;
+            this.txtbx_runway_slope_angle.Text = "0";
+            // 
+            // lbl_runway_slope
+            // 
+            this.lbl_runway_slope.AutoSize = true;
+            this.lbl_runway_slope.Location = new System.Drawing.Point(35, 257);
+            this.lbl_runway_slope.Name = "lbl_runway_slope";
+            this.lbl_runway_slope.Size = new System.Drawing.Size(199, 20);
+            this.lbl_runway_slope.TabIndex = 15;
+            this.lbl_runway_slope.Text = "Runway Uphill Slope Angle";
+            // 
+            // label81
+            // 
+            this.label81.AutoSize = true;
+            this.label81.Location = new System.Drawing.Point(364, 225);
+            this.label81.Name = "label81";
+            this.label81.Size = new System.Drawing.Size(30, 20);
+            this.label81.TabIndex = 14;
+            this.label81.Text = "kts";
+            // 
+            // txtbx_tailwind_component
+            // 
+            this.txtbx_tailwind_component.Location = new System.Drawing.Point(258, 222);
+            this.txtbx_tailwind_component.Name = "txtbx_tailwind_component";
+            this.txtbx_tailwind_component.Size = new System.Drawing.Size(100, 26);
+            this.txtbx_tailwind_component.TabIndex = 13;
+            this.txtbx_tailwind_component.Text = "0";
+            // 
+            // label82
+            // 
+            this.label82.AutoSize = true;
+            this.label82.Location = new System.Drawing.Point(35, 225);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(152, 20);
+            this.label82.TabIndex = 12;
+            this.label82.Text = "Tailwind Component";
+            // 
+            // label83
+            // 
+            this.label83.AutoSize = true;
+            this.label83.Location = new System.Drawing.Point(364, 193);
+            this.label83.Name = "label83";
+            this.label83.Size = new System.Drawing.Size(25, 20);
+            this.label83.TabIndex = 11;
+            this.label83.Text = "°C";
+            // 
+            // txtbx_ambeint_temperature
+            // 
+            this.txtbx_ambeint_temperature.Location = new System.Drawing.Point(258, 190);
+            this.txtbx_ambeint_temperature.Name = "txtbx_ambeint_temperature";
+            this.txtbx_ambeint_temperature.Size = new System.Drawing.Size(100, 26);
+            this.txtbx_ambeint_temperature.TabIndex = 10;
+            this.txtbx_ambeint_temperature.Text = "15";
+            // 
+            // label84
+            // 
+            this.label84.AutoSize = true;
+            this.label84.Location = new System.Drawing.Point(35, 193);
+            this.label84.Name = "label84";
+            this.label84.Size = new System.Drawing.Size(163, 20);
+            this.label84.TabIndex = 9;
+            this.label84.Text = "Ambient Temperature";
+            // 
+            // label85
+            // 
+            this.label85.AutoSize = true;
+            this.label85.Location = new System.Drawing.Point(364, 161);
+            this.label85.Name = "label85";
+            this.label85.Size = new System.Drawing.Size(19, 20);
+            this.label85.TabIndex = 8;
+            this.label85.Text = "ft";
+            // 
+            // txtbx_aerodrome_elevation
+            // 
+            this.txtbx_aerodrome_elevation.Location = new System.Drawing.Point(258, 158);
+            this.txtbx_aerodrome_elevation.Name = "txtbx_aerodrome_elevation";
+            this.txtbx_aerodrome_elevation.Size = new System.Drawing.Size(100, 26);
+            this.txtbx_aerodrome_elevation.TabIndex = 7;
+            this.txtbx_aerodrome_elevation.Text = "0";
+            // 
+            // label86
+            // 
+            this.label86.AutoSize = true;
+            this.label86.Location = new System.Drawing.Point(35, 161);
+            this.label86.Name = "label86";
+            this.label86.Size = new System.Drawing.Size(157, 20);
+            this.label86.TabIndex = 6;
+            this.label86.Text = "Aerodrome Elevation";
+            // 
+            // label87
+            // 
+            this.label87.AutoSize = true;
+            this.label87.Location = new System.Drawing.Point(364, 68);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(26, 20);
+            this.label87.TabIndex = 5;
+            this.label87.Text = "kg";
+            // 
+            // txtbx_aircraft_base_weight
+            // 
+            this.txtbx_aircraft_base_weight.Location = new System.Drawing.Point(258, 65);
+            this.txtbx_aircraft_base_weight.Name = "txtbx_aircraft_base_weight";
+            this.txtbx_aircraft_base_weight.Size = new System.Drawing.Size(100, 26);
+            this.txtbx_aircraft_base_weight.TabIndex = 4;
+            this.txtbx_aircraft_base_weight.Text = "450";
+            // 
+            // label88
+            // 
+            this.label88.AutoSize = true;
+            this.label88.Location = new System.Drawing.Point(35, 68);
+            this.label88.Name = "label88";
+            this.label88.Size = new System.Drawing.Size(155, 20);
+            this.label88.TabIndex = 3;
+            this.label88.Text = "Aircraft Base Weight";
+            // 
+            // rchtxtbx_data
+            // 
+            this.rchtxtbx_data.Location = new System.Drawing.Point(577, 15);
+            this.rchtxtbx_data.Name = "rchtxtbx_data";
+            this.rchtxtbx_data.Size = new System.Drawing.Size(734, 542);
+            this.rchtxtbx_data.TabIndex = 31;
+            this.rchtxtbx_data.Text = "";
             // 
             // Form1
             // 
@@ -5576,6 +5918,7 @@ namespace myFlightInfo
             this.panel166.PerformLayout();
             this.panel167.ResumeLayout(false);
             this.panel167.PerformLayout();
+            this.tab_takeoff_landing.ResumeLayout(false);
             this.tab_weight_balance.ResumeLayout(false);
             this.tableLayoutPanel10.ResumeLayout(false);
             this.panel90.ResumeLayout(false);
@@ -5767,6 +6110,9 @@ namespace myFlightInfo
             this.panel85.PerformLayout();
             this.panel86.ResumeLayout(false);
             this.panel86.PerformLayout();
+            this.panel178.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -6203,6 +6549,37 @@ namespace myFlightInfo
         private System.Windows.Forms.Label label76;
         private System.Windows.Forms.Panel panel177;
         private System.Windows.Forms.Label lbl_return_pre_flight_running;
+        private System.Windows.Forms.TabPage tab_takeoff_landing;
+        private System.Windows.Forms.Panel panel178;
+        private System.Windows.Forms.Button btn_get_factor;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label74;
+        private System.Windows.Forms.TextBox txtbx_aircraft_laden_weight;
+        private System.Windows.Forms.Label lbl_weight_type;
+        private System.Windows.Forms.RadioButton rdobtn_landing;
+        private System.Windows.Forms.RadioButton rdobtn_take_off;
+        private System.Windows.Forms.Label label77;
+        private System.Windows.Forms.CheckBox chkbx_soft_snow;
+        private System.Windows.Forms.Label label78;
+        private System.Windows.Forms.ComboBox cmbobox_runway_surface;
+        private System.Windows.Forms.Label label79;
+        private System.Windows.Forms.Label label80;
+        private System.Windows.Forms.TextBox txtbx_runway_slope_angle;
+        private System.Windows.Forms.Label lbl_runway_slope;
+        private System.Windows.Forms.Label label81;
+        private System.Windows.Forms.TextBox txtbx_tailwind_component;
+        private System.Windows.Forms.Label label82;
+        private System.Windows.Forms.Label label83;
+        private System.Windows.Forms.TextBox txtbx_ambeint_temperature;
+        private System.Windows.Forms.Label label84;
+        private System.Windows.Forms.Label label85;
+        private System.Windows.Forms.TextBox txtbx_aerodrome_elevation;
+        private System.Windows.Forms.Label label86;
+        private System.Windows.Forms.Label label87;
+        private System.Windows.Forms.TextBox txtbx_aircraft_base_weight;
+        private System.Windows.Forms.Label label88;
+        private System.Windows.Forms.RichTextBox rchtxtbx_data;
     }
 }
 
