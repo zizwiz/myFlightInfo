@@ -9,6 +9,7 @@ using myFlightInfo.Navigation;
 using myFlightInfo.common_data;
 using myFlightInfo.browsing;
 using myFlightInfo.Properties;
+using myFlightInfo.take_off_landing;
 
 //using myFlightInfo.compliance_data;
 
@@ -555,7 +556,12 @@ namespace myFlightInfo
             }
         }
 
-       
+        private void btn_test_Click(object sender, EventArgs e)
+        {
+            double answer = altitude_factor.WorkOutAltitudeFactor(int.Parse(txtbx_test_data.Text));
+        }
+
+
 
 
 

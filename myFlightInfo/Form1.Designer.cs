@@ -491,6 +491,8 @@ namespace myFlightInfo
             this.txtbx_aircraft_base_weight = new System.Windows.Forms.TextBox();
             this.label88 = new System.Windows.Forms.Label();
             this.rchtxtbx_data = new System.Windows.Forms.RichTextBox();
+            this.btn_test = new System.Windows.Forms.Button();
+            this.txtbx_test_data = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.panel31.SuspendLayout();
@@ -5432,6 +5434,8 @@ namespace myFlightInfo
             // 
             // panel178
             // 
+            this.panel178.Controls.Add(this.txtbx_test_data);
+            this.panel178.Controls.Add(this.btn_test);
             this.panel178.Controls.Add(this.btn_get_factor);
             this.panel178.Controls.Add(this.button1);
             this.panel178.Controls.Add(this.groupBox1);
@@ -5726,6 +5730,24 @@ namespace myFlightInfo
             this.rchtxtbx_data.Size = new System.Drawing.Size(734, 542);
             this.rchtxtbx_data.TabIndex = 31;
             this.rchtxtbx_data.Text = "";
+            // 
+            // btn_test
+            // 
+            this.btn_test.Location = new System.Drawing.Point(309, 523);
+            this.btn_test.Name = "btn_test";
+            this.btn_test.Size = new System.Drawing.Size(114, 77);
+            this.btn_test.TabIndex = 35;
+            this.btn_test.Text = "test";
+            this.btn_test.UseVisualStyleBackColor = true;
+            this.btn_test.Click += new System.EventHandler(this.btn_test_Click);
+            // 
+            // txtbx_test_data
+            // 
+            this.txtbx_test_data.Location = new System.Drawing.Point(142, 548);
+            this.txtbx_test_data.Name = "txtbx_test_data";
+            this.txtbx_test_data.Size = new System.Drawing.Size(100, 26);
+            this.txtbx_test_data.TabIndex = 36;
+            this.txtbx_test_data.Text = "0";
             // 
             // Form1
             // 
@@ -6111,6 +6133,7 @@ namespace myFlightInfo
             this.panel86.ResumeLayout(false);
             this.panel86.PerformLayout();
             this.panel178.ResumeLayout(false);
+            this.panel178.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -6580,6 +6603,8 @@ namespace myFlightInfo
         private System.Windows.Forms.TextBox txtbx_aircraft_base_weight;
         private System.Windows.Forms.Label label88;
         private System.Windows.Forms.RichTextBox rchtxtbx_data;
+        private System.Windows.Forms.Button btn_test;
+        private System.Windows.Forms.TextBox txtbx_test_data;
     }
 }
 
