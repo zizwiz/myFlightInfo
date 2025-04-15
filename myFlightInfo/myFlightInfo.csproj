@@ -110,8 +110,9 @@
     <Compile Include="TabChanges.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="take_off_landing\altitude_factor.cs" />
-    <Compile Include="take_off_landing\weight_factor.cs" />
+    <Compile Include="take_off_landing\AltitudeFactor.cs" />
+    <Compile Include="take_off_landing\TemperatureFactor.cs" />
+    <Compile Include="take_off_landing\WeightFactor.cs" />
     <Compile Include="utils\CheckData.cs" />
     <Compile Include="utils\Convert.cs" />
     <Compile Include="utils\HelpfulFunctions.cs" />

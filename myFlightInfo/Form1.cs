@@ -558,7 +558,9 @@ namespace myFlightInfo
 
         private void btn_test_Click(object sender, EventArgs e)
         {
-            double answer = altitude_factor.WorkOutAltitudeFactor(int.Parse(txtbx_test_data.Text));
+            double answer = TemperatureFactor.WorkOutTemperatureFactor(int.Parse(txtbx_test_data.Text));
+
+            rchtxtbx_data.AppendText(answer + "\r");
         }
 
 

@@ -2,7 +2,7 @@
 
 namespace myFlightInfo.take_off_landing
 {
-    class weight_factor
+    class WeightFactor
     {
         public static double WorkOutWeightFactor(double baseWeight, double ladenWeight, int type)
         {
