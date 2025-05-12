@@ -34046,25 +34046,17 @@
 	<airport_info>
 		<icao_code>GB-0983</icao_code>
 		<airport_name>Ringstead Private Airstrip</airport_name>
-		<latitude_deg>
-		</latitude_deg>
-		<latitude_dec>
-		</latitude_dec>
-		<longitude_deg>
-		</longitude_deg>
-		<longitude_dec>
-		</longitude_dec>
-		<elevation_m>
-		</elevation_m>
-		<elevation_ft>
-		</elevation_ft>
+		<latitude_deg>52°21'49.7412"N</latitude_deg>
+		<latitude_dec>52.36363817</latitude_dec>
+		<longitude_deg>0°32'21.3936"W</longitude_deg>
+		<longitude_dec>-0.539276</longitude_dec>
+		<elevation_m>62</elevation_m>
+		<elevation_ft>203</elevation_ft>
 		<iata_code>
 		</iata_code>
-		<alternate_name>
-		</alternate_name>
+		<alternate_name>Ringstead Microlight Site</alternate_name>
 		<fir>London FIR</fir>
-		<city>
-		</city>
+		<city>Ringstead</city>
 		<type>Small airport</type>
 	</airport_info>
 	<airport_info>
