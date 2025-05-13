@@ -100,6 +100,7 @@
     <Compile Include="Navigation\Navigate.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="satellite_image\Image.cs" />
     <Compile Include="Settings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +117,7 @@
     <Compile Include="utils\CheckData.cs" />
     <Compile Include="utils\Convert.cs" />
     <Compile Include="utils\HelpfulFunctions.cs" />
+    <Compile Include="utils\TimeFunctions.cs" />
     <Compile Include="WeightsBalance.cs">
       <SubType>Form</SubType>
     </Compile>

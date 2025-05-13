@@ -226,6 +226,18 @@ namespace myFlightInfo
                 btn_navigate_to.Visible = true;
                 txtbx_navigate_to_url.Visible = true;
             }
+            else if (tabcnt_utils.SelectedTab == tab_satellite)
+            {
+                //for this tab we need to preload a webpage so that the subsequent pages will load
+                txtbx_navigate_to_url.Text = "https://free-map.org/satellite/#57.20194,-2.19778,15z";
+                cmbobx_airport_info.SelectedIndex = 0;
+                cmbobx_airport_info.Visible = true;
+                NavigationDateTimePicker.Visible = false;
+                grpbx_altimeter.Visible = false;
+                grpbx_browser_navigation.Visible = true;
+                btn_navigate_to.Visible = true;
+                txtbx_navigate_to_url.Visible = true;
+            }
 
             SetMetarPages();
             SetWeatherPages();

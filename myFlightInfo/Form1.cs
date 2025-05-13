@@ -5,11 +5,14 @@ using System.Threading;
 using System.Windows.Forms;
 using System.Xml;
 using CenteredMessagebox;
+using Microsoft.Web.WebView2.WinForms;
 using myFlightInfo.Navigation;
 using myFlightInfo.common_data;
 using myFlightInfo.browsing;
 using myFlightInfo.Properties;
+using myFlightInfo.satellite_image;
 using myFlightInfo.take_off_landing;
+using myFlightInfo.utils;
 
 //using myFlightInfo.compliance_data;
 
@@ -115,9 +118,16 @@ namespace myFlightInfo
 
             await webView_navFromChart.EnsureCoreWebView2Async();
             await webView_navToChart.EnsureCoreWebView2Async();
+            await webView_Satellite_view.EnsureCoreWebView2Async();
 
-            webView_notams.CoreWebView2.Navigate("https://www.notaminfo.com/ukmap?destination=node%2F39");
+           // webView_notams.CoreWebView2.Navigate("https://www.notaminfo.com/ukmap?destination=node%2F39");
+
+            Browse.NavigateTo("https://www.notaminfo.com/ukmap?destination=node%2F39", webView_notams);
             
+            //Set initial image for Satellite image page.
+            Browse.NavigateTo("https://free-map.org/satellite/#57.20194,-2.19778,15z", webView_Satellite_view);
+            
+
             SetMetarPages();
             SetWeatherPages();
 
@@ -208,7 +218,7 @@ namespace myFlightInfo
                 lbl_to_altitude.Text = "";
                 lbl_p_airport_name.Text = "";
                 lbl_d_airport_name.Text = "";
-                
+
                 NavigationDateTimePicker.Value = DateTime.Now;
 
                 lstbx_navigation_from.Items.Clear();
@@ -250,7 +260,7 @@ namespace myFlightInfo
             int minute = DateTime.Now.Minute;
             int second = DateTime.Now.Second;
 
-            if ((altimeter.Calculate_altimeter(lbl_present_altitude.Text, lstbx_navigation_from))&&
+            if ((altimeter.Calculate_altimeter(lbl_present_altitude.Text, lstbx_navigation_from)) &&
                 (altimeter.Calculate_altimeter(lbl_to_altitude.Text, lstbx_navigation_to)))
             {
                 // Get bearing and distance display in listbox for both airfields
@@ -304,7 +314,7 @@ namespace myFlightInfo
         {
             if ((tabcnt_toplevel.SelectedTab == tab_utils) && (tabcnt_utils.SelectedTab == tab_navigation))
             {
-                
+
 
                 grpbx_towns.Visible = false;
 
@@ -353,7 +363,7 @@ namespace myFlightInfo
 
                         webView_navToChart.CoreWebView2.Navigate("https://www.openstreetmap.org/?minlat" +
                                                                    lat + "&minlon=" + lng + "#map=14/" + lat + "/" + lng);
-                       
+
                         btn_navigation_calculations.Visible = true; //Now show button to calculate
                     }
 
@@ -366,6 +376,20 @@ namespace myFlightInfo
                 string URI = "https://metar-taf.com/" + airport_data.GetAirportInfo(cmbobx_airport_info.Text)[1];
                 webView_browser.CoreWebView2.Navigate(URI);
                 txtbx_navigate_to_url.Text = URI;
+            }
+            else if ((tabcnt_toplevel.SelectedTab == tab_utils) && (tabcnt_utils.SelectedTab == tab_satellite))
+            {
+                grpbx_towns.Visible = false;
+
+                string[] data = airport_data.GetAirportInfo(cmbobx_airport_info.Text);
+                double lat = Math.Round(double.Parse(data[4]), 5);
+                double lng = Math.Round(double.Parse(data[6]), 5);
+
+                string URI = "https://free-map.org/satellite/#" + lat + "," + lng + ",15z";
+
+                txtbx_navigate_to_url.Text = URI;
+               
+                Image.DrawSatelliteImage(URI, webView_Satellite_view);
             }
         }
 
@@ -396,10 +420,18 @@ namespace myFlightInfo
 
         private void btn_navigate_to_Click(object sender, EventArgs e)
         {
-            Browse.NavigateTo(txtbx_navigate_to_url.Text, webView_browser);
+            if ((tabcnt_toplevel.SelectedTab == tab_utils) && (tabcnt_utils.SelectedTab == tab_satellite))
+            {
+               Image.DrawSatelliteImage(txtbx_navigate_to_url.Text, webView_Satellite_view);
+            }
+            else if ((tabcnt_toplevel.SelectedTab == tab_utils) && (tabcnt_utils.SelectedTab == tab_browser))
+            {
+                Browse.NavigateTo(txtbx_navigate_to_url.Text, webView_browser);
+            }
+
         }
 
-        
+       
         private void btn_school_Click(object sender, EventArgs e)
         {
             //check which school is set and use it but also set button to change to other school
