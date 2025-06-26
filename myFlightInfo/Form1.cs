@@ -590,9 +590,25 @@ namespace myFlightInfo
 
         private void btn_test_Click(object sender, EventArgs e)
         {
-            double answer = TemperatureFactor.WorkOutTemperatureFactor(int.Parse(txtbx_test_data.Text));
+            int type = 1; //landing
 
-            rchtxtbx_data.AppendText(answer + "\r");
+            if (rdobtn_take_off.Checked) type = 0; //take-off
+
+            double answer = TemperatureFactor.WorkOutTemperatureFactor(int.Parse(txtbx_ambeint_temperature.Text));
+            rchtxtbx_data.AppendText("Temperature = " + answer + "\r");
+
+
+            answer = AltitudeFactor.WorkOutAltitudeFactor(int.Parse(txtbx_aerodrome_elevation.Text));
+            rchtxtbx_data.AppendText("Altitude = " + answer + "\r");
+
+            answer = WeightFactor.WorkOutWeightFactor(
+                int.Parse(txtbx_aircraft_base_weight.Text),
+                    int.Parse(txtbx_aircraft_laden_weight.Text),
+                    type);
+            rchtxtbx_data.AppendText("Weight = " + answer + "\r");
+
+            //answer = AltitudeFactor.WorkOutAltitudeFactor(int.Parse(txtbx_test_data.Text));
+            //rchtxtbx_data.AppendText("Altitude = " + answer + "\r");
         }
 
 

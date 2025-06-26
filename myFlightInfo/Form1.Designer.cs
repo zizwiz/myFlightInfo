@@ -3284,7 +3284,7 @@ namespace myFlightInfo
             this.txtbx_aircraft_laden_weight.Name = "txtbx_aircraft_laden_weight";
             this.txtbx_aircraft_laden_weight.Size = new System.Drawing.Size(100, 26);
             this.txtbx_aircraft_laden_weight.TabIndex = 29;
-            this.txtbx_aircraft_laden_weight.Text = "0";
+            this.txtbx_aircraft_laden_weight.Text = "450";
             // 
             // lbl_weight_type
             // 
@@ -3484,7 +3484,7 @@ namespace myFlightInfo
             this.txtbx_aircraft_base_weight.Name = "txtbx_aircraft_base_weight";
             this.txtbx_aircraft_base_weight.Size = new System.Drawing.Size(100, 26);
             this.txtbx_aircraft_base_weight.TabIndex = 4;
-            this.txtbx_aircraft_base_weight.Text = "450";
+            this.txtbx_aircraft_base_weight.Text = "265";
             // 
             // label88
             // 

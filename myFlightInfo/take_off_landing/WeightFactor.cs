@@ -9,7 +9,7 @@ namespace myFlightInfo.take_off_landing
             double baseWeightPercentage = baseWeight / 10;
             double factor = 1.2; //10% increase in weight : Takeoff
 
-            double myWeight = Math.Ceiling(ladenWeight - baseWeight / baseWeightPercentage);
+            double myWeight = Math.Ceiling((ladenWeight - baseWeight) / baseWeightPercentage);
 
 
 
