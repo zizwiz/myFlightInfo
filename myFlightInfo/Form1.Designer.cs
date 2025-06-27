@@ -248,7 +248,7 @@ namespace myFlightInfo
             this.txtbx_test_data = new System.Windows.Forms.TextBox();
             this.btn_test = new System.Windows.Forms.Button();
             this.btn_get_factor = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_clear_factors = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label74 = new System.Windows.Forms.Label();
             this.txtbx_aircraft_laden_weight = new System.Windows.Forms.TextBox();
@@ -275,7 +275,7 @@ namespace myFlightInfo
             this.label87 = new System.Windows.Forms.Label();
             this.txtbx_aircraft_base_weight = new System.Windows.Forms.TextBox();
             this.label88 = new System.Windows.Forms.Label();
-            this.rchtxtbx_data = new System.Windows.Forms.RichTextBox();
+            this.rchtxtbx_TakeOff_Landing_data = new System.Windows.Forms.RichTextBox();
             this.tab_weight_balance = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.panel90 = new System.Windows.Forms.Panel();
@@ -3191,9 +3191,9 @@ namespace myFlightInfo
             this.panel178.Controls.Add(this.txtbx_test_data);
             this.panel178.Controls.Add(this.btn_test);
             this.panel178.Controls.Add(this.btn_get_factor);
-            this.panel178.Controls.Add(this.button1);
+            this.panel178.Controls.Add(this.btn_clear_factors);
             this.panel178.Controls.Add(this.groupBox1);
-            this.panel178.Controls.Add(this.rchtxtbx_data);
+            this.panel178.Controls.Add(this.rchtxtbx_TakeOff_Landing_data);
             this.panel178.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel178.Location = new System.Drawing.Point(0, 0);
             this.panel178.Name = "panel178";
@@ -3227,14 +3227,15 @@ namespace myFlightInfo
             this.btn_get_factor.Text = "Get Factor";
             this.btn_get_factor.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btn_clear_factors
             // 
-            this.button1.Location = new System.Drawing.Point(1191, 600);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 78);
-            this.button1.TabIndex = 33;
-            this.button1.Text = "Close";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_clear_factors.Location = new System.Drawing.Point(1143, 600);
+            this.btn_clear_factors.Name = "btn_clear_factors";
+            this.btn_clear_factors.Size = new System.Drawing.Size(168, 78);
+            this.btn_clear_factors.TabIndex = 33;
+            this.btn_clear_factors.Text = "Clear Factors";
+            this.btn_clear_factors.UseVisualStyleBackColor = true;
+            this.btn_clear_factors.Click += new System.EventHandler(this.btn_clear_factors_Click);
             // 
             // groupBox1
             // 
@@ -3484,7 +3485,7 @@ namespace myFlightInfo
             this.txtbx_aircraft_base_weight.Name = "txtbx_aircraft_base_weight";
             this.txtbx_aircraft_base_weight.Size = new System.Drawing.Size(100, 26);
             this.txtbx_aircraft_base_weight.TabIndex = 4;
-            this.txtbx_aircraft_base_weight.Text = "265";
+            this.txtbx_aircraft_base_weight.Text = "268";
             // 
             // label88
             // 
@@ -3495,13 +3496,13 @@ namespace myFlightInfo
             this.label88.TabIndex = 3;
             this.label88.Text = "Aircraft Base Weight";
             // 
-            // rchtxtbx_data
+            // rchtxtbx_TakeOff_Landing_data
             // 
-            this.rchtxtbx_data.Location = new System.Drawing.Point(577, 15);
-            this.rchtxtbx_data.Name = "rchtxtbx_data";
-            this.rchtxtbx_data.Size = new System.Drawing.Size(734, 542);
-            this.rchtxtbx_data.TabIndex = 31;
-            this.rchtxtbx_data.Text = "";
+            this.rchtxtbx_TakeOff_Landing_data.Location = new System.Drawing.Point(577, 15);
+            this.rchtxtbx_TakeOff_Landing_data.Name = "rchtxtbx_TakeOff_Landing_data";
+            this.rchtxtbx_TakeOff_Landing_data.Size = new System.Drawing.Size(734, 542);
+            this.rchtxtbx_TakeOff_Landing_data.TabIndex = 31;
+            this.rchtxtbx_TakeOff_Landing_data.Text = "";
             // 
             // tab_weight_balance
             // 
@@ -6604,7 +6605,7 @@ namespace myFlightInfo
         private System.Windows.Forms.TabPage tab_takeoff_landing;
         private System.Windows.Forms.Panel panel178;
         private System.Windows.Forms.Button btn_get_factor;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_clear_factors;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label74;
         private System.Windows.Forms.TextBox txtbx_aircraft_laden_weight;
@@ -6631,7 +6632,7 @@ namespace myFlightInfo
         private System.Windows.Forms.Label label87;
         private System.Windows.Forms.TextBox txtbx_aircraft_base_weight;
         private System.Windows.Forms.Label label88;
-        private System.Windows.Forms.RichTextBox rchtxtbx_data;
+        private System.Windows.Forms.RichTextBox rchtxtbx_TakeOff_Landing_data;
         private System.Windows.Forms.Button btn_test;
         private System.Windows.Forms.TextBox txtbx_test_data;
         private System.Windows.Forms.TabPage tab_satellite;
