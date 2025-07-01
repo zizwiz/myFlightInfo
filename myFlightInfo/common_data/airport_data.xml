@@ -16249,25 +16249,19 @@
 	<airport_info>
 		<icao_code>GB-0046</icao_code>
 		<airport_name>Keyston Airfield</airport_name>
-		<latitude_deg>
-		</latitude_deg>
-		<latitude_dec>
-		</latitude_dec>
-		<longitude_deg>
-		</longitude_deg>
-		<longitude_dec>
-		</longitude_dec>
-		<elevation_m>
-		</elevation_m>
-		<elevation_ft>
-		</elevation_ft>
+		<latitude_deg>52° 22' 2.622"N</latitude_deg>
+		<latitude_dec>52.367395</latitude_dec>
+		<longitude_deg>-0° 28' 41.6604"W</longitude_deg>
+		<longitude_dec>-0.478239</longitude_dec>
+		<elevation_m>65</elevation_m>
+		<elevation_ft>213</elevation_ft>
 		<iata_code>
 		</iata_code>
 		<alternate_name>
 		</alternate_name>
 		<fir>London FIR</fir>
 		<city>Huntingdon</city>
-		<type>Small airport</type>
+		<type>Closed</type>
 	</airport_info>
 	<airport_info>
 		<icao_code>GB-0047</icao_code>
@@ -17939,25 +17933,19 @@
 	<airport_info>
 		<icao_code>GB-0211</icao_code>
 		<airport_name>Stow Longa</airport_name>
-		<latitude_deg>
-		</latitude_deg>
-		<latitude_dec>
-		</latitude_dec>
-		<longitude_deg>
-		</longitude_deg>
-		<longitude_dec>
-		</longitude_dec>
-		<elevation_m>
-		</elevation_m>
-		<elevation_ft>
-		</elevation_ft>
+		<latitude_deg>52° 18' 51.9228"N</latitude_deg>
+		<latitude_dec>52.314423</latitude_dec>
+		<longitude_deg>-0° 21' 42.4044"W</longitude_deg>
+		<longitude_dec>-0.361779</longitude_dec>
+		<elevation_m>66</elevation_m>
+		<elevation_ft>217</elevation_ft>
 		<iata_code>
 		</iata_code>
 		<alternate_name>
 		</alternate_name>
 		<fir>London FIR</fir>
-		<city>Kimbolton</city>
-		<type>Small airport</type>
+		<city>Stow Longa</city>
+		<type>Closed</type>
 	</airport_info>
 	<airport_info>
 		<icao_code>GB-0212</icao_code>
@@ -18026,25 +18014,18 @@
 	<airport_info>
 		<icao_code>GB-0215</icao_code>
 		<airport_name>Jubilee Farm Airstrip</airport_name>
-		<latitude_deg>
-		</latitude_deg>
-		<latitude_dec>
-		</latitude_dec>
-		<longitude_deg>
-		</longitude_deg>
-		<longitude_dec>
-		</longitude_dec>
-		<elevation_m>
-		</elevation_m>
-		<elevation_ft>
-		</elevation_ft>
+		<latitude_deg>52° 37' 50.8404"N</latitude_deg>
+		<latitude_dec>52.630789</latitude_dec>
+		<longitude_deg>0.064125</longitude_deg>
+		<longitude_dec>0.064125</longitude_dec>
+		<elevation_m>2</elevation_m>
+		<elevation_ft>7</elevation_ft>
 		<iata_code>
 		</iata_code>
 		<alternate_name>
 		</alternate_name>
 		<fir>London FIR</fir>
-		<city>
-		</city>
+		<city>Guyhirn</city>
 		<type>Small airport</type>
 	</airport_info>
 	<airport_info>
@@ -19188,7 +19169,7 @@
 		</alternate_name>
 		<fir>London FIR</fir>
 		<city>Wilburton</city>
-		<type>Small airport</type>
+		<type>Farm Strip</type>
 	</airport_info>
 	<airport_info>
 		<icao_code>GB-0271</icao_code>
@@ -19257,26 +19238,19 @@
 	<airport_info>
 		<icao_code>GB-0274</icao_code>
 		<airport_name>Little Staughton Airfield</airport_name>
-		<latitude_deg>
-		</latitude_deg>
-		<latitude_dec>
-		</latitude_dec>
-		<longitude_deg>
-		</longitude_deg>
-		<longitude_dec>
-		</longitude_dec>
-		<elevation_m>
-		</elevation_m>
-		<elevation_ft>
-		</elevation_ft>
+		<latitude_deg>52° 14' 33.9252"N</latitude_deg>
+		<latitude_dec>52.242757</latitude_dec>
+		<longitude_deg>-0° 21' 47.8872"W</longitude_deg>
+		<longitude_dec>-0.363302</longitude_dec>
+		<elevation_m>67</elevation_m>
+		<elevation_ft>220</elevation_ft>
 		<iata_code>
 		</iata_code>
 		<alternate_name>
 		</alternate_name>
 		<fir>London FIR</fir>
-		<city>
-		</city>
-		<type>Small airport</type>
+		<city>St Neots</city>
+		<type>Small Airport</type>
 	</airport_info>
 	<airport_info>
 		<icao_code>GB-0275</icao_code>
@@ -21144,8 +21118,7 @@
 		<alternate_name>
 		</alternate_name>
 		<fir>London FIR</fir>
-		<city>
-		</city>
+		<city>Exning</city>
 		<type>Small airport</type>
 	</airport_info>
 	<airport_info>
@@ -24885,26 +24858,19 @@
 	<airport_info>
 		<icao_code>GB-0536</icao_code>
 		<airport_name>Woodwalton Private Airstrip</airport_name>
-		<latitude_deg>
-		</latitude_deg>
-		<latitude_dec>
-		</latitude_dec>
-		<longitude_deg>
-		</longitude_deg>
-		<longitude_dec>
-		</longitude_dec>
-		<elevation_m>
-		</elevation_m>
-		<elevation_ft>
-		</elevation_ft>
+		<latitude_deg>52° 25' 16.0032"N</latitude_deg>
+		<latitude_dec>52.421112</latitude_dec>
+		<longitude_deg>- 0° 14' 54.9456"W</longitude_deg>
+		<longitude_dec>-0.248596</longitude_dec>
+		<elevation_m>6</elevation_m>
+		<elevation_ft>20</elevation_ft>
 		<iata_code>
 		</iata_code>
 		<alternate_name>
 		</alternate_name>
 		<fir>London FIR</fir>
-		<city>
-		</city>
-		<type>Small airport</type>
+		<city>Sawtry</city>
+		<type>Farm Strip</type>
 	</airport_info>
 	<airport_info>
 		<icao_code>GB-0537</icao_code>
@@ -25220,7 +25186,7 @@
 		<alternate_name>
 		</alternate_name>
 		<fir>London FIR</fir>
-		<city>RISELEY Bedfordshire</city>
+		<city>Riseley</city>
 		<type>Small airport</type>
 	</airport_info>
 	<airport_info>
@@ -26607,8 +26573,7 @@
 		<alternate_name>
 		</alternate_name>
 		<fir>London FIR</fir>
-		<city>
-		</city>
+		<city>Southery</city>
 		<type>Small airport</type>
 	</airport_info>
 	<airport_info>
@@ -29360,26 +29325,18 @@
 	<airport_info>
 		<icao_code>GB-0773</icao_code>
 		<airport_name>White Fen Farm Airstrip</airport_name>
-		<latitude_deg>
-		</latitude_deg>
-		<latitude_dec>
-		</latitude_dec>
-		<longitude_deg>
-		</longitude_deg>
-		<longitude_dec>
-		</longitude_dec>
-		<elevation_m>
-		</elevation_m>
-		<elevation_ft>
-		</elevation_ft>
+		<latitude_deg>52° 31' 4.65145"N</latitude_deg>
+		<latitude_dec>52.51795873674278</latitude_dec>
+		<longitude_deg>-0° 0' 22.51878"W</longitude_deg>
+		<longitude_dec>-0.006255217360738402</longitude_dec>
+		<elevation_m>-1</elevation_m>
+		<elevation_ft>-3</elevation_ft>
 		<iata_code>
 		</iata_code>
-		<alternate_name>
-		</alternate_name>
+		<alternate_name>Benwick Airstrip</alternate_name>
 		<fir>London FIR</fir>
-		<city>
-		</city>
-		<type>Small airport</type>
+		<city>Benwick</city>
+		<type>Farm Strip</type>
 	</airport_info>
 	<airport_info>
 		<icao_code>GB-0774</icao_code>
@@ -30003,7 +29960,7 @@
 		</alternate_name>
 		<fir>London FIR</fir>
 		<city>Little Thetford</city>
-		<type>Closed</type>
+		<type>Farm Airstrip</type>
 	</airport_info>
 	<airport_info>
 		<icao_code>GB-0801</icao_code>
@@ -33801,7 +33758,7 @@
 		<fir>London FIR</fir>
 		<city>
 		</city>
-		<type>Small airport</type>
+		<type>Farm Airstrip</type>
 	</airport_info>
 	<airport_info>
 		<icao_code>GB-0973</icao_code>
@@ -34270,7 +34227,7 @@
 	</airport_info>
 	<airport_info>
 		<icao_code>GB-0993</icao_code>
-		<airport_name>Fen-End-Farm Airstrip</airport_name>
+		<airport_name>Fen End Farm Airstrip</airport_name>
 		<latitude_deg>52°18'50"N</latitude_deg>
 		<latitude_dec>52.313877</latitude_dec>
 		<longitude_deg>0°7'22"E</longitude_deg>
@@ -34282,9 +34239,8 @@
 		<alternate_name>
 		</alternate_name>
 		<fir>London FIR</fir>
-		<city>
-		</city>
-		<type>Small airport</type>
+		<city>Cottenham</city>
+		<type>Farm Strip</type>
 	</airport_info>
 	<airport_info>
 		<icao_code>GB-0994</icao_code>
