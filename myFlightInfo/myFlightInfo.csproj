@@ -112,6 +112,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="take_off_landing\AltitudeFactor.cs" />
+    <Compile Include="take_off_landing\RunwaySlopeFactor.cs" />
     <Compile Include="take_off_landing\RunwaySurfaceFactor.cs" />
     <Compile Include="take_off_landing\TailwindFactor.cs" />
     <Compile Include="take_off_landing\TemperatureFactor.cs" />

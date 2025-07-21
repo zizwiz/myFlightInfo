@@ -626,6 +626,9 @@ namespace myFlightInfo
             double GeneralSafetyFactor = (type == 0) ? 1.33 : 1.43;
             rchtxtbx_TakeOff_Landing_data.AppendText("General Safety Factor = " + GeneralSafetyFactor + "\r");
 
+            // Tailwind component, 10% of lift off speed	factor = x 1.2
+            answer = RunwaySlopeFactor.WorkOutRunwaySlopeFactor(float.Parse(txtbx_runway_slope_angle.Text));
+            rchtxtbx_TakeOff_Landing_data.AppendText("Runway Slope Factor = " + answer + "\r");
         }
 
         private void btn_clear_factors_Click(object sender, EventArgs e)
