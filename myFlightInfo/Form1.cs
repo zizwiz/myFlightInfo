@@ -591,21 +591,28 @@ namespace myFlightInfo
         private void btn_test_Click(object sender, EventArgs e)
         {
             int type = 1; //landing
-
             if (rdobtn_take_off.Checked) type = 0; //take-off
+
+            string Engine_hp = "80";
+            if (rdobtn_engine_100hp.Checked) Engine_hp = "100";
+
+            string MTOW = "450";
+            if (rdobtn_MTOW_472_5kg.Checked) MTOW = "472,5";
+            if (rdobtn_MTOW_600kg.Checked) MTOW = "600";
+
 
             double answer = TemperatureFactor.WorkOutTemperatureFactor(double.Parse(txtbx_ambeint_temperature.Text));
             rchtxtbx_TakeOff_Landing_data.AppendText("Temperature = " + answer + "\r");
-
+            double total = answer;
 
             answer = AltitudeFactor.WorkOutAltitudeFactor(double.Parse(txtbx_aerodrome_elevation.Text));
             rchtxtbx_TakeOff_Landing_data.AppendText("Altitude = " + answer + "\r");
+            total *= answer;
 
-            answer = WeightFactor.WorkOutWeightFactor(
-                double.Parse(txtbx_aircraft_base_weight.Text),
-                    int.Parse(txtbx_aircraft_laden_weight.Text),
-                    type);
+            int POB;
+            answer = WeightFactor.WorkOutWeightFactor(type, Engine_hp, MTOW, POB = chkbx_passenger_onboard.Checked ? 2 : 1);
             rchtxtbx_TakeOff_Landing_data.AppendText("Weight = " + answer + "\r");
+            total *= answer;
 
             //answer = AltitudeFactor.WorkOutAltitudeFactor(int.Parse(txtbx_test_data.Text));
             //rchtxtbx_data.AppendText("Altitude = " + answer + "\r");
@@ -613,7 +620,7 @@ namespace myFlightInfo
             // Tailwind component, 10% of lift off speed	factor = x 1.2
             answer = TailwindFactor.WorkOutTailwindFactor(float.Parse(txtbx_tailwind_component.Text));
             rchtxtbx_TakeOff_Landing_data.AppendText("Tailwind Factor = " + answer + "\r");
-
+            total *= answer;
 
             answer = RunwaySurfaceFactor.WorkOutRunwaySurfaceFactor(cmbobox_runway_surface.Text, type);
             rchtxtbx_TakeOff_Landing_data.AppendText("Runway Surface Factor = " + answer + "\r");
@@ -621,14 +628,18 @@ namespace myFlightInfo
             //Soft ground or snow: landing = x1.25, takeoff = x1.25
             double SoftOrSnowFactor = (chkbx_soft_snow.Checked) ? 1.25 : 1;
             rchtxtbx_TakeOff_Landing_data.AppendText("Soft or Snow Factor = " + SoftOrSnowFactor + "\r");
+            total *= answer;
 
             //General Safety Factor	landing = x1.33, takeoff = 	x1.43
             double GeneralSafetyFactor = (type == 0) ? 1.33 : 1.43;
             rchtxtbx_TakeOff_Landing_data.AppendText("General Safety Factor = " + GeneralSafetyFactor + "\r");
+            total *= answer;
 
             // Tailwind component, 10% of lift off speed	factor = x 1.2
             answer = RunwaySlopeFactor.WorkOutRunwaySlopeFactor(float.Parse(txtbx_runway_slope_angle.Text));
-            rchtxtbx_TakeOff_Landing_data.AppendText("Runway Slope Factor = " + answer + "\r");
+            rchtxtbx_TakeOff_Landing_data.AppendText("Runway Slope Factor = " + answer + "\r\r\r");
+            total *= answer;
+            rchtxtbx_TakeOff_Landing_data.AppendText("Total = " + total + "\r");
         }
 
         private void btn_clear_factors_Click(object sender, EventArgs e)

@@ -250,9 +250,6 @@ namespace myFlightInfo
             this.btn_get_factor = new System.Windows.Forms.Button();
             this.btn_clear_factors = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label74 = new System.Windows.Forms.Label();
-            this.txtbx_aircraft_laden_weight = new System.Windows.Forms.TextBox();
-            this.lbl_weight_type = new System.Windows.Forms.Label();
             this.rdobtn_landing = new System.Windows.Forms.RadioButton();
             this.rdobtn_take_off = new System.Windows.Forms.RadioButton();
             this.label77 = new System.Windows.Forms.Label();
@@ -272,9 +269,6 @@ namespace myFlightInfo
             this.label85 = new System.Windows.Forms.Label();
             this.txtbx_aerodrome_elevation = new System.Windows.Forms.TextBox();
             this.label86 = new System.Windows.Forms.Label();
-            this.label87 = new System.Windows.Forms.Label();
-            this.txtbx_aircraft_base_weight = new System.Windows.Forms.TextBox();
-            this.label88 = new System.Windows.Forms.Label();
             this.rchtxtbx_TakeOff_Landing_data = new System.Windows.Forms.RichTextBox();
             this.tab_weight_balance = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
@@ -495,6 +489,14 @@ namespace myFlightInfo
             this.panel87 = new System.Windows.Forms.Panel();
             this.panel88 = new System.Windows.Forms.Panel();
             this.panel89 = new System.Windows.Forms.Panel();
+            this.chkbx_passenger_onboard = new System.Windows.Forms.CheckBox();
+            this.rdobtn_engine_100hp = new System.Windows.Forms.RadioButton();
+            this.rdobtn_engine_80hp = new System.Windows.Forms.RadioButton();
+            this.label89 = new System.Windows.Forms.Label();
+            this.rdobtn_MTOW_472_5kg = new System.Windows.Forms.RadioButton();
+            this.rdobtn_MTOW_450kg = new System.Windows.Forms.RadioButton();
+            this.label90 = new System.Windows.Forms.Label();
+            this.rdobtn_MTOW_600kg = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.panel31.SuspendLayout();
@@ -3239,9 +3241,14 @@ namespace myFlightInfo
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label74);
-            this.groupBox1.Controls.Add(this.txtbx_aircraft_laden_weight);
-            this.groupBox1.Controls.Add(this.lbl_weight_type);
+            this.groupBox1.Controls.Add(this.rdobtn_MTOW_600kg);
+            this.groupBox1.Controls.Add(this.rdobtn_MTOW_472_5kg);
+            this.groupBox1.Controls.Add(this.rdobtn_MTOW_450kg);
+            this.groupBox1.Controls.Add(this.label90);
+            this.groupBox1.Controls.Add(this.rdobtn_engine_100hp);
+            this.groupBox1.Controls.Add(this.rdobtn_engine_80hp);
+            this.groupBox1.Controls.Add(this.label89);
+            this.groupBox1.Controls.Add(this.chkbx_passenger_onboard);
             this.groupBox1.Controls.Add(this.rdobtn_landing);
             this.groupBox1.Controls.Add(this.rdobtn_take_off);
             this.groupBox1.Controls.Add(this.label77);
@@ -3261,45 +3268,16 @@ namespace myFlightInfo
             this.groupBox1.Controls.Add(this.label85);
             this.groupBox1.Controls.Add(this.txtbx_aerodrome_elevation);
             this.groupBox1.Controls.Add(this.label86);
-            this.groupBox1.Controls.Add(this.label87);
-            this.groupBox1.Controls.Add(this.txtbx_aircraft_base_weight);
-            this.groupBox1.Controls.Add(this.label88);
             this.groupBox1.Location = new System.Drawing.Point(55, 15);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(450, 460);
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
             // 
-            // label74
-            // 
-            this.label74.AutoSize = true;
-            this.label74.Location = new System.Drawing.Point(364, 100);
-            this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(26, 20);
-            this.label74.TabIndex = 30;
-            this.label74.Text = "kg";
-            // 
-            // txtbx_aircraft_laden_weight
-            // 
-            this.txtbx_aircraft_laden_weight.Location = new System.Drawing.Point(258, 97);
-            this.txtbx_aircraft_laden_weight.Name = "txtbx_aircraft_laden_weight";
-            this.txtbx_aircraft_laden_weight.Size = new System.Drawing.Size(100, 26);
-            this.txtbx_aircraft_laden_weight.TabIndex = 29;
-            this.txtbx_aircraft_laden_weight.Text = "450";
-            // 
-            // lbl_weight_type
-            // 
-            this.lbl_weight_type.AutoSize = true;
-            this.lbl_weight_type.Location = new System.Drawing.Point(35, 100);
-            this.lbl_weight_type.Name = "lbl_weight_type";
-            this.lbl_weight_type.Size = new System.Drawing.Size(83, 20);
-            this.lbl_weight_type.TabIndex = 28;
-            this.lbl_weight_type.Text = "..... Weight";
-            // 
             // rdobtn_landing
             // 
             this.rdobtn_landing.AutoSize = true;
-            this.rdobtn_landing.Location = new System.Drawing.Point(238, 20);
+            this.rdobtn_landing.Location = new System.Drawing.Point(229, 20);
             this.rdobtn_landing.Name = "rdobtn_landing";
             this.rdobtn_landing.Size = new System.Drawing.Size(91, 24);
             this.rdobtn_landing.TabIndex = 27;
@@ -3310,7 +3288,7 @@ namespace myFlightInfo
             // 
             this.rdobtn_take_off.AutoSize = true;
             this.rdobtn_take_off.Checked = true;
-            this.rdobtn_take_off.Location = new System.Drawing.Point(137, 20);
+            this.rdobtn_take_off.Location = new System.Drawing.Point(128, 20);
             this.rdobtn_take_off.Name = "rdobtn_take_off";
             this.rdobtn_take_off.Size = new System.Drawing.Size(96, 24);
             this.rdobtn_take_off.TabIndex = 26;
@@ -3321,7 +3299,7 @@ namespace myFlightInfo
             // label77
             // 
             this.label77.AutoSize = true;
-            this.label77.Location = new System.Drawing.Point(35, 22);
+            this.label77.Location = new System.Drawing.Point(26, 22);
             this.label77.Name = "label77";
             this.label77.Size = new System.Drawing.Size(79, 20);
             this.label77.TabIndex = 25;
@@ -3330,7 +3308,7 @@ namespace myFlightInfo
             // chkbx_soft_snow
             // 
             this.chkbx_soft_snow.AutoSize = true;
-            this.chkbx_soft_snow.Location = new System.Drawing.Point(258, 330);
+            this.chkbx_soft_snow.Location = new System.Drawing.Point(249, 343);
             this.chkbx_soft_snow.Name = "chkbx_soft_snow";
             this.chkbx_soft_snow.Size = new System.Drawing.Size(22, 21);
             this.chkbx_soft_snow.TabIndex = 24;
@@ -3339,11 +3317,11 @@ namespace myFlightInfo
             // label78
             // 
             this.label78.AutoSize = true;
-            this.label78.Location = new System.Drawing.Point(35, 329);
+            this.label78.Location = new System.Drawing.Point(26, 342);
             this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(101, 20);
+            this.label78.Size = new System.Drawing.Size(161, 20);
             this.label78.TabIndex = 23;
-            this.label78.Text = "Soft or Snow";
+            this.label78.Text = "Soft Surface or Snow";
             // 
             // cmbobox_runway_surface
             // 
@@ -3352,7 +3330,7 @@ namespace myFlightInfo
             "Dry Grass",
             "Wet Grass",
             "Wet Paved"});
-            this.cmbobox_runway_surface.Location = new System.Drawing.Point(258, 292);
+            this.cmbobox_runway_surface.Location = new System.Drawing.Point(249, 305);
             this.cmbobox_runway_surface.Name = "cmbobox_runway_surface";
             this.cmbobox_runway_surface.Size = new System.Drawing.Size(136, 28);
             this.cmbobox_runway_surface.TabIndex = 22;
@@ -3360,7 +3338,7 @@ namespace myFlightInfo
             // label79
             // 
             this.label79.AutoSize = true;
-            this.label79.Location = new System.Drawing.Point(35, 289);
+            this.label79.Location = new System.Drawing.Point(26, 302);
             this.label79.Name = "label79";
             this.label79.Size = new System.Drawing.Size(126, 20);
             this.label79.TabIndex = 21;
@@ -3369,7 +3347,7 @@ namespace myFlightInfo
             // label80
             // 
             this.label80.AutoSize = true;
-            this.label80.Location = new System.Drawing.Point(364, 257);
+            this.label80.Location = new System.Drawing.Point(355, 270);
             this.label80.Name = "label80";
             this.label80.Size = new System.Drawing.Size(23, 20);
             this.label80.TabIndex = 17;
@@ -3377,7 +3355,7 @@ namespace myFlightInfo
             // 
             // txtbx_runway_slope_angle
             // 
-            this.txtbx_runway_slope_angle.Location = new System.Drawing.Point(258, 254);
+            this.txtbx_runway_slope_angle.Location = new System.Drawing.Point(249, 267);
             this.txtbx_runway_slope_angle.Name = "txtbx_runway_slope_angle";
             this.txtbx_runway_slope_angle.Size = new System.Drawing.Size(100, 26);
             this.txtbx_runway_slope_angle.TabIndex = 16;
@@ -3386,7 +3364,7 @@ namespace myFlightInfo
             // lbl_runway_slope
             // 
             this.lbl_runway_slope.AutoSize = true;
-            this.lbl_runway_slope.Location = new System.Drawing.Point(35, 257);
+            this.lbl_runway_slope.Location = new System.Drawing.Point(26, 270);
             this.lbl_runway_slope.Name = "lbl_runway_slope";
             this.lbl_runway_slope.Size = new System.Drawing.Size(199, 20);
             this.lbl_runway_slope.TabIndex = 15;
@@ -3395,7 +3373,7 @@ namespace myFlightInfo
             // label81
             // 
             this.label81.AutoSize = true;
-            this.label81.Location = new System.Drawing.Point(364, 225);
+            this.label81.Location = new System.Drawing.Point(355, 238);
             this.label81.Name = "label81";
             this.label81.Size = new System.Drawing.Size(30, 20);
             this.label81.TabIndex = 14;
@@ -3403,7 +3381,7 @@ namespace myFlightInfo
             // 
             // txtbx_tailwind_component
             // 
-            this.txtbx_tailwind_component.Location = new System.Drawing.Point(258, 222);
+            this.txtbx_tailwind_component.Location = new System.Drawing.Point(249, 235);
             this.txtbx_tailwind_component.Name = "txtbx_tailwind_component";
             this.txtbx_tailwind_component.Size = new System.Drawing.Size(100, 26);
             this.txtbx_tailwind_component.TabIndex = 13;
@@ -3412,7 +3390,7 @@ namespace myFlightInfo
             // label82
             // 
             this.label82.AutoSize = true;
-            this.label82.Location = new System.Drawing.Point(35, 225);
+            this.label82.Location = new System.Drawing.Point(26, 238);
             this.label82.Name = "label82";
             this.label82.Size = new System.Drawing.Size(152, 20);
             this.label82.TabIndex = 12;
@@ -3421,7 +3399,7 @@ namespace myFlightInfo
             // label83
             // 
             this.label83.AutoSize = true;
-            this.label83.Location = new System.Drawing.Point(364, 193);
+            this.label83.Location = new System.Drawing.Point(355, 206);
             this.label83.Name = "label83";
             this.label83.Size = new System.Drawing.Size(25, 20);
             this.label83.TabIndex = 11;
@@ -3429,7 +3407,7 @@ namespace myFlightInfo
             // 
             // txtbx_ambeint_temperature
             // 
-            this.txtbx_ambeint_temperature.Location = new System.Drawing.Point(258, 190);
+            this.txtbx_ambeint_temperature.Location = new System.Drawing.Point(249, 203);
             this.txtbx_ambeint_temperature.Name = "txtbx_ambeint_temperature";
             this.txtbx_ambeint_temperature.Size = new System.Drawing.Size(100, 26);
             this.txtbx_ambeint_temperature.TabIndex = 10;
@@ -3438,7 +3416,7 @@ namespace myFlightInfo
             // label84
             // 
             this.label84.AutoSize = true;
-            this.label84.Location = new System.Drawing.Point(35, 193);
+            this.label84.Location = new System.Drawing.Point(26, 206);
             this.label84.Name = "label84";
             this.label84.Size = new System.Drawing.Size(163, 20);
             this.label84.TabIndex = 9;
@@ -3447,7 +3425,7 @@ namespace myFlightInfo
             // label85
             // 
             this.label85.AutoSize = true;
-            this.label85.Location = new System.Drawing.Point(364, 161);
+            this.label85.Location = new System.Drawing.Point(355, 174);
             this.label85.Name = "label85";
             this.label85.Size = new System.Drawing.Size(19, 20);
             this.label85.TabIndex = 8;
@@ -3455,7 +3433,7 @@ namespace myFlightInfo
             // 
             // txtbx_aerodrome_elevation
             // 
-            this.txtbx_aerodrome_elevation.Location = new System.Drawing.Point(258, 158);
+            this.txtbx_aerodrome_elevation.Location = new System.Drawing.Point(249, 171);
             this.txtbx_aerodrome_elevation.Name = "txtbx_aerodrome_elevation";
             this.txtbx_aerodrome_elevation.Size = new System.Drawing.Size(100, 26);
             this.txtbx_aerodrome_elevation.TabIndex = 7;
@@ -3464,37 +3442,11 @@ namespace myFlightInfo
             // label86
             // 
             this.label86.AutoSize = true;
-            this.label86.Location = new System.Drawing.Point(35, 161);
+            this.label86.Location = new System.Drawing.Point(26, 174);
             this.label86.Name = "label86";
             this.label86.Size = new System.Drawing.Size(157, 20);
             this.label86.TabIndex = 6;
             this.label86.Text = "Aerodrome Elevation";
-            // 
-            // label87
-            // 
-            this.label87.AutoSize = true;
-            this.label87.Location = new System.Drawing.Point(364, 68);
-            this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(26, 20);
-            this.label87.TabIndex = 5;
-            this.label87.Text = "kg";
-            // 
-            // txtbx_aircraft_base_weight
-            // 
-            this.txtbx_aircraft_base_weight.Location = new System.Drawing.Point(258, 65);
-            this.txtbx_aircraft_base_weight.Name = "txtbx_aircraft_base_weight";
-            this.txtbx_aircraft_base_weight.Size = new System.Drawing.Size(100, 26);
-            this.txtbx_aircraft_base_weight.TabIndex = 4;
-            this.txtbx_aircraft_base_weight.Text = "268";
-            // 
-            // label88
-            // 
-            this.label88.AutoSize = true;
-            this.label88.Location = new System.Drawing.Point(35, 68);
-            this.label88.Name = "label88";
-            this.label88.Size = new System.Drawing.Size(155, 20);
-            this.label88.TabIndex = 3;
-            this.label88.Text = "Aircraft Base Weight";
             // 
             // rchtxtbx_TakeOff_Landing_data
             // 
@@ -5777,6 +5729,89 @@ namespace myFlightInfo
             this.panel89.Size = new System.Drawing.Size(309, 43);
             this.panel89.TabIndex = 60;
             // 
+            // chkbx_passenger_onboard
+            // 
+            this.chkbx_passenger_onboard.AutoSize = true;
+            this.chkbx_passenger_onboard.Location = new System.Drawing.Point(25, 138);
+            this.chkbx_passenger_onboard.Name = "chkbx_passenger_onboard";
+            this.chkbx_passenger_onboard.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.chkbx_passenger_onboard.Size = new System.Drawing.Size(180, 24);
+            this.chkbx_passenger_onboard.TabIndex = 32;
+            this.chkbx_passenger_onboard.Text = "Passenger on Board";
+            this.chkbx_passenger_onboard.UseVisualStyleBackColor = true;
+            // 
+            // rdobtn_engine_100hp
+            // 
+            this.rdobtn_engine_100hp.AutoSize = true;
+            this.rdobtn_engine_100hp.Location = new System.Drawing.Point(229, 61);
+            this.rdobtn_engine_100hp.Name = "rdobtn_engine_100hp";
+            this.rdobtn_engine_100hp.Size = new System.Drawing.Size(79, 24);
+            this.rdobtn_engine_100hp.TabIndex = 35;
+            this.rdobtn_engine_100hp.Text = "100hp";
+            this.rdobtn_engine_100hp.UseVisualStyleBackColor = true;
+            // 
+            // rdobtn_engine_80hp
+            // 
+            this.rdobtn_engine_80hp.AutoSize = true;
+            this.rdobtn_engine_80hp.Checked = true;
+            this.rdobtn_engine_80hp.Location = new System.Drawing.Point(128, 61);
+            this.rdobtn_engine_80hp.Name = "rdobtn_engine_80hp";
+            this.rdobtn_engine_80hp.Size = new System.Drawing.Size(70, 24);
+            this.rdobtn_engine_80hp.TabIndex = 34;
+            this.rdobtn_engine_80hp.TabStop = true;
+            this.rdobtn_engine_80hp.Text = "80hp";
+            this.rdobtn_engine_80hp.UseVisualStyleBackColor = true;
+            // 
+            // label89
+            // 
+            this.label89.AutoSize = true;
+            this.label89.Location = new System.Drawing.Point(26, 61);
+            this.label89.Name = "label89";
+            this.label89.Size = new System.Drawing.Size(81, 20);
+            this.label89.TabIndex = 33;
+            this.label89.Text = "Engine hp";
+            // 
+            // rdobtn_MTOW_472_5kg
+            // 
+            this.rdobtn_MTOW_472_5kg.AutoSize = true;
+            this.rdobtn_MTOW_472_5kg.Location = new System.Drawing.Point(229, 101);
+            this.rdobtn_MTOW_472_5kg.Name = "rdobtn_MTOW_472_5kg";
+            this.rdobtn_MTOW_472_5kg.Size = new System.Drawing.Size(91, 24);
+            this.rdobtn_MTOW_472_5kg.TabIndex = 38;
+            this.rdobtn_MTOW_472_5kg.Text = "472,5kg";
+            this.rdobtn_MTOW_472_5kg.UseVisualStyleBackColor = true;
+            // 
+            // rdobtn_MTOW_450kg
+            // 
+            this.rdobtn_MTOW_450kg.AutoSize = true;
+            this.rdobtn_MTOW_450kg.Checked = true;
+            this.rdobtn_MTOW_450kg.Location = new System.Drawing.Point(128, 101);
+            this.rdobtn_MTOW_450kg.Name = "rdobtn_MTOW_450kg";
+            this.rdobtn_MTOW_450kg.Size = new System.Drawing.Size(78, 24);
+            this.rdobtn_MTOW_450kg.TabIndex = 37;
+            this.rdobtn_MTOW_450kg.TabStop = true;
+            this.rdobtn_MTOW_450kg.Text = "450kg";
+            this.rdobtn_MTOW_450kg.UseVisualStyleBackColor = true;
+            // 
+            // label90
+            // 
+            this.label90.AutoSize = true;
+            this.label90.Location = new System.Drawing.Point(26, 103);
+            this.label90.Name = "label90";
+            this.label90.Size = new System.Drawing.Size(58, 20);
+            this.label90.TabIndex = 36;
+            this.label90.Text = "MTOW";
+            // 
+            // rdobtn_MTOW_600kg
+            // 
+            this.rdobtn_MTOW_600kg.AutoSize = true;
+            this.rdobtn_MTOW_600kg.Location = new System.Drawing.Point(338, 103);
+            this.rdobtn_MTOW_600kg.Name = "rdobtn_MTOW_600kg";
+            this.rdobtn_MTOW_600kg.Size = new System.Drawing.Size(78, 24);
+            this.rdobtn_MTOW_600kg.TabIndex = 39;
+            this.rdobtn_MTOW_600kg.Text = "600kg";
+            this.rdobtn_MTOW_600kg.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -6607,9 +6642,6 @@ namespace myFlightInfo
         private System.Windows.Forms.Button btn_get_factor;
         private System.Windows.Forms.Button btn_clear_factors;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label74;
-        private System.Windows.Forms.TextBox txtbx_aircraft_laden_weight;
-        private System.Windows.Forms.Label lbl_weight_type;
         private System.Windows.Forms.RadioButton rdobtn_landing;
         private System.Windows.Forms.RadioButton rdobtn_take_off;
         private System.Windows.Forms.Label label77;
@@ -6629,14 +6661,19 @@ namespace myFlightInfo
         private System.Windows.Forms.Label label85;
         private System.Windows.Forms.TextBox txtbx_aerodrome_elevation;
         private System.Windows.Forms.Label label86;
-        private System.Windows.Forms.Label label87;
-        private System.Windows.Forms.TextBox txtbx_aircraft_base_weight;
-        private System.Windows.Forms.Label label88;
         private System.Windows.Forms.RichTextBox rchtxtbx_TakeOff_Landing_data;
         private System.Windows.Forms.Button btn_test;
         private System.Windows.Forms.TextBox txtbx_test_data;
         private System.Windows.Forms.TabPage tab_satellite;
         private Microsoft.Web.WebView2.WinForms.WebView2 webView_Satellite_view;
+        private System.Windows.Forms.RadioButton rdobtn_engine_100hp;
+        private System.Windows.Forms.RadioButton rdobtn_engine_80hp;
+        private System.Windows.Forms.Label label89;
+        private System.Windows.Forms.CheckBox chkbx_passenger_onboard;
+        private System.Windows.Forms.RadioButton rdobtn_MTOW_600kg;
+        private System.Windows.Forms.RadioButton rdobtn_MTOW_472_5kg;
+        private System.Windows.Forms.RadioButton rdobtn_MTOW_450kg;
+        private System.Windows.Forms.Label label90;
     }
 }
 
