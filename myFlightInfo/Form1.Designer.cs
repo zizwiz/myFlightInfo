@@ -250,6 +250,14 @@ namespace myFlightInfo
             this.btn_get_factor = new System.Windows.Forms.Button();
             this.btn_clear_factors = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rdobtn_MTOW_600kg = new System.Windows.Forms.RadioButton();
+            this.rdobtn_MTOW_472_5kg = new System.Windows.Forms.RadioButton();
+            this.rdobtn_MTOW_450kg = new System.Windows.Forms.RadioButton();
+            this.label90 = new System.Windows.Forms.Label();
+            this.rdobtn_engine_100hp = new System.Windows.Forms.RadioButton();
+            this.rdobtn_engine_80hp = new System.Windows.Forms.RadioButton();
+            this.label89 = new System.Windows.Forms.Label();
+            this.chkbx_passenger_onboard = new System.Windows.Forms.CheckBox();
             this.rdobtn_landing = new System.Windows.Forms.RadioButton();
             this.rdobtn_take_off = new System.Windows.Forms.RadioButton();
             this.label77 = new System.Windows.Forms.Label();
@@ -489,14 +497,21 @@ namespace myFlightInfo
             this.panel87 = new System.Windows.Forms.Panel();
             this.panel88 = new System.Windows.Forms.Panel();
             this.panel89 = new System.Windows.Forms.Panel();
-            this.chkbx_passenger_onboard = new System.Windows.Forms.CheckBox();
-            this.rdobtn_engine_100hp = new System.Windows.Forms.RadioButton();
-            this.rdobtn_engine_80hp = new System.Windows.Forms.RadioButton();
-            this.label89 = new System.Windows.Forms.Label();
-            this.rdobtn_MTOW_472_5kg = new System.Windows.Forms.RadioButton();
-            this.rdobtn_MTOW_450kg = new System.Windows.Forms.RadioButton();
-            this.label90 = new System.Windows.Forms.Label();
-            this.rdobtn_MTOW_600kg = new System.Windows.Forms.RadioButton();
+            this.tab_hobbs = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label91 = new System.Windows.Forms.Label();
+            this.label92 = new System.Windows.Forms.Label();
+            this.txtbx_hobbs_end_minutes = new System.Windows.Forms.TextBox();
+            this.txtbx_hobbs_end_hours = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label88 = new System.Windows.Forms.Label();
+            this.label87 = new System.Windows.Forms.Label();
+            this.txtbx_hobbs_start_minutes = new System.Windows.Forms.TextBox();
+            this.txtbx_hobbs_start_hours = new System.Windows.Forms.TextBox();
+            this.btn_hobbs_calculate = new System.Windows.Forms.Button();
+            this.btn_hobbs_reset = new System.Windows.Forms.Button();
+            this.lbl_hobbs_result = new System.Windows.Forms.Label();
+            this.label74 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.panel31.SuspendLayout();
@@ -742,6 +757,9 @@ namespace myFlightInfo
             this.tableLayoutPanel16.SuspendLayout();
             this.panel85.SuspendLayout();
             this.panel86.SuspendLayout();
+            this.tab_hobbs.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -1657,6 +1675,7 @@ namespace myFlightInfo
             this.tabcnt_utils.Controls.Add(this.tab_takeoff_landing);
             this.tabcnt_utils.Controls.Add(this.tab_weight_balance);
             this.tabcnt_utils.Controls.Add(this.tab_compliance_data);
+            this.tabcnt_utils.Controls.Add(this.tab_hobbs);
             this.tabcnt_utils.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabcnt_utils.Location = new System.Drawing.Point(0, 0);
             this.tabcnt_utils.Multiline = true;
@@ -3273,6 +3292,89 @@ namespace myFlightInfo
             this.groupBox1.Size = new System.Drawing.Size(450, 460);
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
+            // 
+            // rdobtn_MTOW_600kg
+            // 
+            this.rdobtn_MTOW_600kg.AutoSize = true;
+            this.rdobtn_MTOW_600kg.Location = new System.Drawing.Point(338, 103);
+            this.rdobtn_MTOW_600kg.Name = "rdobtn_MTOW_600kg";
+            this.rdobtn_MTOW_600kg.Size = new System.Drawing.Size(78, 24);
+            this.rdobtn_MTOW_600kg.TabIndex = 39;
+            this.rdobtn_MTOW_600kg.Text = "600kg";
+            this.rdobtn_MTOW_600kg.UseVisualStyleBackColor = true;
+            // 
+            // rdobtn_MTOW_472_5kg
+            // 
+            this.rdobtn_MTOW_472_5kg.AutoSize = true;
+            this.rdobtn_MTOW_472_5kg.Location = new System.Drawing.Point(229, 101);
+            this.rdobtn_MTOW_472_5kg.Name = "rdobtn_MTOW_472_5kg";
+            this.rdobtn_MTOW_472_5kg.Size = new System.Drawing.Size(91, 24);
+            this.rdobtn_MTOW_472_5kg.TabIndex = 38;
+            this.rdobtn_MTOW_472_5kg.Text = "472,5kg";
+            this.rdobtn_MTOW_472_5kg.UseVisualStyleBackColor = true;
+            // 
+            // rdobtn_MTOW_450kg
+            // 
+            this.rdobtn_MTOW_450kg.AutoSize = true;
+            this.rdobtn_MTOW_450kg.Checked = true;
+            this.rdobtn_MTOW_450kg.Location = new System.Drawing.Point(128, 101);
+            this.rdobtn_MTOW_450kg.Name = "rdobtn_MTOW_450kg";
+            this.rdobtn_MTOW_450kg.Size = new System.Drawing.Size(78, 24);
+            this.rdobtn_MTOW_450kg.TabIndex = 37;
+            this.rdobtn_MTOW_450kg.TabStop = true;
+            this.rdobtn_MTOW_450kg.Text = "450kg";
+            this.rdobtn_MTOW_450kg.UseVisualStyleBackColor = true;
+            // 
+            // label90
+            // 
+            this.label90.AutoSize = true;
+            this.label90.Location = new System.Drawing.Point(26, 103);
+            this.label90.Name = "label90";
+            this.label90.Size = new System.Drawing.Size(58, 20);
+            this.label90.TabIndex = 36;
+            this.label90.Text = "MTOW";
+            // 
+            // rdobtn_engine_100hp
+            // 
+            this.rdobtn_engine_100hp.AutoSize = true;
+            this.rdobtn_engine_100hp.Location = new System.Drawing.Point(229, 61);
+            this.rdobtn_engine_100hp.Name = "rdobtn_engine_100hp";
+            this.rdobtn_engine_100hp.Size = new System.Drawing.Size(79, 24);
+            this.rdobtn_engine_100hp.TabIndex = 35;
+            this.rdobtn_engine_100hp.Text = "100hp";
+            this.rdobtn_engine_100hp.UseVisualStyleBackColor = true;
+            // 
+            // rdobtn_engine_80hp
+            // 
+            this.rdobtn_engine_80hp.AutoSize = true;
+            this.rdobtn_engine_80hp.Checked = true;
+            this.rdobtn_engine_80hp.Location = new System.Drawing.Point(128, 61);
+            this.rdobtn_engine_80hp.Name = "rdobtn_engine_80hp";
+            this.rdobtn_engine_80hp.Size = new System.Drawing.Size(70, 24);
+            this.rdobtn_engine_80hp.TabIndex = 34;
+            this.rdobtn_engine_80hp.TabStop = true;
+            this.rdobtn_engine_80hp.Text = "80hp";
+            this.rdobtn_engine_80hp.UseVisualStyleBackColor = true;
+            // 
+            // label89
+            // 
+            this.label89.AutoSize = true;
+            this.label89.Location = new System.Drawing.Point(26, 61);
+            this.label89.Name = "label89";
+            this.label89.Size = new System.Drawing.Size(81, 20);
+            this.label89.TabIndex = 33;
+            this.label89.Text = "Engine hp";
+            // 
+            // chkbx_passenger_onboard
+            // 
+            this.chkbx_passenger_onboard.AutoSize = true;
+            this.chkbx_passenger_onboard.Location = new System.Drawing.Point(25, 138);
+            this.chkbx_passenger_onboard.Name = "chkbx_passenger_onboard";
+            this.chkbx_passenger_onboard.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.chkbx_passenger_onboard.Size = new System.Drawing.Size(180, 24);
+            this.chkbx_passenger_onboard.TabIndex = 32;
+            this.chkbx_passenger_onboard.Text = "Passenger on Board";
+            this.chkbx_passenger_onboard.UseVisualStyleBackColor = true;
             // 
             // rdobtn_landing
             // 
@@ -5729,88 +5831,154 @@ namespace myFlightInfo
             this.panel89.Size = new System.Drawing.Size(309, 43);
             this.panel89.TabIndex = 60;
             // 
-            // chkbx_passenger_onboard
+            // tab_hobbs
             // 
-            this.chkbx_passenger_onboard.AutoSize = true;
-            this.chkbx_passenger_onboard.Location = new System.Drawing.Point(25, 138);
-            this.chkbx_passenger_onboard.Name = "chkbx_passenger_onboard";
-            this.chkbx_passenger_onboard.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkbx_passenger_onboard.Size = new System.Drawing.Size(180, 24);
-            this.chkbx_passenger_onboard.TabIndex = 32;
-            this.chkbx_passenger_onboard.Text = "Passenger on Board";
-            this.chkbx_passenger_onboard.UseVisualStyleBackColor = true;
+            this.tab_hobbs.Controls.Add(this.groupBox3);
+            this.tab_hobbs.Controls.Add(this.groupBox2);
+            this.tab_hobbs.Controls.Add(this.btn_hobbs_calculate);
+            this.tab_hobbs.Controls.Add(this.btn_hobbs_reset);
+            this.tab_hobbs.Controls.Add(this.lbl_hobbs_result);
+            this.tab_hobbs.Controls.Add(this.label74);
+            this.tab_hobbs.Location = new System.Drawing.Point(52, 4);
+            this.tab_hobbs.Name = "tab_hobbs";
+            this.tab_hobbs.Size = new System.Drawing.Size(1367, 692);
+            this.tab_hobbs.TabIndex = 7;
+            this.tab_hobbs.Text = "Workout Hobbs";
+            this.tab_hobbs.UseVisualStyleBackColor = true;
             // 
-            // rdobtn_engine_100hp
+            // groupBox3
             // 
-            this.rdobtn_engine_100hp.AutoSize = true;
-            this.rdobtn_engine_100hp.Location = new System.Drawing.Point(229, 61);
-            this.rdobtn_engine_100hp.Name = "rdobtn_engine_100hp";
-            this.rdobtn_engine_100hp.Size = new System.Drawing.Size(79, 24);
-            this.rdobtn_engine_100hp.TabIndex = 35;
-            this.rdobtn_engine_100hp.Text = "100hp";
-            this.rdobtn_engine_100hp.UseVisualStyleBackColor = true;
+            this.groupBox3.Controls.Add(this.label91);
+            this.groupBox3.Controls.Add(this.label92);
+            this.groupBox3.Controls.Add(this.txtbx_hobbs_end_minutes);
+            this.groupBox3.Controls.Add(this.txtbx_hobbs_end_hours);
+            this.groupBox3.Location = new System.Drawing.Point(545, 19);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(395, 187);
+            this.groupBox3.TabIndex = 8;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "End";
             // 
-            // rdobtn_engine_80hp
+            // label91
             // 
-            this.rdobtn_engine_80hp.AutoSize = true;
-            this.rdobtn_engine_80hp.Checked = true;
-            this.rdobtn_engine_80hp.Location = new System.Drawing.Point(128, 61);
-            this.rdobtn_engine_80hp.Name = "rdobtn_engine_80hp";
-            this.rdobtn_engine_80hp.Size = new System.Drawing.Size(70, 24);
-            this.rdobtn_engine_80hp.TabIndex = 34;
-            this.rdobtn_engine_80hp.TabStop = true;
-            this.rdobtn_engine_80hp.Text = "80hp";
-            this.rdobtn_engine_80hp.UseVisualStyleBackColor = true;
+            this.label91.AutoSize = true;
+            this.label91.Location = new System.Drawing.Point(244, 80);
+            this.label91.Name = "label91";
+            this.label91.Size = new System.Drawing.Size(65, 20);
+            this.label91.TabIndex = 7;
+            this.label91.Text = "Minutes";
             // 
-            // label89
+            // label92
             // 
-            this.label89.AutoSize = true;
-            this.label89.Location = new System.Drawing.Point(26, 61);
-            this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(81, 20);
-            this.label89.TabIndex = 33;
-            this.label89.Text = "Engine hp";
+            this.label92.AutoSize = true;
+            this.label92.Location = new System.Drawing.Point(76, 74);
+            this.label92.Name = "label92";
+            this.label92.Size = new System.Drawing.Size(52, 20);
+            this.label92.TabIndex = 6;
+            this.label92.Text = "Hours";
             // 
-            // rdobtn_MTOW_472_5kg
+            // txtbx_hobbs_end_minutes
             // 
-            this.rdobtn_MTOW_472_5kg.AutoSize = true;
-            this.rdobtn_MTOW_472_5kg.Location = new System.Drawing.Point(229, 101);
-            this.rdobtn_MTOW_472_5kg.Name = "rdobtn_MTOW_472_5kg";
-            this.rdobtn_MTOW_472_5kg.Size = new System.Drawing.Size(91, 24);
-            this.rdobtn_MTOW_472_5kg.TabIndex = 38;
-            this.rdobtn_MTOW_472_5kg.Text = "472,5kg";
-            this.rdobtn_MTOW_472_5kg.UseVisualStyleBackColor = true;
+            this.txtbx_hobbs_end_minutes.Location = new System.Drawing.Point(210, 103);
+            this.txtbx_hobbs_end_minutes.MaxLength = 2;
+            this.txtbx_hobbs_end_minutes.Name = "txtbx_hobbs_end_minutes";
+            this.txtbx_hobbs_end_minutes.Size = new System.Drawing.Size(125, 26);
+            this.txtbx_hobbs_end_minutes.TabIndex = 5;
             // 
-            // rdobtn_MTOW_450kg
+            // txtbx_hobbs_end_hours
             // 
-            this.rdobtn_MTOW_450kg.AutoSize = true;
-            this.rdobtn_MTOW_450kg.Checked = true;
-            this.rdobtn_MTOW_450kg.Location = new System.Drawing.Point(128, 101);
-            this.rdobtn_MTOW_450kg.Name = "rdobtn_MTOW_450kg";
-            this.rdobtn_MTOW_450kg.Size = new System.Drawing.Size(78, 24);
-            this.rdobtn_MTOW_450kg.TabIndex = 37;
-            this.rdobtn_MTOW_450kg.TabStop = true;
-            this.rdobtn_MTOW_450kg.Text = "450kg";
-            this.rdobtn_MTOW_450kg.UseVisualStyleBackColor = true;
+            this.txtbx_hobbs_end_hours.Location = new System.Drawing.Point(58, 103);
+            this.txtbx_hobbs_end_hours.MaxLength = 5;
+            this.txtbx_hobbs_end_hours.Name = "txtbx_hobbs_end_hours";
+            this.txtbx_hobbs_end_hours.Size = new System.Drawing.Size(125, 26);
+            this.txtbx_hobbs_end_hours.TabIndex = 4;
             // 
-            // label90
+            // groupBox2
             // 
-            this.label90.AutoSize = true;
-            this.label90.Location = new System.Drawing.Point(26, 103);
-            this.label90.Name = "label90";
-            this.label90.Size = new System.Drawing.Size(58, 20);
-            this.label90.TabIndex = 36;
-            this.label90.Text = "MTOW";
+            this.groupBox2.Controls.Add(this.label88);
+            this.groupBox2.Controls.Add(this.label87);
+            this.groupBox2.Controls.Add(this.txtbx_hobbs_start_minutes);
+            this.groupBox2.Controls.Add(this.txtbx_hobbs_start_hours);
+            this.groupBox2.Location = new System.Drawing.Point(72, 19);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(395, 187);
+            this.groupBox2.TabIndex = 6;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Start";
             // 
-            // rdobtn_MTOW_600kg
+            // label88
             // 
-            this.rdobtn_MTOW_600kg.AutoSize = true;
-            this.rdobtn_MTOW_600kg.Location = new System.Drawing.Point(338, 103);
-            this.rdobtn_MTOW_600kg.Name = "rdobtn_MTOW_600kg";
-            this.rdobtn_MTOW_600kg.Size = new System.Drawing.Size(78, 24);
-            this.rdobtn_MTOW_600kg.TabIndex = 39;
-            this.rdobtn_MTOW_600kg.Text = "600kg";
-            this.rdobtn_MTOW_600kg.UseVisualStyleBackColor = true;
+            this.label88.AutoSize = true;
+            this.label88.Location = new System.Drawing.Point(244, 80);
+            this.label88.Name = "label88";
+            this.label88.Size = new System.Drawing.Size(65, 20);
+            this.label88.TabIndex = 7;
+            this.label88.Text = "Minutes";
+            // 
+            // label87
+            // 
+            this.label87.AutoSize = true;
+            this.label87.Location = new System.Drawing.Point(76, 74);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(52, 20);
+            this.label87.TabIndex = 6;
+            this.label87.Text = "Hours";
+            // 
+            // txtbx_hobbs_start_minutes
+            // 
+            this.txtbx_hobbs_start_minutes.Location = new System.Drawing.Point(210, 103);
+            this.txtbx_hobbs_start_minutes.MaxLength = 2;
+            this.txtbx_hobbs_start_minutes.Name = "txtbx_hobbs_start_minutes";
+            this.txtbx_hobbs_start_minutes.Size = new System.Drawing.Size(125, 26);
+            this.txtbx_hobbs_start_minutes.TabIndex = 5;
+            // 
+            // txtbx_hobbs_start_hours
+            // 
+            this.txtbx_hobbs_start_hours.Location = new System.Drawing.Point(58, 103);
+            this.txtbx_hobbs_start_hours.MaxLength = 5;
+            this.txtbx_hobbs_start_hours.Name = "txtbx_hobbs_start_hours";
+            this.txtbx_hobbs_start_hours.Size = new System.Drawing.Size(125, 26);
+            this.txtbx_hobbs_start_hours.TabIndex = 4;
+            // 
+            // btn_hobbs_calculate
+            // 
+            this.btn_hobbs_calculate.Location = new System.Drawing.Point(651, 546);
+            this.btn_hobbs_calculate.Name = "btn_hobbs_calculate";
+            this.btn_hobbs_calculate.Size = new System.Drawing.Size(92, 56);
+            this.btn_hobbs_calculate.TabIndex = 3;
+            this.btn_hobbs_calculate.Text = "Calculate";
+            this.btn_hobbs_calculate.UseVisualStyleBackColor = true;
+            this.btn_hobbs_calculate.Click += new System.EventHandler(this.btn_hobbs_calculate_Click);
+            // 
+            // btn_hobbs_reset
+            // 
+            this.btn_hobbs_reset.Location = new System.Drawing.Point(534, 546);
+            this.btn_hobbs_reset.Name = "btn_hobbs_reset";
+            this.btn_hobbs_reset.Size = new System.Drawing.Size(92, 56);
+            this.btn_hobbs_reset.TabIndex = 2;
+            this.btn_hobbs_reset.Text = "Reset";
+            this.btn_hobbs_reset.UseVisualStyleBackColor = true;
+            this.btn_hobbs_reset.Click += new System.EventHandler(this.btn_hobbs_reset_Click);
+            // 
+            // lbl_hobbs_result
+            // 
+            this.lbl_hobbs_result.AutoSize = true;
+            this.lbl_hobbs_result.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_hobbs_result.Location = new System.Drawing.Point(250, 511);
+            this.lbl_hobbs_result.Name = "lbl_hobbs_result";
+            this.lbl_hobbs_result.Size = new System.Drawing.Size(77, 37);
+            this.lbl_hobbs_result.TabIndex = 1;
+            this.lbl_hobbs_result.Text = "......";
+            // 
+            // label74
+            // 
+            this.label74.AutoSize = true;
+            this.label74.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label74.Location = new System.Drawing.Point(142, 511);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(102, 37);
+            this.label74.TabIndex = 0;
+            this.label74.Text = "Time:";
             // 
             // Form1
             // 
@@ -6201,6 +6369,12 @@ namespace myFlightInfo
             this.panel85.PerformLayout();
             this.panel86.ResumeLayout(false);
             this.panel86.PerformLayout();
+            this.tab_hobbs.ResumeLayout(false);
+            this.tab_hobbs.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -6674,6 +6848,21 @@ namespace myFlightInfo
         private System.Windows.Forms.RadioButton rdobtn_MTOW_472_5kg;
         private System.Windows.Forms.RadioButton rdobtn_MTOW_450kg;
         private System.Windows.Forms.Label label90;
+        private System.Windows.Forms.TabPage tab_hobbs;
+        private System.Windows.Forms.Button btn_hobbs_calculate;
+        private System.Windows.Forms.Button btn_hobbs_reset;
+        private System.Windows.Forms.Label lbl_hobbs_result;
+        private System.Windows.Forms.Label label74;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label91;
+        private System.Windows.Forms.Label label92;
+        private System.Windows.Forms.TextBox txtbx_hobbs_end_minutes;
+        private System.Windows.Forms.TextBox txtbx_hobbs_end_hours;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label88;
+        private System.Windows.Forms.Label label87;
+        private System.Windows.Forms.TextBox txtbx_hobbs_start_minutes;
+        private System.Windows.Forms.TextBox txtbx_hobbs_start_hours;
     }
 }
 

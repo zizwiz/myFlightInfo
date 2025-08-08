@@ -647,6 +647,8 @@ namespace myFlightInfo
             rchtxtbx_TakeOff_Landing_data.Clear();
         }
 
+        
+
 
 
 

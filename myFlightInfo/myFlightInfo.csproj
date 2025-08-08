@@ -72,6 +72,11 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="crosswind\Speed_Time_Fuel.cs" />
+    <Compile Include="Hobbs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hobbs\Calculate.cs" />
+    <Compile Include="hobbs\Reset.cs" />
     <Compile Include="KeyDowns.cs">
       <SubType>Form</SubType>
     </Compile>

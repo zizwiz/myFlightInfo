@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace myFlightInfo.hobbs
+{
+    class Calculate
+    {
+        public static string Endurance (TextBox myHobbsStartHours, TextBox myHobbsStartMinutes, TextBox myHobbsEndHours, TextBox myHobbsEndMinutes)
+        {
+        //    myHobbsStartHours.Text = myHobbsStartMinutes.Text = myHobbsEndHours.Text =
+        //        myHobbsEndMinutes.Text = myHobbsResult.Text = "Time";
+
+            return "Answer";
+        }
+
+    }
+}
