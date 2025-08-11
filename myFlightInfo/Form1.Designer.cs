@@ -5852,7 +5852,7 @@ namespace myFlightInfo
             this.groupBox3.Controls.Add(this.label92);
             this.groupBox3.Controls.Add(this.txtbx_hobbs_end_minutes);
             this.groupBox3.Controls.Add(this.txtbx_hobbs_end_hours);
-            this.groupBox3.Location = new System.Drawing.Point(545, 19);
+            this.groupBox3.Location = new System.Drawing.Point(554, 287);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(395, 187);
             this.groupBox3.TabIndex = 8;
@@ -5899,7 +5899,7 @@ namespace myFlightInfo
             this.groupBox2.Controls.Add(this.label87);
             this.groupBox2.Controls.Add(this.txtbx_hobbs_start_minutes);
             this.groupBox2.Controls.Add(this.txtbx_hobbs_start_hours);
-            this.groupBox2.Location = new System.Drawing.Point(72, 19);
+            this.groupBox2.Location = new System.Drawing.Point(81, 287);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(395, 187);
             this.groupBox2.TabIndex = 6;
@@ -5942,7 +5942,7 @@ namespace myFlightInfo
             // 
             // btn_hobbs_calculate
             // 
-            this.btn_hobbs_calculate.Location = new System.Drawing.Point(651, 546);
+            this.btn_hobbs_calculate.Location = new System.Drawing.Point(857, 546);
             this.btn_hobbs_calculate.Name = "btn_hobbs_calculate";
             this.btn_hobbs_calculate.Size = new System.Drawing.Size(92, 56);
             this.btn_hobbs_calculate.TabIndex = 3;
@@ -5952,7 +5952,7 @@ namespace myFlightInfo
             // 
             // btn_hobbs_reset
             // 
-            this.btn_hobbs_reset.Location = new System.Drawing.Point(534, 546);
+            this.btn_hobbs_reset.Location = new System.Drawing.Point(554, 546);
             this.btn_hobbs_reset.Name = "btn_hobbs_reset";
             this.btn_hobbs_reset.Size = new System.Drawing.Size(92, 56);
             this.btn_hobbs_reset.TabIndex = 2;
@@ -5964,7 +5964,7 @@ namespace myFlightInfo
             // 
             this.lbl_hobbs_result.AutoSize = true;
             this.lbl_hobbs_result.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_hobbs_result.Location = new System.Drawing.Point(250, 511);
+            this.lbl_hobbs_result.Location = new System.Drawing.Point(337, 565);
             this.lbl_hobbs_result.Name = "lbl_hobbs_result";
             this.lbl_hobbs_result.Size = new System.Drawing.Size(77, 37);
             this.lbl_hobbs_result.TabIndex = 1;
@@ -5974,11 +5974,11 @@ namespace myFlightInfo
             // 
             this.label74.AutoSize = true;
             this.label74.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label74.Location = new System.Drawing.Point(142, 511);
+            this.label74.Location = new System.Drawing.Point(98, 565);
             this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(102, 37);
+            this.label74.Size = new System.Drawing.Size(233, 37);
             this.label74.TabIndex = 0;
-            this.label74.Text = "Time:";
+            this.label74.Text = "Engine Hours:";
             // 
             // Form1
             // 
