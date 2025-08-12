@@ -186,6 +186,7 @@
     <Content Include="CrystalBall.ico" />
     <Content Include="graphics\c42_sideview.jpg" />
     <Content Include="graphics\crosswind_runway.jpg" />
+    <Content Include="graphics\HowToReadHobbs.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="compass\" />

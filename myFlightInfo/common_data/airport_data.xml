@@ -38283,4 +38283,34 @@
 		<city>Le Touquet</city>
 		<type>Midsized airport</type>
 	</airport_info>
+	<airport_info>
+		<icao_code>EGSD</icao_code>
+		<airport_name>North Deans Airfield</airport_name>
+		<latitude_deg>52°38'4.65696"N</latitude_deg>
+		<latitude_dec>52.634626934168736</latitude_dec>
+		<longitude_deg>1°43 31.1617"E</longitude_deg>
+		<longitude_dec>1.7253226947244398</longitude_dec>
+		<elevation_m>0</elevation_m>
+		<elevation_ft>0</elevation_ft>
+		<iata_code></iata_code>
+		<alternate_name>Yarmouth Heliport</alternate_name>
+		<fir>London FIR</fir>
+		<city>Yarmouth</city>
+		<type>Small airport</type>
+	</airport_info>
+	<airport_info>
+		<icao_code>EGSD</icao_code>
+		<airport_name>Yarmouth Heliport</airport_name>
+		<latitude_deg>52°38'4.65696"N</latitude_deg>
+		<latitude_dec>52.634626934168736</latitude_dec>
+		<longitude_deg>1°43 31.1617"E</longitude_deg>
+		<longitude_dec>1.7253226947244398</longitude_dec>
+		<elevation_m>0</elevation_m>
+		<elevation_ft>0</elevation_ft>
+		<iata_code></iata_code>
+		<alternate_name>North Deans Airfield</alternate_name>
+		<fir>London FIR</fir>
+		<city>Yarmouth</city>
+		<type>Small airport</type>
+	</airport_info>
 </uk_airports>

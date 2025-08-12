@@ -498,6 +498,7 @@ namespace myFlightInfo
             this.panel88 = new System.Windows.Forms.Panel();
             this.panel89 = new System.Windows.Forms.Panel();
             this.tab_hobbs = new System.Windows.Forms.TabPage();
+            this.picbx_HowToReadHobbs = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label91 = new System.Windows.Forms.Label();
             this.label92 = new System.Windows.Forms.Label();
@@ -758,6 +759,7 @@ namespace myFlightInfo
             this.panel85.SuspendLayout();
             this.panel86.SuspendLayout();
             this.tab_hobbs.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picbx_HowToReadHobbs)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -5833,6 +5835,7 @@ namespace myFlightInfo
             // 
             // tab_hobbs
             // 
+            this.tab_hobbs.Controls.Add(this.picbx_HowToReadHobbs);
             this.tab_hobbs.Controls.Add(this.groupBox3);
             this.tab_hobbs.Controls.Add(this.groupBox2);
             this.tab_hobbs.Controls.Add(this.btn_hobbs_calculate);
@@ -5845,6 +5848,16 @@ namespace myFlightInfo
             this.tab_hobbs.TabIndex = 7;
             this.tab_hobbs.Text = "Workout Hobbs";
             this.tab_hobbs.UseVisualStyleBackColor = true;
+            // 
+            // picbx_HowToReadHobbs
+            // 
+            this.picbx_HowToReadHobbs.Image = global::myFlightInfo.Properties.Resources.HowToReadHobbs;
+            this.picbx_HowToReadHobbs.Location = new System.Drawing.Point(975, 38);
+            this.picbx_HowToReadHobbs.Name = "picbx_HowToReadHobbs";
+            this.picbx_HowToReadHobbs.Size = new System.Drawing.Size(343, 263);
+            this.picbx_HowToReadHobbs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picbx_HowToReadHobbs.TabIndex = 9;
+            this.picbx_HowToReadHobbs.TabStop = false;
             // 
             // groupBox3
             // 
@@ -6371,6 +6384,7 @@ namespace myFlightInfo
             this.panel86.PerformLayout();
             this.tab_hobbs.ResumeLayout(false);
             this.tab_hobbs.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picbx_HowToReadHobbs)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -6863,6 +6877,7 @@ namespace myFlightInfo
         private System.Windows.Forms.Label label87;
         private System.Windows.Forms.TextBox txtbx_hobbs_start_minutes;
         private System.Windows.Forms.TextBox txtbx_hobbs_start_hours;
+        private System.Windows.Forms.PictureBox picbx_HowToReadHobbs;
     }
 }
 

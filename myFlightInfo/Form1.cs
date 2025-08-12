@@ -132,6 +132,7 @@ namespace myFlightInfo
             SetWeatherPages();
 
             cmbobx_gransden_lodge.SelectedIndex = 0;
+           // picbx_HowToReadHobbs.Image = Resources.HowToReadHobbs; //add image to the box
 
             //do this last in this order to make sure all else is working.
             PopulateComplianceDataCmboBx(settings.Aircraft); //set to aircraft in settings
