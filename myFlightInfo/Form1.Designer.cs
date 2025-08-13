@@ -498,9 +498,13 @@ namespace myFlightInfo
             this.panel88 = new System.Windows.Forms.Panel();
             this.panel89 = new System.Windows.Forms.Panel();
             this.tab_hobbs = new System.Windows.Forms.TabPage();
+            this.cmbobx_Hobbs_aircraft = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label93 = new System.Windows.Forms.Label();
+            this.picbx_HowToReadHobbs = new System.Windows.Forms.PictureBox();
             this.btn_hobbs_open_end_image = new System.Windows.Forms.Button();
             this.btn_hobbs_open_start_image = new System.Windows.Forms.Button();
-            this.picbx_HowToReadHobbs = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.picbx_hobbs_end = new System.Windows.Forms.PictureBox();
             this.label91 = new System.Windows.Forms.Label();
@@ -517,6 +521,7 @@ namespace myFlightInfo
             this.btn_hobbs_reset = new System.Windows.Forms.Button();
             this.lbl_hobbs_result = new System.Windows.Forms.Label();
             this.label74 = new System.Windows.Forms.Label();
+            this.label94 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.panel31.SuspendLayout();
@@ -763,6 +768,7 @@ namespace myFlightInfo
             this.panel85.SuspendLayout();
             this.panel86.SuspendLayout();
             this.tab_hobbs.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbx_HowToReadHobbs)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbx_hobbs_end)).BeginInit();
@@ -5841,15 +5847,17 @@ namespace myFlightInfo
             // 
             // tab_hobbs
             // 
+            this.tab_hobbs.Controls.Add(this.cmbobx_Hobbs_aircraft);
+            this.tab_hobbs.Controls.Add(this.dateTimePicker1);
             this.tab_hobbs.Controls.Add(this.btn_hobbs_open_end_image);
             this.tab_hobbs.Controls.Add(this.btn_hobbs_open_start_image);
-            this.tab_hobbs.Controls.Add(this.picbx_HowToReadHobbs);
             this.tab_hobbs.Controls.Add(this.groupBox3);
             this.tab_hobbs.Controls.Add(this.groupBox2);
             this.tab_hobbs.Controls.Add(this.btn_hobbs_calculate);
             this.tab_hobbs.Controls.Add(this.btn_hobbs_reset);
             this.tab_hobbs.Controls.Add(this.lbl_hobbs_result);
             this.tab_hobbs.Controls.Add(this.label74);
+            this.tab_hobbs.Controls.Add(this.groupBox4);
             this.tab_hobbs.Location = new System.Drawing.Point(52, 4);
             this.tab_hobbs.Name = "tab_hobbs";
             this.tab_hobbs.Size = new System.Drawing.Size(1367, 692);
@@ -5857,9 +5865,60 @@ namespace myFlightInfo
             this.tab_hobbs.Text = "Workout Hobbs";
             this.tab_hobbs.UseVisualStyleBackColor = true;
             // 
+            // cmbobx_Hobbs_aircraft
+            // 
+            this.cmbobx_Hobbs_aircraft.FormattingEnabled = true;
+            this.cmbobx_Hobbs_aircraft.Items.AddRange(new object[] {
+            "G-CECC",
+            "G-CFGM",
+            "G-RACK"});
+            this.cmbobx_Hobbs_aircraft.Location = new System.Drawing.Point(732, 608);
+            this.cmbobx_Hobbs_aircraft.Name = "cmbobx_Hobbs_aircraft";
+            this.cmbobx_Hobbs_aircraft.Size = new System.Drawing.Size(200, 28);
+            this.cmbobx_Hobbs_aircraft.TabIndex = 14;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(732, 550);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
+            this.dateTimePicker1.TabIndex = 13;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.label94);
+            this.groupBox4.Controls.Add(this.label93);
+            this.groupBox4.Controls.Add(this.picbx_HowToReadHobbs);
+            this.groupBox4.Location = new System.Drawing.Point(962, 36);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(371, 400);
+            this.groupBox4.TabIndex = 12;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Instructions";
+            // 
+            // label93
+            // 
+            this.label93.Location = new System.Drawing.Point(0, 22);
+            this.label93.MaximumSize = new System.Drawing.Size(382, 0);
+            this.label93.Name = "label93";
+            this.label93.Size = new System.Drawing.Size(371, 0);
+            this.label93.TabIndex = 10;
+            this.label93.Text = "Use the Hours and Minutes as shown in image below";
+            this.label93.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // picbx_HowToReadHobbs
+            // 
+            this.picbx_HowToReadHobbs.Image = global::myFlightInfo.Properties.Resources.HowToReadHobbs;
+            this.picbx_HowToReadHobbs.Location = new System.Drawing.Point(13, 107);
+            this.picbx_HowToReadHobbs.Name = "picbx_HowToReadHobbs";
+            this.picbx_HowToReadHobbs.Size = new System.Drawing.Size(343, 263);
+            this.picbx_HowToReadHobbs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picbx_HowToReadHobbs.TabIndex = 9;
+            this.picbx_HowToReadHobbs.TabStop = false;
+            // 
             // btn_hobbs_open_end_image
             // 
-            this.btn_hobbs_open_end_image.Location = new System.Drawing.Point(975, 433);
+            this.btn_hobbs_open_end_image.Location = new System.Drawing.Point(975, 537);
             this.btn_hobbs_open_end_image.Name = "btn_hobbs_open_end_image";
             this.btn_hobbs_open_end_image.Size = new System.Drawing.Size(184, 56);
             this.btn_hobbs_open_end_image.TabIndex = 11;
@@ -5869,23 +5928,13 @@ namespace myFlightInfo
             // 
             // btn_hobbs_open_start_image
             // 
-            this.btn_hobbs_open_start_image.Location = new System.Drawing.Point(975, 351);
+            this.btn_hobbs_open_start_image.Location = new System.Drawing.Point(975, 455);
             this.btn_hobbs_open_start_image.Name = "btn_hobbs_open_start_image";
             this.btn_hobbs_open_start_image.Size = new System.Drawing.Size(184, 56);
             this.btn_hobbs_open_start_image.TabIndex = 10;
             this.btn_hobbs_open_start_image.Text = "Open Start Image";
             this.btn_hobbs_open_start_image.UseVisualStyleBackColor = true;
             this.btn_hobbs_open_start_image.Click += new System.EventHandler(this.btn_hobbs_open_start_image_Click);
-            // 
-            // picbx_HowToReadHobbs
-            // 
-            this.picbx_HowToReadHobbs.Image = global::myFlightInfo.Properties.Resources.HowToReadHobbs;
-            this.picbx_HowToReadHobbs.Location = new System.Drawing.Point(975, 38);
-            this.picbx_HowToReadHobbs.Name = "picbx_HowToReadHobbs";
-            this.picbx_HowToReadHobbs.Size = new System.Drawing.Size(343, 263);
-            this.picbx_HowToReadHobbs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picbx_HowToReadHobbs.TabIndex = 9;
-            this.picbx_HowToReadHobbs.TabStop = false;
             // 
             // groupBox3
             // 
@@ -6040,6 +6089,15 @@ namespace myFlightInfo
             this.label74.Size = new System.Drawing.Size(233, 37);
             this.label74.TabIndex = 0;
             this.label74.Text = "Engine Hours:";
+            // 
+            // label94
+            // 
+            this.label94.Location = new System.Drawing.Point(9, 22);
+            this.label94.Name = "label94";
+            this.label94.Size = new System.Drawing.Size(356, 82);
+            this.label94.TabIndex = 11;
+            this.label94.Text = "The image below illustrates how to read a Hobbs meter";
+            this.label94.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -6432,6 +6490,7 @@ namespace myFlightInfo
             this.panel86.PerformLayout();
             this.tab_hobbs.ResumeLayout(false);
             this.tab_hobbs.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picbx_HowToReadHobbs)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
@@ -6932,6 +6991,11 @@ namespace myFlightInfo
         private System.Windows.Forms.Button btn_hobbs_open_start_image;
         private System.Windows.Forms.PictureBox picbx_hobbs_end;
         private System.Windows.Forms.PictureBox picbx_hobbs_start;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label label93;
+        private System.Windows.Forms.ComboBox cmbobx_Hobbs_aircraft;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label94;
     }
 }
 

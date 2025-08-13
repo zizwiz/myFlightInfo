@@ -132,7 +132,8 @@ namespace myFlightInfo
             SetWeatherPages();
 
             cmbobx_gransden_lodge.SelectedIndex = 0;
-          
+            cmbobx_Hobbs_aircraft.SelectedIndex = 0;
+
             //do this last in this order to make sure all else is working.
             PopulateComplianceDataCmboBx(settings.Aircraft); //set to aircraft in settings
             GetSettings();
@@ -647,7 +648,9 @@ namespace myFlightInfo
             rchtxtbx_TakeOff_Landing_data.Clear();
         }
 
-        
+       
+
+
 
 
 
