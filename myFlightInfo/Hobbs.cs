@@ -34,7 +34,7 @@ namespace myFlightInfo
 
         private void btn_hobbs_open_end_image_Click(object sender, EventArgs e)
         {
-            picbx_hobbs_end.Image = Resources.HowToReadHobbs;
+            picbx_hobbs_end.Image = OpenHobbsImageFile();
         }
 
         private Bitmap OpenHobbsImageFile()
@@ -42,7 +42,7 @@ namespace myFlightInfo
             // We use  Magick.NET NuGet package to do the convertion of image to a jpg file that we display.
             // This will handle HEIC (High-Efficiency Image Format) image files 
             
-            Bitmap myBitmap = new Bitmap(1,1);
+            Bitmap myBitmap = new Bitmap(1,1); //just a blank one pixel
 
             OpenFileDialog openFileDialog = new OpenFileDialog
             {
@@ -55,27 +55,24 @@ namespace myFlightInfo
             {
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    using (var magickImage = new MagickImage(openFileDialog.FileName))
+                    using (var myMagickImage = new MagickImage(openFileDialog.FileName))
                     {
                         // Sets the output format to jpeg
-                        magickImage.Format = MagickFormat.Jpeg;
+                        myMagickImage.Format = MagickFormat.Jpeg;
 
-                        using (var ms = new MemoryStream(magickImage.ToByteArray()))
+                        using (var myMemoryStream = new MemoryStream(myMagickImage.ToByteArray()))
                         {
-                            myBitmap = new Bitmap(ms);
+                            myBitmap = new Bitmap(myMemoryStream);
                         }
 
                         return myBitmap;
                     }
                 }
-
                 return myBitmap;
             }
             catch (Exception e)
             {
                 MsgBox.Show("Please use an image file.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error );
-                
-                
             }
             return myBitmap;
         }
