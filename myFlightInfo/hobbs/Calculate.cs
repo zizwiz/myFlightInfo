@@ -35,10 +35,10 @@ namespace myFlightInfo.hobbs
                 {
                      // Convert back to hours and minutes and work out display wording
                      int myDurationHours = durationMinutes / 60;
-                     string myHourName = myDurationHours == 1 ? " hour : " : " hours ";
+                     string myHourName = myDurationHours == 1 ? " hour : " : " hours : ";
 
                      int myDurationMinutes = durationMinutes % 60;
-                     string myMinuteName = myDurationMinutes == 1 ?  " minute : " : " minutes ";
+                     string myMinuteName = myDurationMinutes == 1 ?  " minute" : " minutes";
 
                     result = myDurationHours + myHourName + myDurationMinutes + myMinuteName;
                 }
