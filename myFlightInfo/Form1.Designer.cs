@@ -5972,7 +5972,7 @@ namespace myFlightInfo
             this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33F));
             this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34F));
-            this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel26.Controls.Add(this.panel_hobbs_email, 1, 0);
             this.tableLayoutPanel26.Controls.Add(this.panel201, 5, 0);
             this.tableLayoutPanel26.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -6535,7 +6535,7 @@ namespace myFlightInfo
             this.panel201.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel201.Location = new System.Drawing.Point(909, 3);
             this.panel201.Name = "panel201";
-            this.panel201.Size = new System.Drawing.Size(430, 686);
+            this.panel201.Size = new System.Drawing.Size(429, 686);
             this.panel201.TabIndex = 1;
             // 
             // tableLayoutPanel35
@@ -6556,7 +6556,7 @@ namespace myFlightInfo
             this.tableLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
             this.tableLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel35.Size = new System.Drawing.Size(430, 686);
+            this.tableLayoutPanel35.Size = new System.Drawing.Size(429, 686);
             this.tableLayoutPanel35.TabIndex = 0;
             // 
             // panel205
@@ -6565,7 +6565,7 @@ namespace myFlightInfo
             this.panel205.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel205.Location = new System.Drawing.Point(3, 3);
             this.panel205.Name = "panel205";
-            this.panel205.Size = new System.Drawing.Size(424, 470);
+            this.panel205.Size = new System.Drawing.Size(423, 470);
             this.panel205.TabIndex = 0;
             // 
             // picbx_HowToReadHobbs
@@ -6574,7 +6574,7 @@ namespace myFlightInfo
             this.picbx_HowToReadHobbs.Image = global::myFlightInfo.Properties.Resources.HowToReadHobbs;
             this.picbx_HowToReadHobbs.Location = new System.Drawing.Point(0, 0);
             this.picbx_HowToReadHobbs.Name = "picbx_HowToReadHobbs";
-            this.picbx_HowToReadHobbs.Size = new System.Drawing.Size(424, 470);
+            this.picbx_HowToReadHobbs.Size = new System.Drawing.Size(423, 470);
             this.picbx_HowToReadHobbs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picbx_HowToReadHobbs.TabIndex = 10;
             this.picbx_HowToReadHobbs.TabStop = false;
@@ -6585,7 +6585,7 @@ namespace myFlightInfo
             this.panel206.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel206.Location = new System.Drawing.Point(3, 629);
             this.panel206.Name = "panel206";
-            this.panel206.Size = new System.Drawing.Size(424, 54);
+            this.panel206.Size = new System.Drawing.Size(423, 54);
             this.panel206.TabIndex = 1;
             // 
             // btn_hobbs_calculate
@@ -6593,10 +6593,11 @@ namespace myFlightInfo
             this.btn_hobbs_calculate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_hobbs_calculate.Location = new System.Drawing.Point(0, 0);
             this.btn_hobbs_calculate.Name = "btn_hobbs_calculate";
-            this.btn_hobbs_calculate.Size = new System.Drawing.Size(424, 54);
+            this.btn_hobbs_calculate.Size = new System.Drawing.Size(423, 54);
             this.btn_hobbs_calculate.TabIndex = 19;
             this.btn_hobbs_calculate.Text = "Calculate";
             this.btn_hobbs_calculate.UseVisualStyleBackColor = true;
+            this.btn_hobbs_calculate.Click += new System.EventHandler(this.btn_hobbs_calculate_Click);
             // 
             // panel207
             // 
@@ -6605,7 +6606,7 @@ namespace myFlightInfo
             this.panel207.Location = new System.Drawing.Point(3, 489);
             this.panel207.Name = "panel207";
             this.tableLayoutPanel35.SetRowSpan(this.panel207, 3);
-            this.panel207.Size = new System.Drawing.Size(424, 124);
+            this.panel207.Size = new System.Drawing.Size(423, 124);
             this.panel207.TabIndex = 2;
             // 
             // tableLayoutPanel36
@@ -6626,7 +6627,7 @@ namespace myFlightInfo
             this.tableLayoutPanel36.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel36.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
             this.tableLayoutPanel36.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel36.Size = new System.Drawing.Size(424, 124);
+            this.tableLayoutPanel36.Size = new System.Drawing.Size(423, 124);
             this.tableLayoutPanel36.TabIndex = 0;
             // 
             // panel208
@@ -6647,6 +6648,7 @@ namespace myFlightInfo
             this.btn_hobbs_open_end_image.TabIndex = 23;
             this.btn_hobbs_open_end_image.Text = "Open End Image";
             this.btn_hobbs_open_end_image.UseVisualStyleBackColor = true;
+            this.btn_hobbs_open_end_image.Click += new System.EventHandler(this.btn_hobbs_open_end_image_Click);
             // 
             // panel209
             // 
@@ -6666,6 +6668,7 @@ namespace myFlightInfo
             this.btn_hobbs_open_start_image.TabIndex = 22;
             this.btn_hobbs_open_start_image.Text = "Open Start Image";
             this.btn_hobbs_open_start_image.UseVisualStyleBackColor = true;
+            this.btn_hobbs_open_start_image.Click += new System.EventHandler(this.btn_hobbs_open_start_image_Click);
             // 
             // panel210
             // 
@@ -6673,7 +6676,7 @@ namespace myFlightInfo
             this.panel210.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel210.Location = new System.Drawing.Point(302, 67);
             this.panel210.Name = "panel210";
-            this.panel210.Size = new System.Drawing.Size(119, 54);
+            this.panel210.Size = new System.Drawing.Size(118, 54);
             this.panel210.TabIndex = 2;
             // 
             // btn_hobbs_reset
@@ -6681,10 +6684,11 @@ namespace myFlightInfo
             this.btn_hobbs_reset.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_hobbs_reset.Location = new System.Drawing.Point(0, 0);
             this.btn_hobbs_reset.Name = "btn_hobbs_reset";
-            this.btn_hobbs_reset.Size = new System.Drawing.Size(119, 54);
+            this.btn_hobbs_reset.Size = new System.Drawing.Size(118, 54);
             this.btn_hobbs_reset.TabIndex = 18;
             this.btn_hobbs_reset.Text = "Reset";
             this.btn_hobbs_reset.UseVisualStyleBackColor = true;
+            this.btn_hobbs_reset.Click += new System.EventHandler(this.btn_hobbs_reset_Click);
             // 
             // panel211
             // 
@@ -6692,7 +6696,7 @@ namespace myFlightInfo
             this.panel211.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel211.Location = new System.Drawing.Point(302, -3);
             this.panel211.Name = "panel211";
-            this.panel211.Size = new System.Drawing.Size(119, 54);
+            this.panel211.Size = new System.Drawing.Size(118, 54);
             this.panel211.TabIndex = 3;
             // 
             // btn_hobbs_email
@@ -6700,10 +6704,11 @@ namespace myFlightInfo
             this.btn_hobbs_email.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_hobbs_email.Location = new System.Drawing.Point(0, 0);
             this.btn_hobbs_email.Name = "btn_hobbs_email";
-            this.btn_hobbs_email.Size = new System.Drawing.Size(119, 54);
+            this.btn_hobbs_email.Size = new System.Drawing.Size(118, 54);
             this.btn_hobbs_email.TabIndex = 19;
             this.btn_hobbs_email.Text = "eMail";
             this.btn_hobbs_email.UseVisualStyleBackColor = true;
+            this.btn_hobbs_email.Click += new System.EventHandler(this.btn_hobbs_email_Click);
             // 
             // tabPage1
             // 

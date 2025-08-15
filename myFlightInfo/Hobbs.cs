@@ -4,6 +4,7 @@ using System.IO;
 using System.Windows.Forms;
 using CenteredMessagebox;
 using ImageMagick;
+using myFlightInfo.hobbs;
 using myFlightInfo.Properties;
 
 namespace myFlightInfo
@@ -75,6 +76,11 @@ namespace myFlightInfo
                 MsgBox.Show("Please use an image file.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error );
             }
             return myBitmap;
+        }
+
+        private void btn_hobbs_email_Click(object sender, EventArgs e)
+        {
+            MakeHobbsImage.CreateImage(panel_hobbs_email);
         }
     }
 }
