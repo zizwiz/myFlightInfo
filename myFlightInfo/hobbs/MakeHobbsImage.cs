@@ -10,7 +10,7 @@ namespace myFlightInfo.hobbs
     {
         private static Bitmap memoryImage;
 
-        public static void CreateImage(Panel myPanel)
+        public static void CreateImage(Panel myPanel, ComboBox myComboBox, DateTimePicker myDateTimePicker)
         {
             //memoryImage = new Bitmap(myPanel.Width, myPanel.Height);
             //myPanel.DrawToBitmap(memoryImage, new Rectangle(0, 0, myPanel.Width, myPanel.Height));
@@ -33,7 +33,7 @@ namespace myFlightInfo.hobbs
                 {
                     saveFileDialog.Filter = "Bitmap Image|*.jpg";
                     saveFileDialog.Title = "Save Hobbs Data as Image";
-                    saveFileDialog.FileName = "PanelImage";
+                    saveFileDialog.FileName = myComboBox.Text + "_" + myDateTimePicker.Text;
 
                     if (saveFileDialog.ShowDialog() == DialogResult.OK)
                     {
@@ -49,7 +49,10 @@ namespace myFlightInfo.hobbs
                             // Save the bitmap to the specified location
                             bitmap.Save(saveFileDialog.FileName, ImageFormat.Jpeg);
 
-                             MsgBox.Show("Image saved successfully!", "Success", MessageBoxButtons.OK,
+                            
+
+
+                            MsgBox.Show("Image saved successfully!", "Success", MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
                         }
                         else

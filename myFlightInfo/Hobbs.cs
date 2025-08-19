@@ -80,7 +80,7 @@ namespace myFlightInfo
 
         private void btn_hobbs_email_Click(object sender, EventArgs e)
         {
-            MakeHobbsImage.CreateImage(panel_hobbs_email);
+            MakeHobbsImage.CreateImage(panel_hobbs_email, cmbobx_Hobbs_aircraft, dateTimePicker1);
         }
     }
 }
