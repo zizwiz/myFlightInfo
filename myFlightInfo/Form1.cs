@@ -140,6 +140,11 @@ namespace myFlightInfo
 
             //Make GUI visible but the combobox will still be loading on different thread
             SetVisibleCore(true);
+
+
+
+            //saveTimer = new System.Timers.Timer();
+            //saveTimer.Elapsed += SaveImageAtInterval;
         }
 
 
@@ -648,7 +653,8 @@ namespace myFlightInfo
             rchtxtbx_TakeOff_Landing_data.Clear();
         }
 
-       
+
+
 
 
 
