@@ -1,4 +1,8 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.IO;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 using CenteredMessagebox;
 using Timer = System.Timers.Timer;
 
@@ -6,6 +10,87 @@ namespace myFlightInfo.timelapse
 {
     class TimeLapse
     {
+
+        CancellationTokenSource tokenSource; // Declare the cancellation token
+
+       
+        public void StartSaving()
+        {
+            //if (lbl_output.InvokeRequired)
+            //{
+            //    lbl_output.BeginInvoke((MethodInvoker)delegate () { lbl_output.Text = data; });
+            //}
+
+            string myWestDirectory = SetDirectory();
+            Directory.CreateDirectory(Path.Combine(myWestDirectory + "/west"));
+
+
+            Directory.CreateDirectory(Path.Combine(SetDirectory() + "/south"));
+
+            tokenSource = new CancellationTokenSource();    //Make a new instance
+            Task.Run(() => RunSequence(tokenSource.Token)); //Run the task that we need to stop
+        }
+
+        public void StopSaving()
+        {
+            tokenSource.Cancel(); // make the token a cancel token
+        }
+
+      //  private async void RunSequence(CancellationToken _ct)
+        private void RunSequence(CancellationToken _ct)
+        {
+            int counter = 0;
+
+            for (int i = 0; i < 100; i++)
+            {
+
+                int q = i;
+                //string myDirectory = SetDirectory();
+
+                //Directory.CreateDirectory(Path.Combine(myDirectory + "/west"));
+                //Directory.CreateDirectory(Path.Combine(myDirectory + "/south"));
+            }
+
+
+            //while (!_ct.IsCancellationRequested)
+            //{
+            //    try
+            //    {
+            //        await Task.Delay(60000, _ct); //waits 1 second
+            //    }
+            //    catch
+            //    {
+            //        // Do nothing just needed so we can exit without exceptions
+            //    }
+
+            //}
+
+            //tokenSource.Dispose(); //dispose of the token so we can reuse
+        }
+
+       
+        private static string SetDirectory()
+        {
+            string myDirectory = "Error";
+
+
+            
+
+
+            using (FolderBrowserDialog myFolderBrowserDialog = new FolderBrowserDialog())
+            {
+                
+                    if (myFolderBrowserDialog.ShowDialog() == DialogResult.OK)
+                {
+                    myDirectory = myFolderBrowserDialog.SelectedPath;
+                }
+            }
+
+            return myDirectory;
+        }
+
+
+        /*
         private static Timer mySaveTimer;
 
         public static string SelectImage()
@@ -66,5 +151,7 @@ namespace myFlightInfo.timelapse
             mySaveTimer.Stop();
             MsgBox.Show("Image saving stopped.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        */
     }
 }
