@@ -13,22 +13,16 @@ namespace myFlightInfo.timelapse
 
         CancellationTokenSource tokenSource; // Declare the cancellation token
 
-       
-        public void StartSaving()
-        {
-            //if (lbl_output.InvokeRequired)
-            //{
-            //    lbl_output.BeginInvoke((MethodInvoker)delegate () { lbl_output.Text = data; });
-            //}
 
+        public void StartSaving(Label myLabel)
+        {
             string myWestDirectory = SetDirectory();
             Directory.CreateDirectory(Path.Combine(myWestDirectory + "/west"));
-
-
+            
             Directory.CreateDirectory(Path.Combine(SetDirectory() + "/south"));
-
+            
             tokenSource = new CancellationTokenSource();    //Make a new instance
-            Task.Run(() => RunSequence(tokenSource.Token)); //Run the task that we need to stop
+            Task.Run(() => RunSequence(tokenSource.Token, myLabel)); //Run the task that we need to stop
         }
 
         public void StopSaving()
@@ -36,51 +30,59 @@ namespace myFlightInfo.timelapse
             tokenSource.Cancel(); // make the token a cancel token
         }
 
-      //  private async void RunSequence(CancellationToken _ct)
-        private void RunSequence(CancellationToken _ct)
+        private async void RunSequence(CancellationToken _ct, Label myLabel)
         {
             int counter = 0;
-
-            for (int i = 0; i < 100; i++)
+            
+            while (!_ct.IsCancellationRequested)
             {
+                // show incrementing number but as we have a task watch for cross threading
+                WriteUIData((counter++).ToString(), myLabel);
 
-                int q = i;
-                //string myDirectory = SetDirectory();
+                try
+                {
+                    await Task.Delay(1000, _ct); //waits 1 second
+                }
+                catch
+                {
+                    // Do nothing just needed so we can exit without exceptions
+                }
 
-                //Directory.CreateDirectory(Path.Combine(myDirectory + "/west"));
-                //Directory.CreateDirectory(Path.Combine(myDirectory + "/south"));
             }
 
+            if (_ct.IsCancellationRequested)
+            {
+                //report we have cancelled
+                WriteUIData("Cancelled", myLabel);
+            }
 
-            //while (!_ct.IsCancellationRequested)
-            //{
-            //    try
-            //    {
-            //        await Task.Delay(60000, _ct); //waits 1 second
-            //    }
-            //    catch
-            //    {
-            //        // Do nothing just needed so we can exit without exceptions
-            //    }
+            tokenSource.Dispose(); //dispose of the token so we can reuse
 
-            //}
-
-            //tokenSource.Dispose(); //dispose of the token so we can reuse
         }
 
-       
+        private void WriteUIData(String myData, Label myLabel)
+        {
+            // Write data to UI but as we have a task watch for cross threading
+
+            if (myLabel.InvokeRequired)
+            {
+                myLabel.BeginInvoke((MethodInvoker)delegate () { myLabel.Text = myData; });
+            }
+            else
+            {
+                myLabel.Text = myData;
+            }
+        }
+
+
         private static string SetDirectory()
         {
             string myDirectory = "Error";
 
-
-            
-
-
             using (FolderBrowserDialog myFolderBrowserDialog = new FolderBrowserDialog())
             {
-                
-                    if (myFolderBrowserDialog.ShowDialog() == DialogResult.OK)
+
+                if (myFolderBrowserDialog.ShowDialog() == DialogResult.OK)
                 {
                     myDirectory = myFolderBrowserDialog.SelectedPath;
                 }
@@ -88,70 +90,5 @@ namespace myFlightInfo.timelapse
 
             return myDirectory;
         }
-
-
-        /*
-        private static Timer mySaveTimer;
-
-        public static string SelectImage()
-        {
-            string selectedImagePath = "Error";
-
-            using (OpenFileDialog openFileDialog = new OpenFileDialog())
-            {
-                openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    selectedImagePath = openFileDialog.FileName;
-                }
-
-                return selectedImagePath;
-            }
-        }
-
-
-        public static string SetSaveDirectory()
-        {
-            string saveDirectory = "Error";
-
-            using (FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog())
-            {
-                if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
-                {
-                    saveDirectory = folderBrowserDialog.SelectedPath;
-                }
-            }
-
-            return saveDirectory;
-        }
-
-
-        public static void StartSaving(string mySelectedImagePath, string mySaveDirectory, TextBox myTextBox)
-        {
-            if (string.IsNullOrEmpty(mySelectedImagePath) || string.IsNullOrEmpty(mySaveDirectory))
-            {
-                MsgBox.Show("Please select an image and set a save directory first.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            if (!int.TryParse(myTextBox.Text, out int interval) || interval <= 0)
-            {
-                MsgBox.Show("Please enter a valid positive number for the interval (in seconds).", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            mySaveTimer.Interval = interval * 1000; // Convert seconds to milliseconds
-            mySaveTimer.Start();
-            MsgBox.Show("Image saving started", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-
-        public static void StopSaving()
-        {
-            mySaveTimer.Stop();
-            MsgBox.Show("Image saving stopped.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        */
     }
 }

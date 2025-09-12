@@ -8,7 +8,7 @@ namespace myFlightInfo
 {
     public partial class Form1
     {
-       // TimeLapse myTimeLapseObject = new TimeLapse();
+        TimeLapse myTimeLapseObject = new TimeLapse();
 
 
 
@@ -44,14 +44,16 @@ namespace myFlightInfo
         
         private void btn_timelapse_start_saving_Click(object sender, EventArgs e)
         {
-           // myTimeLapseObject.StartSaving();
-
-           new timelapse.TimeLapse().StartSaving();
+           myTimeLapseObject.StartSaving(lbl_timelapse_counter);
+           
+           //new timelapse.TimeLapse().StartSaving();
         }
 
         private void btn_timelapse_stop_saving_Click(object sender, EventArgs e)
         {
-           // myTimeLapseObject.StopSaving();
+           //TimeLapse.StopSaving();
+
+          myTimeLapseObject.StopSaving();
         }
 
 
