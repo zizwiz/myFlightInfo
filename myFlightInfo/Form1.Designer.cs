@@ -563,13 +563,17 @@ namespace myFlightInfo
             this.panel209 = new System.Windows.Forms.Panel();
             this.btn_hobbs_email = new System.Windows.Forms.Button();
             this.tab_time_lapse = new System.Windows.Forms.TabPage();
-            this.label87 = new System.Windows.Forms.Label();
-            this.txtbx_timelapse_interval = new System.Windows.Forms.TextBox();
             this.btn_timelapse_stop_saving = new System.Windows.Forms.Button();
             this.btn_timelapse_start_saving = new System.Windows.Forms.Button();
-            this.btn_timelapse_set_save_directory = new System.Windows.Forms.Button();
-            this.btn_timelapse_select_image = new System.Windows.Forms.Button();
             this.lbl_timelapse_counter = new System.Windows.Forms.Label();
+            this.picbx_time_lapse_west = new System.Windows.Forms.PictureBox();
+            this.picbx_time_lapse_south = new System.Windows.Forms.PictureBox();
+            this.chkbx_time_lapse_west = new System.Windows.Forms.CheckBox();
+            this.chkbx_time_lapse_south = new System.Windows.Forms.CheckBox();
+            this.picbx_time_lapse_null = new System.Windows.Forms.PictureBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lbl_time_lapse_sequence_started = new System.Windows.Forms.Label();
+            this.lbl_time_lapse_last_save = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.panel31.SuspendLayout();
@@ -862,6 +866,10 @@ namespace myFlightInfo
             this.panel208.SuspendLayout();
             this.panel209.SuspendLayout();
             this.tab_time_lapse.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picbx_time_lapse_west)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbx_time_lapse_south)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbx_time_lapse_null)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -6671,13 +6679,15 @@ namespace myFlightInfo
             // 
             // tab_time_lapse
             // 
+            this.tab_time_lapse.Controls.Add(this.lbl_time_lapse_last_save);
+            this.tab_time_lapse.Controls.Add(this.lbl_time_lapse_sequence_started);
+            this.tab_time_lapse.Controls.Add(this.groupBox2);
+            this.tab_time_lapse.Controls.Add(this.picbx_time_lapse_null);
+            this.tab_time_lapse.Controls.Add(this.picbx_time_lapse_south);
+            this.tab_time_lapse.Controls.Add(this.picbx_time_lapse_west);
             this.tab_time_lapse.Controls.Add(this.lbl_timelapse_counter);
-            this.tab_time_lapse.Controls.Add(this.label87);
-            this.tab_time_lapse.Controls.Add(this.txtbx_timelapse_interval);
             this.tab_time_lapse.Controls.Add(this.btn_timelapse_stop_saving);
             this.tab_time_lapse.Controls.Add(this.btn_timelapse_start_saving);
-            this.tab_time_lapse.Controls.Add(this.btn_timelapse_set_save_directory);
-            this.tab_time_lapse.Controls.Add(this.btn_timelapse_select_image);
             this.tab_time_lapse.Location = new System.Drawing.Point(52, 4);
             this.tab_time_lapse.Name = "tab_time_lapse";
             this.tab_time_lapse.Size = new System.Drawing.Size(1367, 692);
@@ -6685,25 +6695,9 @@ namespace myFlightInfo
             this.tab_time_lapse.Text = "Time Lapse";
             this.tab_time_lapse.UseVisualStyleBackColor = true;
             // 
-            // label87
-            // 
-            this.label87.AutoSize = true;
-            this.label87.Location = new System.Drawing.Point(177, 195);
-            this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(61, 20);
-            this.label87.TabIndex = 5;
-            this.label87.Text = "Interval";
-            // 
-            // txtbx_timelapse_interval
-            // 
-            this.txtbx_timelapse_interval.Location = new System.Drawing.Point(254, 192);
-            this.txtbx_timelapse_interval.Name = "txtbx_timelapse_interval";
-            this.txtbx_timelapse_interval.Size = new System.Drawing.Size(213, 26);
-            this.txtbx_timelapse_interval.TabIndex = 4;
-            // 
             // btn_timelapse_stop_saving
             // 
-            this.btn_timelapse_stop_saving.Location = new System.Drawing.Point(783, 413);
+            this.btn_timelapse_stop_saving.Location = new System.Drawing.Point(207, 289);
             this.btn_timelapse_stop_saving.Name = "btn_timelapse_stop_saving";
             this.btn_timelapse_stop_saving.Size = new System.Drawing.Size(131, 48);
             this.btn_timelapse_stop_saving.TabIndex = 3;
@@ -6713,7 +6707,7 @@ namespace myFlightInfo
             // 
             // btn_timelapse_start_saving
             // 
-            this.btn_timelapse_start_saving.Location = new System.Drawing.Point(600, 413);
+            this.btn_timelapse_start_saving.Location = new System.Drawing.Point(44, 289);
             this.btn_timelapse_start_saving.Name = "btn_timelapse_start_saving";
             this.btn_timelapse_start_saving.Size = new System.Drawing.Size(131, 48);
             this.btn_timelapse_start_saving.TabIndex = 2;
@@ -6721,34 +6715,94 @@ namespace myFlightInfo
             this.btn_timelapse_start_saving.UseVisualStyleBackColor = true;
             this.btn_timelapse_start_saving.Click += new System.EventHandler(this.btn_timelapse_start_saving_Click);
             // 
-            // btn_timelapse_set_save_directory
-            // 
-            this.btn_timelapse_set_save_directory.Location = new System.Drawing.Point(424, 413);
-            this.btn_timelapse_set_save_directory.Name = "btn_timelapse_set_save_directory";
-            this.btn_timelapse_set_save_directory.Size = new System.Drawing.Size(131, 48);
-            this.btn_timelapse_set_save_directory.TabIndex = 1;
-            this.btn_timelapse_set_save_directory.Text = "Set Save Directory";
-            this.btn_timelapse_set_save_directory.UseVisualStyleBackColor = true;
-            this.btn_timelapse_set_save_directory.Click += new System.EventHandler(this.btn_timelapse_set_save_directory_Click);
-            // 
-            // btn_timelapse_select_image
-            // 
-            this.btn_timelapse_select_image.Location = new System.Drawing.Point(256, 413);
-            this.btn_timelapse_select_image.Name = "btn_timelapse_select_image";
-            this.btn_timelapse_select_image.Size = new System.Drawing.Size(131, 48);
-            this.btn_timelapse_select_image.TabIndex = 0;
-            this.btn_timelapse_select_image.Text = "Select Image";
-            this.btn_timelapse_select_image.UseVisualStyleBackColor = true;
-            this.btn_timelapse_select_image.Click += new System.EventHandler(this.btn_timelapse_select_image_Click);
-            // 
             // lbl_timelapse_counter
             // 
             this.lbl_timelapse_counter.AutoSize = true;
-            this.lbl_timelapse_counter.Location = new System.Drawing.Point(733, 222);
+            this.lbl_timelapse_counter.Location = new System.Drawing.Point(50, 200);
             this.lbl_timelapse_counter.Name = "lbl_timelapse_counter";
-            this.lbl_timelapse_counter.Size = new System.Drawing.Size(60, 20);
+            this.lbl_timelapse_counter.Size = new System.Drawing.Size(93, 20);
             this.lbl_timelapse_counter.TabIndex = 6;
-            this.lbl_timelapse_counter.Text = "label88";
+            this.lbl_timelapse_counter.Text = "Saving:  ......";
+            // 
+            // picbx_time_lapse_west
+            // 
+            this.picbx_time_lapse_west.Location = new System.Drawing.Point(418, 10);
+            this.picbx_time_lapse_west.Name = "picbx_time_lapse_west";
+            this.picbx_time_lapse_west.Size = new System.Drawing.Size(434, 334);
+            this.picbx_time_lapse_west.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picbx_time_lapse_west.TabIndex = 7;
+            this.picbx_time_lapse_west.TabStop = false;
+            // 
+            // picbx_time_lapse_south
+            // 
+            this.picbx_time_lapse_south.Location = new System.Drawing.Point(418, 350);
+            this.picbx_time_lapse_south.Name = "picbx_time_lapse_south";
+            this.picbx_time_lapse_south.Size = new System.Drawing.Size(434, 334);
+            this.picbx_time_lapse_south.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picbx_time_lapse_south.TabIndex = 8;
+            this.picbx_time_lapse_south.TabStop = false;
+            // 
+            // chkbx_time_lapse_west
+            // 
+            this.chkbx_time_lapse_west.AutoSize = true;
+            this.chkbx_time_lapse_west.Checked = true;
+            this.chkbx_time_lapse_west.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkbx_time_lapse_west.Location = new System.Drawing.Point(40, 57);
+            this.chkbx_time_lapse_west.Name = "chkbx_time_lapse_west";
+            this.chkbx_time_lapse_west.Size = new System.Drawing.Size(72, 24);
+            this.chkbx_time_lapse_west.TabIndex = 9;
+            this.chkbx_time_lapse_west.Text = "West";
+            this.chkbx_time_lapse_west.UseVisualStyleBackColor = true;
+            // 
+            // chkbx_time_lapse_south
+            // 
+            this.chkbx_time_lapse_south.AutoSize = true;
+            this.chkbx_time_lapse_south.Checked = true;
+            this.chkbx_time_lapse_south.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkbx_time_lapse_south.Location = new System.Drawing.Point(161, 57);
+            this.chkbx_time_lapse_south.Name = "chkbx_time_lapse_south";
+            this.chkbx_time_lapse_south.Size = new System.Drawing.Size(78, 24);
+            this.chkbx_time_lapse_south.TabIndex = 10;
+            this.chkbx_time_lapse_south.Text = "South";
+            this.chkbx_time_lapse_south.UseVisualStyleBackColor = true;
+            // 
+            // picbx_time_lapse_null
+            // 
+            this.picbx_time_lapse_null.Location = new System.Drawing.Point(43, 557);
+            this.picbx_time_lapse_null.Name = "picbx_time_lapse_null";
+            this.picbx_time_lapse_null.Size = new System.Drawing.Size(100, 50);
+            this.picbx_time_lapse_null.TabIndex = 11;
+            this.picbx_time_lapse_null.TabStop = false;
+            this.picbx_time_lapse_null.Visible = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.chkbx_time_lapse_south);
+            this.groupBox2.Controls.Add(this.chkbx_time_lapse_west);
+            this.groupBox2.Location = new System.Drawing.Point(31, 17);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(281, 140);
+            this.groupBox2.TabIndex = 12;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Chose images to save";
+            // 
+            // lbl_time_lapse_sequence_started
+            // 
+            this.lbl_time_lapse_sequence_started.AutoSize = true;
+            this.lbl_time_lapse_sequence_started.Location = new System.Drawing.Point(40, 385);
+            this.lbl_time_lapse_sequence_started.Name = "lbl_time_lapse_sequence_started";
+            this.lbl_time_lapse_sequence_started.Size = new System.Drawing.Size(172, 20);
+            this.lbl_time_lapse_sequence_started.TabIndex = 13;
+            this.lbl_time_lapse_sequence_started.Text = "Sequence started:  ......";
+            // 
+            // lbl_time_lapse_last_save
+            // 
+            this.lbl_time_lapse_last_save.AutoSize = true;
+            this.lbl_time_lapse_last_save.Location = new System.Drawing.Point(40, 442);
+            this.lbl_time_lapse_last_save.Name = "lbl_time_lapse_last_save";
+            this.lbl_time_lapse_last_save.Size = new System.Drawing.Size(131, 20);
+            this.lbl_time_lapse_last_save.TabIndex = 14;
+            this.lbl_time_lapse_last_save.Text = "Last save at:  ......";
             // 
             // Form1
             // 
@@ -7198,6 +7252,11 @@ namespace myFlightInfo
             this.panel209.ResumeLayout(false);
             this.tab_time_lapse.ResumeLayout(false);
             this.tab_time_lapse.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picbx_time_lapse_west)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbx_time_lapse_south)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbx_time_lapse_null)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -7737,13 +7796,17 @@ namespace myFlightInfo
         private System.Windows.Forms.Panel panel208;
         private System.Windows.Forms.Button btn_hobbs_open_end_image;
         private System.Windows.Forms.Panel panel209;
-        private System.Windows.Forms.Label label87;
-        private System.Windows.Forms.TextBox txtbx_timelapse_interval;
         private System.Windows.Forms.Button btn_timelapse_stop_saving;
         private System.Windows.Forms.Button btn_timelapse_start_saving;
-        private System.Windows.Forms.Button btn_timelapse_set_save_directory;
-        private System.Windows.Forms.Button btn_timelapse_select_image;
         private System.Windows.Forms.Label lbl_timelapse_counter;
+        private System.Windows.Forms.PictureBox picbx_time_lapse_west;
+        private System.Windows.Forms.CheckBox chkbx_time_lapse_south;
+        private System.Windows.Forms.CheckBox chkbx_time_lapse_west;
+        private System.Windows.Forms.PictureBox picbx_time_lapse_south;
+        private System.Windows.Forms.PictureBox picbx_time_lapse_null;
+        private System.Windows.Forms.Label lbl_time_lapse_last_save;
+        private System.Windows.Forms.Label lbl_time_lapse_sequence_started;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
 
