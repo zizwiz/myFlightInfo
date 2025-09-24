@@ -54,7 +54,7 @@ namespace myFlightInfo.timelapse
                 string myFullPathSouth = Path.Combine(folderPathSouth, fileName);
 
                 // show incrementing number but as we have a task watch for cross threading
-                WriteUIData((counter++).ToString(), myLabel);
+                WriteUIData("Saving: " + (counter++).ToString(), myLabel);
 
                 try
                 {
@@ -78,6 +78,16 @@ namespace myFlightInfo.timelapse
 
                     //write time of save to UI
                     WriteUIData("Last save: " + DateTime.Now, myLastSaveLabel);
+                    string[] myWestFiles = Directory.GetFiles(myFullPathWest);
+                    string[] mySouthFiles = Directory.GetFiles(myFullPathSouth);
+
+                    
+                    //foreach (string file in myWestFiles)
+                    //{
+                        
+                    //    Console.WriteLine(file);
+                    //}
+
 
                     await Task.Delay(30000, _ct); //waits 30 seconds to save images
                 }
