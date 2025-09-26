@@ -15,7 +15,8 @@ namespace myFlightInfo.timelapse
 
 
         public void StartSaving(Label myLabel, PictureBox myPictureBoxWest, PictureBox myPictureBoxSouth,
-        Label mySequenceStartedLabel, Label myLastSaveLabel)
+        Label mySequenceStartedLabel, Label myLastSaveLabel, RichTextBox myRichTextBoxWest,
+        RichTextBox myRichTextBoxSouth)
         {
             //   string myWestDirectory = SetDirectory();
             //  Directory.CreateDirectory(Path.Combine(myWestDirectory + "/west"));
@@ -25,7 +26,8 @@ namespace myFlightInfo.timelapse
             WriteUIData("Sequence Started: " + DateTime.Now, mySequenceStartedLabel);
 
             tokenSource = new CancellationTokenSource();    //Make a new instance
-            Task.Run(() => RunSequence(tokenSource.Token, myLabel, myPictureBoxWest, myPictureBoxSouth, myLastSaveLabel)); //Run the task that we need to stop
+            Task.Run(() => RunSequence(tokenSource.Token, myLabel, myPictureBoxWest, myPictureBoxSouth, myLastSaveLabel,
+                myRichTextBoxWest, myRichTextBoxSouth)); //Run the task that we need to stop
         }
 
         public void StopSaving()
@@ -34,7 +36,8 @@ namespace myFlightInfo.timelapse
         }
 
         private async void RunSequence(CancellationToken _ct, Label myLabel, PictureBox myPictureBoxWest, 
-            PictureBox myPictureBoxSouth, Label myLastSaveLabel)
+            PictureBox myPictureBoxSouth, Label myLastSaveLabel, RichTextBox myRichTextBoxWest, 
+            RichTextBox myRichTextBoxSouth)
         {
             int counter = 1;
 
@@ -78,18 +81,31 @@ namespace myFlightInfo.timelapse
 
                     //write time of save to UI
                     WriteUIData("Last save: " + DateTime.Now, myLastSaveLabel);
-                    string[] myWestFiles = Directory.GetFiles(myFullPathWest);
-                    string[] mySouthFiles = Directory.GetFiles(myFullPathSouth);
 
-                    
-                    //foreach (string file in myWestFiles)
-                    //{
-                        
-                    //    Console.WriteLine(file);
-                    //}
+                    await Task.Delay(15000, _ct); //waits 15 seconds to save images
+
+                    //Write list of saved files in folder to richtextbox
+                    string[] myWestFiles = Directory.GetFiles(folderPathWest);
+                    string[] mySouthFiles = Directory.GetFiles(folderPathSouth);
 
 
-                    await Task.Delay(30000, _ct); //waits 30 seconds to save images
+                    Array.Sort(myWestFiles);
+                    Array.Reverse(myWestFiles);
+
+                    foreach (string WestFile in myWestFiles)
+                    {
+                        myRichTextBoxWest.AppendText(Path.GetFileName(WestFile) + "\r");
+                    }
+
+                    Array.Sort(mySouthFiles);
+                    Array.Reverse(mySouthFiles);
+
+                    foreach (string SouthFile in mySouthFiles)
+                    {
+                        myRichTextBoxWest.AppendText(Path.GetFileName(SouthFile) + "\r");
+                    }
+
+                    await Task.Delay(15000, _ct); //waits 15 seconds to get, sort and write the files
                 }
                 catch
                 {
