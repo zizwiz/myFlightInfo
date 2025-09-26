@@ -563,7 +563,6 @@ namespace myFlightInfo
             this.panel209 = new System.Windows.Forms.Panel();
             this.btn_hobbs_email = new System.Windows.Forms.Button();
             this.tab_time_lapse = new System.Windows.Forms.TabPage();
-            this.btn_get_list_timelapse_files = new System.Windows.Forms.Button();
             this.rchtxtbx_time_lapse_south = new System.Windows.Forms.RichTextBox();
             this.rchtxtbx_time_lapse_west = new System.Windows.Forms.RichTextBox();
             this.lbl_time_lapse_last_save = new System.Windows.Forms.Label();
@@ -581,6 +580,7 @@ namespace myFlightInfo
             this.tabcnt_meteorology = new System.Windows.Forms.TabControl();
             this.tab_meterology_timeLapse = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.rchtxtbx_time_lapse_null = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.panel31.SuspendLayout();
@@ -6689,7 +6689,7 @@ namespace myFlightInfo
             // 
             // tab_time_lapse
             // 
-            this.tab_time_lapse.Controls.Add(this.btn_get_list_timelapse_files);
+            this.tab_time_lapse.Controls.Add(this.rchtxtbx_time_lapse_null);
             this.tab_time_lapse.Controls.Add(this.rchtxtbx_time_lapse_south);
             this.tab_time_lapse.Controls.Add(this.rchtxtbx_time_lapse_west);
             this.tab_time_lapse.Controls.Add(this.lbl_time_lapse_last_save);
@@ -6707,16 +6707,6 @@ namespace myFlightInfo
             this.tab_time_lapse.TabIndex = 8;
             this.tab_time_lapse.Text = "Time Lapse";
             this.tab_time_lapse.UseVisualStyleBackColor = true;
-            // 
-            // btn_get_list_timelapse_files
-            // 
-            this.btn_get_list_timelapse_files.Location = new System.Drawing.Point(243, 518);
-            this.btn_get_list_timelapse_files.Name = "btn_get_list_timelapse_files";
-            this.btn_get_list_timelapse_files.Size = new System.Drawing.Size(129, 70);
-            this.btn_get_list_timelapse_files.TabIndex = 17;
-            this.btn_get_list_timelapse_files.Text = "Get file List";
-            this.btn_get_list_timelapse_files.UseVisualStyleBackColor = true;
-            this.btn_get_list_timelapse_files.Click += new System.EventHandler(this.btn_get_list_timelapse_files_Click);
             // 
             // rchtxtbx_time_lapse_south
             // 
@@ -6885,6 +6875,15 @@ namespace myFlightInfo
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // rchtxtbx_time_lapse_null
+            // 
+            this.rchtxtbx_time_lapse_null.Location = new System.Drawing.Point(188, 609);
+            this.rchtxtbx_time_lapse_null.Name = "rchtxtbx_time_lapse_null";
+            this.rchtxtbx_time_lapse_null.Size = new System.Drawing.Size(66, 52);
+            this.rchtxtbx_time_lapse_null.TabIndex = 18;
+            this.rchtxtbx_time_lapse_null.Text = "";
+            this.rchtxtbx_time_lapse_null.Visible = false;
             // 
             // Form1
             // 
@@ -7897,7 +7896,7 @@ namespace myFlightInfo
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.RichTextBox rchtxtbx_time_lapse_south;
         private System.Windows.Forms.RichTextBox rchtxtbx_time_lapse_west;
-        private System.Windows.Forms.Button btn_get_list_timelapse_files;
+        private System.Windows.Forms.RichTextBox rchtxtbx_time_lapse_null;
     }
 }
 

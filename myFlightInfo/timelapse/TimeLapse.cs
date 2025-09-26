@@ -35,8 +35,8 @@ namespace myFlightInfo.timelapse
             tokenSource.Cancel(); // make the token a cancel token
         }
 
-        private async void RunSequence(CancellationToken _ct, Label myLabel, PictureBox myPictureBoxWest, 
-            PictureBox myPictureBoxSouth, Label myLastSaveLabel, RichTextBox myRichTextBoxWest, 
+        private async void RunSequence(CancellationToken _ct, Label myLabel, PictureBox myPictureBoxWest,
+            PictureBox myPictureBoxSouth, Label myLastSaveLabel, RichTextBox myRichTextBoxWest,
             RichTextBox myRichTextBoxSouth)
         {
             int counter = 1;
@@ -57,7 +57,7 @@ namespace myFlightInfo.timelapse
                 string myFullPathSouth = Path.Combine(folderPathSouth, fileName);
 
                 // show incrementing number but as we have a task watch for cross threading
-                WriteUIData("Saving: " + (counter++).ToString(), myLabel);
+                WriteUIData("Showing Image: " + counter, myLabel);
 
                 try
                 {
@@ -80,7 +80,7 @@ namespace myFlightInfo.timelapse
                     if (myPictureBoxSouth.Name != "picbx_time_lapse_null") myPictureBoxSouth.Image.Save(myFullPathSouth, System.Drawing.Imaging.ImageFormat.Jpeg);
 
                     //write time of save to UI
-                    WriteUIData("Last save: " + DateTime.Now, myLastSaveLabel);
+                    WriteUIData("Last saved " + counter + ".jpg @ " + DateTime.Now, myLastSaveLabel);
 
                     await Task.Delay(15000, _ct); //waits 15 seconds to save images
 
@@ -92,20 +92,60 @@ namespace myFlightInfo.timelapse
                     Array.Sort(myWestFiles);
                     Array.Reverse(myWestFiles);
 
-                    foreach (string WestFile in myWestFiles)
+                    //Needs invoking as it is on a different thread
+                    if (myRichTextBoxWest.InvokeRequired)
                     {
-                        myRichTextBoxWest.AppendText(Path.GetFileName(WestFile) + "\r");
+                        myRichTextBoxWest.BeginInvoke((MethodInvoker)delegate ()
+                       {
+                           myRichTextBoxWest.Clear();
+
+                           foreach (string WestFile in myWestFiles)
+                           {
+                               myRichTextBoxWest.AppendText(Path.GetFileName(WestFile) + "\r");
+                           }
+
+                       });
                     }
+                    else
+                    {
+                        myRichTextBoxWest.Clear();
+
+                        foreach (string WestFile in myWestFiles)
+                        {
+                            myRichTextBoxWest.AppendText(Path.GetFileName(WestFile) + "\r");
+                        }
+                    }
+
+                    await Task.Delay(7500, _ct); //waits 15 seconds to get, sort and write the files
 
                     Array.Sort(mySouthFiles);
                     Array.Reverse(mySouthFiles);
 
-                    foreach (string SouthFile in mySouthFiles)
+                    if (myRichTextBoxSouth.InvokeRequired)
                     {
-                        myRichTextBoxWest.AppendText(Path.GetFileName(SouthFile) + "\r");
+                        myRichTextBoxSouth.BeginInvoke((MethodInvoker)delegate ()
+                        {
+                            myRichTextBoxSouth.Clear();
+
+                            foreach (string SouthFile in mySouthFiles)
+                            {
+                                myRichTextBoxSouth.AppendText(Path.GetFileName(SouthFile) + "\r");
+                            }
+
+                        });
+                    }
+                    else
+                    {
+                        myRichTextBoxSouth.Clear();
+
+                        foreach (string SouthFile in mySouthFiles)
+                        {
+                            myRichTextBoxSouth.AppendText(Path.GetFileName(SouthFile) + "\r");
+                        }
                     }
 
-                    await Task.Delay(15000, _ct); //waits 15 seconds to get, sort and write the files
+                    counter++;
+                    await Task.Delay(7500, _ct); //waits 15 seconds to get, sort and write the files
                 }
                 catch
                 {
