@@ -116,8 +116,6 @@ namespace myFlightInfo.timelapse
                         }
                     }
 
-                    await Task.Delay(7500, _ct); //waits 15 seconds to get, sort and write the files
-
                     Array.Sort(mySouthFiles);
                     Array.Reverse(mySouthFiles);
 
@@ -145,7 +143,7 @@ namespace myFlightInfo.timelapse
                     }
 
                     counter++;
-                    await Task.Delay(7500, _ct); //waits 15 seconds to get, sort and write the files
+                    await Task.Delay(15000, _ct); //waits 15 seconds to get, sort and write the files
                 }
                 catch
                 {

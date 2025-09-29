@@ -563,16 +563,12 @@ namespace myFlightInfo
             this.panel209 = new System.Windows.Forms.Panel();
             this.btn_hobbs_email = new System.Windows.Forms.Button();
             this.tab_time_lapse = new System.Windows.Forms.TabPage();
-            this.rchtxtbx_time_lapse_south = new System.Windows.Forms.RichTextBox();
-            this.rchtxtbx_time_lapse_west = new System.Windows.Forms.RichTextBox();
             this.lbl_time_lapse_last_save = new System.Windows.Forms.Label();
             this.lbl_time_lapse_sequence_started = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.chkbx_time_lapse_south = new System.Windows.Forms.CheckBox();
             this.chkbx_time_lapse_west = new System.Windows.Forms.CheckBox();
             this.picbx_time_lapse_null = new System.Windows.Forms.PictureBox();
-            this.picbx_time_lapse_south = new System.Windows.Forms.PictureBox();
-            this.picbx_time_lapse_west = new System.Windows.Forms.PictureBox();
             this.lbl_timelapse_counter = new System.Windows.Forms.Label();
             this.btn_timelapse_stop_saving = new System.Windows.Forms.Button();
             this.btn_timelapse_start_saving = new System.Windows.Forms.Button();
@@ -581,6 +577,21 @@ namespace myFlightInfo
             this.tab_meterology_timeLapse = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.rchtxtbx_time_lapse_null = new System.Windows.Forms.RichTextBox();
+            this.tableLayoutPanel37 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel38 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel39 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel210 = new System.Windows.Forms.Panel();
+            this.panel211 = new System.Windows.Forms.Panel();
+            this.panel212 = new System.Windows.Forms.Panel();
+            this.panel213 = new System.Windows.Forms.Panel();
+            this.panel214 = new System.Windows.Forms.Panel();
+            this.panel215 = new System.Windows.Forms.Panel();
+            this.label87 = new System.Windows.Forms.Label();
+            this.label88 = new System.Windows.Forms.Label();
+            this.picbx_time_lapse_west = new System.Windows.Forms.PictureBox();
+            this.rchtxtbx_time_lapse_west = new System.Windows.Forms.RichTextBox();
+            this.picbx_time_lapse_south = new System.Windows.Forms.PictureBox();
+            this.rchtxtbx_time_lapse_south = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.panel31.SuspendLayout();
@@ -875,10 +886,20 @@ namespace myFlightInfo
             this.tab_time_lapse.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbx_time_lapse_null)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picbx_time_lapse_south)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picbx_time_lapse_west)).BeginInit();
             this.tab_meteorology.SuspendLayout();
             this.tabcnt_meteorology.SuspendLayout();
+            this.tab_meterology_timeLapse.SuspendLayout();
+            this.tableLayoutPanel37.SuspendLayout();
+            this.tableLayoutPanel38.SuspendLayout();
+            this.tableLayoutPanel39.SuspendLayout();
+            this.panel210.SuspendLayout();
+            this.panel211.SuspendLayout();
+            this.panel212.SuspendLayout();
+            this.panel213.SuspendLayout();
+            this.panel214.SuspendLayout();
+            this.panel215.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picbx_time_lapse_west)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbx_time_lapse_south)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -6690,14 +6711,10 @@ namespace myFlightInfo
             // tab_time_lapse
             // 
             this.tab_time_lapse.Controls.Add(this.rchtxtbx_time_lapse_null);
-            this.tab_time_lapse.Controls.Add(this.rchtxtbx_time_lapse_south);
-            this.tab_time_lapse.Controls.Add(this.rchtxtbx_time_lapse_west);
             this.tab_time_lapse.Controls.Add(this.lbl_time_lapse_last_save);
             this.tab_time_lapse.Controls.Add(this.lbl_time_lapse_sequence_started);
             this.tab_time_lapse.Controls.Add(this.groupBox2);
             this.tab_time_lapse.Controls.Add(this.picbx_time_lapse_null);
-            this.tab_time_lapse.Controls.Add(this.picbx_time_lapse_south);
-            this.tab_time_lapse.Controls.Add(this.picbx_time_lapse_west);
             this.tab_time_lapse.Controls.Add(this.lbl_timelapse_counter);
             this.tab_time_lapse.Controls.Add(this.btn_timelapse_stop_saving);
             this.tab_time_lapse.Controls.Add(this.btn_timelapse_start_saving);
@@ -6707,22 +6724,6 @@ namespace myFlightInfo
             this.tab_time_lapse.TabIndex = 8;
             this.tab_time_lapse.Text = "Time Lapse";
             this.tab_time_lapse.UseVisualStyleBackColor = true;
-            // 
-            // rchtxtbx_time_lapse_south
-            // 
-            this.rchtxtbx_time_lapse_south.Location = new System.Drawing.Point(893, 350);
-            this.rchtxtbx_time_lapse_south.Name = "rchtxtbx_time_lapse_south";
-            this.rchtxtbx_time_lapse_south.Size = new System.Drawing.Size(447, 334);
-            this.rchtxtbx_time_lapse_south.TabIndex = 16;
-            this.rchtxtbx_time_lapse_south.Text = "";
-            // 
-            // rchtxtbx_time_lapse_west
-            // 
-            this.rchtxtbx_time_lapse_west.Location = new System.Drawing.Point(893, 10);
-            this.rchtxtbx_time_lapse_west.Name = "rchtxtbx_time_lapse_west";
-            this.rchtxtbx_time_lapse_west.Size = new System.Drawing.Size(447, 334);
-            this.rchtxtbx_time_lapse_west.TabIndex = 15;
-            this.rchtxtbx_time_lapse_west.Text = "";
             // 
             // lbl_time_lapse_last_save
             // 
@@ -6786,24 +6787,6 @@ namespace myFlightInfo
             this.picbx_time_lapse_null.TabStop = false;
             this.picbx_time_lapse_null.Visible = false;
             // 
-            // picbx_time_lapse_south
-            // 
-            this.picbx_time_lapse_south.Location = new System.Drawing.Point(418, 350);
-            this.picbx_time_lapse_south.Name = "picbx_time_lapse_south";
-            this.picbx_time_lapse_south.Size = new System.Drawing.Size(434, 334);
-            this.picbx_time_lapse_south.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picbx_time_lapse_south.TabIndex = 8;
-            this.picbx_time_lapse_south.TabStop = false;
-            // 
-            // picbx_time_lapse_west
-            // 
-            this.picbx_time_lapse_west.Location = new System.Drawing.Point(418, 10);
-            this.picbx_time_lapse_west.Name = "picbx_time_lapse_west";
-            this.picbx_time_lapse_west.Size = new System.Drawing.Size(434, 334);
-            this.picbx_time_lapse_west.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picbx_time_lapse_west.TabIndex = 7;
-            this.picbx_time_lapse_west.TabStop = false;
-            // 
             // lbl_timelapse_counter
             // 
             this.lbl_timelapse_counter.AutoSize = true;
@@ -6858,6 +6841,7 @@ namespace myFlightInfo
             // 
             // tab_meterology_timeLapse
             // 
+            this.tab_meterology_timeLapse.Controls.Add(this.tableLayoutPanel37);
             this.tab_meterology_timeLapse.Location = new System.Drawing.Point(28, 4);
             this.tab_meterology_timeLapse.Name = "tab_meterology_timeLapse";
             this.tab_meterology_timeLapse.Padding = new System.Windows.Forms.Padding(3);
@@ -6884,6 +6868,182 @@ namespace myFlightInfo
             this.rchtxtbx_time_lapse_null.TabIndex = 18;
             this.rchtxtbx_time_lapse_null.Text = "";
             this.rchtxtbx_time_lapse_null.Visible = false;
+            // 
+            // tableLayoutPanel37
+            // 
+            this.tableLayoutPanel37.ColumnCount = 5;
+            this.tableLayoutPanel37.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34F));
+            this.tableLayoutPanel37.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10F));
+            this.tableLayoutPanel37.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33F));
+            this.tableLayoutPanel37.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10F));
+            this.tableLayoutPanel37.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33F));
+            this.tableLayoutPanel37.Controls.Add(this.tableLayoutPanel38, 2, 0);
+            this.tableLayoutPanel37.Controls.Add(this.tableLayoutPanel39, 4, 0);
+            this.tableLayoutPanel37.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel37.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel37.Name = "tableLayoutPanel37";
+            this.tableLayoutPanel37.RowCount = 1;
+            this.tableLayoutPanel37.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel37.Size = new System.Drawing.Size(1385, 686);
+            this.tableLayoutPanel37.TabIndex = 0;
+            // 
+            // tableLayoutPanel38
+            // 
+            this.tableLayoutPanel38.ColumnCount = 1;
+            this.tableLayoutPanel38.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel38.Controls.Add(this.panel210, 0, 3);
+            this.tableLayoutPanel38.Controls.Add(this.panel211, 0, 1);
+            this.tableLayoutPanel38.Controls.Add(this.panel212, 0, 5);
+            this.tableLayoutPanel38.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel38.Location = new System.Drawing.Point(477, 3);
+            this.tableLayoutPanel38.Name = "tableLayoutPanel38";
+            this.tableLayoutPanel38.RowCount = 6;
+            this.tableLayoutPanel38.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
+            this.tableLayoutPanel38.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel38.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
+            this.tableLayoutPanel38.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel38.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
+            this.tableLayoutPanel38.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel38.Size = new System.Drawing.Size(444, 680);
+            this.tableLayoutPanel38.TabIndex = 0;
+            // 
+            // tableLayoutPanel39
+            // 
+            this.tableLayoutPanel39.ColumnCount = 1;
+            this.tableLayoutPanel39.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel39.Controls.Add(this.panel213, 0, 5);
+            this.tableLayoutPanel39.Controls.Add(this.panel214, 0, 3);
+            this.tableLayoutPanel39.Controls.Add(this.panel215, 0, 1);
+            this.tableLayoutPanel39.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel39.Location = new System.Drawing.Point(937, 3);
+            this.tableLayoutPanel39.Name = "tableLayoutPanel39";
+            this.tableLayoutPanel39.RowCount = 6;
+            this.tableLayoutPanel39.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
+            this.tableLayoutPanel39.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel39.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
+            this.tableLayoutPanel39.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel39.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
+            this.tableLayoutPanel39.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel39.Size = new System.Drawing.Size(445, 680);
+            this.tableLayoutPanel39.TabIndex = 1;
+            // 
+            // panel210
+            // 
+            this.panel210.Controls.Add(this.picbx_time_lapse_west);
+            this.panel210.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel210.Location = new System.Drawing.Point(3, 63);
+            this.panel210.Name = "panel210";
+            this.panel210.Size = new System.Drawing.Size(438, 299);
+            this.panel210.TabIndex = 0;
+            // 
+            // panel211
+            // 
+            this.panel211.Controls.Add(this.label87);
+            this.panel211.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel211.Location = new System.Drawing.Point(3, 13);
+            this.panel211.Name = "panel211";
+            this.panel211.Size = new System.Drawing.Size(438, 34);
+            this.panel211.TabIndex = 1;
+            // 
+            // panel212
+            // 
+            this.panel212.Controls.Add(this.rchtxtbx_time_lapse_west);
+            this.panel212.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel212.Location = new System.Drawing.Point(3, 378);
+            this.panel212.Name = "panel212";
+            this.panel212.Size = new System.Drawing.Size(438, 299);
+            this.panel212.TabIndex = 2;
+            // 
+            // panel213
+            // 
+            this.panel213.Controls.Add(this.rchtxtbx_time_lapse_south);
+            this.panel213.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel213.Location = new System.Drawing.Point(3, 378);
+            this.panel213.Name = "panel213";
+            this.panel213.Size = new System.Drawing.Size(439, 299);
+            this.panel213.TabIndex = 0;
+            // 
+            // panel214
+            // 
+            this.panel214.Controls.Add(this.picbx_time_lapse_south);
+            this.panel214.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel214.Location = new System.Drawing.Point(3, 63);
+            this.panel214.Name = "panel214";
+            this.panel214.Size = new System.Drawing.Size(439, 299);
+            this.panel214.TabIndex = 1;
+            // 
+            // panel215
+            // 
+            this.panel215.Controls.Add(this.label88);
+            this.panel215.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel215.Location = new System.Drawing.Point(3, 13);
+            this.panel215.Name = "panel215";
+            this.panel215.Size = new System.Drawing.Size(439, 34);
+            this.panel215.TabIndex = 2;
+            // 
+            // label87
+            // 
+            this.label87.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label87.AutoSize = true;
+            this.label87.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label87.Location = new System.Drawing.Point(173, 7);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(118, 20);
+            this.label87.TabIndex = 0;
+            this.label87.Text = "Looking West";
+            // 
+            // label88
+            // 
+            this.label88.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label88.AutoSize = true;
+            this.label88.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label88.Location = new System.Drawing.Point(163, 7);
+            this.label88.Name = "label88";
+            this.label88.Size = new System.Drawing.Size(125, 20);
+            this.label88.TabIndex = 1;
+            this.label88.Text = "Looking South";
+            // 
+            // picbx_time_lapse_west
+            // 
+            this.picbx_time_lapse_west.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picbx_time_lapse_west.Location = new System.Drawing.Point(0, 0);
+            this.picbx_time_lapse_west.Name = "picbx_time_lapse_west";
+            this.picbx_time_lapse_west.Size = new System.Drawing.Size(438, 299);
+            this.picbx_time_lapse_west.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picbx_time_lapse_west.TabIndex = 8;
+            this.picbx_time_lapse_west.TabStop = false;
+            // 
+            // rchtxtbx_time_lapse_west
+            // 
+            this.rchtxtbx_time_lapse_west.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rchtxtbx_time_lapse_west.Location = new System.Drawing.Point(0, 0);
+            this.rchtxtbx_time_lapse_west.Name = "rchtxtbx_time_lapse_west";
+            this.rchtxtbx_time_lapse_west.Size = new System.Drawing.Size(438, 299);
+            this.rchtxtbx_time_lapse_west.TabIndex = 16;
+            this.rchtxtbx_time_lapse_west.Text = "";
+            // 
+            // picbx_time_lapse_south
+            // 
+            this.picbx_time_lapse_south.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picbx_time_lapse_south.Location = new System.Drawing.Point(0, 0);
+            this.picbx_time_lapse_south.Name = "picbx_time_lapse_south";
+            this.picbx_time_lapse_south.Size = new System.Drawing.Size(439, 299);
+            this.picbx_time_lapse_south.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picbx_time_lapse_south.TabIndex = 9;
+            this.picbx_time_lapse_south.TabStop = false;
+            // 
+            // rchtxtbx_time_lapse_south
+            // 
+            this.rchtxtbx_time_lapse_south.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rchtxtbx_time_lapse_south.Location = new System.Drawing.Point(0, 0);
+            this.rchtxtbx_time_lapse_south.Name = "rchtxtbx_time_lapse_south";
+            this.rchtxtbx_time_lapse_south.Size = new System.Drawing.Size(439, 299);
+            this.rchtxtbx_time_lapse_south.TabIndex = 17;
+            this.rchtxtbx_time_lapse_south.Text = "";
             // 
             // Form1
             // 
@@ -7336,10 +7496,22 @@ namespace myFlightInfo
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbx_time_lapse_null)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picbx_time_lapse_south)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picbx_time_lapse_west)).EndInit();
             this.tab_meteorology.ResumeLayout(false);
             this.tabcnt_meteorology.ResumeLayout(false);
+            this.tab_meterology_timeLapse.ResumeLayout(false);
+            this.tableLayoutPanel37.ResumeLayout(false);
+            this.tableLayoutPanel38.ResumeLayout(false);
+            this.tableLayoutPanel39.ResumeLayout(false);
+            this.panel210.ResumeLayout(false);
+            this.panel211.ResumeLayout(false);
+            this.panel211.PerformLayout();
+            this.panel212.ResumeLayout(false);
+            this.panel213.ResumeLayout(false);
+            this.panel214.ResumeLayout(false);
+            this.panel215.ResumeLayout(false);
+            this.panel215.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picbx_time_lapse_west)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbx_time_lapse_south)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -7882,10 +8054,8 @@ namespace myFlightInfo
         private System.Windows.Forms.Button btn_timelapse_stop_saving;
         private System.Windows.Forms.Button btn_timelapse_start_saving;
         private System.Windows.Forms.Label lbl_timelapse_counter;
-        private System.Windows.Forms.PictureBox picbx_time_lapse_west;
         private System.Windows.Forms.CheckBox chkbx_time_lapse_south;
         private System.Windows.Forms.CheckBox chkbx_time_lapse_west;
-        private System.Windows.Forms.PictureBox picbx_time_lapse_south;
         private System.Windows.Forms.PictureBox picbx_time_lapse_null;
         private System.Windows.Forms.Label lbl_time_lapse_last_save;
         private System.Windows.Forms.Label lbl_time_lapse_sequence_started;
@@ -7894,9 +8064,22 @@ namespace myFlightInfo
         private System.Windows.Forms.TabControl tabcnt_meteorology;
         private System.Windows.Forms.TabPage tab_meterology_timeLapse;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.RichTextBox rchtxtbx_time_lapse_south;
-        private System.Windows.Forms.RichTextBox rchtxtbx_time_lapse_west;
         private System.Windows.Forms.RichTextBox rchtxtbx_time_lapse_null;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel37;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel38;
+        private System.Windows.Forms.Panel panel210;
+        private System.Windows.Forms.Panel panel211;
+        private System.Windows.Forms.Panel panel212;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel39;
+        private System.Windows.Forms.Panel panel213;
+        private System.Windows.Forms.Panel panel214;
+        private System.Windows.Forms.Panel panel215;
+        private System.Windows.Forms.PictureBox picbx_time_lapse_west;
+        private System.Windows.Forms.Label label87;
+        private System.Windows.Forms.RichTextBox rchtxtbx_time_lapse_west;
+        private System.Windows.Forms.RichTextBox rchtxtbx_time_lapse_south;
+        private System.Windows.Forms.PictureBox picbx_time_lapse_south;
+        private System.Windows.Forms.Label label88;
     }
 }
 
