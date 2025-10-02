@@ -690,6 +690,10 @@ namespace myFlightInfo
 
 
 
+
+
+
+
         //private void tabcnt_utils_Leave(object sender, EventArgs e)
         //{
         //    btn_navigation_calculations.Visible = false;

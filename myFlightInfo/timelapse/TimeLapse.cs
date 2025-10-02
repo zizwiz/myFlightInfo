@@ -23,11 +23,11 @@ namespace myFlightInfo.timelapse
 
             //   Directory.CreateDirectory(Path.Combine(SetDirectory() + "/south"));
 
-            WriteUIData("Sequence Started: " + DateTime.Now, mySequenceStartedLabel);
+            WriteUIData("Sequence Started @ " + DateTime.Now, mySequenceStartedLabel);
 
             tokenSource = new CancellationTokenSource();    //Make a new instance
             Task.Run(() => RunSequence(tokenSource.Token, myLabel, myPictureBoxWest, myPictureBoxSouth, myLastSaveLabel,
-                myRichTextBoxWest, myRichTextBoxSouth)); //Run the task that we need to stop
+                myRichTextBoxWest, myRichTextBoxSouth, mySequenceStartedLabel)); //Run the task that we need to stop
         }
 
         public void StopSaving()
@@ -37,7 +37,7 @@ namespace myFlightInfo.timelapse
 
         private async void RunSequence(CancellationToken _ct, Label myLabel, PictureBox myPictureBoxWest,
             PictureBox myPictureBoxSouth, Label myLastSaveLabel, RichTextBox myRichTextBoxWest,
-            RichTextBox myRichTextBoxSouth)
+            RichTextBox myRichTextBoxSouth, Label mySequenceStartedLabel)
         {
             int counter = 1;
 
@@ -51,7 +51,9 @@ namespace myFlightInfo.timelapse
                 string folderPathWest = @"C:\temp\temp\west";
                 string folderPathSouth = @"C:\temp\temp\south";
 
-                string fileName = counter + ".jpg";
+               // string fileName = counter + ".jpg";
+
+                string fileName = DateTime.Now.ToString("ddMMyyyy_hhmmss") + "_" + counter + ".jpg";
 
                 string myFullPathWest = Path.Combine(folderPathWest, fileName);
                 string myFullPathSouth = Path.Combine(folderPathSouth, fileName);
@@ -76,11 +78,15 @@ namespace myFlightInfo.timelapse
                     await Task.Delay(30000, _ct); //waits 30 seconds to draw images
 
                     // Save the image according to the users checkbox choices
-                    if (myPictureBoxWest.Name != "picbx_time_lapse_null") myPictureBoxWest.Image.Save(myFullPathWest, System.Drawing.Imaging.ImageFormat.Jpeg);
-                    if (myPictureBoxSouth.Name != "picbx_time_lapse_null") myPictureBoxSouth.Image.Save(myFullPathSouth, System.Drawing.Imaging.ImageFormat.Jpeg);
+                    if ((myPictureBoxWest.Name != "picbx_time_lapse_null")&&(myPictureBoxWest.Image != null)) 
+                        myPictureBoxWest.Image.Save(myFullPathWest, System.Drawing.Imaging.ImageFormat.Jpeg);
+                   
+                    
+                    if ((myPictureBoxSouth.Name != "picbx_time_lapse_null")&&(myPictureBoxSouth.Image != null)) 
+                        myPictureBoxSouth.Image.Save(myFullPathSouth, System.Drawing.Imaging.ImageFormat.Jpeg);
 
                     //write time of save to UI
-                    WriteUIData("Last saved " + counter + ".jpg @ " + DateTime.Now, myLastSaveLabel);
+                    WriteUIData("Last saved: " + fileName + " @ " + DateTime.Now, myLastSaveLabel);
 
                     await Task.Delay(15000, _ct); //waits 15 seconds to save images
 
@@ -155,7 +161,9 @@ namespace myFlightInfo.timelapse
             if (_ct.IsCancellationRequested)
             {
                 //report we have cancelled
-                WriteUIData("Cancelled", myLabel);
+                WriteUIData("Not running at the moment.", myLabel);
+                WriteUIData("Sequence Stopped @ " + DateTime.Now, mySequenceStartedLabel);
+                myPictureBoxSouth.Image = myPictureBoxWest.Image = null;
             }
 
             tokenSource.Dispose(); //dispose of the token so we can reuse
