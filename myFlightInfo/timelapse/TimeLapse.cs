@@ -53,7 +53,7 @@ namespace myFlightInfo.timelapse
 
                // string fileName = counter + ".jpg";
 
-                string fileName = DateTime.Now.ToString("ddMMyyyy_hhmmss") + "_" + counter + ".jpg";
+                string fileName = DateTime.Now.ToString("ddMMyyyy_HHmmss") + "_" + counter + ".jpg";
 
                 string myFullPathWest = Path.Combine(folderPathWest, fileName);
                 string myFullPathSouth = Path.Combine(folderPathSouth, fileName);
