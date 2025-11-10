@@ -171,6 +171,26 @@ namespace myFlightInfo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] Magick_NET_Core {
+            get {
+                object obj = ResourceManager.GetObject("Magick_NET_Core", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Magick_NET_Q8_AnyCPU {
+            get {
+                object obj = ResourceManager.GetObject("Magick_NET_Q8_AnyCPU", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] Microsoft_Web_WebView2_Core {
             get {
                 object obj = ResourceManager.GetObject("Microsoft_Web_WebView2_Core", resourceCulture);

@@ -1,9 +1,7 @@
 ﻿using System;
-using System.IO;
 using System.Windows.Forms;
 using CenteredMessagebox;
 using myFlightInfo.timelapse;
-using Timer = System.Timers.Timer;
 
 namespace myFlightInfo
 {

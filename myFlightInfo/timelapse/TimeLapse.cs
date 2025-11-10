@@ -4,7 +4,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CenteredMessagebox;
-using Timer = System.Timers.Timer;
 
 namespace myFlightInfo.timelapse
 {

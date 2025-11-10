@@ -49,6 +49,12 @@ namespace myFlightInfo
                 File.WriteAllBytes("WebView2Loader.dll", Resources.arm64_WebView2Loader);
             }
 
+
+            // Magick are image libs that help convert images from one type to another
+            File.WriteAllBytes("Magick.NET.Core.dll", Resources.Magick_NET_Core);
+            File.WriteAllBytes("Magick.NET-Q8-AnyCPU.dll", Resources.Magick_NET_Q8_AnyCPU);
+
+            // All set to initialise the app
             InitializeComponent();
         }
 
@@ -120,13 +126,13 @@ namespace myFlightInfo
             await webView_navToChart.EnsureCoreWebView2Async();
             await webView_Satellite_view.EnsureCoreWebView2Async();
 
-           // webView_notams.CoreWebView2.Navigate("https://www.notaminfo.com/ukmap?destination=node%2F39");
+            // webView_notams.CoreWebView2.Navigate("https://www.notaminfo.com/ukmap?destination=node%2F39");
 
             Browse.NavigateTo("https://www.notaminfo.com/ukmap?destination=node%2F39", webView_notams);
-            
+
             //Set initial image for Satellite image page.
             Browse.NavigateTo("https://free-map.org/satellite/#57.20194,-2.19778,15z", webView_Satellite_view);
-            
+
 
             SetMetarPages();
             SetWeatherPages();
@@ -394,7 +400,7 @@ namespace myFlightInfo
                 string URI = "https://free-map.org/satellite/#" + lat + "," + lng + ",15z";
 
                 txtbx_navigate_to_url.Text = URI;
-               
+
                 Image.DrawSatelliteImage(URI, webView_Satellite_view);
             }
         }
@@ -428,7 +434,7 @@ namespace myFlightInfo
         {
             if ((tabcnt_toplevel.SelectedTab == tab_utils) && (tabcnt_utils.SelectedTab == tab_satellite))
             {
-               Image.DrawSatelliteImage(txtbx_navigate_to_url.Text, webView_Satellite_view);
+                Image.DrawSatelliteImage(txtbx_navigate_to_url.Text, webView_Satellite_view);
             }
             else if ((tabcnt_toplevel.SelectedTab == tab_utils) && (tabcnt_utils.SelectedTab == tab_browser))
             {
@@ -437,7 +443,7 @@ namespace myFlightInfo
 
         }
 
-       
+
         private void btn_school_Click(object sender, EventArgs e)
         {
             //check which school is set and use it but also set button to change to other school
@@ -653,7 +659,7 @@ namespace myFlightInfo
             rchtxtbx_TakeOff_Landing_data.Clear();
         }
 
-        
+
 
 
 

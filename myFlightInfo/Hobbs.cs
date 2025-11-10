@@ -73,6 +73,7 @@ namespace myFlightInfo
             }
             catch (Exception e)
             {
+                string ABC = e.ToString();
                 MsgBox.Show("Please use an image file.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error );
             }
             return myBitmap;
