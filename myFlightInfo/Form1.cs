@@ -100,6 +100,9 @@ namespace myFlightInfo
             grpbx_altimeter.Visible = false;
             btn_navigation_calculations.Visible = false;
 
+            //removed until complete
+            tab_takeoff_landing.Visible = false;
+
             await webView_notams.EnsureCoreWebView2Async();
             await webView_browser.EnsureCoreWebView2Async();
             await webView_egmj.EnsureCoreWebView2Async();

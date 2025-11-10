@@ -41,9 +41,12 @@ namespace myFlightInfo
          *                  - tab_notams
          *                  - tab_utils
          *                          |
+         *                              - tab_hobbs    
+         *                              - tab_browser 
          *                              - tab_browser
          *                              - tab_altimeter
          *                              - tab_crosswind
+         *                              - tab_takeoff_landing //temp invisible till complete
          *                              - tab_weight_balance
          *                              - tab_compliance_data
          */
@@ -68,11 +71,11 @@ namespace myFlightInfo
             if (tabcnt_toplevel.SelectedTab == tab_utils)
             {
                 tabcnt_weather.SelectedTab = tab_met_office;
-                tabcnt_utils.SelectedTab = tab_browser;
+                tabcnt_utils.SelectedTab = tab_hobbs;
                 cmbobx_airport_info.SelectedIndex = 0;
-                cmbobx_airport_info.Visible = true;
+                cmbobx_airport_info.Visible = false;
                 NavigationDateTimePicker.Visible = false;
-                grpbx_browser_navigation.Visible = true;
+                grpbx_browser_navigation.Visible = false;
                 btn_school.Visible = false;
                 grpbx_towns.Visible = false;
             }

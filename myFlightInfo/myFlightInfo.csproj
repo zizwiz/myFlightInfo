@@ -130,10 +130,6 @@
     <Compile Include="take_off_landing\TailwindFactor.cs" />
     <Compile Include="take_off_landing\TemperatureFactor.cs" />
     <Compile Include="take_off_landing\WeightFactor.cs" />
-    <Compile Include="TimeLapse.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="timelapse\TimeLapse.cs" />
     <Compile Include="utils\CheckData.cs" />
     <Compile Include="utils\Convert.cs" />
     <Compile Include="utils\HelpfulFunctions.cs" />
