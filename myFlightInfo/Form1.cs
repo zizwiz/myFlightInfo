@@ -5,14 +5,12 @@ using System.Threading;
 using System.Windows.Forms;
 using System.Xml;
 using CenteredMessagebox;
-using Microsoft.Web.WebView2.WinForms;
 using myFlightInfo.Navigation;
 using myFlightInfo.common_data;
 using myFlightInfo.browsing;
 using myFlightInfo.Properties;
 using myFlightInfo.satellite_image;
 using myFlightInfo.take_off_landing;
-using myFlightInfo.utils;
 
 //using myFlightInfo.compliance_data;
 
@@ -37,23 +35,25 @@ namespace myFlightInfo
             {
                 //64bit 
                 File.WriteAllBytes("WebView2Loader.dll", Resources._64_WebView2Loader);
+                File.WriteAllBytes("Magick.Native-Q8-x64.dll", Resources.Magick_Native_Q8_x64);
             }
             else if (arcitectureProcessArchitecture == "X86")
             {
                 // 32bit
                 File.WriteAllBytes("WebView2Loader.dll", Resources._32_WebView2Loader);
+                File.WriteAllBytes("Magick.Native-Q8-x86.dll", Resources.Magick_Native_Q8_x86);
             }
             else if (arcitectureProcessArchitecture == "Arm64")
             {
                 //ARM64bit 
                 File.WriteAllBytes("WebView2Loader.dll", Resources.arm64_WebView2Loader);
+                File.WriteAllBytes("Magick.Native-Q8-arm64.dll", Resources.Magick_Native_Q8_arm64);
             }
-
-
+            
             // Magick are image libs that help convert images from one type to another
             File.WriteAllBytes("Magick.NET.Core.dll", Resources.Magick_NET_Core);
             File.WriteAllBytes("Magick.NET-Q8-AnyCPU.dll", Resources.Magick_NET_Q8_AnyCPU);
-
+            
             // All set to initialise the app
             InitializeComponent();
         }

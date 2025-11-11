@@ -148,6 +148,15 @@
   <data name="HowToReadHobbs" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\graphics\howtoreadhobbs.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Magick_Native_Q8_arm64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\common_data\magick.native-q8-arm64.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Magick_Native_Q8_x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\common_data\magick.native-q8-x64.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Magick_Native_Q8_x86" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\common_data\magick.native-q8-x86.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="Magick_NET_Core" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\common_data\magick.net.core.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>

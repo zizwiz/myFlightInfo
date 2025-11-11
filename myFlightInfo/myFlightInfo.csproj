@@ -188,6 +188,9 @@
     <Content Include="common_data\arm64_WebView2Loader.dll" />
     <Content Include="common_data\CoordinateSharp.dll" />
     <Content Include="common_data\CoordinateSharp.Magnetic.dll" />
+    <Content Include="common_data\Magick.Native-Q8-arm64.dll" />
+    <Content Include="common_data\Magick.Native-Q8-x64.dll" />
+    <Content Include="common_data\Magick.Native-Q8-x86.dll" />
     <Content Include="common_data\Magick.NET-Q8-AnyCPU.dll" />
     <Content Include="common_data\Magick.NET.Core.dll" />
     <Content Include="common_data\Microsoft.Web.WebView2.Core.dll" />
